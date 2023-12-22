@@ -14,10 +14,13 @@ This binary of Z3 was built on Ubuntu 20.04 on AMD64 machine with Java 11.
 
 Clone Z3 from https://github.com/Z3Prover/z3
 
+We used the version of Z3 with commit ID `23c53c6820b2d0c786dc416dab9a50473a7bbde3`.
+
 Inside the folder of cloned Z3, execute:
 
 
 ```
+git checkout 23c53c6820b2d0c786dc416dab9a50473a7bbde3
 python scripts/mk_make.py --java
 cd build
 make

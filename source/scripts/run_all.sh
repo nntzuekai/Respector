@@ -1,8 +1,18 @@
 #!/bin/bash
 
 OUTPUT_DIR=$1
-Z3_HOME=$2
-DATASET_DIR=$3
+DATASET_DIR=$2
+
+
+if [ -z "$Z3_HOME" ]; then
+    echo "Z3_HOME is not set. Exiting the script."
+    exit 1
+else
+    echo "Z3_HOME is set to $Z3_HOME"
+fi
+
+
+
 
 date
 
