@@ -1,0 +1,39 @@
+{
+  "id": "api-test",
+  "name": "api-test",
+  "gravitee": "2.0.0",
+  "proxy": {
+    "context_path": "/echo",
+    "endpoints": [
+      {
+        "name": "default",
+        "target": "http://localhost:8080/echo"
+      }
+    ],
+    "strip_context_path": false,
+    "dumpRequest": true
+  },
+  "flows": [
+    {
+      "name": "flow-1",
+      "methods": [ ],
+      "enabled": true,
+      "path-operator": {
+        "path": "/",
+        "operator": "STARTS_WITH"
+      },
+      "pre": [
+
+      ],
+      "post": [
+        {
+          "name": "content-response-error",
+          "description": "",
+          "enabled": true,
+          "policy": "content-response-error",
+          "configuration": { }
+        }
+      ]
+    }
+  ]
+}

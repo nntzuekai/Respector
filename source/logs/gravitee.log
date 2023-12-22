@@ -1,0 +1,64 @@
++ java -Djava.library.path=/home/rkh/z3//build/ -cp ./target/Respector-0.1-SNAPSHOT.jar:/home/rkh/z3//build/com.microsoft.z3.jar org.rest.Respector.AppMain.Main ../dataset//gravitee-api-management/gravitee-apim-rest-api/gravitee-apim-rest-api-management-v4/gravitee-apim-rest-api-management-v4-rest/target/classes/ ../dataset//gravitee-api-management/gravitee-apim-rest-api/gravitee-apim-rest-api-model/target/classes/ ./generated_1//gravitee_manage_v4.json
+[main] INFO org.rest.Respector.EndPointRecog.PreprocessFramework - The REST API uses JAX
+[main] INFO org.rest.Respector.AppMain.MainTransform - total # of endpoint methods detected: 29
+[main] INFO org.rest.Respector.AppMain.MainTransform - 1/29 analyzing endpoint method <io.gravitee.rest.api.management.v4.rest.resource.api.ApiResource: javax.ws.rs.core.Response getApiById()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 2/29 analyzing endpoint method <io.gravitee.rest.api.management.v4.rest.resource.api.ApiResource: javax.ws.rs.core.Response updateApi(javax.ws.rs.core.HttpHeaders,io.gravitee.rest.api.model.v4.api.UpdateApiEntity)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 3/29 analyzing endpoint method <io.gravitee.rest.api.management.v4.rest.resource.api.ApiResource: javax.ws.rs.core.Response deleteApi(boolean)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 4/29 analyzing endpoint method <io.gravitee.rest.api.management.v4.rest.resource.api.ApiResource: javax.ws.rs.core.Response deployApi(io.gravitee.rest.api.model.api.ApiDeploymentEntity)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 5/29 analyzing endpoint method <io.gravitee.rest.api.management.v4.rest.resource.api.ApiResource: javax.ws.rs.core.Response startAPI(javax.ws.rs.core.HttpHeaders)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 6/29 analyzing endpoint method <io.gravitee.rest.api.management.v4.rest.resource.api.ApiResource: javax.ws.rs.core.Response stopAPI(javax.ws.rs.core.HttpHeaders)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 7/29 analyzing endpoint method <io.gravitee.rest.api.management.v4.rest.resource.api.ApiResource: io.gravitee.rest.api.management.v4.rest.resource.api.ApiPlansResource getApiPlansResource()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 8/29 analyzing endpoint method <io.gravitee.rest.api.management.v4.rest.resource.api.ApiPlansResource: java.util.List getApiPlans(io.gravitee.rest.api.management.v4.rest.resource.param.PlanStatusParam,io.gravitee.rest.api.management.v4.rest.resource.param.PlanSecurityParam)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+[main] INFO org.rest.Respector.AppMain.MainTransform - 9/29 analyzing endpoint method <io.gravitee.rest.api.management.v4.rest.resource.api.ApiPlansResource: javax.ws.rs.core.Response createApiPlan(io.gravitee.rest.api.model.v4.plan.NewPlanEntity)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 10/29 analyzing endpoint method <io.gravitee.rest.api.management.v4.rest.resource.api.ApiPlansResource: javax.ws.rs.core.Response getApiPlan(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 11/29 analyzing endpoint method <io.gravitee.rest.api.management.v4.rest.resource.api.ApiPlansResource: javax.ws.rs.core.Response updateApiPlan(java.lang.String,io.gravitee.rest.api.model.v4.plan.UpdatePlanEntity)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 12/29 analyzing endpoint method <io.gravitee.rest.api.management.v4.rest.resource.api.ApiPlansResource: javax.ws.rs.core.Response deleteApiPlan(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 13/29 analyzing endpoint method <io.gravitee.rest.api.management.v4.rest.resource.api.ApiPlansResource: javax.ws.rs.core.Response closeApiPlan(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 14/29 analyzing endpoint method <io.gravitee.rest.api.management.v4.rest.resource.api.ApiPlansResource: javax.ws.rs.core.Response publishApiPlan(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 15/29 analyzing endpoint method <io.gravitee.rest.api.management.v4.rest.resource.api.ApiPlansResource: javax.ws.rs.core.Response deprecateApiPlan(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 16/29 analyzing endpoint method <io.gravitee.rest.api.management.v4.rest.resource.OpenAPIResource: javax.ws.rs.core.Response getOpenApi()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 17/29 analyzing endpoint method <io.gravitee.rest.api.management.v4.rest.resource.installation.OrganizationResource: io.gravitee.rest.api.model.OrganizationEntity get(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 18/29 analyzing endpoint method <io.gravitee.rest.api.management.v4.rest.resource.installation.OrganizationResource: java.util.Collection getEnvironments(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 19/29 analyzing endpoint method <io.gravitee.rest.api.management.v4.rest.resource.installation.EnvironmentResource: io.gravitee.rest.api.model.EnvironmentEntity getEnvironment(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 20/29 analyzing endpoint method <io.gravitee.rest.api.management.v4.rest.resource.installation.EnvironmentResource: javax.ws.rs.core.Response createApi(io.gravitee.rest.api.model.v4.api.NewApiEntity)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 21/29 analyzing endpoint method <io.gravitee.rest.api.management.v4.rest.resource.connector.EntrypointsResource: java.util.Set getEntrypoints()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 22/29 analyzing endpoint method <io.gravitee.rest.api.management.v4.rest.resource.connector.EntrypointsResource: io.gravitee.rest.api.model.v4.connector.ConnectorPluginEntity getEntrypoint(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 23/29 analyzing endpoint method <io.gravitee.rest.api.management.v4.rest.resource.connector.EntrypointsResource: java.lang.String getEntrypointSchema(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 24/29 analyzing endpoint method <io.gravitee.rest.api.management.v4.rest.resource.connector.EntrypointsResource: java.lang.String getEntrypointDoc(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 25/29 analyzing endpoint method <io.gravitee.rest.api.management.v4.rest.resource.connector.EntrypointsResource: java.lang.String getEntrypointSubscriptionSchema(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 26/29 analyzing endpoint method <io.gravitee.rest.api.management.v4.rest.resource.connector.EndpointsResource: java.util.Set getEndpoints()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 27/29 analyzing endpoint method <io.gravitee.rest.api.management.v4.rest.resource.connector.EndpointsResource: io.gravitee.rest.api.model.v4.connector.ConnectorPluginEntity getEntrypoint(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 28/29 analyzing endpoint method <io.gravitee.rest.api.management.v4.rest.resource.connector.EndpointsResource: java.lang.String getEntrypointSchema(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 29/29 analyzing endpoint method <io.gravitee.rest.api.management.v4.rest.resource.connector.EndpointsResource: java.lang.String getEntrypointDoc(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+
+real	0m10.730s
+user	0m36.237s
+sys	0m0.641s

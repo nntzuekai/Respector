@@ -1,0 +1,288 @@
+/api/averageAwardPeriod
+	get:21
+	post:21
+/api/averageNumberOfTenderers
+	get:21
+	post:21
+/api/averageTenderPeriod
+	get:21
+	post:21
+/api/avgTimeFromPlanToTenderPhase
+	get:21
+	post:21
+/api/awardValueInterval
+	get:21
+	post:21
+/api/costEffectivenessAwardAmount
+	get:21
+	post:21
+/api/costEffectivenessTenderAmount
+	get:22
+	post:22
+/api/costEffectivenessTenderAwardAmount
+	get:22
+	post:22
+/api/countAwardsByYear
+	get:21
+	post:21
+/api/countBidPlansByYear
+	get:21
+	post:21
+/api/countTendersByYear
+	get:21
+	post:21
+/api/flags/i003/releases
+	get:21
+	post:21
+/api/flags/i003/stats
+	get:21
+	post:21
+/api/flags/i004/releases
+	get:21
+	post:21
+/api/flags/i004/stats
+	get:21
+	post:21
+/api/flags/i007/releases
+	get:21
+	post:21
+/api/flags/i007/stats
+	get:21
+	post:21
+/api/flags/i019/releases
+	get:21
+	post:21
+/api/flags/i019/stats
+	get:21
+	post:21
+/api/flags/i038/releases
+	get:21
+	post:21
+/api/flags/i038/stats
+	get:21
+	post:21
+/api/flags/i077/releases
+	get:21
+	post:21
+/api/flags/i077/stats
+	get:21
+	post:21
+/api/flags/i180/releases
+	get:21
+	post:21
+/api/flags/i180/stats
+	get:21
+	post:21
+/api/frequentSuppliersTimeInterval
+	get:2
+	post:2
+/api/frequentTenderers
+	get:21
+	post:21
+/api/fundingByTenderDeliveryLocation
+	get:21
+	post:21
+/api/ocds/averageNumberBidsExcelChart
+	get:21
+	post:21
+/api/ocds/bidSelectionExcelChart
+	get:21
+	post:21
+/api/ocds/bidSelectionMethod/all
+	get:0
+	post:0
+/api/ocds/bidTimelineExcelChart
+	get:21
+	post:21
+/api/ocds/bidType/all
+	get:0
+	post:0
+/api/ocds/cancelledFundingExcelChart
+	get:21
+	post:21
+/api/ocds/cancelledFundingPercentageExcelChart
+	get:21
+	post:21
+/api/ocds/cancelledTendersByYearByRationaleExcelChart
+	get:21
+	post:21
+/api/ocds/city/all
+	get:0
+	post:0
+/api/ocds/city/search
+	get:3
+	post:3
+/api/ocds/contrMethod/all
+	get:0
+	post:0
+/api/ocds/costEffectivenessExcelChart
+	get:22
+	post:22
+/api/ocds/excelExport
+	get:21
+	post:21
+/api/ocds/location/all
+	get:0
+	post:0
+/api/ocds/location/search
+	get:3
+	post:3
+/api/ocds/numberCancelledFundingExcelChart
+	get:21
+	post:21
+/api/ocds/numberTendersUsingEBidExcelChart
+	get:21
+	post:21
+/api/ocds/orgDepartment/all
+	get:0
+	post:0
+/api/ocds/orgDepartment/search
+	get:3
+	post:3
+/api/ocds/orgGroup/all
+	get:0
+	post:0
+/api/ocds/orgGroup/search
+	get:3
+	post:3
+/api/ocds/organization/all
+	get:1
+	post:1
+/api/ocds/organization/buyer/all
+	get:1
+	post:1
+/api/ocds/organization/buyer/id/{id}
+	get:1
+	post:1
+/api/ocds/organization/id/{id}
+	get:1
+	post:1
+/api/ocds/organization/ids
+	get:1
+	post:1
+/api/ocds/organization/procuringEntity/all
+	get:1
+	post:1
+/api/ocds/organization/procuringEntity/id/{id}
+	get:1
+	post:1
+/api/ocds/organization/supplier/all
+	get:1
+	post:1
+/api/ocds/organization/supplier/id/{id}
+	get:1
+	post:1
+/api/ocds/package/all
+	get:21
+	post:21
+/api/ocds/package/budgetProjectId/{projectId}
+	get:1
+	post:1
+/api/ocds/package/ocid/{ocid}
+	get:1
+	post:1
+/api/ocds/package/planningBidNo/{bidNo}
+	get:1
+	post:1
+/api/ocds/percentTendersUsingEBidExcelChart
+	get:21
+	post:21
+/api/ocds/percentTendersUsingEgpExcelChart
+	get:21
+	post:21
+/api/ocds/procurementActivityExcelChart
+	get:21
+	post:21
+/api/ocds/procurementMethod/all
+	get:0
+	post:0
+/api/ocds/procurementMethodExcelChart
+	get:21
+	post:21
+/api/ocds/release/all
+	get:21
+	post:21
+/api/ocds/release/budgetProjectId/{projectId}
+	get:1
+	post:1
+/api/ocds/release/ocid/{ocid}
+	get:1
+	post:1
+/api/ocds/release/planningBidNo/{bidNo}
+	get:1
+	post:1
+/api/ocds/tendersByItemExcelChart
+	get:21
+	post:21
+/api/ocds/tendersWithLinkedProcurementPlanExcelChart
+	get:21
+	post:21
+/api/percentTendersAwardedWithTwoOrMoreTenderers
+	get:21
+	post:21
+/api/percentTendersCancelled
+	get:21
+	post:21
+/api/percentTendersUsingEBid
+	get:21
+	post:21
+/api/percentTendersUsingEgp
+	get:21
+	post:21
+/api/percentTendersWithLinkedProcurementPlan
+	get:21
+	post:21
+/api/percentTendersWithTwoOrMoreTenderers
+	get:21
+	post:21
+/api/percentageAwardsNarrowPublicationDates
+	get:21
+	post:21
+/api/plannedFundingByLocation
+	get:21
+	post:21
+/api/qualityAverageAwardPeriod
+	get:18
+	post:18
+/api/qualityAverageTenderPeriod
+	get:18
+	post:18
+/api/qualityFundingByTenderDeliveryLocation
+	get:21
+	post:21
+/api/qualityPlannedFundingByLocation
+	get:18
+	post:18
+/api/tenderPriceByAllBidSelectionMethods
+	get:21
+	post:21
+/api/tenderPriceByBidSelectionMethod
+	get:21
+	post:21
+/api/tenderPriceByProcurementMethod
+	get:21
+	post:21
+/api/tenderValueInterval
+	get:21
+	post:21
+/api/tendersAwardsYears
+	get:0
+	post:0
+/api/tendersByItemClassification
+	get:21
+	post:21
+/api/topTenLargestAwards
+	get:21
+	post:21
+/api/topTenLargestTenders
+	get:21
+	post:21
+/api/topTenSuppliers
+	get:21
+	post:21
+/api/totalCancelledTendersByYear
+	get:21
+	post:21
+/api/totalCancelledTendersByYearByRationale
+	get:21
+	post:21

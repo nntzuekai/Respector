@@ -1,0 +1,71 @@
+{
+    "type": "object",
+    "id": "urn:jsonschema:io:gravitee:plugin:endpoint:kafka:configuration:KafkaEndpointConnectorConfiguration",
+    "additionalProperties": false,
+    "properties": {
+        "bootstrapServers": {
+            "type": "string",
+            "title": "bootstrap.servers",
+            "description": "This list should be in the form host1:port1,host2:port2,...",
+            "gioConfig": {
+                "banner": {
+                    "title": "Bootstrap servers",
+                    "text": "A list of host/port pairs, separated by a comma, to use for establishing the initial connection to the Kafka cluster. The client will make use of all servers irrespective of which servers are specified here for bootstrapping—this list only impacts the initial hosts used to discover the full set of servers. "
+                }
+            }
+        },
+        "topics": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "title": "Topics",
+            "description": "A list of kafka topics to use."
+        },
+        "consumer": {
+            "type": "object",
+            "title": "Consumer configuration",
+            "id": "urn:jsonschema:io:gravitee:plugin:endpoint:kafka:configuration:KafkaEndpointConnectorConfiguration:Consumer",
+            "properties": {
+                "enabled": {
+                    "title": "Enable the consumer capability",
+                    "description": "Allow to enable or disable the consumer capability.",
+                    "type": "boolean",
+                    "default": true
+                },
+                "encodeMessageId": {
+                    "title": "Encode message Id",
+                    "description": "This options allows encoding message id in base64.",
+                    "type": "boolean",
+                    "default": true
+                },
+                "autoOffsetReset": {
+                    "title": "Auto offset reset",
+                    "type": "string",
+                    "default": "latest",
+                    "enum": ["latest", "earliest", "none"],
+                    "gioConfig": {
+                        "banner": {
+                            "title": "Auto offset reset",
+                            "text": "What to do when there is no initial offset in Kafka or if the current offset does not exist any more on the server (e.g. because that data has been deleted): <ul><li>earliest: automatically reset the offset to the earliest offset<li>latest: automatically reset the offset to the latest offset</li><li>none: throw exception to the consumer if no previous offset is found for the consumer's group</li><li>anything else: throw exception to the consumer.</li></ul>"
+                        }
+                    }
+                }
+            }
+        },
+        "producer": {
+            "type": "object",
+            "title": "Producer configuration",
+            "id": "urn:jsonschema:io:gravitee:plugin:endpoint:kafka:configuration:KafkaEndpointConnectorConfiguration:Producer",
+            "properties": {
+                "enabled": {
+                    "title": "Enable the producer capability",
+                    "description": "Allow to enable or disable the producer capability.",
+                    "type": "boolean",
+                    "default": true
+                }
+            }
+        }
+    },
+    "required": ["bootstrapServers"]
+}

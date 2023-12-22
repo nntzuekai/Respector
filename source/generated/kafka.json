@@ -1,0 +1,3496 @@
+{
+  "openapi": "3.0.0",
+  "servers": [
+    {
+      "url": "http://localhost:8080"
+    }
+  ],
+  "info": {
+    "title": "REST API",
+    "version": "",
+    "description": "REST API"
+  },
+  "paths": {
+    "/": {
+      "get": {
+        "description": "",
+        "operationId": "em32",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "operationId": "em33",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/brokers": {
+      "get": {
+        "description": "",
+        "operationId": "em34",
+        "parameters": [],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/consumers/{group}": {
+      "post": {
+        "description": "",
+        "operationId": "em5",
+        "parameters": [
+          {
+            "name": "group",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "io.confluent.kafkarest.entities.v2.CreateConsumerInstanceResponse",
+                  "properties": {
+                    "instanceId": {
+                      "type": "string"
+                    },
+                    "baseUri": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "autoCommitEnable": {
+                    "type": "string"
+                  },
+                  "autoOffsetReset": {
+                    "type": "string"
+                  },
+                  "format": {
+                    "type": "string"
+                  },
+                  "id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "requestWaitMs": {
+                    "type": "integer"
+                  },
+                  "responseMinBytes": {
+                    "type": "integer"
+                  }
+                },
+                "maxProperties": 7
+              }
+            }
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1consumers~1{group}/post"
+        }
+      }
+    },
+    "/consumers/{group}/instances/{instance}": {
+      "delete": {
+        "description": "",
+        "operationId": "em6",
+        "parameters": [
+          {
+            "name": "group",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "instance",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1consumers~1{group}~1instances~1{instance}/delete"
+        }
+      }
+    },
+    "/consumers/{group}/instances/{instance}/assignments": {
+      "get": {
+        "description": "",
+        "operationId": "em21",
+        "parameters": [
+          {
+            "name": "group",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "instance",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "io.confluent.kafkarest.entities.v2.ConsumerAssignmentResponse",
+                  "properties": {
+                    "partitions": {
+                      "type": "array",
+                      "items": {
+                        "type": "object"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1consumers~1{group}~1instances~1{instance}~1assignments/get"
+        }
+      },
+      "post": {
+        "description": "",
+        "operationId": "em20",
+        "parameters": [
+          {
+            "name": "group",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "instance",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "partitions": {
+                    "type": "string"
+                  }
+                },
+                "maxProperties": 1
+              }
+            }
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1consumers~1{group}~1instances~1{instance}~1assignments/post"
+        }
+      }
+    },
+    "/consumers/{group}/instances/{instance}/offsets": {
+      "get": {
+        "description": "",
+        "operationId": "em16",
+        "parameters": [
+          {
+            "name": "group",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "instance",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "partitions",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "io.confluent.kafkarest.entities.v2.ConsumerCommittedResponse",
+                  "properties": {
+                    "offsets": {
+                      "type": "array",
+                      "items": {
+                        "type": "object"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1consumers~1{group}~1instances~1{instance}~1offsets/get"
+        }
+      },
+      "post": {
+        "description": "",
+        "operationId": "em15",
+        "parameters": [
+          {
+            "name": "group",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "instance",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "async",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "false"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "offsets": {
+                    "type": "string"
+                  }
+                },
+                "maxProperties": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    "/consumers/{group}/instances/{instance}/positions": {
+      "post": {
+        "description": "",
+        "operationId": "em19",
+        "parameters": [
+          {
+            "name": "group",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "instance",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1consumers~1{group}~1instances~1{instance}~1positions/post"
+        }
+      }
+    },
+    "/consumers/{group}/instances/{instance}/positions/beginning": {
+      "post": {
+        "description": "",
+        "operationId": "em17",
+        "parameters": [
+          {
+            "name": "group",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "instance",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "partitions": {
+                    "type": "string"
+                  }
+                },
+                "maxProperties": 1
+              }
+            }
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1consumers~1{group}~1instances~1{instance}~1positions~1beginning/post"
+        }
+      }
+    },
+    "/consumers/{group}/instances/{instance}/positions/end": {
+      "post": {
+        "description": "",
+        "operationId": "em18",
+        "parameters": [
+          {
+            "name": "group",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "instance",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "partitions": {
+                    "type": "string"
+                  }
+                },
+                "maxProperties": 1
+              }
+            }
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1consumers~1{group}~1instances~1{instance}~1positions~1end/post"
+        }
+      }
+    },
+    "/consumers/{group}/instances/{instance}/records": {
+      "get": {
+        "description": "",
+        "operationId": "em10",
+        "parameters": [
+          {
+            "name": "group",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "instance",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "timeout",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "default": -1
+            }
+          },
+          {
+            "name": "max_bytes",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "default": -1
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/consumers/{group}/instances/{instance}/subscription": {
+      "delete": {
+        "description": "",
+        "operationId": "em9",
+        "parameters": [
+          {
+            "name": "group",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "instance",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1consumers~1{group}~1instances~1{instance}~1subscription/delete"
+        }
+      },
+      "get": {
+        "description": "",
+        "operationId": "em8",
+        "parameters": [
+          {
+            "name": "group",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "instance",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "io.confluent.kafkarest.entities.v2.ConsumerSubscriptionResponse",
+                  "properties": {
+                    "topics": {
+                      "type": "array",
+                      "items": {
+                        "type": "object"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1consumers~1{group}~1instances~1{instance}~1subscription/get"
+        }
+      },
+      "post": {
+        "description": "",
+        "operationId": "em7",
+        "parameters": [
+          {
+            "name": "group",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "instance",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "topicPattern": {
+                    "type": "string"
+                  },
+                  "topics": {
+                    "type": "string"
+                  }
+                },
+                "maxProperties": 2
+              }
+            }
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1consumers~1{group}~1instances~1{instance}~1subscription/post"
+        }
+      }
+    },
+    "/topics": {
+      "get": {
+        "description": "",
+        "operationId": "em3",
+        "parameters": [],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/topics/{topic}": {
+      "get": {
+        "description": "",
+        "operationId": "em4",
+        "parameters": [
+          {
+            "name": "topic",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "operationId": "em27",
+        "parameters": [
+          {
+            "name": "topic",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1topics~1{topic}/post"
+        }
+      }
+    },
+    "/topics/{topic}/partitions": {
+      "get": {
+        "description": "",
+        "operationId": "em0",
+        "parameters": [
+          {
+            "name": "topic",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/topics/{topic}/partitions/{partition}": {
+      "get": {
+        "description": "",
+        "operationId": "em1",
+        "parameters": [
+          {
+            "name": "topic",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "partition",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "operationId": "em22",
+        "parameters": [
+          {
+            "name": "topic",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "partition",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1topics~1{topic}~1partitions~1{partition}/post"
+        }
+      }
+    },
+    "/topics/{topic}/partitions/{partition}/offsets": {
+      "get": {
+        "description": "",
+        "operationId": "em2",
+        "parameters": [
+          {
+            "name": "topic",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "partition",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/v3/clusters": {
+      "get": {
+        "description": "",
+        "operationId": "em78",
+        "parameters": [],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/v3/clusters/{clusterId}": {
+      "get": {
+        "description": "",
+        "operationId": "em79",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/v3/clusters/{clusterId}/acls": {
+      "delete": {
+        "description": "",
+        "operationId": "em65",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "resource_type",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "unknown"
+            }
+          },
+          {
+            "name": "resource_name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "pattern_type",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "unknown"
+            }
+          },
+          {
+            "name": "principal",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "host",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "operation",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "unknown"
+            }
+          },
+          {
+            "name": "permission",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "unknown"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1v3~1clusters~1{clusterId}~1acls/delete"
+        }
+      },
+      "get": {
+        "description": "",
+        "operationId": "em63",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "resource_type",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "any"
+            }
+          },
+          {
+            "name": "resource_name",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "pattern_type",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "any"
+            }
+          },
+          {
+            "name": "principal",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "host",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "operation",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "any"
+            }
+          },
+          {
+            "name": "permission",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "any"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1v3~1clusters~1{clusterId}~1acls/get"
+        }
+      },
+      "post": {
+        "description": "",
+        "operationId": "em64",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1v3~1clusters~1{clusterId}~1acls/post"
+        }
+      }
+    },
+    "/v3/clusters/{clusterId}/brokers": {
+      "get": {
+        "description": "",
+        "operationId": "em67",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/v3/clusters/{clusterId}/brokers/-/configs": {
+      "get": {
+        "description": "",
+        "operationId": "em62",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/v3/clusters/{clusterId}/brokers/{brokerId}": {
+      "get": {
+        "description": "",
+        "operationId": "em68",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "brokerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/v3/clusters/{clusterId}/brokers/{brokerId}/configs": {
+      "get": {
+        "description": "",
+        "operationId": "em35",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "brokerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1v3~1clusters~1{clusterId}~1brokers~1{brokerId}~1configs/get"
+        }
+      }
+    },
+    "/v3/clusters/{clusterId}/brokers/{brokerId}/configs/{name}": {
+      "delete": {
+        "description": "",
+        "operationId": "em38",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "brokerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1v3~1clusters~1{clusterId}~1brokers~1{brokerId}~1configs~1{name}/delete"
+        }
+      },
+      "get": {
+        "description": "",
+        "operationId": "em36",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "brokerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1v3~1clusters~1{clusterId}~1brokers~1{brokerId}~1configs~1{name}/get"
+        }
+      },
+      "put": {
+        "description": "",
+        "operationId": "em37",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "brokerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1v3~1clusters~1{clusterId}~1brokers~1{brokerId}~1configs~1{name}/put"
+        }
+      }
+    },
+    "/v3/clusters/{clusterId}/brokers/{brokerId}/configs:alter": {
+      "post": {
+        "description": "",
+        "operationId": "em66",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "brokerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1v3~1clusters~1{clusterId}~1brokers~1{brokerId}~1configs:alter/post"
+        }
+      }
+    },
+    "/v3/clusters/{clusterId}/brokers/{brokerId}/partition-replicas": {
+      "get": {
+        "description": "",
+        "operationId": "em74",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "brokerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/v3/clusters/{clusterId}/consumer-groups": {
+      "get": {
+        "description": "",
+        "operationId": "em56",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/v3/clusters/{clusterId}/consumer-groups/{consumerGroupId}": {
+      "get": {
+        "description": "",
+        "operationId": "em57",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "consumerGroupId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/v3/clusters/{clusterId}/consumer-groups/{consumerGroupId}/consumers": {
+      "get": {
+        "description": "",
+        "operationId": "em52",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "consumerGroupId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/v3/clusters/{clusterId}/consumer-groups/{consumerGroupId}/consumers/{consumerId}": {
+      "get": {
+        "description": "",
+        "operationId": "em53",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "consumerGroupId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "consumerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/v3/clusters/{clusterId}/consumer-groups/{consumerGroupId}/consumers/{consumerId}/assignments": {
+      "get": {
+        "description": "",
+        "operationId": "em58",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "consumerGroupId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "consumerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/v3/clusters/{clusterId}/consumer-groups/{consumerGroupId}/consumers/{consumerId}/assignments/{topicName}/partitions/{partitionId}": {
+      "get": {
+        "description": "",
+        "operationId": "em59",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "consumerGroupId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "consumerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "topicName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "partitionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/v3/clusters/{clusterId}/consumer-groups/{consumerGroupId}/lag-summary": {
+      "get": {
+        "description": "",
+        "operationId": "em51",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "consumerGroupId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/v3/clusters/{clusterId}/consumer-groups/{consumerGroupId}/lags": {
+      "get": {
+        "description": "",
+        "operationId": "em45",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "consumerGroupId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/v3/clusters/{clusterId}/consumer-groups/{consumerGroupId}/lags/{topicName}/partitions/{partitionId}": {
+      "get": {
+        "description": "",
+        "operationId": "em46",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "consumerGroupId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "topicName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "partitionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/v3/clusters/{clusterId}/topics": {
+      "get": {
+        "description": "",
+        "operationId": "em47",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "includeAuthorizedOperations",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "operationId": "em49",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1v3~1clusters~1{clusterId}~1topics/post"
+        }
+      }
+    },
+    "/v3/clusters/{clusterId}/topics/-/configs": {
+      "get": {
+        "description": "",
+        "operationId": "em55",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/v3/clusters/{clusterId}/topics/-/partitions/-/reassignment": {
+      "get": {
+        "description": "",
+        "operationId": "em61",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/v3/clusters/{clusterId}/topics/{topicName}": {
+      "delete": {
+        "description": "",
+        "operationId": "em50",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "topicName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1v3~1clusters~1{clusterId}~1topics~1{topicName}/delete"
+        }
+      },
+      "get": {
+        "description": "",
+        "operationId": "em48",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "topicName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "include_authorized_operations",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/v3/clusters/{clusterId}/topics/{topicName}/configs": {
+      "get": {
+        "description": "",
+        "operationId": "em70",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "topicName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1v3~1clusters~1{clusterId}~1topics~1{topicName}~1configs/get"
+        }
+      }
+    },
+    "/v3/clusters/{clusterId}/topics/{topicName}/configs/{name}": {
+      "delete": {
+        "description": "",
+        "operationId": "em73",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "topicName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1v3~1clusters~1{clusterId}~1topics~1{topicName}~1configs~1{name}/delete"
+        }
+      },
+      "get": {
+        "description": "",
+        "operationId": "em71",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "topicName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1v3~1clusters~1{clusterId}~1topics~1{topicName}~1configs~1{name}/get"
+        }
+      },
+      "put": {
+        "description": "",
+        "operationId": "em72",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "topicName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1v3~1clusters~1{clusterId}~1topics~1{topicName}~1configs~1{name}/put"
+        }
+      }
+    },
+    "/v3/clusters/{clusterId}/topics/{topicName}/configs:alter": {
+      "post": {
+        "description": "",
+        "operationId": "em69",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "topicName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1v3~1clusters~1{clusterId}~1topics~1{topicName}~1configs:alter/post"
+        }
+      }
+    },
+    "/v3/clusters/{clusterId}/topics/{topicName}/partitions": {
+      "get": {
+        "description": "",
+        "operationId": "em43",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "topicName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/v3/clusters/{clusterId}/topics/{topicName}/partitions/-/reassignment": {
+      "get": {
+        "description": "",
+        "operationId": "em54",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "topicName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/v3/clusters/{clusterId}/topics/{topicName}/partitions/{partitionId}": {
+      "get": {
+        "description": "",
+        "operationId": "em44",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "topicName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "partitionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/v3/clusters/{clusterId}/topics/{topicName}/partitions/{partitionId}/reassignment": {
+      "get": {
+        "description": "",
+        "operationId": "em60",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "topicName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "partitionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/v3/clusters/{clusterId}/topics/{topicName}/partitions/{partitionId}/replicas": {
+      "get": {
+        "description": "",
+        "operationId": "em76",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "topicName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "partitionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/v3/clusters/{clusterId}/topics/{topicName}/partitions/{partitionId}/replicas/{brokerId}": {
+      "get": {
+        "description": "",
+        "operationId": "em77",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "topicName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "partitionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "brokerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/v3/clusters/{clusterId}/topics/{topicName}/records": {
+      "post": {
+        "description": "",
+        "operationId": "em80",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "topicName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "delegate": {
+                    "type": "string"
+                  }
+                },
+                "maxProperties": 1
+              }
+            }
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1v3~1clusters~1{clusterId}~1topics~1{topicName}~1records/post"
+        }
+      }
+    },
+    "/v3/clusters/{clusterId}/{config_type}-configs": {
+      "get": {
+        "description": "",
+        "operationId": "em39",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "config_type",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/v3/clusters/{clusterId}/{config_type}-configs/{name}": {
+      "delete": {
+        "description": "",
+        "operationId": "em42",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "config_type",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1v3~1clusters~1{clusterId}~1{config_type}-configs~1{name}/delete"
+        }
+      },
+      "get": {
+        "description": "",
+        "operationId": "em40",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "config_type",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      },
+      "put": {
+        "description": "",
+        "operationId": "em41",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "config_type",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1v3~1clusters~1{clusterId}~1{config_type}-configs~1{name}/put"
+        }
+      }
+    },
+    "/v3/clusters/{clusterId}/{config_type}-configs:alter": {
+      "post": {
+        "description": "",
+        "operationId": "em75",
+        "parameters": [
+          {
+            "name": "clusterId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "config_type",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1v3~1clusters~1{clusterId}~1{config_type}-configs:alter/post"
+        }
+      }
+    }
+  },
+  "components": {
+    "x-endpoint-constraints": {
+      "/consumers/{group}": {
+        "post": {
+          "valid-path-conditions": [
+            "( this.<io.confluent.kafkarest.v2.KafkaConsumerManager: java.util.Map consumers>.<java.util.Map: boolean containsKey(java.lang.Object)>(new io.confluent.kafkarest.ConsumerInstanceId({group}, (new java.lang.StringBuilder(\"rest-consumer-\")).<java.lang.StringBuilder: java.lang.String toString()>())) == 0 )"
+          ],
+          "global-reads": {
+            "g0": {
+              "name": "INTERNAL_SERVER_ERROR",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g0"
+              }
+            },
+            "g1": {
+              "name": "log",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g1"
+              }
+            },
+            "g2": {
+              "name": "$SwitchMap$io$confluent$kafkarest$entities$EmbeddedFormat",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g2"
+              }
+            }
+          }
+        }
+      },
+      "/consumers/{group}/instances/{instance}": {
+        "delete": {
+          "valid-path-conditions": [
+            "( (io.confluent.kafkarest.v2.KafkaConsumerState) this.<io.confluent.kafkarest.v2.KafkaConsumerManager: java.util.Map consumers>.<java.util.Map: java.lang.Object remove(java.lang.Object)>(new io.confluent.kafkarest.ConsumerInstanceId({group}, {instance})) != null )"
+          ],
+          "global-reads": {
+            "g1": {
+              "name": "log",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g1"
+              }
+            }
+          }
+        }
+      },
+      "/consumers/{group}/instances/{instance}/assignments": {
+        "get": {
+          "valid-path-conditions": [
+            "( (io.confluent.kafkarest.v2.KafkaConsumerState) this.<io.confluent.kafkarest.v2.KafkaConsumerManager: java.util.Map consumers>.<java.util.Map: java.lang.Object get(java.lang.Object)>(new io.confluent.kafkarest.ConsumerInstanceId({group}, {instance})) != null )"
+          ],
+          "global-reads": {
+            "g1": {
+              "name": "log",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g1"
+              }
+            }
+          }
+        },
+        "post": {
+          "valid-path-conditions": [
+            "( (io.confluent.kafkarest.v2.KafkaConsumerState) this.<io.confluent.kafkarest.v2.KafkaConsumerManager: java.util.Map consumers>.<java.util.Map: java.lang.Object get(java.lang.Object)>(new io.confluent.kafkarest.ConsumerInstanceId({group}, {instance})) != null )"
+          ],
+          "global-reads": {
+            "g1": {
+              "name": "log",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g1"
+              }
+            },
+            "g3": {
+              "name": "CONFLICT",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g3"
+              }
+            }
+          }
+        }
+      },
+      "/consumers/{group}/instances/{instance}/offsets": {
+        "get": {
+          "valid-path-conditions": [
+            "( (io.confluent.kafkarest.v2.KafkaConsumerState) this.<io.confluent.kafkarest.v2.KafkaConsumerManager: java.util.Map consumers>.<java.util.Map: java.lang.Object get(java.lang.Object)>(new io.confluent.kafkarest.ConsumerInstanceId({group}, {instance})) != null )"
+          ],
+          "global-reads": {
+            "g1": {
+              "name": "log",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g1"
+              }
+            }
+          }
+        }
+      },
+      "/consumers/{group}/instances/{instance}/positions": {
+        "post": {
+          "valid-path-conditions": [
+            "( (io.confluent.kafkarest.v2.KafkaConsumerState) this.<io.confluent.kafkarest.v2.KafkaConsumerManager: java.util.Map consumers>.<java.util.Map: java.lang.Object get(java.lang.Object)>(new io.confluent.kafkarest.ConsumerInstanceId({group}, {instance})) != null )"
+          ],
+          "global-reads": {
+            "g1": {
+              "name": "log",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g1"
+              }
+            },
+            "g3": {
+              "name": "CONFLICT",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g3"
+              }
+            }
+          }
+        }
+      },
+      "/consumers/{group}/instances/{instance}/positions/beginning": {
+        "post": {
+          "valid-path-conditions": [
+            "( (io.confluent.kafkarest.v2.KafkaConsumerState) this.<io.confluent.kafkarest.v2.KafkaConsumerManager: java.util.Map consumers>.<java.util.Map: java.lang.Object get(java.lang.Object)>(new io.confluent.kafkarest.ConsumerInstanceId({group}, {instance})) != null )"
+          ],
+          "global-reads": {
+            "g1": {
+              "name": "log",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g1"
+              }
+            },
+            "g3": {
+              "name": "CONFLICT",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g3"
+              }
+            }
+          }
+        }
+      },
+      "/consumers/{group}/instances/{instance}/positions/end": {
+        "post": {
+          "valid-path-conditions": [
+            "( (io.confluent.kafkarest.v2.KafkaConsumerState) this.<io.confluent.kafkarest.v2.KafkaConsumerManager: java.util.Map consumers>.<java.util.Map: java.lang.Object get(java.lang.Object)>(new io.confluent.kafkarest.ConsumerInstanceId({group}, {instance})) != null )"
+          ],
+          "global-reads": {
+            "g1": {
+              "name": "log",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g1"
+              }
+            },
+            "g3": {
+              "name": "CONFLICT",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g3"
+              }
+            }
+          }
+        }
+      },
+      "/consumers/{group}/instances/{instance}/subscription": {
+        "delete": {
+          "valid-path-conditions": [
+            "( (io.confluent.kafkarest.v2.KafkaConsumerState) this.<io.confluent.kafkarest.v2.KafkaConsumerManager: java.util.Map consumers>.<java.util.Map: java.lang.Object get(java.lang.Object)>(new io.confluent.kafkarest.ConsumerInstanceId({group}, {instance})) != null )"
+          ],
+          "global-reads": {
+            "g1": {
+              "name": "log",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g1"
+              }
+            }
+          }
+        },
+        "get": {
+          "valid-path-conditions": [
+            "( (io.confluent.kafkarest.v2.KafkaConsumerState) this.<io.confluent.kafkarest.v2.KafkaConsumerManager: java.util.Map consumers>.<java.util.Map: java.lang.Object get(java.lang.Object)>(new io.confluent.kafkarest.ConsumerInstanceId({group}, {instance})) != null )"
+          ]
+        },
+        "post": {
+          "valid-path-conditions": [
+            "( (io.confluent.kafkarest.v2.KafkaConsumerState) this.<io.confluent.kafkarest.v2.KafkaConsumerManager: java.util.Map consumers>.<java.util.Map: java.lang.Object get(java.lang.Object)>(new io.confluent.kafkarest.ConsumerInstanceId({group}, {instance})) != null )"
+          ],
+          "global-reads": {
+            "g1": {
+              "name": "log",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g1"
+              }
+            },
+            "g3": {
+              "name": "CONFLICT",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g3"
+              }
+            }
+          }
+        }
+      },
+      "/topics/{topic}": {
+        "post": {
+          "global-reads": {
+            "g4": {
+              "name": "BINARY",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g4"
+              }
+            }
+          }
+        }
+      },
+      "/topics/{topic}/partitions/{partition}": {
+        "post": {
+          "global-reads": {
+            "g4": {
+              "name": "BINARY",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g4"
+              }
+            }
+          }
+        }
+      },
+      "/v3/clusters/{clusterId}/acls": {
+        "delete": {
+          "valid-path-conditions": [
+            "( {operation} != <io.confluent.kafkarest.entities.Acl$Operation: io.confluent.kafkarest.entities.Acl$Operation UNKNOWN> )",
+            "( {pattern_type} != <io.confluent.kafkarest.entities.Acl$PatternType: io.confluent.kafkarest.entities.Acl$PatternType UNKNOWN> )",
+            "( {permission} != <io.confluent.kafkarest.entities.Acl$Permission: io.confluent.kafkarest.entities.Acl$Permission UNKNOWN> )",
+            "( {resource_type} != <io.confluent.kafkarest.entities.Acl$ResourceType: io.confluent.kafkarest.entities.Acl$ResourceType UNKNOWN> )"
+          ],
+          "global-reads": {
+            "g8": {
+              "name": "UNKNOWN",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g8"
+              }
+            },
+            "g9": {
+              "name": "UNKNOWN",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g9"
+              }
+            },
+            "g10": {
+              "name": "UNKNOWN",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g10"
+              }
+            },
+            "g11": {
+              "name": "UNKNOWN",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g11"
+              }
+            }
+          }
+        },
+        "get": {
+          "valid-path-conditions": [
+            "( {operation} != <io.confluent.kafkarest.entities.Acl$Operation: io.confluent.kafkarest.entities.Acl$Operation UNKNOWN> )",
+            "( {pattern_type} != <io.confluent.kafkarest.entities.Acl$PatternType: io.confluent.kafkarest.entities.Acl$PatternType UNKNOWN> )",
+            "( {permission} != <io.confluent.kafkarest.entities.Acl$Permission: io.confluent.kafkarest.entities.Acl$Permission UNKNOWN> )",
+            "( {resource_type} != <io.confluent.kafkarest.entities.Acl$ResourceType: io.confluent.kafkarest.entities.Acl$ResourceType UNKNOWN> )"
+          ],
+          "global-reads": {
+            "g8": {
+              "name": "UNKNOWN",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g8"
+              }
+            },
+            "g9": {
+              "name": "UNKNOWN",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g9"
+              }
+            },
+            "g10": {
+              "name": "UNKNOWN",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g10"
+              }
+            },
+            "g11": {
+              "name": "UNKNOWN",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g11"
+              }
+            }
+          }
+        },
+        "post": {
+          "valid-path-conditions": [
+            "( {non_EPP#2}.<io.confluent.kafkarest.entities.v3.CreateAclRequest: io.confluent.kafkarest.entities.Acl$Operation getOperation()>() != <io.confluent.kafkarest.entities.Acl$Operation: io.confluent.kafkarest.entities.Acl$Operation ANY> )",
+            "( {non_EPP#2}.<io.confluent.kafkarest.entities.v3.CreateAclRequest: io.confluent.kafkarest.entities.Acl$Operation getOperation()>() != <io.confluent.kafkarest.entities.Acl$Operation: io.confluent.kafkarest.entities.Acl$Operation UNKNOWN> )",
+            "( {non_EPP#2}.<io.confluent.kafkarest.entities.v3.CreateAclRequest: io.confluent.kafkarest.entities.Acl$PatternType getPatternType()>() != <io.confluent.kafkarest.entities.Acl$PatternType: io.confluent.kafkarest.entities.Acl$PatternType ANY> )",
+            "( {non_EPP#2}.<io.confluent.kafkarest.entities.v3.CreateAclRequest: io.confluent.kafkarest.entities.Acl$PatternType getPatternType()>() != <io.confluent.kafkarest.entities.Acl$PatternType: io.confluent.kafkarest.entities.Acl$PatternType MATCH> )",
+            "( {non_EPP#2}.<io.confluent.kafkarest.entities.v3.CreateAclRequest: io.confluent.kafkarest.entities.Acl$PatternType getPatternType()>() != <io.confluent.kafkarest.entities.Acl$PatternType: io.confluent.kafkarest.entities.Acl$PatternType UNKNOWN> )",
+            "( {non_EPP#2}.<io.confluent.kafkarest.entities.v3.CreateAclRequest: io.confluent.kafkarest.entities.Acl$Permission getPermission()>() != <io.confluent.kafkarest.entities.Acl$Permission: io.confluent.kafkarest.entities.Acl$Permission ANY> )",
+            "( {non_EPP#2}.<io.confluent.kafkarest.entities.v3.CreateAclRequest: io.confluent.kafkarest.entities.Acl$Permission getPermission()>() != <io.confluent.kafkarest.entities.Acl$Permission: io.confluent.kafkarest.entities.Acl$Permission UNKNOWN> )",
+            "( {non_EPP#2}.<io.confluent.kafkarest.entities.v3.CreateAclRequest: io.confluent.kafkarest.entities.Acl$ResourceType getResourceType()>() != <io.confluent.kafkarest.entities.Acl$ResourceType: io.confluent.kafkarest.entities.Acl$ResourceType ANY> )",
+            "( {non_EPP#2}.<io.confluent.kafkarest.entities.v3.CreateAclRequest: io.confluent.kafkarest.entities.Acl$ResourceType getResourceType()>() != <io.confluent.kafkarest.entities.Acl$ResourceType: io.confluent.kafkarest.entities.Acl$ResourceType UNKNOWN> )"
+          ],
+          "global-reads": {
+            "g7": {
+              "name": "CREATED",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g7"
+              }
+            },
+            "g8": {
+              "name": "UNKNOWN",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g8"
+              }
+            },
+            "g9": {
+              "name": "UNKNOWN",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g9"
+              }
+            },
+            "g10": {
+              "name": "UNKNOWN",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g10"
+              }
+            },
+            "g11": {
+              "name": "UNKNOWN",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g11"
+              }
+            },
+            "g12": {
+              "name": "ANY",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g12"
+              }
+            },
+            "g13": {
+              "name": "ANY",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g13"
+              }
+            },
+            "g14": {
+              "name": "MATCH",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g14"
+              }
+            },
+            "g15": {
+              "name": "ANY",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g15"
+              }
+            },
+            "g16": {
+              "name": "ANY",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g16"
+              }
+            }
+          }
+        }
+      },
+      "/v3/clusters/{clusterId}/brokers/{brokerId}/configs": {
+        "get": {
+          "global-reads": {
+            "g5": {
+              "name": "BROKER",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g5"
+              }
+            }
+          }
+        }
+      },
+      "/v3/clusters/{clusterId}/brokers/{brokerId}/configs/{name}": {
+        "delete": {
+          "global-reads": {
+            "g5": {
+              "name": "BROKER",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g5"
+              }
+            },
+            "g6": {
+              "name": "NO_CONTENT",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g6"
+              }
+            }
+          }
+        },
+        "get": {
+          "global-reads": {
+            "g5": {
+              "name": "BROKER",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g5"
+              }
+            }
+          }
+        },
+        "put": {
+          "global-reads": {
+            "g5": {
+              "name": "BROKER",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g5"
+              }
+            },
+            "g6": {
+              "name": "NO_CONTENT",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g6"
+              }
+            }
+          }
+        }
+      },
+      "/v3/clusters/{clusterId}/brokers/{brokerId}/configs:alter": {
+        "post": {
+          "global-reads": {
+            "g5": {
+              "name": "BROKER",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g5"
+              }
+            },
+            "g6": {
+              "name": "NO_CONTENT",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g6"
+              }
+            }
+          }
+        }
+      },
+      "/v3/clusters/{clusterId}/topics": {
+        "post": {
+          "global-reads": {
+            "g7": {
+              "name": "CREATED",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g7"
+              }
+            }
+          }
+        }
+      },
+      "/v3/clusters/{clusterId}/topics/{topicName}": {
+        "delete": {
+          "global-reads": {
+            "g6": {
+              "name": "NO_CONTENT",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g6"
+              }
+            }
+          }
+        }
+      },
+      "/v3/clusters/{clusterId}/topics/{topicName}/configs": {
+        "get": {
+          "global-reads": {
+            "g17": {
+              "name": "TOPIC",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g17"
+              }
+            }
+          }
+        }
+      },
+      "/v3/clusters/{clusterId}/topics/{topicName}/configs/{name}": {
+        "delete": {
+          "global-reads": {
+            "g6": {
+              "name": "NO_CONTENT",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g6"
+              }
+            },
+            "g17": {
+              "name": "TOPIC",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g17"
+              }
+            }
+          }
+        },
+        "get": {
+          "global-reads": {
+            "g17": {
+              "name": "TOPIC",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g17"
+              }
+            }
+          }
+        },
+        "put": {
+          "global-reads": {
+            "g6": {
+              "name": "NO_CONTENT",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g6"
+              }
+            },
+            "g17": {
+              "name": "TOPIC",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g17"
+              }
+            }
+          }
+        }
+      },
+      "/v3/clusters/{clusterId}/topics/{topicName}/configs:alter": {
+        "post": {
+          "global-reads": {
+            "g6": {
+              "name": "NO_CONTENT",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g6"
+              }
+            },
+            "g17": {
+              "name": "TOPIC",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g17"
+              }
+            }
+          }
+        }
+      },
+      "/v3/clusters/{clusterId}/topics/{topicName}/records": {
+        "post": {
+          "global-reads": {
+            "g18": {
+              "name": "MILLISECONDS",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g18"
+              }
+            },
+            "g19": {
+              "name": "REQUEST_TIMEOUT",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g19"
+              }
+            },
+            "g20": {
+              "name": "EXCEPTION_MAPPER",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g20"
+              }
+            },
+            "g21": {
+              "name": "log",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g21"
+              }
+            }
+          },
+          "global-writes": {
+            "g20": {
+              "name": "EXCEPTION_MAPPER",
+              "assigned-values": [
+                "staticinvoke <io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder: io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder access$200(io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder,javax.ws.rs.ext.ExceptionMapper,java.util.function.Function,java.util.function.Function)>(staticinvoke <io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder: io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder access$100(io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder,java.lang.Class,javax.ws.rs.ext.ExceptionMapper,java.util.function.Function,java.util.function.Function)>(staticinvoke <io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder: io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder access$100(io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder,java.lang.Class,javax.ws.rs.ext.ExceptionMapper,java.util.function.Function,java.util.function.Function)>(staticinvoke <io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder: io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder access$100(io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder,java.lang.Class,javax.ws.rs.ext.ExceptionMapper,java.util.function.Function,java.util.function.Function)>(staticinvoke <io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder: io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder access$100(io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder,java.lang.Class,javax.ws.rs.ext.ExceptionMapper,java.util.function.Function,java.util.function.Function)>(staticinvoke <io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder: io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder access$100(io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder,java.lang.Class,javax.ws.rs.ext.ExceptionMapper,java.util.function.Function,java.util.function.Function)>(new io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder(null), class \"Lcom/fasterxml/jackson/databind/JsonMappingException;\", (javax.ws.rs.ext.ExceptionMapper) new com.fasterxml.jackson.jaxrs.base.JsonMappingExceptionMapper(), staticinvoke <io.confluent.kafkarest.response.StreamingResponse$lambda_static_0__12: java.util.function.Function bootstrap$()>(), staticinvoke <io.confluent.kafkarest.response.StreamingResponse$lambda_static_1__13: java.util.function.Function bootstrap$()>()), class \"Lcom/fasterxml/jackson/core/JsonParseException;\", (javax.ws.rs.ext.ExceptionMapper) new com.fasterxml.jackson.jaxrs.base.JsonParseExceptionMapper(), staticinvoke <io.confluent.kafkarest.response.StreamingResponse$lambda_static_2__14: java.util.function.Function bootstrap$()>(), staticinvoke <io.confluent.kafkarest.response.StreamingResponse$lambda_static_3__15: java.util.function.Function bootstrap$()>()), class \"Lio/confluent/kafkarest/exceptions/StatusCodeException;\", new io.confluent.kafkarest.exceptions.v3.V3ExceptionMapper(), staticinvoke <io.confluent.kafkarest.response.StreamingResponse$lambda_static_4__16: java.util.function.Function bootstrap$()>(), staticinvoke <io.confluent.kafkarest.response.StreamingResponse$lambda_static_5__17: java.util.function.Function bootstrap$()>()), class \"Lio/confluent/rest/exceptions/RestConstraintViolationException;\", new io.confluent.kafkarest.exceptions.RestConstraintViolationExceptionMapper(), staticinvoke <io.confluent.kafkarest.response.StreamingResponse$lambda_static_6__18: java.util.function.Function bootstrap$()>(), staticinvoke <io.confluent.kafkarest.response.StreamingResponse$lambda_static_7__19: java.util.function.Function bootstrap$()>()), class \"Ljavax/ws/rs/WebApplicationException;\", (javax.ws.rs.ext.ExceptionMapper) new io.confluent.rest.exceptions.WebApplicationExceptionMapper(null), staticinvoke <io.confluent.kafkarest.response.StreamingResponse$lambda_static_8__20: java.util.function.Function bootstrap$()>(), staticinvoke <io.confluent.kafkarest.response.StreamingResponse$lambda_static_9__21: java.util.function.Function bootstrap$()>()), (javax.ws.rs.ext.ExceptionMapper) new io.confluent.rest.exceptions.KafkaExceptionMapper(null), staticinvoke <io.confluent.kafkarest.response.StreamingResponse$lambda_static_10__22: java.util.function.Function bootstrap$()>(), staticinvoke <io.confluent.kafkarest.response.StreamingResponse$lambda_static_11__23: java.util.function.Function bootstrap$()>()).<io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder: io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper build()>()"
+              ],
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g20"
+              }
+            },
+            "g21": {
+              "name": "log",
+              "assigned-values": [
+                "staticinvoke <org.slf4j.LoggerFactory: org.slf4j.Logger getLogger(java.lang.Class)>(class \"Lio/confluent/kafkarest/response/StreamingResponse;\")"
+              ],
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g21"
+              }
+            }
+          }
+        }
+      },
+      "/v3/clusters/{clusterId}/{config_type}-configs/{name}": {
+        "delete": {
+          "global-reads": {
+            "g6": {
+              "name": "NO_CONTENT",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g6"
+              }
+            }
+          }
+        },
+        "put": {
+          "global-reads": {
+            "g6": {
+              "name": "NO_CONTENT",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g6"
+              }
+            }
+          }
+        }
+      },
+      "/v3/clusters/{clusterId}/{config_type}-configs:alter": {
+        "post": {
+          "global-reads": {
+            "g6": {
+              "name": "NO_CONTENT",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g6"
+              }
+            }
+          }
+        }
+      }
+    },
+    "x-endpoint-interdependence": {
+      "g20": {
+        "location-details": {
+          "$ref": "#/components/x-global-variables-info/g20"
+        },
+        "read-by": {
+          "em80": {
+            "$ref": "#/paths/~1v3~1clusters~1{clusterId}~1topics~1{topicName}~1records/post"
+          }
+        },
+        "written-by": {
+          "em80": {
+            "$ref": "#/paths/~1v3~1clusters~1{clusterId}~1topics~1{topicName}~1records/post"
+          }
+        }
+      },
+      "g21": {
+        "location-details": {
+          "$ref": "#/components/x-global-variables-info/g21"
+        },
+        "read-by": {
+          "em80": {
+            "$ref": "#/paths/~1v3~1clusters~1{clusterId}~1topics~1{topicName}~1records/post"
+          }
+        },
+        "written-by": {
+          "em80": {
+            "$ref": "#/paths/~1v3~1clusters~1{clusterId}~1topics~1{topicName}~1records/post"
+          }
+        }
+      }
+    },
+    "x-global-variables-info": {
+      "g0": {
+        "name": "INTERNAL_SERVER_ERROR",
+        "id": "g0",
+        "defining-class": "javax.ws.rs.core.Response$Status"
+      },
+      "g1": {
+        "name": "log",
+        "id": "g1",
+        "defining-class": "io.confluent.kafkarest.v2.KafkaConsumerManager",
+        "locations-of-static-assignments": [
+          "line 89, io.confluent.kafkarest.v2.KafkaConsumerManager"
+        ]
+      },
+      "g2": {
+        "name": "$SwitchMap$io$confluent$kafkarest$entities$EmbeddedFormat",
+        "id": "g2",
+        "defining-class": "io.confluent.kafkarest.v2.KafkaConsumerManager$3",
+        "locations-of-static-assignments": [
+          "line 263, io.confluent.kafkarest.v2.KafkaConsumerManager$3"
+        ]
+      },
+      "g3": {
+        "name": "CONFLICT",
+        "id": "g3",
+        "defining-class": "javax.ws.rs.core.Response$Status"
+      },
+      "g4": {
+        "name": "BINARY",
+        "id": "g4",
+        "defining-class": "io.confluent.kafkarest.entities.EmbeddedFormat",
+        "locations-of-static-assignments": [
+          "line 34, io.confluent.kafkarest.entities.EmbeddedFormat"
+        ]
+      },
+      "g5": {
+        "name": "BROKER",
+        "id": "g5",
+        "defining-class": "org.apache.kafka.common.config.ConfigResource$Type"
+      },
+      "g6": {
+        "name": "NO_CONTENT",
+        "id": "g6",
+        "defining-class": "javax.ws.rs.core.Response$Status"
+      },
+      "g7": {
+        "name": "CREATED",
+        "id": "g7",
+        "defining-class": "javax.ws.rs.core.Response$Status"
+      },
+      "g8": {
+        "name": "UNKNOWN",
+        "id": "g8",
+        "defining-class": "io.confluent.kafkarest.entities.Acl$Operation",
+        "locations-of-static-assignments": [
+          "line 86, io.confluent.kafkarest.entities.Acl$Operation"
+        ]
+      },
+      "g9": {
+        "name": "UNKNOWN",
+        "id": "g9",
+        "defining-class": "io.confluent.kafkarest.entities.Acl$Permission",
+        "locations-of-static-assignments": [
+          "line 179, io.confluent.kafkarest.entities.Acl$Permission"
+        ]
+      },
+      "g10": {
+        "name": "UNKNOWN",
+        "id": "g10",
+        "defining-class": "io.confluent.kafkarest.entities.Acl$ResourceType",
+        "locations-of-static-assignments": [
+          "line 210, io.confluent.kafkarest.entities.Acl$ResourceType"
+        ]
+      },
+      "g11": {
+        "name": "UNKNOWN",
+        "id": "g11",
+        "defining-class": "io.confluent.kafkarest.entities.Acl$PatternType",
+        "locations-of-static-assignments": [
+          "line 144, io.confluent.kafkarest.entities.Acl$PatternType"
+        ]
+      },
+      "g12": {
+        "name": "ANY",
+        "id": "g12",
+        "defining-class": "io.confluent.kafkarest.entities.Acl$Operation",
+        "locations-of-static-assignments": [
+          "line 89, io.confluent.kafkarest.entities.Acl$Operation"
+        ]
+      },
+      "g13": {
+        "name": "ANY",
+        "id": "g13",
+        "defining-class": "io.confluent.kafkarest.entities.Acl$ResourceType",
+        "locations-of-static-assignments": [
+          "line 213, io.confluent.kafkarest.entities.Acl$ResourceType"
+        ]
+      },
+      "g14": {
+        "name": "MATCH",
+        "id": "g14",
+        "defining-class": "io.confluent.kafkarest.entities.Acl$PatternType",
+        "locations-of-static-assignments": [
+          "line 150, io.confluent.kafkarest.entities.Acl$PatternType"
+        ]
+      },
+      "g15": {
+        "name": "ANY",
+        "id": "g15",
+        "defining-class": "io.confluent.kafkarest.entities.Acl$PatternType",
+        "locations-of-static-assignments": [
+          "line 147, io.confluent.kafkarest.entities.Acl$PatternType"
+        ]
+      },
+      "g16": {
+        "name": "ANY",
+        "id": "g16",
+        "defining-class": "io.confluent.kafkarest.entities.Acl$Permission",
+        "locations-of-static-assignments": [
+          "line 182, io.confluent.kafkarest.entities.Acl$Permission"
+        ]
+      },
+      "g17": {
+        "name": "TOPIC",
+        "id": "g17",
+        "defining-class": "org.apache.kafka.common.config.ConfigResource$Type"
+      },
+      "g18": {
+        "name": "MILLISECONDS",
+        "id": "g18",
+        "defining-class": "java.util.concurrent.TimeUnit"
+      },
+      "g19": {
+        "name": "REQUEST_TIMEOUT",
+        "id": "g19",
+        "defining-class": "javax.ws.rs.core.Response$Status"
+      },
+      "g20": {
+        "name": "EXCEPTION_MAPPER",
+        "id": "g20",
+        "defining-class": "io.confluent.kafkarest.response.StreamingResponse",
+        "locations-of-static-assignments": [
+          "line 107, io.confluent.kafkarest.response.StreamingResponse"
+        ]
+      },
+      "g21": {
+        "name": "log",
+        "id": "g21",
+        "defining-class": "io.confluent.kafkarest.response.StreamingResponse",
+        "locations-of-static-assignments": [
+          "line 73, io.confluent.kafkarest.response.StreamingResponse"
+        ]
+      }
+    }
+  }
+}

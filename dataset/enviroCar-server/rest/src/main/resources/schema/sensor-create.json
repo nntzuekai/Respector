@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "allOf": [
+    {
+      "$ref": "sensor.json#/definitions/base"
+    },
+    {
+      "oneOf": [
+        {
+          "not": {
+            "$ref": "sensor.json#/definitions/car-type"
+          }
+        },
+        {
+          "allOf": [
+            {
+              "$ref": "sensor.json#/definitions/car-type"
+            },
+            {
+              "$ref": "#/definitions/car-properties"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "definitions": {
+    "car-properties": {
+      "allOf": [
+        {
+          "$ref": "sensor.json#/definitions/car-properties"
+        },
+        {
+          "properties": {
+            "properties": {
+              "required": [
+                "manufacturer",
+                "model",
+                "fuelType",
+                "constructionYear"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}

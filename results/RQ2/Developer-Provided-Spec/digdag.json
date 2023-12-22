@@ -1,0 +1,2589 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Digdag",
+    "description": "Digdag server API",
+    "version": "0.10.0"
+  },
+  "servers": [
+    {
+      "url": "/"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Workflow"
+    },
+    {
+      "name": "Session"
+    },
+    {
+      "name": "Attempt"
+    },
+    {
+      "name": "Admin"
+    },
+    {
+      "name": "Version"
+    },
+    {
+      "name": "Log"
+    },
+    {
+      "name": "Project"
+    },
+    {
+      "name": "Schedule"
+    }
+  ],
+  "paths": {
+    "/api/admin/attempts/{id}/userinfo": {
+      "get": {
+        "tags": [
+          "Admin"
+        ],
+        "summary": "(deprecated)",
+        "operationId": "getUserInfo",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Config"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true
+      }
+    },
+    "/api/attempts": {
+      "get": {
+        "tags": [
+          "Attempt"
+        ],
+        "summary": "List attempts with filters",
+        "operationId": "getAttempts",
+        "parameters": [
+          {
+            "name": "project",
+            "in": "query",
+            "description": "exact matching filter on project name",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "workflow",
+            "in": "query",
+            "description": "exact matching filter on workflow name",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "include_retried",
+            "in": "query",
+            "description": "list more than 1 attempts per session",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "last_id",
+            "in": "query",
+            "description": "list attempts whose id is grater than this id for pagination",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "number of attempts to return",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RestSessionAttemptCollection"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Attempt"
+        ],
+        "summary": "Start a workflow execution as a new session or a new attempt of an existing session",
+        "operationId": "startAttempt",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RestSessionAttemptRequest"
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "default": {
+            "description": "successful operation",
+            "content": {}
+          }
+        },
+        "x-codegen-request-body-name": "body"
+      }
+    },
+    "/api/attempts/{id}": {
+      "get": {
+        "tags": [
+          "Attempt"
+        ],
+        "summary": "Get an attempt",
+        "operationId": "getAttempt",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "attempt id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RestSessionAttempt"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/attempts/{id}/kill": {
+      "post": {
+        "tags": [
+          "Attempt"
+        ],
+        "summary": "Set a cancel-requested flag on a running attempt",
+        "operationId": "killAttempt",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "attempt id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "successful operation",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/api/attempts/{id}/retries": {
+      "get": {
+        "tags": [
+          "Attempt"
+        ],
+        "summary": "List attempts of a session of a given attempt",
+        "operationId": "getAttemptRetries",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "attempt id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RestSessionAttemptCollection"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/attempts/{id}/tasks": {
+      "get": {
+        "tags": [
+          "Attempt"
+        ],
+        "summary": "List tasks of an attempt",
+        "operationId": "getTasks",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "attempt id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RestTaskCollection"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/logs/{attempt_id}/files": {
+      "get": {
+        "tags": [
+          "Log"
+        ],
+        "summary": "List log files of an attempt with filters",
+        "operationId": "getFileHandles",
+        "parameters": [
+          {
+            "name": "attempt_id",
+            "in": "path",
+            "description": "attempt id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "task",
+            "in": "query",
+            "description": "partial prefix match filter on task name",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "direct_download",
+            "in": "query",
+            "description": "enable returning direct download handle",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RestLogFileHandleCollection"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/logs/{attempt_id}/files/{file_name}": {
+      "get": {
+        "tags": [
+          "Log"
+        ],
+        "summary": "Download a log file",
+        "operationId": "getFile",
+        "parameters": [
+          {
+            "name": "attempt_id",
+            "in": "path",
+            "description": "attempt id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "file_name",
+            "in": "path",
+            "description": "log file name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/gzip": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "pattern": "^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$",
+                    "type": "string",
+                    "format": "byte"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/project": {
+      "get": {
+        "tags": [
+          "Project"
+        ],
+        "summary": "(deprecated)",
+        "operationId": "getProject",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RestProject"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true
+      }
+    },
+    "/api/projects": {
+      "get": {
+        "tags": [
+          "Project"
+        ],
+        "summary": "List projects with filters",
+        "operationId": "getProjects",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "description": "exact matching filter on project name",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RestProjectCollection"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Project"
+        ],
+        "summary": "Upload a project archive as a new project or a new revision of an existing project",
+        "operationId": "putProject",
+        "parameters": [
+          {
+            "name": "project",
+            "in": "query",
+            "description": "project name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "revision",
+            "in": "query",
+            "description": "revision",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Content-Length",
+            "in": "header",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "schedule_from",
+            "in": "query",
+            "description": "start scheduling of new workflows from the given time instead of current time",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/gzip": {
+              "schema": {
+                "$ref": "#/components/schemas/InputStream"
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RestProject"
+                }
+              }
+            }
+          }
+        },
+        "x-codegen-request-body-name": "body"
+      }
+    },
+    "/api/projects/{id}": {
+      "get": {
+        "tags": [
+          "Project"
+        ],
+        "summary": "Get a project",
+        "operationId": "getProject",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "project id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RestProject"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Project"
+        ],
+        "summary": "Delete a project",
+        "operationId": "deleteProject",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RestProject"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/projects/{id}/archive": {
+      "get": {
+        "tags": [
+          "Project"
+        ],
+        "summary": "Download a project archive file",
+        "operationId": "getArchive",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "project id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "revision",
+            "in": "query",
+            "description": "use a given revision of a project instead of the latest revision",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "direct_download",
+            "in": "query",
+            "description": "enable returning direct download handle",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "successful operation",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/api/projects/{id}/revisions": {
+      "get": {
+        "tags": [
+          "Project"
+        ],
+        "summary": "List revisions of a project",
+        "operationId": "getRevisions",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "last_id",
+            "in": "query",
+            "description": "deprecated - do not use",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "description": "revision name",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RestRevisionCollection"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/projects/{id}/schedules": {
+      "get": {
+        "tags": [
+          "Project"
+        ],
+        "summary": "List schedules of a project with filters",
+        "operationId": "getSchedules",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "project id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "workflow",
+            "in": "query",
+            "description": "exact matching filter on workflow name",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "last_id",
+            "in": "query",
+            "description": "list schedules whose id is grater than this id for pagination",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RestScheduleCollection"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/projects/{id}/secrets": {
+      "get": {
+        "tags": [
+          "Project"
+        ],
+        "summary": "List secret keys of a project",
+        "operationId": "getProjectSecrets",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "project id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RestSecretList"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/projects/{id}/secrets/{key}": {
+      "put": {
+        "tags": [
+          "Project"
+        ],
+        "summary": "Set a secret to a project",
+        "operationId": "putProjectSecret",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "project id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "key",
+            "in": "path",
+            "description": "secret key",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RestSetSecretRequest"
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RestSecret"
+                }
+              }
+            }
+          }
+        },
+        "x-codegen-request-body-name": "body"
+      },
+      "delete": {
+        "tags": [
+          "Project"
+        ],
+        "summary": "Delete a secret from a project",
+        "operationId": "deleteProjectSecret",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "project id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "key",
+            "in": "path",
+            "description": "secret key",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RestSecret"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/projects/{id}/sessions": {
+      "get": {
+        "tags": [
+          "Project"
+        ],
+        "summary": "List sessions of a project with filters",
+        "operationId": "getSessions",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "project id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "workflow",
+            "in": "query",
+            "description": "exact matching filter on workflow name",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "last_id",
+            "in": "query",
+            "description": "list sessions whose id is grater than this id for pagination",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "number of sessions to return",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RestSessionCollection"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/projects/{id}/workflow": {
+      "get": {
+        "tags": [
+          "Project"
+        ],
+        "summary": "(deprecated)",
+        "operationId": "getWorkflow",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "revision",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RestWorkflowDefinition"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true
+      }
+    },
+    "/api/projects/{id}/workflows": {
+      "get": {
+        "tags": [
+          "Project"
+        ],
+        "summary": "List workflows of a project with filters",
+        "operationId": "getWorkflows",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "project id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "revision",
+            "in": "query",
+            "description": "use a given revision of the project instead of the latest revision",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "description": "exact matching filter on workflow name",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RestWorkflowDefinitionCollection"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/projects/{id}/workflows/{name}": {
+      "get": {
+        "tags": [
+          "Project"
+        ],
+        "operationId": "getWorkflowByName",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "revision",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RestWorkflowDefinition"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/schedules": {
+      "get": {
+        "tags": [
+          "Schedule"
+        ],
+        "summary": "List schedules",
+        "operationId": "getSchedules",
+        "parameters": [
+          {
+            "name": "last_id",
+            "in": "query",
+            "description": "list schedules whose id is grater than this id for pagination",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RestScheduleCollection"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/schedules/{id}": {
+      "get": {
+        "tags": [
+          "Schedule"
+        ],
+        "summary": "Get a schedule",
+        "operationId": "getSchedules",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "schedule id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RestSchedule"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/schedules/{id}/backfill": {
+      "post": {
+        "tags": [
+          "Schedule"
+        ],
+        "summary": "Re-schedule past sessions by count or duration",
+        "operationId": "backfillSchedule",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "session id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RestScheduleBackfillRequest"
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RestScheduleAttemptCollection"
+                }
+              }
+            }
+          }
+        },
+        "x-codegen-request-body-name": "body"
+      }
+    },
+    "/api/schedules/{id}/disable": {
+      "post": {
+        "tags": [
+          "Schedule"
+        ],
+        "summary": "Disable scheduling of new sessions",
+        "operationId": "disableSchedule",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "session id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RestScheduleSummary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/schedules/{id}/enable": {
+      "post": {
+        "tags": [
+          "Schedule"
+        ],
+        "summary": "Re-enable disabled scheduling",
+        "operationId": "enableSchedule",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "session id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "*/*": {
+              "schema": {
+                "$ref": "#/components/schemas/RestScheduleEnableRequest"
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RestScheduleSummary"
+                }
+              }
+            }
+          }
+        },
+        "x-codegen-request-body-name": "body"
+      }
+    },
+    "/api/schedules/{id}/skip": {
+      "post": {
+        "tags": [
+          "Schedule"
+        ],
+        "summary": "Skip future sessions by count or time",
+        "operationId": "skipSchedule",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "session id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RestScheduleSkipRequest"
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RestScheduleSummary"
+                }
+              }
+            }
+          }
+        },
+        "x-codegen-request-body-name": "body"
+      }
+    },
+    "/api/sessions": {
+      "get": {
+        "tags": [
+          "Session"
+        ],
+        "summary": "List sessions",
+        "operationId": "getSessions",
+        "parameters": [
+          {
+            "name": "last_id",
+            "in": "query",
+            "description": "list sessions whose id is grater than this id for pagination",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "number of sessions to return",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RestSessionCollection"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/sessions/{id}": {
+      "get": {
+        "tags": [
+          "Session"
+        ],
+        "summary": "Get a session",
+        "operationId": "getSession",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "session id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RestSession"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/sessions/{id}/attempts": {
+      "get": {
+        "tags": [
+          "Session"
+        ],
+        "summary": "List attempts of a session",
+        "operationId": "getSessionAttempts",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "session id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "last_id",
+            "in": "query",
+            "description": "list attempts whose id is grater than this id for pagination",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "number of attempts to return",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RestSessionAttemptCollection"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/version": {
+      "get": {
+        "tags": [
+          "Version"
+        ],
+        "summary": "Get server version",
+        "operationId": "getVersion",
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/version/check": {
+      "get": {
+        "tags": [
+          "Version"
+        ],
+        "summary": "Check client version compatibility",
+        "operationId": "checkClientVersion",
+        "parameters": [
+          {
+            "name": "client",
+            "in": "query",
+            "description": "client version",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RestVersionCheckResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/workflow": {
+      "get": {
+        "tags": [
+          "Workflow"
+        ],
+        "summary": "(deprecated)",
+        "operationId": "getWorkflowDefinition",
+        "parameters": [
+          {
+            "name": "project",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "revision",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RestWorkflowDefinition"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true
+      }
+    },
+    "/api/workflows": {
+      "get": {
+        "tags": [
+          "Workflow"
+        ],
+        "summary": "List workflows",
+        "operationId": "getWorkflowDefinitions",
+        "parameters": [
+          {
+            "name": "last_id",
+            "in": "query",
+            "description": "list workflows whose id is grater than this id for pagination",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "description": "number of workflows to return",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RestWorkflowDefinitionCollection"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/workflows/{id}": {
+      "get": {
+        "tags": [
+          "Workflow"
+        ],
+        "summary": "Get a workflow",
+        "operationId": "getWorkflowDefinition",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "workflow id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RestWorkflowDefinition"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/workflows/{id}/truncated_session_time": {
+      "get": {
+        "tags": [
+          "Workflow"
+        ],
+        "summary": "Get truncated local time based on the time zone of a workflow",
+        "operationId": "getWorkflowDefinition",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "workflow id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "session_time",
+            "in": "query",
+            "description": "session time to be truncated",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "mode",
+            "in": "query",
+            "description": "truncation mode - second, minute, hour, day, schedule, or next_schedule",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "SECOND",
+                "MINUTE",
+                "HOUR",
+                "DAY",
+                "SCHEDULE",
+                "NEXT_SCHEDULE"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RestWorkflowSessionTime"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ResumeFrom": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Resume"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "from": {
+                "type": "string",
+                "readOnly": true
+              }
+            }
+          }
+        ]
+      },
+      "Config": {
+        "type": "object",
+        "properties": {
+          "empty": {
+            "type": "boolean",
+            "default": false
+          },
+          "factory": {
+            "$ref": "#/components/schemas/ConfigFactory"
+          },
+          "keys": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "RestSession": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "sessionTime": {
+            "$ref": "#/components/schemas/OffsetDateTime"
+          },
+          "workflow": {
+            "$ref": "#/components/schemas/NameOptionalId"
+          },
+          "lastAttempt": {
+            "$ref": "#/components/schemas/Attempt"
+          },
+          "sessionUuid": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "project": {
+            "$ref": "#/components/schemas/IdAndName"
+          }
+        }
+      },
+      "RestSchedule": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "workflow": {
+            "$ref": "#/components/schemas/IdAndName"
+          },
+          "disabledAt": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "nextScheduleTime": {
+            "$ref": "#/components/schemas/OffsetDateTime"
+          },
+          "nextRunTime": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "project": {
+            "$ref": "#/components/schemas/IdAndName"
+          }
+        }
+      },
+      "RestScheduleEnableRequest": {
+        "type": "object",
+        "properties": {
+          "skipSchedule": {
+            "type": "boolean",
+            "default": false
+          },
+          "nextTime": {
+            "type": "string"
+          }
+        }
+      },
+      "RestLogFileHandle": {
+        "type": "object",
+        "properties": {
+          "fileName": {
+            "type": "string"
+          },
+          "taskName": {
+            "type": "string"
+          },
+          "fileTime": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "fileSize": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "agentId": {
+            "type": "string"
+          },
+          "direct": {
+            "$ref": "#/components/schemas/RestDirectDownloadHandle"
+          }
+        }
+      },
+      "RestProject": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "deletedAt": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "updatedAt": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "revision": {
+            "type": "string"
+          },
+          "archiveType": {
+            "type": "string"
+          },
+          "archiveMd5": {
+            "type": "array",
+            "items": {
+              "pattern": "^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$",
+              "type": "string",
+              "format": "byte"
+            }
+          },
+          "createdAt": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "IdAndName": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "id": {
+            "$ref": "#/components/schemas/Id"
+          }
+        }
+      },
+      "ZoneOffset": {
+        "type": "object",
+        "properties": {
+          "totalSeconds": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "id": {
+            "type": "string"
+          },
+          "rules": {
+            "$ref": "#/components/schemas/ZoneRules"
+          }
+        }
+      },
+      "RestProjectCollection": {
+        "type": "object",
+        "properties": {
+          "projects": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RestProject"
+            }
+          }
+        }
+      },
+      "RestVersionCheckResult": {
+        "type": "object",
+        "properties": {
+          "apiCompatible": {
+            "type": "boolean",
+            "default": false
+          },
+          "serverVersion": {
+            "type": "string"
+          },
+          "upgradeRecommended": {
+            "type": "boolean",
+            "default": false
+          }
+        }
+      },
+      "RestWorkflowDefinitionCollection": {
+        "type": "object",
+        "properties": {
+          "workflows": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RestWorkflowDefinition"
+            }
+          }
+        }
+      },
+      "Attempt": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "success": {
+            "type": "boolean",
+            "default": false
+          },
+          "done": {
+            "type": "boolean",
+            "default": false
+          },
+          "cancelRequested": {
+            "type": "boolean",
+            "default": false
+          },
+          "retryAttemptName": {
+            "type": "string"
+          },
+          "params": {
+            "$ref": "#/components/schemas/Config"
+          },
+          "finishedAt": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "createdAt": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "RestWorkflowDefinition": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "project": {
+            "$ref": "#/components/schemas/IdAndName"
+          },
+          "config": {
+            "$ref": "#/components/schemas/Config"
+          },
+          "revision": {
+            "type": "string"
+          },
+          "timezone": {
+            "$ref": "#/components/schemas/ZoneId"
+          }
+        }
+      },
+      "RestWorkflowSessionTime": {
+        "type": "object",
+        "properties": {
+          "sessionTime": {
+            "$ref": "#/components/schemas/OffsetDateTime"
+          },
+          "project": {
+            "$ref": "#/components/schemas/IdAndName"
+          },
+          "revision": {
+            "type": "string"
+          },
+          "timezone": {
+            "$ref": "#/components/schemas/ZoneId"
+          }
+        }
+      },
+      "RestScheduleBackfillRequest": {
+        "type": "object",
+        "properties": {
+          "fromTime": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "attemptName": {
+            "type": "string"
+          },
+          "dryRun": {
+            "type": "boolean",
+            "default": false
+          },
+          "count": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "ZoneOffsetTransition": {
+        "type": "object",
+        "properties": {
+          "offsetBefore": {
+            "$ref": "#/components/schemas/ZoneOffset"
+          },
+          "offsetAfter": {
+            "$ref": "#/components/schemas/ZoneOffset"
+          },
+          "gap": {
+            "type": "boolean",
+            "default": false
+          },
+          "dateTimeBefore": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "dateTimeAfter": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "duration": {
+            "$ref": "#/components/schemas/Duration"
+          },
+          "instant": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "overlap": {
+            "type": "boolean",
+            "default": false
+          }
+        }
+      },
+      "RestSessionCollection": {
+        "type": "object",
+        "properties": {
+          "sessions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RestSession"
+            }
+          }
+        }
+      },
+      "RestTaskCollection": {
+        "type": "object",
+        "properties": {
+          "tasks": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RestTask"
+            }
+          }
+        }
+      },
+      "RestRevision": {
+        "type": "object",
+        "properties": {
+          "userInfo": {
+            "$ref": "#/components/schemas/Config"
+          },
+          "revision": {
+            "type": "string"
+          },
+          "archiveType": {
+            "type": "string"
+          },
+          "archiveMd5": {
+            "type": "array",
+            "items": {
+              "pattern": "^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$",
+              "type": "string",
+              "format": "byte"
+            }
+          },
+          "createdAt": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "ZoneOffsetTransitionRule": {
+        "type": "object",
+        "properties": {
+          "month": {
+            "type": "string",
+            "enum": [
+              "JANUARY",
+              "FEBRUARY",
+              "MARCH",
+              "APRIL",
+              "MAY",
+              "JUNE",
+              "JULY",
+              "AUGUST",
+              "SEPTEMBER",
+              "OCTOBER",
+              "NOVEMBER",
+              "DECEMBER"
+            ]
+          },
+          "timeDefinition": {
+            "type": "string",
+            "enum": [
+              "UTC",
+              "WALL",
+              "STANDARD"
+            ]
+          },
+          "standardOffset": {
+            "$ref": "#/components/schemas/ZoneOffset"
+          },
+          "offsetBefore": {
+            "$ref": "#/components/schemas/ZoneOffset"
+          },
+          "offsetAfter": {
+            "$ref": "#/components/schemas/ZoneOffset"
+          },
+          "dayOfMonthIndicator": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "localTime": {
+            "$ref": "#/components/schemas/LocalTime"
+          },
+          "midnightEndOfDay": {
+            "type": "boolean",
+            "default": false
+          },
+          "dayOfWeek": {
+            "type": "string",
+            "enum": [
+              "MONDAY",
+              "TUESDAY",
+              "WEDNESDAY",
+              "THURSDAY",
+              "FRIDAY",
+              "SATURDAY",
+              "SUNDAY"
+            ]
+          }
+        }
+      },
+      "RestSetSecretRequest": {
+        "type": "object"
+      },
+      "LocalTime": {
+        "type": "object",
+        "properties": {
+          "hour": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "minute": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "second": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nano": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "ZoneId": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "rules": {
+            "$ref": "#/components/schemas/ZoneRules"
+          }
+        }
+      },
+      "RestTask": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "state": {
+            "type": "string"
+          },
+          "cancelRequested": {
+            "type": "boolean",
+            "default": false
+          },
+          "updatedAt": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "startedAt": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "group": {
+            "type": "boolean",
+            "default": false
+          },
+          "fullName": {
+            "type": "string"
+          },
+          "parentId": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "upstreams": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Id"
+            }
+          },
+          "retryAt": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "config": {
+            "$ref": "#/components/schemas/Config"
+          },
+          "exportParams": {
+            "$ref": "#/components/schemas/Config"
+          },
+          "storeParams": {
+            "$ref": "#/components/schemas/Config"
+          },
+          "stateParams": {
+            "$ref": "#/components/schemas/Config"
+          },
+          "error": {
+            "$ref": "#/components/schemas/Config"
+          }
+        }
+      },
+      "RestSecret": {
+        "type": "object"
+      },
+      "TemporalUnit": {
+        "type": "object",
+        "properties": {
+          "duration": {
+            "$ref": "#/components/schemas/Duration"
+          },
+          "durationEstimated": {
+            "type": "boolean",
+            "default": false
+          },
+          "dateBased": {
+            "type": "boolean",
+            "default": false
+          },
+          "timeBased": {
+            "type": "boolean",
+            "default": false
+          }
+        }
+      },
+      "InputStream": {
+        "type": "object"
+      },
+      "RestScheduleSummary": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "workflow": {
+            "$ref": "#/components/schemas/IdAndName"
+          },
+          "updatedAt": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "disabledAt": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "nextScheduleTime": {
+            "$ref": "#/components/schemas/OffsetDateTime"
+          },
+          "nextRunTime": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "project": {
+            "$ref": "#/components/schemas/IdAndName"
+          },
+          "createdAt": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "RestDirectDownloadHandle": {
+        "type": "object"
+      },
+      "RestScheduleSkipRequest": {
+        "type": "object",
+        "properties": {
+          "nextRunTime": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "nextTime": {
+            "$ref": "#/components/schemas/LocalTimeOrInstant"
+          },
+          "fromTime": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "dryRun": {
+            "type": "boolean",
+            "default": false
+          },
+          "count": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "Duration": {
+        "type": "object",
+        "properties": {
+          "seconds": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "zero": {
+            "type": "boolean",
+            "default": false
+          },
+          "negative": {
+            "type": "boolean",
+            "default": false
+          },
+          "units": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TemporalUnit"
+            }
+          },
+          "nano": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "NameOptionalId": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "id": {
+            "$ref": "#/components/schemas/Id"
+          }
+        }
+      },
+      "ConfigFactory": {
+        "type": "object"
+      },
+      "RestRevisionCollection": {
+        "type": "object",
+        "properties": {
+          "revisions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RestRevision"
+            }
+          }
+        }
+      },
+      "RestSessionAttempt": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "sessionTime": {
+            "$ref": "#/components/schemas/OffsetDateTime"
+          },
+          "workflow": {
+            "$ref": "#/components/schemas/NameOptionalId"
+          },
+          "success": {
+            "type": "boolean",
+            "default": false
+          },
+          "done": {
+            "type": "boolean",
+            "default": false
+          },
+          "cancelRequested": {
+            "type": "boolean",
+            "default": false
+          },
+          "sessionUuid": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "retryAttemptName": {
+            "type": "string"
+          },
+          "params": {
+            "$ref": "#/components/schemas/Config"
+          },
+          "sessionId": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "finishedAt": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "status": {
+            "type": "string"
+          },
+          "project": {
+            "$ref": "#/components/schemas/IdAndName"
+          },
+          "createdAt": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "index": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "OffsetDateTime": {
+        "type": "object",
+        "properties": {
+          "offset": {
+            "$ref": "#/components/schemas/ZoneOffset"
+          },
+          "hour": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "minute": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nano": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "second": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dayOfYear": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dayOfWeek": {
+            "type": "string",
+            "enum": [
+              "MONDAY",
+              "TUESDAY",
+              "WEDNESDAY",
+              "THURSDAY",
+              "FRIDAY",
+              "SATURDAY",
+              "SUNDAY"
+            ]
+          },
+          "month": {
+            "type": "string",
+            "enum": [
+              "JANUARY",
+              "FEBRUARY",
+              "MARCH",
+              "APRIL",
+              "MAY",
+              "JUNE",
+              "JULY",
+              "AUGUST",
+              "SEPTEMBER",
+              "OCTOBER",
+              "NOVEMBER",
+              "DECEMBER"
+            ]
+          },
+          "dayOfMonth": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "year": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "monthValue": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "LocalTimeOrInstant": {
+        "type": "object"
+      },
+      "RestSecretList": {
+        "type": "object"
+      },
+      "RestScheduleCollection": {
+        "type": "object",
+        "properties": {
+          "schedules": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RestSchedule"
+            }
+          }
+        }
+      },
+      "RestScheduleAttemptCollection": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "workflow": {
+            "$ref": "#/components/schemas/IdAndName"
+          },
+          "attempts": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RestSessionAttempt"
+            }
+          },
+          "project": {
+            "$ref": "#/components/schemas/IdAndName"
+          }
+        }
+      },
+      "ZoneRules": {
+        "type": "object",
+        "properties": {
+          "transitions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ZoneOffsetTransition"
+            }
+          },
+          "transitionRules": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ZoneOffsetTransitionRule"
+            }
+          },
+          "fixedOffset": {
+            "type": "boolean",
+            "default": false
+          }
+        }
+      },
+      "RestSessionAttemptCollection": {
+        "type": "object",
+        "properties": {
+          "attempts": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RestSessionAttempt"
+            }
+          }
+        }
+      },
+      "RestLogFileHandleCollection": {
+        "type": "object",
+        "properties": {
+          "files": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RestLogFileHandle"
+            }
+          }
+        }
+      },
+      "Id": {
+        "type": "object"
+      },
+      "ResumeFailed": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Resume"
+          },
+          {
+            "type": "object"
+          }
+        ]
+      },
+      "RestSessionAttemptRequest": {
+        "type": "object",
+        "properties": {
+          "sessionTime": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "workflowId": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "resume": {
+            "$ref": "#/components/schemas/Resume"
+          },
+          "retryAttemptName": {
+            "type": "string"
+          },
+          "params": {
+            "$ref": "#/components/schemas/Config"
+          }
+        }
+      },
+      "Resume": {
+        "type": "object",
+        "properties": {
+          "attemptId": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "mode": {
+            "type": "string",
+            "readOnly": true,
+            "enum": [
+              "FROM",
+              "FAILED"
+            ]
+          }
+        },
+        "discriminator": {
+          "propertyName": "mode"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "My project",
+    "version": "v1"
+  },
+  "paths": {
+    "/consumer/register": {
+      "post": {
+        "responses": {
+          "200": {
+            "content": {
+              "text/plain": {}
+            },
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/login": {
+      "post": {
+        "responses": {
+          "200": {
+            "content": {
+              "text/plain": {}
+            },
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/printshops/8/employees": {
+      "get": {
+        "responses": {
+          "200": {
+            "content": {
+              "text/plain": {}
+            },
+            "description": "OK"
+          }
+        },
+        "security": [
+          {
+            "basic": []
+          }
+        ]
+      },
+      "post": {
+        "responses": {
+          "200": {
+            "content": {
+              "text/plain": {}
+            },
+            "description": "OK"
+          }
+        },
+        "security": [
+          {
+            "basic": []
+          }
+        ]
+      }
+    },
+    "/request/accept/7": {
+      "post": {
+        "responses": {
+          "200": {
+            "content": {
+              "text/plain": {}
+            },
+            "description": "OK"
+          }
+        },
+        "security": [
+          {
+            "basic": []
+          }
+        ]
+      }
+    },
+    "/request/register": {
+      "post": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/requests/pending": {
+      "get": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "OK"
+          }
+        },
+        "security": [
+          {
+            "basic": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {}
+}

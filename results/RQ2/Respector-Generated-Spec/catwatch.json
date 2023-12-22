@@ -1,0 +1,965 @@
+{
+  "openapi": "3.0.0",
+  "servers": [
+    {
+      "url": "http://localhost:8080"
+    }
+  ],
+  "info": {
+    "title": "REST API",
+    "version": "",
+    "description": "REST API"
+  },
+  "paths": {
+    "/config": {
+      "get": {
+        "description": "",
+        "operationId": "em8",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/config/scoring.project": {
+      "post": {
+        "description": "",
+        "operationId": "em9",
+        "parameters": [
+          {
+            "name": "X-Organizations",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/contributors": {
+      "get": {
+        "description": "",
+        "operationId": "em3",
+        "parameters": [
+          {
+            "name": "organizations",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "minimum": 1,
+              "exclusiveMinimum": false
+            }
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "minimum": 0,
+              "exclusiveMinimum": false
+            }
+          },
+          {
+            "name": "start_date",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "end_date",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sortBy",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "q",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1contributors/get"
+        }
+      }
+    },
+    "/delete": {
+      "get": {
+        "description": "",
+        "operationId": "em11",
+        "parameters": [],
+        "responses": {
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/export": {
+      "get": {
+        "description": "",
+        "operationId": "em13",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.zalando.catwatch.backend.web.admin.DatabaseDto",
+                  "properties": {
+                    "contributors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object"
+                      }
+                    },
+                    "projects": {
+                      "type": "array",
+                      "items": {
+                        "type": "object"
+                      }
+                    },
+                    "statistics": {
+                      "type": "array",
+                      "items": {
+                        "type": "object"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/fetch": {
+      "get": {
+        "description": "",
+        "operationId": "em1",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/import": {
+      "post": {
+        "description": "",
+        "operationId": "em12",
+        "parameters": [],
+        "responses": {
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "contributors": {
+                    "type": "string"
+                  },
+                  "projects": {
+                    "type": "string"
+                  },
+                  "statistics": {
+                    "type": "string"
+                  }
+                },
+                "maxProperties": 3
+              }
+            }
+          }
+        }
+      }
+    },
+    "/init": {
+      "get": {
+        "description": "",
+        "operationId": "em10",
+        "parameters": [],
+        "responses": {
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/languages": {
+      "get": {
+        "description": "",
+        "operationId": "em0",
+        "parameters": [
+          {
+            "name": "organizations",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "q",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1languages/get"
+        }
+      }
+    },
+    "/projects": {
+      "get": {
+        "description": "",
+        "operationId": "em2",
+        "parameters": [
+          {
+            "name": "organizations",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "start_date",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "end_date",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sortBy",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "q",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "language",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1projects/get"
+        }
+      }
+    },
+    "/statistics": {
+      "get": {
+        "description": "",
+        "operationId": "em4",
+        "parameters": [
+          {
+            "name": "organizations",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "x-parameter-constraints": {
+                "$ref": "#/components/x-endpoint-constraints/~1statistics/get/x-parameter-constraints/organizations"
+              }
+            }
+          },
+          {
+            "name": "start_date",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "end_date",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1statistics/get"
+        }
+      }
+    },
+    "/statistics/contributors": {
+      "get": {
+        "description": "",
+        "operationId": "em6",
+        "parameters": [
+          {
+            "name": "organizations",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "start_date",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "end_date",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1statistics~1contributors/get"
+        }
+      }
+    },
+    "/statistics/languages": {
+      "get": {
+        "description": "",
+        "operationId": "em7",
+        "parameters": [
+          {
+            "name": "organizations",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "start_date",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "end_date",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1statistics~1languages/get"
+        }
+      }
+    },
+    "/statistics/projects": {
+      "get": {
+        "description": "",
+        "operationId": "em5",
+        "parameters": [
+          {
+            "name": "organizations",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "start_date",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "end_date",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1statistics~1projects/get"
+        }
+      }
+    }
+  },
+  "components": {
+    "x-endpoint-constraints": {
+      "/contributors": {
+        "get": {
+          "global-reads": {
+            "g6": {
+              "name": "SORT_BY_LIST",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g6"
+              }
+            }
+          }
+        }
+      },
+      "/languages": {
+        "get": {
+          "global-reads": {
+            "g0": {
+              "name": "DEFAULT_LIMIT",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g0"
+              }
+            },
+            "g1": {
+              "name": "DEFAULT_OFFSET",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g1"
+              }
+            },
+            "g2": {
+              "name": "OK",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g2"
+              }
+            },
+            "g3": {
+              "name": "logger",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g3"
+              }
+            }
+          }
+        }
+      },
+      "/projects": {
+        "get": {
+          "global-reads": {
+            "g2": {
+              "name": "OK",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g2"
+              }
+            },
+            "g4": {
+              "name": "DEFAULT_LIMIT",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g4"
+              }
+            },
+            "g5": {
+              "name": "DEFAULT_OFFSET",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g5"
+              }
+            }
+          }
+        }
+      },
+      "/statistics": {
+        "get": {
+          "global-reads": {
+            "g2": {
+              "name": "OK",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g2"
+              }
+            }
+          },
+          "x-parameter-constraints": {
+            "organizations": [
+              "(str.contains organizations \",\")"
+            ]
+          }
+        }
+      },
+      "/statistics/contributors": {
+        "get": {
+          "global-reads": {
+            "g2": {
+              "name": "OK",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g2"
+              }
+            },
+            "g7": {
+              "name": "DAYS",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g7"
+              }
+            },
+            "g8": {
+              "name": "$assertionsDisabled",
+              "examples": [
+                false
+              ],
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g8"
+              }
+            }
+          }
+        }
+      },
+      "/statistics/languages": {
+        "get": {
+          "global-reads": {
+            "g2": {
+              "name": "OK",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g2"
+              }
+            },
+            "g7": {
+              "name": "DAYS",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g7"
+              }
+            },
+            "g8": {
+              "name": "$assertionsDisabled",
+              "examples": [
+                false
+              ],
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g8"
+              }
+            },
+            "g9": {
+              "name": "UNKNOWN",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g9"
+              }
+            }
+          },
+          "global-writes": {
+            "g9": {
+              "name": "UNKNOWN",
+              "assigned-values": [
+                "\"unknown\""
+              ],
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g9"
+              }
+            },
+            "g10": {
+              "name": "logger",
+              "assigned-values": [
+                "staticinvoke <org.slf4j.LoggerFactory: org.slf4j.Logger getLogger(java.lang.Class)>(class \"Lorg/zalando/catwatch/backend/util/LanguageStats;\")"
+              ],
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g10"
+              }
+            }
+          }
+        }
+      },
+      "/statistics/projects": {
+        "get": {
+          "global-reads": {
+            "g2": {
+              "name": "OK",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g2"
+              }
+            },
+            "g7": {
+              "name": "DAYS",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g7"
+              }
+            },
+            "g8": {
+              "name": "$assertionsDisabled",
+              "examples": [
+                false
+              ],
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g8"
+              }
+            }
+          }
+        }
+      }
+    },
+    "x-endpoint-interdependence": {
+      "g9": {
+        "location-details": {
+          "$ref": "#/components/x-global-variables-info/g9"
+        },
+        "read-by": {
+          "em7": {
+            "$ref": "#/paths/~1statistics~1languages/get"
+          }
+        },
+        "written-by": {
+          "em7": {
+            "$ref": "#/paths/~1statistics~1languages/get"
+          }
+        }
+      }
+    },
+    "x-global-variables-info": {
+      "g0": {
+        "name": "DEFAULT_LIMIT",
+        "id": "g0",
+        "defining-class": "org.zalando.catwatch.backend.web.LanguagesApi",
+        "locations-of-static-assignments": [
+          "line 33, org.zalando.catwatch.backend.web.LanguagesApi"
+        ]
+      },
+      "g1": {
+        "name": "DEFAULT_OFFSET",
+        "id": "g1",
+        "defining-class": "org.zalando.catwatch.backend.web.LanguagesApi",
+        "locations-of-static-assignments": [
+          "line 34, org.zalando.catwatch.backend.web.LanguagesApi"
+        ]
+      },
+      "g2": {
+        "name": "OK",
+        "id": "g2",
+        "defining-class": "org.springframework.http.HttpStatus"
+      },
+      "g3": {
+        "name": "logger",
+        "id": "g3",
+        "defining-class": "org.zalando.catwatch.backend.service.LanguageService",
+        "locations-of-static-assignments": [
+          "line 26, org.zalando.catwatch.backend.service.LanguageService"
+        ]
+      },
+      "g4": {
+        "name": "DEFAULT_LIMIT",
+        "id": "g4",
+        "defining-class": "org.zalando.catwatch.backend.service.ProjectServiceImpl",
+        "locations-of-static-assignments": [
+          "line 30, org.zalando.catwatch.backend.service.ProjectServiceImpl"
+        ]
+      },
+      "g5": {
+        "name": "DEFAULT_OFFSET",
+        "id": "g5",
+        "defining-class": "org.zalando.catwatch.backend.service.ProjectServiceImpl",
+        "locations-of-static-assignments": [
+          "line 31, org.zalando.catwatch.backend.service.ProjectServiceImpl"
+        ]
+      },
+      "g6": {
+        "name": "SORT_BY_LIST",
+        "id": "g6",
+        "defining-class": "org.zalando.catwatch.backend.web.ContributorsApi",
+        "locations-of-static-assignments": [
+          "line 57, org.zalando.catwatch.backend.web.ContributorsApi"
+        ]
+      },
+      "g7": {
+        "name": "DAYS",
+        "id": "g7",
+        "defining-class": "java.time.temporal.ChronoUnit"
+      },
+      "g8": {
+        "name": "$assertionsDisabled",
+        "id": "g8",
+        "defining-class": "org.zalando.catwatch.backend.web.StatisticsApi",
+        "locations-of-static-assignments": [
+          "line 39, org.zalando.catwatch.backend.web.StatisticsApi"
+        ]
+      },
+      "g9": {
+        "name": "UNKNOWN",
+        "id": "g9",
+        "defining-class": "org.zalando.catwatch.backend.util.LanguageStats",
+        "locations-of-static-assignments": [
+          "line 26, org.zalando.catwatch.backend.util.LanguageStats"
+        ]
+      },
+      "g10": {
+        "name": "logger",
+        "id": "g10",
+        "defining-class": "org.zalando.catwatch.backend.util.LanguageStats",
+        "locations-of-static-assignments": [
+          "line 20, org.zalando.catwatch.backend.util.LanguageStats"
+        ]
+      }
+    }
+  }
+}

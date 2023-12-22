@@ -1,0 +1,39 @@
+quartz-manager:
+  jobClassPackages: it.fabioformosa.quartzmanager.jobs
+  oas:
+    enabled: true
+  security:
+    jwt:
+      secret: "bibidibobidiboo"
+      expiration-in-sec: 28800  # 8 hours
+    accounts:
+      in-memory:
+        enabled: true
+        users:
+          - username: admin
+            password: admin
+            roles:
+              - ADMIN
+  persistence:
+    quartz:
+      datasource:
+        url: "jdbc:postgresql://localhost:5432/quartzmanager"
+        user: "quartzmanager"
+        password: "quartzmanager"
+
+#springdoc:
+#  paths-to-exclude: "/quartz-manager/**"
+
+spring:
+  thymeleaf:
+    cache: false
+    mode: LEGACYHTML5
+  jpa.open-in-view: false
+
+logging:
+  level:
+    org.springframework.web: WARN
+    org.springframework.security: INFO
+    org.springframework.boot.autoconfigure.security: INFO
+    it.fabioformosa: DEBUG
+    org.quartz: INFO

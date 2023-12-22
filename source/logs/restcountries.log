@@ -1,0 +1,61 @@
++ java -Djava.library.path=/home/rkh/z3//build/ -cp ./target/Respector-0.1-SNAPSHOT.jar:/home/rkh/z3//build/com.microsoft.z3.jar org.rest.Respector.AppMain.Main ../dataset//restcountries/target/classes/ ./generated_1//restcountries.json
+[main] INFO org.rest.Respector.EndPointRecog.PreprocessFramework - The REST API uses JAX
+[main] INFO org.rest.Respector.AppMain.MainTransform - total # of endpoint methods detected: 27
+[main] INFO org.rest.Respector.AppMain.MainTransform - 1/27 analyzing endpoint method <eu.fayder.restcountries.v2.rest.CountryRestV2: java.lang.Object getAllCountries(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 2/27 analyzing endpoint method <eu.fayder.restcountries.v2.rest.CountryRestV2: java.lang.Object getCountries(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 3/27 analyzing endpoint method <eu.fayder.restcountries.v2.rest.CountryRestV2: java.lang.Object getByAlpha(java.lang.String,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+[main] INFO org.rest.Respector.AppMain.MainTransform - 4/27 analyzing endpoint method <eu.fayder.restcountries.v2.rest.CountryRestV2: java.lang.Object getByAlphaList(java.lang.String,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+[main] INFO org.rest.Respector.AppMain.MainTransform - 5/27 analyzing endpoint method <eu.fayder.restcountries.v2.rest.CountryRestV2: java.lang.Object getByCurrency(java.lang.String,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+[main] INFO org.rest.Respector.AppMain.MainTransform - 6/27 analyzing endpoint method <eu.fayder.restcountries.v2.rest.CountryRestV2: java.lang.Object getByName(java.lang.String,boolean,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 3
+[main] INFO org.rest.Respector.AppMain.MainTransform - 7/27 analyzing endpoint method <eu.fayder.restcountries.v2.rest.CountryRestV2: java.lang.Object getByCallingCode(java.lang.String,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+[main] INFO org.rest.Respector.AppMain.MainTransform - 8/27 analyzing endpoint method <eu.fayder.restcountries.v2.rest.CountryRestV2: java.lang.Object getByCapital(java.lang.String,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+[main] INFO org.rest.Respector.AppMain.MainTransform - 9/27 analyzing endpoint method <eu.fayder.restcountries.v2.rest.CountryRestV2: java.lang.Object getByRegion(java.lang.String,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+[main] INFO org.rest.Respector.AppMain.MainTransform - 10/27 analyzing endpoint method <eu.fayder.restcountries.v2.rest.CountryRestV2: java.lang.Object getBySubRegion(java.lang.String,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+[main] INFO org.rest.Respector.AppMain.MainTransform - 11/27 analyzing endpoint method <eu.fayder.restcountries.v2.rest.CountryRestV2: java.lang.Object getByLanguage(java.lang.String,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+[main] INFO org.rest.Respector.AppMain.MainTransform - 12/27 analyzing endpoint method <eu.fayder.restcountries.v2.rest.CountryRestV2: java.lang.Object getByDemonym(java.lang.String,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+[main] INFO org.rest.Respector.AppMain.MainTransform - 13/27 analyzing endpoint method <eu.fayder.restcountries.v2.rest.CountryRestV2: java.lang.Object getByRegionalBloc(java.lang.String,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+[main] INFO org.rest.Respector.AppMain.MainTransform - 14/27 analyzing endpoint method <eu.fayder.restcountries.v2.rest.CountryRestV2: java.lang.Object doPOST()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 15/27 analyzing endpoint method <eu.fayder.restcountries.v2.rest.StripeRest: java.lang.Object contribute(eu.fayder.restcountries.v2.domain.Contribution)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 16/27 analyzing endpoint method <eu.fayder.restcountries.v1.rest.CountryRestV1: java.lang.Object getAllCountries()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 17/27 analyzing endpoint method <eu.fayder.restcountries.v1.rest.CountryRestV1: java.lang.Object getCountries()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 18/27 analyzing endpoint method <eu.fayder.restcountries.v1.rest.CountryRestV1: java.lang.Object getByAlpha(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 19/27 analyzing endpoint method <eu.fayder.restcountries.v1.rest.CountryRestV1: java.lang.Object getByAlphaList(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 20/27 analyzing endpoint method <eu.fayder.restcountries.v1.rest.CountryRestV1: java.lang.Object getByCurrency(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 21/27 analyzing endpoint method <eu.fayder.restcountries.v1.rest.CountryRestV1: java.lang.Object getByName(java.lang.String,boolean)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+[main] INFO org.rest.Respector.AppMain.MainTransform - 22/27 analyzing endpoint method <eu.fayder.restcountries.v1.rest.CountryRestV1: java.lang.Object getByCallingCode(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 23/27 analyzing endpoint method <eu.fayder.restcountries.v1.rest.CountryRestV1: java.lang.Object getByCapital(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 24/27 analyzing endpoint method <eu.fayder.restcountries.v1.rest.CountryRestV1: java.lang.Object getByRegion(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 25/27 analyzing endpoint method <eu.fayder.restcountries.v1.rest.CountryRestV1: java.lang.Object getBySubregion(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 26/27 analyzing endpoint method <eu.fayder.restcountries.v1.rest.CountryRestV1: java.lang.Object getByLanguage(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 27/27 analyzing endpoint method <eu.fayder.restcountries.v1.rest.CountryRestV1: java.lang.Object doPOST()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+
+real	0m16.018s
+user	0m23.051s
+sys	0m0.312s

@@ -1,0 +1,517 @@
+{
+  "meta": {
+    "httpMethod": "GET",
+    "httpStatusCode": 200,
+    "timestamp": "2018-12-21T21:51:57.866Z"
+  },
+  "links": {
+    "self": "http://localhost/127.0.0.1:2080/entities?%7B%22NAME_FULL%22%3A%22BERNIER+JOHN%22%7D&withRaw=true"
+  },
+  "rawData": {
+    "SEARCH_RESPONSE": {
+      "RESOLVED_ENTITIES": [
+        {
+          "LENS_ID": 1,
+          "ENTITY_ID": 16028,
+          "MATCH_LEVEL": 4,
+          "MATCH_KEY": "+NAME",
+          "MATCH_SCORE": "10",
+          "ERRULE_CODE": "CNAME",
+          "REF_SCORE": 1,
+          "ENTITY_NAME": "JOHN BERNIER",
+          "FEATURES": {
+            "ACCT_NUM": [
+              {
+                "FEAT_DESC": "40481301016648",
+                "LIB_FEAT_ID": 168592,
+                "UTYPE_CODE": "CC",
+                "FEAT_DESC_VALUES": [
+                  {
+                    "FEAT_DESC": "40481301016648",
+                    "LIB_FEAT_ID": 168592
+                  }
+                ]
+              }
+            ],
+            "ADDRESS": [
+              {
+                "FEAT_DESC": "18370 ALMOND RD CASTRO VALLEY CA 94546",
+                "LIB_FEAT_ID": 168588,
+                "FEAT_DESC_VALUES": [
+                  {
+                    "FEAT_DESC": "18370 ALMOND RD CASTRO VALLEY CA 94546",
+                    "LIB_FEAT_ID": 168588
+                  },
+                  {
+                    "FEAT_DESC": "18370 ALMOND RD CASTRO VALLEY CA",
+                    "LIB_FEAT_ID": 173201
+                  }
+                ]
+              }
+            ],
+            "DOB": [
+              {
+                "FEAT_DESC": "1973-19-02",
+                "LIB_FEAT_ID": 168587,
+                "FEAT_DESC_VALUES": [
+                  {
+                    "FEAT_DESC": "1973-19-02",
+                    "LIB_FEAT_ID": 168587
+                  }
+                ]
+              }
+            ],
+            "DRLIC": [
+              {
+                "FEAT_DESC": "39",
+                "LIB_FEAT_ID": 53733,
+                "FEAT_DESC_VALUES": [
+                  {
+                    "FEAT_DESC": "39",
+                    "LIB_FEAT_ID": 53733
+                  }
+                ]
+              }
+            ],
+            "GENDER": [
+              {
+                "FEAT_DESC": "M",
+                "LIB_FEAT_ID": 3003,
+                "FEAT_DESC_VALUES": [
+                  {
+                    "FEAT_DESC": "M",
+                    "LIB_FEAT_ID": 3003
+                  }
+                ]
+              }
+            ],
+            "LOGIN_ID": [
+              {
+                "FEAT_DESC": "HOSTSX",
+                "LIB_FEAT_ID": 168591,
+                "FEAT_DESC_VALUES": [
+                  {
+                    "FEAT_DESC": "HOSTSX",
+                    "LIB_FEAT_ID": 168591
+                  }
+                ]
+              }
+            ],
+            "NAME": [
+              {
+                "FEAT_DESC": "JOHN BERNIER",
+                "LIB_FEAT_ID": 168586,
+                "FEAT_DESC_VALUES": [
+                  {
+                    "FEAT_DESC": "JOHN BERNIER",
+                    "LIB_FEAT_ID": 168586
+                  }
+                ]
+              }
+            ],
+            "PHONE": [
+              {
+                "FEAT_DESC": "341-684-9052",
+                "LIB_FEAT_ID": 168589,
+                "FEAT_DESC_VALUES": [
+                  {
+                    "FEAT_DESC": "341-684-9052",
+                    "LIB_FEAT_ID": 168589
+                  }
+                ]
+              }
+            ],
+            "SSN": [
+              {
+                "FEAT_DESC": "411-44-0814",
+                "LIB_FEAT_ID": 168590,
+                "FEAT_DESC_VALUES": [
+                  {
+                    "FEAT_DESC": "411-44-0814",
+                    "LIB_FEAT_ID": 168590
+                  }
+                ]
+              }
+            ]
+          },
+          "MATCH_SCORES": {
+            "NAME": [
+              {
+                "INBOUND_FEAT": "BERNIER JOHN",
+                "CANDIDATE_FEAT": "JOHN BERNIER",
+                "GNR_FN": 95,
+                "GNR_SN": -1,
+                "GNR_GN": -1,
+                "GENERATION_MATCH": -1,
+                "GNR_ON": -1
+              }
+            ]
+          },
+          "RECORDS": [
+            {
+              "JSON_DATA": {
+                "SOURCE_ID": "5k_med.csv",
+                "PHONE_NUMBER": "341-684-9052",
+                "SOCIAL_HANDLE": "hostsx",
+                "DRIVERS_LICENSE_NUMBER": "39",
+                "DATE_OF_BIRTH": "19/2/1973",
+                "ADDR_STATE": "CA",
+                "ADDR_POSTAL_CODE": "94546",
+                "ADDR_CITY": "Castro Valley",
+                "SSN_NUMBER": "411-44-0814",
+                "NAME_FIRST": "JOHN",
+                "GENDER": "M",
+                "CC_ACCOUNT_NUMBER": "40481301016648",
+                "ADDR_LINE1": "18370 Almond RD",
+                "NAME_LAST": "BERNIER",
+                "DATA_SOURCE": "WATCHLIST",
+                "ENTITY_TYPE": "WATCHLIST",
+                "DSRC_ACTION": "A",
+                "LENS_CODE": "DEFAULT",
+                "RECORD_ID": "253772270"
+              },
+              "DATA_SOURCE": "WATCHLIST",
+              "ENTITY_TYPE": "WATCHLIST",
+              "ENTITY_KEY": "6038B974039620905BFB0674CCF03CC8BE0886F1",
+              "ENTITY_NAME": "JOHN BERNIER",
+              "RECORD_ID": "253772270",
+              "MATCH_KEY": "",
+              "MATCH_SCORE": "",
+              "ERRULE_CODE": "",
+              "REF_SCORE": 0,
+              "MATCH_LEVEL": 0,
+              "LAST_SEEN_DT": "2018-12-21 20:56:27.891",
+              "NAME_DATA": [
+                "BERNIER JOHN"
+              ],
+              "ATTRIBUTE_DATA": [
+                "DOB: 19/2/1973",
+                "GENDER: M"
+              ],
+              "IDENTIFIER_DATA": [
+                "ACCT_NUM: CC: 40481301016648",
+                "DRLIC: 39",
+                "LOGIN_ID: hostsx",
+                "SSN: 411-44-0814"
+              ],
+              "ADDRESS_DATA": [
+                "18370 Almond RD Castro Valley CA 94546"
+              ],
+              "PHONE_DATA": [
+                "341-684-9052"
+              ],
+              "RELATIONSHIP_DATA": [
+
+              ],
+              "ENTITY_DATA": [
+
+              ],
+              "OTHER_DATA": [
+
+              ]
+            },
+            {
+              "JSON_DATA": {
+                "SOURCE_ID": "5k_med.csv",
+                "PHONE_NUMBER": "341-684-9052",
+                "SOCIAL_HANDLE": "hostsx",
+                "ADDR_STATE": "CA",
+                "ADDR_CITY": "Castro Valley",
+                "SSN_NUMBER": "411-44-0814",
+                "NAME_FIRST": "JOHN",
+                "GENDER": "M",
+                "CC_ACCOUNT_NUMBER": "40481301016648",
+                "ADDR_LINE1": "18370 Almond RD",
+                "NAME_LAST": "BERNIER",
+                "DATA_SOURCE": "WATCHLIST",
+                "ENTITY_TYPE": "WATCHLIST",
+                "DSRC_ACTION": "A",
+                "LENS_CODE": "DEFAULT",
+                "RECORD_ID": "253772271"
+              },
+              "DATA_SOURCE": "WATCHLIST",
+              "ENTITY_TYPE": "WATCHLIST",
+              "ENTITY_KEY": "ECEFBF1A2C42BC48947EC90F603B89EDD33F6259",
+              "ENTITY_NAME": "JOHN BERNIER",
+              "RECORD_ID": "253772271",
+              "MATCH_KEY": "+NAME+GENDER+ADDRESS+PHONE+SSN+LOGIN_ID+ACCT_NUM",
+              "MATCH_SCORE": "25",
+              "ERRULE_CODE": "SF1_PNAME_CFF_CSTAB",
+              "REF_SCORE": 10,
+              "MATCH_LEVEL": 1,
+              "LAST_SEEN_DT": "2018-12-21 20:56:28.275",
+              "NAME_DATA": [
+                "BERNIER JOHN"
+              ],
+              "ATTRIBUTE_DATA": [
+                "GENDER: M"
+              ],
+              "IDENTIFIER_DATA": [
+                "ACCT_NUM: CC: 40481301016648",
+                "LOGIN_ID: hostsx",
+                "SSN: 411-44-0814"
+              ],
+              "ADDRESS_DATA": [
+                "18370 Almond RD Castro Valley CA"
+              ],
+              "PHONE_DATA": [
+                "341-684-9052"
+              ],
+              "RELATIONSHIP_DATA": [
+
+              ],
+              "ENTITY_DATA": [
+
+              ],
+              "OTHER_DATA": [
+
+              ]
+            }
+          ],
+          "RECORD_SUMMARY": [
+            {
+              "DATA_SOURCE": "WATCHLIST",
+              "RECORD_COUNT": 2,
+              "FIRST_SEEN_DT": "2018-12-21 20:56:27.891",
+              "LAST_SEEN_DT": "2018-12-21 20:56:28.275"
+            }
+          ],
+          "LAST_SEEN_DT": "2018-12-21 20:56:28.275"
+        }
+      ]
+    }
+  },
+  "data": {
+    "searchResults": [
+      {
+        "entityId": 16028,
+        "entityName": "JOHN BERNIER",
+        "bestName": null,
+        "recordSummaries": [
+          {
+            "dataSource": "WATCHLIST",
+            "recordCount": 2,
+            "topRecordIds": [
+              "253772270",
+              "253772271"
+            ]
+          }
+        ],
+        "addressData": [
+          "18370 ALMOND RD CASTRO VALLEY CA 94546"
+        ],
+        "attributeData": [
+          "DOB: 1973-19-02",
+          "GENDER: M"
+        ],
+        "identifierData": [
+          "CC ACCT_NUM: 40481301016648",
+          "LOGIN_ID: HOSTSX",
+          "SSN: 411-44-0814",
+          "DRLIC: 39"
+        ],
+        "nameData": [
+          "JOHN BERNIER"
+        ],
+        "phoneData": [
+          "341-684-9052"
+        ],
+        "relationshipData": [
+
+        ],
+        "otherData": [
+
+        ],
+        "features": {
+          "ACCT_NUM": [
+            {
+              "primaryValue": "40481301016648",
+              "usageType": "CC",
+              "duplicateValues": [
+
+              ]
+            }
+          ],
+          "ADDRESS": [
+            {
+              "primaryValue": "18370 ALMOND RD CASTRO VALLEY CA 94546",
+              "usageType": null,
+              "duplicateValues": [
+                "18370 ALMOND RD CASTRO VALLEY CA"
+              ]
+            }
+          ],
+          "DOB": [
+            {
+              "primaryValue": "1973-19-02",
+              "usageType": null,
+              "duplicateValues": [
+
+              ]
+            }
+          ],
+          "DRLIC": [
+            {
+              "primaryValue": "39",
+              "usageType": null,
+              "duplicateValues": [
+
+              ]
+            }
+          ],
+          "GENDER": [
+            {
+              "primaryValue": "M",
+              "usageType": null,
+              "duplicateValues": [
+
+              ]
+            }
+          ],
+          "LOGIN_ID": [
+            {
+              "primaryValue": "HOSTSX",
+              "usageType": null,
+              "duplicateValues": [
+
+              ]
+            }
+          ],
+          "NAME": [
+            {
+              "primaryValue": "JOHN BERNIER",
+              "usageType": null,
+              "duplicateValues": [
+
+              ]
+            }
+          ],
+          "PHONE": [
+            {
+              "primaryValue": "341-684-9052",
+              "usageType": null,
+              "duplicateValues": [
+
+              ]
+            }
+          ],
+          "SSN": [
+            {
+              "primaryValue": "411-44-0814",
+              "usageType": null,
+              "duplicateValues": [
+
+              ]
+            }
+          ]
+        },
+        "records": [
+          {
+            "dataSource": "WATCHLIST",
+            "recordId": "253772270",
+            "addressData": [
+              "18370 Almond RD Castro Valley CA 94546"
+            ],
+            "attributeData": [
+              "DOB: 19/2/1973",
+              "GENDER: M"
+            ],
+            "identifierData": [
+              "ACCT_NUM: CC: 40481301016648",
+              "DRLIC: 39",
+              "LOGIN_ID: hostsx",
+              "SSN: 411-44-0814"
+            ],
+            "nameData": [
+              "BERNIER JOHN"
+            ],
+            "phoneData": [
+              "341-684-9052"
+            ],
+            "relationshipData": [
+
+            ],
+            "otherData": [
+
+            ],
+            "originalSourceData": {
+              "SOURCE_ID": "5k_med.csv",
+              "PHONE_NUMBER": "341-684-9052",
+              "SOCIAL_HANDLE": "hostsx",
+              "DRIVERS_LICENSE_NUMBER": "39",
+              "DATE_OF_BIRTH": "19/2/1973",
+              "ADDR_STATE": "CA",
+              "ADDR_POSTAL_CODE": "94546",
+              "ADDR_CITY": "Castro Valley",
+              "SSN_NUMBER": "411-44-0814",
+              "NAME_FIRST": "JOHN",
+              "GENDER": "M",
+              "CC_ACCOUNT_NUMBER": "40481301016648",
+              "ADDR_LINE1": "18370 Almond RD",
+              "NAME_LAST": "BERNIER",
+              "DATA_SOURCE": "WATCHLIST",
+              "ENTITY_TYPE": "WATCHLIST",
+              "DSRC_ACTION": "A",
+              "LENS_CODE": "DEFAULT",
+              "RECORD_ID": "253772270"
+            }
+          },
+          {
+            "dataSource": "WATCHLIST",
+            "recordId": "253772271",
+            "addressData": [
+              "18370 Almond RD Castro Valley CA"
+            ],
+            "attributeData": [
+              "GENDER: M"
+            ],
+            "identifierData": [
+              "ACCT_NUM: CC: 40481301016648",
+              "LOGIN_ID: hostsx",
+              "SSN: 411-44-0814"
+            ],
+            "nameData": [
+              "BERNIER JOHN"
+            ],
+            "phoneData": [
+              "341-684-9052"
+            ],
+            "relationshipData": [
+
+            ],
+            "otherData": [
+
+            ],
+            "originalSourceData": {
+              "SOURCE_ID": "5k_med.csv",
+              "PHONE_NUMBER": "341-684-9052",
+              "SOCIAL_HANDLE": "hostsx",
+              "ADDR_STATE": "CA",
+              "ADDR_CITY": "Castro Valley",
+              "SSN_NUMBER": "411-44-0814",
+              "NAME_FIRST": "JOHN",
+              "GENDER": "M",
+              "CC_ACCOUNT_NUMBER": "40481301016648",
+              "ADDR_LINE1": "18370 Almond RD",
+              "NAME_LAST": "BERNIER",
+              "DATA_SOURCE": "WATCHLIST",
+              "ENTITY_TYPE": "WATCHLIST",
+              "DSRC_ACTION": "A",
+              "LENS_CODE": "DEFAULT",
+              "RECORD_ID": "253772271"
+            }
+          }
+        ],
+        "matchLevel": 4,
+        "fullNameScore": 95,
+        "matchScore": 10,
+        "ambiguous": false,
+        "matchKey": "+NAME",
+        "resolutionRuleCode": "CNAME",
+        "refScore": 1,
+        "partial": false,
+        "resultType": "NAME_ONLY_MATCH"
+      }
+    ]
+  }
+}

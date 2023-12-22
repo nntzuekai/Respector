@@ -1,0 +1,10 @@
+timezone: UTC
+
++run:
+  pg>: select_table.sql
+  host: ${pg_host}
+  database: ${pg_database}
+  user: ${pg_user}
+  schema: ${schema_in_config}
+  status_table_schema: ${status_table_schema_in_config}
+  insert_into: dest_tbl

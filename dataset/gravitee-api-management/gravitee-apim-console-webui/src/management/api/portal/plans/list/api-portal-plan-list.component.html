@@ -1,0 +1,183 @@
+<!--
+
+    Copyright (C) 2015 The Gravitee team (http://gravitee.io)
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+            http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<div class="plans__header">
+  <div *ngIf="!isReadOnly && plansTableDS && !isLoadingData">
+    <button
+      *gioPermission="{ anyOf: ['api-plan-u'] }"
+      mat-raised-button
+      type="button"
+      color="primary"
+      aria-label="Add new plan"
+      (click)="navigateToNewPlan()"
+    >
+      <mat-icon svgIcon="gio:plus"></mat-icon>Add new plan
+    </button>
+  </div>
+</div>
+
+<mat-button-toggle-group class="plans__filters" aria-label="Plan status filters" [value]="status">
+  <mat-button-toggle
+    *ngFor="let planStatus of apiPlanStatus"
+    [attr.aria-label]="'Filter on' + planStatus.name + 'plans'"
+    [matTooltip]="'Filter on' + planStatus.name + 'plans'"
+    [value]="planStatus.name"
+    (click)="searchPlansByStatus(planStatus.name)"
+  >
+    {{ planStatus.name }}{{ planStatus.number != null ? ' (' + planStatus.number + ')' : '' }}
+  </mat-button-toggle>
+</mat-button-toggle-group>
+<table
+  mat-table
+  class="plans__table"
+  id="plansTable"
+  aria-label="Plans table"
+  cdkDropList
+  (cdkDropListDropped)="dropRow($event)"
+  [dataSource]="plansTableDS"
+>
+  <!-- Display Drag icon Column -->
+  <ng-container matColumnDef="drag-icon" *ngIf="!isReadOnly">
+    <th mat-header-cell *matHeaderCellDef id="drag-icon"></th>
+    <td mat-cell *matCellDef="let element" [class.plans__table__drag-icon]="!isReadOnly">
+      <mat-icon class="plans__table__drag-icon" svgIcon="gio:drag-indicator"></mat-icon>
+    </td>
+  </ng-container>
+  <!-- Display Name Column -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef id="name">Name</th>
+    <td mat-cell *matCellDef="let element" class="plans__table__name" (click)="navigateToPlan(element.id)">
+      {{ element.name }}
+    </td>
+  </ng-container>
+
+  <!-- Display Security Column -->
+  <ng-container matColumnDef="security">
+    <th mat-header-cell *matHeaderCellDef id="security">Security</th>
+    <td mat-cell *matCellDef="let element">
+      {{ element.security }}
+    </td>
+  </ng-container>
+
+  <!-- Display Status Column -->
+  <ng-container matColumnDef="status">
+    <th mat-header-cell *matHeaderCellDef id="status">Status</th>
+    <td mat-cell *matCellDef="let element">
+      <span *ngIf="element.status === 'PUBLISHED'" class="gio-badge-neutral">{{ element.status }}</span>
+      <span *ngIf="['DEPRECATED', 'CLOSED'].includes(element.status)" class="gio-badge-error">{{ element.status }}</span>
+      <span *ngIf="element.status === 'STAGING'" class="gio-badge-warning">{{ element.status }}</span>
+    </td>
+  </ng-container>
+
+  <!-- Display Tags Column -->
+  <ng-container matColumnDef="deploy-on">
+    <th mat-header-cell *matHeaderCellDef id="deploy-on">Deploy on</th>
+    <td mat-cell *matCellDef="let element">
+      <a>{{ element.tags?.join(', ') }}</a>
+    </td>
+  </ng-container>
+
+  <!-- Actions Column -->
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef id="actions"></th>
+    <td mat-cell *matCellDef="let element">
+      <div class="plans__table__actions">
+        <ng-container *ngIf="!isReadOnly; else readOnlyPlanActions">
+          <ng-container *ngIf="element.status !== 'CLOSED'">
+            <button
+              *gioPermission="{ anyOf: ['api-plan-u'] }"
+              mat-icon-button
+              aria-label="Edit the plan"
+              matTooltip="Edit the plan"
+              (click)="navigateToPlan(element.id)"
+            >
+              <mat-icon svgIcon="gio:edit-pencil"></mat-icon>
+            </button>
+          </ng-container>
+          <ng-container *ngIf="isV2Api && element.status !== 'CLOSED'">
+            <button
+              *gioPermission="{ anyOf: ['api-plan-u'] }"
+              mat-icon-button
+              aria-label="Design the plan"
+              matTooltip="Design the plan"
+              (click)="designPlan(element.id)"
+            >
+              <mat-icon svgIcon="gio:shield-check"></mat-icon>
+            </button>
+          </ng-container>
+          <ng-container *ngIf="element.status === 'STAGING'">
+            <button
+              *gioPermission="{ anyOf: ['api-plan-u'] }"
+              mat-icon-button
+              aria-label="Publish the plan"
+              matTooltip="Publish the plan"
+              (click)="publishPlan(element)"
+            >
+              <mat-icon svgIcon="gio:upload-cloud"></mat-icon>
+            </button>
+          </ng-container>
+          <ng-container *ngIf="element.status === 'PUBLISHED'">
+            <button
+              *gioPermission="{ anyOf: ['api-plan-u'] }"
+              mat-icon-button
+              aria-label="Deprecate the plan"
+              matTooltip="Deprecate the plan"
+              (click)="deprecatePlan(element)"
+            >
+              <mat-icon svgIcon="gio:cloud-unpublished"></mat-icon>
+            </button>
+          </ng-container>
+          <ng-container *ngIf="element.status !== 'CLOSED'">
+            <button
+              *gioPermission="{ anyOf: ['api-plan-u'] }"
+              mat-icon-button
+              aria-label="Close the plan"
+              matTooltip="Close the plan"
+              (click)="closePlan(element)"
+            >
+              <mat-icon svgIcon="gio:cancel"></mat-icon>
+            </button>
+          </ng-container>
+        </ng-container>
+        <ng-template #readOnlyPlanActions>
+          <button
+            *gioPermission="{ anyOf: ['api-plan-r'] }"
+            mat-icon-button
+            aria-label="View the plan details"
+            matTooltip="View the plan details"
+            (click)="navigateToPlan(element.id)"
+          >
+            <mat-icon svgIcon="gio:eye-empty"></mat-icon>
+          </button>
+        </ng-template>
+      </div>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row cdkDrag [cdkDragDisabled]="isReadOnly || row.status !== 'PUBLISHED'" *matRowDef="let row; columns: displayedColumns"></tr>
+
+  <!-- Row shown when there is no data -->
+  <tr class="mat-row" *matNoDataRow>
+    <td *ngIf="!isLoadingData && plansTableDS.length === 0" class="mat-cell" [attr.colspan]="displayedColumns.length">
+      {{ 'There is no plan (yet).' }}
+    </td>
+    <td *ngIf="isLoadingData" class="mat-cell" [attr.colspan]="displayedColumns.length">
+      {{ 'Loading...' }}
+    </td>
+  </tr>
+</table>

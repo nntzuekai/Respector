@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "lib": ["ES2020", "dom"],
+    "types": ["./types", "cypress", "node", "node-fetch", "jsonwebtoken"],
+    "baseUrl": ".",
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "@fakers/*": ["ui-test/fixtures/fakers/*"],
+      "@keys/*": ["ui-test/fixtures/keys/*"],
+      "@model/*": ["ui-test/model/*"],
+      "@commands/*": ["ui-test/commands/*"],
+      "@api-test-resources/*": ["<rootDir>/api-test/resources/$1"],
+      "@lib/jest-utils": ["lib/jest-utils"]
+    }
+  },
+  "include": ["**/*.ts"]
+}

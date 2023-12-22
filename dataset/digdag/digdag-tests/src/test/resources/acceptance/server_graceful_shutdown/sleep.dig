@@ -1,0 +1,17 @@
+timezone: UTC
+
++sleep:
+  _parallel: true
+
+  +sleep:
+    sh>: sleep 10
+
+  +sleep_and_touch:
+    sh>: sleep 10; touch ${outdir}/done.out
+
+  +start_checker:
+    echo>: started
+
++after_sleep:
+  sh>: touch ${outdir}/after_sleep.out
+

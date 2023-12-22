@@ -1,0 +1,789 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Ur-Codebin API",
+    "version": "1.0",
+    "description": "The RESTful API for the Ur-Codebin website.",
+    "contact": {
+      "email": "mathewestafanous13@gmail.com",
+      "name": "Mathew Estafanous"
+    },
+    "termsOfService": "https://github.com/Mathew-Estafanous/Ur-Codebin-API/blob/main/LICENSE",
+    "license": {
+      "name": "Unlicensed ",
+      "url": "https://unlicense.org"
+    }
+  },
+  "servers": [
+    {
+      "description": "Ur-Codebin Production Server",
+      "url": "http://urcodebin.live"
+    }
+  ],
+  "paths": {
+    "/paste/{paste_id}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "paste_id",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "get": {
+        "summary": "[GET] Find Code Paste By Paste ID",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "Code Paste has been successfully found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodePastes"
+                },
+                "examples": {
+                  "My First Code": {
+                    "value": {
+                      "paste_id": "ea875b2c-bec0-442c-8caf-c66864dd55e9",
+                      "paste_title": "My First Line Of Code",
+                      "paste_visibility": "PUBLIC",
+                      "paste_syntax": "Java",
+                      "source_code": "System.out.println('Hello World');"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/invalid-paste-id"
+          },
+          "404": {
+            "$ref": "#/components/responses/codepaste-not-found"
+          }
+        },
+        "operationId": "get-paste-pasteId",
+        "description": "Retrieve the CodePaste based on the given paste ID of the requested CodePaste.",
+        "parameters": []
+      },
+      "delete": {
+        "summary": "[DELETE] Remove Code Paste By Paste ID",
+        "operationId": "delete-api-paste-pasteId",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/invalid-paste-id"
+          },
+          "404": {
+            "$ref": "#/components/responses/codepaste-not-found"
+          }
+        },
+        "description": "Delete the CodePaste with this paste ID from the CodePaste that should be deleted. "
+      }
+    },
+    "/paste/public": {
+      "get": {
+        "summary": "[GET] Search For Public Code Pastes",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK: Code Paste has been successfully deleted ",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CodePastes"
+                  }
+                },
+                "examples": {
+                  "Multiple Results": {
+                    "value": [
+                      {
+                        "paste_id": "94094e01-1b11-444c-abee-59e365315f10",
+                        "paste_title": "string",
+                        "paste_visibility": "string",
+                        "paste_syntax": "NONE",
+                        "source_code": "string",
+                        "account_id": 0
+                      },
+                      {
+                        "paste_id": "94094e01-1b11-444c-abee-59e365315f10",
+                        "paste_title": "string",
+                        "paste_visibility": "string",
+                        "paste_syntax": "NONE",
+                        "source_code": "string",
+                        "account_id": 0
+                      }
+                    ]
+                  },
+                  "No Results": {
+                    "value": []
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request: A given parameter has been provided in an incorrect format.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusResponse"
+                },
+                "examples": {
+                  "Invalid Paste Syntax": {
+                    "value": {
+                      "timestamp": "2019-08-24T14:15:22Z",
+                      "status": 400,
+                      "error": "Bad Request",
+                      "message": "Paste Syntax parameter is from the given enum options."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-api-public",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "example": "Fake Title",
+              "default": " "
+            },
+            "in": "query",
+            "name": "paste_title",
+            "description": "Part of or the complete title of the Code Paste."
+          },
+          {
+            "schema": {
+              "type": "string",
+              "enum": [
+                "NONE",
+                "JAVA",
+                "CSHARP",
+                "PYTHON",
+                "JAVASCRIPT",
+                "GO",
+                "CLANG",
+                "CPLUSPLUS",
+                "PHP",
+                "SWIFT",
+                "LUA",
+                "RUBY",
+                "MYSQL",
+                "POSTGRESQL"
+              ],
+              "default": "ALL"
+            },
+            "in": "query",
+            "name": "paste_syntax",
+            "description": "The syntax style of the Code Paste."
+          },
+          {
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 20,
+              "format": "int32",
+              "default": 5
+            },
+            "in": "query",
+            "name": "limit",
+            "description": "Maximum number of results for the search."
+          }
+        ],
+        "description": "Search through all public code pastes and filter using several different parameters.",
+        "security": []
+      },
+      "parameters": []
+    },
+    "/paste": {
+      "post": {
+        "summary": "[POST] Create New Paste",
+        "operationId": "post-paste",
+        "responses": {
+          "201": {
+            "description": "Successfully Created Paste",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CodePastes"
+                },
+                "examples": {
+                  "Created Code Paste": {
+                    "value": {
+                      "paste_id": "94094e01-1b11-444c-abee-59e365315f10",
+                      "paste_title": "Chosen Title",
+                      "paste_visibility": "PUBLIC",
+                      "paste_syntax": "JAVA",
+                      "source_code": "System.out.println('My First uploaded code!');",
+                      "account_id": 103
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request: ",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusResponse"
+                },
+                "examples": {
+                  "Missing Source Code": {
+                    "value": {
+                      "timestamp": "2019-08-24T14:15:22Z",
+                      "status": 400,
+                      "error": "Bad Request",
+                      "message": "Required field (source_code) is missing."
+                    }
+                  },
+                  "Invalid Option": {
+                    "value": {
+                      "timestamp": "2019-08-24T14:15:22Z",
+                      "status": 400,
+                      "error": "Bad Request",
+                      "message": "paste_syntax received 'JARVA' which is not an avaialble option."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "description": "Post a new CodePaste to the Ur-Codebin database by using this endpoint.",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Paste-Request-Body"
+              },
+              "examples": {
+                "Paste Format": {
+                  "value": {
+                    "paste_title": "My Paste Title",
+                    "paste_syntax": "JAVA",
+                    "paste_visibility": "PRIVATE",
+                    "paste_expiration": "ONEHOUR",
+                    "source_code": "System.out.println('Hello world!');"
+                  }
+                }
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "type": "object",
+                "properties": {}
+              }
+            }
+          },
+          "description": ""
+        }
+      }
+    },
+    "/account/{account_id}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "integer"
+          },
+          "name": "account_id",
+          "in": "path",
+          "required": true,
+          "description": "The Account ID of the of the user account that is wanted."
+        }
+      ],
+      "get": {
+        "summary": "[GET] Find Account By ID",
+        "tags": [],
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/account-info-response"
+          },
+          "404": {
+            "description": "Not Found: User Account was not found with given ID.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusResponse"
+                },
+                "examples": {
+                  "User Account Not Found": {
+                    "value": {
+                      "timestamp": "2021-08-24T14:15:22Z",
+                      "status": 404,
+                      "error": "Not Found",
+                      "message": "User Account with given id was not found."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-account-account_id",
+        "description": "Find information relating to a user account by using the account Id. Users are only capable of accessing the user account associated with their authentication token."
+      }
+    },
+    "/account/signup": {
+      "post": {
+        "summary": "[POST] Signup New User Account",
+        "operationId": "post-account-signup",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/account-info-response"
+          },
+          "400": {
+            "description": "Bad Request: Email is not in the correct format. Must be in a correct format like (fake@email.com)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusResponse"
+                },
+                "examples": {
+                  "Invalid Email Format": {
+                    "value": {
+                      "timestamp": "2019-08-24T14:15:22Z",
+                      "status": 400,
+                      "error": "Bad Request",
+                      "message": "Email is not in the correct format. Make sure email is valid."
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict: Username or Email is already taken by other user account.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusResponse"
+                },
+                "examples": {
+                  "Username Taken": {
+                    "value": {
+                      "timestamp": "2021-08-24T14:15:22Z",
+                      "status": 409,
+                      "error": "Conflict",
+                      "message": "Username provided is already in use. Please use another username."
+                    }
+                  },
+                  "Email Taken": {
+                    "value": {
+                      "timestamp": "2021-08-24T14:15:22Z",
+                      "status": 409,
+                      "error": "Conflict",
+                      "message": "Email provided is already in use. Please use another email."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "description": "An endpoint to signup a new user account for the service.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Account-Request-Body"
+              },
+              "examples": {}
+            }
+          },
+          "description": "Request Body for User Account Signup"
+        },
+        "security": []
+      }
+    },
+    "/account/login": {
+      "post": {
+        "summary": "[POST] Login To User Account",
+        "operationId": "post-account-login",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "headers": {
+              "Authorization": {
+                "schema": {
+                  "type": "string",
+                  "pattern": "Bearer {JWT TOKEN}"
+                },
+                "description": "A JWT Token with 'Bearer ' Token prefix included."
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request: Request Body not in correct login format.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusResponse"
+                },
+                "examples": {
+                  "Wrong Login Credentials Format": {
+                    "value": {
+                      "timestamp": "2021-08-24T14:15:22Z",
+                      "status": 400,
+                      "error": "Bad Request",
+                      "message": "Login Credentials not found in proper format. Please format login body properly."
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized: Invalid Login credentials has been given.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusResponse"
+                },
+                "examples": {
+                  "Bad Login Credentials": {
+                    "value": {
+                      "timestamp": "2021-08-24T14:15:22Z",
+                      "status": 401,
+                      "error": "Unauthorized",
+                      "message": "Bad Credentials"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "description": "An endpoint to login with account credentials and receive JWT Token authorization. This endpoint is required before using any other secured endpoint.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "username": {
+                    "type": "string"
+                  },
+                  "password": {
+                    "type": "string"
+                  }
+                }
+              },
+              "examples": {
+                "Fake Login Credentials": {
+                  "value": {
+                    "username": "fakeUsername",
+                    "password": "fakePassword"
+                  }
+                }
+              }
+            }
+          },
+          "description": ""
+        },
+        "security": []
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "UserAccount": {
+        "title": "UserAccount",
+        "type": "object",
+        "description": "The User account model that each registered user will have.",
+        "x-examples": {
+          "Mathew's Account": {
+            "Account ID": 0,
+            "Account Username": "Mathew",
+            "Account Password": "$2y$12$.foubRsbCumDOXP8LXzTQeSrsYekbQHESs.owOKYVzwJdxfFn4IiO ",
+            "Account Email": "mathew@fake.com",
+            "User Code Pastes": [
+              "e5cddd2c-2717-46f5-b7ee-0f072745622e",
+              "7c5989d8-0a1c-41f1-9481-ce48f5f7b7cb"
+            ]
+          }
+        },
+        "properties": {
+          "Account ID": {
+            "type": "integer"
+          },
+          "Account Username": {
+            "type": "string"
+          },
+          "Account Password": {
+            "type": "string"
+          },
+          "Account Email": {
+            "type": "string"
+          },
+          "User Code Pastes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "CodePastes": {
+        "title": "CodePastes",
+        "type": "object",
+        "description": "Code pastes that are uploaded by users and are able to be refrenced.",
+        "x-examples": {
+          "Hello World Paste": {
+            "paste_id": "ea875b2c-bec0-442c-8caf-c66864dd55e9",
+            "paste_title": "My First Line Of Code",
+            "paste_visibility": "PUBLIC",
+            "paste_syntax": "Java",
+            "source_code": "System.out.println('Hello World');",
+            "account_id": 102
+          }
+        },
+        "properties": {
+          "paste_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "paste_title": {
+            "type": "string"
+          },
+          "paste_visibility": {
+            "type": "string"
+          },
+          "paste_syntax": {
+            "type": "string",
+            "enum": [
+              "NONE",
+              "Java",
+              "C#",
+              "Python",
+              "JavaScript",
+              "Go",
+              "C",
+              "C++",
+              "PHP",
+              "Swift",
+              "Lua",
+              "Ruby",
+              "MySQL",
+              "PostgreSQL"
+            ]
+          },
+          "source_code": {
+            "type": "string"
+          },
+          "account_id": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "paste_id",
+          "paste_title",
+          "paste_visibility",
+          "paste_syntax",
+          "source_code"
+        ]
+      },
+      "StatusResponse": {
+        "title": "StatusResponse",
+        "type": "object",
+        "properties": {
+          "timestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "integer"
+          },
+          "error": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          }
+        },
+        "description": "Basic format of the status response that some paths will return.",
+        "x-examples": {}
+      },
+      "Paste-Request-Body": {
+        "title": "Paste Request Body",
+        "type": "object",
+        "properties": {
+          "paste_title": {
+            "type": "string",
+            "maxLength": 50,
+            "default": "Untitled Paste"
+          },
+          "paste_syntax": {
+            "type": "string",
+            "enum": [
+              "NONE",
+              "JAVA",
+              "CSHARP",
+              "PYTHON",
+              "JAVASCRIPT",
+              "GO",
+              "CLANG",
+              "CPLUSPLUS",
+              "PHP",
+              "SWIFT",
+              "LUA",
+              "RUBY",
+              "MYSQL",
+              "POSTGRESQL"
+            ],
+            "default": "NONE"
+          },
+          "paste_visibility": {
+            "type": "string",
+            "enum": [
+              "PUBLIC",
+              "PRIVATE"
+            ],
+            "default": "PRIVATE"
+          },
+          "paste_expiration": {
+            "type": "string",
+            "enum": [
+              "TENMINUTES",
+              "THIRTYMINUTES",
+              "ONEHOUR",
+              "FIVEHOURS",
+              "ONEDAY",
+              "THREEDAYS",
+              "FIVEDAYS",
+              "ONEWEEK"
+            ],
+            "default": "ONEHOUR"
+          },
+          "source_code": {
+            "type": "string",
+            "maxLength": 60000,
+            "minLength": 1
+          }
+        },
+        "required": [
+          "source_code"
+        ]
+      },
+      "Account-Request-Body": {
+        "title": "Account-Request-Body",
+        "type": "object",
+        "description": "User Account Request Body",
+        "properties": {
+          "account_username": {
+            "type": "string"
+          },
+          "account_password": {
+            "type": "string",
+            "minLength": 8
+          },
+          "account_email": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^-]+(?:\\.[a-zA-Z0-9_!#$%&'*+/=?`{|}~^-]+↵)*@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*$",
+            "format": "email"
+          }
+        },
+        "required": [
+          "account_username",
+          "account_password",
+          "account_email"
+        ]
+      }
+    },
+    "securitySchemes": {
+      "Authorization": {
+        "type": "http",
+        "scheme": "bearer",
+        "description": "JWT Token format that is used to identify authorities."
+      }
+    },
+    "responses": {
+      "invalid-paste-id": {
+        "description": "Bad Request: Invalid UUID format in paste ID parameter ",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/StatusResponse"
+            },
+            "examples": {
+              "Invalid Paste Id": {
+                "value": {
+                  "timestamp": "2019-08-24T14:15:22Z",
+                  "status": 400,
+                  "error": "Bad Request",
+                  "message": "Invalid UUID format, please format properly."
+                }
+              }
+            }
+          }
+        }
+      },
+      "codepaste-not-found": {
+        "description": "Not Found: No Code Paste with the provided ID has been found.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/StatusResponse"
+            },
+            "examples": {
+              "CodePaste Not Found": {
+                "value": {
+                  "timestamp": "2019-08-24T14:15:22Z",
+                  "status": 404,
+                  "error": "Not Found",
+                  "message": "No CodePaste has been found with the given id."
+                }
+              }
+            }
+          }
+        }
+      },
+      "account-info-response": {
+        "description": "Example response",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "account_id": {
+                  "type": "integer"
+                },
+                "account_username": {
+                  "type": "string"
+                },
+                "account_email": {
+                  "type": "string"
+                }
+              }
+            },
+            "examples": {
+              "Found Account": {
+                "value": {
+                  "account_id": 134,
+                  "account_username": "FakeUsername",
+                  "account_email": "fake@email.com"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "security": [
+    {
+      "Authorization": []
+    }
+  ]
+}

@@ -1,0 +1,176 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "My project",
+    "version": "v1"
+  },
+  "paths": {
+    "/dmz": {
+      "get": {
+        "responses": {
+          "200": {
+            "content": {},
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/quartz-manager/auth/whoami": {
+      "get": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/quartz-manager/jobs": {
+      "get": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/quartz-manager/scheduler": {
+      "get": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/quartz-manager/scheduler/pause": {
+      "get": {
+        "responses": {
+          "204": {
+            "content": {},
+            "description": "No Content"
+          }
+        }
+      }
+    },
+    "/quartz-manager/scheduler/resume": {
+      "get": {
+        "responses": {
+          "204": {
+            "content": {},
+            "description": "No Content"
+          }
+        }
+      }
+    },
+    "/quartz-manager/scheduler/run": {
+      "get": {
+        "responses": {
+          "204": {
+            "content": {},
+            "description": "No Content"
+          }
+        }
+      }
+    },
+    "/quartz-manager/scheduler/stop": {
+      "get": {
+        "responses": {
+          "204": {
+            "content": {},
+            "description": "No Content"
+          }
+        }
+      }
+    },
+    "/quartz-manager/simple-triggers/my-minimal-trigger": {
+      "post": {
+        "responses": {
+          "201": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "Created"
+          }
+        }
+      }
+    },
+    "/quartz-manager/simple-triggers/my-puntual-trigger": {
+      "post": {
+        "responses": {
+          "201": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "Created"
+          }
+        }
+      }
+    },
+    "/quartz-manager/simple-triggers/mytrigger": {
+      "get": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "responses": {
+          "201": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "Created"
+          }
+        }
+      },
+      "put": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/quartz-manager/simple-triggers/not_existing_trigger_name": {
+      "get": {
+        "responses": {
+          "404": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/test-controller/test-conflict": {
+      "post": {
+        "responses": {
+          "409": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "Conflict"
+          }
+        }
+      }
+    }
+  },
+  "components": {}
+}

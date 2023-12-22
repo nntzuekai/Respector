@@ -1,0 +1,5 @@
+org.envirocar.server.mongo.guice.MongoModule
+org.envirocar.server.mongo.guice.MongoDaoModule
+org.envirocar.server.mongo.guice.MongoConverterModule
+org.envirocar.server.mongo.guice.MongoConnectionModule
+org.envirocar.server.mongo.guice.MongoMappedClassesModule

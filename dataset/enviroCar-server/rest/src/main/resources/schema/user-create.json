@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "required": [
+    "name",
+    "mail",
+    "token",
+    "acceptedTerms",
+    "acceptedPrivacy"
+  ],
+  "allOf": [
+    {
+      "$ref": "optional-user-properties.json"
+    },
+    {
+      "properties": {
+        "name": {
+          "$ref": "username.json"
+        },
+        "mail": {
+          "type": "string",
+          "pattern": "^[_A-Za-z0-9-+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$"
+        },
+        "token": {
+          "type": "string"
+        },
+        "acceptedTerms": {
+          "type": "boolean"
+        },
+        "acceptedPrivacy": {
+          "type": "boolean"
+        }
+      }
+    }
+  ]
+}

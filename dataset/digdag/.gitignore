@@ -1,0 +1,31 @@
+/graph.*
+/.gradle
+/pkg/*.jar
+/classpath/*.jar
+/build/
+*/build/
+*/out/
+*.pyc
+venv*
+.venv*
+/dist/*.tar.gz
+/config/test_postgresql.properties
+/config/dummy.properties
+MANIFEST
+pom.xml
+.digdag
+docker/bootstrap/constraints.txt
+docker/bootstrap/requirements.txt
+
+# intellij idea
+*.iml
+*.ipr
+*.iws
+*.idea
+
+# VSCode
+.project
+
+# generated self-signed cert
+littleproxy_cert
+littleproxy_keystore.jks

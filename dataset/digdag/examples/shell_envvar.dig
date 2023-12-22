@@ -1,0 +1,20 @@
+timezone: UTC
+
++simple:
+  sh>: ./tasks/shell_envvar.sh
+  param1: "this is param1"
+
++export_to_child_tasks:
+  _export:
+    exported_var: "this is exported by +export_to_child_tasks task"
+
+  +child_task_1:
+    sh>: ./tasks/shell_envvar.sh
+
+  +child_task_2:
+    sh>: ./tasks/shell_envvar.sh
+
++simple2:
+  sh>: ./tasks/shell_envvar.sh
+  param2: "this is param2"
+

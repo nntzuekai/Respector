@@ -1,0 +1,337 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "OpenAPI definition",
+        "version": "v0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:8080",
+            "description": "Generated server url"
+        }
+    ],
+    "paths": {
+        "/api/paste": {
+            "post": {
+                "tags": [
+                    "code-paste-controller"
+                ],
+                "operationId": "postNewCodePasteWith",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/UploadPasteRequestBody"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CodePasteDTO"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/account/signup": {
+            "post": {
+                "tags": [
+                    "user-account-controller"
+                ],
+                "operationId": "signupForNewAccount",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SignupRequestBody"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/UserAccountDTO"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/paste/{paste_id}": {
+            "get": {
+                "tags": [
+                    "code-paste-controller"
+                ],
+                "operationId": "getCodePasteFromId",
+                "parameters": [
+                    {
+                        "name": "paste_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CodePasteDTO"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "code-paste-controller"
+                ],
+                "operationId": "deleteCodePasteWithId",
+                "parameters": [
+                    {
+                        "name": "paste_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/api/paste/public": {
+            "get": {
+                "tags": [
+                    "code-paste-controller"
+                ],
+                "operationId": "getListOfPublicPastesWith",
+                "parameters": [
+                    {
+                        "name": "paste_title",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string",
+                            "default": ""
+                        }
+                    },
+                    {
+                        "name": "paste_syntax",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32",
+                            "default": 5
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/CodePasteDTO"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/account/{account_id}": {
+            "get": {
+                "tags": [
+                    "user-account-controller"
+                ],
+                "operationId": "getUserAccountById",
+                "parameters": [
+                    {
+                        "name": "account_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/UserAccountDTO"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "UploadPasteRequestBody": {
+                "type": "object",
+                "properties": {
+                    "paste_title": {
+                        "type": "string"
+                    },
+                    "paste_syntax": {
+                        "type": "string",
+                        "enum": [
+                            "NONE",
+                            "JAVA",
+                            "CSHARP",
+                            "Python",
+                            "JAVASCRIPT",
+                            "GO",
+                            "CLANG",
+                            "CPLUSPLUS",
+                            "PHP",
+                            "SWIFT",
+                            "LUA",
+                            "RUBY",
+                            "MYSQL",
+                            "POSTGRESQL"
+                        ]
+                    },
+                    "paste_visibility": {
+                        "type": "string",
+                        "enum": [
+                            "PUBLIC",
+                            "PRIVATE"
+                        ]
+                    },
+                    "paste_expiration": {
+                        "type": "string",
+                        "enum": [
+                            "TENMINUTES",
+                            "THIRTYMINUTES",
+                            "ONEHOUR",
+                            "FIVEHOURS",
+                            "ONEDAY",
+                            "THREEDAYS",
+                            "FIVEDAYS",
+                            "ONEWEEK"
+                        ]
+                    },
+                    "source_code": {
+                        "type": "string"
+                    }
+                }
+            },
+            "CodePasteDTO": {
+                "type": "object",
+                "properties": {
+                    "paste_id": {
+                        "type": "string",
+                        "format": "uuid"
+                    },
+                    "source_code": {
+                        "type": "string"
+                    },
+                    "paste_title": {
+                        "type": "string"
+                    },
+                    "paste_syntax": {
+                        "type": "string",
+                        "enum": [
+                            "NONE",
+                            "JAVA",
+                            "CSHARP",
+                            "Python",
+                            "JAVASCRIPT",
+                            "GO",
+                            "CLANG",
+                            "CPLUSPLUS",
+                            "PHP",
+                            "SWIFT",
+                            "LUA",
+                            "RUBY",
+                            "MYSQL",
+                            "POSTGRESQL"
+                        ]
+                    },
+                    "paste_expiration_date": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "paste_visibility": {
+                        "type": "string",
+                        "enum": [
+                            "PUBLIC",
+                            "PRIVATE"
+                        ]
+                    }
+                }
+            },
+            "SignupRequestBody": {
+                "type": "object",
+                "properties": {
+                    "account_username": {
+                        "type": "string"
+                    },
+                    "account_email": {
+                        "type": "string"
+                    },
+                    "account_password": {
+                        "type": "string"
+                    }
+                }
+            },
+            "UserAccountDTO": {
+                "type": "object",
+                "properties": {
+                    "account_id": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "account_username": {
+                        "type": "string"
+                    },
+                    "account_email": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+language: java
+jdk:
+  - oraclejdk8
+cache:
+  directories:
+  - $HOME/.m2
+
+addons:
+    code_climate:
+        repo_token: 48ab19cd37688a3a598d6288acf94fa70ee07327734192dc2f45b7e4d9c40f65

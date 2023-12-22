@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "httpMethod": "GET",
+    "httpStatusCode": 200,
+    "timestamp": "2018-12-21T21:00:52.346Z"
+  },
+  "links": {
+    "self": "http://localhost/127.0.0.1:2080/data-sources/EMPLOYEES/records/271898795?withRaw=true"
+  },
+  "rawData": {
+    "JSON_DATA": {
+      "SOURCE_ID": "7k_med.csv",
+      "PHONE_NUMBER": "614-767-5870",
+      "SOCIAL_HANDLE": "wettestc",
+      "DRIVERS_LICENSE_STATE": "MN",
+      "ADDR_STATE": "OH",
+      "ADDR_POSTAL_CODE": "41015",
+      "ADDR_CITY": "Delwaare",
+      "NAME_FIRST": "JON",
+      "GENDER": "M",
+      "CC_ACCOUNT_NUMBER": "530496072538528484",
+      "ADDR_LINE1": "2120 Bean-Ollr RD",
+      "NAME_LAST": "GALES",
+      "DATA_SOURCE": "EMPLOYEES",
+      "ENTITY_TYPE": "EMPLOYEES",
+      "DSRC_ACTION": "A",
+      "LENS_CODE": "DEFAULT",
+      "RECORD_ID": "271898795"
+    },
+    "NAME_DATA": [
+      "GALES JON"
+    ],
+    "ATTRIBUTE_DATA": [
+      "GENDER: M"
+    ],
+    "IDENTIFIER_DATA": [
+      "ACCT_NUM: CC: 530496072538528484",
+      "DRLIC: MN",
+      "LOGIN_ID: wettestc"
+    ],
+    "ADDRESS_DATA": [
+      "2120 Bean-Ollr RD Delwaare OH 41015"
+    ],
+    "PHONE_DATA": [
+      "614-767-5870"
+    ],
+    "RELATIONSHIP_DATA": [
+
+    ],
+    "ENTITY_DATA": [
+
+    ],
+    "OTHER_DATA": [
+
+    ],
+    "DATA_SOURCE": "EMPLOYEES",
+    "RECORD_ID": "271898795",
+    "ENTITY_TYPE": "EMPLOYEES",
+    "ENTITY_KEY": "F3027EBD16A64C1B58E7E19BD7BDB190EFFECD0F",
+    "OBS_ENT_HASH": "F3027EBD16A64C1B58E7E19BD7BDB190EFFECD0F",
+    "LAST_SEEN_DT": "2018-12-21 20:56:00.103"
+  },
+  "data": {
+    "dataSource": "EMPLOYEES",
+    "recordId": "271898795",
+    "addressData": [
+      "2120 Bean-Ollr RD Delwaare OH 41015"
+    ],
+    "attributeData": [
+      "GENDER: M"
+    ],
+    "identifierData": [
+      "ACCT_NUM: CC: 530496072538528484",
+      "DRLIC: MN",
+      "LOGIN_ID: wettestc"
+    ],
+    "nameData": [
+      "GALES JON"
+    ],
+    "phoneData": [
+      "614-767-5870"
+    ],
+    "relationshipData": [
+
+    ],
+    "otherData": [
+
+    ],
+    "originalSourceData": {
+      "SOURCE_ID": "7k_med.csv",
+      "PHONE_NUMBER": "614-767-5870",
+      "SOCIAL_HANDLE": "wettestc",
+      "DRIVERS_LICENSE_STATE": "MN",
+      "ADDR_STATE": "OH",
+      "ADDR_POSTAL_CODE": "41015",
+      "ADDR_CITY": "Delwaare",
+      "NAME_FIRST": "JON",
+      "GENDER": "M",
+      "CC_ACCOUNT_NUMBER": "530496072538528484",
+      "ADDR_LINE1": "2120 Bean-Ollr RD",
+      "NAME_LAST": "GALES",
+      "DATA_SOURCE": "EMPLOYEES",
+      "ENTITY_TYPE": "EMPLOYEES",
+      "DSRC_ACTION": "A",
+      "LENS_CODE": "DEFAULT",
+      "RECORD_ID": "271898795"
+    }
+  }
+}

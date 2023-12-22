@@ -1,0 +1,14 @@
+timezone: UTC
+
++run:
+  pg>: select_table.sql
+  host: ${pg_host}
+  database: ${pg_database}
+  user: ${pg_user}
+  store_last_results: all
+
++process:
+  for_each>:
+    user: ${pg.last_results}
+  _do:
+    sh>: echo ${user.name} >> $outfile

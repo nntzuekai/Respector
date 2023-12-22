@@ -1,0 +1,573 @@
+{
+  "meta": {
+    "httpMethod": "GET",
+    "httpStatusCode": 200,
+    "timestamp": "2018-12-21T21:03:13.904Z"
+  },
+  "links": {
+    "self": "http://localhost/127.0.0.1:2080/entities/980?withRaw=true"
+  },
+  "rawData": {
+    "RESOLVED_ENTITY": {
+      "ENTITY_ID": 980,
+      "LENS_ID": 1,
+      "ENTITY_NAME": "ELLEN POLK",
+      "FEATURES": {
+        "ACCT_NUM": [
+          {
+            "FEAT_DESC": "6484541160448147",
+            "LIB_FEAT_ID": 86643,
+            "UTYPE_CODE": "CC",
+            "FEAT_DESC_VALUES": [
+              {
+                "FEAT_DESC": "6484541160448147",
+                "LIB_FEAT_ID": 86643
+              }
+            ]
+          }
+        ],
+        "ADDRESS": [
+          {
+            "FEAT_DESC": "4154 47TH ST BOULDER CO 80301",
+            "LIB_FEAT_ID": 86638,
+            "FEAT_DESC_VALUES": [
+              {
+                "FEAT_DESC": "4154 47TH ST BOULDER CO 80301",
+                "LIB_FEAT_ID": 86638
+              }
+            ]
+          }
+        ],
+        "DRLIC": [
+          {
+            "FEAT_DESC": "39 AL",
+            "LIB_FEAT_ID": 86641,
+            "FEAT_DESC_VALUES": [
+              {
+                "FEAT_DESC": "39 AL",
+                "LIB_FEAT_ID": 86641
+              }
+            ]
+          }
+        ],
+        "GENDER": [
+          {
+            "FEAT_DESC": "F",
+            "LIB_FEAT_ID": 2,
+            "FEAT_DESC_VALUES": [
+              {
+                "FEAT_DESC": "F",
+                "LIB_FEAT_ID": 2
+              }
+            ]
+          }
+        ],
+        "LOGIN_ID": [
+          {
+            "FEAT_DESC": "TIMOTHY2",
+            "LIB_FEAT_ID": 86642,
+            "FEAT_DESC_VALUES": [
+              {
+                "FEAT_DESC": "TIMOTHY2",
+                "LIB_FEAT_ID": 86642
+              }
+            ]
+          }
+        ],
+        "NAME": [
+          {
+            "FEAT_DESC": "ELLEN POLK",
+            "LIB_FEAT_ID": 86637,
+            "FEAT_DESC_VALUES": [
+              {
+                "FEAT_DESC": "ELLEN POLK",
+                "LIB_FEAT_ID": 86637
+              }
+            ]
+          }
+        ],
+        "PHONE": [
+          {
+            "FEAT_DESC": "303-789-4029",
+            "LIB_FEAT_ID": 86639,
+            "FEAT_DESC_VALUES": [
+              {
+                "FEAT_DESC": "303-789-4029",
+                "LIB_FEAT_ID": 86639
+              }
+            ]
+          }
+        ],
+        "SSN": [
+          {
+            "FEAT_DESC": "226-05-1258",
+            "LIB_FEAT_ID": 86640,
+            "FEAT_DESC_VALUES": [
+              {
+                "FEAT_DESC": "226-05-1258",
+                "LIB_FEAT_ID": 86640
+              }
+            ]
+          }
+        ]
+      },
+      "RECORD_SUMMARY": [
+        {
+          "DATA_SOURCE": "EMPLOYEES",
+          "RECORD_COUNT": 1,
+          "FIRST_SEEN_DT": "2018-12-21 20:55:53.159",
+          "LAST_SEEN_DT": "2018-12-21 20:55:53.159"
+        }
+      ],
+      "LAST_SEEN_DT": "2018-12-21 20:55:53.159",
+      "RECORDS": [
+        {
+          "JSON_DATA": {
+            "SOURCE_ID": "7k_med.csv",
+            "PHONE_NUMBER": "303-789-4029",
+            "SOCIAL_HANDLE": "timothy2",
+            "DRIVERS_LICENSE_NUMBER": "39",
+            "DRIVERS_LICENSE_STATE": "AL",
+            "ADDR_STATE": "CO",
+            "ADDR_POSTAL_CODE": "80301",
+            "ADDR_CITY": "Boulder",
+            "SSN_NUMBER": "226-05-1258",
+            "NAME_FIRST": "ELLEN",
+            "GENDER": "F",
+            "CC_ACCOUNT_NUMBER": "6484541160448147",
+            "ADDR_LINE1": "4154 47th ST",
+            "NAME_LAST": "POLK",
+            "DATA_SOURCE": "EMPLOYEES",
+            "ENTITY_TYPE": "EMPLOYEES",
+            "DSRC_ACTION": "A",
+            "LENS_CODE": "DEFAULT",
+            "RECORD_ID": "187308048"
+          },
+          "DATA_SOURCE": "EMPLOYEES",
+          "ENTITY_TYPE": "EMPLOYEES",
+          "ENTITY_KEY": "C989F78396A14F673740EEA3B7A8490AB6CB6D7C",
+          "ENTITY_NAME": "ELLEN POLK",
+          "RECORD_ID": "187308048",
+          "MATCH_KEY": "",
+          "MATCH_SCORE": "",
+          "ERRULE_CODE": "",
+          "REF_SCORE": 0,
+          "MATCH_LEVEL": 0,
+          "LAST_SEEN_DT": "2018-12-21 20:55:53.159",
+          "NAME_DATA": [
+            "POLK ELLEN"
+          ],
+          "ATTRIBUTE_DATA": [
+            "GENDER: F"
+          ],
+          "IDENTIFIER_DATA": [
+            "ACCT_NUM: CC: 6484541160448147",
+            "DRLIC: 39 AL",
+            "LOGIN_ID: timothy2",
+            "SSN: 226-05-1258"
+          ],
+          "ADDRESS_DATA": [
+            "4154 47th ST Boulder CO 80301"
+          ],
+          "PHONE_DATA": [
+            "303-789-4029"
+          ],
+          "RELATIONSHIP_DATA": [
+
+          ],
+          "ENTITY_DATA": [
+
+          ],
+          "OTHER_DATA": [
+
+          ]
+        }
+      ]
+    },
+    "RELATED_ENTITIES": [
+      {
+        "ENTITY_ID": 620,
+        "LENS_ID": 1,
+        "MATCH_LEVEL": 3,
+        "MATCH_KEY": "+DRLIC-GENDER-SSN",
+        "MATCH_SCORE": "3",
+        "ERRULE_CODE": "CF1",
+        "REF_SCORE": 4,
+        "IS_DISCLOSED": 0,
+        "IS_AMBIGUOUS": 0,
+        "ENTITY_NAME": "DAVID AYALA",
+        "RECORD_SUMMARY": [
+          {
+            "DATA_SOURCE": "CUSTOMERS",
+            "RECORD_COUNT": 1,
+            "FIRST_SEEN_DT": "2018-12-21 20:55:39.843",
+            "LAST_SEEN_DT": "2018-12-21 20:55:39.843"
+          }
+        ],
+        "LAST_SEEN_DT": "2018-12-21 20:55:39.843"
+      },
+      {
+        "ENTITY_ID": 621,
+        "LENS_ID": 1,
+        "MATCH_LEVEL": 3,
+        "MATCH_KEY": "+GENDER+DRLIC-SSN",
+        "MATCH_SCORE": "4",
+        "ERRULE_CODE": "CF1",
+        "REF_SCORE": 4,
+        "IS_DISCLOSED": 0,
+        "IS_AMBIGUOUS": 0,
+        "ENTITY_NAME": "VIRGINIA COURTS",
+        "RECORD_SUMMARY": [
+          {
+            "DATA_SOURCE": "CUSTOMERS",
+            "RECORD_COUNT": 1,
+            "FIRST_SEEN_DT": "2018-12-21 20:55:39.878",
+            "LAST_SEEN_DT": "2018-12-21 20:55:39.878"
+          }
+        ],
+        "LAST_SEEN_DT": "2018-12-21 20:55:39.878"
+      },
+      {
+        "ENTITY_ID": 16028,
+        "LENS_ID": 1,
+        "MATCH_LEVEL": 3,
+        "MATCH_KEY": "+DRLIC-GENDER-SSN",
+        "MATCH_SCORE": "3",
+        "ERRULE_CODE": "CF1",
+        "REF_SCORE": 4,
+        "IS_DISCLOSED": 0,
+        "IS_AMBIGUOUS": 0,
+        "ENTITY_NAME": "JOHN BERNIER",
+        "RECORD_SUMMARY": [
+          {
+            "DATA_SOURCE": "WATCHLIST",
+            "RECORD_COUNT": 2,
+            "FIRST_SEEN_DT": "2018-12-21 20:56:27.891",
+            "LAST_SEEN_DT": "2018-12-21 20:56:28.275"
+          }
+        ],
+        "LAST_SEEN_DT": "2018-12-21 20:56:28.275"
+      }
+    ]
+  },
+  "data": {
+    "resolvedEntity": {
+      "entityId": 980,
+      "entityName": "ELLEN POLK",
+      "bestName": null,
+      "recordSummaries": [
+        {
+          "dataSource": "EMPLOYEES",
+          "recordCount": 1,
+          "topRecordIds": [
+            "187308048"
+          ]
+        }
+      ],
+      "addressData": [
+        "4154 47TH ST BOULDER CO 80301"
+      ],
+      "attributeData": [
+        "GENDER: F"
+      ],
+      "identifierData": [
+        "CC ACCT_NUM: 6484541160448147",
+        "LOGIN_ID: TIMOTHY2",
+        "SSN: 226-05-1258",
+        "DRLIC: 39 AL"
+      ],
+      "nameData": [
+        "ELLEN POLK"
+      ],
+      "phoneData": [
+        "303-789-4029"
+      ],
+      "relationshipData": [
+
+      ],
+      "otherData": [
+
+      ],
+      "features": {
+        "ACCT_NUM": [
+          {
+            "primaryValue": "6484541160448147",
+            "usageType": "CC",
+            "duplicateValues": [
+
+            ]
+          }
+        ],
+        "ADDRESS": [
+          {
+            "primaryValue": "4154 47TH ST BOULDER CO 80301",
+            "usageType": null,
+            "duplicateValues": [
+
+            ]
+          }
+        ],
+        "DRLIC": [
+          {
+            "primaryValue": "39 AL",
+            "usageType": null,
+            "duplicateValues": [
+
+            ]
+          }
+        ],
+        "GENDER": [
+          {
+            "primaryValue": "F",
+            "usageType": null,
+            "duplicateValues": [
+
+            ]
+          }
+        ],
+        "LOGIN_ID": [
+          {
+            "primaryValue": "TIMOTHY2",
+            "usageType": null,
+            "duplicateValues": [
+
+            ]
+          }
+        ],
+        "NAME": [
+          {
+            "primaryValue": "ELLEN POLK",
+            "usageType": null,
+            "duplicateValues": [
+
+            ]
+          }
+        ],
+        "PHONE": [
+          {
+            "primaryValue": "303-789-4029",
+            "usageType": null,
+            "duplicateValues": [
+
+            ]
+          }
+        ],
+        "SSN": [
+          {
+            "primaryValue": "226-05-1258",
+            "usageType": null,
+            "duplicateValues": [
+
+            ]
+          }
+        ]
+      },
+      "records": [
+        {
+          "dataSource": "EMPLOYEES",
+          "recordId": "187308048",
+          "addressData": [
+            "4154 47th ST Boulder CO 80301"
+          ],
+          "attributeData": [
+            "GENDER: F"
+          ],
+          "identifierData": [
+            "ACCT_NUM: CC: 6484541160448147",
+            "DRLIC: 39 AL",
+            "LOGIN_ID: timothy2",
+            "SSN: 226-05-1258"
+          ],
+          "nameData": [
+            "POLK ELLEN"
+          ],
+          "phoneData": [
+            "303-789-4029"
+          ],
+          "relationshipData": [
+
+          ],
+          "otherData": [
+
+          ],
+          "originalSourceData": {
+            "SOURCE_ID": "7k_med.csv",
+            "PHONE_NUMBER": "303-789-4029",
+            "SOCIAL_HANDLE": "timothy2",
+            "DRIVERS_LICENSE_NUMBER": "39",
+            "DRIVERS_LICENSE_STATE": "AL",
+            "ADDR_STATE": "CO",
+            "ADDR_POSTAL_CODE": "80301",
+            "ADDR_CITY": "Boulder",
+            "SSN_NUMBER": "226-05-1258",
+            "NAME_FIRST": "ELLEN",
+            "GENDER": "F",
+            "CC_ACCOUNT_NUMBER": "6484541160448147",
+            "ADDR_LINE1": "4154 47th ST",
+            "NAME_LAST": "POLK",
+            "DATA_SOURCE": "EMPLOYEES",
+            "ENTITY_TYPE": "EMPLOYEES",
+            "DSRC_ACTION": "A",
+            "LENS_CODE": "DEFAULT",
+            "RECORD_ID": "187308048"
+          }
+        }
+      ]
+    },
+    "relatedEntities": [
+      {
+        "entityId": 620,
+        "entityName": "DAVID AYALA",
+        "bestName": null,
+        "recordSummaries": [
+          {
+            "dataSource": "CUSTOMERS",
+            "recordCount": 1,
+            "topRecordIds": [
+
+            ]
+          }
+        ],
+        "addressData": [
+
+        ],
+        "attributeData": [
+
+        ],
+        "identifierData": [
+
+        ],
+        "nameData": [
+
+        ],
+        "phoneData": [
+
+        ],
+        "relationshipData": [
+
+        ],
+        "otherData": [
+
+        ],
+        "features": {
+
+        },
+        "records": [
+
+        ],
+        "matchLevel": 3,
+        "fullNameScore": null,
+        "matchScore": 3,
+        "ambiguous": false,
+        "matchKey": "+DRLIC-GENDER-SSN",
+        "resolutionRuleCode": "CF1",
+        "refScore": 4,
+        "partial": true,
+        "disclosed": false,
+        "relationType": "POSSIBLE_RELATION"
+      },
+      {
+        "entityId": 621,
+        "entityName": "VIRGINIA COURTS",
+        "bestName": null,
+        "recordSummaries": [
+          {
+            "dataSource": "CUSTOMERS",
+            "recordCount": 1,
+            "topRecordIds": [
+
+            ]
+          }
+        ],
+        "addressData": [
+
+        ],
+        "attributeData": [
+
+        ],
+        "identifierData": [
+
+        ],
+        "nameData": [
+
+        ],
+        "phoneData": [
+
+        ],
+        "relationshipData": [
+
+        ],
+        "otherData": [
+
+        ],
+        "features": {
+
+        },
+        "records": [
+
+        ],
+        "matchLevel": 3,
+        "fullNameScore": null,
+        "matchScore": 4,
+        "ambiguous": false,
+        "matchKey": "+GENDER+DRLIC-SSN",
+        "resolutionRuleCode": "CF1",
+        "refScore": 4,
+        "partial": true,
+        "disclosed": false,
+        "relationType": "POSSIBLE_RELATION"
+      },
+      {
+        "entityId": 16028,
+        "entityName": "JOHN BERNIER",
+        "bestName": null,
+        "recordSummaries": [
+          {
+            "dataSource": "WATCHLIST",
+            "recordCount": 2,
+            "topRecordIds": [
+
+            ]
+          }
+        ],
+        "addressData": [
+
+        ],
+        "attributeData": [
+
+        ],
+        "identifierData": [
+
+        ],
+        "nameData": [
+
+        ],
+        "phoneData": [
+
+        ],
+        "relationshipData": [
+
+        ],
+        "otherData": [
+
+        ],
+        "features": {
+
+        },
+        "records": [
+
+        ],
+        "matchLevel": 3,
+        "fullNameScore": null,
+        "matchScore": 3,
+        "ambiguous": false,
+        "matchKey": "+DRLIC-GENDER-SSN",
+        "resolutionRuleCode": "CF1",
+        "refScore": 4,
+        "partial": true,
+        "disclosed": false,
+        "relationType": "POSSIBLE_RELATION"
+      }
+    ]
+  }
+}

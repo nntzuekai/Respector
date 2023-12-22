@@ -1,0 +1,48 @@
+
+dependencies {
+    testCompile project(':digdag-cli')
+    testCompile project(':digdag-storage-s3')
+    testCompile project(':digdag-storage-gcs')
+    testCompile "com.google.code.findbugs:jsr305:3.0.2"
+    testCompile 'com.google.code.findbugs:annotations:3.0.1'
+    testCompile 'org.subethamail:subethasmtp:3.1.7'
+    testCompile 'com.squareup.okhttp3:okhttp:3.12.0'
+    testCompile 'com.squareup.okhttp3:okhttp-tls:3.12.0'
+    testCompile 'com.squareup.okhttp3:mockwebserver:3.12.0'
+    testCompile('xyz.rogfam:littleproxy:2.0.3') {
+        // littleproxy depends on guava:20 and it conflicts with digdag-client
+        exclude group: 'com.google.guava', module: 'guava'
+        // littleproxy depends on slf4j-api:1.7.24 and it conflicts with others
+        exclude group: 'org.slf4j', module: 'slf4j-api'
+    }
+    testCompile "com.amazonaws:aws-java-sdk-dynamodb:${project.ext.awsJavaSdkVersion}"
+    testCompile('org.apache.avro:avro:1.8.1') {
+        exclude group:'org.apache.commons', module:'commons-compress'
+    }
+}
+
+test {
+    forkEvery = 1
+    maxParallelForks = System.env.CI_NODE_INDEX ? 1 : 2  // no parallel run on CI which has limited resource
+    minHeapSize = "256m"
+    maxHeapSize = "256m"
+    environment "DIGDAG_TEST_TEMP_SERVER_IN_PROCESS", "false"
+
+    // Exclude all acceptance tests if this is not an acceptance test run
+    if (System.env.CI_ACCEPTANCE_TEST == null || !Boolean.valueOf(System.env.CI_ACCEPTANCE_TEST)) {
+        exclude {
+            // run tests if --tests or -Dtest.single is explicitly set
+            System.getProperty("test.single") == null && filter.includePatterns.empty
+        }
+    }
+
+    if (project.hasProperty("testFilter")) {
+        List<String> props = project.getProperties().get("testFilter").split("\\s+")
+        println("testFilter: " + props)
+        props.each {
+            String converted = it.replace("digdag-tests/src/test/java/", "").replace(".java", "*.class")
+            println("target: " + converted)
+            include(converted)
+        }
+    }
+}

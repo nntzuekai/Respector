@@ -1,0 +1,80 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "My project",
+    "version": "v1"
+  },
+  "paths": {
+    "/api/account/signup": {
+      "post": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "OK"
+          },
+          "400": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "Bad Request"
+          },
+          "409": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "Conflict"
+          }
+        }
+      }
+    },
+    "/api/paste": {
+      "post": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/paste/02f6b55d-9402-44f3-b712-f3eefbf16547": {
+      "delete": {
+        "responses": {
+          "200": {
+            "content": {},
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/paste/Wrong%20ID%20Format": {
+      "delete": {
+        "responses": {
+          "400": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/api/paste/ac67440f-6b57-4d0c-b554-8fdd3a9b7a09": {
+      "delete": {
+        "responses": {
+          "404": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "Not Found"
+          }
+        }
+      }
+    }
+  },
+  "components": {}
+}

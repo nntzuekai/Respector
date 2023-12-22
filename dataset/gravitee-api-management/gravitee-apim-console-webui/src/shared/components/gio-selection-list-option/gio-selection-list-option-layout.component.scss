@@ -1,0 +1,50 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+@use '@gravitee/ui-particles-angular' as gio;
+
+$typography: map.get(gio.$mat-theme, typography);
+
+::ng-deep {
+  // ⚠️ Complete mat-selection-list styles to have custom style
+  mat-selection-list.gio-selection-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    mat-list-option.mat-list-option {
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 2px solid mat.get-color-from-palette(gio.$mat-dove-palette, 'darker20');
+      border-radius: 4px;
+      padding: 16px 0;
+    }
+  }
+}
+
+:host {
+  display: flex;
+  flex-direction: row;
+  margin: 16px 0;
+  gap: 16px;
+  justify-content: space-between;
+}
+.gio-list-option {
+  &__description {
+    flex: 1 1 100%;
+
+    &__title {
+      @include mat.typography-level($typography, subheading-1);
+      margin-bottom: 8px;
+      text-transform: capitalize;
+    }
+
+    &__body {
+      @include mat.typography-level($typography, body-1);
+      // TODO: make available to module components + integrate in step 1, stepper html
+      color: mat.get-color-from-palette(gio.$mat-space-palette, 'lighter40');
+      margin: 0;
+    }
+  }
+}

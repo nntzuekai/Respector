@@ -1,0 +1,17 @@
+@use './../policy-studio-debug-inspector.component' as debug-inspector;
+
+:host {
+  display: flex;
+
+  > * {
+    width: 100%;
+    flex: 1;
+  }
+
+  td {
+    width: 50%;
+    word-break: break-all;
+  }
+
+  @include debug-inspector.diff();
+}

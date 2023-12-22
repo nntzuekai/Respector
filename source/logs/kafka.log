@@ -1,0 +1,167 @@
++ java -Djava.library.path=/home/rkh/z3//build/ -cp ./target/Respector-0.1-SNAPSHOT.jar:/home/rkh/z3//build/com.microsoft.z3.jar org.rest.Respector.AppMain.Main ../dataset//kafka-rest/kafka-rest/target/classes/ ./generated_1//kafka.json
+[main] INFO org.rest.Respector.EndPointRecog.PreprocessFramework - The REST API uses JAX
+[main] INFO org.rest.Respector.AppMain.MainTransform - total # of endpoint methods detected: 81
+[main] INFO org.rest.Respector.AppMain.MainTransform - 1/81 analyzing endpoint method <io.confluent.kafkarest.resources.v2.PartitionsResource: void list(javax.ws.rs.container.AsyncResponse,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 2/81 analyzing endpoint method <io.confluent.kafkarest.resources.v2.PartitionsResource: void getPartition(javax.ws.rs.container.AsyncResponse,java.lang.String,int)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+[main] INFO org.rest.Respector.AppMain.MainTransform - 3/81 analyzing endpoint method <io.confluent.kafkarest.resources.v2.PartitionsResource: void getOffsets(javax.ws.rs.container.AsyncResponse,java.lang.String,int)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+[main] INFO org.rest.Respector.AppMain.MainTransform - 4/81 analyzing endpoint method <io.confluent.kafkarest.resources.v2.TopicsResource: void list(javax.ws.rs.container.AsyncResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 5/81 analyzing endpoint method <io.confluent.kafkarest.resources.v2.TopicsResource: void getTopic(javax.ws.rs.container.AsyncResponse,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 6/81 analyzing endpoint method <io.confluent.kafkarest.resources.v2.ConsumersResource: io.confluent.kafkarest.entities.v2.CreateConsumerInstanceResponse createGroup(javax.ws.rs.core.UriInfo,java.lang.String,io.confluent.kafkarest.entities.v2.CreateConsumerInstanceRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 7/81 analyzing endpoint method <io.confluent.kafkarest.resources.v2.ConsumersResource: void deleteGroup(java.lang.String,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+[main] INFO org.rest.Respector.AppMain.MainTransform - 8/81 analyzing endpoint method <io.confluent.kafkarest.resources.v2.ConsumersResource: void subscribe(javax.ws.rs.core.UriInfo,java.lang.String,java.lang.String,io.confluent.kafkarest.entities.v2.ConsumerSubscriptionRecord)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+[main] INFO org.rest.Respector.AppMain.MainTransform - 9/81 analyzing endpoint method <io.confluent.kafkarest.resources.v2.ConsumersResource: io.confluent.kafkarest.entities.v2.ConsumerSubscriptionResponse subscription(javax.ws.rs.core.UriInfo,java.lang.String,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+[main] INFO org.rest.Respector.AppMain.MainTransform - 10/81 analyzing endpoint method <io.confluent.kafkarest.resources.v2.ConsumersResource: void unsubscribe(javax.ws.rs.core.UriInfo,java.lang.String,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+[main] INFO org.rest.Respector.AppMain.MainTransform - 11/81 analyzing endpoint method <io.confluent.kafkarest.resources.v2.ConsumersResource: void readRecordBinary(javax.ws.rs.container.AsyncResponse,java.lang.String,java.lang.String,long,long)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 4
+[main] INFO org.rest.Respector.AppMain.MainTransform - 12/81 analyzing endpoint method <io.confluent.kafkarest.resources.v2.ConsumersResource: void readRecordJson(javax.ws.rs.container.AsyncResponse,java.lang.String,java.lang.String,long,long)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 13/81 analyzing endpoint method <io.confluent.kafkarest.resources.v2.ConsumersResource: void readRecordAvro(javax.ws.rs.container.AsyncResponse,java.lang.String,java.lang.String,long,long)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 14/81 analyzing endpoint method <io.confluent.kafkarest.resources.v2.ConsumersResource: void readRecordJsonSchema(javax.ws.rs.container.AsyncResponse,java.lang.String,java.lang.String,long,long)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 15/81 analyzing endpoint method <io.confluent.kafkarest.resources.v2.ConsumersResource: void readRecordProtobuf(javax.ws.rs.container.AsyncResponse,java.lang.String,java.lang.String,long,long)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 16/81 analyzing endpoint method <io.confluent.kafkarest.resources.v2.ConsumersResource: void commitOffsets(javax.ws.rs.container.AsyncResponse,java.lang.String,java.lang.String,java.lang.String,io.confluent.kafkarest.entities.v2.ConsumerOffsetCommitRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 3
+[main] INFO org.rest.Respector.AppMain.MainTransform - 17/81 analyzing endpoint method <io.confluent.kafkarest.resources.v2.ConsumersResource: io.confluent.kafkarest.entities.v2.ConsumerCommittedResponse committedOffsets(java.lang.String,java.lang.String,io.confluent.kafkarest.entities.v2.ConsumerCommittedRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+[main] INFO org.rest.Respector.AppMain.MainTransform - 18/81 analyzing endpoint method <io.confluent.kafkarest.resources.v2.ConsumersResource: void seekToBeginning(javax.ws.rs.core.UriInfo,java.lang.String,java.lang.String,io.confluent.kafkarest.entities.v2.ConsumerSeekToRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+[main] INFO org.rest.Respector.AppMain.MainTransform - 19/81 analyzing endpoint method <io.confluent.kafkarest.resources.v2.ConsumersResource: void seekToEnd(javax.ws.rs.core.UriInfo,java.lang.String,java.lang.String,io.confluent.kafkarest.entities.v2.ConsumerSeekToRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+[main] INFO org.rest.Respector.AppMain.MainTransform - 20/81 analyzing endpoint method <io.confluent.kafkarest.resources.v2.ConsumersResource: void seekToOffset(javax.ws.rs.core.UriInfo,java.lang.String,java.lang.String,io.confluent.kafkarest.entities.v2.ConsumerSeekRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+[main] INFO org.rest.Respector.AppMain.MainTransform - 21/81 analyzing endpoint method <io.confluent.kafkarest.resources.v2.ConsumersResource: void assign(javax.ws.rs.core.UriInfo,java.lang.String,java.lang.String,io.confluent.kafkarest.entities.v2.ConsumerAssignmentRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+[main] INFO org.rest.Respector.AppMain.MainTransform - 22/81 analyzing endpoint method <io.confluent.kafkarest.resources.v2.ConsumersResource: io.confluent.kafkarest.entities.v2.ConsumerAssignmentResponse assignment(javax.ws.rs.core.UriInfo,java.lang.String,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+[main] INFO org.rest.Respector.AppMain.MainTransform - 23/81 analyzing endpoint method <io.confluent.kafkarest.resources.v2.ProduceToPartitionAction: void produceBinary(javax.ws.rs.container.AsyncResponse,java.lang.String,int,io.confluent.kafkarest.entities.v2.ProduceRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+[main] INFO org.rest.Respector.AppMain.MainTransform - 24/81 analyzing endpoint method <io.confluent.kafkarest.resources.v2.ProduceToPartitionAction: void produceJson(javax.ws.rs.container.AsyncResponse,java.lang.String,int,io.confluent.kafkarest.entities.v2.ProduceRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 25/81 analyzing endpoint method <io.confluent.kafkarest.resources.v2.ProduceToPartitionAction: void produceAvro(javax.ws.rs.container.AsyncResponse,java.lang.String,int,io.confluent.kafkarest.entities.v2.ProduceRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 26/81 analyzing endpoint method <io.confluent.kafkarest.resources.v2.ProduceToPartitionAction: void produceJsonSchema(javax.ws.rs.container.AsyncResponse,java.lang.String,int,io.confluent.kafkarest.entities.v2.ProduceRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 27/81 analyzing endpoint method <io.confluent.kafkarest.resources.v2.ProduceToPartitionAction: void produceProtobuf(javax.ws.rs.container.AsyncResponse,java.lang.String,int,io.confluent.kafkarest.entities.v2.ProduceRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 28/81 analyzing endpoint method <io.confluent.kafkarest.resources.v2.ProduceToTopicAction: void produceBinary(javax.ws.rs.container.AsyncResponse,java.lang.String,io.confluent.kafkarest.entities.v2.ProduceRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 29/81 analyzing endpoint method <io.confluent.kafkarest.resources.v2.ProduceToTopicAction: void produceJson(javax.ws.rs.container.AsyncResponse,java.lang.String,io.confluent.kafkarest.entities.v2.ProduceRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 30/81 analyzing endpoint method <io.confluent.kafkarest.resources.v2.ProduceToTopicAction: void produceAvro(javax.ws.rs.container.AsyncResponse,java.lang.String,io.confluent.kafkarest.entities.v2.ProduceRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 31/81 analyzing endpoint method <io.confluent.kafkarest.resources.v2.ProduceToTopicAction: void produceJsonSchema(javax.ws.rs.container.AsyncResponse,java.lang.String,io.confluent.kafkarest.entities.v2.ProduceRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 32/81 analyzing endpoint method <io.confluent.kafkarest.resources.v2.ProduceToTopicAction: void produceProtobuf(javax.ws.rs.container.AsyncResponse,java.lang.String,io.confluent.kafkarest.entities.v2.ProduceRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 33/81 analyzing endpoint method <io.confluent.kafkarest.resources.v2.RootResource: java.util.Map get()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 34/81 analyzing endpoint method <io.confluent.kafkarest.resources.v2.RootResource: java.util.Map post(java.util.Map)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 35/81 analyzing endpoint method <io.confluent.kafkarest.resources.v2.BrokersResource: void list(javax.ws.rs.container.AsyncResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 36/81 analyzing endpoint method <io.confluent.kafkarest.resources.v3.BrokerConfigsResource: void listBrokerConfigs(javax.ws.rs.container.AsyncResponse,java.lang.String,int)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+[main] INFO org.rest.Respector.AppMain.MainTransform - 37/81 analyzing endpoint method <io.confluent.kafkarest.resources.v3.BrokerConfigsResource: void getBrokerConfig(javax.ws.rs.container.AsyncResponse,java.lang.String,int,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 3
+[main] INFO org.rest.Respector.AppMain.MainTransform - 38/81 analyzing endpoint method <io.confluent.kafkarest.resources.v3.BrokerConfigsResource: void updateBrokerConfig(javax.ws.rs.container.AsyncResponse,java.lang.String,int,java.lang.String,io.confluent.kafkarest.entities.v3.UpdateBrokerConfigRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 3
+[main] INFO org.rest.Respector.AppMain.MainTransform - 39/81 analyzing endpoint method <io.confluent.kafkarest.resources.v3.BrokerConfigsResource: void resetBrokerConfig(javax.ws.rs.container.AsyncResponse,java.lang.String,int,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 3
+[main] INFO org.rest.Respector.AppMain.MainTransform - 40/81 analyzing endpoint method <io.confluent.kafkarest.resources.v3.ClusterConfigsResource: void listClusterConfigs(javax.ws.rs.container.AsyncResponse,java.lang.String,io.confluent.kafkarest.entities.ClusterConfig$Type)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+[main] INFO org.rest.Respector.AppMain.MainTransform - 41/81 analyzing endpoint method <io.confluent.kafkarest.resources.v3.ClusterConfigsResource: void getClusterConfig(javax.ws.rs.container.AsyncResponse,java.lang.String,io.confluent.kafkarest.entities.ClusterConfig$Type,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 3
+[main] INFO org.rest.Respector.AppMain.MainTransform - 42/81 analyzing endpoint method <io.confluent.kafkarest.resources.v3.ClusterConfigsResource: void upsertClusterConfig(javax.ws.rs.container.AsyncResponse,java.lang.String,io.confluent.kafkarest.entities.ClusterConfig$Type,java.lang.String,io.confluent.kafkarest.entities.v3.UpdateClusterConfigRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 3
+[main] INFO org.rest.Respector.AppMain.MainTransform - 43/81 analyzing endpoint method <io.confluent.kafkarest.resources.v3.ClusterConfigsResource: void deleteClusterConfig(javax.ws.rs.container.AsyncResponse,java.lang.String,io.confluent.kafkarest.entities.ClusterConfig$Type,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 3
+[main] INFO org.rest.Respector.AppMain.MainTransform - 44/81 analyzing endpoint method <io.confluent.kafkarest.resources.v3.PartitionsResource: void listPartitions(javax.ws.rs.container.AsyncResponse,java.lang.String,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+[main] INFO org.rest.Respector.AppMain.MainTransform - 45/81 analyzing endpoint method <io.confluent.kafkarest.resources.v3.PartitionsResource: void getPartition(javax.ws.rs.container.AsyncResponse,java.lang.String,java.lang.String,java.lang.Integer)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 3
+[main] INFO org.rest.Respector.AppMain.MainTransform - 46/81 analyzing endpoint method <io.confluent.kafkarest.resources.v3.ConsumerLagsResource: void listConsumerLags(javax.ws.rs.container.AsyncResponse,java.lang.String,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+[main] INFO org.rest.Respector.AppMain.MainTransform - 47/81 analyzing endpoint method <io.confluent.kafkarest.resources.v3.ConsumerLagsResource: void getConsumerLag(javax.ws.rs.container.AsyncResponse,java.lang.String,java.lang.String,java.lang.String,java.lang.Integer)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 4
+[main] INFO org.rest.Respector.AppMain.MainTransform - 48/81 analyzing endpoint method <io.confluent.kafkarest.resources.v3.TopicsResource: void listTopics(javax.ws.rs.container.AsyncResponse,java.lang.String,boolean)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+[main] INFO org.rest.Respector.AppMain.MainTransform - 49/81 analyzing endpoint method <io.confluent.kafkarest.resources.v3.TopicsResource: void getTopic(javax.ws.rs.container.AsyncResponse,java.lang.String,java.lang.String,boolean)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 3
+[main] INFO org.rest.Respector.AppMain.MainTransform - 50/81 analyzing endpoint method <io.confluent.kafkarest.resources.v3.TopicsResource: void createTopic(javax.ws.rs.container.AsyncResponse,java.lang.String,io.confluent.kafkarest.entities.v3.CreateTopicRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 51/81 analyzing endpoint method <io.confluent.kafkarest.resources.v3.TopicsResource: void deleteTopic(javax.ws.rs.container.AsyncResponse,java.lang.String,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+[main] INFO org.rest.Respector.AppMain.MainTransform - 52/81 analyzing endpoint method <io.confluent.kafkarest.resources.v3.ConsumerGroupLagSummariesResource: void getConsumerGroupLagSummary(javax.ws.rs.container.AsyncResponse,java.lang.String,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+[main] INFO org.rest.Respector.AppMain.MainTransform - 53/81 analyzing endpoint method <io.confluent.kafkarest.resources.v3.ConsumersResource: void listConsumers(javax.ws.rs.container.AsyncResponse,java.lang.String,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+[main] INFO org.rest.Respector.AppMain.MainTransform - 54/81 analyzing endpoint method <io.confluent.kafkarest.resources.v3.ConsumersResource: void getConsumer(javax.ws.rs.container.AsyncResponse,java.lang.String,java.lang.String,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 3
+[main] INFO org.rest.Respector.AppMain.MainTransform - 55/81 analyzing endpoint method <io.confluent.kafkarest.resources.v3.SearchReassignmentsByTopicAction: void listReassignmentsByTopic(javax.ws.rs.container.AsyncResponse,java.lang.String,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+[main] INFO org.rest.Respector.AppMain.MainTransform - 56/81 analyzing endpoint method <io.confluent.kafkarest.resources.v3.ListAllTopicsConfigsAction: void listTopicConfigs(javax.ws.rs.container.AsyncResponse,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 57/81 analyzing endpoint method <io.confluent.kafkarest.resources.v3.ConsumerGroupsResource: void listConsumerGroups(javax.ws.rs.container.AsyncResponse,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 58/81 analyzing endpoint method <io.confluent.kafkarest.resources.v3.ConsumerGroupsResource: void getConsumerGroup(javax.ws.rs.container.AsyncResponse,java.lang.String,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+[main] INFO org.rest.Respector.AppMain.MainTransform - 59/81 analyzing endpoint method <io.confluent.kafkarest.resources.v3.ConsumerAssignmentsResource: void listConsumerAssignments(javax.ws.rs.container.AsyncResponse,java.lang.String,java.lang.String,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 3
+[main] INFO org.rest.Respector.AppMain.MainTransform - 60/81 analyzing endpoint method <io.confluent.kafkarest.resources.v3.ConsumerAssignmentsResource: void getConsumerAssignment(javax.ws.rs.container.AsyncResponse,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 5
+[main] INFO org.rest.Respector.AppMain.MainTransform - 61/81 analyzing endpoint method <io.confluent.kafkarest.resources.v3.GetReassignmentAction: void getReassignment(javax.ws.rs.container.AsyncResponse,java.lang.String,java.lang.String,java.lang.Integer)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 3
+[main] INFO org.rest.Respector.AppMain.MainTransform - 62/81 analyzing endpoint method <io.confluent.kafkarest.resources.v3.ListAllReassignmentsAction: void listReassignments(javax.ws.rs.container.AsyncResponse,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 63/81 analyzing endpoint method <io.confluent.kafkarest.resources.v3.ListAllBrokersConfigsAction: void listBrokersConfigs(javax.ws.rs.container.AsyncResponse,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 64/81 analyzing endpoint method <io.confluent.kafkarest.resources.v3.AclsResource: void searchAcls(javax.ws.rs.container.AsyncResponse,java.lang.String,io.confluent.kafkarest.entities.Acl$ResourceType,java.lang.String,io.confluent.kafkarest.entities.Acl$PatternType,java.lang.String,java.lang.String,io.confluent.kafkarest.entities.Acl$Operation,io.confluent.kafkarest.entities.Acl$Permission)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 8
+[main] INFO org.rest.Respector.AppMain.MainTransform - 65/81 analyzing endpoint method <io.confluent.kafkarest.resources.v3.AclsResource: void createAcl(javax.ws.rs.container.AsyncResponse,java.lang.String,io.confluent.kafkarest.entities.v3.CreateAclRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 66/81 analyzing endpoint method <io.confluent.kafkarest.resources.v3.AclsResource: void deleteAcls(javax.ws.rs.container.AsyncResponse,java.lang.String,io.confluent.kafkarest.entities.Acl$ResourceType,java.lang.String,io.confluent.kafkarest.entities.Acl$PatternType,java.lang.String,java.lang.String,io.confluent.kafkarest.entities.Acl$Operation,io.confluent.kafkarest.entities.Acl$Permission)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 8
+[main] INFO org.rest.Respector.AppMain.MainTransform - 67/81 analyzing endpoint method <io.confluent.kafkarest.resources.v3.AlterBrokerConfigBatchAction: void alterBrokerConfigBatch(javax.ws.rs.container.AsyncResponse,java.lang.String,int,io.confluent.kafkarest.entities.v3.AlterBrokerConfigBatchRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+[main] INFO org.rest.Respector.AppMain.MainTransform - 68/81 analyzing endpoint method <io.confluent.kafkarest.resources.v3.BrokersResource: void listBrokers(javax.ws.rs.container.AsyncResponse,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 69/81 analyzing endpoint method <io.confluent.kafkarest.resources.v3.BrokersResource: void getBroker(javax.ws.rs.container.AsyncResponse,java.lang.String,java.lang.Integer)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+[main] INFO org.rest.Respector.AppMain.MainTransform - 70/81 analyzing endpoint method <io.confluent.kafkarest.resources.v3.AlterTopicConfigBatchAction: void alterTopicConfigBatch(javax.ws.rs.container.AsyncResponse,java.lang.String,java.lang.String,io.confluent.kafkarest.entities.v3.AlterTopicConfigBatchRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+[main] INFO org.rest.Respector.AppMain.MainTransform - 71/81 analyzing endpoint method <io.confluent.kafkarest.resources.v3.TopicConfigsResource: void listTopicConfigs(javax.ws.rs.container.AsyncResponse,java.lang.String,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+[main] INFO org.rest.Respector.AppMain.MainTransform - 72/81 analyzing endpoint method <io.confluent.kafkarest.resources.v3.TopicConfigsResource: void getTopicConfig(javax.ws.rs.container.AsyncResponse,java.lang.String,java.lang.String,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 3
+[main] INFO org.rest.Respector.AppMain.MainTransform - 73/81 analyzing endpoint method <io.confluent.kafkarest.resources.v3.TopicConfigsResource: void updateTopicConfig(javax.ws.rs.container.AsyncResponse,java.lang.String,java.lang.String,java.lang.String,io.confluent.kafkarest.entities.v3.UpdateTopicConfigRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 3
+[main] INFO org.rest.Respector.AppMain.MainTransform - 74/81 analyzing endpoint method <io.confluent.kafkarest.resources.v3.TopicConfigsResource: void resetTopicConfig(javax.ws.rs.container.AsyncResponse,java.lang.String,java.lang.String,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 3
+[main] INFO org.rest.Respector.AppMain.MainTransform - 75/81 analyzing endpoint method <io.confluent.kafkarest.resources.v3.SearchReplicasByBrokerAction: void searchReplicasByBroker(javax.ws.rs.container.AsyncResponse,java.lang.String,java.lang.Integer)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+[main] INFO org.rest.Respector.AppMain.MainTransform - 76/81 analyzing endpoint method <io.confluent.kafkarest.resources.v3.AlterClusterConfigBatchAction: void alterClusterConfigBatch(javax.ws.rs.container.AsyncResponse,java.lang.String,io.confluent.kafkarest.entities.ClusterConfig$Type,io.confluent.kafkarest.entities.v3.AlterClusterConfigBatchRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+[main] INFO org.rest.Respector.AppMain.MainTransform - 77/81 analyzing endpoint method <io.confluent.kafkarest.resources.v3.ReplicasResource: void listReplicas(javax.ws.rs.container.AsyncResponse,java.lang.String,java.lang.String,java.lang.Integer)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 3
+[main] INFO org.rest.Respector.AppMain.MainTransform - 78/81 analyzing endpoint method <io.confluent.kafkarest.resources.v3.ReplicasResource: void getReplica(javax.ws.rs.container.AsyncResponse,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 4
+[main] INFO org.rest.Respector.AppMain.MainTransform - 79/81 analyzing endpoint method <io.confluent.kafkarest.resources.v3.ClustersResource: void listClusters(javax.ws.rs.container.AsyncResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 80/81 analyzing endpoint method <io.confluent.kafkarest.resources.v3.ClustersResource: void getCluster(javax.ws.rs.container.AsyncResponse,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 81/81 analyzing endpoint method <io.confluent.kafkarest.resources.v3.ProduceAction: void produce(javax.ws.rs.container.AsyncResponse,java.lang.String,java.lang.String,io.confluent.kafkarest.response.JsonStream)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+
+real	3m16.491s
+user	3m50.923s
+sys	0m1.269s

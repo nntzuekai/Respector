@@ -1,0 +1,133 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "My project",
+    "version": "v1"
+  },
+  "paths": {
+    "/version/v1/registrationToken": {
+      "post": {
+        "responses": {
+          "200": {
+            "content": {},
+            "description": "OK"
+          },
+          "201": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "Created"
+          },
+          "400": {
+            "content": {},
+            "description": "Bad Request"
+          },
+          "404": {
+            "content": {},
+            "description": "Not Found"
+          },
+          "406": {
+            "content": {},
+            "description": "Not Acceptable"
+          }
+        }
+      }
+    },
+    "/version/v1/tan": {
+      "post": {
+        "responses": {
+          "200": {
+            "content": {},
+            "description": "OK"
+          },
+          "201": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "Created"
+          },
+          "400": {
+            "content": {},
+            "description": "Bad Request"
+          },
+          "404": {
+            "content": {},
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/version/v1/tan/teletan": {
+      "post": {
+        "responses": {
+          "201": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "Created"
+          },
+          "401": {
+            "content": {},
+            "description": "Unauthorized"
+          },
+          "404": {
+            "content": {},
+            "description": "Not Found"
+          },
+          "429": {
+            "content": {},
+            "description": "Too Many Requests"
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/version/v1/tan/verify": {
+      "post": {
+        "responses": {
+          "200": {
+            "content": {},
+            "description": "OK"
+          },
+          "400": {
+            "content": {},
+            "description": "Bad Request"
+          },
+          "404": {
+            "content": {},
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/version/v1/testresult": {
+      "post": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "OK"
+          },
+          "400": {
+            "content": {},
+            "description": "Bad Request"
+          },
+          "403": {
+            "content": {},
+            "description": "Forbidden"
+          },
+          "404": {
+            "content": {},
+            "description": "Not Found"
+          }
+        }
+      }
+    }
+  },
+  "components": {}
+}

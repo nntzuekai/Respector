@@ -1,0 +1,564 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "OpenAPI definition",
+    "version": "v0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8080",
+      "description": "Generated server url"
+    }
+  ],
+  "paths": {
+    "/init": {
+      "get": {
+        "tags": [
+          "admin-controller"
+        ],
+        "operationId": "init",
+        "responses": {
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json;charset=utf-8": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/import": {
+      "post": {
+        "tags": [
+          "admin-controller"
+        ],
+        "operationId": "importJson",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DatabaseDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json;charset=utf-8": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/fetch": {
+      "get": {
+        "tags": [
+          "fetch-controller"
+        ],
+        "operationId": "fetch",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json;charset=utf-8": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/export": {
+      "get": {
+        "tags": [
+          "admin-controller"
+        ],
+        "operationId": "exportJson",
+        "responses": {
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json;charset=utf-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/DatabaseDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/delete": {
+      "get": {
+        "tags": [
+          "admin-controller"
+        ],
+        "operationId": "deleteAll",
+        "responses": {
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json;charset=utf-8": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/contributors": {
+      "get": {
+        "tags": [
+          "contributors-api"
+        ],
+        "operationId": "contributorsGet",
+        "parameters": [
+          {
+            "name": "organizations",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "start_date",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "end_date",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sortBy",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "q",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Contributor"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/config": {
+      "get": {
+        "tags": [
+          "config-controller"
+        ],
+        "operationId": "config",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/config/scoring.project": {
+      "post": {
+        "tags": [
+          "admin-controller"
+        ],
+        "operationId": "configScoringProjects",
+        "parameters": [
+          {
+            "name": "X-Organizations",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "responses": {
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json;charset=utf-8": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Contributor": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "$ref": "#/components/schemas/ContributorKey"
+          },
+          "loginId": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "organizationalCommitsCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "personalCommitsCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "personalProjectsCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "organizationalProjectsCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "organizationName": {
+            "type": "string"
+          },
+          "organizationId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "snapshotDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "ContributorKey": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "organizationId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "snapshotDate": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "DatabaseDto": {
+        "type": "object",
+        "properties": {
+          "contributors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Contributor"
+            }
+          },
+          "projects": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Project"
+            }
+          },
+          "statistics": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Statistics"
+            }
+          }
+        }
+      },
+      "Project": {
+        "type": "object",
+        "properties": {
+          "languageList": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "gitHubProjectId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "snapshotDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "name": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "image": {
+            "type": "string"
+          },
+          "organizationName": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "starsCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "commitsCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "forksCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "contributorsCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "externalContributorsCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "score": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "lastPushed": {
+            "type": "string"
+          },
+          "primaryLanguage": {
+            "type": "string"
+          },
+          "maintainers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "Statistics": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "$ref": "#/components/schemas/StatisticsKey"
+          },
+          "privateProjectCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "publicProjectCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "membersCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "teamsCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "allContributorsCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "externalContributorsCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "allStarsCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "allForksCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "allSizeCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "programLanguagesCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tagsCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "organizationName": {
+            "type": "string"
+          },
+          "snapshotDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "StatisticsKey": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "snapshotDate": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      }
+    }
+  }
+}

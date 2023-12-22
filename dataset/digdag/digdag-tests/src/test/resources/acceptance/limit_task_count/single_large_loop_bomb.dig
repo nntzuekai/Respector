@@ -1,0 +1,7 @@
+timezone: UTC
+
++bomb:
+  loop>: 100
+  _parallel: true
+  _do:
+    echo>: fail

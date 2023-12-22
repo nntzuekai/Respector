@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "httpMethod": "GET",
+    "httpStatusCode": 200,
+    "timestamp": "2018-12-21T18:57:05.387Z"
+  },
+  "links": {
+    "self": "http://localhost/127.0.0.1:2080/license?withRaw=true"
+  },
+  "rawData": {
+    "customer": "Senzing Internal - 10M",
+    "contract": "Senzing Internal",
+    "issueDate": "2018-09-18",
+    "licenseType": "DEV",
+    "licenseLevel": "STANDARD",
+    "billing": "MONTHLY",
+    "expireDate": "2019-03-20",
+    "recordLimit": 10000000
+  },
+  "data": {
+    "customer": "Senzing Internal - 10M",
+    "contract": "Senzing Internal",
+    "licenseType": "DEV",
+    "licenseLevel": "STANDARD",
+    "billing": "MONTHLY",
+    "issuanceDate": "2018-09-18T07:00:00.000Z",
+    "expirationDate": "2019-03-21T06:59:59.000Z",
+    "recordLimit": 10000000
+  }
+}

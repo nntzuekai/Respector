@@ -1,0 +1,376 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "REST Countries",
+    "description": "Get information about countries via a RESTful API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://restcountries.eu/rest"
+    }
+  ],
+  "paths": {
+    "/v2/all": {
+      "get": {
+        "operationId": "getAll",
+        "parameters": [
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "filter the output of your request to include only the specified fields",
+            "schema": {
+              "type": "string"
+            },
+            "example": "name;capital;currencies"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/v2/name/{name}": {
+      "get": {
+        "description": "Search by country name. It can be the native name or partial name",
+        "operationId": "getByName",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "description": "name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "examples": {
+              "eesti": {
+                "value": "eesti"
+              },
+              "united": {
+                "value": "united"
+              }
+            }
+          },
+          {
+            "name": "fullText",
+            "in": "query",
+            "description": "Search by country full name",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "filter the output of your request to include only the specified fields",
+            "schema": {
+              "type": "string"
+            },
+            "example": "name;capital;currencies"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          }
+        }
+      }
+    },
+    "/v2/alpha/{code}": {
+      "get": {
+        "description": "Search by ISO 3166-1 2-letter or 3-letter country code",
+        "operationId": "getByCode",
+        "parameters": [
+          {
+            "name": "code",
+            "in": "path",
+            "description": "ISO 3166-1 2-letter or 3-letter country code",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "examples": {
+              "co": {
+                "value": "co"
+              },
+              "col": {
+                "value": "col"
+              }
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "filter the output of your request to include only the specified fields",
+            "schema": {
+              "type": "string"
+            },
+            "example": "name;capital;currencies"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "col": {
+                    "value": "[\n  [\n    {\n      \"name\": \"Colombia\",\n      \"topLevelDomain\": [\n        \".co\"\n      ],\n      \"alpha2Code\": \"CO\",\n      \"alpha3Code\": \"COL\",\n      \"callingCodes\": [\n        \"57\"\n      ],\n      \"capital\": \"Bogotá\",\n      \"altSpellings\": [\n        \"CO\",\n        \"Republic of Colombia\",\n        \"República de Colombia\"\n      ],\n      \"region\": \"Americas\",\n      \"subregion\": \"South America\",\n      \"population\": 48759958,\n      \"latlng\": [\n        4,\n        -72\n      ],\n      \"demonym\": \"Colombian\",\n      \"area\": 1141748,\n      \"gini\": 55.9,\n      \"timezones\": [\n        \"UTC-05:00\"\n      ],\n      \"borders\": [\n        \"BRA\",\n        \"ECU\",\n        \"PAN\",\n        \"PER\",\n        \"VEN\"\n      ],\n      \"nativeName\": \"Colombia\",\n      \"numericCode\": \"170\",\n      \"currencies\": [\n        {\n          \"code\": \"COP\",\n          \"name\": \"Colombian peso\",\n          \"symbol\": \"$\"\n        }\n      ],\n      \"languages\": [\n        {\n          \"iso639_1\": \"es\",\n          \"iso639_2\": \"spa\",\n          \"name\": \"Spanish\",\n          \"nativeName\": \"Español\"\n        }\n      ],\n      \"translations\": {\n        \"de\": \"Kolumbien\",\n        \"es\": \"Colombia\",\n        \"fr\": \"Colombie\",\n        \"ja\": \"コロンビア\",\n        \"it\": \"Colombia\",\n        \"br\": \"Colômbia\",\n        \"pt\": \"Colômbia\"\n      },\n      \"flag\": \"https://restcountries.eu/data/col.svg\",\n      \"regionalBlocs\": [\n        {\n          \"acronym\": \"PA\",\n          \"name\": \"Pacific Alliance\",\n          \"otherAcronyms\": [],\n          \"otherNames\": [\n            \"Alianza del Pacífico\"\n          ]\n        },\n        {\n          \"acronym\": \"USAN\",\n          \"name\": \"Union of South American Nations\",\n          \"otherAcronyms\": [\n            \"UNASUR\",\n            \"UNASUL\",\n            \"UZAN\"\n          ],\n          \"otherNames\": [\n            \"Unión de Naciones Suramericanas\",\n            \"União de Nações Sul-Americanas\",\n            \"Unie van Zuid-Amerikaanse Naties\",\n            \"South American Union\"\n          ]\n        }\n      ]\n    }\n  ]\n]"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v2/alpha": {
+      "get": {
+        "description": "Search by list of ISO 3166-1 2-letter or 3-letter country codes",
+        "operationId": "getByListOfCodes",
+        "parameters": [
+          {
+            "name": "codes",
+            "in": "query",
+            "description": "list of ISO 3166-1 2-letter or 3-letter country codes",
+            "schema": {
+              "type": "string"
+            },
+            "example": "col;no;ee"
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "filter the output of your request to include only the specified fields",
+            "schema": {
+              "type": "string"
+            },
+            "example": "name;capital;currencies"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          }
+        }
+      }
+    },
+    "/v2/currency/{currency}": {
+      "get": {
+        "description": "Search by ISO 4217 currency code",
+        "operationId": "getByCurrency",
+        "parameters": [
+          {
+            "name": "currency",
+            "in": "path",
+            "description": "ISO 4217 currency code",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "cop"
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "filter the output of your request to include only the specified fields",
+            "schema": {
+              "type": "string"
+            },
+            "example": "name;capital;currencies"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          }
+        }
+      }
+    },
+    "/v2/lang/{et}": {
+      "get": {
+        "description": "Search by ISO 639-1 language code",
+        "operationId": "searchByLanguage",
+        "parameters": [
+          {
+            "name": "et",
+            "in": "path",
+            "description": "ISO 639-1 language code",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "es"
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "filter the output of your request to include only the specified fields",
+            "schema": {
+              "type": "string"
+            },
+            "example": "name;capital;currencies"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          }
+        }
+      }
+    },
+    "/v2/capital/{capital}": {
+      "get": {
+        "description": "Search by capital city",
+        "operationId": "searchByCapitalCity",
+        "parameters": [
+          {
+            "name": "capital",
+            "in": "path",
+            "description": "capital city",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "tallinn"
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "filter the output of your request to include only the specified fields",
+            "schema": {
+              "type": "string"
+            },
+            "example": "name;capital;currencies"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          }
+        }
+      }
+    },
+    "/v2/callingcode/{callingcode}": {
+      "get": {
+        "description": "Search by calling code",
+        "operationId": "searchByCallingCode",
+        "parameters": [
+          {
+            "name": "callingcode",
+            "in": "path",
+            "description": "calling code",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": 372
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "filter the output of your request to include only the specified fields",
+            "schema": {
+              "type": "string"
+            },
+            "example": "name;capital;currencies"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          }
+        }
+      }
+    },
+    "/v2/region/{region}": {
+      "get": {
+        "description": "Search by region: Africa, Americas, Asia, Europe, Oceania",
+        "operationId": "searchByRegion",
+        "parameters": [
+          {
+            "name": "region",
+            "in": "path",
+            "description": "region",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "Africa",
+                "Americas",
+                "Asia",
+                "Europe",
+                "Oceania"
+              ]
+            },
+            "example": "europe"
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "filter the output of your request to include only the specified fields",
+            "schema": {
+              "type": "string"
+            },
+            "example": "name;capital;currencies"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          }
+        }
+      }
+    },
+    "/v2/regionalbloc/{regionalbloc}": {
+      "get": {
+        "description": "Search by regional bloc:\n* EU (European Union)\n* EFTA (European Free Trade Association)\n* CARICOM (Caribbean Community)\n* PA (Pacific Alliance)\n* AU (African Union)\n* USAN (Union of South American Nations)\n* EEU (Eurasian Economic Union)\n* AL (Arab League)\n* ASEAN (Association of Southeast Asian Nations)\n* CAIS (Central American Integration System)\n* CEFTA (Central European Free Trade Agreement)\n* NAFTA (North American Free Trade Agreement)\n* SAARC (South Asian Association for Regional Cooperation)",
+        "operationId": "searchByRegionalBloc",
+        "parameters": [
+          {
+            "name": "regionalbloc",
+            "in": "path",
+            "description": "calling code",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "EU",
+                "EFTA",
+                "CARICOM",
+                "PA",
+                "AU",
+                "USAN",
+                "EEU",
+                "AL",
+                "ASEAN",
+                "CAIS",
+                "CEFTA",
+                "NAFTA",
+                "SAARC"
+              ]
+            },
+            "example": "eu"
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "filter the output of your request to include only the specified fields",
+            "schema": {
+              "type": "string"
+            },
+            "example": "name;capital;currencies"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,245 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "ohsome API",
+    "description": "This REST-based API aims to leverage the tools of the <a href=\"https://github.com/GIScience/oshdb\" target=\"_blank\">OSHDB</a> through allowing to access some of its functionalities via HTTP requests.",
+    "contact": {
+      "name": "Heidelberg Institute for Geoinformation Technology",
+      "url": "https://www.heigit.org",
+      "email": "info@heigit.org"
+    },
+    "license": {
+      "name": "License of the used data",
+      "url": "https://ohsome.org/copyrights"
+    },
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "//api.ohsome.org/v1"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Metadata",
+      "description": "Request metadata of the underlying OSHDB"
+    }
+  ],
+  "paths": {
+    "/metadata": {
+      "get": {
+        "tags": [
+          "Metadata"
+        ],
+        "summary": "Metadata of the underlying OSHDB data-extract",
+        "operationId": "Metadata",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MetadataResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {}
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {}
+          },
+          "404": {
+            "description": "Not found",
+            "content": {}
+          },
+          "405": {
+            "description": "Method not allowed",
+            "content": {}
+          },
+          "413": {
+            "description": "Payload too large",
+            "content": {}
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {}
+          },
+          "501": {
+            "description": "Not implemented",
+            "content": {}
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {}
+          }
+        },
+        "deprecated": false
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Attribution": {
+        "title": "Attribution",
+        "required": [
+          "text",
+          "url"
+        ],
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string",
+            "description": "Copyright info about the used data"
+          },
+          "url": {
+            "type": "string",
+            "description": "URL to the copyright and license info"
+          }
+        }
+      },
+      "ExtractRegion": {
+        "title": "ExtractRegion",
+        "required": [
+          "spatialExtent"
+        ],
+        "type": "object",
+        "properties": {
+          "spatialExtent": {
+            "$ref": "#/components/schemas/JsonNode"
+          },
+          "temporalExtent": {
+            "$ref": "#/components/schemas/TemporalExtent"
+          },
+          "replicationSequenceNumber": {
+            "type": "integer",
+            "description": "Replication sequence number",
+            "format": "int32"
+          }
+        }
+      },
+      "JsonNode": {
+        "title": "JsonNode",
+        "type": "object",
+        "properties": {
+          "array": {
+            "type": "boolean"
+          },
+          "bigDecimal": {
+            "type": "boolean"
+          },
+          "bigInteger": {
+            "type": "boolean"
+          },
+          "binary": {
+            "type": "boolean"
+          },
+          "boolean": {
+            "type": "boolean"
+          },
+          "containerNode": {
+            "type": "boolean"
+          },
+          "double": {
+            "type": "boolean"
+          },
+          "float": {
+            "type": "boolean"
+          },
+          "floatingPointNumber": {
+            "type": "boolean"
+          },
+          "int": {
+            "type": "boolean"
+          },
+          "integralNumber": {
+            "type": "boolean"
+          },
+          "long": {
+            "type": "boolean"
+          },
+          "missingNode": {
+            "type": "boolean"
+          },
+          "nodeType": {
+            "type": "string",
+            "enum": [
+              "ARRAY",
+              "BINARY",
+              "BOOLEAN",
+              "MISSING",
+              "NULL",
+              "NUMBER",
+              "OBJECT",
+              "POJO",
+              "STRING"
+            ]
+          },
+          "null": {
+            "type": "boolean"
+          },
+          "number": {
+            "type": "boolean"
+          },
+          "object": {
+            "type": "boolean"
+          },
+          "pojo": {
+            "type": "boolean"
+          },
+          "short": {
+            "type": "boolean"
+          },
+          "textual": {
+            "type": "boolean"
+          },
+          "valueNode": {
+            "type": "boolean"
+          }
+        }
+      },
+      "MetadataResponse": {
+        "title": "MetadataResponse",
+        "required": [
+          "apiVersion",
+          "attribution",
+          "extractRegion"
+        ],
+        "type": "object",
+        "properties": {
+          "apiVersion": {
+            "type": "string",
+            "description": "Version of this api"
+          },
+          "attribution": {
+            "$ref": "#/components/schemas/Attribution"
+          },
+          "extractRegion": {
+            "$ref": "#/components/schemas/ExtractRegion"
+          }
+        }
+      },
+      "TemporalExtent": {
+        "title": "TemporalExtent",
+        "required": [
+          "fromTimestamp",
+          "toTimestamp"
+        ],
+        "type": "object",
+        "properties": {
+          "fromTimestamp": {
+            "type": "string",
+            "description": "Timestamp in the format YYYY-MM-DDThh:mm:ssZ"
+          },
+          "toTimestamp": {
+            "type": "string",
+            "description": "Timestamp in the format YYYY-MM-DDThh:mm:ssZ"
+          }
+        }
+      }
+    }
+  }
+}

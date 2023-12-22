@@ -1,0 +1,634 @@
+{
+  "openapi": "3.0.0",
+  "servers": [
+    {
+      "url": "http://localhost:8080"
+    }
+  ],
+  "info": {
+    "title": "REST API",
+    "version": "",
+    "description": "REST API"
+  },
+  "paths": {
+    "/": {
+      "get": {
+        "description": "",
+        "operationId": "em11",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1/get"
+        }
+      }
+    },
+    "/quartz-manager/auth/whoami": {
+      "get": {
+        "description": "",
+        "operationId": "em10",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "java.lang.Object"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "NOT_FOUND"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1quartz-manager~1auth~1whoami/get"
+        }
+      }
+    },
+    "/quartz-manager/jobs": {
+      "get": {
+        "description": "",
+        "operationId": "em8",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/quartz-manager/scheduler": {
+      "get": {
+        "description": "",
+        "operationId": "em0",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "it.fabioformosa.quartzmanager.api.dto.SchedulerDTO",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "instanceId": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "object",
+                      "title": "it.fabioformosa.quartzmanager.api.enums.SchedulerStatus",
+                      "properties": {}
+                    },
+                    "triggerKeys": {
+                      "type": "array",
+                      "items": {
+                        "type": "object"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1quartz-manager~1scheduler/get"
+        }
+      }
+    },
+    "/quartz-manager/scheduler/pause": {
+      "get": {
+        "description": "",
+        "operationId": "em1",
+        "parameters": [],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1quartz-manager~1scheduler~1pause/get"
+        }
+      }
+    },
+    "/quartz-manager/scheduler/resume": {
+      "get": {
+        "description": "",
+        "operationId": "em2",
+        "parameters": [],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1quartz-manager~1scheduler~1resume/get"
+        }
+      }
+    },
+    "/quartz-manager/scheduler/run": {
+      "get": {
+        "description": "",
+        "operationId": "em3",
+        "parameters": [],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1quartz-manager~1scheduler~1run/get"
+        }
+      }
+    },
+    "/quartz-manager/scheduler/stop": {
+      "get": {
+        "description": "",
+        "operationId": "em4",
+        "parameters": [],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1quartz-manager~1scheduler~1stop/get"
+        }
+      }
+    },
+    "/quartz-manager/simple-triggers/{name}": {
+      "get": {
+        "description": "",
+        "operationId": "em5",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "it.fabioformosa.quartzmanager.api.dto.SimpleTriggerDTO",
+                  "properties": {
+                    "repeatCount": {
+                      "type": "integer"
+                    },
+                    "repeatInterval": {
+                      "type": "integer"
+                    },
+                    "timesTriggered": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1quartz-manager~1simple-triggers~1{name}/get"
+        }
+      },
+      "post": {
+        "description": "",
+        "operationId": "em6",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "CREATED",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "it.fabioformosa.quartzmanager.api.dto.SimpleTriggerDTO",
+                  "properties": {
+                    "repeatCount": {
+                      "type": "integer"
+                    },
+                    "repeatInterval": {
+                      "type": "integer"
+                    },
+                    "timesTriggered": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "endDate": {
+                    "type": "string"
+                  },
+                  "jobClass": {
+                    "type": "string"
+                  },
+                  "misfireInstruction": {
+                    "type": "string"
+                  },
+                  "repeatCount": {
+                    "type": "integer"
+                  },
+                  "repeatInterval": {
+                    "type": "integer"
+                  },
+                  "startDate": {
+                    "type": "string"
+                  }
+                },
+                "maxProperties": 6
+              }
+            }
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1quartz-manager~1simple-triggers~1{name}/post"
+        }
+      },
+      "put": {
+        "description": "",
+        "operationId": "em7",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "it.fabioformosa.quartzmanager.api.dto.SimpleTriggerDTO",
+                  "properties": {
+                    "repeatCount": {
+                      "type": "integer"
+                    },
+                    "repeatInterval": {
+                      "type": "integer"
+                    },
+                    "timesTriggered": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "endDate": {
+                    "type": "string"
+                  },
+                  "jobClass": {
+                    "type": "string"
+                  },
+                  "misfireInstruction": {
+                    "type": "string"
+                  },
+                  "repeatCount": {
+                    "type": "integer"
+                  },
+                  "repeatInterval": {
+                    "type": "integer"
+                  },
+                  "startDate": {
+                    "type": "string"
+                  }
+                },
+                "maxProperties": 6
+              }
+            }
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1quartz-manager~1simple-triggers~1{name}/put"
+        }
+      }
+    },
+    "/quartz-manager/triggers": {
+      "get": {
+        "description": "",
+        "operationId": "em9",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/session/invalidate": {
+      "get": {
+        "description": "",
+        "operationId": "em12",
+        "parameters": [],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/session/refresh": {
+      "get": {
+        "description": "",
+        "operationId": "em13",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1session~1refresh/get"
+        }
+      }
+    }
+  },
+  "components": {
+    "x-endpoint-constraints": {
+      "/": {
+        "get": {
+          "global-reads": {
+            "g4": {
+              "name": "log",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g4"
+              }
+            }
+          }
+        }
+      },
+      "/quartz-manager/auth/whoami": {
+        "get": {
+          "global-reads": {
+            "g2": {
+              "name": "NOT_FOUND",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g2"
+              }
+            },
+            "g3": {
+              "name": "OK",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g3"
+              }
+            }
+          }
+        }
+      },
+      "/quartz-manager/scheduler": {
+        "get": {
+          "global-reads": {
+            "g0": {
+              "name": "log",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g0"
+              }
+            }
+          }
+        }
+      },
+      "/quartz-manager/scheduler/pause": {
+        "get": {
+          "global-reads": {
+            "g0": {
+              "name": "log",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g0"
+              }
+            }
+          }
+        }
+      },
+      "/quartz-manager/scheduler/resume": {
+        "get": {
+          "global-reads": {
+            "g0": {
+              "name": "log",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g0"
+              }
+            }
+          }
+        }
+      },
+      "/quartz-manager/scheduler/run": {
+        "get": {
+          "global-reads": {
+            "g0": {
+              "name": "log",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g0"
+              }
+            }
+          }
+        }
+      },
+      "/quartz-manager/scheduler/stop": {
+        "get": {
+          "global-reads": {
+            "g0": {
+              "name": "log",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g0"
+              }
+            }
+          }
+        }
+      },
+      "/quartz-manager/simple-triggers/{name}": {
+        "get": {
+          "valid-path-conditions": [
+            "( this.<it.fabioformosa.quartzmanager.api.services.AbstractSchedulerService: org.quartz.Scheduler scheduler>.<org.quartz.Scheduler: org.quartz.Trigger getTrigger(org.quartz.TriggerKey)>(new org.quartz.TriggerKey({name})) != null )"
+          ]
+        },
+        "post": {
+          "global-reads": {
+            "g1": {
+              "name": "log",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g1"
+              }
+            }
+          }
+        },
+        "put": {
+          "global-reads": {
+            "g1": {
+              "name": "log",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g1"
+              }
+            }
+          }
+        }
+      },
+      "/session/refresh": {
+        "get": {
+          "global-reads": {
+            "g3": {
+              "name": "OK",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g3"
+              }
+            }
+          }
+        }
+      }
+    },
+    "x-endpoint-interdependence": {},
+    "x-global-variables-info": {
+      "g0": {
+        "name": "log",
+        "id": "g0",
+        "defining-class": "it.fabioformosa.quartzmanager.api.controllers.SchedulerController",
+        "locations-of-static-assignments": [
+          "line 28, it.fabioformosa.quartzmanager.api.controllers.SchedulerController"
+        ]
+      },
+      "g1": {
+        "name": "log",
+        "id": "g1",
+        "defining-class": "it.fabioformosa.quartzmanager.api.controllers.SimpleTriggerController",
+        "locations-of-static-assignments": [
+          "line 24, it.fabioformosa.quartzmanager.api.controllers.SimpleTriggerController"
+        ]
+      },
+      "g2": {
+        "name": "NOT_FOUND",
+        "id": "g2",
+        "defining-class": "org.springframework.http.HttpStatus"
+      },
+      "g3": {
+        "name": "OK",
+        "id": "g3",
+        "defining-class": "org.springframework.http.HttpStatus"
+      },
+      "g4": {
+        "name": "log",
+        "id": "g4",
+        "defining-class": "it.fabioformosa.quartzmanager.controllers.HealthCheckController",
+        "locations-of-static-assignments": [
+          "line 13, it.fabioformosa.quartzmanager.controllers.HealthCheckController"
+        ]
+      }
+    }
+  }
+}

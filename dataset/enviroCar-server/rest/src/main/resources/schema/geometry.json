@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "oneOf": [
+
+    {
+      "$ref": "point.json"
+    },
+    {
+      "$ref": "multipoint.json"
+    },
+    {
+      "$ref": "linestring.json"
+    },
+    {
+      "$ref": "multilinestring.json"
+    },
+    {
+      "$ref": "polygon.json"
+    },
+    {
+      "$ref": "multipolygon.json"
+    }
+  ]
+}

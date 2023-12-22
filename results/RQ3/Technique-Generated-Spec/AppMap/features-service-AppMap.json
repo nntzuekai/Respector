@@ -1,0 +1,186 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "My project",
+    "version": "v1"
+  },
+  "paths": {
+    "/products": {
+      "get": {
+        "responses": {
+          "200": {
+            "content": {},
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/products/Product_1": {
+      "delete": {
+        "responses": {
+          "204": {
+            "content": {},
+            "description": "No Content"
+          }
+        }
+      },
+      "get": {
+        "responses": {
+          "200": {
+            "content": {},
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/products/Product_1/configurations": {
+      "get": {
+        "responses": {
+          "200": {
+            "content": {},
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/products/Product_1/configurations/Product_1_Configuration_1": {
+      "delete": {
+        "responses": {
+          "204": {
+            "content": {},
+            "description": "No Content"
+          }
+        }
+      }
+    },
+    "/products/Product_1/configurations/Product_1_Configuration_1/features/Feature_1": {
+      "delete": {
+        "responses": {
+          "204": {
+            "content": {},
+            "description": "No Content"
+          }
+        }
+      }
+    },
+    "/products/Product_1/configurations/Product_1_Configuration_2": {
+      "get": {
+        "responses": {
+          "200": {
+            "content": {},
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/products/Product_1/configurations/Product_1_Configuration_2/features/Feature_2": {
+      "post": {
+        "responses": {
+          "201": {
+            "content": {},
+            "description": "Created"
+          }
+        }
+      }
+    },
+    "/products/Product_1/configurations/Product_1_Configuration_2/features/Feature_3": {
+      "post": {
+        "responses": {
+          "201": {
+            "content": {},
+            "description": "Created"
+          }
+        }
+      }
+    },
+    "/products/Product_1/configurations/newConfig": {
+      "post": {
+        "responses": {
+          "201": {
+            "content": {},
+            "description": "Created"
+          }
+        }
+      }
+    },
+    "/products/Product_1/constraints/1": {
+      "delete": {
+        "responses": {
+          "204": {
+            "content": {},
+            "description": "No Content"
+          }
+        }
+      }
+    },
+    "/products/Product_1/constraints/excludes": {
+      "post": {
+        "responses": {
+          "201": {
+            "content": {},
+            "description": "Created"
+          }
+        }
+      }
+    },
+    "/products/Product_1/constraints/requires": {
+      "post": {
+        "responses": {
+          "201": {
+            "content": {},
+            "description": "Created"
+          }
+        }
+      }
+    },
+    "/products/Product_1/features": {
+      "get": {
+        "responses": {
+          "200": {
+            "content": {},
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/products/Product_1/features/Feature_1": {
+      "delete": {
+        "responses": {
+          "204": {
+            "content": {},
+            "description": "No Content"
+          }
+        }
+      },
+      "put": {
+        "responses": {
+          "200": {
+            "content": {},
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/products/Product_1/features/newFeature": {
+      "post": {
+        "responses": {
+          "201": {
+            "content": {},
+            "description": "Created"
+          }
+        }
+      }
+    },
+    "/products/Product_3": {
+      "post": {
+        "responses": {
+          "201": {
+            "content": {},
+            "description": "Created"
+          }
+        }
+      }
+    }
+  },
+  "components": {}
+}

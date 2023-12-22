@@ -1,0 +1,8 @@
+timezone: UTC
+
++run:
+  pg>: select_table.sql
+  host: ${pg_host}
+  database: ${pg_database}
+  user: ${pg_user}
+  insert_into: dest_tbl

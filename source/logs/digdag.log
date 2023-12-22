@@ -1,0 +1,89 @@
++ java -Djava.library.path=/home/rkh/z3//build/ -cp ./target/Respector-0.1-SNAPSHOT.jar:/home/rkh/z3//build/com.microsoft.z3.jar org.rest.Respector.AppMain.Main ../dataset//digdag/digdag-server/build/classes/java/main/ ./generated_1//digdag.json
+[main] INFO org.rest.Respector.EndPointRecog.PreprocessFramework - The REST API uses JAX
+[main] INFO org.rest.Respector.AppMain.MainTransform - total # of endpoint methods detected: 41
+[main] INFO org.rest.Respector.AppMain.MainTransform - 1/41 analyzing endpoint method <io.digdag.server.rs.SessionResource: io.digdag.client.api.RestSessionCollection getSessions(java.lang.Long,java.lang.Integer)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+[main] INFO org.rest.Respector.AppMain.MainTransform - 2/41 analyzing endpoint method <io.digdag.server.rs.SessionResource: io.digdag.client.api.RestSession getSession(long)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 3/41 analyzing endpoint method <io.digdag.server.rs.SessionResource: io.digdag.client.api.RestSessionAttemptCollection getSessionAttempts(long,java.lang.Long,java.lang.Integer)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 3
+[main] INFO org.rest.Respector.AppMain.MainTransform - 4/41 analyzing endpoint method <io.digdag.server.rs.AdminResource: io.digdag.client.config.Config getUserInfo(long)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 5/41 analyzing endpoint method <io.digdag.server.rs.ProjectResource: io.digdag.client.api.RestProject getProject(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 6/41 analyzing endpoint method <io.digdag.server.rs.ProjectResource: io.digdag.client.api.RestProjectCollection getProjects(java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 4
+[main] INFO org.rest.Respector.AppMain.MainTransform - 7/41 analyzing endpoint method <io.digdag.server.rs.ProjectResource: io.digdag.client.api.RestProject getProject(int)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 8/41 analyzing endpoint method <io.digdag.server.rs.ProjectResource: io.digdag.client.api.RestRevisionCollection getRevisions(int,java.lang.Integer,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 3
+[main] INFO org.rest.Respector.AppMain.MainTransform - 9/41 analyzing endpoint method <io.digdag.server.rs.ProjectResource: io.digdag.client.api.RestWorkflowDefinition getWorkflow(int,java.lang.String,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 3
+[main] INFO org.rest.Respector.AppMain.MainTransform - 10/41 analyzing endpoint method <io.digdag.server.rs.ProjectResource: io.digdag.client.api.RestWorkflowDefinition getWorkflowByName(int,java.lang.String,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 3
+[main] INFO org.rest.Respector.AppMain.MainTransform - 11/41 analyzing endpoint method <io.digdag.server.rs.ProjectResource: io.digdag.client.api.RestWorkflowDefinitionCollection getWorkflows(int,java.lang.String,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 3
+[main] INFO org.rest.Respector.AppMain.MainTransform - 12/41 analyzing endpoint method <io.digdag.server.rs.ProjectResource: io.digdag.client.api.RestScheduleCollection getSchedules(int,java.lang.String,java.lang.Integer)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 3
+[main] INFO org.rest.Respector.AppMain.MainTransform - 13/41 analyzing endpoint method <io.digdag.server.rs.ProjectResource: io.digdag.client.api.RestSessionCollection getSessions(int,java.lang.String,java.lang.Long,java.lang.Integer)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 4
+[main] INFO org.rest.Respector.AppMain.MainTransform - 14/41 analyzing endpoint method <io.digdag.server.rs.ProjectResource: javax.ws.rs.core.Response getArchive(int,java.lang.String,java.lang.Boolean)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 3
+[main] INFO org.rest.Respector.AppMain.MainTransform - 15/41 analyzing endpoint method <io.digdag.server.rs.ProjectResource: io.digdag.client.api.RestProject deleteProject(int)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 16/41 analyzing endpoint method <io.digdag.server.rs.ProjectResource: io.digdag.client.api.RestProject putProject(java.lang.String,java.lang.String,java.io.InputStream,long,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 4
+[main] INFO org.rest.Respector.AppMain.MainTransform - 17/41 analyzing endpoint method <io.digdag.server.rs.ProjectResource: io.digdag.client.api.RestSecret putProjectSecret(int,java.lang.String,io.digdag.client.api.RestSetSecretRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+[main] INFO org.rest.Respector.AppMain.MainTransform - 18/41 analyzing endpoint method <io.digdag.server.rs.ProjectResource: io.digdag.client.api.RestSecret deleteProjectSecret(int,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+[main] INFO org.rest.Respector.AppMain.MainTransform - 19/41 analyzing endpoint method <io.digdag.server.rs.ProjectResource: io.digdag.client.api.RestSecretList getProjectSecrets(int)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 20/41 analyzing endpoint method <io.digdag.server.rs.VersionResource: java.util.Map getVersion()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 21/41 analyzing endpoint method <io.digdag.server.rs.VersionResource: io.digdag.client.api.RestVersionCheckResult checkClientVersion(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 22/41 analyzing endpoint method <io.digdag.server.rs.ScheduleResource: io.digdag.client.api.RestScheduleCollection getSchedules(java.lang.Integer)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 23/41 analyzing endpoint method <io.digdag.server.rs.ScheduleResource: io.digdag.client.api.RestSchedule getSchedules(int)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 24/41 analyzing endpoint method <io.digdag.server.rs.ScheduleResource: io.digdag.client.api.RestScheduleSummary skipSchedule(int,io.digdag.client.api.RestScheduleSkipRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 25/41 analyzing endpoint method <io.digdag.server.rs.ScheduleResource: io.digdag.client.api.RestScheduleAttemptCollection backfillSchedule(int,io.digdag.client.api.RestScheduleBackfillRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 26/41 analyzing endpoint method <io.digdag.server.rs.ScheduleResource: io.digdag.client.api.RestScheduleSummary disableSchedule(int)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 27/41 analyzing endpoint method <io.digdag.server.rs.ScheduleResource: io.digdag.client.api.RestScheduleSummary enableSchedule(int,io.digdag.client.api.RestScheduleEnableRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 28/41 analyzing endpoint method <io.digdag.server.rs.LogResource: io.digdag.client.api.RestLogFileHandleCollection getFileHandles(long,java.lang.String,java.lang.Boolean)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 3
+[main] INFO org.rest.Respector.AppMain.MainTransform - 29/41 analyzing endpoint method <io.digdag.server.rs.LogResource: byte[] getFile(long,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+[main] INFO org.rest.Respector.AppMain.MainTransform - 30/41 analyzing endpoint method <io.digdag.server.rs.AttemptResource: io.digdag.client.api.RestSessionAttemptCollection getAttempts(java.lang.String,java.lang.String,boolean,java.lang.Long,java.lang.Integer)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 5
+[main] INFO org.rest.Respector.AppMain.MainTransform - 31/41 analyzing endpoint method <io.digdag.server.rs.AttemptResource: io.digdag.client.api.RestSessionAttempt getAttempt(long)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 32/41 analyzing endpoint method <io.digdag.server.rs.AttemptResource: io.digdag.client.api.RestSessionAttemptCollection getAttemptRetries(long)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 33/41 analyzing endpoint method <io.digdag.server.rs.AttemptResource: io.digdag.client.api.RestTaskCollection getTasks(long)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 34/41 analyzing endpoint method <io.digdag.server.rs.AttemptResource: javax.ws.rs.core.Response startAttempt(io.digdag.client.api.RestSessionAttemptRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 35/41 analyzing endpoint method <io.digdag.server.rs.AttemptResource: javax.ws.rs.core.Response killAttempt(long)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 36/41 analyzing endpoint method <io.digdag.server.rs.UiResource: javax.ws.rs.core.Response getAssets(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 37/41 analyzing endpoint method <io.digdag.server.rs.UiResource: javax.ws.rs.core.Response getApplication(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 38/41 analyzing endpoint method <io.digdag.server.rs.WorkflowResource: io.digdag.client.api.RestWorkflowDefinition getWorkflowDefinition(java.lang.String,java.lang.String,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 3
+[main] INFO org.rest.Respector.AppMain.MainTransform - 39/41 analyzing endpoint method <io.digdag.server.rs.WorkflowResource: io.digdag.client.api.RestWorkflowDefinitionCollection getWorkflowDefinitions(java.lang.Long,java.lang.Integer,java.lang.String,java.lang.String,java.lang.Boolean)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 5
+[main] INFO org.rest.Respector.AppMain.MainTransform - 40/41 analyzing endpoint method <io.digdag.server.rs.WorkflowResource: io.digdag.client.api.RestWorkflowDefinition getWorkflowDefinition(long)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 41/41 analyzing endpoint method <io.digdag.server.rs.WorkflowResource: io.digdag.client.api.RestWorkflowSessionTime getWorkflowDefinition(long,io.digdag.client.api.LocalTimeOrInstant,io.digdag.client.api.SessionTimeTruncate)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 3
+
+real	0m4.485s
+user	0m17.339s
+sys	0m0.272s

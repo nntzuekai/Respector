@@ -1,0 +1,23 @@
+INSERT INTO code_paste (paste_id, paste_expiration, paste_title, paste_syntax, paste_visibility)
+VALUES ('1f45a7b3e1794d03994f9ac550ec5e4d', '2020-10-24 15:25:53', 'Java Windows PWA', 'JAVA', 'PUBLIC');
+
+INSERT INTO code_paste (paste_id, paste_expiration, paste_title, paste_syntax, paste_visibility)
+VALUES ('2f6aff3d105c41aa8b05646d1ba94cba', '2020-10-24 17:02:47', 'C# Program', 'CSHARP', 'PUBLIC');
+
+INSERT INTO code_paste (paste_id, paste_expiration, paste_title, paste_syntax, paste_visibility)
+VALUES ('cf61be5552054ad5b70207f786954a22', '2020-10-25 18:02:47', 'Python Calculator App', 'Python', 'PUBLIC');
+
+INSERT INTO code_paste (paste_id, paste_expiration, paste_title, paste_syntax, paste_visibility)
+VALUES ('b4392010d7b140299e778617c2473dfb', '2020-10-25 18:02:47', 'My First Python App', 'Python', 'PUBLIC');
+
+INSERT INTO code_paste (paste_id, paste_expiration, paste_title, paste_syntax, paste_visibility)
+VALUES ('009f52cb6f574f42b6a547ec0f68084f', '2020-10-26 20:02:47', 'Spring Program', 'JAVA', 'PRIVATE');
+
+INSERT INTO code_paste (paste_id, paste_expiration, paste_title, paste_syntax, paste_visibility)
+VALUES ('4e253dad4df44acaace26e93f32735c8', '2020-10-26 20:02:47', 'Golang App', 'GO', 'PRIVATE');
+
+INSERT INTO user_accounts (account_id, account_username, account_email, account_password)
+VALUES (100, 'Mathew', 'mathew@gmail.com', 'mathewPassword');
+
+INSERT INTO user_accounts (account_id, account_username, account_email, account_password)
+VALUES (101, 'Elijah', 'elijah@gmail.com', 'passForElijah');

@@ -1,0 +1,51 @@
+{
+  "id": "api-test",
+  "name": "api-test",
+  "gravitee": "2.0.0",
+  "proxy": {
+    "context_path": "/test",
+    "endpoints": [
+      {
+        "name": "default",
+        "target": "http://localhost:8080/team",
+        "http": {
+          "connectTimeout": 3000,
+          "readTimeout": 60000
+        }
+      }
+    ],
+    "strip_context_path": false,
+    "dumpRequest": true
+  },
+  "flows": [
+    {
+      "name": "flow-1",
+      "methods": [
+        "GET",
+        "POST",
+        "PUT",
+        "DELETE",
+        "HEAD",
+        "PATCH",
+        "OPTIONS",
+        "TRACE",
+        "CONNECT"
+      ],
+      "enabled": true,
+      "path-operator": {
+        "path": "/",
+        "operator": "STARTS_WITH"
+      },
+      "pre": [],
+      "post": [
+        {
+          "name": "template-variable",
+          "description": "",
+          "enabled": true,
+          "policy": "template-variable",
+          "configuration": { }
+        }
+      ]
+    }
+  ]
+}

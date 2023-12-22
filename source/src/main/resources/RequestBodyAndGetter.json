@@ -1,0 +1,10 @@
+{
+  "org.springframework.web.context.request.WebRequest": [
+    "<org.springframework.web.context.request.WebRequest: java.lang.String getParameter(java.lang.String)>"
+  ],
+
+  "javax.servlet.http.HttpServletRequest": [
+    "<javax.servlet.http.HttpServletRequest: java.lang.String getParameter(java.lang.String)>",
+    "<javax.servlet.http.HttpServletRequest: java.lang.String[] getParameterValues(java.lang.String)>"
+  ]
+}

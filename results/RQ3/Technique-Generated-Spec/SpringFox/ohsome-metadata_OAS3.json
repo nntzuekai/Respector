@@ -1,0 +1,175 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "ohsome API",
+    "description": "This REST-based API aims to leverage the tools of the <a href=\"https://github.com/GIScience/oshdb\" target=\"_blank\">OSHDB</a> through allowing to access some of its functionalities via HTTP requests. \nThe official documentation can be found <a href=\"https://docs.ohsome.org/ohsome-api/stable\" target=\"_blank\">here</a>. ",
+    "contact": {
+      "name": "Heidelberg Institute for Geoinformation Technology",
+      "url": "https://www.heigit.org",
+      "email": "info@heigit.org"
+    },
+    "license": {
+      "name": "License of the used data",
+      "url": "https://ohsome.org/copyrights"
+    },
+    "version": "1.9.0-SNAPSHOT"
+  },
+  "servers": [
+    {
+      "url": "//localhost:8080/"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Metadata",
+      "description": "Request metadata of the underlying OSHDB"
+    }
+  ],
+  "paths": {
+    "/metadata": {
+      "get": {
+        "tags": [
+          "Metadata"
+        ],
+        "summary": "Metadata of the underlying OSHDB data-extract",
+        "operationId": "Metadata",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MetadataResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {}
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {}
+          },
+          "404": {
+            "description": "Not found",
+            "content": {}
+          },
+          "405": {
+            "description": "Method not allowed",
+            "content": {}
+          },
+          "413": {
+            "description": "Payload too large",
+            "content": {}
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {}
+          },
+          "501": {
+            "description": "Not implemented",
+            "content": {}
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {}
+          }
+        },
+        "deprecated": false
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Attribution": {
+        "title": "Attribution",
+        "required": [
+          "text",
+          "url"
+        ],
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string",
+            "description": "Copyright info about the used data"
+          },
+          "url": {
+            "type": "string",
+            "description": "URL to the copyright and license info"
+          }
+        }
+      },
+      "ExtractRegion": {
+        "title": "ExtractRegion",
+        "required": [
+          "spatialExtent"
+        ],
+        "type": "object",
+        "properties": {
+          "spatialExtent": {
+            "$ref": "#/components/schemas/JsonNode"
+          },
+          "temporalExtent": {
+            "$ref": "#/components/schemas/TemporalExtent"
+          },
+          "replicationSequenceNumber": {
+            "type": "integer",
+            "description": "Replication sequence number",
+            "format": "int32"
+          }
+        }
+      },
+      "JsonNode": {
+        "title": "JsonNode",
+        "type": "object"
+      },
+      "MetadataResponse": {
+        "title": "MetadataResponse",
+        "required": [
+          "apiVersion",
+          "attribution",
+          "extractRegion",
+          "timeout"
+        ],
+        "type": "object",
+        "properties": {
+          "attribution": {
+            "$ref": "#/components/schemas/Attribution"
+          },
+          "apiVersion": {
+            "type": "string",
+            "description": "Specific version of this API"
+          },
+          "timeout": {
+            "type": "number",
+            "description": "Maximal response timeout in seconds",
+            "format": "double"
+          },
+          "extractRegion": {
+            "$ref": "#/components/schemas/ExtractRegion"
+          }
+        }
+      },
+      "TemporalExtent": {
+        "title": "TemporalExtent",
+        "required": [
+          "fromTimestamp",
+          "toTimestamp"
+        ],
+        "type": "object",
+        "properties": {
+          "fromTimestamp": {
+            "type": "string",
+            "description": "Timestamp in the format YYYY-MM-DDThh:mm:ssZ"
+          },
+          "toTimestamp": {
+            "type": "string",
+            "description": "Timestamp in the format YYYY-MM-DDThh:mm:ssZ"
+          }
+        }
+      }
+    }
+  }
+}

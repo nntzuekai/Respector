@@ -1,0 +1,23 @@
+name: build-docker-container.yaml
+on:
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+jobs:
+  buildDockerContainer:
+    name: Build Docker container
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: '0'
+      - name: Print environment variables
+        run: printenv
+      - name: Git Merge With Main
+        run: git merge origin/main
+      - name: Git Update submodules
+        run: git submodule update --init --recursive
+      - name: Build Docker container
+        run: make docker-build

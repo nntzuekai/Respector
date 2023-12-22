@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [[ $1 == "build" ]]; then
+  mvn package
+elif [[ $1 == "run" ]]; then
+  mvn spring-boot:run
+elif [[ $1 == "clean" ]]; then
+  mvn clean
+elif [[ $1 == "debug" ]]; then
+  mvn -X spring-boot:run
+elif [[ -z $1 ]]; then
+  printf "./kitchen [[option]:\n\tpackage, run, clean, debug\n"
+fi

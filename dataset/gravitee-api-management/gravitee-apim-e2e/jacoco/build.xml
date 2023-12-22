@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (C) 2015 The Gravitee team (http://gravitee.io)
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<project name="Generate APIM E2E Coverage Reports" default="report" xmlns:jacoco="antlib:org.jacoco.ant" basedir=".">
+
+    <description>
+        Generate APIM E2E Coverage Reports
+    </description>
+
+    <property name="project.dir" location="../.."/>
+
+    <property name="management.api.dir" location="${project.dir}/gravitee-apim-rest-api" />
+
+    <property name="management.console.rest.src.dir" location="${management.api.dir}/gravitee-apim-rest-api-management/gravitee-apim-rest-api-management-rest/src/main/java" />
+    <property name="management.portal.rest.src.dir" location="${management.api.dir}/gravitee-apim-rest-api-portal/gravitee-apim-rest-api-portal-rest" />
+    <property name="management.service.src.dir" location="${management.api.dir}/gravitee-apim-rest-api-service/src/main/java" />
+
+    <property name="gateway.dir" location="${project.dir}/gravitee-apim-gateway" />
+
+    <property name="gateway.core.src.dir" location="${gateway.dir}/gravitee-apim-gateway-core/src/main/java" />
+    <property name="gateway.handlers.src.dir" location="${gateway.dir}/gravitee-apim-gateway-handlers/gravitee-apim-gateway-handlers-api/src/main/java" />
+    <property name="gateway.flow.src.dir" location="${gateway.dir}/gravitee-apim-gateway-flow/src/main/java" />
+    <property name="gateway.policy.src.dir" location="${gateway.dir}/gravitee-apim-gateway-policy/src/main/java" />
+    <property name="gateway.http.src.dir" location="${gateway.dir}/gravitee-apim-gateway-http/src/main/java" />
+
+    <property name="result.temp.dir" location="./temp" />
+    <property name="result.class.dir" location="./classes" />
+    <property name="result.report.dir" location="./reports" />
+    <property name="result.exec.file" location="./jacoco.exec" />
+
+    <property environment="env"/>
+    <property name="custom.properties.file" value="properties.${env.ENV}.xml"/>
+
+    <import file="${custom.properties.file}" />
+
+    <property name="management.plugins.dir" location="${management.classes.dir}/../plugins" />
+    <property name="gateway.plugins.dir" location="${gateway.classes.dir}/../plugins" />
+
+
+    <taskdef uri="antlib:org.jacoco.ant" resource="org/jacoco/ant/antlib.xml">
+        <classpath path="lib/jacocoant.jar" />
+    </taskdef>
+
+    <target name="clean">
+        <delete dir="${result.report.dir}" />
+        <delete dir="${result.temp.dir}" />
+    </target>
+
+    <target name="extract-plugins" depends="clean">
+        <unzip dest="${result.temp.dir}/">
+            <patternset>
+                <include name="**/*.jar"/>
+            </patternset>
+            <fileset dir="${management.plugins.dir}">
+                <include name="*.zip"/>
+            </fileset>
+            <fileset dir="${gateway.plugins.dir}">
+                <include name="*.zip"/>
+            </fileset>
+        </unzip>
+
+        <delete dir="${result.temp.dir}/lib" />
+
+        <copy todir="${result.temp.dir}">
+            <fileset file="${management.classes.dir}/*.jar"/>
+            <fileset file="${gateway.classes.dir}/*.jar"/>
+        </copy>
+
+        <unzip dest="${result.class.dir}">
+            <patternset>
+                <include name="io/gravitee/**/*.class"/>
+            </patternset>
+            <fileset dir="${result.temp.dir}">
+                <include name="*.jar"/>
+            </fileset>
+        </unzip>
+
+        <delete dir="${result.temp.dir}" />
+
+    </target>
+
+    <target name="report" depends="extract-plugins">
+        <jacoco:report>
+            <executiondata>
+                <file file="${result.exec.file}" />
+            </executiondata>
+
+            <structure name="APIM E2E Coverage Reports">
+                <classfiles>
+                    <fileset dir="${result.class.dir}" />
+                </classfiles>
+
+                <sourcefiles>
+                    <fileset dir="${management.console.rest.src.dir}"/>
+                    <fileset dir="${management.service.src.dir}"/>
+                    <fileset dir="${management.portal.rest.src.dir}"/>
+                    <fileset dir="${gateway.core.src.dir}"/>
+                    <fileset dir="${gateway.handlers.src.dir}"/>
+                    <fileset dir="${gateway.flow.src.dir}"/>
+                    <fileset dir="${gateway.policy.src.dir}"/>
+                    <fileset dir="${gateway.http.src.dir}"/>
+                </sourcefiles>
+            </structure>
+
+            <html destdir="${result.report.dir}" />
+            <xml destfile="${result.report.dir}/report.xml" />
+        </jacoco:report>
+    </target>
+
+</project>

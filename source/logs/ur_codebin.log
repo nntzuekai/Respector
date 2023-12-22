@@ -1,0 +1,19 @@
++ java -Djava.library.path=/home/rkh/z3//build/ -cp ./target/Respector-0.1-SNAPSHOT.jar:/home/rkh/z3//build/com.microsoft.z3.jar org.rest.Respector.AppMain.Main ../dataset//Ur-Codebin-API/target/classes/ ./generated_1//ur_codebin.json
+[main] INFO org.rest.Respector.EndPointRecog.PreprocessFramework - The REST API uses Spring
+[main] INFO org.rest.Respector.AppMain.MainTransform - total # of endpoint methods detected: 6
+[main] INFO org.rest.Respector.AppMain.MainTransform - 1/6 analyzing endpoint method <com.urcodebin.api.controllers.UserAccountController: com.urcodebin.api.dto.UserAccountDTO getUserAccountById(java.lang.Long)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 2/6 analyzing endpoint method <com.urcodebin.api.controllers.UserAccountController: com.urcodebin.api.dto.UserAccountDTO signupForNewAccount(com.urcodebin.api.controllers.requestbody.SignupRequestBody)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 3/6 analyzing endpoint method <com.urcodebin.api.controllers.CodePasteController: com.urcodebin.api.dto.CodePasteDTO getCodePasteFromId(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 4/6 analyzing endpoint method <com.urcodebin.api.controllers.CodePasteController: void deleteCodePasteWithId(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 5/6 analyzing endpoint method <com.urcodebin.api.controllers.CodePasteController: java.util.List getListOfPublicPastesWith(java.lang.String,java.lang.String,int)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 3
+[main] INFO org.rest.Respector.AppMain.MainTransform - 6/6 analyzing endpoint method <com.urcodebin.api.controllers.CodePasteController: com.urcodebin.api.dto.CodePasteDTO postNewCodePasteWith(com.urcodebin.api.controllers.requestbody.UploadPasteRequestBody)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+
+real	0m3.043s
+user	0m12.066s
+sys	0m0.266s

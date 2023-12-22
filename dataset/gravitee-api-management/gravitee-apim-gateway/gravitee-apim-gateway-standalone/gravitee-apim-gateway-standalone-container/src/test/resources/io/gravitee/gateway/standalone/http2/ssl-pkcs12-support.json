@@ -1,0 +1,60 @@
+{
+  "id": "api-test",
+  "name": "api-test",
+  "gravitee": "2.0.0",
+  "proxy": {
+    "context_path": "/test",
+    "endpoints": [
+      {
+        "name": "endpoint-1",
+        "type": "http",
+        "target": "https://localhost:8080/team",
+        "http": {
+          "version" : "HTTP_2"
+        },
+        "ssl": {
+          "trustAll": true
+        }
+      }, {
+        "name": "endpoint-2",
+        "type": "http",
+        "target": "https://localhost:8080/team",
+        "http": {
+          "version" : "HTTP_2"
+        },
+        "ssl": {
+          "trustAll": false
+        }
+      }, {
+        "name": "endpoint-3",
+        "type": "http",
+        "target": "https://localhost:8080/team",
+        "http": {
+          "version" : "HTTP_2"
+        },
+        "ssl": {
+          "trustAll": false,
+          "trustStore": {
+            "type": "PKCS12",
+            "path": "Defined programmatically",
+            "password": "password"
+          }
+        }
+      }
+    ],
+    "strip_context_path": false
+  },
+  "flows": [
+    {
+      "name": "flow-1",
+      "methods": [],
+      "enabled": true,
+      "path-operator": {
+        "path": "/",
+        "operator": "STARTS_WITH"
+      },
+      "pre": [],
+      "post": []
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+!.gitignore
+
+**/target/
+.idea/
+*.iml
+.DS_Store
+.*.settings.xml
+gravitee.*.log.*/*.log
+**/.logs
+
+# eclipse
+.settings/
+.project
+.classpath
+/bin/
+
+# Related to UI Console and Portal
+**/.tmp/
+**/coverage/
+**/dist/
+**/dist-tsc/
+**/node_modules/
+**/npm-debug.log
+gravitee-**-webui/node/
+**/.settings
+**/report.*.json
+**/.vscode
+**/storybook-static
+**/.angular
+
+# used in makefile as working directory
+.working/
+# used in makefile for docker-compose quick setups
+docker/quick-setup/**/.data
+docker/quick-setup/**/.plugins
+docker/quick-setup/**/.license
+docker/quick-setup/**/.driver
+
+# secrets (password to artifactory)
+gpg.script.snippet.sh
+# -- Cicd : The [graviteebot.gpg.priv.key] file contains secrets
+# which should not be commited
+graviteebot.gpg.priv.key
+# -- Cicd : The [.secrethub.credential] file contains secrets
+# which should not be commited
+graviteebot.gpg.pub.key
+# -- Cicd : The [.secrets.json] file contains secrets
+# which should not be commited
+.secrets.json
+
+# Cypress
+gravitee-apim-e2e/ui-test/videos/
+gravitee-apim-e2e/ui-test/screenshots/
+
+# Deepcode (Snyk Code) cache
+**/.dccache
+
+# Exclude flattened version of the pom, for details see https://maven.apache.org/maven-ci-friendly.html#install-deploy
+.flattened-pom.xml
+
+# Release scripts
+release/.env

@@ -1,0 +1,11 @@
+.classpath
+.project
+.settings
+target/
+*.DS_Store
+*.sh
+*.css
+backup/
+.idea/
+*.iml
+google*.html

@@ -1,0 +1,11 @@
+{
+  "meta": {
+    "httpMethod": "GET",
+    "httpStatusCode": 404,
+    "timestamp": "2018-12-21T18:52:12.151Z"
+  },
+  "links": {
+    "self": "http://localhost/127.0.0.1:2080/data-sources/EMPLOYEE/records/67891234"
+  },
+  "errors": [ ]
+}

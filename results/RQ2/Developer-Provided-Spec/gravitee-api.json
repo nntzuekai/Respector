@@ -1,0 +1,2164 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Gravitee.io APIM - Management API",
+    "description": "This is the OpenAPI specification for our new version of APIM Management API.",
+    "contact": {
+      "email": "team-apim@graviteesource.com"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    },
+    "version": "4.0.0-alpha.1"
+  },
+  "servers": [
+    {
+      "url": "https://apim-{version}-api.team-apim.gravitee.dev/management/v4",
+      "description": "Gravitee.io APIM - Management API -v4",
+      "variables": {
+        "version": {
+          "default": "4-0-x"
+        }
+      }
+    }
+  ],
+  "tags": [
+    {
+      "name": "Installation",
+      "description": "Base resources about the installation"
+    },
+    {
+      "name": "APIs",
+      "description": "Everything about v4 APIs"
+    },
+    {
+      "name": "API Plans",
+      "description": "Everything about v4 Plans"
+    },
+    {
+      "name": "Endpoints",
+      "description": "Everything about v4 Endpoints"
+    },
+    {
+      "name": "Entrypoints",
+      "description": "Everything about v4 Entrypoints"
+    }
+  ],
+  "paths": {
+    "/organizations/{orgId}": {
+      "get": {
+        "tags": [
+          "Installation"
+        ],
+        "summary": "Get a specific organization",
+        "description": "# FIXME add a description",
+        "operationId": "getOrganizationById",
+        "responses": {
+          "200": {
+            "description": "An organization",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Organization"
+                }
+              }
+            }
+          },
+          "default": {
+            "$ref": "#/components/responses/Error"
+          }
+        }
+      },
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/orgIdParam"
+        }
+      ]
+    },
+    "/organizations/{orgId}/environments": {
+      "get": {
+        "tags": [
+          "Installation"
+        ],
+        "summary": "List all environments of a specific organization",
+        "description": "# FIXME add a description",
+        "operationId": "getEnvironments",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/pageParam"
+          },
+          {
+            "$ref": "#/components/parameters/perPageParam"
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/EnvironmentsResponse"
+          },
+          "default": {
+            "$ref": "#/components/responses/Error"
+          }
+        }
+      },
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/orgIdParam"
+        }
+      ]
+    },
+    "/environments/{envId}": {
+      "get": {
+        "tags": [
+          "Installation"
+        ],
+        "summary": "Get a specific environment",
+        "description": "# FIXME add a description",
+        "operationId": "getEnvironmentById",
+        "responses": {
+          "200": {
+            "description": "An environment",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Environment"
+                }
+              }
+            }
+          },
+          "default": {
+            "$ref": "#/components/responses/Error"
+          }
+        }
+      },
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/envIdParam"
+        }
+      ]
+    },
+    "/apis": {
+      "get": {
+        "tags": [
+          "APIs"
+        ],
+        "summary": "List APIs",
+        "description": "# FIXME add a description",
+        "operationId": "getApis",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/pageParam"
+          },
+          {
+            "$ref": "#/components/parameters/perPageParam"
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/ApisResponse"
+          },
+          "default": {
+            "$ref": "#/components/responses/Error"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "APIs"
+        ],
+        "summary": "Create an API",
+        "description": "# FIXME add a description",
+        "operationId": "createApi",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Api"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "API successfully created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Api"
+                }
+              }
+            }
+          },
+          "default": {
+            "$ref": "#/components/responses/Error"
+          }
+        }
+      },
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/envIdParam"
+        }
+      ]
+    },
+    "/apis/{apiId}": {
+      "get": {
+        "tags": [
+          "APIs"
+        ],
+        "summary": "Get a specific API",
+        "description": "# FIXME add a description",
+        "operationId": "getApiById",
+        "responses": {
+          "200": {
+            "description": "API found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Api"
+                }
+              }
+            }
+          },
+          "default": {
+            "$ref": "#/components/responses/Error"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "APIs"
+        ],
+        "summary": "Update an API",
+        "description": "# FIXME add a description",
+        "operationId": "updateApi",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Api"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "API successfully updated",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Api"
+                }
+              }
+            }
+          },
+          "default": {
+            "$ref": "#/components/responses/Error"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "APIs"
+        ],
+        "summary": "Delete an API",
+        "description": "# FIXME add a description",
+        "operationId": "deleteApi",
+        "parameters": [
+          {
+            "name": "closePlans",
+            "in": "query",
+            "description": "Set to true to close API plans.",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "API successfully deleted"
+          },
+          "default": {
+            "$ref": "#/components/responses/Error"
+          }
+        }
+      },
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/apiIdParam"
+        }
+      ]
+    },
+    "/apis/{apiId}/_start": {
+      "post": {
+        "tags": [
+          "APIs"
+        ],
+        "summary": "Start an API",
+        "description": "# FIXME add a description",
+        "operationId": "startApi",
+        "responses": {
+          "204": {
+            "description": "API successfully started"
+          },
+          "default": {
+            "$ref": "#/components/responses/Error"
+          }
+        }
+      },
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/apiIdParam"
+        }
+      ]
+    },
+    "/apis/{apiId}/_stop": {
+      "post": {
+        "tags": [
+          "APIs"
+        ],
+        "summary": "Stop an API",
+        "description": "# FIXME add a description",
+        "operationId": "stopApi",
+        "responses": {
+          "204": {
+            "description": "API successfully stopped"
+          },
+          "default": {
+            "$ref": "#/components/responses/Error"
+          }
+        }
+      },
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/apiIdParam"
+        }
+      ]
+    },
+    "/apis/{apiId}/deployments": {
+      "post": {
+        "tags": [
+          "APIs"
+        ],
+        "summary": "Request a deployment to gateway instances",
+        "description": "# FIXME add a description",
+        "operationId": "createAPIDeployment",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ApiDeployment"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "API deployment successfully deployed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiDeployment"
+                }
+              }
+            }
+          },
+          "default": {
+            "$ref": "#/components/responses/Error"
+          }
+        }
+      },
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/apiIdParam"
+        }
+      ]
+    },
+    "/apis/{apiId}/plans": {
+      "get": {
+        "tags": [
+          "APIs",
+          "API Plans"
+        ],
+        "summary": "Get the API's plans",
+        "description": "# FIXME add a description\n",
+        "operationId": "getApiPlans",
+        "parameters": [
+          {
+            "name": "status",
+            "in": "query",
+            "description": "List of plan status to filter on",
+            "required": false,
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/PlanStatus"
+              },
+              "default": [
+                "published"
+              ]
+            }
+          },
+          {
+            "name": "security",
+            "in": "query",
+            "description": "List of plan security to filter on",
+            "required": false,
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/PlanSecurityType"
+              }
+            }
+          },
+          {
+            "$ref": "#/components/parameters/pageParam"
+          },
+          {
+            "$ref": "#/components/parameters/perPageParam"
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/PlansResponse"
+          },
+          "default": {
+            "$ref": "#/components/responses/Error"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "APIs",
+          "API Plans"
+        ],
+        "summary": "Create an API in a specific environment",
+        "description": "# FIXME add a description",
+        "operationId": "createAPIPlan",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Api"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "API successfully created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Api"
+                }
+              }
+            }
+          },
+          "default": {
+            "$ref": "#/components/responses/Error"
+          }
+        }
+      },
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/apiIdParam"
+        }
+      ]
+    },
+    "/apis/{apiId}/plans/{planId}": {
+      "get": {
+        "tags": [
+          "APIs",
+          "API Plans"
+        ],
+        "summary": "Get one API's plan",
+        "description": "# FIXME add a description\n",
+        "operationId": "getApiPlanById",
+        "responses": {
+          "200": {
+            "description": "An API's plan",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Plan"
+                }
+              }
+            }
+          },
+          "default": {
+            "$ref": "#/components/responses/Error"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "APIs",
+          "API Plans"
+        ],
+        "summary": "Update one API's plan",
+        "description": "# FIXME add a description\n",
+        "operationId": "updateApiPlan",
+        "responses": {
+          "200": {
+            "description": "API's plan successfully updated",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Plan"
+                }
+              }
+            }
+          },
+          "default": {
+            "$ref": "#/components/responses/Error"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "APIs",
+          "API Plans"
+        ],
+        "summary": "Delete one API's plan",
+        "description": "# FIXME add a description\n",
+        "operationId": "deleteApiPlan",
+        "responses": {
+          "204": {
+            "description": "API's plan successfully deleted"
+          },
+          "default": {
+            "$ref": "#/components/responses/Error"
+          }
+        }
+      },
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/apiIdParam"
+        },
+        {
+          "$ref": "#/components/parameters/planIdParam"
+        }
+      ]
+    },
+    "/apis/{apiId}/plans/{planId}/_close": {
+      "post": {
+        "tags": [
+          "APIs",
+          "API Plans"
+        ],
+        "summary": "Close an API's plan",
+        "description": "# FIXME add a description",
+        "operationId": "closeApiPlan",
+        "responses": {
+          "200": {
+            "description": "API's plan successfully closed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Plan"
+                }
+              }
+            }
+          },
+          "default": {
+            "$ref": "#/components/responses/Error"
+          }
+        }
+      },
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/apiIdParam"
+        },
+        {
+          "$ref": "#/components/parameters/planIdParam"
+        }
+      ]
+    },
+    "/apis/{apiId}/plans/{planId}/_publish": {
+      "post": {
+        "tags": [
+          "APIs",
+          "API Plans"
+        ],
+        "summary": "Publish an API's plan",
+        "description": "# FIXME add a description",
+        "operationId": "publishApiPlan",
+        "responses": {
+          "200": {
+            "description": "API's plan successfully published",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Plan"
+                }
+              }
+            }
+          },
+          "default": {
+            "$ref": "#/components/responses/Error"
+          }
+        }
+      },
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/apiIdParam"
+        },
+        {
+          "$ref": "#/components/parameters/planIdParam"
+        }
+      ]
+    },
+    "/apis/{apiId}/plans/{planId}/_deprecate": {
+      "post": {
+        "tags": [
+          "APIs",
+          "API Plans"
+        ],
+        "summary": "Deprecate an API's plan",
+        "description": "# FIXME add a description",
+        "operationId": "deprecateApiPlan",
+        "responses": {
+          "200": {
+            "description": "API's plan successfully deprecated",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Plan"
+                }
+              }
+            }
+          },
+          "default": {
+            "$ref": "#/components/responses/Error"
+          }
+        }
+      },
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/apiIdParam"
+        },
+        {
+          "$ref": "#/components/parameters/planIdParam"
+        }
+      ]
+    },
+    "/endpoints": {
+      "get": {
+        "tags": [
+          "Connectors",
+          "Endpoints"
+        ],
+        "summary": "Get available endpoints on the platform",
+        "description": "# FIXME add a description\n",
+        "operationId": "getEndpoints",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/pageParam"
+          },
+          {
+            "$ref": "#/components/parameters/perPageParam"
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/EndpointsResponse"
+          },
+          "default": {
+            "$ref": "#/components/responses/Error"
+          }
+        }
+      }
+    },
+    "/endpoints/{endpointId}": {
+      "get": {
+        "tags": [
+          "Connectors",
+          "Endpoints"
+        ],
+        "summary": "Get an endpoint",
+        "description": "# FIXME add a description\n",
+        "operationId": "getEndpoint",
+        "responses": {
+          "200": {
+            "description": "Endpoint",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConnectorPlugin"
+                }
+              }
+            }
+          },
+          "default": {
+            "$ref": "#/components/responses/Error"
+          }
+        }
+      },
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/endpointIdParam"
+        }
+      ]
+    },
+    "/endpoints/{endpointId}/schema": {
+      "get": {
+        "tags": [
+          "Connectors",
+          "Endpoints"
+        ],
+        "summary": "Get an endpoint schema",
+        "description": "# FIXME add a description\n",
+        "operationId": "getEndpointSchema",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/SchemaFormResponse"
+          },
+          "default": {
+            "$ref": "#/components/responses/Error"
+          }
+        }
+      },
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/endpointIdParam"
+        }
+      ]
+    },
+    "/endpoints/{endpointId}/documentation": {
+      "get": {
+        "tags": [
+          "Connectors",
+          "Endpoints"
+        ],
+        "summary": "Get an endpoint documentation",
+        "description": "# FIXME add a description\n",
+        "operationId": "getEndpointDocumentation",
+        "responses": {
+          "200": {
+            "description": "Documentation of the endpoint",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "default": {
+            "$ref": "#/components/responses/Error"
+          }
+        }
+      },
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/endpointIdParam"
+        }
+      ]
+    },
+    "/entrypoints": {
+      "get": {
+        "tags": [
+          "Connectors",
+          "Entrypoints"
+        ],
+        "summary": "Get available entrypoints on the platform",
+        "description": "# FIXME add a description\n",
+        "operationId": "getEntrypoints",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/pageParam"
+          },
+          {
+            "$ref": "#/components/parameters/perPageParam"
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/EntrypointsResponse"
+          },
+          "default": {
+            "$ref": "#/components/responses/Error"
+          }
+        }
+      }
+    },
+    "/entrypoints/{entrypointId}": {
+      "get": {
+        "tags": [
+          "Connectors",
+          "Entrypoints"
+        ],
+        "summary": "Get an entrypoint",
+        "description": "# FIXME add a description\n",
+        "operationId": "getEntrypoint",
+        "responses": {
+          "200": {
+            "description": "Entrypoint",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConnectorPlugin"
+                }
+              }
+            }
+          },
+          "default": {
+            "$ref": "#/components/responses/Error"
+          }
+        }
+      },
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/entrypointIdParam"
+        }
+      ]
+    },
+    "/entrypoints/{entrypointId}/schema": {
+      "get": {
+        "tags": [
+          "Connectors",
+          "Entrypoints"
+        ],
+        "summary": "Get an entrypoint schema",
+        "description": "# FIXME add a description\n",
+        "operationId": "getEntrypointSchema",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/SchemaFormResponse"
+          },
+          "default": {
+            "$ref": "#/components/responses/Error"
+          }
+        }
+      },
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/entrypointIdParam"
+        }
+      ]
+    },
+    "/entrypoints/{entrypointId}/subscriptionSchema": {
+      "get": {
+        "tags": [
+          "Connectors",
+          "Entrypoints"
+        ],
+        "summary": "Get an entrypoint subscription schema",
+        "description": "# FIXME add a description\n",
+        "operationId": "getEntrypointSubscriptionSchema",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/SchemaFormResponse"
+          },
+          "default": {
+            "$ref": "#/components/responses/Error"
+          }
+        }
+      },
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/entrypointIdParam"
+        }
+      ]
+    },
+    "/entrypoints/{entrypointId}/documentation": {
+      "get": {
+        "tags": [
+          "Connectors",
+          "Entrypoints"
+        ],
+        "summary": "Get an entrypoint documentation",
+        "description": "# FIXME add a description\n",
+        "operationId": "getEntrypointDocumentation",
+        "responses": {
+          "200": {
+            "description": "Documentation of the entrypoint",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "default": {
+            "$ref": "#/components/responses/Error"
+          }
+        }
+      },
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/entrypointIdParam"
+        }
+      ]
+    }
+  },
+  "components": {
+    "schemas": {
+      "Api": {
+        "required": [
+          "apiVersion",
+          "definitionVersion",
+          "environmentId",
+          "name",
+          "type",
+          "visibility"
+        ],
+        "type": "object",
+        "properties": {
+          "apiVersion": {
+            "minLength": 1,
+            "type": "string",
+            "description": "API's version. It's a simple string only used in the portal.",
+            "example": "v1.0"
+          },
+          "definitionVersion": {
+            "$ref": "#/components/schemas/DefinitionVersion"
+          },
+          "environmentId": {
+            "type": "string",
+            "description": "The id of the environment the API will belong to.\n\n**_WARNING:_** \n> This field is for _creation only_. It means that if you try to change the value of this field with a PUT or a PATCH resource, it will fail with a 400 error.",
+            "example": "1a2b3c4d-5e6f-1234-abcd-1a2b3c4d5e6f"
+          },
+          "name": {
+            "minLength": 1,
+            "type": "string",
+            "description": "API's name. Duplicate names can exists.",
+            "example": "My Api"
+          },
+          "type": {
+            "$ref": "#/components/schemas/ApiType"
+          },
+          "visibility": {
+            "$ref": "#/components/schemas/ApiVisibility"
+          },
+          "backgroundUrl": {
+            "type": "string",
+            "description": "The API background URL. Used in Portal.",
+            "example": "https://gravitee.mycompany.com/management/apis/6c530064-0b2c-4004-9300-640b2ce0047b/background"
+          },
+          "categories": {
+            "type": "array",
+            "description": "The list of categories associated with this API.",
+            "example": [
+              "Product",
+              "Customer",
+              "Misc"
+            ],
+            "items": {
+              "type": "string"
+            }
+          },
+          "description": {
+            "minLength": 1,
+            "type": "string",
+            "description": "API's description. A short description of your API.",
+            "example": "I can use many characters to describe this API."
+          },
+          "disableMembershipNotifications": {
+            "type": "boolean",
+            "description": "Disable membership notifications.",
+            "default": false
+          },
+          "endpointGroups": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EndpointGroup"
+            }
+          },
+          "flowMode": {
+            "$ref": "#/components/schemas/FlowMode"
+          },
+          "groups": {
+            "type": "array",
+            "description": "API's groups. Used to add team in your API.",
+            "example": [
+              "MY_GROUP1",
+              "MY_GROUP2"
+            ],
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "labels": {
+            "type": "array",
+            "description": "The free list of labels associated with this API.",
+            "example": [
+              "json",
+              "read_only",
+              "awesome"
+            ],
+            "items": {
+              "type": "string"
+            }
+          },
+          "lifecycleState": {
+            "$ref": "#/components/schemas/ApiLifecycleState"
+          },
+          "listeners": {
+            "type": "array",
+            "description": "The list of listeners associated with this API.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/HttpListener"
+                },
+                {
+                  "$ref": "#/components/schemas/SubscriptionListener"
+                },
+                {
+                  "$ref": "#/components/schemas/TcpListener"
+                }
+              ]
+            }
+          },
+          "pictureUrl": {
+            "type": "string",
+            "description": "The API logo URL.",
+            "example": "https://gravitee.mycompany.com/management/apis/6c530064-0b2c-4004-9300-640b2ce0047b/picture"
+          },
+          "services": {
+            "$ref": "#/components/schemas/ApiServices"
+          },
+          "tags": {
+            "type": "array",
+            "description": "The list of sharding tags associated with this API.",
+            "example": [
+              "public",
+              "private"
+            ],
+            "items": {
+              "type": "string"
+            }
+          },
+          "createdAt": {
+            "type": "string",
+            "description": "The date (as timestamp) when the API was created.",
+            "format": "date-time",
+            "readOnly": true
+          },
+          "crossId": {
+            "type": "string",
+            "description": "API's crossId. Identifies API across environments.",
+            "readOnly": true,
+            "example": "df83b2a4-cc3e-3f80-9f0d-c138c106c076"
+          },
+          "deployedAt": {
+            "type": "string",
+            "description": "The last date (as timestamp) when the API was deployed.",
+            "format": "date-time",
+            "readOnly": true
+          },
+          "definitionContext": {
+            "$ref": "#/components/schemas/DefinitionContext"
+          },
+          "id": {
+            "type": "string",
+            "description": "API's uuid.",
+            "readOnly": true,
+            "example": "00f8c9e7-78fc-4907-b8c9-e778fc790750"
+          },
+          "state": {
+            "type": "string",
+            "description": "The status of the API regarding the gateway.",
+            "readOnly": true,
+            "example": "STARTED",
+            "enum": [
+              "CLOSED",
+              "INITIALIZED",
+              "STARTED",
+              "STOPPED",
+              "STOPPING"
+            ]
+          },
+          "updatedAt": {
+            "type": "string",
+            "description": "The last date (as timestamp) when the API was updated.",
+            "format": "date-time",
+            "readOnly": true
+          },
+          "workflowState": {
+            "$ref": "#/components/schemas/ApiWorkflowState"
+          }
+        }
+      },
+      "ApiDeployment": {
+        "type": "object",
+        "properties": {
+          "deploymentLabel": {
+            "maxLength": 32,
+            "type": "string",
+            "description": "Label for an Api deployment. Duplicate names can exists.",
+            "example": "My deployment"
+          },
+          "createdAt": {
+            "type": "string",
+            "description": "The date (as timestamp) when the deployment request was created.",
+            "format": "date-time",
+            "readOnly": true
+          }
+        }
+      },
+      "ApiLifecycleState": {
+        "type": "string",
+        "description": "The status of the API regarding the console.",
+        "example": "CREATED",
+        "enum": [
+          "ARCHIVED",
+          "CREATED",
+          "DEPRECATED",
+          "PUBLISHED",
+          "UNPUBLISHED"
+        ]
+      },
+      "ApiServices": {
+        "type": "object",
+        "properties": {
+          "dynamicProperty": {
+            "$ref": "#/components/schemas/Service"
+          }
+        }
+      },
+      "ApiType": {
+        "type": "string",
+        "description": "API's type.",
+        "example": "async",
+        "enum": [
+          "async",
+          "sync"
+        ]
+      },
+      "ApiVisibility": {
+        "type": "string",
+        "description": "The visibility of the API regarding the portal.",
+        "example": "PUBLIC",
+        "enum": [
+          "PUBLIC",
+          "PRIVATE"
+        ]
+      },
+      "ApiWorkflowState": {
+        "type": "string",
+        "description": "The status of the API regarding the review feature.",
+        "readOnly": true,
+        "example": "DRAFT",
+        "enum": [
+          "DRAFT",
+          "IN_REVIEW",
+          "REQUEST_FOR_CHANGES",
+          "REVIEW_OK"
+        ]
+      },
+      "ConnectorFeature": {
+        "type": "string",
+        "description": "A feature used by a connector",
+        "example": "limit",
+        "enum": [
+          "limit",
+          "resume",
+          "dlq"
+        ]
+      },
+      "ConnectorMode": {
+        "type": "string",
+        "description": "A mode used by a connector",
+        "example": "subscribe",
+        "enum": [
+          "subscribe",
+          "publish",
+          "request_response"
+        ]
+      },
+      "ConnectorPlugin": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/PlatformPlugin"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "supportedApiType": {
+                "$ref": "#/components/schemas/ApiType"
+              },
+              "supportedModes": {
+                "uniqueItems": true,
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ConnectorMode"
+                }
+              },
+              "supportedQos": {
+                "uniqueItems": true,
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/QoS"
+                }
+              },
+              "availableFeatures": {
+                "uniqueItems": true,
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ConnectorFeature"
+                }
+              },
+              "schema": {
+                "type": "string",
+                "description": "The schema of the plugin."
+              },
+              "icon": {
+                "type": "string",
+                "description": "The icon of the plugin."
+              },
+              "subscriptionSchema": {
+                "type": "string",
+                "description": "The subscription schema of the plugin."
+              }
+            }
+          }
+        ]
+      },
+      "Cors": {
+        "type": "object",
+        "properties": {
+          "allowCredentials": {
+            "type": "boolean"
+          },
+          "allowHeaders": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "allowMethods": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "allowOrigin": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "enabled": {
+            "type": "boolean"
+          },
+          "exposeHeaders": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "maxAge": {
+            "type": "integer",
+            "format": "int32",
+            "default": -1
+          },
+          "runPolicies": {
+            "type": "boolean"
+          }
+        }
+      },
+      "DefinitionContext": {
+        "type": "object",
+        "properties": {
+          "origin": {
+            "type": "string",
+            "description": "The origin of the API.",
+            "example": "management",
+            "enum": [
+              "management",
+              "kubernetes"
+            ]
+          },
+          "mode": {
+            "type": "string",
+            "description": "The mode of the API.\nfully_managed: Mode indicating the api is fully managed by the origin and so, only the origin should be able to manage the api.\napi_definition_only: Mode indicating the api is partially managed by the origin and so, only the origin should be able to manage the api definition part of the api. This includes everything regarding the definition of the apis (plans, flows, metadata, ...)",
+            "example": "fully_managed",
+            "enum": [
+              "fully_managed",
+              "api_definition_only"
+            ]
+          }
+        },
+        "description": "the context where the api definition was created",
+        "readOnly": true
+      },
+      "DefinitionVersion": {
+        "type": "string",
+        "description": "API's gravitee definition version.",
+        "example": "v4",
+        "enum": [
+          "v4"
+        ]
+      },
+      "Endpoint": {
+        "required": [
+          "type"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the endpoint",
+            "nullable": false,
+            "example": "default-endpoint"
+          },
+          "type": {
+            "type": "string",
+            "description": "The type of the endpoint",
+            "nullable": false,
+            "example": "mock"
+          },
+          "weight": {
+            "type": "integer",
+            "description": "The weight of the endpoint",
+            "format": "int32",
+            "default": 1
+          },
+          "inheritConfiguration": {
+            "type": "boolean",
+            "description": "Is the configuration of the endpoint inherited from the endpoint group it belongs to.",
+            "default": false
+          },
+          "configuration": {
+            "type": "object"
+          },
+          "services": {
+            "$ref": "#/components/schemas/EndpointServices"
+          }
+        }
+      },
+      "EndpointGroup": {
+        "required": [
+          "type"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the endpoint group",
+            "nullable": false,
+            "example": "default-endpoint-group"
+          },
+          "type": {
+            "type": "string",
+            "description": "The type of the endpoint group",
+            "nullable": false,
+            "example": "default"
+          },
+          "loadBalancer": {
+            "$ref": "#/components/schemas/LoadBalancer"
+          },
+          "sharedConfiguration": {
+            "type": "object"
+          },
+          "endpoints": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Endpoint"
+            }
+          },
+          "services": {
+            "$ref": "#/components/schemas/EndpointGroupServices"
+          }
+        }
+      },
+      "EndpointGroupServices": {
+        "type": "object",
+        "properties": {
+          "discovery": {
+            "$ref": "#/components/schemas/Service"
+          },
+          "healthcheck": {
+            "$ref": "#/components/schemas/Service"
+          }
+        }
+      },
+      "EndpointServices": {
+        "type": "object",
+        "properties": {
+          "healthcheck": {
+            "$ref": "#/components/schemas/Service"
+          }
+        }
+      },
+      "Entrypoint": {
+        "required": [
+          "type"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "The type of the entrypoint",
+            "nullable": false,
+            "example": "http-get"
+          },
+          "configuration": {
+            "type": "object"
+          }
+        }
+      },
+      "Environment": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Environment's uuid.",
+            "example": "00f8c9e7-78fc-4907-b8c9-e778fc790750"
+          },
+          "name": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Environment's name. Duplicate names can exists.",
+            "example": "My Environment"
+          },
+          "description": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Environment's description. A short description of your Environment.",
+            "example": "I can use many characters to describe this Environment."
+          }
+        }
+      },
+      "Error": {
+        "type": "object",
+        "properties": {
+          "httpStatus": {
+            "type": "integer",
+            "description": "The error code",
+            "format": "int32",
+            "example": 400
+          },
+          "message": {
+            "type": "string",
+            "description": "The error message",
+            "example": "Bad request"
+          },
+          "technicalCode": {
+            "type": "string",
+            "description": "A technical code to identify the error",
+            "example": "invalid.import.definition"
+          },
+          "parameters": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            },
+            "description": "A map of parameters to be used in the error message"
+          }
+        }
+      },
+      "HttpListener": {
+        "required": [
+          "type"
+        ],
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Listener"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "paths": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Path"
+                }
+              },
+              "pathMappings": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "pathMappingsPattern": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "string"
+                }
+              },
+              "cors": {
+                "$ref": "#/components/schemas/Cors"
+              },
+              "logging": {
+                "$ref": "#/components/schemas/Logging"
+              }
+            }
+          }
+        ]
+      },
+      "FlowMode": {
+        "type": "string",
+        "description": "API's flow mode.",
+        "example": "BEST_MATCH",
+        "enum": [
+          "BEST_MATCH",
+          "DEFAULT"
+        ]
+      },
+      "Links": {
+        "properties": {
+          "self": {
+            "type": "string",
+            "description": "Link to current resource"
+          },
+          "first": {
+            "type": "string",
+            "description": "In a paginated response, link to the first page"
+          },
+          "last": {
+            "type": "string",
+            "description": "In a paginated response, link to the last page"
+          },
+          "prev": {
+            "type": "string",
+            "description": "In a paginated response, link to the previous page. Maybe null if current is the first page"
+          },
+          "next": {
+            "type": "string",
+            "description": "In a paginated response, link to the next page. Maybe null if current is the last page"
+          }
+        },
+        "description": "List of links for pagination"
+      },
+      "Listener": {
+        "required": [
+          "type"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "$ref": "#/components/schemas/ListenerType"
+          },
+          "entrypoints": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Entrypoint"
+            }
+          }
+        },
+        "discriminator": {
+          "propertyName": "type",
+          "mapping": {
+            "http": "HttpListener",
+            "tcp": "TcpListener",
+            "subscription": "SubscriptionListener"
+          }
+        }
+      },
+      "ListenerType": {
+        "type": "string",
+        "description": "Listener type.",
+        "example": "http",
+        "enum": [
+          "http",
+          "subscription",
+          "tcp"
+        ]
+      },
+      "LoadBalancer": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/LoadBalancerType"
+              },
+              {}
+            ]
+          }
+        }
+      },
+      "LoadBalancerType": {
+        "type": "string",
+        "description": "Load balancer type.",
+        "example": "round-robin",
+        "enum": [
+          "random",
+          "round-robin",
+          "weighted-random",
+          "weighted-round"
+        ]
+      },
+      "Logging": {
+        "type": "object",
+        "properties": {
+          "condition": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string",
+            "enum": [
+              "NONE",
+              "HEADERS",
+              "PAYLOADS",
+              "HEADERS_PAYLOADS"
+            ]
+          },
+          "mode": {
+            "type": "string",
+            "enum": [
+              "NONE",
+              "CLIENT",
+              "PROXY",
+              "CLIENT_PROXY"
+            ]
+          },
+          "scope": {
+            "type": "string",
+            "enum": [
+              "NONE",
+              "REQUEST",
+              "RESPONSE",
+              "REQUEST_RESPONSE"
+            ]
+          }
+        }
+      },
+      "MetadataResponse": {
+        "type": "object",
+        "description": "Generic object to handle additional information about an entity. Can also be used for pagination data."
+      },
+      "Path": {
+        "type": "object",
+        "properties": {
+          "host": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string",
+            "default": "/"
+          },
+          "overrideAccess": {
+            "type": "boolean",
+            "default": false
+          }
+        }
+      },
+      "Organization": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Organization's uuid.",
+            "example": "00f8c9e7-78fc-4907-b8c9-e778fc790750"
+          },
+          "name": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Organization's name. Duplicate names can exists.",
+            "example": "My Organization"
+          },
+          "description": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Organization's description. A short description of your Organization.",
+            "example": "I can use many characters to describe this Organization."
+          }
+        }
+      },
+      "Plan": {
+        "type": "object",
+        "properties": {
+          "apiId": {
+            "type": "string",
+            "description": "Id of the API owning the plan.",
+            "example": "6c530064-0b2c-4004-9300-640b2ce0047b"
+          },
+          "characteristics": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "closedAt": {
+            "type": "string"
+          },
+          "commentMessage": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "commentRequired": {
+            "type": "boolean"
+          },
+          "createdAt": {
+            "type": "string",
+            "description": "The last date (as timestamp) when the API was created.",
+            "format": "date-time"
+          },
+          "crossId": {
+            "type": "string",
+            "description": "API's crossId. Identifies API across environments.",
+            "example": "df83b2a4-cc3e-3f80-9f0d-c138c106c076"
+          },
+          "description": {
+            "type": "string",
+            "description": "API's description. A short description of your API.",
+            "example": "I can use a hundred characters to describe this API."
+          },
+          "excludedGroups": {
+            "type": "array",
+            "description": "Groups of users which are not allowed to subscribe to this plan.",
+            "example": [
+              "MY_GROUP1",
+              "MY_GROUP2"
+            ],
+            "items": {
+              "type": "string"
+            }
+          },
+          "generalConditions": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string",
+            "description": "Plan's uuid.",
+            "example": "00f8c9e7-78fc-4907-b8c9-e778fc790750"
+          },
+          "name": {
+            "type": "string",
+            "description": "Plan's name. Duplicate names can exists.",
+            "example": "My Api plan"
+          },
+          "order": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "publishedAt": {
+            "type": "string",
+            "description": "The last date (as timestamp) when the API was published.",
+            "format": "date-time"
+          },
+          "security": {
+            "$ref": "#/components/schemas/PlanSecurity"
+          },
+          "selectionRule": {
+            "type": "string"
+          },
+          "status": {
+            "$ref": "#/components/schemas/PlanStatus"
+          },
+          "tags": {
+            "type": "array",
+            "description": "The list of sharding tags associated with this plan.",
+            "example": [
+              "public",
+              "private"
+            ],
+            "items": {
+              "type": "string"
+            }
+          },
+          "type": {
+            "$ref": "#/components/schemas/PlanType"
+          },
+          "updatedAt": {
+            "type": "string",
+            "description": "The last date (as timestamp) when the API was updated.",
+            "format": "date-time"
+          },
+          "validation": {
+            "$ref": "#/components/schemas/PlanValidation"
+          }
+        }
+      },
+      "PlanSecurity": {
+        "required": [
+          "type"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "The type of the plan security",
+            "example": "keyless"
+          },
+          "configuration": {
+            "type": "object"
+          }
+        }
+      },
+      "PlanSecurityType": {
+        "type": "string",
+        "description": "Plan security type.",
+        "example": "key-less",
+        "enum": [
+          "key-less",
+          "api-key",
+          "oauth2",
+          "jwt",
+          "subscription"
+        ]
+      },
+      "PlanStatus": {
+        "type": "string",
+        "description": "Plan status.",
+        "example": "staging",
+        "enum": [
+          "staging",
+          "published",
+          "deprecated",
+          "closed"
+        ]
+      },
+      "PlanType": {
+        "type": "string",
+        "description": "Plan type.",
+        "example": "api",
+        "enum": [
+          "api",
+          "catalog"
+        ]
+      },
+      "PlanValidation": {
+        "type": "string",
+        "description": "Plan validation type.",
+        "example": "auto",
+        "enum": [
+          "auto",
+          "manual"
+        ]
+      },
+      "PlatformPlugin": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Plugin's uuid.",
+            "example": "00f8c9e7-78fc-4907-b8c9-e778fc790750"
+          },
+          "name": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Plugin's name.",
+            "example": "My Plugin"
+          },
+          "description": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Plugin's description.",
+            "example": "I can use many characters to describe this plugin."
+          },
+          "category": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Plugin's category.",
+            "example": "policy"
+          },
+          "version": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Plugin's version.",
+            "example": "1.0.0"
+          }
+        }
+      },
+      "QoS": {
+        "type": "string",
+        "description": "Type of the quality of service.",
+        "example": "none",
+        "enum": [
+          "none",
+          "auto",
+          "at-most-once",
+          "at-least-once"
+        ]
+      },
+      "Service": {
+        "type": "object",
+        "properties": {
+          "configuration": {
+            "type": "object",
+            "description": "The configuration of the service"
+          },
+          "enabled": {
+            "type": "boolean",
+            "description": "Is the service enabled or not.",
+            "default": true
+          },
+          "type": {
+            "type": "string"
+          }
+        }
+      },
+      "SubscriptionListener": {
+        "required": [
+          "type"
+        ],
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Listener"
+          }
+        ]
+      },
+      "TcpListener": {
+        "required": [
+          "type"
+        ],
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Listener"
+          }
+        ]
+      }
+    },
+    "responses": {
+      "EnvironmentsResponse": {
+        "description": "Page of environments",
+        "content": {
+          "application/json": {
+            "schema": {
+              "properties": {
+                "data": {
+                  "type": "array",
+                  "description": "List of Environments.",
+                  "items": {
+                    "$ref": "#/components/schemas/Environment"
+                  }
+                },
+                "metadata": {
+                  "$ref": "#/components/schemas/MetadataResponse"
+                },
+                "links": {
+                  "$ref": "#/components/schemas/Links"
+                }
+              }
+            }
+          }
+        }
+      },
+      "ApisResponse": {
+        "description": "Page of apis",
+        "content": {
+          "application/json": {
+            "schema": {
+              "properties": {
+                "data": {
+                  "type": "array",
+                  "description": "List of Apis.",
+                  "items": {
+                    "$ref": "#/components/schemas/Api"
+                  }
+                },
+                "metadata": {
+                  "$ref": "#/components/schemas/MetadataResponse"
+                },
+                "links": {
+                  "$ref": "#/components/schemas/Links"
+                }
+              }
+            }
+          }
+        }
+      },
+      "EndpointsResponse": {
+        "description": "Page of endpoints",
+        "content": {
+          "application/json": {
+            "schema": {
+              "properties": {
+                "data": {
+                  "type": "array",
+                  "description": "List of Endpoints.",
+                  "items": {
+                    "$ref": "#/components/schemas/ConnectorPlugin"
+                  }
+                },
+                "metadata": {
+                  "$ref": "#/components/schemas/MetadataResponse"
+                },
+                "links": {
+                  "$ref": "#/components/schemas/Links"
+                }
+              }
+            }
+          }
+        }
+      },
+      "EntrypointsResponse": {
+        "description": "Page of entrypoints",
+        "content": {
+          "application/json": {
+            "schema": {
+              "properties": {
+                "data": {
+                  "type": "array",
+                  "description": "List of Entrypoints.",
+                  "items": {
+                    "$ref": "#/components/schemas/ConnectorPlugin"
+                  }
+                },
+                "metadata": {
+                  "$ref": "#/components/schemas/MetadataResponse"
+                },
+                "links": {
+                  "$ref": "#/components/schemas/Links"
+                }
+              }
+            }
+          }
+        }
+      },
+      "PlansResponse": {
+        "description": "Page of API plans",
+        "content": {
+          "application/json": {
+            "schema": {
+              "properties": {
+                "data": {
+                  "type": "array",
+                  "description": "List of API plans.",
+                  "items": {
+                    "$ref": "#/components/schemas/Plan"
+                  }
+                },
+                "metadata": {
+                  "$ref": "#/components/schemas/MetadataResponse"
+                },
+                "links": {
+                  "$ref": "#/components/schemas/Links"
+                }
+              }
+            }
+          }
+        }
+      },
+      "SchemaFormResponse": {
+        "description": "Schema form of a plugin",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "Error": {
+        "description": "Generic error response",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      }
+    },
+    "parameters": {
+      "orgIdParam": {
+        "name": "orgId",
+        "in": "path",
+        "description": "Id of an organization.",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "schema": {
+          "type": "string",
+          "default": "DEFAULT"
+        }
+      },
+      "envIdParam": {
+        "name": "envId",
+        "in": "path",
+        "description": "Id of an environment.",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "schema": {
+          "type": "string",
+          "default": "DEFAULT"
+        }
+      },
+      "apiIdParam": {
+        "name": "apiId",
+        "in": "path",
+        "description": "Id of an API.",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "schema": {
+          "type": "string"
+        }
+      },
+      "planIdParam": {
+        "name": "planId",
+        "in": "path",
+        "description": "Id of a plan.",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "schema": {
+          "type": "string"
+        }
+      },
+      "endpointIdParam": {
+        "name": "endpointId",
+        "in": "path",
+        "description": "Id of an endpoint.",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "schema": {
+          "type": "string"
+        }
+      },
+      "entrypointIdParam": {
+        "name": "entrypointId",
+        "in": "path",
+        "description": "Id of an entrypoint.",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "schema": {
+          "type": "string"
+        }
+      },
+      "pageParam": {
+        "name": "page",
+        "in": "query",
+        "description": "The page number for pagination.",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "schema": {
+          "type": "integer",
+          "default": 1
+        }
+      },
+      "perPageParam": {
+        "name": "perPage",
+        "in": "query",
+        "description": "The number of items per page for pagination.\n",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "schema": {
+          "type": "integer",
+          "default": 10
+        }
+      }
+    }
+  }
+}

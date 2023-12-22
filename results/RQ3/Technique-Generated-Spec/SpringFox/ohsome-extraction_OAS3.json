@@ -1,0 +1,3220 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "ohsome API",
+    "description": "This REST-based API aims to leverage the tools of the <a href=\"https://github.com/GIScience/oshdb\" target=\"_blank\">OSHDB</a> through allowing to access some of its functionalities via HTTP requests. \nThe official documentation can be found <a href=\"https://docs.ohsome.org/ohsome-api/stable\" target=\"_blank\">here</a>. ",
+    "contact": {
+      "name": "Heidelberg Institute for Geoinformation Technology",
+      "url": "https://www.heigit.org",
+      "email": "info@heigit.org"
+    },
+    "license": {
+      "name": "License of the used data",
+      "url": "https://ohsome.org/copyrights"
+    },
+    "version": "1.9.0-SNAPSHOT"
+  },
+  "servers": [
+    {
+      "url": "//localhost:8080/"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Elements Extraction",
+      "description": "Direct access to the OSM data"
+    },
+    {
+      "name": "Full History Elements Extraction",
+      "description": "Direct access to the full history of the OSM data"
+    },
+    {
+      "name": "Contributions Extraction",
+      "description": "Direct access to all contributions provided to the OSM data"
+    }
+  ],
+  "paths": {
+    "/contributions/bbox": {
+      "get": {
+        "tags": [
+          "Contributions Extraction"
+        ],
+        "summary": "OSM contributions having the bounding box of each OSM object as geometry",
+        "operationId": "contributionsBbox",
+        "parameters": [
+          {
+            "name": "bboxes",
+            "in": "query",
+            "description": "WGS84 coordinates in the following format: id1:lon1,lat1,lon2,lat2|id2:lon1,lat1,lon2,lat2|... OR lon1,lat1,lon2,lat2|lon1,lat1,lon2,lat2|...; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string",
+              "default": "8.67,49.39,8.71,49.42"
+            }
+          },
+          {
+            "name": "bcircles",
+            "in": "query",
+            "description": "WGS84 coordinates + radius in meter in the following format: id1:lon,lat,r|id2:lon,lat,r|... OR lon,lat,r|lon,lat,r|...; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "bpolys",
+            "in": "query",
+            "description": "WGS84 coordinates given as a list of coordinate pairs (as for bboxes) or GeoJSON FeatureCollection. The first point has to be the same as the last point and MultiPolygons are only supported in GeoJSON; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "clipGeometry",
+            "in": "query",
+            "description": "Boolean operator to specify whether the returned geometries of the features should be clipped to the query's spatial boundary (‘true’), or not (‘false’); default: ‘true’",
+            "schema": {
+              "type": "string",
+              "default": "true"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Combines several attributive filters, e.g. OSM type, the geometry (simple feature) type, as well as the OSM tag; no default value",
+            "schema": {
+              "type": "string",
+              "default": "type:way and natural=*"
+            }
+          },
+          {
+            "name": "properties",
+            "in": "query",
+            "description": "List of possible property-groups added to each OSM-element: 'tags' and/or 'metadata' and/or 'contributionTypes' (only for the /contributions/{geometryType} endpoints); default: no property",
+            "schema": {
+              "type": "string",
+              "default": "tags"
+            }
+          },
+          {
+            "name": "showMetadata",
+            "in": "query",
+            "description": "Boolean operator 'true' or 'false'; default: 'false'",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "time",
+            "in": "query",
+            "description": "Two ISO-8601 conform timestrings defining an interval; no default value",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "2016-01-01,2017-01-01"
+            }
+          },
+          {
+            "name": "timeout",
+            "in": "query",
+            "description": "Custom timeout in seconds; no default value",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExtractionResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {}
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {}
+          },
+          "404": {
+            "description": "Not found",
+            "content": {}
+          },
+          "405": {
+            "description": "Method not allowed",
+            "content": {}
+          },
+          "413": {
+            "description": "Payload too large",
+            "content": {}
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {}
+          },
+          "501": {
+            "description": "Not implemented",
+            "content": {}
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {}
+          }
+        },
+        "deprecated": false
+      },
+      "post": {
+        "tags": [
+          "Contributions Extraction"
+        ],
+        "summary": "OSM contributions having the bounding box of each OSM object as geometry",
+        "operationId": "contributionsBbox_1",
+        "parameters": [
+          {
+            "name": "bboxes",
+            "in": "query",
+            "description": "WGS84 coordinates in the following format: id1:lon1,lat1,lon2,lat2|id2:lon1,lat1,lon2,lat2|... OR lon1,lat1,lon2,lat2|lon1,lat1,lon2,lat2|...; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string",
+              "default": "8.67,49.39,8.71,49.42"
+            }
+          },
+          {
+            "name": "bcircles",
+            "in": "query",
+            "description": "WGS84 coordinates + radius in meter in the following format: id1:lon,lat,r|id2:lon,lat,r|... OR lon,lat,r|lon,lat,r|...; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "bpolys",
+            "in": "query",
+            "description": "WGS84 coordinates given as a list of coordinate pairs (as for bboxes) or GeoJSON FeatureCollection. The first point has to be the same as the last point and MultiPolygons are only supported in GeoJSON; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "clipGeometry",
+            "in": "query",
+            "description": "Boolean operator to specify whether the returned geometries of the features should be clipped to the query's spatial boundary (‘true’), or not (‘false’); default: ‘true’",
+            "schema": {
+              "type": "string",
+              "default": "true"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Combines several attributive filters, e.g. OSM type, the geometry (simple feature) type, as well as the OSM tag; no default value",
+            "schema": {
+              "type": "string",
+              "default": "type:way and natural=*"
+            }
+          },
+          {
+            "name": "properties",
+            "in": "query",
+            "description": "List of possible property-groups added to each OSM-element: 'tags' and/or 'metadata' and/or 'contributionTypes' (only for the /contributions/{geometryType} endpoints); default: no property",
+            "schema": {
+              "type": "string",
+              "default": "tags"
+            }
+          },
+          {
+            "name": "showMetadata",
+            "in": "query",
+            "description": "Boolean operator 'true' or 'false'; default: 'false'",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "time",
+            "in": "query",
+            "description": "Two ISO-8601 conform timestrings defining an interval; no default value",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "2016-01-01,2017-01-01"
+            }
+          },
+          {
+            "name": "timeout",
+            "in": "query",
+            "description": "Custom timeout in seconds; no default value",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExtractionResponse"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/contributions/centroid": {
+      "get": {
+        "tags": [
+          "Contributions Extraction"
+        ],
+        "summary": "OSM contributions having the centroid of each OSM object as geometry",
+        "operationId": "contributionsCentroid",
+        "parameters": [
+          {
+            "name": "bboxes",
+            "in": "query",
+            "description": "WGS84 coordinates in the following format: id1:lon1,lat1,lon2,lat2|id2:lon1,lat1,lon2,lat2|... OR lon1,lat1,lon2,lat2|lon1,lat1,lon2,lat2|...; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string",
+              "default": "8.67,49.39,8.71,49.42"
+            }
+          },
+          {
+            "name": "bcircles",
+            "in": "query",
+            "description": "WGS84 coordinates + radius in meter in the following format: id1:lon,lat,r|id2:lon,lat,r|... OR lon,lat,r|lon,lat,r|...; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "bpolys",
+            "in": "query",
+            "description": "WGS84 coordinates given as a list of coordinate pairs (as for bboxes) or GeoJSON FeatureCollection. The first point has to be the same as the last point and MultiPolygons are only supported in GeoJSON; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "clipGeometry",
+            "in": "query",
+            "description": "Boolean operator to specify whether the returned geometries of the features should be clipped to the query's spatial boundary (‘true’), or not (‘false’); default: ‘true’",
+            "schema": {
+              "type": "string",
+              "default": "true"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Combines several attributive filters, e.g. OSM type, the geometry (simple feature) type, as well as the OSM tag; no default value",
+            "schema": {
+              "type": "string",
+              "default": "type:way and natural=*"
+            }
+          },
+          {
+            "name": "properties",
+            "in": "query",
+            "description": "List of possible property-groups added to each OSM-element: 'tags' and/or 'metadata' and/or 'contributionTypes' (only for the /contributions/{geometryType} endpoints); default: no property",
+            "schema": {
+              "type": "string",
+              "default": "tags"
+            }
+          },
+          {
+            "name": "showMetadata",
+            "in": "query",
+            "description": "Boolean operator 'true' or 'false'; default: 'false'",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "time",
+            "in": "query",
+            "description": "Two ISO-8601 conform timestrings defining an interval; no default value",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "2016-01-01,2017-01-01"
+            }
+          },
+          {
+            "name": "timeout",
+            "in": "query",
+            "description": "Custom timeout in seconds; no default value",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExtractionResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {}
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {}
+          },
+          "404": {
+            "description": "Not found",
+            "content": {}
+          },
+          "405": {
+            "description": "Method not allowed",
+            "content": {}
+          },
+          "413": {
+            "description": "Payload too large",
+            "content": {}
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {}
+          },
+          "501": {
+            "description": "Not implemented",
+            "content": {}
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {}
+          }
+        },
+        "deprecated": false
+      },
+      "post": {
+        "tags": [
+          "Contributions Extraction"
+        ],
+        "summary": "OSM contributions having the centroid of each OSM object as geometry",
+        "operationId": "contributionsCentroid_1",
+        "parameters": [
+          {
+            "name": "bboxes",
+            "in": "query",
+            "description": "WGS84 coordinates in the following format: id1:lon1,lat1,lon2,lat2|id2:lon1,lat1,lon2,lat2|... OR lon1,lat1,lon2,lat2|lon1,lat1,lon2,lat2|...; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string",
+              "default": "8.67,49.39,8.71,49.42"
+            }
+          },
+          {
+            "name": "bcircles",
+            "in": "query",
+            "description": "WGS84 coordinates + radius in meter in the following format: id1:lon,lat,r|id2:lon,lat,r|... OR lon,lat,r|lon,lat,r|...; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "bpolys",
+            "in": "query",
+            "description": "WGS84 coordinates given as a list of coordinate pairs (as for bboxes) or GeoJSON FeatureCollection. The first point has to be the same as the last point and MultiPolygons are only supported in GeoJSON; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "clipGeometry",
+            "in": "query",
+            "description": "Boolean operator to specify whether the returned geometries of the features should be clipped to the query's spatial boundary (‘true’), or not (‘false’); default: ‘true’",
+            "schema": {
+              "type": "string",
+              "default": "true"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Combines several attributive filters, e.g. OSM type, the geometry (simple feature) type, as well as the OSM tag; no default value",
+            "schema": {
+              "type": "string",
+              "default": "type:way and natural=*"
+            }
+          },
+          {
+            "name": "properties",
+            "in": "query",
+            "description": "List of possible property-groups added to each OSM-element: 'tags' and/or 'metadata' and/or 'contributionTypes' (only for the /contributions/{geometryType} endpoints); default: no property",
+            "schema": {
+              "type": "string",
+              "default": "tags"
+            }
+          },
+          {
+            "name": "showMetadata",
+            "in": "query",
+            "description": "Boolean operator 'true' or 'false'; default: 'false'",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "time",
+            "in": "query",
+            "description": "Two ISO-8601 conform timestrings defining an interval; no default value",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "2016-01-01,2017-01-01"
+            }
+          },
+          {
+            "name": "timeout",
+            "in": "query",
+            "description": "Custom timeout in seconds; no default value",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExtractionResponse"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/contributions/geometry": {
+      "get": {
+        "tags": [
+          "Contributions Extraction"
+        ],
+        "summary": "OSM contributions having the raw geometry of each OSM object as geometry",
+        "operationId": "contributionsGeometry",
+        "parameters": [
+          {
+            "name": "bboxes",
+            "in": "query",
+            "description": "WGS84 coordinates in the following format: id1:lon1,lat1,lon2,lat2|id2:lon1,lat1,lon2,lat2|... OR lon1,lat1,lon2,lat2|lon1,lat1,lon2,lat2|...; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string",
+              "default": "8.67,49.39,8.71,49.42"
+            }
+          },
+          {
+            "name": "bcircles",
+            "in": "query",
+            "description": "WGS84 coordinates + radius in meter in the following format: id1:lon,lat,r|id2:lon,lat,r|... OR lon,lat,r|lon,lat,r|...; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "bpolys",
+            "in": "query",
+            "description": "WGS84 coordinates given as a list of coordinate pairs (as for bboxes) or GeoJSON FeatureCollection. The first point has to be the same as the last point and MultiPolygons are only supported in GeoJSON; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "clipGeometry",
+            "in": "query",
+            "description": "Boolean operator to specify whether the returned geometries of the features should be clipped to the query's spatial boundary (‘true’), or not (‘false’); default: ‘true’",
+            "schema": {
+              "type": "string",
+              "default": "true"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Combines several attributive filters, e.g. OSM type, the geometry (simple feature) type, as well as the OSM tag; no default value",
+            "schema": {
+              "type": "string",
+              "default": "type:way and natural=*"
+            }
+          },
+          {
+            "name": "properties",
+            "in": "query",
+            "description": "List of possible property-groups added to each OSM-element: 'tags' and/or 'metadata' and/or 'contributionTypes' (only for the /contributions/{geometryType} endpoints); default: no property",
+            "schema": {
+              "type": "string",
+              "default": "tags"
+            }
+          },
+          {
+            "name": "showMetadata",
+            "in": "query",
+            "description": "Boolean operator 'true' or 'false'; default: 'false'",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "time",
+            "in": "query",
+            "description": "Two ISO-8601 conform timestrings defining an interval; no default value",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "2016-01-01,2017-01-01"
+            }
+          },
+          {
+            "name": "timeout",
+            "in": "query",
+            "description": "Custom timeout in seconds; no default value",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExtractionResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {}
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {}
+          },
+          "404": {
+            "description": "Not found",
+            "content": {}
+          },
+          "405": {
+            "description": "Method not allowed",
+            "content": {}
+          },
+          "413": {
+            "description": "Payload too large",
+            "content": {}
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {}
+          },
+          "501": {
+            "description": "Not implemented",
+            "content": {}
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {}
+          }
+        },
+        "deprecated": false
+      },
+      "post": {
+        "tags": [
+          "Contributions Extraction"
+        ],
+        "summary": "OSM contributions having the raw geometry of each OSM object as geometry",
+        "operationId": "contributionsGeometry_1",
+        "parameters": [
+          {
+            "name": "bboxes",
+            "in": "query",
+            "description": "WGS84 coordinates in the following format: id1:lon1,lat1,lon2,lat2|id2:lon1,lat1,lon2,lat2|... OR lon1,lat1,lon2,lat2|lon1,lat1,lon2,lat2|...; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string",
+              "default": "8.67,49.39,8.71,49.42"
+            }
+          },
+          {
+            "name": "bcircles",
+            "in": "query",
+            "description": "WGS84 coordinates + radius in meter in the following format: id1:lon,lat,r|id2:lon,lat,r|... OR lon,lat,r|lon,lat,r|...; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "bpolys",
+            "in": "query",
+            "description": "WGS84 coordinates given as a list of coordinate pairs (as for bboxes) or GeoJSON FeatureCollection. The first point has to be the same as the last point and MultiPolygons are only supported in GeoJSON; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "clipGeometry",
+            "in": "query",
+            "description": "Boolean operator to specify whether the returned geometries of the features should be clipped to the query's spatial boundary (‘true’), or not (‘false’); default: ‘true’",
+            "schema": {
+              "type": "string",
+              "default": "true"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Combines several attributive filters, e.g. OSM type, the geometry (simple feature) type, as well as the OSM tag; no default value",
+            "schema": {
+              "type": "string",
+              "default": "type:way and natural=*"
+            }
+          },
+          {
+            "name": "properties",
+            "in": "query",
+            "description": "List of possible property-groups added to each OSM-element: 'tags' and/or 'metadata' and/or 'contributionTypes' (only for the /contributions/{geometryType} endpoints); default: no property",
+            "schema": {
+              "type": "string",
+              "default": "tags"
+            }
+          },
+          {
+            "name": "showMetadata",
+            "in": "query",
+            "description": "Boolean operator 'true' or 'false'; default: 'false'",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "time",
+            "in": "query",
+            "description": "Two ISO-8601 conform timestrings defining an interval; no default value",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "2016-01-01,2017-01-01"
+            }
+          },
+          {
+            "name": "timeout",
+            "in": "query",
+            "description": "Custom timeout in seconds; no default value",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExtractionResponse"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/contributions/latest/bbox": {
+      "get": {
+        "tags": [
+          "Contributions Extraction"
+        ],
+        "summary": "Latest OSM contributions having the bounding box of each OSM object as geometry",
+        "operationId": "contributionsLatestBbox",
+        "parameters": [
+          {
+            "name": "bboxes",
+            "in": "query",
+            "description": "WGS84 coordinates in the following format: id1:lon1,lat1,lon2,lat2|id2:lon1,lat1,lon2,lat2|... OR lon1,lat1,lon2,lat2|lon1,lat1,lon2,lat2|...; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string",
+              "default": "8.67,49.39,8.71,49.42"
+            }
+          },
+          {
+            "name": "bcircles",
+            "in": "query",
+            "description": "WGS84 coordinates + radius in meter in the following format: id1:lon,lat,r|id2:lon,lat,r|... OR lon,lat,r|lon,lat,r|...; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "bpolys",
+            "in": "query",
+            "description": "WGS84 coordinates given as a list of coordinate pairs (as for bboxes) or GeoJSON FeatureCollection. The first point has to be the same as the last point and MultiPolygons are only supported in GeoJSON; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "clipGeometry",
+            "in": "query",
+            "description": "Boolean operator to specify whether the returned geometries of the features should be clipped to the query's spatial boundary (‘true’), or not (‘false’); default: ‘true’",
+            "schema": {
+              "type": "string",
+              "default": "true"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Combines several attributive filters, e.g. OSM type, the geometry (simple feature) type, as well as the OSM tag; no default value",
+            "schema": {
+              "type": "string",
+              "default": "type:way and natural=*"
+            }
+          },
+          {
+            "name": "properties",
+            "in": "query",
+            "description": "List of possible property-groups added to each OSM-element: 'tags' and/or 'metadata' and/or 'contributionTypes' (only for the /contributions/{geometryType} endpoints); default: no property",
+            "schema": {
+              "type": "string",
+              "default": "tags"
+            }
+          },
+          {
+            "name": "showMetadata",
+            "in": "query",
+            "description": "Boolean operator 'true' or 'false'; default: 'false'",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "time",
+            "in": "query",
+            "description": "Two ISO-8601 conform timestrings defining an interval; no default value",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "2016-01-01,2017-01-01"
+            }
+          },
+          {
+            "name": "timeout",
+            "in": "query",
+            "description": "Custom timeout in seconds; no default value",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExtractionResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {}
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {}
+          },
+          "404": {
+            "description": "Not found",
+            "content": {}
+          },
+          "405": {
+            "description": "Method not allowed",
+            "content": {}
+          },
+          "413": {
+            "description": "Payload too large",
+            "content": {}
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {}
+          },
+          "501": {
+            "description": "Not implemented",
+            "content": {}
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {}
+          }
+        },
+        "deprecated": false
+      },
+      "post": {
+        "tags": [
+          "Contributions Extraction"
+        ],
+        "summary": "Latest OSM contributions having the bounding box of each OSM object as geometry",
+        "operationId": "contributionsLatestBbox_1",
+        "parameters": [
+          {
+            "name": "bboxes",
+            "in": "query",
+            "description": "WGS84 coordinates in the following format: id1:lon1,lat1,lon2,lat2|id2:lon1,lat1,lon2,lat2|... OR lon1,lat1,lon2,lat2|lon1,lat1,lon2,lat2|...; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string",
+              "default": "8.67,49.39,8.71,49.42"
+            }
+          },
+          {
+            "name": "bcircles",
+            "in": "query",
+            "description": "WGS84 coordinates + radius in meter in the following format: id1:lon,lat,r|id2:lon,lat,r|... OR lon,lat,r|lon,lat,r|...; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "bpolys",
+            "in": "query",
+            "description": "WGS84 coordinates given as a list of coordinate pairs (as for bboxes) or GeoJSON FeatureCollection. The first point has to be the same as the last point and MultiPolygons are only supported in GeoJSON; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "clipGeometry",
+            "in": "query",
+            "description": "Boolean operator to specify whether the returned geometries of the features should be clipped to the query's spatial boundary (‘true’), or not (‘false’); default: ‘true’",
+            "schema": {
+              "type": "string",
+              "default": "true"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Combines several attributive filters, e.g. OSM type, the geometry (simple feature) type, as well as the OSM tag; no default value",
+            "schema": {
+              "type": "string",
+              "default": "type:way and natural=*"
+            }
+          },
+          {
+            "name": "properties",
+            "in": "query",
+            "description": "List of possible property-groups added to each OSM-element: 'tags' and/or 'metadata' and/or 'contributionTypes' (only for the /contributions/{geometryType} endpoints); default: no property",
+            "schema": {
+              "type": "string",
+              "default": "tags"
+            }
+          },
+          {
+            "name": "showMetadata",
+            "in": "query",
+            "description": "Boolean operator 'true' or 'false'; default: 'false'",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "time",
+            "in": "query",
+            "description": "Two ISO-8601 conform timestrings defining an interval; no default value",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "2016-01-01,2017-01-01"
+            }
+          },
+          {
+            "name": "timeout",
+            "in": "query",
+            "description": "Custom timeout in seconds; no default value",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExtractionResponse"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/contributions/latest/centroid": {
+      "get": {
+        "tags": [
+          "Contributions Extraction"
+        ],
+        "summary": "Latest OSM contributions having the centroid of each OSM object as geometry",
+        "operationId": "contributionsLatestCentroid",
+        "parameters": [
+          {
+            "name": "bboxes",
+            "in": "query",
+            "description": "WGS84 coordinates in the following format: id1:lon1,lat1,lon2,lat2|id2:lon1,lat1,lon2,lat2|... OR lon1,lat1,lon2,lat2|lon1,lat1,lon2,lat2|...; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string",
+              "default": "8.67,49.39,8.71,49.42"
+            }
+          },
+          {
+            "name": "bcircles",
+            "in": "query",
+            "description": "WGS84 coordinates + radius in meter in the following format: id1:lon,lat,r|id2:lon,lat,r|... OR lon,lat,r|lon,lat,r|...; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "bpolys",
+            "in": "query",
+            "description": "WGS84 coordinates given as a list of coordinate pairs (as for bboxes) or GeoJSON FeatureCollection. The first point has to be the same as the last point and MultiPolygons are only supported in GeoJSON; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "clipGeometry",
+            "in": "query",
+            "description": "Boolean operator to specify whether the returned geometries of the features should be clipped to the query's spatial boundary (‘true’), or not (‘false’); default: ‘true’",
+            "schema": {
+              "type": "string",
+              "default": "true"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Combines several attributive filters, e.g. OSM type, the geometry (simple feature) type, as well as the OSM tag; no default value",
+            "schema": {
+              "type": "string",
+              "default": "type:way and natural=*"
+            }
+          },
+          {
+            "name": "properties",
+            "in": "query",
+            "description": "List of possible property-groups added to each OSM-element: 'tags' and/or 'metadata' and/or 'contributionTypes' (only for the /contributions/{geometryType} endpoints); default: no property",
+            "schema": {
+              "type": "string",
+              "default": "tags"
+            }
+          },
+          {
+            "name": "showMetadata",
+            "in": "query",
+            "description": "Boolean operator 'true' or 'false'; default: 'false'",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "time",
+            "in": "query",
+            "description": "Two ISO-8601 conform timestrings defining an interval; no default value",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "2016-01-01,2017-01-01"
+            }
+          },
+          {
+            "name": "timeout",
+            "in": "query",
+            "description": "Custom timeout in seconds; no default value",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExtractionResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {}
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {}
+          },
+          "404": {
+            "description": "Not found",
+            "content": {}
+          },
+          "405": {
+            "description": "Method not allowed",
+            "content": {}
+          },
+          "413": {
+            "description": "Payload too large",
+            "content": {}
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {}
+          },
+          "501": {
+            "description": "Not implemented",
+            "content": {}
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {}
+          }
+        },
+        "deprecated": false
+      },
+      "post": {
+        "tags": [
+          "Contributions Extraction"
+        ],
+        "summary": "Latest OSM contributions having the centroid of each OSM object as geometry",
+        "operationId": "contributionsLatestCentroid_1",
+        "parameters": [
+          {
+            "name": "bboxes",
+            "in": "query",
+            "description": "WGS84 coordinates in the following format: id1:lon1,lat1,lon2,lat2|id2:lon1,lat1,lon2,lat2|... OR lon1,lat1,lon2,lat2|lon1,lat1,lon2,lat2|...; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string",
+              "default": "8.67,49.39,8.71,49.42"
+            }
+          },
+          {
+            "name": "bcircles",
+            "in": "query",
+            "description": "WGS84 coordinates + radius in meter in the following format: id1:lon,lat,r|id2:lon,lat,r|... OR lon,lat,r|lon,lat,r|...; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "bpolys",
+            "in": "query",
+            "description": "WGS84 coordinates given as a list of coordinate pairs (as for bboxes) or GeoJSON FeatureCollection. The first point has to be the same as the last point and MultiPolygons are only supported in GeoJSON; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "clipGeometry",
+            "in": "query",
+            "description": "Boolean operator to specify whether the returned geometries of the features should be clipped to the query's spatial boundary (‘true’), or not (‘false’); default: ‘true’",
+            "schema": {
+              "type": "string",
+              "default": "true"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Combines several attributive filters, e.g. OSM type, the geometry (simple feature) type, as well as the OSM tag; no default value",
+            "schema": {
+              "type": "string",
+              "default": "type:way and natural=*"
+            }
+          },
+          {
+            "name": "properties",
+            "in": "query",
+            "description": "List of possible property-groups added to each OSM-element: 'tags' and/or 'metadata' and/or 'contributionTypes' (only for the /contributions/{geometryType} endpoints); default: no property",
+            "schema": {
+              "type": "string",
+              "default": "tags"
+            }
+          },
+          {
+            "name": "showMetadata",
+            "in": "query",
+            "description": "Boolean operator 'true' or 'false'; default: 'false'",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "time",
+            "in": "query",
+            "description": "Two ISO-8601 conform timestrings defining an interval; no default value",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "2016-01-01,2017-01-01"
+            }
+          },
+          {
+            "name": "timeout",
+            "in": "query",
+            "description": "Custom timeout in seconds; no default value",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExtractionResponse"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/contributions/latest/geometry": {
+      "get": {
+        "tags": [
+          "Contributions Extraction"
+        ],
+        "summary": "Latest OSM contributions having the raw geometry of each OSM object as geometry",
+        "operationId": "contributionsLatestGeometry",
+        "parameters": [
+          {
+            "name": "bboxes",
+            "in": "query",
+            "description": "WGS84 coordinates in the following format: id1:lon1,lat1,lon2,lat2|id2:lon1,lat1,lon2,lat2|... OR lon1,lat1,lon2,lat2|lon1,lat1,lon2,lat2|...; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string",
+              "default": "8.67,49.39,8.71,49.42"
+            }
+          },
+          {
+            "name": "bcircles",
+            "in": "query",
+            "description": "WGS84 coordinates + radius in meter in the following format: id1:lon,lat,r|id2:lon,lat,r|... OR lon,lat,r|lon,lat,r|...; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "bpolys",
+            "in": "query",
+            "description": "WGS84 coordinates given as a list of coordinate pairs (as for bboxes) or GeoJSON FeatureCollection. The first point has to be the same as the last point and MultiPolygons are only supported in GeoJSON; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "clipGeometry",
+            "in": "query",
+            "description": "Boolean operator to specify whether the returned geometries of the features should be clipped to the query's spatial boundary (‘true’), or not (‘false’); default: ‘true’",
+            "schema": {
+              "type": "string",
+              "default": "true"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Combines several attributive filters, e.g. OSM type, the geometry (simple feature) type, as well as the OSM tag; no default value",
+            "schema": {
+              "type": "string",
+              "default": "type:way and natural=*"
+            }
+          },
+          {
+            "name": "properties",
+            "in": "query",
+            "description": "List of possible property-groups added to each OSM-element: 'tags' and/or 'metadata' and/or 'contributionTypes' (only for the /contributions/{geometryType} endpoints); default: no property",
+            "schema": {
+              "type": "string",
+              "default": "tags"
+            }
+          },
+          {
+            "name": "showMetadata",
+            "in": "query",
+            "description": "Boolean operator 'true' or 'false'; default: 'false'",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "time",
+            "in": "query",
+            "description": "Two ISO-8601 conform timestrings defining an interval; no default value",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "2016-01-01,2017-01-01"
+            }
+          },
+          {
+            "name": "timeout",
+            "in": "query",
+            "description": "Custom timeout in seconds; no default value",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExtractionResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {}
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {}
+          },
+          "404": {
+            "description": "Not found",
+            "content": {}
+          },
+          "405": {
+            "description": "Method not allowed",
+            "content": {}
+          },
+          "413": {
+            "description": "Payload too large",
+            "content": {}
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {}
+          },
+          "501": {
+            "description": "Not implemented",
+            "content": {}
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {}
+          }
+        },
+        "deprecated": false
+      },
+      "post": {
+        "tags": [
+          "Contributions Extraction"
+        ],
+        "summary": "Latest OSM contributions having the raw geometry of each OSM object as geometry",
+        "operationId": "contributionsLatestGeometry_1",
+        "parameters": [
+          {
+            "name": "bboxes",
+            "in": "query",
+            "description": "WGS84 coordinates in the following format: id1:lon1,lat1,lon2,lat2|id2:lon1,lat1,lon2,lat2|... OR lon1,lat1,lon2,lat2|lon1,lat1,lon2,lat2|...; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string",
+              "default": "8.67,49.39,8.71,49.42"
+            }
+          },
+          {
+            "name": "bcircles",
+            "in": "query",
+            "description": "WGS84 coordinates + radius in meter in the following format: id1:lon,lat,r|id2:lon,lat,r|... OR lon,lat,r|lon,lat,r|...; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "bpolys",
+            "in": "query",
+            "description": "WGS84 coordinates given as a list of coordinate pairs (as for bboxes) or GeoJSON FeatureCollection. The first point has to be the same as the last point and MultiPolygons are only supported in GeoJSON; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "clipGeometry",
+            "in": "query",
+            "description": "Boolean operator to specify whether the returned geometries of the features should be clipped to the query's spatial boundary (‘true’), or not (‘false’); default: ‘true’",
+            "schema": {
+              "type": "string",
+              "default": "true"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Combines several attributive filters, e.g. OSM type, the geometry (simple feature) type, as well as the OSM tag; no default value",
+            "schema": {
+              "type": "string",
+              "default": "type:way and natural=*"
+            }
+          },
+          {
+            "name": "properties",
+            "in": "query",
+            "description": "List of possible property-groups added to each OSM-element: 'tags' and/or 'metadata' and/or 'contributionTypes' (only for the /contributions/{geometryType} endpoints); default: no property",
+            "schema": {
+              "type": "string",
+              "default": "tags"
+            }
+          },
+          {
+            "name": "showMetadata",
+            "in": "query",
+            "description": "Boolean operator 'true' or 'false'; default: 'false'",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "time",
+            "in": "query",
+            "description": "Two ISO-8601 conform timestrings defining an interval; no default value",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "2016-01-01,2017-01-01"
+            }
+          },
+          {
+            "name": "timeout",
+            "in": "query",
+            "description": "Custom timeout in seconds; no default value",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExtractionResponse"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/elements/bbox": {
+      "get": {
+        "tags": [
+          "Elements Extraction"
+        ],
+        "summary": "OSM Data, having the bounding box of each OSM object as geometry",
+        "operationId": "elementsBbox",
+        "parameters": [
+          {
+            "name": "bboxes",
+            "in": "query",
+            "description": "WGS84 coordinates in the following format: id1:lon1,lat1,lon2,lat2|id2:lon1,lat1,lon2,lat2|... OR lon1,lat1,lon2,lat2|lon1,lat1,lon2,lat2|...; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string",
+              "default": "8.67,49.39,8.71,49.42"
+            }
+          },
+          {
+            "name": "bcircles",
+            "in": "query",
+            "description": "WGS84 coordinates + radius in meter in the following format: id1:lon,lat,r|id2:lon,lat,r|... OR lon,lat,r|lon,lat,r|...; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "bpolys",
+            "in": "query",
+            "description": "WGS84 coordinates given as a list of coordinate pairs (as for bboxes) or GeoJSON FeatureCollection. The first point has to be the same as the last point and MultiPolygons are only supported in GeoJSON; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "clipGeometry",
+            "in": "query",
+            "description": "Boolean operator to specify whether the returned geometries of the features should be clipped to the query's spatial boundary (‘true’), or not (‘false’); default: ‘true’",
+            "schema": {
+              "type": "string",
+              "default": "true"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Combines several attributive filters, e.g. OSM type, the geometry (simple feature) type, as well as the OSM tag; no default value",
+            "schema": {
+              "type": "string",
+              "default": "type:way and natural=*"
+            }
+          },
+          {
+            "name": "properties",
+            "in": "query",
+            "description": "List of possible property-groups added to each OSM-element: 'tags' and/or 'metadata' and/or 'contributionTypes' (only for the /contributions/{geometryType} endpoints); default: no property",
+            "schema": {
+              "type": "string",
+              "default": "tags"
+            }
+          },
+          {
+            "name": "showMetadata",
+            "in": "query",
+            "description": "Boolean operator 'true' or 'false'; default: 'false'",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "time",
+            "in": "query",
+            "description": "ISO-8601 conform timestring(s) defining timestamps (/elements), or intervals (/elementsFullHistory); no default value",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "2016-01-01,2017-01-01"
+            }
+          },
+          {
+            "name": "timeout",
+            "in": "query",
+            "description": "Custom timeout in seconds; no default value",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExtractionResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {}
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {}
+          },
+          "404": {
+            "description": "Not found",
+            "content": {}
+          },
+          "405": {
+            "description": "Method not allowed",
+            "content": {}
+          },
+          "413": {
+            "description": "Payload too large",
+            "content": {}
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {}
+          },
+          "501": {
+            "description": "Not implemented",
+            "content": {}
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {}
+          }
+        },
+        "deprecated": false
+      },
+      "post": {
+        "tags": [
+          "Elements Extraction"
+        ],
+        "summary": "OSM Data, having the bounding box of each OSM object as geometry",
+        "operationId": "elementsBbox_1",
+        "parameters": [
+          {
+            "name": "bboxes",
+            "in": "query",
+            "description": "WGS84 coordinates in the following format: id1:lon1,lat1,lon2,lat2|id2:lon1,lat1,lon2,lat2|... OR lon1,lat1,lon2,lat2|lon1,lat1,lon2,lat2|...; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string",
+              "default": "8.67,49.39,8.71,49.42"
+            }
+          },
+          {
+            "name": "bcircles",
+            "in": "query",
+            "description": "WGS84 coordinates + radius in meter in the following format: id1:lon,lat,r|id2:lon,lat,r|... OR lon,lat,r|lon,lat,r|...; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "bpolys",
+            "in": "query",
+            "description": "WGS84 coordinates given as a list of coordinate pairs (as for bboxes) or GeoJSON FeatureCollection. The first point has to be the same as the last point and MultiPolygons are only supported in GeoJSON; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "clipGeometry",
+            "in": "query",
+            "description": "Boolean operator to specify whether the returned geometries of the features should be clipped to the query's spatial boundary (‘true’), or not (‘false’); default: ‘true’",
+            "schema": {
+              "type": "string",
+              "default": "true"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Combines several attributive filters, e.g. OSM type, the geometry (simple feature) type, as well as the OSM tag; no default value",
+            "schema": {
+              "type": "string",
+              "default": "type:way and natural=*"
+            }
+          },
+          {
+            "name": "properties",
+            "in": "query",
+            "description": "List of possible property-groups added to each OSM-element: 'tags' and/or 'metadata' and/or 'contributionTypes' (only for the /contributions/{geometryType} endpoints); default: no property",
+            "schema": {
+              "type": "string",
+              "default": "tags"
+            }
+          },
+          {
+            "name": "showMetadata",
+            "in": "query",
+            "description": "Boolean operator 'true' or 'false'; default: 'false'",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "time",
+            "in": "query",
+            "description": "ISO-8601 conform timestring(s) defining timestamps (/elements), or intervals (/elementsFullHistory); no default value",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "2016-01-01,2017-01-01"
+            }
+          },
+          {
+            "name": "timeout",
+            "in": "query",
+            "description": "Custom timeout in seconds; no default value",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExtractionResponse"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/elements/centroid": {
+      "get": {
+        "tags": [
+          "Elements Extraction"
+        ],
+        "summary": "OSM Data, having the centroid of each OSM object as geometry",
+        "operationId": "elementsCentroid",
+        "parameters": [
+          {
+            "name": "bboxes",
+            "in": "query",
+            "description": "WGS84 coordinates in the following format: id1:lon1,lat1,lon2,lat2|id2:lon1,lat1,lon2,lat2|... OR lon1,lat1,lon2,lat2|lon1,lat1,lon2,lat2|...; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string",
+              "default": "8.67,49.39,8.71,49.42"
+            }
+          },
+          {
+            "name": "bcircles",
+            "in": "query",
+            "description": "WGS84 coordinates + radius in meter in the following format: id1:lon,lat,r|id2:lon,lat,r|... OR lon,lat,r|lon,lat,r|...; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "bpolys",
+            "in": "query",
+            "description": "WGS84 coordinates given as a list of coordinate pairs (as for bboxes) or GeoJSON FeatureCollection. The first point has to be the same as the last point and MultiPolygons are only supported in GeoJSON; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "clipGeometry",
+            "in": "query",
+            "description": "Boolean operator to specify whether the returned geometries of the features should be clipped to the query's spatial boundary (‘true’), or not (‘false’); default: ‘true’",
+            "schema": {
+              "type": "string",
+              "default": "true"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Combines several attributive filters, e.g. OSM type, the geometry (simple feature) type, as well as the OSM tag; no default value",
+            "schema": {
+              "type": "string",
+              "default": "type:way and natural=*"
+            }
+          },
+          {
+            "name": "properties",
+            "in": "query",
+            "description": "List of possible property-groups added to each OSM-element: 'tags' and/or 'metadata' and/or 'contributionTypes' (only for the /contributions/{geometryType} endpoints); default: no property",
+            "schema": {
+              "type": "string",
+              "default": "tags"
+            }
+          },
+          {
+            "name": "showMetadata",
+            "in": "query",
+            "description": "Boolean operator 'true' or 'false'; default: 'false'",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "time",
+            "in": "query",
+            "description": "ISO-8601 conform timestring(s) defining timestamps (/elements), or intervals (/elementsFullHistory); no default value",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "2016-01-01,2017-01-01"
+            }
+          },
+          {
+            "name": "timeout",
+            "in": "query",
+            "description": "Custom timeout in seconds; no default value",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExtractionResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {}
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {}
+          },
+          "404": {
+            "description": "Not found",
+            "content": {}
+          },
+          "405": {
+            "description": "Method not allowed",
+            "content": {}
+          },
+          "413": {
+            "description": "Payload too large",
+            "content": {}
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {}
+          },
+          "501": {
+            "description": "Not implemented",
+            "content": {}
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {}
+          }
+        },
+        "deprecated": false
+      },
+      "post": {
+        "tags": [
+          "Elements Extraction"
+        ],
+        "summary": "OSM Data, having the centroid of each OSM object as geometry",
+        "operationId": "elementsCentroid_1",
+        "parameters": [
+          {
+            "name": "bboxes",
+            "in": "query",
+            "description": "WGS84 coordinates in the following format: id1:lon1,lat1,lon2,lat2|id2:lon1,lat1,lon2,lat2|... OR lon1,lat1,lon2,lat2|lon1,lat1,lon2,lat2|...; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string",
+              "default": "8.67,49.39,8.71,49.42"
+            }
+          },
+          {
+            "name": "bcircles",
+            "in": "query",
+            "description": "WGS84 coordinates + radius in meter in the following format: id1:lon,lat,r|id2:lon,lat,r|... OR lon,lat,r|lon,lat,r|...; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "bpolys",
+            "in": "query",
+            "description": "WGS84 coordinates given as a list of coordinate pairs (as for bboxes) or GeoJSON FeatureCollection. The first point has to be the same as the last point and MultiPolygons are only supported in GeoJSON; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "clipGeometry",
+            "in": "query",
+            "description": "Boolean operator to specify whether the returned geometries of the features should be clipped to the query's spatial boundary (‘true’), or not (‘false’); default: ‘true’",
+            "schema": {
+              "type": "string",
+              "default": "true"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Combines several attributive filters, e.g. OSM type, the geometry (simple feature) type, as well as the OSM tag; no default value",
+            "schema": {
+              "type": "string",
+              "default": "type:way and natural=*"
+            }
+          },
+          {
+            "name": "properties",
+            "in": "query",
+            "description": "List of possible property-groups added to each OSM-element: 'tags' and/or 'metadata' and/or 'contributionTypes' (only for the /contributions/{geometryType} endpoints); default: no property",
+            "schema": {
+              "type": "string",
+              "default": "tags"
+            }
+          },
+          {
+            "name": "showMetadata",
+            "in": "query",
+            "description": "Boolean operator 'true' or 'false'; default: 'false'",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "time",
+            "in": "query",
+            "description": "ISO-8601 conform timestring(s) defining timestamps (/elements), or intervals (/elementsFullHistory); no default value",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "2016-01-01,2017-01-01"
+            }
+          },
+          {
+            "name": "timeout",
+            "in": "query",
+            "description": "Custom timeout in seconds; no default value",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExtractionResponse"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/elements/geometry": {
+      "get": {
+        "tags": [
+          "Elements Extraction"
+        ],
+        "summary": "OSM Data having the raw geometry of each OSM object as geometry",
+        "operationId": "elementsGeometry",
+        "parameters": [
+          {
+            "name": "bboxes",
+            "in": "query",
+            "description": "WGS84 coordinates in the following format: id1:lon1,lat1,lon2,lat2|id2:lon1,lat1,lon2,lat2|... OR lon1,lat1,lon2,lat2|lon1,lat1,lon2,lat2|...; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string",
+              "default": "8.67,49.39,8.71,49.42"
+            }
+          },
+          {
+            "name": "bcircles",
+            "in": "query",
+            "description": "WGS84 coordinates + radius in meter in the following format: id1:lon,lat,r|id2:lon,lat,r|... OR lon,lat,r|lon,lat,r|...; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "bpolys",
+            "in": "query",
+            "description": "WGS84 coordinates given as a list of coordinate pairs (as for bboxes) or GeoJSON FeatureCollection. The first point has to be the same as the last point and MultiPolygons are only supported in GeoJSON; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "clipGeometry",
+            "in": "query",
+            "description": "Boolean operator to specify whether the returned geometries of the features should be clipped to the query's spatial boundary (‘true’), or not (‘false’); default: ‘true’",
+            "schema": {
+              "type": "string",
+              "default": "true"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Combines several attributive filters, e.g. OSM type, the geometry (simple feature) type, as well as the OSM tag; no default value",
+            "schema": {
+              "type": "string",
+              "default": "type:way and natural=*"
+            }
+          },
+          {
+            "name": "properties",
+            "in": "query",
+            "description": "List of possible property-groups added to each OSM-element: 'tags' and/or 'metadata' and/or 'contributionTypes' (only for the /contributions/{geometryType} endpoints); default: no property",
+            "schema": {
+              "type": "string",
+              "default": "tags"
+            }
+          },
+          {
+            "name": "showMetadata",
+            "in": "query",
+            "description": "Boolean operator 'true' or 'false'; default: 'false'",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "time",
+            "in": "query",
+            "description": "ISO-8601 conform timestring(s) defining timestamps (/elements), or intervals (/elementsFullHistory); no default value",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "2016-01-01,2017-01-01"
+            }
+          },
+          {
+            "name": "timeout",
+            "in": "query",
+            "description": "Custom timeout in seconds; no default value",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExtractionResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {}
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {}
+          },
+          "404": {
+            "description": "Not found",
+            "content": {}
+          },
+          "405": {
+            "description": "Method not allowed",
+            "content": {}
+          },
+          "413": {
+            "description": "Payload too large",
+            "content": {}
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {}
+          },
+          "501": {
+            "description": "Not implemented",
+            "content": {}
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {}
+          }
+        },
+        "deprecated": false
+      },
+      "post": {
+        "tags": [
+          "Elements Extraction"
+        ],
+        "summary": "OSM Data having the raw geometry of each OSM object as geometry",
+        "operationId": "elementsGeometry_1",
+        "parameters": [
+          {
+            "name": "bboxes",
+            "in": "query",
+            "description": "WGS84 coordinates in the following format: id1:lon1,lat1,lon2,lat2|id2:lon1,lat1,lon2,lat2|... OR lon1,lat1,lon2,lat2|lon1,lat1,lon2,lat2|...; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string",
+              "default": "8.67,49.39,8.71,49.42"
+            }
+          },
+          {
+            "name": "bcircles",
+            "in": "query",
+            "description": "WGS84 coordinates + radius in meter in the following format: id1:lon,lat,r|id2:lon,lat,r|... OR lon,lat,r|lon,lat,r|...; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "bpolys",
+            "in": "query",
+            "description": "WGS84 coordinates given as a list of coordinate pairs (as for bboxes) or GeoJSON FeatureCollection. The first point has to be the same as the last point and MultiPolygons are only supported in GeoJSON; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "clipGeometry",
+            "in": "query",
+            "description": "Boolean operator to specify whether the returned geometries of the features should be clipped to the query's spatial boundary (‘true’), or not (‘false’); default: ‘true’",
+            "schema": {
+              "type": "string",
+              "default": "true"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Combines several attributive filters, e.g. OSM type, the geometry (simple feature) type, as well as the OSM tag; no default value",
+            "schema": {
+              "type": "string",
+              "default": "type:way and natural=*"
+            }
+          },
+          {
+            "name": "properties",
+            "in": "query",
+            "description": "List of possible property-groups added to each OSM-element: 'tags' and/or 'metadata' and/or 'contributionTypes' (only for the /contributions/{geometryType} endpoints); default: no property",
+            "schema": {
+              "type": "string",
+              "default": "tags"
+            }
+          },
+          {
+            "name": "showMetadata",
+            "in": "query",
+            "description": "Boolean operator 'true' or 'false'; default: 'false'",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "time",
+            "in": "query",
+            "description": "ISO-8601 conform timestring(s) defining timestamps (/elements), or intervals (/elementsFullHistory); no default value",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "2016-01-01,2017-01-01"
+            }
+          },
+          {
+            "name": "timeout",
+            "in": "query",
+            "description": "Custom timeout in seconds; no default value",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExtractionResponse"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/elementsFullHistory/bbox": {
+      "get": {
+        "tags": [
+          "Full History Elements Extraction"
+        ],
+        "summary": "Full history OSM data having the bounding box of each OSM object as geometry",
+        "operationId": "elementsBboxFullHistory",
+        "parameters": [
+          {
+            "name": "bboxes",
+            "in": "query",
+            "description": "WGS84 coordinates in the following format: id1:lon1,lat1,lon2,lat2|id2:lon1,lat1,lon2,lat2|... OR lon1,lat1,lon2,lat2|lon1,lat1,lon2,lat2|...; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string",
+              "default": "8.67,49.39,8.71,49.42"
+            }
+          },
+          {
+            "name": "bcircles",
+            "in": "query",
+            "description": "WGS84 coordinates + radius in meter in the following format: id1:lon,lat,r|id2:lon,lat,r|... OR lon,lat,r|lon,lat,r|...; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "bpolys",
+            "in": "query",
+            "description": "WGS84 coordinates given as a list of coordinate pairs (as for bboxes) or GeoJSON FeatureCollection. The first point has to be the same as the last point and MultiPolygons are only supported in GeoJSON; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "clipGeometry",
+            "in": "query",
+            "description": "Boolean operator to specify whether the returned geometries of the features should be clipped to the query's spatial boundary (‘true’), or not (‘false’); default: ‘true’",
+            "schema": {
+              "type": "string",
+              "default": "true"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Combines several attributive filters, e.g. OSM type, the geometry (simple feature) type, as well as the OSM tag; no default value",
+            "schema": {
+              "type": "string",
+              "default": "type:way and natural=*"
+            }
+          },
+          {
+            "name": "properties",
+            "in": "query",
+            "description": "List of possible property-groups added to each OSM-element: 'tags' and/or 'metadata' and/or 'contributionTypes' (only for the /contributions/{geometryType} endpoints); default: no property",
+            "schema": {
+              "type": "string",
+              "default": "tags"
+            }
+          },
+          {
+            "name": "showMetadata",
+            "in": "query",
+            "description": "Boolean operator 'true' or 'false'; default: 'false'",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "time",
+            "in": "query",
+            "description": "Two ISO-8601 conform timestrings defining an interval; no default value",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "2016-01-01,2017-01-01"
+            }
+          },
+          {
+            "name": "timeout",
+            "in": "query",
+            "description": "Custom timeout in seconds; no default value",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExtractionResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {}
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {}
+          },
+          "404": {
+            "description": "Not found",
+            "content": {}
+          },
+          "405": {
+            "description": "Method not allowed",
+            "content": {}
+          },
+          "413": {
+            "description": "Payload too large",
+            "content": {}
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {}
+          },
+          "501": {
+            "description": "Not implemented",
+            "content": {}
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {}
+          }
+        },
+        "deprecated": false
+      },
+      "post": {
+        "tags": [
+          "Full History Elements Extraction"
+        ],
+        "summary": "Full history OSM data having the bounding box of each OSM object as geometry",
+        "operationId": "elementsBboxFullHistory_1",
+        "parameters": [
+          {
+            "name": "bboxes",
+            "in": "query",
+            "description": "WGS84 coordinates in the following format: id1:lon1,lat1,lon2,lat2|id2:lon1,lat1,lon2,lat2|... OR lon1,lat1,lon2,lat2|lon1,lat1,lon2,lat2|...; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string",
+              "default": "8.67,49.39,8.71,49.42"
+            }
+          },
+          {
+            "name": "bcircles",
+            "in": "query",
+            "description": "WGS84 coordinates + radius in meter in the following format: id1:lon,lat,r|id2:lon,lat,r|... OR lon,lat,r|lon,lat,r|...; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "bpolys",
+            "in": "query",
+            "description": "WGS84 coordinates given as a list of coordinate pairs (as for bboxes) or GeoJSON FeatureCollection. The first point has to be the same as the last point and MultiPolygons are only supported in GeoJSON; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "clipGeometry",
+            "in": "query",
+            "description": "Boolean operator to specify whether the returned geometries of the features should be clipped to the query's spatial boundary (‘true’), or not (‘false’); default: ‘true’",
+            "schema": {
+              "type": "string",
+              "default": "true"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Combines several attributive filters, e.g. OSM type, the geometry (simple feature) type, as well as the OSM tag; no default value",
+            "schema": {
+              "type": "string",
+              "default": "type:way and natural=*"
+            }
+          },
+          {
+            "name": "properties",
+            "in": "query",
+            "description": "List of possible property-groups added to each OSM-element: 'tags' and/or 'metadata' and/or 'contributionTypes' (only for the /contributions/{geometryType} endpoints); default: no property",
+            "schema": {
+              "type": "string",
+              "default": "tags"
+            }
+          },
+          {
+            "name": "showMetadata",
+            "in": "query",
+            "description": "Boolean operator 'true' or 'false'; default: 'false'",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "time",
+            "in": "query",
+            "description": "Two ISO-8601 conform timestrings defining an interval; no default value",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "2016-01-01,2017-01-01"
+            }
+          },
+          {
+            "name": "timeout",
+            "in": "query",
+            "description": "Custom timeout in seconds; no default value",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExtractionResponse"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/elementsFullHistory/centroid": {
+      "get": {
+        "tags": [
+          "Full History Elements Extraction"
+        ],
+        "summary": "Full history OSM data having the centroid of each OSM object as geometry",
+        "operationId": "elementsCentroidFullHistory",
+        "parameters": [
+          {
+            "name": "bboxes",
+            "in": "query",
+            "description": "WGS84 coordinates in the following format: id1:lon1,lat1,lon2,lat2|id2:lon1,lat1,lon2,lat2|... OR lon1,lat1,lon2,lat2|lon1,lat1,lon2,lat2|...; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string",
+              "default": "8.67,49.39,8.71,49.42"
+            }
+          },
+          {
+            "name": "bcircles",
+            "in": "query",
+            "description": "WGS84 coordinates + radius in meter in the following format: id1:lon,lat,r|id2:lon,lat,r|... OR lon,lat,r|lon,lat,r|...; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "bpolys",
+            "in": "query",
+            "description": "WGS84 coordinates given as a list of coordinate pairs (as for bboxes) or GeoJSON FeatureCollection. The first point has to be the same as the last point and MultiPolygons are only supported in GeoJSON; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "clipGeometry",
+            "in": "query",
+            "description": "Boolean operator to specify whether the returned geometries of the features should be clipped to the query's spatial boundary (‘true’), or not (‘false’); default: ‘true’",
+            "schema": {
+              "type": "string",
+              "default": "true"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Combines several attributive filters, e.g. OSM type, the geometry (simple feature) type, as well as the OSM tag; no default value",
+            "schema": {
+              "type": "string",
+              "default": "type:way and natural=*"
+            }
+          },
+          {
+            "name": "properties",
+            "in": "query",
+            "description": "List of possible property-groups added to each OSM-element: 'tags' and/or 'metadata' and/or 'contributionTypes' (only for the /contributions/{geometryType} endpoints); default: no property",
+            "schema": {
+              "type": "string",
+              "default": "tags"
+            }
+          },
+          {
+            "name": "showMetadata",
+            "in": "query",
+            "description": "Boolean operator 'true' or 'false'; default: 'false'",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "time",
+            "in": "query",
+            "description": "Two ISO-8601 conform timestrings defining an interval; no default value",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "2016-01-01,2017-01-01"
+            }
+          },
+          {
+            "name": "timeout",
+            "in": "query",
+            "description": "Custom timeout in seconds; no default value",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExtractionResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {}
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {}
+          },
+          "404": {
+            "description": "Not found",
+            "content": {}
+          },
+          "405": {
+            "description": "Method not allowed",
+            "content": {}
+          },
+          "413": {
+            "description": "Payload too large",
+            "content": {}
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {}
+          },
+          "501": {
+            "description": "Not implemented",
+            "content": {}
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {}
+          }
+        },
+        "deprecated": false
+      },
+      "post": {
+        "tags": [
+          "Full History Elements Extraction"
+        ],
+        "summary": "Full history OSM data having the centroid of each OSM object as geometry",
+        "operationId": "elementsCentroidFullHistory_1",
+        "parameters": [
+          {
+            "name": "bboxes",
+            "in": "query",
+            "description": "WGS84 coordinates in the following format: id1:lon1,lat1,lon2,lat2|id2:lon1,lat1,lon2,lat2|... OR lon1,lat1,lon2,lat2|lon1,lat1,lon2,lat2|...; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string",
+              "default": "8.67,49.39,8.71,49.42"
+            }
+          },
+          {
+            "name": "bcircles",
+            "in": "query",
+            "description": "WGS84 coordinates + radius in meter in the following format: id1:lon,lat,r|id2:lon,lat,r|... OR lon,lat,r|lon,lat,r|...; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "bpolys",
+            "in": "query",
+            "description": "WGS84 coordinates given as a list of coordinate pairs (as for bboxes) or GeoJSON FeatureCollection. The first point has to be the same as the last point and MultiPolygons are only supported in GeoJSON; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "clipGeometry",
+            "in": "query",
+            "description": "Boolean operator to specify whether the returned geometries of the features should be clipped to the query's spatial boundary (‘true’), or not (‘false’); default: ‘true’",
+            "schema": {
+              "type": "string",
+              "default": "true"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Combines several attributive filters, e.g. OSM type, the geometry (simple feature) type, as well as the OSM tag; no default value",
+            "schema": {
+              "type": "string",
+              "default": "type:way and natural=*"
+            }
+          },
+          {
+            "name": "properties",
+            "in": "query",
+            "description": "List of possible property-groups added to each OSM-element: 'tags' and/or 'metadata' and/or 'contributionTypes' (only for the /contributions/{geometryType} endpoints); default: no property",
+            "schema": {
+              "type": "string",
+              "default": "tags"
+            }
+          },
+          {
+            "name": "showMetadata",
+            "in": "query",
+            "description": "Boolean operator 'true' or 'false'; default: 'false'",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "time",
+            "in": "query",
+            "description": "Two ISO-8601 conform timestrings defining an interval; no default value",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "2016-01-01,2017-01-01"
+            }
+          },
+          {
+            "name": "timeout",
+            "in": "query",
+            "description": "Custom timeout in seconds; no default value",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExtractionResponse"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/elementsFullHistory/geometry": {
+      "get": {
+        "tags": [
+          "Full History Elements Extraction"
+        ],
+        "summary": "Full history OSM data having the raw geometry of each OSM object as geometry",
+        "operationId": "elementsFullHistory",
+        "parameters": [
+          {
+            "name": "bboxes",
+            "in": "query",
+            "description": "WGS84 coordinates in the following format: id1:lon1,lat1,lon2,lat2|id2:lon1,lat1,lon2,lat2|... OR lon1,lat1,lon2,lat2|lon1,lat1,lon2,lat2|...; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string",
+              "default": "8.67,49.39,8.71,49.42"
+            }
+          },
+          {
+            "name": "bcircles",
+            "in": "query",
+            "description": "WGS84 coordinates + radius in meter in the following format: id1:lon,lat,r|id2:lon,lat,r|... OR lon,lat,r|lon,lat,r|...; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "bpolys",
+            "in": "query",
+            "description": "WGS84 coordinates given as a list of coordinate pairs (as for bboxes) or GeoJSON FeatureCollection. The first point has to be the same as the last point and MultiPolygons are only supported in GeoJSON; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "clipGeometry",
+            "in": "query",
+            "description": "Boolean operator to specify whether the returned geometries of the features should be clipped to the query's spatial boundary (‘true’), or not (‘false’); default: ‘true’",
+            "schema": {
+              "type": "string",
+              "default": "true"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Combines several attributive filters, e.g. OSM type, the geometry (simple feature) type, as well as the OSM tag; no default value",
+            "schema": {
+              "type": "string",
+              "default": "type:way and natural=*"
+            }
+          },
+          {
+            "name": "properties",
+            "in": "query",
+            "description": "List of possible property-groups added to each OSM-element: 'tags' and/or 'metadata' and/or 'contributionTypes' (only for the /contributions/{geometryType} endpoints); default: no property",
+            "schema": {
+              "type": "string",
+              "default": "tags"
+            }
+          },
+          {
+            "name": "showMetadata",
+            "in": "query",
+            "description": "Boolean operator 'true' or 'false'; default: 'false'",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "time",
+            "in": "query",
+            "description": "Two ISO-8601 conform timestrings defining an interval; no default value",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "2016-01-01,2017-01-01"
+            }
+          },
+          {
+            "name": "timeout",
+            "in": "query",
+            "description": "Custom timeout in seconds; no default value",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExtractionResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {}
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {}
+          },
+          "404": {
+            "description": "Not found",
+            "content": {}
+          },
+          "405": {
+            "description": "Method not allowed",
+            "content": {}
+          },
+          "413": {
+            "description": "Payload too large",
+            "content": {}
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {}
+          },
+          "501": {
+            "description": "Not implemented",
+            "content": {}
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {}
+          }
+        },
+        "deprecated": false
+      },
+      "post": {
+        "tags": [
+          "Full History Elements Extraction"
+        ],
+        "summary": "Full history OSM data having the raw geometry of each OSM object as geometry",
+        "operationId": "elementsFullHistory_1",
+        "parameters": [
+          {
+            "name": "bboxes",
+            "in": "query",
+            "description": "WGS84 coordinates in the following format: id1:lon1,lat1,lon2,lat2|id2:lon1,lat1,lon2,lat2|... OR lon1,lat1,lon2,lat2|lon1,lat1,lon2,lat2|...; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string",
+              "default": "8.67,49.39,8.71,49.42"
+            }
+          },
+          {
+            "name": "bcircles",
+            "in": "query",
+            "description": "WGS84 coordinates + radius in meter in the following format: id1:lon,lat,r|id2:lon,lat,r|... OR lon,lat,r|lon,lat,r|...; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "bpolys",
+            "in": "query",
+            "description": "WGS84 coordinates given as a list of coordinate pairs (as for bboxes) or GeoJSON FeatureCollection. The first point has to be the same as the last point and MultiPolygons are only supported in GeoJSON; no default value (one boundary parameter must be defined)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "clipGeometry",
+            "in": "query",
+            "description": "Boolean operator to specify whether the returned geometries of the features should be clipped to the query's spatial boundary (‘true’), or not (‘false’); default: ‘true’",
+            "schema": {
+              "type": "string",
+              "default": "true"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Combines several attributive filters, e.g. OSM type, the geometry (simple feature) type, as well as the OSM tag; no default value",
+            "schema": {
+              "type": "string",
+              "default": "type:way and natural=*"
+            }
+          },
+          {
+            "name": "properties",
+            "in": "query",
+            "description": "List of possible property-groups added to each OSM-element: 'tags' and/or 'metadata' and/or 'contributionTypes' (only for the /contributions/{geometryType} endpoints); default: no property",
+            "schema": {
+              "type": "string",
+              "default": "tags"
+            }
+          },
+          {
+            "name": "showMetadata",
+            "in": "query",
+            "description": "Boolean operator 'true' or 'false'; default: 'false'",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "time",
+            "in": "query",
+            "description": "Two ISO-8601 conform timestrings defining an interval; no default value",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "2016-01-01,2017-01-01"
+            }
+          },
+          {
+            "name": "timeout",
+            "in": "query",
+            "description": "Custom timeout in seconds; no default value",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExtractionResponse"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Attribution": {
+        "title": "Attribution",
+        "required": [
+          "text",
+          "url"
+        ],
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string",
+            "description": "Copyright info about the used data"
+          },
+          "url": {
+            "type": "string",
+            "description": "URL to the copyright and license info"
+          }
+        }
+      },
+      "ExtractionResponse": {
+        "title": "ExtractionResponse",
+        "required": [
+          "apiVersion",
+          "attribution",
+          "type"
+        ],
+        "type": "object",
+        "properties": {
+          "apiVersion": {
+            "type": "string",
+            "description": "Version of this api"
+          },
+          "attribution": {
+            "$ref": "#/components/schemas/Attribution"
+          },
+          "features": {
+            "type": "array",
+            "description": "List of GeoJSON features containing the OSM data",
+            "items": {
+              "$ref": "#/components/schemas/Feature"
+            }
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/Metadata"
+          },
+          "type": {
+            "type": "string",
+            "description": "Type of the GeoJSON"
+          }
+        }
+      },
+      "Feature": {
+        "title": "Feature",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Geometry"
+          },
+          {
+            "title": "Feature",
+            "type": "object",
+            "properties": {
+              "geometry": {
+                "$ref": "#/components/schemas/Geometry"
+              },
+              "id": {
+                "type": "object",
+                "properties": {}
+              },
+              "properties": {
+                "type": "object",
+                "properties": {}
+              },
+              "type": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "FeatureCollection": {
+        "title": "FeatureCollection",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Geometry"
+          },
+          {
+            "title": "FeatureCollection",
+            "type": "object",
+            "properties": {
+              "features": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Feature"
+                }
+              },
+              "type": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "Geometry": {
+        "title": "Geometry",
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          }
+        }
+      },
+      "GeometryCollection": {
+        "title": "GeometryCollection",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Geometry"
+          },
+          {
+            "title": "GeometryCollection",
+            "type": "object",
+            "properties": {
+              "geometries": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Geometry"
+                }
+              },
+              "type": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "LineString": {
+        "title": "LineString",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Geometry"
+          },
+          {
+            "title": "LineString",
+            "type": "object",
+            "properties": {
+              "bbox": {
+                "type": "array",
+                "items": {
+                  "type": "number",
+                  "format": "double"
+                }
+              },
+              "coordinates": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "number",
+                    "format": "double"
+                  }
+                }
+              },
+              "type": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "Metadata": {
+        "title": "Metadata",
+        "required": [
+          "description",
+          "executionTime",
+          "requestUrl"
+        ],
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "string",
+            "description": "Text describing the result in a sentence"
+          },
+          "executionTime": {
+            "type": "integer",
+            "description": "Time the server needed to execute the request",
+            "format": "int64"
+          },
+          "requestUrl": {
+            "type": "string",
+            "description": "Request URL to which this whole output JSON was generated"
+          }
+        }
+      },
+      "MultiLineString": {
+        "title": "MultiLineString",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Geometry"
+          },
+          {
+            "title": "MultiLineString",
+            "type": "object",
+            "properties": {
+              "bbox": {
+                "type": "array",
+                "items": {
+                  "type": "number",
+                  "format": "double"
+                }
+              },
+              "coordinates": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "array",
+                    "items": {
+                      "type": "number",
+                      "format": "double"
+                    }
+                  }
+                }
+              },
+              "type": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "MultiPoint": {
+        "title": "MultiPoint",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Geometry"
+          },
+          {
+            "title": "MultiPoint",
+            "type": "object",
+            "properties": {
+              "bbox": {
+                "type": "array",
+                "items": {
+                  "type": "number",
+                  "format": "double"
+                }
+              },
+              "coordinates": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "number",
+                    "format": "double"
+                  }
+                }
+              },
+              "type": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "MultiPolygon": {
+        "title": "MultiPolygon",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Geometry"
+          },
+          {
+            "title": "MultiPolygon",
+            "type": "object",
+            "properties": {
+              "bbox": {
+                "type": "array",
+                "items": {
+                  "type": "number",
+                  "format": "double"
+                }
+              },
+              "coordinates": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "array",
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "type": "number",
+                        "format": "double"
+                      }
+                    }
+                  }
+                }
+              },
+              "type": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "Point": {
+        "title": "Point",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Geometry"
+          },
+          {
+            "title": "Point",
+            "type": "object",
+            "properties": {
+              "bbox": {
+                "type": "array",
+                "items": {
+                  "type": "number",
+                  "format": "double"
+                }
+              },
+              "coordinates": {
+                "type": "array",
+                "items": {
+                  "type": "number",
+                  "format": "double"
+                }
+              },
+              "type": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "Polygon": {
+        "title": "Polygon",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Geometry"
+          },
+          {
+            "title": "Polygon",
+            "type": "object",
+            "properties": {
+              "bbox": {
+                "type": "array",
+                "items": {
+                  "type": "number",
+                  "format": "double"
+                }
+              },
+              "coordinates": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "array",
+                    "items": {
+                      "type": "number",
+                      "format": "double"
+                    }
+                  }
+                }
+              },
+              "type": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

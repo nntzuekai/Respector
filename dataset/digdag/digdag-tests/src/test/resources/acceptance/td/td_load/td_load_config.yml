@@ -1,0 +1,27 @@
+in:
+  type: s3
+  access_key_id: ${secret:access_key_id}
+  secret_access_key: ${secret:secret_access_key}
+  bucket: ${s3_bucket}
+  path_prefix: ${s3_path_prefix}
+  parser:
+    charset: UTF-8
+    newline: CRLF
+    type: csv
+    delimiter: ","
+    quote: "\""
+    escape: "\""
+    trim_if_not_quoted: false
+    skip_header_lines: 1
+    allow_extra_columns: false
+    allow_optional_columns: false
+    columns:
+    - name: time
+      type: long
+    - name: foo
+      type: string
+    - name: bar
+      type: string
+out:
+  mode: replace
+  type: td

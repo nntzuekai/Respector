@@ -1,0 +1,80 @@
+<!--
+
+    Copyright (C) 2015 The Gravitee team (http://gravitee.io)
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+            http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<div class="org-settings-roles">
+  <div class="org-settings-roles__content">
+    <h1>Roles</h1>
+
+    <mat-card *ngFor="let item of rolesByScope" class="org-settings-roles__content__card">
+      <div class="org-settings-roles__content__headline">
+        <h2 gioTableOfContents>{{ item.scope }}</h2>
+        <button
+          *gioPermission="{ anyOf: ['organization-role-c'] }"
+          (click)="onAddARoleClicked(item.scopeId)"
+          mat-raised-button
+          color="primary"
+        >
+          <mat-icon>add</mat-icon>Add a role
+        </button>
+      </div>
+      <mat-list class="org-settings-roles__content__list">
+        <mat-list-item class="org-settings-roles__content__list__item" *ngFor="let role of item.roles">
+          <mat-icon mat-list-icon>{{ role.icon }}</mat-icon>
+          <div class="org-settings-roles__content__list__item__description" (click)="onEditRoleClicked(item.scopeId, role)">
+            <div mat-line>
+              <span>{{ role.name }}</span>
+              <span *ngIf="role.isSystem" class="gio-badge">System</span>
+              <span *ngIf="role.isDefault" class="gio-badge gio-badge-accent">Default</span>
+            </div>
+            <div mat-line>{{ role.description }}</div>
+          </div>
+          <div>
+            <ng-container *gioPermission="{ anyOf: ['organization-role-d'] }">
+              <button
+                *ngIf="role.canBeDeleted"
+                (click)="onDeleteRoleClicked(item.scopeId, role)"
+                mat-icon-button
+                aria-label="Button to delete a role"
+                matTooltip="Delete role"
+              >
+                <mat-icon>delete</mat-icon>
+              </button>
+            </ng-container>
+
+            <ng-container *gioPermission="{ anyOf: ['organization-role-u'] }">
+              <button
+                *ngIf="role.hasUserRoleManagement"
+                (click)="onMembersClicked(item.scopeId, role)"
+                mat-icon-button
+                aria-label="Button to see members with this role"
+                matTooltip="See members"
+              >
+                <mat-icon>people</mat-icon>
+              </button>
+            </ng-container>
+          </div>
+        </mat-list-item>
+      </mat-list>
+    </mat-card>
+  </div>
+
+  <gio-table-of-contents
+    class="org-settings-roles__toc"
+    [sectionNames]="{ '': 'Roles' }"
+    scrollingContainer=".gio-main-page__content"
+  ></gio-table-of-contents>
+</div>

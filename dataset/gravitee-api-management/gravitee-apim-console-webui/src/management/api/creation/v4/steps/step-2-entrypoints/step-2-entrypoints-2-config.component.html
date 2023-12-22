@@ -1,0 +1,58 @@
+<!--
+
+    Copyright (C) 2015 The Gravitee team (http://gravitee.io)
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+            http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<mat-card class="api-creation-v4__step">
+  <div class="api-creation-v4__step__header">
+    <div class="api-creation-v4__step__header__step-number">Step 2</div>
+    <div class="api-creation-v4__step__header__subtitle">Configure your API entrypoints</div>
+    <p class="api-creation-v4__step__header__paragraph-light">Configure how your users will consume your API</p>
+  </div>
+
+  <form *ngIf="formGroup" [formGroup]="formGroup" (ngSubmit)="save()">
+    <div class="api-creation-v4__form-container" *ngIf="hasListeners">
+      <h3>Configure common entrypoints fields</h3>
+      <h4 class="api-creation-v4__form-container__subTitle">Entrypoints context</h4>
+      <gio-form-listeners-context-path *ngIf="!this.enableVirtualHost" formControlName="paths"></gio-form-listeners-context-path>
+      <gio-form-listeners-virtual-host
+        *ngIf="this.enableVirtualHost"
+        formControlName="paths"
+        [domainRestrictions]="domainRestrictions"
+      ></gio-form-listeners-virtual-host>
+
+      <div class="step-2-entrypoints-2-config__actions">
+        <button id="switchListenerType" mat-button type="button" (click)="this.enableVirtualHost = !this.enableVirtualHost">
+          <ng-container *ngIf="!this.enableVirtualHost"> <mat-icon svgIcon="gio:check"></mat-icon> Enable virtual hosts </ng-container>
+          <ng-container *ngIf="this.enableVirtualHost"> <mat-icon svgIcon="gio:cancel"></mat-icon> Disable virtual hosts </ng-container>
+        </button>
+      </div>
+    </div>
+
+    <div class="api-creation-v4__form-container" *ngFor="let entrypoint of selectedEntrypoints">
+      <h3>{{ entrypoint.name }}</h3>
+      <gio-form-json-schema
+        [jsonSchema]="entrypointSchemas[entrypoint.id]"
+        [formGroup]="getEntryPointFormGroup(entrypoint.id)"
+        [initialValue]="entrypointInitialValues[entrypoint.id]"
+      ></gio-form-json-schema>
+    </div>
+
+    <div class="api-creation-v4__step__footer">
+      <button id="previous" mat-stroked-button type="button" (click)="goBack()">Previous</button>
+      <button id="validate" mat-flat-button color="primary" type="submit" [disabled]="formGroup.invalid">Validate my entrypoints</button>
+    </div>
+  </form>
+</mat-card>

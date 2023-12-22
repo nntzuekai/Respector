@@ -1,0 +1,2745 @@
+{
+  "meta": {
+    "httpMethod": "GET",
+    "httpStatusCode": 200,
+    "timestamp": "2018-12-21T22:04:10.332Z"
+  },
+  "links": {
+    "self": "http://localhost/127.0.0.1:2080/entity-networks?maxDegrees=5&buildOut=1&maxEntities=1000&e=8684&e=11676?withRaw=true"
+  },
+  "rawData": {
+    "ENTITY_PATHS": [
+      {
+        "START_ENTITY_ID": 8684,
+        "END_ENTITY_ID": 11676,
+        "ENTITIES": [
+          8684,
+          11676
+        ]
+      }
+    ],
+    "ENTITIES": [
+      {
+        "RESOLVED_ENTITY": {
+          "ENTITY_ID": 8684,
+          "LENS_ID": 1,
+          "ENTITY_NAME": "CELIA KREGER",
+          "FEATURES": {
+            "ACCT_NUM": [
+              {
+                "FEAT_DESC": "5018435319940323397",
+                "LIB_FEAT_ID": 135890,
+                "UTYPE_CODE": "CC",
+                "FEAT_DESC_VALUES": [
+                  {
+                    "FEAT_DESC": "5018435319940323397",
+                    "LIB_FEAT_ID": 135890
+                  }
+                ]
+              }
+            ],
+            "ADDRESS": [
+              {
+                "FEAT_DESC": "6747 136THEAST AVE IN",
+                "LIB_FEAT_ID": 135886,
+                "FEAT_DESC_VALUES": [
+                  {
+                    "FEAT_DESC": "6747 136THEAST AVE IN",
+                    "LIB_FEAT_ID": 135886
+                  }
+                ]
+              },
+              {
+                "FEAT_DESC": "677 136THEAST AVE BROKEN ARROW INDIANA 74012",
+                "LIB_FEAT_ID": 137782,
+                "FEAT_DESC_VALUES": [
+                  {
+                    "FEAT_DESC": "677 136THEAST AVE BROKEN ARROW INDIANA 74012",
+                    "LIB_FEAT_ID": 137782
+                  },
+                  {
+                    "FEAT_DESC": "6747 1C6THEAST AVE BROKEN ARROW IN",
+                    "LIB_FEAT_ID": 142591
+                  },
+                  {
+                    "FEAT_DESC": "6747 136THEAST AVE BROKEN ARROW IN",
+                    "LIB_FEAT_ID": 144153
+                  }
+                ]
+              }
+            ],
+            "DOB": [
+              {
+                "FEAT_DESC": "1950-10-10",
+                "LIB_FEAT_ID": 84023,
+                "FEAT_DESC_VALUES": [
+                  {
+                    "FEAT_DESC": "1950-10-10",
+                    "LIB_FEAT_ID": 84023
+                  }
+                ]
+              }
+            ],
+            "DRLIC": [
+              {
+                "FEAT_DESC": "IO15463X1 ID",
+                "LIB_FEAT_ID": 135889,
+                "FEAT_DESC_VALUES": [
+                  {
+                    "FEAT_DESC": "IO15463X1 ID",
+                    "LIB_FEAT_ID": 135889
+                  }
+                ]
+              },
+              {
+                "FEAT_DESC": "IO154631X DI",
+                "LIB_FEAT_ID": 144155,
+                "FEAT_DESC_VALUES": [
+                  {
+                    "FEAT_DESC": "IO154631X",
+                    "LIB_FEAT_ID": 137784
+                  },
+                  {
+                    "FEAT_DESC": "IO154631X DI",
+                    "LIB_FEAT_ID": 144155
+                  }
+                ]
+              }
+            ],
+            "GENDER": [
+              {
+                "FEAT_DESC": "F",
+                "LIB_FEAT_ID": 2,
+                "FEAT_DESC_VALUES": [
+                  {
+                    "FEAT_DESC": "F",
+                    "LIB_FEAT_ID": 2
+                  }
+                ]
+              }
+            ],
+            "NAME": [
+              {
+                "FEAT_DESC": "CELIA KREGER",
+                "LIB_FEAT_ID": 135885,
+                "FEAT_DESC_VALUES": [
+                  {
+                    "FEAT_DESC": "CELIA KREGER",
+                    "LIB_FEAT_ID": 135885
+                  },
+                  {
+                    "FEAT_DESC": "CELIA KREGER",
+                    "LIB_FEAT_ID": 137781
+                  },
+                  {
+                    "FEAT_DESC": "KREGER",
+                    "LIB_FEAT_ID": 144152
+                  }
+                ]
+              }
+            ],
+            "PASSPORT": [
+              {
+                "FEAT_DESC": "COQ1GK1RBH",
+                "LIB_FEAT_ID": 142593,
+                "FEAT_DESC_VALUES": [
+                  {
+                    "FEAT_DESC": "COQ1GK1RBH",
+                    "LIB_FEAT_ID": 142593
+                  }
+                ]
+              }
+            ],
+            "PHONE": [
+              {
+                "FEAT_DESC": "756-541-2438",
+                "LIB_FEAT_ID": 135887,
+                "FEAT_DESC_VALUES": [
+                  {
+                    "FEAT_DESC": "756-541-2438",
+                    "LIB_FEAT_ID": 135887
+                  },
+                  {
+                    "FEAT_DESC": "765-541-2438",
+                    "LIB_FEAT_ID": 137783
+                  },
+                  {
+                    "FEAT_DESC": "765-541-4238",
+                    "LIB_FEAT_ID": 144154
+                  }
+                ]
+              }
+            ],
+            "SSN": [
+              {
+                "FEAT_DESC": "058-45-8135",
+                "LIB_FEAT_ID": 135888,
+                "FEAT_DESC_VALUES": [
+                  {
+                    "FEAT_DESC": "058-45-8135",
+                    "LIB_FEAT_ID": 135888
+                  },
+                  {
+                    "FEAT_DESC": "058-48-5135",
+                    "LIB_FEAT_ID": 142592
+                  }
+                ]
+              }
+            ]
+          },
+          "RECORD_SUMMARY": [
+            {
+              "DATA_SOURCE": "EMPLOYEES",
+              "RECORD_COUNT": 4,
+              "FIRST_SEEN_DT": "2018-12-21 20:56:13.641",
+              "LAST_SEEN_DT": "2018-12-21 20:56:15.313"
+            }
+          ],
+          "LAST_SEEN_DT": "2018-12-21 20:56:15.313",
+          "RECORDS": [
+            {
+              "JSON_DATA": {
+                "SOURCE_ID": "7k_med.csv",
+                "PHONE_NUMBER": "765-541-2438",
+                "DRIVERS_LICENSE_NUMBER": "IO154631X",
+                "DATE_OF_BIRTH": "10/10/1950",
+                "ADDR_STATE": "Indiana",
+                "ADDR_POSTAL_CODE": "74012",
+                "ADDR_CITY": "Broken Arrow",
+                "SSN_NUMBER": "058-45-8135",
+                "NAME_FIRST": "CELIA",
+                "GENDER": "F",
+                "CC_ACCOUNT_NUMBER": "5018435319940323397",
+                "ADDR_LINE1": "677 136thEast AVE",
+                "NAME_LAST": "KREGER",
+                "DATA_SOURCE": "EMPLOYEES",
+                "ENTITY_TYPE": "EMPLOYEES",
+                "DSRC_ACTION": "A",
+                "LENS_CODE": "DEFAULT",
+                "RECORD_ID": "465249065"
+              },
+              "DATA_SOURCE": "EMPLOYEES",
+              "ENTITY_TYPE": "EMPLOYEES",
+              "ENTITY_KEY": "BD23CAA32E53408B84192329484E1F380B066B13",
+              "ENTITY_NAME": "CELIA KREGER",
+              "RECORD_ID": "465249065",
+              "MATCH_KEY": "+NAME+DOB+PHONE+SSN+ACCT_NUM",
+              "MATCH_SCORE": "20",
+              "ERRULE_CODE": "SF1_PNAME_CFF_CSTAB",
+              "REF_SCORE": 10,
+              "MATCH_LEVEL": 1,
+              "LAST_SEEN_DT": "2018-12-21 20:56:14.047",
+              "NAME_DATA": [
+                "KREGER CELIA"
+              ],
+              "ATTRIBUTE_DATA": [
+                "DOB: 10/10/1950",
+                "GENDER: F"
+              ],
+              "IDENTIFIER_DATA": [
+                "ACCT_NUM: CC: 5018435319940323397",
+                "DRLIC: IO154631X",
+                "SSN: 058-45-8135"
+              ],
+              "ADDRESS_DATA": [
+                "677 136thEast AVE Broken Arrow Indiana 74012"
+              ],
+              "PHONE_DATA": [
+                "765-541-2438"
+              ],
+              "RELATIONSHIP_DATA": [
+
+              ],
+              "ENTITY_DATA": [
+
+              ],
+              "OTHER_DATA": [
+
+              ]
+            },
+            {
+              "JSON_DATA": {
+                "SOURCE_ID": "7k_med.csv",
+                "PHONE_NUMBER": "765-541-4238",
+                "DRIVERS_LICENSE_NUMBER": "IO154631X",
+                "DRIVERS_LICENSE_STATE": "DI",
+                "ADDR_STATE": "IN",
+                "ADDR_CITY": "Broken Arrow",
+                "SSN_NUMBER": "058-45-8135",
+                "GENDER": "F",
+                "CC_ACCOUNT_NUMBER": "5018435319940323397",
+                "ADDR_LINE1": "6747 136thEast AVE",
+                "NAME_LAST": "KREGER",
+                "DATA_SOURCE": "EMPLOYEES",
+                "ENTITY_TYPE": "EMPLOYEES",
+                "DSRC_ACTION": "A",
+                "LENS_CODE": "DEFAULT",
+                "RECORD_ID": "465249067"
+              },
+              "DATA_SOURCE": "EMPLOYEES",
+              "ENTITY_TYPE": "EMPLOYEES",
+              "ENTITY_KEY": "5AA920A678D95C2D43E24786ADCAF64F4D9199BF",
+              "ENTITY_NAME": "KREGER",
+              "RECORD_ID": "465249067",
+              "MATCH_KEY": "+GENDER+ADDRESS+PHONE+SSN+DRLIC+ACCT_NUM",
+              "MATCH_SCORE": "15",
+              "ERRULE_CODE": "SF1_PNAME_CFF_CSTAB",
+              "REF_SCORE": 10,
+              "MATCH_LEVEL": 1,
+              "LAST_SEEN_DT": "2018-12-21 20:56:14.903",
+              "NAME_DATA": [
+                "KREGER"
+              ],
+              "ATTRIBUTE_DATA": [
+                "GENDER: F"
+              ],
+              "IDENTIFIER_DATA": [
+                "ACCT_NUM: CC: 5018435319940323397",
+                "DRLIC: IO154631X DI",
+                "SSN: 058-45-8135"
+              ],
+              "ADDRESS_DATA": [
+                "6747 136thEast AVE Broken Arrow IN"
+              ],
+              "PHONE_DATA": [
+                "765-541-4238"
+              ],
+              "RELATIONSHIP_DATA": [
+
+              ],
+              "ENTITY_DATA": [
+
+              ],
+              "OTHER_DATA": [
+
+              ]
+            },
+            {
+              "JSON_DATA": {
+                "SOURCE_ID": "7k_med.csv",
+                "DRIVERS_LICENSE_NUMBER": "IO154631X",
+                "DRIVERS_LICENSE_STATE": "DI",
+                "DATE_OF_BIRTH": "10/10/1950",
+                "ADDR_STATE": "IN",
+                "ADDR_CITY": "Broken Arrow",
+                "SSN_NUMBER": "058-48-5135",
+                "NAME_FIRST": "CELIA",
+                "PASSPORT_NUMBER": "COQ1GK1RBH",
+                "GENDER": "F",
+                "NAME_SUFFIX": "Jr.",
+                "CC_ACCOUNT_NUMBER": "5018435319940323397",
+                "ADDR_LINE1": "6747 1C6thEast AVE",
+                "NAME_LAST": "KREGER",
+                "DATA_SOURCE": "EMPLOYEES",
+                "ENTITY_TYPE": "EMPLOYEES",
+                "DSRC_ACTION": "A",
+                "LENS_CODE": "DEFAULT",
+                "RECORD_ID": "465249068"
+              },
+              "DATA_SOURCE": "EMPLOYEES",
+              "ENTITY_TYPE": "EMPLOYEES",
+              "ENTITY_KEY": "DF6371DE76885987F23F2EF6F16E6627AA4438BF",
+              "ENTITY_NAME": "CELIA KREGER Jr.",
+              "RECORD_ID": "465249068",
+              "MATCH_KEY": "+NAME+DOB+GENDER+ADDRESS+SSN+DRLIC+ACCT_NUM",
+              "MATCH_SCORE": "24",
+              "ERRULE_CODE": "SF1_PNAME_CFF_CSTAB",
+              "REF_SCORE": 10,
+              "MATCH_LEVEL": 1,
+              "LAST_SEEN_DT": "2018-12-21 20:56:15.313",
+              "NAME_DATA": [
+                "KREGER CELIA Jr."
+              ],
+              "ATTRIBUTE_DATA": [
+                "DOB: 10/10/1950",
+                "GENDER: F"
+              ],
+              "IDENTIFIER_DATA": [
+                "ACCT_NUM: CC: 5018435319940323397",
+                "DRLIC: IO154631X DI",
+                "PASSPORT: COQ1GK1RBH",
+                "SSN: 058-48-5135"
+              ],
+              "ADDRESS_DATA": [
+                "6747 1C6thEast AVE Broken Arrow IN"
+              ],
+              "PHONE_DATA": [
+
+              ],
+              "RELATIONSHIP_DATA": [
+
+              ],
+              "ENTITY_DATA": [
+
+              ],
+              "OTHER_DATA": [
+
+              ]
+            },
+            {
+              "JSON_DATA": {
+                "SOURCE_ID": "7k_med.csv",
+                "PHONE_NUMBER": "756-541-2438",
+                "DRIVERS_LICENSE_NUMBER": "IO15463X1",
+                "DRIVERS_LICENSE_STATE": "ID",
+                "DATE_OF_BIRTH": "10/10/1950",
+                "ADDR_STATE": "IN",
+                "SSN_NUMBER": "058-45-8135",
+                "NAME_FIRST": "CELIA",
+                "NAME_SUFFIX": "Jr.",
+                "CC_ACCOUNT_NUMBER": "5018435319940323397",
+                "ADDR_LINE1": "6747 136thEast AVE",
+                "NAME_LAST": "KREGER",
+                "DATA_SOURCE": "EMPLOYEES",
+                "ENTITY_TYPE": "EMPLOYEES",
+                "DSRC_ACTION": "A",
+                "LENS_CODE": "DEFAULT",
+                "RECORD_ID": "465249064"
+              },
+              "DATA_SOURCE": "EMPLOYEES",
+              "ENTITY_TYPE": "EMPLOYEES",
+              "ENTITY_KEY": "456A044C7F8DB42F231C5723C9E76AB90046E49C",
+              "ENTITY_NAME": "CELIA KREGER Jr.",
+              "RECORD_ID": "465249064",
+              "MATCH_KEY": "+NAME+DOB+PHONE+SSN+ACCT_NUM",
+              "MATCH_SCORE": "20",
+              "ERRULE_CODE": "SF1_PNAME_CFF_CSTAB",
+              "REF_SCORE": 10,
+              "MATCH_LEVEL": 1,
+              "LAST_SEEN_DT": "2018-12-21 20:56:13.641",
+              "NAME_DATA": [
+                "KREGER CELIA Jr."
+              ],
+              "ATTRIBUTE_DATA": [
+                "DOB: 10/10/1950"
+              ],
+              "IDENTIFIER_DATA": [
+                "ACCT_NUM: CC: 5018435319940323397",
+                "DRLIC: IO15463X1 ID",
+                "SSN: 058-45-8135"
+              ],
+              "ADDRESS_DATA": [
+                "6747 136thEast AVE IN"
+              ],
+              "PHONE_DATA": [
+                "756-541-2438"
+              ],
+              "RELATIONSHIP_DATA": [
+
+              ],
+              "ENTITY_DATA": [
+
+              ],
+              "OTHER_DATA": [
+
+              ]
+            }
+          ]
+        },
+        "RELATED_ENTITIES": [
+          {
+            "ENTITY_ID": 11676,
+            "LENS_ID": 1,
+            "MATCH_LEVEL": 2,
+            "MATCH_KEY": "+SURNAME+ADDRESS+PHONE+SSN+DRLIC+ACCT_NUM",
+            "MATCH_SCORE": "24",
+            "ERRULE_CODE": "SF1E",
+            "REF_SCORE": 6,
+            "IS_DISCLOSED": 0,
+            "IS_AMBIGUOUS": 0,
+            "ENTITY_NAME": "C KREGER",
+            "RECORD_SUMMARY": [
+              {
+                "DATA_SOURCE": "EMPLOYEES",
+                "RECORD_COUNT": 1,
+                "FIRST_SEEN_DT": "2018-12-21 20:56:14.495",
+                "LAST_SEEN_DT": "2018-12-21 20:56:14.495"
+              }
+            ],
+            "LAST_SEEN_DT": "2018-12-21 20:56:14.495"
+          },
+          {
+            "ENTITY_ID": 16120,
+            "LENS_ID": 1,
+            "MATCH_LEVEL": 3,
+            "MATCH_KEY": "+GENDER+ADDRESS-DOB-SSN-PASSPORT",
+            "MATCH_SCORE": "3",
+            "ERRULE_CODE": "SFF",
+            "REF_SCORE": 3,
+            "IS_DISCLOSED": 0,
+            "IS_AMBIGUOUS": 0,
+            "ENTITY_NAME": "SHARAN DIMEZZA",
+            "RECORD_SUMMARY": [
+              {
+                "DATA_SOURCE": "WATCHLIST",
+                "RECORD_COUNT": 8,
+                "FIRST_SEEN_DT": "2018-12-21 20:56:28.107",
+                "LAST_SEEN_DT": "2018-12-21 20:56:30.869"
+              }
+            ],
+            "LAST_SEEN_DT": "2018-12-21 20:56:30.869"
+          }
+        ]
+      },
+      {
+        "RESOLVED_ENTITY": {
+          "ENTITY_ID": 11676,
+          "LENS_ID": 1,
+          "ENTITY_NAME": "C KREGER",
+          "FEATURES": {
+            "ACCT_NUM": [
+              {
+                "FEAT_DESC": "5018435319940323397",
+                "LIB_FEAT_ID": 135890,
+                "UTYPE_CODE": "CC",
+                "FEAT_DESC_VALUES": [
+                  {
+                    "FEAT_DESC": "5018435319940323397",
+                    "LIB_FEAT_ID": 135890
+                  }
+                ]
+              }
+            ],
+            "ADDRESS": [
+              {
+                "FEAT_DESC": "6747 136THEST AVE BROKEN ARROW IN 74012",
+                "LIB_FEAT_ID": 144041,
+                "FEAT_DESC_VALUES": [
+                  {
+                    "FEAT_DESC": "6747 136THEST AVE BROKEN ARROW IN 74012",
+                    "LIB_FEAT_ID": 144041
+                  }
+                ]
+              }
+            ],
+            "DRLIC": [
+              {
+                "FEAT_DESC": "IO145631X DI",
+                "LIB_FEAT_ID": 144042,
+                "FEAT_DESC_VALUES": [
+                  {
+                    "FEAT_DESC": "IO145631X DI",
+                    "LIB_FEAT_ID": 144042
+                  }
+                ]
+              }
+            ],
+            "NAME": [
+              {
+                "FEAT_DESC": "C KREGER",
+                "LIB_FEAT_ID": 144040,
+                "FEAT_DESC_VALUES": [
+                  {
+                    "FEAT_DESC": "C KREGER",
+                    "LIB_FEAT_ID": 144040
+                  }
+                ]
+              }
+            ],
+            "PHONE": [
+              {
+                "FEAT_DESC": "765-541-2438",
+                "LIB_FEAT_ID": 137783,
+                "FEAT_DESC_VALUES": [
+                  {
+                    "FEAT_DESC": "765-541-2438",
+                    "LIB_FEAT_ID": 137783
+                  }
+                ]
+              }
+            ],
+            "SSN": [
+              {
+                "FEAT_DESC": "058-45-8135",
+                "LIB_FEAT_ID": 135888,
+                "FEAT_DESC_VALUES": [
+                  {
+                    "FEAT_DESC": "058-45-8135",
+                    "LIB_FEAT_ID": 135888
+                  }
+                ]
+              }
+            ]
+          },
+          "RECORD_SUMMARY": [
+            {
+              "DATA_SOURCE": "EMPLOYEES",
+              "RECORD_COUNT": 1,
+              "FIRST_SEEN_DT": "2018-12-21 20:56:14.495",
+              "LAST_SEEN_DT": "2018-12-21 20:56:14.495"
+            }
+          ],
+          "LAST_SEEN_DT": "2018-12-21 20:56:14.495",
+          "RECORDS": [
+            {
+              "JSON_DATA": {
+                "SOURCE_ID": "7k_med.csv",
+                "PHONE_NUMBER": "765-541-2438",
+                "DRIVERS_LICENSE_NUMBER": "IO145631X",
+                "DRIVERS_LICENSE_STATE": "DI",
+                "ADDR_STATE": "IN",
+                "ADDR_POSTAL_CODE": "74012",
+                "ADDR_CITY": "Broken Arrow",
+                "SSN_NUMBER": "058-45-8135",
+                "NAME_FIRST": "C",
+                "CC_ACCOUNT_NUMBER": "5018435319940323397",
+                "ADDR_LINE1": "6747 136thEst AVE",
+                "NAME_LAST": "KREGER",
+                "DATA_SOURCE": "EMPLOYEES",
+                "ENTITY_TYPE": "EMPLOYEES",
+                "DSRC_ACTION": "A",
+                "LENS_CODE": "DEFAULT",
+                "RECORD_ID": "465249066"
+              },
+              "DATA_SOURCE": "EMPLOYEES",
+              "ENTITY_TYPE": "EMPLOYEES",
+              "ENTITY_KEY": "CE20C547F37E3EF5C16044A306DD81D0277E9414",
+              "ENTITY_NAME": "C KREGER",
+              "RECORD_ID": "465249066",
+              "MATCH_KEY": "",
+              "MATCH_SCORE": "",
+              "ERRULE_CODE": "",
+              "REF_SCORE": 0,
+              "MATCH_LEVEL": 0,
+              "LAST_SEEN_DT": "2018-12-21 20:56:14.495",
+              "NAME_DATA": [
+                "KREGER C"
+              ],
+              "ATTRIBUTE_DATA": [
+
+              ],
+              "IDENTIFIER_DATA": [
+                "ACCT_NUM: CC: 5018435319940323397",
+                "DRLIC: IO145631X DI",
+                "SSN: 058-45-8135"
+              ],
+              "ADDRESS_DATA": [
+                "6747 136thEst AVE Broken Arrow IN 74012"
+              ],
+              "PHONE_DATA": [
+                "765-541-2438"
+              ],
+              "RELATIONSHIP_DATA": [
+
+              ],
+              "ENTITY_DATA": [
+
+              ],
+              "OTHER_DATA": [
+
+              ]
+            }
+          ]
+        },
+        "RELATED_ENTITIES": [
+          {
+            "ENTITY_ID": 8684,
+            "LENS_ID": 1,
+            "MATCH_LEVEL": 2,
+            "MATCH_KEY": "+SURNAME+ADDRESS+PHONE+SSN+DRLIC+ACCT_NUM",
+            "MATCH_SCORE": "24",
+            "ERRULE_CODE": "SF1E",
+            "REF_SCORE": 6,
+            "IS_DISCLOSED": 0,
+            "IS_AMBIGUOUS": 0,
+            "ENTITY_NAME": "CELIA KREGER",
+            "RECORD_SUMMARY": [
+              {
+                "DATA_SOURCE": "EMPLOYEES",
+                "RECORD_COUNT": 4,
+                "FIRST_SEEN_DT": "2018-12-21 20:56:13.641",
+                "LAST_SEEN_DT": "2018-12-21 20:56:15.313"
+              }
+            ],
+            "LAST_SEEN_DT": "2018-12-21 20:56:15.313"
+          },
+          {
+            "ENTITY_ID": 16120,
+            "LENS_ID": 1,
+            "MATCH_LEVEL": 3,
+            "MATCH_KEY": "+ADDRESS-SSN",
+            "MATCH_SCORE": "2",
+            "ERRULE_CODE": "SFF",
+            "REF_SCORE": 3,
+            "IS_DISCLOSED": 0,
+            "IS_AMBIGUOUS": 0,
+            "ENTITY_NAME": "SHARAN DIMEZZA",
+            "RECORD_SUMMARY": [
+              {
+                "DATA_SOURCE": "WATCHLIST",
+                "RECORD_COUNT": 8,
+                "FIRST_SEEN_DT": "2018-12-21 20:56:28.107",
+                "LAST_SEEN_DT": "2018-12-21 20:56:30.869"
+              }
+            ],
+            "LAST_SEEN_DT": "2018-12-21 20:56:30.869"
+          }
+        ]
+      },
+      {
+        "RESOLVED_ENTITY": {
+          "ENTITY_ID": 16120,
+          "LENS_ID": 1,
+          "ENTITY_NAME": "SHARAN DIMEZZA",
+          "FEATURES": {
+            "ACCT_NUM": [
+              {
+                "FEAT_DESC": "4599523556244",
+                "LIB_FEAT_ID": 169612,
+                "UTYPE_CODE": "CC",
+                "FEAT_DESC_VALUES": [
+                  {
+                    "FEAT_DESC": "4599523556244",
+                    "LIB_FEAT_ID": 169612
+                  }
+                ]
+              },
+              {
+                "FEAT_DESC": "4599253556244",
+                "LIB_FEAT_ID": 170965,
+                "UTYPE_CODE": "CC",
+                "FEAT_DESC_VALUES": [
+                  {
+                    "FEAT_DESC": "4599253556244",
+                    "LIB_FEAT_ID": 170965
+                  }
+                ]
+              }
+            ],
+            "ADDRESS": [
+              {
+                "FEAT_DESC": "61747 136THEAST AVE BROKEN ARROW INDIANA 74012",
+                "LIB_FEAT_ID": 178103,
+                "FEAT_DESC_VALUES": [
+                  {
+                    "FEAT_DESC": "6747 16THEAST AVE BROKEN ARROW IN 74012",
+                    "LIB_FEAT_ID": 169610
+                  },
+                  {
+                    "FEAT_DESC": "6747 136THEAST AVE BROKEN XARROW IN 74012",
+                    "LIB_FEAT_ID": 170963
+                  },
+                  {
+                    "FEAT_DESC": "6747 136THEAST AVE BROKEN ARROW IN 7012",
+                    "LIB_FEAT_ID": 171402
+                  },
+                  {
+                    "FEAT_DESC": "67047 136TTHEAST AVE IN 74012",
+                    "LIB_FEAT_ID": 172522
+                  },
+                  {
+                    "FEAT_DESC": "6747 136THEAST AVE BROKENGARROW IN 74012",
+                    "LIB_FEAT_ID": 172641
+                  },
+                  {
+                    "FEAT_DESC": "6747 136THEAST IN 4012",
+                    "LIB_FEAT_ID": 174937
+                  },
+                  {
+                    "FEAT_DESC": "6747 136THEAST AVE BROKNE ARROW IN 74012",
+                    "LIB_FEAT_ID": 176531
+                  },
+                  {
+                    "FEAT_DESC": "61747 136THEAST AVE BROKEN ARROW INDIANA 74012",
+                    "LIB_FEAT_ID": 178103
+                  }
+                ]
+              }
+            ],
+            "DOB": [
+              {
+                "FEAT_DESC": "1982-25-04",
+                "LIB_FEAT_ID": 171401,
+                "FEAT_DESC_VALUES": [
+                  {
+                    "FEAT_DESC": "1982-25-04",
+                    "LIB_FEAT_ID": 171401
+                  }
+                ]
+              }
+            ],
+            "DRLIC": [
+              {
+                "FEAT_DESC": "887926924 TM",
+                "LIB_FEAT_ID": 171405,
+                "FEAT_DESC_VALUES": [
+                  {
+                    "FEAT_DESC": "887926924",
+                    "LIB_FEAT_ID": 169611
+                  },
+                  {
+                    "FEAT_DESC": "887926924 TM",
+                    "LIB_FEAT_ID": 171405
+                  }
+                ]
+              },
+              {
+                "FEAT_DESC": "887296924 MT",
+                "LIB_FEAT_ID": 172525,
+                "FEAT_DESC_VALUES": [
+                  {
+                    "FEAT_DESC": "887296924 MT",
+                    "LIB_FEAT_ID": 172525
+                  }
+                ]
+              }
+            ],
+            "GENDER": [
+              {
+                "FEAT_DESC": "F",
+                "LIB_FEAT_ID": 2,
+                "FEAT_DESC_VALUES": [
+                  {
+                    "FEAT_DESC": "F",
+                    "LIB_FEAT_ID": 2
+                  }
+                ]
+              }
+            ],
+            "LOGIN_ID": [
+              {
+                "FEAT_DESC": "OOCYTEJ",
+                "LIB_FEAT_ID": 171407,
+                "FEAT_DESC_VALUES": [
+                  {
+                    "FEAT_DESC": "OOCYTEJ",
+                    "LIB_FEAT_ID": 171407
+                  }
+                ]
+              }
+            ],
+            "NAME": [
+              {
+                "FEAT_DESC": "SHARAN DIMEZZA",
+                "LIB_FEAT_ID": 169609,
+                "FEAT_DESC_VALUES": [
+                  {
+                    "FEAT_DESC": "SHARAN DIMEZZA",
+                    "LIB_FEAT_ID": 169609
+                  },
+                  {
+                    "FEAT_DESC": "SHARON DIMEZZA",
+                    "LIB_FEAT_ID": 171400
+                  },
+                  {
+                    "FEAT_DESC": "DIMEZZA",
+                    "LIB_FEAT_ID": 172521
+                  },
+                  {
+                    "FEAT_DESC": "SHARON D",
+                    "LIB_FEAT_ID": 178102
+                  }
+                ]
+              }
+            ],
+            "PASSPORT": [
+              {
+                "FEAT_DESC": "G0RY5VG",
+                "LIB_FEAT_ID": 171406,
+                "FEAT_DESC_VALUES": [
+                  {
+                    "FEAT_DESC": "G0RY5VG",
+                    "LIB_FEAT_ID": 171406
+                  }
+                ]
+              }
+            ],
+            "PHONE": [
+              {
+                "FEAT_DESC": "765-956-6137",
+                "LIB_FEAT_ID": 170964,
+                "FEAT_DESC_VALUES": [
+                  {
+                    "FEAT_DESC": "765-956-6137",
+                    "LIB_FEAT_ID": 170964
+                  },
+                  {
+                    "FEAT_DESC": "765-956-6317",
+                    "LIB_FEAT_ID": 171403
+                  },
+                  {
+                    "FEAT_DESC": "956-6137",
+                    "LIB_FEAT_ID": 172523
+                  }
+                ]
+              }
+            ],
+            "SSN": [
+              {
+                "FEAT_DESC": "168-37-6165",
+                "LIB_FEAT_ID": 171404,
+                "FEAT_DESC_VALUES": [
+                  {
+                    "FEAT_DESC": "168-37-6165",
+                    "LIB_FEAT_ID": 171404
+                  },
+                  {
+                    "FEAT_DESC": "168-36-7165",
+                    "LIB_FEAT_ID": 172524
+                  }
+                ]
+              }
+            ]
+          },
+          "RECORD_SUMMARY": [
+            {
+              "DATA_SOURCE": "WATCHLIST",
+              "RECORD_COUNT": 8,
+              "FIRST_SEEN_DT": "2018-12-21 20:56:28.107",
+              "LAST_SEEN_DT": "2018-12-21 20:56:30.869"
+            }
+          ],
+          "LAST_SEEN_DT": "2018-12-21 20:56:30.869",
+          "RECORDS": [
+            {
+              "JSON_DATA": {
+                "SOURCE_ID": "5k_med.csv",
+                "PHONE_NUMBER": "765-956-6317",
+                "SOCIAL_HANDLE": "oocytej",
+                "DRIVERS_LICENSE_NUMBER": "887926924",
+                "DRIVERS_LICENSE_STATE": "TM",
+                "DATE_OF_BIRTH": "25/4/1982",
+                "ADDR_STATE": "IN",
+                "ADDR_POSTAL_CODE": "7012",
+                "ADDR_CITY": "Broken Arrow",
+                "SSN_NUMBER": "168-37-6165",
+                "NAME_FIRST": "SHARON",
+                "PASSPORT_NUMBER": "G0RY5VG",
+                "GENDER": "F",
+                "ADDR_LINE1": "6747 136thEast AVE",
+                "NAME_LAST": "DIMEZZA",
+                "DATA_SOURCE": "WATCHLIST",
+                "ENTITY_TYPE": "WATCHLIST",
+                "DSRC_ACTION": "A",
+                "LENS_CODE": "DEFAULT",
+                "RECORD_ID": "580050798"
+              },
+              "DATA_SOURCE": "WATCHLIST",
+              "ENTITY_TYPE": "WATCHLIST",
+              "ENTITY_KEY": "542218612599A8AC04E0F4926B22DE5BBD7924E1",
+              "ENTITY_NAME": "SHARON DIMEZZA",
+              "RECORD_ID": "580050798",
+              "MATCH_KEY": "",
+              "MATCH_SCORE": "",
+              "ERRULE_CODE": "",
+              "REF_SCORE": 0,
+              "MATCH_LEVEL": 0,
+              "LAST_SEEN_DT": "2018-12-21 20:56:28.107",
+              "NAME_DATA": [
+                "DIMEZZA SHARON"
+              ],
+              "ATTRIBUTE_DATA": [
+                "DOB: 25/4/1982",
+                "GENDER: F"
+              ],
+              "IDENTIFIER_DATA": [
+                "DRLIC: 887926924 TM",
+                "LOGIN_ID: oocytej",
+                "PASSPORT: G0RY5VG",
+                "SSN: 168-37-6165"
+              ],
+              "ADDRESS_DATA": [
+                "6747 136thEast AVE Broken Arrow IN 7012"
+              ],
+              "PHONE_DATA": [
+                "765-956-6317"
+              ],
+              "RELATIONSHIP_DATA": [
+
+              ],
+              "ENTITY_DATA": [
+
+              ],
+              "OTHER_DATA": [
+
+              ]
+            },
+            {
+              "JSON_DATA": {
+                "SOURCE_ID": "5k_med.csv",
+                "PHONE_NUMBER": "765-956-6137",
+                "DRIVERS_LICENSE_NUMBER": "887926924",
+                "ADDR_STATE": "IN",
+                "ADDR_POSTAL_CODE": "74012",
+                "ADDR_CITY": "Brokne Arrow",
+                "NAME_FIRST": "SHARON",
+                "GENDER": "F",
+                "CC_ACCOUNT_NUMBER": "4599523556244",
+                "ADDR_LINE1": "6747 136thEast AVE",
+                "NAME_LAST": "DIMEZZA",
+                "DATA_SOURCE": "WATCHLIST",
+                "ENTITY_TYPE": "WATCHLIST",
+                "DSRC_ACTION": "A",
+                "LENS_CODE": "DEFAULT",
+                "RECORD_ID": "580050805"
+              },
+              "DATA_SOURCE": "WATCHLIST",
+              "ENTITY_TYPE": "WATCHLIST",
+              "ENTITY_KEY": "B31A143B15BFCA4921E013917B1CD1AC63774DDA",
+              "ENTITY_NAME": "SHARON DIMEZZA",
+              "RECORD_ID": "580050805",
+              "MATCH_KEY": "+NAME+GENDER+ADDRESS+PHONE+DRLIC+ACCT_NUM",
+              "MATCH_SCORE": "21",
+              "ERRULE_CODE": "SF1_PNAME_CFF",
+              "REF_SCORE": 9,
+              "MATCH_LEVEL": 1,
+              "LAST_SEEN_DT": "2018-12-21 20:56:30.869",
+              "NAME_DATA": [
+                "DIMEZZA SHARON"
+              ],
+              "ATTRIBUTE_DATA": [
+                "GENDER: F"
+              ],
+              "IDENTIFIER_DATA": [
+                "ACCT_NUM: CC: 4599523556244",
+                "DRLIC: 887926924"
+              ],
+              "ADDRESS_DATA": [
+                "6747 136thEast AVE Brokne Arrow IN 74012"
+              ],
+              "PHONE_DATA": [
+                "765-956-6137"
+              ],
+              "RELATIONSHIP_DATA": [
+
+              ],
+              "ENTITY_DATA": [
+
+              ],
+              "OTHER_DATA": [
+
+              ]
+            },
+            {
+              "JSON_DATA": {
+                "SOURCE_ID": "5k_med.csv",
+                "PHONE_NUMBER": "765-956-6137",
+                "DRIVERS_LICENSE_STATE": "MT",
+                "DATE_OF_BIRTH": "25/4/1982",
+                "ADDR_STATE": "IN",
+                "ADDR_POSTAL_CODE": "74012",
+                "ADDR_CITY": "Broken XArrow",
+                "NAME_FIRST": "SHARON",
+                "PASSPORT_NUMBER": "G0RY5VG",
+                "GENDER": "F",
+                "CC_ACCOUNT_NUMBER": "4599253556244",
+                "ADDR_LINE1": "6747 136thEast AVE",
+                "NAME_LAST": "DIMEZZA",
+                "DATA_SOURCE": "WATCHLIST",
+                "ENTITY_TYPE": "WATCHLIST",
+                "DSRC_ACTION": "A",
+                "LENS_CODE": "DEFAULT",
+                "RECORD_ID": "580050802"
+              },
+              "DATA_SOURCE": "WATCHLIST",
+              "ENTITY_TYPE": "WATCHLIST",
+              "ENTITY_KEY": "69071125311F7C1C9FE214E4332A5A70F5925C84",
+              "ENTITY_NAME": "SHARON DIMEZZA",
+              "RECORD_ID": "580050802",
+              "MATCH_KEY": "+NAME+DOB+GENDER+ADDRESS+PHONE+PASSPORT",
+              "MATCH_SCORE": "19",
+              "ERRULE_CODE": "SF1_PNAME_CFF_CSTAB",
+              "REF_SCORE": 10,
+              "MATCH_LEVEL": 1,
+              "LAST_SEEN_DT": "2018-12-21 20:56:29.684",
+              "NAME_DATA": [
+                "DIMEZZA SHARON"
+              ],
+              "ATTRIBUTE_DATA": [
+                "DOB: 25/4/1982",
+                "GENDER: F"
+              ],
+              "IDENTIFIER_DATA": [
+                "ACCT_NUM: CC: 4599253556244",
+                "DRLIC: MT",
+                "PASSPORT: G0RY5VG"
+              ],
+              "ADDRESS_DATA": [
+                "6747 136thEast AVE Broken XArrow IN 74012"
+              ],
+              "PHONE_DATA": [
+                "765-956-6137"
+              ],
+              "RELATIONSHIP_DATA": [
+
+              ],
+              "ENTITY_DATA": [
+
+              ],
+              "OTHER_DATA": [
+
+              ]
+            },
+            {
+              "JSON_DATA": {
+                "SOURCE_ID": "5k_med.csv",
+                "DRIVERS_LICENSE_NUMBER": "887926924",
+                "ADDR_STATE": "Indiana",
+                "ADDR_POSTAL_CODE": "74012",
+                "ADDR_CITY": "Broken Arrow",
+                "SSN_NUMBER": "168-37-6165",
+                "NAME_FIRST": "SHARON",
+                "GENDER": "F",
+                "CC_ACCOUNT_NUMBER": "4599253556244",
+                "ADDR_LINE1": "61747 136thEast AVE",
+                "NAME_LAST": "D",
+                "DATA_SOURCE": "WATCHLIST",
+                "ENTITY_TYPE": "WATCHLIST",
+                "DSRC_ACTION": "A",
+                "LENS_CODE": "DEFAULT",
+                "RECORD_ID": "580050803"
+              },
+              "DATA_SOURCE": "WATCHLIST",
+              "ENTITY_TYPE": "WATCHLIST",
+              "ENTITY_KEY": "51780701EE0555B30A86D7C884146C1E5ADAA5A8",
+              "ENTITY_NAME": "SHARON D",
+              "RECORD_ID": "580050803",
+              "MATCH_KEY": "+NAME+GENDER+ADDRESS+SSN+DRLIC+ACCT_NUM",
+              "MATCH_SCORE": "23",
+              "ERRULE_CODE": "SF1_PNAME_CFF_CSTAB",
+              "REF_SCORE": 10,
+              "MATCH_LEVEL": 1,
+              "LAST_SEEN_DT": "2018-12-21 20:56:30.098",
+              "NAME_DATA": [
+                "D SHARON"
+              ],
+              "ATTRIBUTE_DATA": [
+                "GENDER: F"
+              ],
+              "IDENTIFIER_DATA": [
+                "ACCT_NUM: CC: 4599253556244",
+                "DRLIC: 887926924",
+                "SSN: 168-37-6165"
+              ],
+              "ADDRESS_DATA": [
+                "61747 136thEast AVE Broken Arrow Indiana 74012"
+              ],
+              "PHONE_DATA": [
+
+              ],
+              "RELATIONSHIP_DATA": [
+
+              ],
+              "ENTITY_DATA": [
+
+              ],
+              "OTHER_DATA": [
+
+              ]
+            },
+            {
+              "JSON_DATA": {
+                "SOURCE_ID": "5k_med.csv",
+                "SOCIAL_HANDLE": "oocytej",
+                "DRIVERS_LICENSE_NUMBER": "887926924",
+                "ADDR_STATE": "IN",
+                "ADDR_POSTAL_CODE": "74012",
+                "ADDR_CITY": "Broken Arrow",
+                "SSN_NUMBER": "168-37-6165",
+                "NAME_FIRST": "SHARAN",
+                "CC_ACCOUNT_NUMBER": "4599523556244",
+                "ADDR_LINE1": "6747 16thEast AVE",
+                "NAME_LAST": "DIMEZZA",
+                "DATA_SOURCE": "WATCHLIST",
+                "ENTITY_TYPE": "WATCHLIST",
+                "DSRC_ACTION": "A",
+                "LENS_CODE": "DEFAULT",
+                "RECORD_ID": "580050799"
+              },
+              "DATA_SOURCE": "WATCHLIST",
+              "ENTITY_TYPE": "WATCHLIST",
+              "ENTITY_KEY": "5601FE85E17156948CD87CA91AC706B472202533",
+              "ENTITY_NAME": "SHARAN DIMEZZA",
+              "RECORD_ID": "580050799",
+              "MATCH_KEY": "+NAME+ADDRESS+SSN+DRLIC+LOGIN_ID",
+              "MATCH_SCORE": "22",
+              "ERRULE_CODE": "SF1_PNAME_CFF_CSTAB",
+              "REF_SCORE": 10,
+              "MATCH_LEVEL": 1,
+              "LAST_SEEN_DT": "2018-12-21 20:56:28.494",
+              "NAME_DATA": [
+                "DIMEZZA SHARAN"
+              ],
+              "ATTRIBUTE_DATA": [
+
+              ],
+              "IDENTIFIER_DATA": [
+                "ACCT_NUM: CC: 4599523556244",
+                "DRLIC: 887926924",
+                "LOGIN_ID: oocytej",
+                "SSN: 168-37-6165"
+              ],
+              "ADDRESS_DATA": [
+                "6747 16thEast AVE Broken Arrow IN 74012"
+              ],
+              "PHONE_DATA": [
+
+              ],
+              "RELATIONSHIP_DATA": [
+
+              ],
+              "ENTITY_DATA": [
+
+              ],
+              "OTHER_DATA": [
+
+              ]
+            },
+            {
+              "JSON_DATA": {
+                "SOURCE_ID": "5k_med.csv",
+                "PHONE_NUMBER": "765-956-6137",
+                "DRIVERS_LICENSE_NUMBER": "887926924",
+                "ADDR_STATE": "IN",
+                "ADDR_POSTAL_CODE": "4012",
+                "GENDER": "F",
+                "ADDR_LINE1": "6747 136thEast",
+                "NAME_LAST": "DIMEZZA",
+                "DATA_SOURCE": "WATCHLIST",
+                "ENTITY_TYPE": "WATCHLIST",
+                "DSRC_ACTION": "A",
+                "LENS_CODE": "DEFAULT",
+                "RECORD_ID": "580050804"
+              },
+              "DATA_SOURCE": "WATCHLIST",
+              "ENTITY_TYPE": "WATCHLIST",
+              "ENTITY_KEY": "6C703677BFDAD0D5838BD10AF3567D53FAF20DCA",
+              "ENTITY_NAME": "DIMEZZA",
+              "RECORD_ID": "580050804",
+              "MATCH_KEY": "+PNAME+GENDER+ADDRESS+PHONE+DRLIC",
+              "MATCH_SCORE": "18",
+              "ERRULE_CODE": "MFF_LNAME_CEXCL",
+              "REF_SCORE": 9,
+              "MATCH_LEVEL": 1,
+              "LAST_SEEN_DT": "2018-12-21 20:56:30.500",
+              "NAME_DATA": [
+                "DIMEZZA"
+              ],
+              "ATTRIBUTE_DATA": [
+                "GENDER: F"
+              ],
+              "IDENTIFIER_DATA": [
+                "DRLIC: 887926924"
+              ],
+              "ADDRESS_DATA": [
+                "6747 136thEast IN 4012"
+              ],
+              "PHONE_DATA": [
+                "765-956-6137"
+              ],
+              "RELATIONSHIP_DATA": [
+
+              ],
+              "ENTITY_DATA": [
+
+              ],
+              "OTHER_DATA": [
+
+              ]
+            },
+            {
+              "JSON_DATA": {
+                "SOURCE_ID": "5k_med.csv",
+                "PHONE_NUMBER": "956-6137",
+                "SOCIAL_HANDLE": "oocytej",
+                "DRIVERS_LICENSE_NUMBER": "887296924",
+                "DRIVERS_LICENSE_STATE": "MT",
+                "DATE_OF_BIRTH": "25/4/1982",
+                "ADDR_STATE": "IN",
+                "ADDR_POSTAL_CODE": "74012",
+                "SSN_NUMBER": "168-36-7165",
+                "PASSPORT_NUMBER": "G0RY5VG",
+                "GENDER": "F",
+                "ADDR_LINE1": "67047 136TthEast AVE",
+                "NAME_LAST": "DIMEZZA",
+                "DATA_SOURCE": "WATCHLIST",
+                "ENTITY_TYPE": "WATCHLIST",
+                "DSRC_ACTION": "A",
+                "LENS_CODE": "DEFAULT",
+                "RECORD_ID": "580050800"
+              },
+              "DATA_SOURCE": "WATCHLIST",
+              "ENTITY_TYPE": "WATCHLIST",
+              "ENTITY_KEY": "54F71501B734E9FFCF17A7E8FD10BD03D95498F5",
+              "ENTITY_NAME": "DIMEZZA",
+              "RECORD_ID": "580050800",
+              "MATCH_KEY": "+PNAME+DOB+GENDER+ADDRESS+SSN+PASSPORT+LOGIN_ID",
+              "MATCH_SCORE": "24",
+              "ERRULE_CODE": "SF1_PNAME_CFF_CSTAB",
+              "REF_SCORE": 10,
+              "MATCH_LEVEL": 1,
+              "LAST_SEEN_DT": "2018-12-21 20:56:28.904",
+              "NAME_DATA": [
+                "DIMEZZA"
+              ],
+              "ATTRIBUTE_DATA": [
+                "DOB: 25/4/1982",
+                "GENDER: F"
+              ],
+              "IDENTIFIER_DATA": [
+                "DRLIC: 887296924 MT",
+                "LOGIN_ID: oocytej",
+                "PASSPORT: G0RY5VG",
+                "SSN: 168-36-7165"
+              ],
+              "ADDRESS_DATA": [
+                "67047 136TthEast AVE IN 74012"
+              ],
+              "PHONE_DATA": [
+                "956-6137"
+              ],
+              "RELATIONSHIP_DATA": [
+
+              ],
+              "ENTITY_DATA": [
+
+              ],
+              "OTHER_DATA": [
+
+              ]
+            },
+            {
+              "JSON_DATA": {
+                "SOURCE_ID": "5k_med.csv",
+                "DRIVERS_LICENSE_STATE": "MT",
+                "ADDR_STATE": "IN",
+                "ADDR_POSTAL_CODE": "74012",
+                "ADDR_CITY": "BrokenGArrow",
+                "NAME_FIRST": "SHARON",
+                "PASSPORT_NUMBER": "G0RY5VG",
+                "GENDER": "F",
+                "ADDR_LINE1": "6747 136thEast AVE",
+                "NAME_LAST": "DIMEZZA",
+                "DATA_SOURCE": "WATCHLIST",
+                "ENTITY_TYPE": "WATCHLIST",
+                "DSRC_ACTION": "A",
+                "LENS_CODE": "DEFAULT",
+                "RECORD_ID": "580050801"
+              },
+              "DATA_SOURCE": "WATCHLIST",
+              "ENTITY_TYPE": "WATCHLIST",
+              "ENTITY_KEY": "04E104B126333FC7A955206C63EE3489AE071F5F",
+              "ENTITY_NAME": "SHARON DIMEZZA",
+              "RECORD_ID": "580050801",
+              "MATCH_KEY": "+NAME+GENDER+ADDRESS+PASSPORT",
+              "MATCH_SCORE": "16",
+              "ERRULE_CODE": "SF1_PNAME_CFF",
+              "REF_SCORE": 9,
+              "MATCH_LEVEL": 1,
+              "LAST_SEEN_DT": "2018-12-21 20:56:29.283",
+              "NAME_DATA": [
+                "DIMEZZA SHARON"
+              ],
+              "ATTRIBUTE_DATA": [
+                "GENDER: F"
+              ],
+              "IDENTIFIER_DATA": [
+                "DRLIC: MT",
+                "PASSPORT: G0RY5VG"
+              ],
+              "ADDRESS_DATA": [
+                "6747 136thEast AVE BrokenGArrow IN 74012"
+              ],
+              "PHONE_DATA": [
+
+              ],
+              "RELATIONSHIP_DATA": [
+
+              ],
+              "ENTITY_DATA": [
+
+              ],
+              "OTHER_DATA": [
+
+              ]
+            }
+          ]
+        },
+        "RELATED_ENTITIES": [
+          {
+            "ENTITY_ID": 8684,
+            "LENS_ID": 1,
+            "MATCH_LEVEL": 3,
+            "MATCH_KEY": "+GENDER+ADDRESS-DOB-SSN-PASSPORT",
+            "MATCH_SCORE": "3",
+            "ERRULE_CODE": "SFF",
+            "REF_SCORE": 3,
+            "IS_DISCLOSED": 0,
+            "IS_AMBIGUOUS": 0,
+            "ENTITY_NAME": "CELIA KREGER",
+            "RECORD_SUMMARY": [
+              {
+                "DATA_SOURCE": "EMPLOYEES",
+                "RECORD_COUNT": 4,
+                "FIRST_SEEN_DT": "2018-12-21 20:56:13.641",
+                "LAST_SEEN_DT": "2018-12-21 20:56:15.313"
+              }
+            ],
+            "LAST_SEEN_DT": "2018-12-21 20:56:15.313"
+          },
+          {
+            "ENTITY_ID": 11676,
+            "LENS_ID": 1,
+            "MATCH_LEVEL": 3,
+            "MATCH_KEY": "+ADDRESS-SSN",
+            "MATCH_SCORE": "2",
+            "ERRULE_CODE": "SFF",
+            "REF_SCORE": 3,
+            "IS_DISCLOSED": 0,
+            "IS_AMBIGUOUS": 0,
+            "ENTITY_NAME": "C KREGER",
+            "RECORD_SUMMARY": [
+              {
+                "DATA_SOURCE": "EMPLOYEES",
+                "RECORD_COUNT": 1,
+                "FIRST_SEEN_DT": "2018-12-21 20:56:14.495",
+                "LAST_SEEN_DT": "2018-12-21 20:56:14.495"
+              }
+            ],
+            "LAST_SEEN_DT": "2018-12-21 20:56:14.495"
+          }
+        ]
+      }
+    ]
+  },
+  "data": {
+    "entityPaths": [
+      {
+        "startEntityId": 8684,
+        "endEntityId": 11676,
+        "entityIds": [
+          8684,
+          11676
+        ]
+      }
+    ],
+    "entities": [
+      {
+        "resolvedEntity": {
+          "entityId": 8684,
+          "entityName": "CELIA KREGER",
+          "bestName": null,
+          "recordSummaries": [
+            {
+              "dataSource": "EMPLOYEES",
+              "recordCount": 4,
+              "topRecordIds": [
+                "465249064",
+                "465249065",
+                "465249067",
+                "465249068"
+              ]
+            }
+          ],
+          "addressData": [
+            "677 136THEAST AVE BROKEN ARROW INDIANA 74012",
+            "6747 136THEAST AVE IN"
+          ],
+          "attributeData": [
+            "DOB: 1950-10-10",
+            "GENDER: F"
+          ],
+          "identifierData": [
+            "CC ACCT_NUM: 5018435319940323397",
+            "PASSPORT: COQ1GK1RBH",
+            "DRLIC: IO154631X DI",
+            "DRLIC: IO15463X1 ID",
+            "SSN: 058-45-8135"
+          ],
+          "nameData": [
+            "CELIA KREGER"
+          ],
+          "phoneData": [
+            "756-541-2438"
+          ],
+          "relationshipData": [
+
+          ],
+          "otherData": [
+
+          ],
+          "features": {
+            "ACCT_NUM": [
+              {
+                "primaryValue": "5018435319940323397",
+                "usageType": "CC",
+                "duplicateValues": [
+
+                ]
+              }
+            ],
+            "ADDRESS": [
+              {
+                "primaryValue": "6747 136THEAST AVE IN",
+                "usageType": null,
+                "duplicateValues": [
+
+                ]
+              },
+              {
+                "primaryValue": "677 136THEAST AVE BROKEN ARROW INDIANA 74012",
+                "usageType": null,
+                "duplicateValues": [
+                  "6747 1C6THEAST AVE BROKEN ARROW IN",
+                  "6747 136THEAST AVE BROKEN ARROW IN"
+                ]
+              }
+            ],
+            "DOB": [
+              {
+                "primaryValue": "1950-10-10",
+                "usageType": null,
+                "duplicateValues": [
+
+                ]
+              }
+            ],
+            "DRLIC": [
+              {
+                "primaryValue": "IO15463X1 ID",
+                "usageType": null,
+                "duplicateValues": [
+
+                ]
+              },
+              {
+                "primaryValue": "IO154631X DI",
+                "usageType": null,
+                "duplicateValues": [
+                  "IO154631X"
+                ]
+              }
+            ],
+            "GENDER": [
+              {
+                "primaryValue": "F",
+                "usageType": null,
+                "duplicateValues": [
+
+                ]
+              }
+            ],
+            "NAME": [
+              {
+                "primaryValue": "CELIA KREGER",
+                "usageType": null,
+                "duplicateValues": [
+                  "CELIA KREGER",
+                  "KREGER"
+                ]
+              }
+            ],
+            "PASSPORT": [
+              {
+                "primaryValue": "COQ1GK1RBH",
+                "usageType": null,
+                "duplicateValues": [
+
+                ]
+              }
+            ],
+            "PHONE": [
+              {
+                "primaryValue": "756-541-2438",
+                "usageType": null,
+                "duplicateValues": [
+                  "765-541-2438",
+                  "765-541-4238"
+                ]
+              }
+            ],
+            "SSN": [
+              {
+                "primaryValue": "058-45-8135",
+                "usageType": null,
+                "duplicateValues": [
+                  "058-48-5135"
+                ]
+              }
+            ]
+          },
+          "records": [
+            {
+              "dataSource": "EMPLOYEES",
+              "recordId": "465249065",
+              "addressData": [
+                "677 136thEast AVE Broken Arrow Indiana 74012"
+              ],
+              "attributeData": [
+                "DOB: 10/10/1950",
+                "GENDER: F"
+              ],
+              "identifierData": [
+                "ACCT_NUM: CC: 5018435319940323397",
+                "DRLIC: IO154631X",
+                "SSN: 058-45-8135"
+              ],
+              "nameData": [
+                "KREGER CELIA"
+              ],
+              "phoneData": [
+                "765-541-2438"
+              ],
+              "relationshipData": [
+
+              ],
+              "otherData": [
+
+              ],
+              "originalSourceData": {
+                "SOURCE_ID": "7k_med.csv",
+                "PHONE_NUMBER": "765-541-2438",
+                "DRIVERS_LICENSE_NUMBER": "IO154631X",
+                "DATE_OF_BIRTH": "10/10/1950",
+                "ADDR_STATE": "Indiana",
+                "ADDR_POSTAL_CODE": "74012",
+                "ADDR_CITY": "Broken Arrow",
+                "SSN_NUMBER": "058-45-8135",
+                "NAME_FIRST": "CELIA",
+                "GENDER": "F",
+                "CC_ACCOUNT_NUMBER": "5018435319940323397",
+                "ADDR_LINE1": "677 136thEast AVE",
+                "NAME_LAST": "KREGER",
+                "DATA_SOURCE": "EMPLOYEES",
+                "ENTITY_TYPE": "EMPLOYEES",
+                "DSRC_ACTION": "A",
+                "LENS_CODE": "DEFAULT",
+                "RECORD_ID": "465249065"
+              }
+            },
+            {
+              "dataSource": "EMPLOYEES",
+              "recordId": "465249067",
+              "addressData": [
+                "6747 136thEast AVE Broken Arrow IN"
+              ],
+              "attributeData": [
+                "GENDER: F"
+              ],
+              "identifierData": [
+                "ACCT_NUM: CC: 5018435319940323397",
+                "DRLIC: IO154631X DI",
+                "SSN: 058-45-8135"
+              ],
+              "nameData": [
+                "KREGER"
+              ],
+              "phoneData": [
+                "765-541-4238"
+              ],
+              "relationshipData": [
+
+              ],
+              "otherData": [
+
+              ],
+              "originalSourceData": {
+                "SOURCE_ID": "7k_med.csv",
+                "PHONE_NUMBER": "765-541-4238",
+                "DRIVERS_LICENSE_NUMBER": "IO154631X",
+                "DRIVERS_LICENSE_STATE": "DI",
+                "ADDR_STATE": "IN",
+                "ADDR_CITY": "Broken Arrow",
+                "SSN_NUMBER": "058-45-8135",
+                "GENDER": "F",
+                "CC_ACCOUNT_NUMBER": "5018435319940323397",
+                "ADDR_LINE1": "6747 136thEast AVE",
+                "NAME_LAST": "KREGER",
+                "DATA_SOURCE": "EMPLOYEES",
+                "ENTITY_TYPE": "EMPLOYEES",
+                "DSRC_ACTION": "A",
+                "LENS_CODE": "DEFAULT",
+                "RECORD_ID": "465249067"
+              }
+            },
+            {
+              "dataSource": "EMPLOYEES",
+              "recordId": "465249068",
+              "addressData": [
+                "6747 1C6thEast AVE Broken Arrow IN"
+              ],
+              "attributeData": [
+                "DOB: 10/10/1950",
+                "GENDER: F"
+              ],
+              "identifierData": [
+                "ACCT_NUM: CC: 5018435319940323397",
+                "DRLIC: IO154631X DI",
+                "PASSPORT: COQ1GK1RBH",
+                "SSN: 058-48-5135"
+              ],
+              "nameData": [
+                "KREGER CELIA Jr."
+              ],
+              "phoneData": [
+
+              ],
+              "relationshipData": [
+
+              ],
+              "otherData": [
+
+              ],
+              "originalSourceData": {
+                "SOURCE_ID": "7k_med.csv",
+                "DRIVERS_LICENSE_NUMBER": "IO154631X",
+                "DRIVERS_LICENSE_STATE": "DI",
+                "DATE_OF_BIRTH": "10/10/1950",
+                "ADDR_STATE": "IN",
+                "ADDR_CITY": "Broken Arrow",
+                "SSN_NUMBER": "058-48-5135",
+                "NAME_FIRST": "CELIA",
+                "PASSPORT_NUMBER": "COQ1GK1RBH",
+                "GENDER": "F",
+                "NAME_SUFFIX": "Jr.",
+                "CC_ACCOUNT_NUMBER": "5018435319940323397",
+                "ADDR_LINE1": "6747 1C6thEast AVE",
+                "NAME_LAST": "KREGER",
+                "DATA_SOURCE": "EMPLOYEES",
+                "ENTITY_TYPE": "EMPLOYEES",
+                "DSRC_ACTION": "A",
+                "LENS_CODE": "DEFAULT",
+                "RECORD_ID": "465249068"
+              }
+            },
+            {
+              "dataSource": "EMPLOYEES",
+              "recordId": "465249064",
+              "addressData": [
+                "6747 136thEast AVE IN"
+              ],
+              "attributeData": [
+                "DOB: 10/10/1950"
+              ],
+              "identifierData": [
+                "ACCT_NUM: CC: 5018435319940323397",
+                "DRLIC: IO15463X1 ID",
+                "SSN: 058-45-8135"
+              ],
+              "nameData": [
+                "KREGER CELIA Jr."
+              ],
+              "phoneData": [
+                "756-541-2438"
+              ],
+              "relationshipData": [
+
+              ],
+              "otherData": [
+
+              ],
+              "originalSourceData": {
+                "SOURCE_ID": "7k_med.csv",
+                "PHONE_NUMBER": "756-541-2438",
+                "DRIVERS_LICENSE_NUMBER": "IO15463X1",
+                "DRIVERS_LICENSE_STATE": "ID",
+                "DATE_OF_BIRTH": "10/10/1950",
+                "ADDR_STATE": "IN",
+                "SSN_NUMBER": "058-45-8135",
+                "NAME_FIRST": "CELIA",
+                "NAME_SUFFIX": "Jr.",
+                "CC_ACCOUNT_NUMBER": "5018435319940323397",
+                "ADDR_LINE1": "6747 136thEast AVE",
+                "NAME_LAST": "KREGER",
+                "DATA_SOURCE": "EMPLOYEES",
+                "ENTITY_TYPE": "EMPLOYEES",
+                "DSRC_ACTION": "A",
+                "LENS_CODE": "DEFAULT",
+                "RECORD_ID": "465249064"
+              }
+            }
+          ]
+        },
+        "relatedEntities": [
+          {
+            "entityId": 11676,
+            "entityName": "C KREGER",
+            "bestName": null,
+            "recordSummaries": [
+              {
+                "dataSource": "EMPLOYEES",
+                "recordCount": 1,
+                "topRecordIds": [
+
+                ]
+              }
+            ],
+            "addressData": [
+
+            ],
+            "attributeData": [
+
+            ],
+            "identifierData": [
+
+            ],
+            "nameData": [
+
+            ],
+            "phoneData": [
+
+            ],
+            "relationshipData": [
+
+            ],
+            "otherData": [
+
+            ],
+            "features": {
+
+            },
+            "records": [
+
+            ],
+            "matchLevel": 2,
+            "fullNameScore": null,
+            "matchScore": 24,
+            "ambiguous": false,
+            "matchKey": "+SURNAME+ADDRESS+PHONE+SSN+DRLIC+ACCT_NUM",
+            "resolutionRuleCode": "SF1E",
+            "refScore": 6,
+            "partial": true,
+            "disclosed": false,
+            "relationType": "POSSIBLE_MATCH"
+          },
+          {
+            "entityId": 16120,
+            "entityName": "SHARAN DIMEZZA",
+            "bestName": null,
+            "recordSummaries": [
+              {
+                "dataSource": "WATCHLIST",
+                "recordCount": 8,
+                "topRecordIds": [
+
+                ]
+              }
+            ],
+            "addressData": [
+
+            ],
+            "attributeData": [
+
+            ],
+            "identifierData": [
+
+            ],
+            "nameData": [
+
+            ],
+            "phoneData": [
+
+            ],
+            "relationshipData": [
+
+            ],
+            "otherData": [
+
+            ],
+            "features": {
+
+            },
+            "records": [
+
+            ],
+            "matchLevel": 3,
+            "fullNameScore": null,
+            "matchScore": 3,
+            "ambiguous": false,
+            "matchKey": "+GENDER+ADDRESS-DOB-SSN-PASSPORT",
+            "resolutionRuleCode": "SFF",
+            "refScore": 3,
+            "partial": true,
+            "disclosed": false,
+            "relationType": "POSSIBLE_RELATION"
+          }
+        ]
+      },
+      {
+        "resolvedEntity": {
+          "entityId": 11676,
+          "entityName": "C KREGER",
+          "bestName": null,
+          "recordSummaries": [
+            {
+              "dataSource": "EMPLOYEES",
+              "recordCount": 1,
+              "topRecordIds": [
+                "465249066"
+              ]
+            }
+          ],
+          "addressData": [
+            "6747 136THEST AVE BROKEN ARROW IN 74012"
+          ],
+          "attributeData": [
+
+          ],
+          "identifierData": [
+            "CC ACCT_NUM: 5018435319940323397",
+            "DRLIC: IO145631X DI",
+            "SSN: 058-45-8135"
+          ],
+          "nameData": [
+            "C KREGER"
+          ],
+          "phoneData": [
+            "765-541-2438"
+          ],
+          "relationshipData": [
+
+          ],
+          "otherData": [
+
+          ],
+          "features": {
+            "ACCT_NUM": [
+              {
+                "primaryValue": "5018435319940323397",
+                "usageType": "CC",
+                "duplicateValues": [
+
+                ]
+              }
+            ],
+            "ADDRESS": [
+              {
+                "primaryValue": "6747 136THEST AVE BROKEN ARROW IN 74012",
+                "usageType": null,
+                "duplicateValues": [
+
+                ]
+              }
+            ],
+            "DRLIC": [
+              {
+                "primaryValue": "IO145631X DI",
+                "usageType": null,
+                "duplicateValues": [
+
+                ]
+              }
+            ],
+            "NAME": [
+              {
+                "primaryValue": "C KREGER",
+                "usageType": null,
+                "duplicateValues": [
+
+                ]
+              }
+            ],
+            "PHONE": [
+              {
+                "primaryValue": "765-541-2438",
+                "usageType": null,
+                "duplicateValues": [
+
+                ]
+              }
+            ],
+            "SSN": [
+              {
+                "primaryValue": "058-45-8135",
+                "usageType": null,
+                "duplicateValues": [
+
+                ]
+              }
+            ]
+          },
+          "records": [
+            {
+              "dataSource": "EMPLOYEES",
+              "recordId": "465249066",
+              "addressData": [
+                "6747 136thEst AVE Broken Arrow IN 74012"
+              ],
+              "attributeData": [
+
+              ],
+              "identifierData": [
+                "ACCT_NUM: CC: 5018435319940323397",
+                "DRLIC: IO145631X DI",
+                "SSN: 058-45-8135"
+              ],
+              "nameData": [
+                "KREGER C"
+              ],
+              "phoneData": [
+                "765-541-2438"
+              ],
+              "relationshipData": [
+
+              ],
+              "otherData": [
+
+              ],
+              "originalSourceData": {
+                "SOURCE_ID": "7k_med.csv",
+                "PHONE_NUMBER": "765-541-2438",
+                "DRIVERS_LICENSE_NUMBER": "IO145631X",
+                "DRIVERS_LICENSE_STATE": "DI",
+                "ADDR_STATE": "IN",
+                "ADDR_POSTAL_CODE": "74012",
+                "ADDR_CITY": "Broken Arrow",
+                "SSN_NUMBER": "058-45-8135",
+                "NAME_FIRST": "C",
+                "CC_ACCOUNT_NUMBER": "5018435319940323397",
+                "ADDR_LINE1": "6747 136thEst AVE",
+                "NAME_LAST": "KREGER",
+                "DATA_SOURCE": "EMPLOYEES",
+                "ENTITY_TYPE": "EMPLOYEES",
+                "DSRC_ACTION": "A",
+                "LENS_CODE": "DEFAULT",
+                "RECORD_ID": "465249066"
+              }
+            }
+          ]
+        },
+        "relatedEntities": [
+          {
+            "entityId": 8684,
+            "entityName": "CELIA KREGER",
+            "bestName": null,
+            "recordSummaries": [
+              {
+                "dataSource": "EMPLOYEES",
+                "recordCount": 4,
+                "topRecordIds": [
+
+                ]
+              }
+            ],
+            "addressData": [
+
+            ],
+            "attributeData": [
+
+            ],
+            "identifierData": [
+
+            ],
+            "nameData": [
+
+            ],
+            "phoneData": [
+
+            ],
+            "relationshipData": [
+
+            ],
+            "otherData": [
+
+            ],
+            "features": {
+
+            },
+            "records": [
+
+            ],
+            "matchLevel": 2,
+            "fullNameScore": null,
+            "matchScore": 24,
+            "ambiguous": false,
+            "matchKey": "+SURNAME+ADDRESS+PHONE+SSN+DRLIC+ACCT_NUM",
+            "resolutionRuleCode": "SF1E",
+            "refScore": 6,
+            "partial": true,
+            "disclosed": false,
+            "relationType": "POSSIBLE_MATCH"
+          },
+          {
+            "entityId": 16120,
+            "entityName": "SHARAN DIMEZZA",
+            "bestName": null,
+            "recordSummaries": [
+              {
+                "dataSource": "WATCHLIST",
+                "recordCount": 8,
+                "topRecordIds": [
+
+                ]
+              }
+            ],
+            "addressData": [
+
+            ],
+            "attributeData": [
+
+            ],
+            "identifierData": [
+
+            ],
+            "nameData": [
+
+            ],
+            "phoneData": [
+
+            ],
+            "relationshipData": [
+
+            ],
+            "otherData": [
+
+            ],
+            "features": {
+
+            },
+            "records": [
+
+            ],
+            "matchLevel": 3,
+            "fullNameScore": null,
+            "matchScore": 2,
+            "ambiguous": false,
+            "matchKey": "+ADDRESS-SSN",
+            "resolutionRuleCode": "SFF",
+            "refScore": 3,
+            "partial": true,
+            "disclosed": false,
+            "relationType": "POSSIBLE_RELATION"
+          }
+        ]
+      },
+      {
+        "resolvedEntity": {
+          "entityId": 16120,
+          "entityName": "SHARAN DIMEZZA",
+          "bestName": null,
+          "recordSummaries": [
+            {
+              "dataSource": "WATCHLIST",
+              "recordCount": 8,
+              "topRecordIds": [
+                "580050798",
+                "580050799",
+                "580050800",
+                "580050801",
+                "580050802",
+                "580050803",
+                "580050804",
+                "580050805"
+              ]
+            }
+          ],
+          "addressData": [
+            "61747 136THEAST AVE BROKEN ARROW INDIANA 74012"
+          ],
+          "attributeData": [
+            "DOB: 1982-25-04",
+            "GENDER: F"
+          ],
+          "identifierData": [
+            "CC ACCT_NUM: 4599253556244",
+            "CC ACCT_NUM: 4599523556244",
+            "DRLIC: 887296924 MT",
+            "DRLIC: 887926924 TM",
+            "LOGIN_ID: OOCYTEJ",
+            "PASSPORT: G0RY5VG",
+            "SSN: 168-37-6165"
+          ],
+          "nameData": [
+            "SHARAN DIMEZZA"
+          ],
+          "phoneData": [
+            "765-956-6137"
+          ],
+          "relationshipData": [
+
+          ],
+          "otherData": [
+
+          ],
+          "features": {
+            "ACCT_NUM": [
+              {
+                "primaryValue": "4599523556244",
+                "usageType": "CC",
+                "duplicateValues": [
+
+                ]
+              },
+              {
+                "primaryValue": "4599253556244",
+                "usageType": "CC",
+                "duplicateValues": [
+
+                ]
+              }
+            ],
+            "ADDRESS": [
+              {
+                "primaryValue": "61747 136THEAST AVE BROKEN ARROW INDIANA 74012",
+                "usageType": null,
+                "duplicateValues": [
+                  "6747 16THEAST AVE BROKEN ARROW IN 74012",
+                  "6747 136THEAST AVE BROKEN XARROW IN 74012",
+                  "6747 136THEAST AVE BROKEN ARROW IN 7012",
+                  "67047 136TTHEAST AVE IN 74012",
+                  "6747 136THEAST AVE BROKENGARROW IN 74012",
+                  "6747 136THEAST IN 4012",
+                  "6747 136THEAST AVE BROKNE ARROW IN 74012"
+                ]
+              }
+            ],
+            "DOB": [
+              {
+                "primaryValue": "1982-25-04",
+                "usageType": null,
+                "duplicateValues": [
+
+                ]
+              }
+            ],
+            "DRLIC": [
+              {
+                "primaryValue": "887926924 TM",
+                "usageType": null,
+                "duplicateValues": [
+                  "887926924"
+                ]
+              },
+              {
+                "primaryValue": "887296924 MT",
+                "usageType": null,
+                "duplicateValues": [
+
+                ]
+              }
+            ],
+            "GENDER": [
+              {
+                "primaryValue": "F",
+                "usageType": null,
+                "duplicateValues": [
+
+                ]
+              }
+            ],
+            "LOGIN_ID": [
+              {
+                "primaryValue": "OOCYTEJ",
+                "usageType": null,
+                "duplicateValues": [
+
+                ]
+              }
+            ],
+            "NAME": [
+              {
+                "primaryValue": "SHARAN DIMEZZA",
+                "usageType": null,
+                "duplicateValues": [
+                  "SHARON DIMEZZA",
+                  "DIMEZZA",
+                  "SHARON D"
+                ]
+              }
+            ],
+            "PASSPORT": [
+              {
+                "primaryValue": "G0RY5VG",
+                "usageType": null,
+                "duplicateValues": [
+
+                ]
+              }
+            ],
+            "PHONE": [
+              {
+                "primaryValue": "765-956-6137",
+                "usageType": null,
+                "duplicateValues": [
+                  "765-956-6317",
+                  "956-6137"
+                ]
+              }
+            ],
+            "SSN": [
+              {
+                "primaryValue": "168-37-6165",
+                "usageType": null,
+                "duplicateValues": [
+                  "168-36-7165"
+                ]
+              }
+            ]
+          },
+          "records": [
+            {
+              "dataSource": "WATCHLIST",
+              "recordId": "580050798",
+              "addressData": [
+                "6747 136thEast AVE Broken Arrow IN 7012"
+              ],
+              "attributeData": [
+                "DOB: 25/4/1982",
+                "GENDER: F"
+              ],
+              "identifierData": [
+                "DRLIC: 887926924 TM",
+                "LOGIN_ID: oocytej",
+                "PASSPORT: G0RY5VG",
+                "SSN: 168-37-6165"
+              ],
+              "nameData": [
+                "DIMEZZA SHARON"
+              ],
+              "phoneData": [
+                "765-956-6317"
+              ],
+              "relationshipData": [
+
+              ],
+              "otherData": [
+
+              ],
+              "originalSourceData": {
+                "SOURCE_ID": "5k_med.csv",
+                "PHONE_NUMBER": "765-956-6317",
+                "SOCIAL_HANDLE": "oocytej",
+                "DRIVERS_LICENSE_NUMBER": "887926924",
+                "DRIVERS_LICENSE_STATE": "TM",
+                "DATE_OF_BIRTH": "25/4/1982",
+                "ADDR_STATE": "IN",
+                "ADDR_POSTAL_CODE": "7012",
+                "ADDR_CITY": "Broken Arrow",
+                "SSN_NUMBER": "168-37-6165",
+                "NAME_FIRST": "SHARON",
+                "PASSPORT_NUMBER": "G0RY5VG",
+                "GENDER": "F",
+                "ADDR_LINE1": "6747 136thEast AVE",
+                "NAME_LAST": "DIMEZZA",
+                "DATA_SOURCE": "WATCHLIST",
+                "ENTITY_TYPE": "WATCHLIST",
+                "DSRC_ACTION": "A",
+                "LENS_CODE": "DEFAULT",
+                "RECORD_ID": "580050798"
+              }
+            },
+            {
+              "dataSource": "WATCHLIST",
+              "recordId": "580050805",
+              "addressData": [
+                "6747 136thEast AVE Brokne Arrow IN 74012"
+              ],
+              "attributeData": [
+                "GENDER: F"
+              ],
+              "identifierData": [
+                "ACCT_NUM: CC: 4599523556244",
+                "DRLIC: 887926924"
+              ],
+              "nameData": [
+                "DIMEZZA SHARON"
+              ],
+              "phoneData": [
+                "765-956-6137"
+              ],
+              "relationshipData": [
+
+              ],
+              "otherData": [
+
+              ],
+              "originalSourceData": {
+                "SOURCE_ID": "5k_med.csv",
+                "PHONE_NUMBER": "765-956-6137",
+                "DRIVERS_LICENSE_NUMBER": "887926924",
+                "ADDR_STATE": "IN",
+                "ADDR_POSTAL_CODE": "74012",
+                "ADDR_CITY": "Brokne Arrow",
+                "NAME_FIRST": "SHARON",
+                "GENDER": "F",
+                "CC_ACCOUNT_NUMBER": "4599523556244",
+                "ADDR_LINE1": "6747 136thEast AVE",
+                "NAME_LAST": "DIMEZZA",
+                "DATA_SOURCE": "WATCHLIST",
+                "ENTITY_TYPE": "WATCHLIST",
+                "DSRC_ACTION": "A",
+                "LENS_CODE": "DEFAULT",
+                "RECORD_ID": "580050805"
+              }
+            },
+            {
+              "dataSource": "WATCHLIST",
+              "recordId": "580050802",
+              "addressData": [
+                "6747 136thEast AVE Broken XArrow IN 74012"
+              ],
+              "attributeData": [
+                "DOB: 25/4/1982",
+                "GENDER: F"
+              ],
+              "identifierData": [
+                "ACCT_NUM: CC: 4599253556244",
+                "DRLIC: MT",
+                "PASSPORT: G0RY5VG"
+              ],
+              "nameData": [
+                "DIMEZZA SHARON"
+              ],
+              "phoneData": [
+                "765-956-6137"
+              ],
+              "relationshipData": [
+
+              ],
+              "otherData": [
+
+              ],
+              "originalSourceData": {
+                "SOURCE_ID": "5k_med.csv",
+                "PHONE_NUMBER": "765-956-6137",
+                "DRIVERS_LICENSE_STATE": "MT",
+                "DATE_OF_BIRTH": "25/4/1982",
+                "ADDR_STATE": "IN",
+                "ADDR_POSTAL_CODE": "74012",
+                "ADDR_CITY": "Broken XArrow",
+                "NAME_FIRST": "SHARON",
+                "PASSPORT_NUMBER": "G0RY5VG",
+                "GENDER": "F",
+                "CC_ACCOUNT_NUMBER": "4599253556244",
+                "ADDR_LINE1": "6747 136thEast AVE",
+                "NAME_LAST": "DIMEZZA",
+                "DATA_SOURCE": "WATCHLIST",
+                "ENTITY_TYPE": "WATCHLIST",
+                "DSRC_ACTION": "A",
+                "LENS_CODE": "DEFAULT",
+                "RECORD_ID": "580050802"
+              }
+            },
+            {
+              "dataSource": "WATCHLIST",
+              "recordId": "580050803",
+              "addressData": [
+                "61747 136thEast AVE Broken Arrow Indiana 74012"
+              ],
+              "attributeData": [
+                "GENDER: F"
+              ],
+              "identifierData": [
+                "ACCT_NUM: CC: 4599253556244",
+                "DRLIC: 887926924",
+                "SSN: 168-37-6165"
+              ],
+              "nameData": [
+                "D SHARON"
+              ],
+              "phoneData": [
+
+              ],
+              "relationshipData": [
+
+              ],
+              "otherData": [
+
+              ],
+              "originalSourceData": {
+                "SOURCE_ID": "5k_med.csv",
+                "DRIVERS_LICENSE_NUMBER": "887926924",
+                "ADDR_STATE": "Indiana",
+                "ADDR_POSTAL_CODE": "74012",
+                "ADDR_CITY": "Broken Arrow",
+                "SSN_NUMBER": "168-37-6165",
+                "NAME_FIRST": "SHARON",
+                "GENDER": "F",
+                "CC_ACCOUNT_NUMBER": "4599253556244",
+                "ADDR_LINE1": "61747 136thEast AVE",
+                "NAME_LAST": "D",
+                "DATA_SOURCE": "WATCHLIST",
+                "ENTITY_TYPE": "WATCHLIST",
+                "DSRC_ACTION": "A",
+                "LENS_CODE": "DEFAULT",
+                "RECORD_ID": "580050803"
+              }
+            },
+            {
+              "dataSource": "WATCHLIST",
+              "recordId": "580050799",
+              "addressData": [
+                "6747 16thEast AVE Broken Arrow IN 74012"
+              ],
+              "attributeData": [
+
+              ],
+              "identifierData": [
+                "ACCT_NUM: CC: 4599523556244",
+                "DRLIC: 887926924",
+                "LOGIN_ID: oocytej",
+                "SSN: 168-37-6165"
+              ],
+              "nameData": [
+                "DIMEZZA SHARAN"
+              ],
+              "phoneData": [
+
+              ],
+              "relationshipData": [
+
+              ],
+              "otherData": [
+
+              ],
+              "originalSourceData": {
+                "SOURCE_ID": "5k_med.csv",
+                "SOCIAL_HANDLE": "oocytej",
+                "DRIVERS_LICENSE_NUMBER": "887926924",
+                "ADDR_STATE": "IN",
+                "ADDR_POSTAL_CODE": "74012",
+                "ADDR_CITY": "Broken Arrow",
+                "SSN_NUMBER": "168-37-6165",
+                "NAME_FIRST": "SHARAN",
+                "CC_ACCOUNT_NUMBER": "4599523556244",
+                "ADDR_LINE1": "6747 16thEast AVE",
+                "NAME_LAST": "DIMEZZA",
+                "DATA_SOURCE": "WATCHLIST",
+                "ENTITY_TYPE": "WATCHLIST",
+                "DSRC_ACTION": "A",
+                "LENS_CODE": "DEFAULT",
+                "RECORD_ID": "580050799"
+              }
+            },
+            {
+              "dataSource": "WATCHLIST",
+              "recordId": "580050804",
+              "addressData": [
+                "6747 136thEast IN 4012"
+              ],
+              "attributeData": [
+                "GENDER: F"
+              ],
+              "identifierData": [
+                "DRLIC: 887926924"
+              ],
+              "nameData": [
+                "DIMEZZA"
+              ],
+              "phoneData": [
+                "765-956-6137"
+              ],
+              "relationshipData": [
+
+              ],
+              "otherData": [
+
+              ],
+              "originalSourceData": {
+                "SOURCE_ID": "5k_med.csv",
+                "PHONE_NUMBER": "765-956-6137",
+                "DRIVERS_LICENSE_NUMBER": "887926924",
+                "ADDR_STATE": "IN",
+                "ADDR_POSTAL_CODE": "4012",
+                "GENDER": "F",
+                "ADDR_LINE1": "6747 136thEast",
+                "NAME_LAST": "DIMEZZA",
+                "DATA_SOURCE": "WATCHLIST",
+                "ENTITY_TYPE": "WATCHLIST",
+                "DSRC_ACTION": "A",
+                "LENS_CODE": "DEFAULT",
+                "RECORD_ID": "580050804"
+              }
+            },
+            {
+              "dataSource": "WATCHLIST",
+              "recordId": "580050800",
+              "addressData": [
+                "67047 136TthEast AVE IN 74012"
+              ],
+              "attributeData": [
+                "DOB: 25/4/1982",
+                "GENDER: F"
+              ],
+              "identifierData": [
+                "DRLIC: 887296924 MT",
+                "LOGIN_ID: oocytej",
+                "PASSPORT: G0RY5VG",
+                "SSN: 168-36-7165"
+              ],
+              "nameData": [
+                "DIMEZZA"
+              ],
+              "phoneData": [
+                "956-6137"
+              ],
+              "relationshipData": [
+
+              ],
+              "otherData": [
+
+              ],
+              "originalSourceData": {
+                "SOURCE_ID": "5k_med.csv",
+                "PHONE_NUMBER": "956-6137",
+                "SOCIAL_HANDLE": "oocytej",
+                "DRIVERS_LICENSE_NUMBER": "887296924",
+                "DRIVERS_LICENSE_STATE": "MT",
+                "DATE_OF_BIRTH": "25/4/1982",
+                "ADDR_STATE": "IN",
+                "ADDR_POSTAL_CODE": "74012",
+                "SSN_NUMBER": "168-36-7165",
+                "PASSPORT_NUMBER": "G0RY5VG",
+                "GENDER": "F",
+                "ADDR_LINE1": "67047 136TthEast AVE",
+                "NAME_LAST": "DIMEZZA",
+                "DATA_SOURCE": "WATCHLIST",
+                "ENTITY_TYPE": "WATCHLIST",
+                "DSRC_ACTION": "A",
+                "LENS_CODE": "DEFAULT",
+                "RECORD_ID": "580050800"
+              }
+            },
+            {
+              "dataSource": "WATCHLIST",
+              "recordId": "580050801",
+              "addressData": [
+                "6747 136thEast AVE BrokenGArrow IN 74012"
+              ],
+              "attributeData": [
+                "GENDER: F"
+              ],
+              "identifierData": [
+                "DRLIC: MT",
+                "PASSPORT: G0RY5VG"
+              ],
+              "nameData": [
+                "DIMEZZA SHARON"
+              ],
+              "phoneData": [
+
+              ],
+              "relationshipData": [
+
+              ],
+              "otherData": [
+
+              ],
+              "originalSourceData": {
+                "SOURCE_ID": "5k_med.csv",
+                "DRIVERS_LICENSE_STATE": "MT",
+                "ADDR_STATE": "IN",
+                "ADDR_POSTAL_CODE": "74012",
+                "ADDR_CITY": "BrokenGArrow",
+                "NAME_FIRST": "SHARON",
+                "PASSPORT_NUMBER": "G0RY5VG",
+                "GENDER": "F",
+                "ADDR_LINE1": "6747 136thEast AVE",
+                "NAME_LAST": "DIMEZZA",
+                "DATA_SOURCE": "WATCHLIST",
+                "ENTITY_TYPE": "WATCHLIST",
+                "DSRC_ACTION": "A",
+                "LENS_CODE": "DEFAULT",
+                "RECORD_ID": "580050801"
+              }
+            }
+          ]
+        },
+        "relatedEntities": [
+          {
+            "entityId": 8684,
+            "entityName": "CELIA KREGER",
+            "bestName": null,
+            "recordSummaries": [
+              {
+                "dataSource": "EMPLOYEES",
+                "recordCount": 4,
+                "topRecordIds": [
+
+                ]
+              }
+            ],
+            "addressData": [
+
+            ],
+            "attributeData": [
+
+            ],
+            "identifierData": [
+
+            ],
+            "nameData": [
+
+            ],
+            "phoneData": [
+
+            ],
+            "relationshipData": [
+
+            ],
+            "otherData": [
+
+            ],
+            "features": {
+
+            },
+            "records": [
+
+            ],
+            "matchLevel": 3,
+            "fullNameScore": null,
+            "matchScore": 3,
+            "ambiguous": false,
+            "matchKey": "+GENDER+ADDRESS-DOB-SSN-PASSPORT",
+            "resolutionRuleCode": "SFF",
+            "refScore": 3,
+            "partial": true,
+            "disclosed": false,
+            "relationType": "POSSIBLE_RELATION"
+          },
+          {
+            "entityId": 11676,
+            "entityName": "C KREGER",
+            "bestName": null,
+            "recordSummaries": [
+              {
+                "dataSource": "EMPLOYEES",
+                "recordCount": 1,
+                "topRecordIds": [
+
+                ]
+              }
+            ],
+            "addressData": [
+
+            ],
+            "attributeData": [
+
+            ],
+            "identifierData": [
+
+            ],
+            "nameData": [
+
+            ],
+            "phoneData": [
+
+            ],
+            "relationshipData": [
+
+            ],
+            "otherData": [
+
+            ],
+            "features": {
+
+            },
+            "records": [
+
+            ],
+            "matchLevel": 3,
+            "fullNameScore": null,
+            "matchScore": 2,
+            "ambiguous": false,
+            "matchKey": "+ADDRESS-SSN",
+            "resolutionRuleCode": "SFF",
+            "refScore": 3,
+            "partial": true,
+            "disclosed": false,
+            "relationType": "POSSIBLE_RELATION"
+          }
+        ]
+      }
+    ]
+  }
+}

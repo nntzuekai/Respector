@@ -1,0 +1,28 @@
+{
+  "meta": {
+    "httpMethod": "GET",
+    "httpStatusCode": 200,
+    "timestamp": "2018-12-21T18:58:56.619Z"
+  },
+  "links": {
+    "self": "http://localhost/127.0.0.1:2080/data-sources?withRaw=true"
+  },
+  "rawData": {
+    "DSRC_CODE": [
+      "TEST",
+      "SEARCH",
+      "CUSTOMERS",
+      "EMPLOYEES",
+      "WATCHLIST"
+    ]
+  },
+  "data": {
+    "dataSources": [
+      "TEST",
+      "SEARCH",
+      "CUSTOMERS",
+      "EMPLOYEES",
+      "WATCHLIST"
+    ]
+  }
+}

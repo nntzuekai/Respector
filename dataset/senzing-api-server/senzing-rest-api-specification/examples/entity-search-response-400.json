@@ -1,0 +1,16 @@
+{
+  "meta": {
+    "httpMethod": "GET",
+    "httpStatusCode": 400,
+    "timestamp": "2018-12-21T21:25:40.486Z"
+  },
+  "links": {
+    "self": "http://localhost/127.0.0.1:2080/entities"
+  },
+  "errors": [
+    {
+      "code": null,
+      "message": "Parameter missing or empty: \"attrs\".  Search criteria attributes are required."
+    }
+  ]
+}

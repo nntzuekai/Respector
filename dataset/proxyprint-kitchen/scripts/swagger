@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# https://www.npmjs.com/package/bootprint-swagger
+curl localhost:8080/v2/api-docs > tmp.json
+bootprint swagger tmp.json target
+html-inline target/index.html > docs.html
+mv docs.html ../docs/
+rm -r target
+rm tmp.json
+if ! [[ -z $1 ]] && [[ $1 == "open" ]]; then
+	sensible-browser ../docs/docs.html
+fi
+

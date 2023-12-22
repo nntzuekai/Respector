@@ -1,0 +1,90 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+@use '@gravitee/ui-particles-angular' as gio;
+
+$foreground: map.get(gio.$mat-theme, foreground);
+$typography: map.get(gio.$mat-theme, typography);
+
+.health-check-card {
+  &__enable-toggle,
+  &__inherit-toggle {
+    width: 100%;
+  }
+
+  &__trigger,
+  &__request,
+  &__assertions {
+    padding-bottom: 16px;
+  }
+
+  &__trigger {
+    &__hint {
+      @include mat.typography-level($typography, caption);
+      color: mat.get-color-from-palette(gio.$mat-dove-palette, 'darker60');
+      padding-left: 8px;
+    }
+  }
+
+  &--forms {
+    padding-top: 16px;
+  }
+
+  &__request {
+    &__methods__form-field,
+    &__path__form-field,
+    &__fromRoot__toggle,
+    &__body__form-field,
+    &__http-headers__form-field {
+      width: 100%;
+      padding-bottom: 12px;
+    }
+
+    &__http-headers {
+      padding-left: 8px;
+
+      &__label {
+        @include mat.typography-level($typography, 'body-2');
+        margin-bottom: 12px;
+      }
+
+      &__hint {
+        @include mat.typography-level($typography, caption);
+        color: mat.get-color-from-palette(gio.$mat-dove-palette, 'darker60');
+        padding-left: 8px;
+      }
+    }
+  }
+
+  &__assertions {
+    &__banner {
+      margin-bottom: 16px;
+    }
+
+    &__assertion {
+      display: flex;
+      margin-bottom: 8px;
+
+      &__form-field {
+        flex: 1 1 auto;
+        margin-right: 8px;
+      }
+
+      &__remove-button {
+        margin-top: 8px;
+      }
+    }
+
+    &__add {
+      padding-top: 8px;
+    }
+  }
+
+  .disabled {
+    color: mat.get-color-from-palette($foreground, disabled);
+
+    .health-check-card__trigger__hint,
+    .health-check-card__request__http-headers__hint {
+      color: inherit;
+    }
+  }
+}

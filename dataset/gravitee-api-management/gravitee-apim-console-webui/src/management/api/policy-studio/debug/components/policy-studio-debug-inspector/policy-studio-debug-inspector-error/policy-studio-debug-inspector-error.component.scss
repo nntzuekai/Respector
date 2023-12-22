@@ -1,0 +1,15 @@
+:host {
+  > * {
+    width: 100%;
+    flex: 1;
+  }
+
+  td {
+    width: 50%;
+    word-break: break-all;
+  }
+
+  .key {
+    text-transform: capitalize;
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "required": [
+    "id",
+    "issuedDate",
+    "contents"
+  ],
+  "properties": {
+    "created": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "modified": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "id": {
+      "type": "string"
+    },
+    "issuedDate": {
+      "type": "string",
+      "format": "date"
+    },
+    "contents": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,56 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+@use '@gravitee/ui-particles-angular' as gio;
+
+$typography: map.get(gio.$mat-theme, typography);
+
+.policy-studio-debug-timeline {
+  background-color: mat.get-color-from-palette(gio.$mat-decorative-palette, 'lighter-background');
+  border-bottom: 2px solid mat.get-color-from-palette(gio.$mat-decorative-palette, 'divider');
+  position: relative;
+
+  &__header {
+    background-color: mat.get-color-from-palette(gio.$mat-decorative-palette, 'surface');
+    border-bottom: 2px solid mat.get-color-from-palette(gio.$mat-decorative-palette, 'divider');
+    height: 56px;
+    display: flex;
+    align-items: center;
+    padding: 16px;
+
+    &__title {
+      @include gio.subtitle-typography();
+      padding-right: 16px;
+      flex: 1;
+    }
+
+    &__counter {
+      margin: 0 auto;
+      display: flex;
+      align-items: baseline;
+    }
+
+    &__metrics {
+      margin: 0 0 0 8px;
+
+      &__title {
+        color: mat.get-color-from-palette(gio.$mat-content-palette, 'default');
+        margin: 0 2px 0 8px;
+      }
+    }
+  }
+
+  &__scroll {
+    overflow: auto;
+    white-space: nowrap;
+    padding: 8px 4px 8px 4px;
+    min-height: 100px;
+  }
+
+  &__background {
+    position: absolute;
+    background-color: mat.get-color-from-palette(gio.$mat-primary-palette, 'lighter');
+    height: 24px;
+    width: 100%;
+    top: 94px;
+  }
+}

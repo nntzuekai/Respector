@@ -1,0 +1,53 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+@use '@gravitee/ui-particles-angular' as gio;
+
+@use '../../../../scss/gio-layout' as gio-layout;
+
+$background: map.get(gio.$mat-theme, background);
+$infoColor: mat.get-color-from-palette(gio.$mat-primary-palette, default);
+
+:host {
+  @include gio-layout.gio-responsive-margin-container;
+}
+
+.org-settings-role {
+  &__role-card {
+    display: flex;
+    flex-direction: column;
+
+    &__field__name {
+      text-transform: uppercase;
+    }
+  }
+
+  &__permissions-card {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 0;
+
+    .mat-table {
+      .mat-header-row {
+        background-color: mat.get-color-from-palette($background, 'background');
+      }
+
+      .mat-column-permissionName {
+        .permission-moved {
+          color: mat.get-color-from-palette(gio.$mat-warning-palette, darker);
+          font-style: italic;
+        }
+      }
+
+      .mat-column-create,
+      .mat-column-read,
+      .mat-column-update,
+      .mat-column-delete {
+        width: 64px;
+        padding-right: 0;
+        text-align: center;
+      }
+    }
+  }
+}

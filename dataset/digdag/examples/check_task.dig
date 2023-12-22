@@ -1,0 +1,12 @@
+timezone: UTC
+
++generate_methods:
+  py>: tasks.check_task.generate
+  _check:
+    py>: tasks.check_task.check_generated
+
++generate_class_and_params:
+  py>: tasks.check_task.Generator.run
+  _check:
+    py>: tasks.check_task.Generator.check
+

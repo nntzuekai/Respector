@@ -1,0 +1,3 @@
+[submodule "senzing-rest-api-specification"]
+	path = senzing-rest-api-specification
+	url = https://github.com/Senzing/senzing-rest-api-specification.git

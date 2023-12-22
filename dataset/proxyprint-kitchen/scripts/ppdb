@@ -1,0 +1,93 @@
+ #!/bin/bash
+
+function help_text {
+  printf "ppdb [options]:\n\tdac - drop and create database\n"
+  printf "\tpopulate - populate proxyprint database\n"
+  printf "\tusers - select * from all users tables\n\n"
+}
+
+if [ -z $1 ]; then
+  help_text
+elif [ $1 == "dac" ]; then
+  dropdb proxyprint
+  createdb proxyprint
+elif [ $1 == "populate" ]; then
+  # admin
+  psql -d proxyprint -c "insert into users values(1000,1234,'master');";
+  psql -d proxyprint -c "insert into roles values(1000,'ROLE_ADMIN');";
+  psql -d proxyprint -c "insert into admin values('danielcaldas@sapo.pt',1000);";
+  # consumer
+  psql -d proxyprint -c "insert into users values(1001,1234,'joao');"
+  psql -d proxyprint -c "insert into roles values(1001,'ROLE_USER');"
+  psql -d proxyprint -c "insert into consumers values('joao@gmail.com', '41.5594', '8.3972', 'João dos Santos', 1001);" # latitude and longitude locate Braga, UM
+  #printshop
+  psql -d proxyprint -c "insert into printshops values(100,'Rua Nova de Santa Cruz, n 49, Braga', 0, '41.5594', 'logo', '8.3972', 'Video Norte', '123444378');"
+  # manager
+  psql -d proxyprint -c "insert into users values(1002,1234,'joaquim');"
+  psql -d proxyprint -c "insert into roles values(1002,'ROLE_MANAGER');"
+  psql -d proxyprint -c "insert into managers values('joaquim@gmail.com', 'Joaquim Pereira', 1002, 100);"
+  # employee
+  psql -d proxyprint -c "insert into users values(1003,1234,'mafalda');"
+  psql -d proxyprint -c "insert into employees values('Mafalda Sofia Pinto', 1003);"
+  psql -d proxyprint -c "insert into roles values(1003,'ROLE_EMPLOYEE');"
+
+  #register request
+  psql -d proxyprint -c "insert into register_requests values(200, false, 'danielcaldas@sapo.pt', 'Ana Pinto', '1234', 'Rua das Cruzes n20', '2016-04-25 21:22', '', '43.221', '41.121', '124555321', 'Printer Style');"
+
+  # pricetable
+  # bw+a4
+  psql -d proxyprint -c "insert into pricetables values(100,0.10,'BW,A4,SIMPLEX,1,20');"
+  psql -d proxyprint -c "insert into pricetables values(100,0.08,'BW,A4,SIMPLEX,21,50');"
+  psql -d proxyprint -c "insert into pricetables values(100,0.06,'BW,A4,SIMPLEX,51,100');"
+  psql -d proxyprint -c "insert into pricetables values(100,0.19,'BW,A4,DUPLEX,1,20');"
+  psql -d proxyprint -c "insert into pricetables values(100,0.15,'BW,A4,DUPLEX,21,50');"
+  psql -d proxyprint -c "insert into pricetables values(100,0.11,'BW,A4,DUPLEX,51,100');"
+  # bw+a3
+  psql -d proxyprint -c "insert into pricetables values(100,0.18,'BW,A3,SIMPLEX,1,20');"
+  psql -d proxyprint -c "insert into pricetables values(100,0.16,'BW,A3,SIMPLEX,21,50');"
+  psql -d proxyprint -c "insert into pricetables values(100,0.14,'BW,A3,SIMPLEX,51,100');"
+  psql -d proxyprint -c "insert into pricetables values(100,0.35,'BW,A3,DUPLEX,1,20');"
+  psql -d proxyprint -c "insert into pricetables values(100,0.31,'BW,A3,DUPLEX,21,50');"
+  psql -d proxyprint -c "insert into pricetables values(100,0.27,'BW,A3,DUPLEX,51,100');"
+  # color+a4
+  psql -d proxyprint -c "insert into pricetables values(100,0.75,'COLOR,A4,SIMPLEX,1,5');"
+  psql -d proxyprint -c "insert into pricetables values(100,0.60,'COLOR,A4,SIMPLEX,6,20');"
+  psql -d proxyprint -c "insert into pricetables values(100,0.50,'COLOR,A4,SIMPLEX,21,50');"
+  psql -d proxyprint -c "insert into pricetables values(100,1.49,'COLOR,A4,DUPLEX,1,5');"
+  psql -d proxyprint -c "insert into pricetables values(100,1.19,'COLOR,A4,DUPLEX,6,20');"
+  psql -d proxyprint -c "insert into pricetables values(100,0.99,'COLOR,A4,DUPLEX,21,50');"
+  # color+a3
+  psql -d proxyprint -c "insert into pricetables values(100,1.40,'COLOR,A3,SIMPLEX,1,5');"
+  psql -d proxyprint -c "insert into pricetables values(100,1.10,'COLOR,A3,SIMPLEX,6,20');"
+  psql -d proxyprint -c "insert into pricetables values(100,0.95,'COLOR,A3,SIMPLEX,21,50');"
+  psql -d proxyprint -c "insert into pricetables values(100,2.79,'COLOR,A3,DUPLEX,1,5');"
+  psql -d proxyprint -c "insert into pricetables values(100,2.19,'COLOR,A3,DUPLEX,6,20');"
+  psql -d proxyprint -c "insert into pricetables values(100,1.89,'COLOR,A3,DUPLEX,21,50');"
+
+# psql -d proxyprint -c "insert into printrequests (id, cost, arrival, finished, delivered, customer, status) values (1, 1.30, '2016-04-28 10:22', null, null, 1, 1);"
+# psql -d proxyprint -c "insert into printrequests (id, cost, arrival, finished, delivered, customer, status) values (2, 1.00, '2016-04-28 11:22', null, null, 2, 1);"
+# psql -d proxyprint -c "insert into printrequests (id, cost, arrival, finished, delivered, customer, status) values (3, 1.20, '2016-04-28 12:22', null, null, 3, 1);"
+# psql -d proxyprint -c "insert into printrequests (id, cost, arrival, finished, delivered, customer, status) values (4, 1.34, '2016-04-28 14:22', null, null, 4, 1);"
+# psql -d proxyprint -c "insert into printrequests (id, cost, arrival, finished, delivered, customer, status) values (5, 1.35, '2016-04-28 15:22', null, null, 5, 1);"
+
+
+  # to be continued... requests etc. ...
+elif [ $1 == "users" ]; then
+  # see user in the db
+  printf "ADMIN\n"
+  psql -d proxyprint -c "select * from admin;"
+  printf "CONSUMERS\n"
+  psql -d proxyprint -c "select * from consumers;"
+  printf "MANAGERS\n";
+  psql -d proxyprint -c "select * from managers;"
+  printf "EMPLOYESS\n";
+  psql -d proxyprint -c "select * from employees;"
+  printf "USERS\n";
+  psql -d proxyprint -c "select * from users;"
+elif [ $1 == "psrequests" ]; then
+  #see print shop's requests
+  psql -d proxyprint -c "select * from register_requests;"
+elif [ $1 == "--help" ]; then
+  #help
+  help_text
+fi

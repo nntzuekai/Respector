@@ -1,0 +1,16 @@
+{
+  "meta": {
+    "httpMethod": "GET",
+    "httpStatusCode": 500,
+    "timestamp": "2018-12-21T18:52:12.151Z"
+  },
+  "links": {
+    "self": "http://localhost/127.0.0.1:2080/entity-networks?e=3&e=10maxDegrees=5&buildOut=1&maxEntities=1000"
+  },
+  "errors": [
+    {
+      "code": "38",
+      "message": "0038E:Unable to find table 'CFG_CONFIG'"
+    }
+  ]
+}

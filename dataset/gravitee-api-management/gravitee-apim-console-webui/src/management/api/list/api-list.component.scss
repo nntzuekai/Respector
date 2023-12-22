@@ -1,0 +1,112 @@
+@use 'sass:map';
+
+@use '@angular/material' as mat;
+@use '@gravitee/ui-particles-angular' as gio;
+@use '../../../scss/gio-layout' as gio-layout;
+
+:host {
+  @include gio-layout.gio-responsive-content-container;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+
+  h1 {
+    margin-bottom: 0;
+  }
+}
+
+.mat-column-contextPath,
+.mat-column-tags,
+.mat-column-owner {
+  padding: 0 4px;
+}
+
+.mat-column-name {
+  cursor: pointer;
+  padding: 0 4px;
+  width: 15%;
+}
+
+.mat-column-picture,
+.mat-column-actions {
+  width: 1%;
+  padding: 0 4px;
+}
+
+.mat-column-states {
+  width: 1%;
+  padding: 0 4px;
+  white-space: nowrap;
+
+  .mat-icon {
+    margin: 0 4px;
+  }
+
+  .states {
+    &__api-started {
+      color: mat.get-color-from-palette(gio.$mat-success-palette, 'default');
+    }
+
+    &__api-not-started {
+      color: mat.get-color-from-palette(gio.$mat-error-palette, 'default');
+    }
+
+    &__api-workflow-badge {
+      vertical-align: top;
+    }
+
+    &__api-origin {
+      color: #326de6;
+    }
+
+    &__api-is-not-synced {
+      color: mat.get-color-from-palette(gio.$mat-warning-palette, 'default');
+    }
+  }
+}
+
+.quality-score {
+  text-align: center;
+  min-width: 42px;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 6px;
+  margin: 4px 0;
+  display: inline-block;
+  font-size: 0.8em;
+
+  &__good {
+    color: mat.get-color-from-palette(gio.$mat-success-palette, 'default');
+    border-color: mat.get-color-from-palette(gio.$mat-success-palette, 'default');
+  }
+
+  &__bad {
+    color: mat.get-color-from-palette(gio.$mat-error-palette, 'default');
+    border-color: mat.get-color-from-palette(gio.$mat-error-palette, 'default');
+  }
+
+  &__medium {
+    color: mat.get-color-from-palette(gio.$mat-warning-palette, 'default');
+    border-color: mat.get-color-from-palette(gio.$mat-warning-palette, 'default');
+  }
+}
+
+.mat-column-visibility {
+  width: 1%;
+  padding: 0 4px;
+
+  .visibility {
+    color: mat.get-color-from-palette(gio.$mat-content-palette, 'default');
+  }
+}
+
+.actions__edit {
+  display: flex;
+  justify-content: center;
+}

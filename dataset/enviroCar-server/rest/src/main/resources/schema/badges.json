@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "badges"
+  ],
+  "properties": {
+    "badges": {
+      "type": "array",
+      "minItems": 0,
+      "items": {
+        "$ref": "badge.json"
+      }
+    }
+  }
+}

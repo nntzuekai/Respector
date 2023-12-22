@@ -1,0 +1,53 @@
++ java -Djava.library.path=/home/rkh/z3//build/ -cp ./target/Respector-0.1-SNAPSHOT.jar:/home/rkh/z3//build/com.microsoft.z3.jar org.rest.Respector.AppMain.Main ../dataset//catwatch/catwatch-backend/target/classes/ ../dataset//lib/guava-19.0/ ./generated_1//catwatch.json
+[main] INFO org.rest.Respector.EndPointRecog.PreprocessFramework - The REST API uses Spring
+[main] INFO org.rest.Respector.AppMain.MainTransform - total # of endpoint methods detected: 14
+[main] INFO org.rest.Respector.AppMain.MainTransform - 1/14 analyzing endpoint method <org.zalando.catwatch.backend.web.LanguagesApi: org.springframework.http.ResponseEntity languagesGet(java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 4
+[main] INFO org.rest.Respector.AppMain.MainTransform - 2/14 analyzing endpoint method <org.zalando.catwatch.backend.web.fetch.FetchController: java.lang.String fetch()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 3/14 analyzing endpoint method <org.zalando.catwatch.backend.web.ProjectsApi: org.springframework.http.ResponseEntity projectsGet(java.lang.String,java.lang.Integer,java.lang.Integer,java.util.Date,java.util.Date,java.lang.String,java.lang.String,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 8
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 4/14 analyzing endpoint method <org.zalando.catwatch.backend.web.ContributorsApi: java.util.List contributorsGet(java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 7
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 5/14 analyzing endpoint method <org.zalando.catwatch.backend.web.StatisticsApi: org.springframework.http.ResponseEntity statisticsGet(java.lang.String,java.lang.String,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 3
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 6/14 analyzing endpoint method <org.zalando.catwatch.backend.web.StatisticsApi: org.springframework.http.ResponseEntity statisticsProjectGet(java.lang.String,java.lang.String,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 3
+[main] INFO org.rest.Respector.AppMain.MainTransform - 7/14 analyzing endpoint method <org.zalando.catwatch.backend.web.StatisticsApi: org.springframework.http.ResponseEntity statisticsContributorGet(java.lang.String,java.lang.String,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 3
+[main] INFO org.rest.Respector.AppMain.MainTransform - 8/14 analyzing endpoint method <org.zalando.catwatch.backend.web.StatisticsApi: org.springframework.http.ResponseEntity statisticsLanguagesGet(java.lang.String,java.lang.String,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 3
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 9/14 analyzing endpoint method <org.zalando.catwatch.backend.web.config.ConfigController: java.util.Map config()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 10/14 analyzing endpoint method <org.zalando.catwatch.backend.web.admin.AdminController: java.util.List configScoringProjects(java.lang.String,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 11/14 analyzing endpoint method <org.zalando.catwatch.backend.web.admin.AdminController: java.lang.String init()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 12/14 analyzing endpoint method <org.zalando.catwatch.backend.web.admin.AdminController: java.lang.String deleteAll()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 13/14 analyzing endpoint method <org.zalando.catwatch.backend.web.admin.AdminController: java.lang.String importJson(org.zalando.catwatch.backend.web.admin.DatabaseDto)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 14/14 analyzing endpoint method <org.zalando.catwatch.backend.web.admin.AdminController: org.zalando.catwatch.backend.web.admin.DatabaseDto exportJson()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+
+real	6m46.076s
+user	7m1.764s
+sys	0m0.576s

@@ -1,0 +1,2118 @@
+{
+  "openapi": "3.0.0",
+  "servers": [
+    {
+      "url": "http://localhost:8080"
+    }
+  ],
+  "info": {
+    "title": "REST API",
+    "version": "",
+    "description": "REST API"
+  },
+  "paths": {
+    "/contribute": {
+      "post": {
+        "description": "",
+        "operationId": "em14",
+        "parameters": [],
+        "responses": {
+          "202": {
+            "description": "ACCEPTED"
+          },
+          "400": {
+            "description": "BAD_REQUEST"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "amount": {
+                    "type": "integer"
+                  },
+                  "token": {
+                    "type": "string"
+                  }
+                },
+                "maxProperties": 2
+              }
+            }
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1contribute/post"
+        }
+      }
+    },
+    "/v1": {
+      "get": {
+        "description": "",
+        "operationId": "em16",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1v1/get"
+        }
+      },
+      "post": {
+        "description": "",
+        "operationId": "em26",
+        "parameters": [],
+        "responses": {
+          "405": {
+            "description": "METHOD_NOT_ALLOWED"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1v1/post"
+        }
+      }
+    },
+    "/v1/all": {
+      "get": {
+        "description": "",
+        "operationId": "em15",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "java.lang.Object"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/v1/alpha": {
+      "get": {
+        "description": "",
+        "operationId": "em18",
+        "parameters": [
+          {
+            "name": "codes",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 2,
+              "x-parameter-constraints": {
+                "$ref": "#/components/x-endpoint-constraints/~1v1~1alpha/get/x-parameter-constraints/codes"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "BAD_REQUEST"
+          },
+          "404": {
+            "description": "NOT_FOUND"
+          },
+          "500": {
+            "description": ""
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1v1~1alpha/get"
+        }
+      }
+    },
+    "/v1/alpha/{alphacode}": {
+      "get": {
+        "description": "",
+        "operationId": "em17",
+        "parameters": [
+          {
+            "name": "alphacode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "maxLength": 3,
+              "minLength": 2
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "eu.fayder.restcountries.v1.domain.Country",
+                  "properties": {
+                    "currencies": {
+                      "type": "array",
+                      "items": {
+                        "type": "object"
+                      }
+                    },
+                    "languages": {
+                      "type": "array",
+                      "items": {
+                        "type": "object"
+                      }
+                    },
+                    "translations": {
+                      "type": "object",
+                      "title": "eu.fayder.restcountries.v1.domain.CountryTranslations",
+                      "properties": {
+                        "de": {
+                          "type": "string"
+                        },
+                        "es": {
+                          "type": "string"
+                        },
+                        "fr": {
+                          "type": "string"
+                        },
+                        "ja": {
+                          "type": "string"
+                        },
+                        "it": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "relevance": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "BAD_REQUEST"
+          },
+          "404": {
+            "description": "NOT_FOUND"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1v1~1alpha~1{alphacode}/get"
+        }
+      }
+    },
+    "/v1/callingcode/{callingcode}": {
+      "get": {
+        "description": "",
+        "operationId": "em21",
+        "parameters": [
+          {
+            "name": "callingcode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "NOT_FOUND"
+          },
+          "500": {
+            "description": ""
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1v1~1callingcode~1{callingcode}/get"
+        }
+      }
+    },
+    "/v1/capital/{capital}": {
+      "get": {
+        "description": "",
+        "operationId": "em22",
+        "parameters": [
+          {
+            "name": "capital",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "NOT_FOUND"
+          },
+          "500": {
+            "description": ""
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1v1~1capital~1{capital}/get"
+        }
+      }
+    },
+    "/v1/currency/{currency}": {
+      "get": {
+        "description": "",
+        "operationId": "em19",
+        "parameters": [
+          {
+            "name": "currency",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "maxLength": 3,
+              "minLength": 3
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "BAD_REQUEST"
+          },
+          "404": {
+            "description": "NOT_FOUND"
+          },
+          "500": {
+            "description": ""
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1v1~1currency~1{currency}/get"
+        }
+      }
+    },
+    "/v1/lang/{lang}": {
+      "get": {
+        "description": "",
+        "operationId": "em25",
+        "parameters": [
+          {
+            "name": "lang",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "NOT_FOUND"
+          },
+          "500": {
+            "description": ""
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1v1~1lang~1{lang}/get"
+        }
+      }
+    },
+    "/v1/name/{name}": {
+      "get": {
+        "description": "",
+        "operationId": "em20",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fullText",
+            "in": "query",
+            "required": false,
+            "examples": {
+              "false": {
+                "value": false
+              }
+            },
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "NOT_FOUND"
+          },
+          "500": {
+            "description": ""
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1v1~1name~1{name}/get"
+        }
+      }
+    },
+    "/v1/region/{region}": {
+      "get": {
+        "description": "",
+        "operationId": "em23",
+        "parameters": [
+          {
+            "name": "region",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "NOT_FOUND"
+          },
+          "500": {
+            "description": ""
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1v1~1region~1{region}/get"
+        }
+      }
+    },
+    "/v1/subregion/{subregion}": {
+      "get": {
+        "description": "",
+        "operationId": "em24",
+        "parameters": [
+          {
+            "name": "subregion",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "NOT_FOUND"
+          },
+          "500": {
+            "description": ""
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1v1~1subregion~1{subregion}/get"
+        }
+      }
+    },
+    "/v2": {
+      "get": {
+        "description": "",
+        "operationId": "em1",
+        "parameters": [
+          {
+            "name": "fields",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1v2/get"
+        }
+      },
+      "post": {
+        "description": "",
+        "operationId": "em13",
+        "parameters": [],
+        "responses": {
+          "405": {
+            "description": "METHOD_NOT_ALLOWED"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1v2/post"
+        }
+      }
+    },
+    "/v2/all": {
+      "get": {
+        "description": "",
+        "operationId": "em0",
+        "parameters": [
+          {
+            "name": "fields",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1v2~1all/get"
+        }
+      }
+    },
+    "/v2/alpha": {
+      "get": {
+        "description": "",
+        "operationId": "em3",
+        "parameters": [
+          {
+            "name": "codes",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 2,
+              "x-parameter-constraints": {
+                "$ref": "#/components/x-endpoint-constraints/~1v2~1alpha/get/x-parameter-constraints/codes"
+              }
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "BAD_REQUEST"
+          },
+          "404": {
+            "description": "NOT_FOUND"
+          },
+          "500": {
+            "description": ""
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1v2~1alpha/get"
+        }
+      }
+    },
+    "/v2/alpha/{alphacode}": {
+      "get": {
+        "description": "",
+        "operationId": "em2",
+        "parameters": [
+          {
+            "name": "alphacode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "maxLength": 3,
+              "minLength": 2
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "eu.fayder.restcountries.v2.domain.Country",
+                  "properties": {
+                    "currencies": {
+                      "type": "array",
+                      "items": {
+                        "type": "object"
+                      }
+                    },
+                    "languages": {
+                      "type": "array",
+                      "items": {
+                        "type": "object"
+                      }
+                    },
+                    "translations": {
+                      "type": "object",
+                      "title": "eu.fayder.restcountries.v2.domain.Translations",
+                      "properties": {
+                        "br": {
+                          "type": "string"
+                        },
+                        "pt": {
+                          "type": "string"
+                        },
+                        "nl": {
+                          "type": "string"
+                        },
+                        "hr": {
+                          "type": "string"
+                        },
+                        "fa": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "flag": {
+                      "type": "string"
+                    },
+                    "regionalBlocs": {
+                      "type": "array",
+                      "items": {
+                        "type": "object"
+                      }
+                    },
+                    "cioc": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "BAD_REQUEST"
+          },
+          "404": {
+            "description": "NOT_FOUND"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1v2~1alpha~1{alphacode}/get"
+        }
+      }
+    },
+    "/v2/callingcode/{callingcode}": {
+      "get": {
+        "description": "",
+        "operationId": "em6",
+        "parameters": [
+          {
+            "name": "callingcode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "NOT_FOUND"
+          },
+          "500": {
+            "description": ""
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1v2~1callingcode~1{callingcode}/get"
+        }
+      }
+    },
+    "/v2/capital/{capital}": {
+      "get": {
+        "description": "",
+        "operationId": "em7",
+        "parameters": [
+          {
+            "name": "capital",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "NOT_FOUND"
+          },
+          "500": {
+            "description": ""
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1v2~1capital~1{capital}/get"
+        }
+      }
+    },
+    "/v2/currency/{currency}": {
+      "get": {
+        "description": "",
+        "operationId": "em4",
+        "parameters": [
+          {
+            "name": "currency",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "maxLength": 3,
+              "minLength": 3
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "BAD_REQUEST"
+          },
+          "404": {
+            "description": "NOT_FOUND"
+          },
+          "500": {
+            "description": ""
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1v2~1currency~1{currency}/get"
+        }
+      }
+    },
+    "/v2/demonym/{demonym}": {
+      "get": {
+        "description": "",
+        "operationId": "em11",
+        "parameters": [
+          {
+            "name": "demonym",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "NOT_FOUND"
+          },
+          "500": {
+            "description": ""
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1v2~1demonym~1{demonym}/get"
+        }
+      }
+    },
+    "/v2/lang/{lang}": {
+      "get": {
+        "description": "",
+        "operationId": "em10",
+        "parameters": [
+          {
+            "name": "lang",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "NOT_FOUND"
+          },
+          "500": {
+            "description": ""
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1v2~1lang~1{lang}/get"
+        }
+      }
+    },
+    "/v2/name/{name}": {
+      "get": {
+        "description": "",
+        "operationId": "em5",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fullText",
+            "in": "query",
+            "required": false,
+            "examples": {
+              "false": {
+                "value": false
+              }
+            },
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "NOT_FOUND"
+          },
+          "500": {
+            "description": ""
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1v2~1name~1{name}/get"
+        }
+      }
+    },
+    "/v2/region/{region}": {
+      "get": {
+        "description": "",
+        "operationId": "em8",
+        "parameters": [
+          {
+            "name": "region",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "NOT_FOUND"
+          },
+          "500": {
+            "description": ""
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1v2~1region~1{region}/get"
+        }
+      }
+    },
+    "/v2/regionalbloc/{regionalbloc}": {
+      "get": {
+        "description": "",
+        "operationId": "em12",
+        "parameters": [
+          {
+            "name": "regionalbloc",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "NOT_FOUND"
+          },
+          "500": {
+            "description": ""
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1v2~1regionalbloc~1{regionalbloc}/get"
+        }
+      }
+    },
+    "/v2/subregion/{subregion}": {
+      "get": {
+        "description": "",
+        "operationId": "em9",
+        "parameters": [
+          {
+            "name": "subregion",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "NOT_FOUND"
+          },
+          "500": {
+            "description": ""
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1v2~1subregion~1{subregion}/get"
+        }
+      }
+    }
+  },
+  "components": {
+    "x-endpoint-constraints": {
+      "/contribute": {
+        "post": {
+          "global-reads": {
+            "g2": {
+              "name": "BAD_REQUEST",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g2"
+              }
+            },
+            "g7": {
+              "name": "ACCEPTED",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g7"
+              }
+            },
+            "g8": {
+              "name": "LOG",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g8"
+              }
+            }
+          },
+          "global-writes": {
+            "g9": {
+              "name": "apiKey",
+              "assigned-values": [
+                "\"\""
+              ],
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g9"
+              }
+            }
+          }
+        }
+      },
+      "/v1": {
+        "get": {
+          "global-reads": {
+            "g10": {
+              "name": "LOG",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g10"
+              }
+            }
+          }
+        },
+        "post": {
+          "global-reads": {
+            "g6": {
+              "name": "METHOD_NOT_ALLOWED",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g6"
+              }
+            },
+            "g10": {
+              "name": "LOG",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g10"
+              }
+            }
+          }
+        }
+      },
+      "/v1/alpha": {
+        "get": {
+          "global-reads": {
+            "g2": {
+              "name": "BAD_REQUEST",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g2"
+              }
+            },
+            "g4": {
+              "name": "NOT_FOUND",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g4"
+              }
+            },
+            "g10": {
+              "name": "LOG",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g10"
+              }
+            },
+            "g11": {
+              "name": "countries",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g11"
+              }
+            }
+          },
+          "x-parameter-constraints": {
+            "codes": [
+              "(or (<= (str.len codes) 3) (str.contains codes \";\"))"
+            ]
+          }
+        }
+      },
+      "/v1/alpha/{alphacode}": {
+        "get": {
+          "global-reads": {
+            "g2": {
+              "name": "BAD_REQUEST",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g2"
+              }
+            },
+            "g4": {
+              "name": "NOT_FOUND",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g4"
+              }
+            },
+            "g10": {
+              "name": "LOG",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g10"
+              }
+            },
+            "g11": {
+              "name": "countries",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g11"
+              }
+            }
+          }
+        }
+      },
+      "/v1/callingcode/{callingcode}": {
+        "get": {
+          "global-reads": {
+            "g4": {
+              "name": "NOT_FOUND",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g4"
+              }
+            },
+            "g10": {
+              "name": "LOG",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g10"
+              }
+            },
+            "g11": {
+              "name": "countries",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g11"
+              }
+            }
+          }
+        }
+      },
+      "/v1/capital/{capital}": {
+        "get": {
+          "global-reads": {
+            "g4": {
+              "name": "NOT_FOUND",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g4"
+              }
+            },
+            "g5": {
+              "name": "NFD",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g5"
+              }
+            },
+            "g10": {
+              "name": "LOG",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g10"
+              }
+            },
+            "g11": {
+              "name": "countries",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g11"
+              }
+            }
+          }
+        }
+      },
+      "/v1/currency/{currency}": {
+        "get": {
+          "global-reads": {
+            "g2": {
+              "name": "BAD_REQUEST",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g2"
+              }
+            },
+            "g4": {
+              "name": "NOT_FOUND",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g4"
+              }
+            },
+            "g10": {
+              "name": "LOG",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g10"
+              }
+            },
+            "g11": {
+              "name": "countries",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g11"
+              }
+            }
+          }
+        }
+      },
+      "/v1/lang/{lang}": {
+        "get": {
+          "global-reads": {
+            "g4": {
+              "name": "NOT_FOUND",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g4"
+              }
+            },
+            "g10": {
+              "name": "LOG",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g10"
+              }
+            },
+            "g11": {
+              "name": "countries",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g11"
+              }
+            }
+          }
+        }
+      },
+      "/v1/name/{name}": {
+        "get": {
+          "global-reads": {
+            "g4": {
+              "name": "NOT_FOUND",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g4"
+              }
+            },
+            "g5": {
+              "name": "NFD",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g5"
+              }
+            },
+            "g10": {
+              "name": "LOG",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g10"
+              }
+            },
+            "g11": {
+              "name": "countries",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g11"
+              }
+            }
+          }
+        }
+      },
+      "/v1/region/{region}": {
+        "get": {
+          "global-reads": {
+            "g4": {
+              "name": "NOT_FOUND",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g4"
+              }
+            },
+            "g10": {
+              "name": "LOG",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g10"
+              }
+            },
+            "g11": {
+              "name": "countries",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g11"
+              }
+            }
+          }
+        }
+      },
+      "/v1/subregion/{subregion}": {
+        "get": {
+          "global-reads": {
+            "g4": {
+              "name": "NOT_FOUND",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g4"
+              }
+            },
+            "g10": {
+              "name": "LOG",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g10"
+              }
+            },
+            "g11": {
+              "name": "countries",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g11"
+              }
+            }
+          }
+        }
+      },
+      "/v2": {
+        "get": {
+          "global-reads": {
+            "g0": {
+              "name": "COUNTRY_FIELDS",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g0"
+              }
+            },
+            "g1": {
+              "name": "LOG",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g1"
+              }
+            }
+          }
+        },
+        "post": {
+          "global-reads": {
+            "g1": {
+              "name": "LOG",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g1"
+              }
+            },
+            "g6": {
+              "name": "METHOD_NOT_ALLOWED",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g6"
+              }
+            }
+          }
+        }
+      },
+      "/v2/all": {
+        "get": {
+          "global-reads": {
+            "g0": {
+              "name": "COUNTRY_FIELDS",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g0"
+              }
+            },
+            "g1": {
+              "name": "LOG",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g1"
+              }
+            }
+          }
+        }
+      },
+      "/v2/alpha": {
+        "get": {
+          "global-reads": {
+            "g0": {
+              "name": "COUNTRY_FIELDS",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g0"
+              }
+            },
+            "g1": {
+              "name": "LOG",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g1"
+              }
+            },
+            "g2": {
+              "name": "BAD_REQUEST",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g2"
+              }
+            },
+            "g3": {
+              "name": "countries",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g3"
+              }
+            },
+            "g4": {
+              "name": "NOT_FOUND",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g4"
+              }
+            }
+          },
+          "x-parameter-constraints": {
+            "codes": [
+              "(or (<= (str.len codes) 3) (str.contains codes \";\"))"
+            ]
+          }
+        }
+      },
+      "/v2/alpha/{alphacode}": {
+        "get": {
+          "global-reads": {
+            "g0": {
+              "name": "COUNTRY_FIELDS",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g0"
+              }
+            },
+            "g1": {
+              "name": "LOG",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g1"
+              }
+            },
+            "g2": {
+              "name": "BAD_REQUEST",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g2"
+              }
+            },
+            "g3": {
+              "name": "countries",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g3"
+              }
+            },
+            "g4": {
+              "name": "NOT_FOUND",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g4"
+              }
+            }
+          }
+        }
+      },
+      "/v2/callingcode/{callingcode}": {
+        "get": {
+          "global-reads": {
+            "g0": {
+              "name": "COUNTRY_FIELDS",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g0"
+              }
+            },
+            "g1": {
+              "name": "LOG",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g1"
+              }
+            },
+            "g3": {
+              "name": "countries",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g3"
+              }
+            },
+            "g4": {
+              "name": "NOT_FOUND",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g4"
+              }
+            }
+          }
+        }
+      },
+      "/v2/capital/{capital}": {
+        "get": {
+          "global-reads": {
+            "g0": {
+              "name": "COUNTRY_FIELDS",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g0"
+              }
+            },
+            "g1": {
+              "name": "LOG",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g1"
+              }
+            },
+            "g3": {
+              "name": "countries",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g3"
+              }
+            },
+            "g4": {
+              "name": "NOT_FOUND",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g4"
+              }
+            },
+            "g5": {
+              "name": "NFD",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g5"
+              }
+            }
+          }
+        }
+      },
+      "/v2/currency/{currency}": {
+        "get": {
+          "global-reads": {
+            "g0": {
+              "name": "COUNTRY_FIELDS",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g0"
+              }
+            },
+            "g1": {
+              "name": "LOG",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g1"
+              }
+            },
+            "g2": {
+              "name": "BAD_REQUEST",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g2"
+              }
+            },
+            "g3": {
+              "name": "countries",
+              "constraints": [
+                "(not (= |(eu.fayder.restcountries.v2.domain.Currency) ((eu.fayder.restcountries.v2.domain.Country) <eu.fayder.restcountries.v2.rest.CountryService: java.util.List countries>.<java.util.List: java.util.Iterator iterator()>().<java.util.Iterator: java.lang.Object next()>()).<eu.fayder.restcountries.v2.domain.Country: java.util.List getCurrencies()>().<java.util.List: java.util.Iterator iterator()>().<java.util.Iterator: java.lang.Object next()>()|\n        null))"
+              ],
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g3"
+              }
+            },
+            "g4": {
+              "name": "NOT_FOUND",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g4"
+              }
+            }
+          }
+        }
+      },
+      "/v2/demonym/{demonym}": {
+        "get": {
+          "global-reads": {
+            "g0": {
+              "name": "COUNTRY_FIELDS",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g0"
+              }
+            },
+            "g1": {
+              "name": "LOG",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g1"
+              }
+            },
+            "g3": {
+              "name": "countries",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g3"
+              }
+            },
+            "g4": {
+              "name": "NOT_FOUND",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g4"
+              }
+            },
+            "g5": {
+              "name": "NFD",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g5"
+              }
+            }
+          }
+        }
+      },
+      "/v2/lang/{lang}": {
+        "get": {
+          "global-reads": {
+            "g0": {
+              "name": "COUNTRY_FIELDS",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g0"
+              }
+            },
+            "g1": {
+              "name": "LOG",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g1"
+              }
+            },
+            "g3": {
+              "name": "countries",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g3"
+              }
+            },
+            "g4": {
+              "name": "NOT_FOUND",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g4"
+              }
+            }
+          }
+        }
+      },
+      "/v2/name/{name}": {
+        "get": {
+          "global-reads": {
+            "g0": {
+              "name": "COUNTRY_FIELDS",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g0"
+              }
+            },
+            "g1": {
+              "name": "LOG",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g1"
+              }
+            },
+            "g3": {
+              "name": "countries",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g3"
+              }
+            },
+            "g4": {
+              "name": "NOT_FOUND",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g4"
+              }
+            },
+            "g5": {
+              "name": "NFD",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g5"
+              }
+            }
+          }
+        }
+      },
+      "/v2/region/{region}": {
+        "get": {
+          "global-reads": {
+            "g0": {
+              "name": "COUNTRY_FIELDS",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g0"
+              }
+            },
+            "g1": {
+              "name": "LOG",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g1"
+              }
+            },
+            "g3": {
+              "name": "countries",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g3"
+              }
+            },
+            "g4": {
+              "name": "NOT_FOUND",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g4"
+              }
+            }
+          }
+        }
+      },
+      "/v2/regionalbloc/{regionalbloc}": {
+        "get": {
+          "global-reads": {
+            "g0": {
+              "name": "COUNTRY_FIELDS",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g0"
+              }
+            },
+            "g1": {
+              "name": "LOG",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g1"
+              }
+            },
+            "g3": {
+              "name": "countries",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g3"
+              }
+            },
+            "g4": {
+              "name": "NOT_FOUND",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g4"
+              }
+            }
+          }
+        }
+      },
+      "/v2/subregion/{subregion}": {
+        "get": {
+          "global-reads": {
+            "g0": {
+              "name": "COUNTRY_FIELDS",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g0"
+              }
+            },
+            "g1": {
+              "name": "LOG",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g1"
+              }
+            },
+            "g3": {
+              "name": "countries",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g3"
+              }
+            },
+            "g4": {
+              "name": "NOT_FOUND",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g4"
+              }
+            }
+          }
+        }
+      }
+    },
+    "x-endpoint-interdependence": {},
+    "x-global-variables-info": {
+      "g0": {
+        "name": "COUNTRY_FIELDS",
+        "id": "g0",
+        "defining-class": "eu.fayder.restcountries.v2.rest.CountryRestV2",
+        "locations-of-static-assignments": [
+          "line 285, eu.fayder.restcountries.v2.rest.CountryRestV2"
+        ]
+      },
+      "g1": {
+        "name": "LOG",
+        "id": "g1",
+        "defining-class": "eu.fayder.restcountries.v2.rest.CountryRestV2",
+        "locations-of-static-assignments": [
+          "line 25, eu.fayder.restcountries.v2.rest.CountryRestV2"
+        ]
+      },
+      "g2": {
+        "name": "BAD_REQUEST",
+        "id": "g2",
+        "defining-class": "javax.ws.rs.core.Response$Status"
+      },
+      "g3": {
+        "name": "countries",
+        "id": "g3",
+        "defining-class": "eu.fayder.restcountries.v2.rest.CountryService",
+        "locations-of-static-assignments": [
+          "line 131, eu.fayder.restcountries.v2.rest.CountryService"
+        ]
+      },
+      "g4": {
+        "name": "NOT_FOUND",
+        "id": "g4",
+        "defining-class": "javax.ws.rs.core.Response$Status"
+      },
+      "g5": {
+        "name": "NFD",
+        "id": "g5",
+        "defining-class": "java.text.Normalizer$Form"
+      },
+      "g6": {
+        "name": "METHOD_NOT_ALLOWED",
+        "id": "g6",
+        "defining-class": "javax.ws.rs.core.Response$Status"
+      },
+      "g7": {
+        "name": "ACCEPTED",
+        "id": "g7",
+        "defining-class": "javax.ws.rs.core.Response$Status"
+      },
+      "g8": {
+        "name": "LOG",
+        "id": "g8",
+        "defining-class": "eu.fayder.restcountries.v2.rest.StripeRest",
+        "locations-of-static-assignments": [
+          "line 29, eu.fayder.restcountries.v2.rest.StripeRest"
+        ]
+      },
+      "g9": {
+        "name": "apiKey",
+        "id": "g9",
+        "defining-class": "com.stripe.Stripe"
+      },
+      "g10": {
+        "name": "LOG",
+        "id": "g10",
+        "defining-class": "eu.fayder.restcountries.v1.rest.CountryRestV1",
+        "locations-of-static-assignments": [
+          "line 30, eu.fayder.restcountries.v1.rest.CountryRestV1"
+        ]
+      },
+      "g11": {
+        "name": "countries",
+        "id": "g11",
+        "defining-class": "eu.fayder.restcountries.v1.rest.CountryService",
+        "locations-of-static-assignments": [
+          "line 96, eu.fayder.restcountries.v1.rest.CountryService"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,1339 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "My project",
+    "version": "v1"
+  },
+  "paths": {
+    "/contributions/bbox": {
+      "get": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/geo+json": {}
+            },
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "name": "bboxes",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "clipGeometry",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "properties",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "time",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "post": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/geo+json": {}
+            },
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/contributions/centroid": {
+      "get": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/geo+json": {}
+            },
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "name": "bboxes",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "clipGeometry",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "properties",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "time",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/contributions/count": {
+      "post": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/contributions/count/density": {
+      "post": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "OK"
+          },
+          "400": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/contributions/count/groupBy/boundary": {
+      "get": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "name": "bboxes",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "contributionType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "format",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "time",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/contributions/geometry": {
+      "get": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/geo+json": {}
+            },
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "name": "bboxes",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "clipGeometry",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "properties",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "time",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/contributions/latest/bbox": {
+      "get": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/geo+json": {}
+            },
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "name": "bboxes",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "properties",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "time",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/contributions/latest/centroid": {
+      "post": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/geo+json": {}
+            },
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/contributions/latest/count": {
+      "get": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "name": "bboxes",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "contributionType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "format",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "time",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/contributions/latest/count/density": {
+      "get": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "name": "bboxes",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "contributionType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "format",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "time",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/contributions/latest/geometry": {
+      "get": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/geo+json": {}
+            },
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "name": "bboxes",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "clipGeometry",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "properties",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "time",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/elements/area": {
+      "post": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/elements/area/density": {
+      "post": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/elements/area/density/groupBy/boundary": {
+      "post": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/elements/area/density/groupBy/boundary/groupBy/tag": {
+      "post": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/elements/area/density/groupBy/tag": {
+      "post": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/elements/area/density/groupBy/type": {
+      "post": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/elements/area/groupBy/boundary": {
+      "post": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/elements/area/groupBy/boundary/groupBy/tag": {
+      "post": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {},
+              "text/csv": {}
+            },
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/elements/area/groupBy/key": {
+      "post": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/elements/area/groupBy/tag": {
+      "post": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/elements/area/groupBy/type": {
+      "post": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/elements/area/ratio": {
+      "get": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "name": "bboxes",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter2",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "time",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "post": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/elements/area/ratio/groupBy/boundary": {
+      "post": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {},
+              "text/csv": {}
+            },
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/elements/bbox": {
+      "get": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/geo+json": {}
+            },
+            "description": "OK"
+          },
+          "400": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "Bad Request"
+          }
+        },
+        "parameters": [
+          {
+            "name": "bboxes",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "clipGeometry",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "properties",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "time",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "post": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/geo+json": {}
+            },
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/elements/centroid": {
+      "get": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/geo+json": {}
+            },
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "name": "bboxes",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "properties",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "time",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/elements/count": {
+      "post": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "OK"
+          },
+          "400": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/elements/count/density": {
+      "post": {
+        "responses": {
+          "400": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/elements/count/groupBy/boundary": {
+      "post": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/elements/count/groupBy/type": {
+      "post": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {},
+              "text/csv": {}
+            },
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/elements/count/ratio": {
+      "get": {
+        "responses": {
+          "400": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "Bad Request"
+          }
+        },
+        "parameters": [
+          {
+            "name": "bboxes",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "time",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/elements/count/ratio/groupBy/boundary": {
+      "get": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "name": "bboxes",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter2",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "time",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/elements/geometry": {
+      "get": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/geo+json": {}
+            },
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "name": "bboxes",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "clipGeometry",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "properties",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "time",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "post": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/geo+json": {}
+            },
+            "description": "OK"
+          },
+          "400": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/elements/length": {
+      "post": {
+        "responses": {
+          "200": {
+            "content": {
+              "text/csv": {}
+            },
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/elements/length/density/groupBy/tag": {
+      "post": {
+        "responses": {
+          "200": {
+            "content": {
+              "text/csv": {}
+            },
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/elements/length/groupBy/boundary/groupBy/tag": {
+      "post": {
+        "responses": {
+          "200": {
+            "content": {
+              "text/csv": {}
+            },
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/elements/length/groupBy/type": {
+      "post": {
+        "responses": {
+          "200": {
+            "content": {
+              "text/csv": {}
+            },
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/elements/length/ratio/groupBy/boundary": {
+      "post": {
+        "responses": {
+          "200": {
+            "content": {
+              "text/csv": {}
+            },
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/elements/perimeter": {
+      "post": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {},
+              "text/csv": {}
+            },
+            "description": "OK"
+          },
+          "400": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "Bad Request"
+          },
+          "404": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/elements/perimeter/density": {
+      "post": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/elements/perimeter/density/groupBy/boundary": {
+      "post": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {},
+              "text/csv": {}
+            },
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/elements/perimeter/density/groupBy/boundary/groupBy/tag": {
+      "post": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/elements/perimeter/density/groupBy/tag": {
+      "post": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/elements/perimeter/density/groupBy/type": {
+      "post": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/elements/perimeter/groupBy/boundary": {
+      "post": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/elements/perimeter/groupBy/boundary/groupBy/tag": {
+      "post": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {},
+              "text/csv": {}
+            },
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/elements/perimeter/groupBy/key": {
+      "post": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {},
+              "text/csv": {}
+            },
+            "description": "OK"
+          },
+          "400": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/elements/perimeter/groupBy/tag": {
+      "post": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/elements/perimeter/groupBy/type": {
+      "post": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/elements/perimeter/ratio": {
+      "post": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/elements/perimeter/ratio/groupBy/boundary": {
+      "post": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {},
+              "text/csv": {}
+            },
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/elementsFullHistory/bbox": {
+      "post": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/geo+json": {}
+            },
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/elementsFullHistory/centroid": {
+      "get": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/geo+json": {}
+            },
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "name": "bboxes",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "time",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "post": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/geo+json": {}
+            },
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/elementsFullHistory/geometry": {
+      "get": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/geo+json": {}
+            },
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "name": "bboxes",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "properties",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "time",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "post": {
+        "responses": {
+          "400": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/users/count": {
+      "post": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "OK"
+          },
+          "404": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/users/count/groupBy/key": {
+      "post": {
+        "responses": {
+          "400": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/users/count/groupBy/tag": {
+      "post": {
+        "responses": {
+          "400": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "Bad Request"
+          }
+        }
+      }
+    }
+  },
+  "components": {}
+}

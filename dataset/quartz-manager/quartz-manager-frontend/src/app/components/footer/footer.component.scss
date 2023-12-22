@@ -1,0 +1,27 @@
+:host{
+  //position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+}
+
+#footer{
+  background-color: rgb(33, 33, 33);
+  font-size: 15px;
+  box-sizing: border-box;
+  text-align: center;
+  a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #FFFFFF;
+  }
+
+  h3 {
+    margin: 0px;
+    padding: 0px;
+    font-weight: 300;
+    font-size: 22px;
+  }
+}
+

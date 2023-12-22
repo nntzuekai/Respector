@@ -1,0 +1,5 @@
+timezone: UTC
+
++query:
+  td>: query.sql
+  database: sample_datasets

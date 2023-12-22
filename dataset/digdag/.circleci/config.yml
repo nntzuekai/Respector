@@ -1,0 +1,117 @@
+version: 2.0
+
+jobs:
+  test:
+    parallelism: 8
+
+    # executor type https://circleci.com/docs/2.0/executor-types/
+    docker:
+      - image: digdag/digdag-build:20210902T164958-dc911cc971d8656872a988e03926e4e626f10a41
+        # environment Variables in a Job https://circleci.com/docs/2.0/env-vars/#setting-an-environment-variable-in-a-job
+        environment:
+          TERM: dumb
+          TZ: 'UTC'
+          TEST_S3_ENDPOINT: http://127.0.0.1:9000
+          TEST_S3_ACCESS_KEY_ID: C0AI42GnKrP5H1yn
+          TEST_S3_SECRET_ACCESS_KEY: w42IbhJJXZt6E71y
+    steps:
+      - checkout
+
+      # Set up Digdag database
+      - run:
+          name: setup PostgreSqL
+          command: |
+            sudo sed -i 's/max_connections = 1000/max_connections = 2000/' /etc/postgresql/11/main/postgresql.conf
+            sudo service postgresql restart
+            set -x
+            # wait for PostgreSQL container to be available for 2 mins
+            for i in $(seq 1 120); do
+              nc -z localhost 5432 && echo Success && exit 0
+              echo -n .
+              sleep 1
+            done
+            echo Failed waiting for PostgreSQL && exit 1
+
+      # Run tests with dependencies cache
+      - restore_cache:
+          key: dependency-cache-{{ .Branch }}-{{ .Revision }}
+      - run:
+          name: run IT tests
+          command: |
+            export TD_LOAD_IT_S3_ACCESS_KEY_ID=$AWS_RD_DIGDAG_TEST_ACCESS_KEY_ID
+            export TD_LOAD_IT_S3_SECRET_ACCESS_KEY=$AWS_RD_DIGDAG_TEST_AWS_SECRET_ACCESS_KEY
+            export EMR_IT_AWS_ACCESS_KEY_ID=$AWS_RD_DIGDAG_TEST_ACCESS_KEY_ID
+            export EMR_IT_AWS_SECRET_ACCESS_KEY=$AWS_RD_DIGDAG_TEST_AWS_SECRET_ACCESS_KEY
+            nohup /entrypoint.sh > /dev/null 2>&1 &
+            sleep 10
+            ps -awx
+            ls -l /tmp/
+            . /tmp/minio_credential.txt
+            env
+            curl -v $TEST_S3_ENDPOINT
+            ci/run_td_tests.sh
+      - save_cache:
+          paths:
+            - ~/.gradle
+            - ~/.m2
+          key: dependency-cache-{{ .Branch }}-{{ .Revision }}
+
+
+      # Collect test reports
+      - run: ci/circle_gather_test_reports.sh
+
+      # Save artifacts and test results
+      - store_artifacts:
+          path: /tmp/circleci-artifacts/build
+      - store_test_results:
+          path: /tmp/circleci-test-results/build/tests
+
+  docs_deployment:
+    # executor type https://circleci.com/docs/2.0/executor-types/
+    docker:
+      - image: digdag/digdag-build:20210121T160201-c21ea363746ab5ef7f7503a1a6212a37b79a9943
+        # environment Variables in a Job https://circleci.com/docs/2.0/env-vars/#setting-an-environment-variable-in-a-job
+        environment:
+          TERM: dumb
+          TZ: 'UTC'
+
+    steps:
+      - checkout
+
+      # Build and deploy documents
+      - run: ci/push_gh_pages.sh
+
+  release_snapshot:
+    # executor type https://circleci.com/docs/2.0/executor-types/
+    docker:
+      - image: digdag/digdag-build:20210121T160201-c21ea363746ab5ef7f7503a1a6212a37b79a9943
+        # environment Variables in a Job https://circleci.com/docs/2.0/env-vars/#setting-an-environment-variable-in-a-job
+        environment:
+          TERM: dumb
+          TZ: 'UTC'
+    steps:
+      - checkout
+      - run: ./gradlew releaseSnapshot
+
+workflows:
+  version: 2
+
+  test_and_docs_deployment:
+    jobs:
+      - test: # will be executed for topic branch not only default branches so that we can safely merge it
+          context:
+            - aws-rd
+      - docs_deployment: # master branch only
+          context:
+            - github
+          filters:
+            branches:
+              only:
+                - master
+      - release_snapshot: # v0_10 branch only
+          requires:
+            - test
+          filters:
+            branches:
+              only:
+                - v0_11

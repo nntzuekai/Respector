@@ -1,0 +1,154 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+@use '@gravitee/ui-particles-angular' as gio;
+
+@use '../../../../scss/gio-layout' as gio-layout;
+
+$background: map-get(gio.$mat-theme, background);
+$typography: map.get(gio.$mat-theme, typography);
+
+:host {
+  @include gio-layout.gio-responsive-margin-container;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.org-settings-user-detail {
+  flex: 1 1 auto;
+
+  &__registration-banner {
+    margin: 16px 0;
+
+    &__content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__card {
+    margin: 16px 0;
+
+    &__head {
+      display: flex;
+      align-items: center;
+
+      &__left {
+        flex: 0 0 80px;
+        margin-right: 16px;
+      }
+
+      &__middle {
+        flex: 1 1 auto;
+
+        &__name {
+          margin: 0;
+        }
+
+        &__email {
+          margin: 0 0 8px 0;
+
+          .mat-icon {
+            vertical-align: middle;
+          }
+        }
+      }
+
+      &__right {
+        flex: 0 0 auto;
+
+        &__btn {
+          margin: 8px 0;
+        }
+      }
+    }
+
+    &__registration-banner {
+      flex: 1 1 100%;
+      padding-top: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &__accept-btn {
+        background-color: mat.get-color-from-palette(gio.$mat-success-palette, 'default');
+        color: mat.get-color-from-palette(gio.$mat-success-palette, 'default-contrast');
+      }
+    }
+  }
+
+  &__environments-card,
+  &__groups-card,
+  &__apis-card,
+  &__applications-card,
+  &__org-role-card {
+    margin: 16px 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__environments-card {
+    &__table {
+      .mat-cell.mat-column-roles {
+        display: flex;
+        flex-direction: column;
+        padding-top: 1.34375em; // to center mat-form-field in cell. Same value of mat-form-field's bottom padding
+      }
+    }
+  }
+
+  &__groups-card {
+    &__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+
+      h2 {
+        margin-bottom: 0;
+      }
+    }
+
+    &__table {
+      .mat-cell.mat-column-name {
+        .error {
+          color: mat.get-color-from-palette(gio.$mat-error-palette, default);
+        }
+      }
+
+      .mat-cell.mat-column-groupAdmin {
+        text-align: center;
+      }
+
+      .mat-cell.mat-column-applicationRole,
+      .mat-cell.mat-column-apiRoles {
+        .mat-form-field {
+          width: 100%;
+        }
+
+        padding-top: 1.34375em; // to center mat-form-field in cell. Same value of mat-form-field's bottom padding
+        padding-right: 8px;
+      }
+
+      .mat-row.error {
+        box-shadow: 8px 0px 0px 0px mat.get-color-from-palette(gio.$mat-error-palette, default, 0.42) inset;
+      }
+    }
+  }
+
+  &__tokens {
+    &__card {
+      margin-bottom: 32px;
+
+      &__headline {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 16px;
+      }
+    }
+  }
+}

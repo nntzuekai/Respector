@@ -1,0 +1,4933 @@
+{
+  "openapi": "3.0.0",
+  "servers": [
+    {
+      "url": "http://localhost:8080"
+    }
+  ],
+  "info": {
+    "title": "REST API",
+    "version": "",
+    "description": "REST API"
+  },
+  "paths": {
+    "/": {
+      "get": {
+        "description": "",
+        "operationId": "em142",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "com.fasterxml.jackson.databind.JsonNode"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/announcements": {
+      "get": {
+        "description": "",
+        "operationId": "em159",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.entities.Announcements"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/announcements/{id}": {
+      "get": {
+        "description": "",
+        "operationId": "em169",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.entities.Announcement"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/api-docs": {
+      "get": {
+        "description": "",
+        "operationId": "em115",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "com.fasterxml.jackson.databind.JsonNode"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/api-docs/{file}": {
+      "get": {
+        "description": "",
+        "operationId": "em117",
+        "parameters": [
+          {
+            "name": "file",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "x-parameter-constraints": {
+                "$ref": "#/components/x-endpoint-constraints/~1api-docs~1{file}/get/x-parameter-constraints/file"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "303": {
+            "description": "SEE_OTHER"
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1api-docs~1{file}/get"
+        }
+      }
+    },
+    "/badges": {
+      "get": {
+        "description": "",
+        "operationId": "em28",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.entities.Badges"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/confirm/{code}": {
+      "get": {
+        "description": "",
+        "operationId": "em172",
+        "parameters": [
+          {
+            "name": "code",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "303": {
+            "description": "SEE_OTHER"
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1confirm~1{code}/get"
+        }
+      }
+    },
+    "/groups": {
+      "get": {
+        "description": "",
+        "operationId": "em50",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.entities.Groups"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "operationId": "em52",
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": "CREATED"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/groups/{group}": {
+      "delete": {
+        "description": "",
+        "operationId": "em165",
+        "parameters": [
+          {
+            "name": "group",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      },
+      "get": {
+        "description": "",
+        "operationId": "em161",
+        "parameters": [
+          {
+            "name": "group",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.entities.Group"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      },
+      "put": {
+        "description": "",
+        "operationId": "em163",
+        "parameters": [
+          {
+            "name": "group",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "303": {
+            "description": "SEE_OTHER"
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/groups/{group}/activities": {
+      "get": {
+        "description": "",
+        "operationId": "em86",
+        "parameters": [
+          {
+            "name": "type",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "group",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.activities.Activities"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/groups/{group}/activities/{id}": {
+      "get": {
+        "description": "",
+        "operationId": "em89",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "group",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.activities.Activity"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/groups/{group}/members": {
+      "get": {
+        "description": "",
+        "operationId": "em92",
+        "parameters": [
+          {
+            "name": "group",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.entities.Users"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "operationId": "em94",
+        "parameters": [
+          {
+            "name": "group",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  }
+                },
+                "maxProperties": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    "/groups/{group}/members/{member}": {
+      "delete": {
+        "description": "",
+        "operationId": "em176",
+        "parameters": [
+          {
+            "name": "group",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "member",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/measurements": {
+      "get": {
+        "description": "",
+        "operationId": "em132",
+        "parameters": [
+          {
+            "name": "bbox",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "nearPoint",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.entities.Measurements"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "operationId": "em136",
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": "CREATED"
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/measurements/{measurement}": {
+      "delete": {
+        "description": "",
+        "operationId": "em45",
+        "parameters": [
+          {
+            "name": "measurement",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      },
+      "get": {
+        "description": "",
+        "operationId": "em41",
+        "parameters": [
+          {
+            "name": "measurement",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.entities.Measurement"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/measurements/{measurement}/sensor": {
+      "get": {
+        "description": "",
+        "operationId": "em29",
+        "parameters": [
+          {
+            "name": "measurement",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.entities.Sensor"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/measurements/{measurement}/sensor/statistics": {
+      "get": {
+        "description": "",
+        "operationId": "em73",
+        "parameters": [
+          {
+            "name": "measurement",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.statistics.Statistics"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/measurements/{measurement}/sensor/statistics/{phen}": {
+      "get": {
+        "description": "",
+        "operationId": "em9",
+        "parameters": [
+          {
+            "name": "measurement",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "phen",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.statistics.Statistic"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/phenomenons": {
+      "get": {
+        "description": "",
+        "operationId": "em38",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.entities.Phenomenons"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "operationId": "em39",
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": "CREATED"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/phenomenons/{phenomenon}": {
+      "get": {
+        "description": "",
+        "operationId": "em170",
+        "parameters": [
+          {
+            "name": "phenomenon",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.entities.Phenomenon"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/phenomenons/{phenomenon}/statistic": {
+      "get": {
+        "description": "",
+        "operationId": "em10",
+        "parameters": [
+          {
+            "name": "phenomenon",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.statistics.Statistic"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/privacyStatements": {
+      "get": {
+        "description": "",
+        "operationId": "em24",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.entities.PrivacyStatements"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/privacyStatements/{id}": {
+      "get": {
+        "description": "",
+        "operationId": "em118",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.entities.PrivacyStatement"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/resetPassword": {
+      "post": {
+        "description": "",
+        "operationId": "em173",
+        "parameters": [],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "code": {
+                    "type": "string"
+                  },
+                  "user": {
+                    "type": "string"
+                  }
+                },
+                "maxProperties": 2
+              }
+            }
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1resetPassword/post"
+        }
+      },
+      "put": {
+        "description": "",
+        "operationId": "em174",
+        "parameters": [],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "code": {
+                    "type": "string"
+                  },
+                  "user": {
+                    "type": "string"
+                  }
+                },
+                "maxProperties": 2
+              }
+            }
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1resetPassword/put"
+        }
+      }
+    },
+    "/schemas": {
+      "get": {
+        "description": "",
+        "operationId": "em26",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "com.fasterxml.jackson.databind.JsonNode"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/schemas/{schema}": {
+      "get": {
+        "description": "",
+        "operationId": "em27",
+        "parameters": [
+          {
+            "name": "schema",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "com.fasterxml.jackson.databind.JsonNode"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/sensors": {
+      "get": {
+        "description": "",
+        "operationId": "em4",
+        "parameters": [
+          {
+            "name": "type",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.entities.Sensors"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "operationId": "em6",
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": "CREATED"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/sensors/{sensor}": {
+      "get": {
+        "description": "",
+        "operationId": "em30",
+        "parameters": [
+          {
+            "name": "sensor",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.entities.Sensor"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/sensors/{sensor}/statistics": {
+      "get": {
+        "description": "",
+        "operationId": "em74",
+        "parameters": [
+          {
+            "name": "sensor",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.statistics.Statistics"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/sensors/{sensor}/statistics/{phen}": {
+      "get": {
+        "description": "",
+        "operationId": "em11",
+        "parameters": [
+          {
+            "name": "sensor",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "phen",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.statistics.Statistic"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/statistics": {
+      "get": {
+        "description": "",
+        "operationId": "em75",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.statistics.Statistics"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/statistics/{phen}": {
+      "get": {
+        "description": "",
+        "operationId": "em12",
+        "parameters": [
+          {
+            "name": "phen",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.statistics.Statistic"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/termsOfUse": {
+      "get": {
+        "description": "",
+        "operationId": "em22",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.entities.TermsOfUse"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/termsOfUse/{id}": {
+      "get": {
+        "description": "",
+        "operationId": "em0",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.entities.TermsOfUseInstance"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/tracks": {
+      "get": {
+        "description": "",
+        "operationId": "em110",
+        "parameters": [
+          {
+            "name": "bbox",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.entities.Tracks"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1tracks/get"
+        }
+      },
+      "post": {
+        "description": "",
+        "operationId": "em112",
+        "parameters": [],
+        "responses": {
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/tracks/{track}": {
+      "delete": {
+        "description": "",
+        "operationId": "em123",
+        "parameters": [
+          {
+            "name": "track",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      },
+      "get": {
+        "description": "",
+        "operationId": "em121",
+        "parameters": [
+          {
+            "name": "track",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.entities.Track"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      },
+      "put": {
+        "description": "",
+        "operationId": "em119",
+        "parameters": [
+          {
+            "name": "track",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/tracks/{track}/measurements": {
+      "get": {
+        "description": "",
+        "operationId": "em133",
+        "parameters": [
+          {
+            "name": "bbox",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "nearPoint",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "track",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.entities.Measurements"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "operationId": "em137",
+        "parameters": [
+          {
+            "name": "track",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "CREATED"
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/tracks/{track}/measurements/{measurement}": {
+      "delete": {
+        "description": "",
+        "operationId": "em46",
+        "parameters": [
+          {
+            "name": "track",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "measurement",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      },
+      "get": {
+        "description": "",
+        "operationId": "em42",
+        "parameters": [
+          {
+            "name": "track",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "measurement",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.entities.Measurement"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/tracks/{track}/measurements/{measurement}/sensor": {
+      "get": {
+        "description": "",
+        "operationId": "em31",
+        "parameters": [
+          {
+            "name": "track",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "measurement",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.entities.Sensor"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/tracks/{track}/measurements/{measurement}/sensor/statistics": {
+      "get": {
+        "description": "",
+        "operationId": "em76",
+        "parameters": [
+          {
+            "name": "track",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "measurement",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.statistics.Statistics"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/tracks/{track}/measurements/{measurement}/sensor/statistics/{phen}": {
+      "get": {
+        "description": "",
+        "operationId": "em13",
+        "parameters": [
+          {
+            "name": "track",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "measurement",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "phen",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.statistics.Statistic"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/tracks/{track}/preview": {
+      "get": {
+        "description": "",
+        "operationId": "em107",
+        "parameters": [
+          {
+            "name": "track",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "integer"
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1tracks~1{track}~1preview/get"
+        }
+      }
+    },
+    "/tracks/{track}/sensor": {
+      "get": {
+        "description": "",
+        "operationId": "em32",
+        "parameters": [
+          {
+            "name": "track",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.entities.Sensor"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/tracks/{track}/sensor/statistics": {
+      "get": {
+        "description": "",
+        "operationId": "em77",
+        "parameters": [
+          {
+            "name": "track",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.statistics.Statistics"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/tracks/{track}/sensor/statistics/{phen}": {
+      "get": {
+        "description": "",
+        "operationId": "em14",
+        "parameters": [
+          {
+            "name": "track",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "phen",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.statistics.Statistic"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/tracks/{track}/share": {
+      "get": {
+        "description": "",
+        "operationId": "em103",
+        "parameters": [
+          {
+            "name": "track",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "integer"
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1tracks~1{track}~1share/get"
+        }
+      }
+    },
+    "/tracks/{track}/share/{locale}": {
+      "get": {
+        "description": "",
+        "operationId": "em105",
+        "parameters": [
+          {
+            "name": "locale",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "track",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "integer"
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1tracks~1{track}~1share~1{locale}/get"
+        }
+      }
+    },
+    "/tracks/{track}/statistics": {
+      "get": {
+        "description": "",
+        "operationId": "em78",
+        "parameters": [
+          {
+            "name": "track",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.statistics.Statistics"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/tracks/{track}/statistics/{phen}": {
+      "get": {
+        "description": "",
+        "operationId": "em15",
+        "parameters": [
+          {
+            "name": "track",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "phen",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.statistics.Statistic"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/users": {
+      "get": {
+        "description": "",
+        "operationId": "em1",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.entities.Users"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "operationId": "em2",
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": "CREATED"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/users/{username}": {
+      "delete": {
+        "description": "",
+        "operationId": "em61",
+        "parameters": [
+          {
+            "name": "deleteContent",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      },
+      "get": {
+        "description": "",
+        "operationId": "em60",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.entities.User"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      },
+      "put": {
+        "description": "",
+        "operationId": "em59",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "303": {
+            "description": "SEE_OTHER"
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/users/{username}/activities": {
+      "get": {
+        "description": "",
+        "operationId": "em87",
+        "parameters": [
+          {
+            "name": "type",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.activities.Activities"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/users/{username}/activities/{id}": {
+      "get": {
+        "description": "",
+        "operationId": "em90",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.activities.Activity"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/users/{username}/avatar": {
+      "get": {
+        "description": "",
+        "operationId": "em175",
+        "parameters": [
+          {
+            "name": "size",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 80
+            }
+          },
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "307": {
+            "description": "TEMPORARY_REDIRECT"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/users/{username}/friendActivities": {
+      "get": {
+        "description": "",
+        "operationId": "em130",
+        "parameters": [
+          {
+            "name": "type",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.activities.Activities"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/users/{username}/friendActivities/{id}": {
+      "get": {
+        "description": "",
+        "operationId": "em131",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.activities.Activity"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/users/{username}/friends": {
+      "get": {
+        "description": "",
+        "operationId": "em97",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.entities.Users"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "operationId": "em98",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  }
+                },
+                "maxProperties": 1
+              }
+            }
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1users~1{username}~1friends/post"
+        }
+      }
+    },
+    "/users/{username}/friends/declineRequest": {
+      "post": {
+        "description": "",
+        "operationId": "em102",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  }
+                },
+                "maxProperties": 1
+              }
+            }
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1users~1{username}~1friends~1declineRequest/post"
+        }
+      }
+    },
+    "/users/{username}/friends/incomingRequests": {
+      "get": {
+        "description": "",
+        "operationId": "em100",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.entities.Users"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/users/{username}/friends/outgoingRequests": {
+      "get": {
+        "description": "",
+        "operationId": "em101",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.entities.Users"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/users/{username}/friends/{friend}": {
+      "delete": {
+        "description": "",
+        "operationId": "em109",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "friend",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/users/{username}/fuelings": {
+      "get": {
+        "description": "",
+        "operationId": "em55",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.entities.Fuelings"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "operationId": "em56",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "CREATED"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/users/{username}/fuelings/{id}": {
+      "delete": {
+        "description": "",
+        "operationId": "em58",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      },
+      "get": {
+        "description": "",
+        "operationId": "em57",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.entities.Fueling"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/users/{username}/groups": {
+      "get": {
+        "description": "",
+        "operationId": "em51",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.entities.Groups"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "operationId": "em53",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "CREATED"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/users/{username}/groups/{group}": {
+      "delete": {
+        "description": "",
+        "operationId": "em166",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "group",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      },
+      "get": {
+        "description": "",
+        "operationId": "em162",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "group",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.entities.Group"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      },
+      "put": {
+        "description": "",
+        "operationId": "em164",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "group",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "303": {
+            "description": "SEE_OTHER"
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/users/{username}/groups/{group}/activities": {
+      "get": {
+        "description": "",
+        "operationId": "em88",
+        "parameters": [
+          {
+            "name": "type",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "group",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.activities.Activities"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/users/{username}/groups/{group}/activities/{id}": {
+      "get": {
+        "description": "",
+        "operationId": "em91",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "group",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.activities.Activity"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/users/{username}/groups/{group}/members": {
+      "get": {
+        "description": "",
+        "operationId": "em93",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "group",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.entities.Users"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "operationId": "em95",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "group",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  }
+                },
+                "maxProperties": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    "/users/{username}/groups/{group}/members/{member}": {
+      "delete": {
+        "description": "",
+        "operationId": "em177",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "group",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "member",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/users/{username}/measurements": {
+      "get": {
+        "description": "",
+        "operationId": "em134",
+        "parameters": [
+          {
+            "name": "bbox",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "nearPoint",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.entities.Measurements"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "operationId": "em138",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "CREATED"
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/users/{username}/measurements/{measurement}": {
+      "delete": {
+        "description": "",
+        "operationId": "em47",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "measurement",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      },
+      "get": {
+        "description": "",
+        "operationId": "em43",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "measurement",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.entities.Measurement"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/users/{username}/measurements/{measurement}/sensor": {
+      "get": {
+        "description": "",
+        "operationId": "em33",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "measurement",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.entities.Sensor"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/users/{username}/measurements/{measurement}/sensor/statistics": {
+      "get": {
+        "description": "",
+        "operationId": "em79",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "measurement",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.statistics.Statistics"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/users/{username}/measurements/{measurement}/sensor/statistics/{phen}": {
+      "get": {
+        "description": "",
+        "operationId": "em16",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "measurement",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "phen",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.statistics.Statistic"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/users/{username}/sensors": {
+      "get": {
+        "description": "",
+        "operationId": "em5",
+        "parameters": [
+          {
+            "name": "type",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.entities.Sensors"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "operationId": "em7",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "CREATED"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/users/{username}/sensors/{sensor}": {
+      "get": {
+        "description": "",
+        "operationId": "em34",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sensor",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.entities.Sensor"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/users/{username}/sensors/{sensor}/statistics": {
+      "get": {
+        "description": "",
+        "operationId": "em80",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sensor",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.statistics.Statistics"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/users/{username}/sensors/{sensor}/statistics/{phen}": {
+      "get": {
+        "description": "",
+        "operationId": "em17",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sensor",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "phen",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.statistics.Statistic"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/users/{username}/statistics": {
+      "get": {
+        "description": "",
+        "operationId": "em81",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.statistics.Statistics"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/users/{username}/statistics/{phen}": {
+      "get": {
+        "description": "",
+        "operationId": "em18",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "phen",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.statistics.Statistic"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/users/{username}/tracks": {
+      "get": {
+        "description": "",
+        "operationId": "em111",
+        "parameters": [
+          {
+            "name": "bbox",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.entities.Tracks"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1tracks/get"
+        }
+      },
+      "post": {
+        "description": "",
+        "operationId": "em113",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/users/{username}/tracks/{track}": {
+      "delete": {
+        "description": "",
+        "operationId": "em124",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "track",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      },
+      "get": {
+        "description": "",
+        "operationId": "em122",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "track",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.entities.Track"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      },
+      "put": {
+        "description": "",
+        "operationId": "em120",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "track",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/users/{username}/tracks/{track}/measurements": {
+      "get": {
+        "description": "",
+        "operationId": "em135",
+        "parameters": [
+          {
+            "name": "bbox",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "nearPoint",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "track",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.entities.Measurements"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "operationId": "em139",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "track",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "CREATED"
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/users/{username}/tracks/{track}/measurements/{measurement}": {
+      "delete": {
+        "description": "",
+        "operationId": "em48",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "track",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "measurement",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO_CONTENT"
+          },
+          "500": {
+            "description": "INTERNAL_SERVER_ERROR"
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      },
+      "get": {
+        "description": "",
+        "operationId": "em44",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "track",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "measurement",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.entities.Measurement"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/users/{username}/tracks/{track}/measurements/{measurement}/sensor": {
+      "get": {
+        "description": "",
+        "operationId": "em35",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "track",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "measurement",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.entities.Sensor"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/users/{username}/tracks/{track}/measurements/{measurement}/sensor/statistics": {
+      "get": {
+        "description": "",
+        "operationId": "em82",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "track",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "measurement",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.statistics.Statistics"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/users/{username}/tracks/{track}/measurements/{measurement}/sensor/statistics/{phen}": {
+      "get": {
+        "description": "",
+        "operationId": "em19",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "track",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "measurement",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "phen",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.statistics.Statistic"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/users/{username}/tracks/{track}/preview": {
+      "get": {
+        "description": "",
+        "operationId": "em108",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "track",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "integer"
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1tracks~1{track}~1preview/get"
+        }
+      }
+    },
+    "/users/{username}/tracks/{track}/sensor": {
+      "get": {
+        "description": "",
+        "operationId": "em36",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "track",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.entities.Sensor"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/users/{username}/tracks/{track}/sensor/statistics": {
+      "get": {
+        "description": "",
+        "operationId": "em83",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "track",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.statistics.Statistics"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/users/{username}/tracks/{track}/sensor/statistics/{phen}": {
+      "get": {
+        "description": "",
+        "operationId": "em20",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "track",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "phen",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.statistics.Statistic"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/users/{username}/tracks/{track}/share": {
+      "get": {
+        "description": "",
+        "operationId": "em104",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "track",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "integer"
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1tracks~1{track}~1share/get"
+        }
+      }
+    },
+    "/users/{username}/tracks/{track}/share/{locale}": {
+      "get": {
+        "description": "",
+        "operationId": "em106",
+        "parameters": [
+          {
+            "name": "locale",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "track",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "integer"
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        },
+        "x-endpoint-constraints": {
+          "$ref": "#/components/x-endpoint-constraints/~1tracks~1{track}~1share~1{locale}/get"
+        }
+      }
+    },
+    "/users/{username}/tracks/{track}/statistics": {
+      "get": {
+        "description": "",
+        "operationId": "em84",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "track",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.statistics.Statistics"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/users/{username}/tracks/{track}/statistics/{phen}": {
+      "get": {
+        "description": "",
+        "operationId": "em21",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "track",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "phen",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.statistics.Statistic"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    },
+    "/users/{username}/userStatistic": {
+      "get": {
+        "description": "",
+        "operationId": "em141",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "org.envirocar.server.core.entities.UserStatistic"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "others"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "x-endpoint-constraints": {
+      "/api-docs/{file}": {
+        "get": {
+          "x-parameter-constraints": {
+            "file": [
+              "(let ((a!1 (and (not (= (str.len file) 0))\n                (not (= |class \"Lorg/envirocar/server/rest/resources/ApiDocsResource;\".<java.lang.Class: java.io.InputStream getResourceAsStream(java.lang.String)>((new java.lang.StringBuilder()).<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(\"/swagger-ui/\").<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(staticinvoke <java.nio.file.Paths: java.nio.file.Path get(java.lang.String,java.lang.String[])>({file}, newarray (java.lang.String)[0]).<java.nio.file.Path: java.nio.file.Path getFileName()>().<java.nio.file.Path: java.lang.String toString()>()).<java.lang.StringBuilder: java.lang.String toString()>())|\n                        null))\n                (not (= |class \"Lorg/envirocar/server/rest/resources/ApiDocsResource;\"|\n                        null))))\n      (a!2 (and (not (= |staticinvoke <java.nio.file.Paths: java.nio.file.Path get(java.lang.String,java.lang.String[])>({file}, newarray (java.lang.String)[0]).<java.nio.file.Path: java.nio.file.Path getFileName()>().<java.nio.file.Path: java.lang.String toString()>()|\n                        null))\n                (not (= (str.len file) 0))\n                (not (= |class \"Lorg/envirocar/server/rest/resources/ApiDocsResource;\".<java.lang.Class: java.io.InputStream getResourceAsStream(java.lang.String)>((new java.lang.StringBuilder()).<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(\"/swagger-ui/\").<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(staticinvoke <java.nio.file.Paths: java.nio.file.Path get(java.lang.String,java.lang.String[])>({file}, newarray (java.lang.String)[0]).<java.nio.file.Path: java.nio.file.Path getFileName()>().<java.nio.file.Path: java.lang.String toString()>()).<java.lang.StringBuilder: java.lang.String toString()>())|\n                        null))\n                (not (= |class \"Lorg/envirocar/server/rest/resources/ApiDocsResource;\"|\n                        null)))))\n  (or (= |{file}| null)\n      a!1\n      (and (not (= |staticinvoke <java.nio.file.Paths: java.nio.file.Path get(java.lang.String,java.lang.String[])>({file}, newarray (java.lang.String)[0]).<java.nio.file.Path: java.nio.file.Path getFileName()>().<java.nio.file.Path: java.lang.String toString()>()|\n                   null))\n           (= (str.len file) 0))\n      a!2))"
+            ]
+          }
+        }
+      },
+      "/confirm/{code}": {
+        "get": {
+          "valid-path-conditions": [
+            "( virtualinvoke this.<org.envirocar.server.rest.resources.ConfirmResource: org.envirocar.server.core.UserService getUserService()>().<org.envirocar.server.core.UserService: org.envirocar.server.core.entities.User confirmUser(java.lang.String)>({code}) != null )"
+          ],
+          "global-reads": {
+            "g14": {
+              "name": "UTF_8",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g14"
+              }
+            },
+            "g15": {
+              "name": "APP",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g15"
+              }
+            }
+          }
+        }
+      },
+      "/resetPassword": {
+        "post": {
+          "global-reads": {
+            "g16": {
+              "name": "LOG",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g16"
+              }
+            }
+          }
+        },
+        "put": {
+          "global-reads": {
+            "g16": {
+              "name": "LOG",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g16"
+              }
+            }
+          }
+        }
+      },
+      "/tracks": {
+        "get": {
+          "global-reads": {
+            "g13": {
+              "name": "FINISHED",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g13"
+              }
+            }
+          }
+        }
+      },
+      "/tracks/{track}/preview": {
+        "get": {
+          "valid-path-conditions": [
+            "( $stack29[1] - $stack33[1] > 1 )",
+            "( $stack41[0] - $stack45[0] > 2 )"
+          ],
+          "global-reads": {
+            "g1": {
+              "name": "VALUE_INTERPOLATION_BICUBIC",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g1"
+              }
+            },
+            "g5": {
+              "name": "VALUE_ANTIALIAS_ON",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g5"
+              }
+            },
+            "g7": {
+              "name": "KEY_INTERPOLATION",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g7"
+              }
+            },
+            "g10": {
+              "name": "KEY_ANTIALIASING",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g10"
+              }
+            }
+          }
+        }
+      },
+      "/tracks/{track}/share": {
+        "get": {
+          "valid-path-conditions": [
+            "( $stack29[1] - $stack33[1] > 1 )",
+            "( $stack41[0] - $stack45[0] > 2 )"
+          ],
+          "global-reads": {
+            "g0": {
+              "name": "RECTANGLE_ALPHA_COMPOSITE",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g0"
+              }
+            },
+            "g1": {
+              "name": "VALUE_INTERPOLATION_BICUBIC",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g1"
+              }
+            },
+            "g2": {
+              "name": "PERIOD_FORMATTER",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g2"
+              }
+            },
+            "g3": {
+              "name": "FONT_COLOR",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g3"
+              }
+            },
+            "g4": {
+              "name": "FONT_ALPHA_COMPOSITE",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g4"
+              }
+            },
+            "g5": {
+              "name": "VALUE_ANTIALIAS_ON",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g5"
+              }
+            },
+            "g6": {
+              "name": "ROOT",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g6"
+              }
+            },
+            "g7": {
+              "name": "KEY_INTERPOLATION",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g7"
+              }
+            },
+            "g8": {
+              "name": "FONT",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g8"
+              }
+            },
+            "g9": {
+              "name": "RECTANGLE_COLOR",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g9"
+              }
+            },
+            "g10": {
+              "name": "KEY_ANTIALIASING",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g10"
+              }
+            },
+            "g11": {
+              "name": "BOLD_FONT",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g11"
+              }
+            },
+            "g12": {
+              "name": "GERMANY",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g12"
+              }
+            }
+          }
+        }
+      },
+      "/tracks/{track}/share/{locale}": {
+        "get": {
+          "valid-path-conditions": [
+            "( $stack29[1] - $stack33[1] > 1 )",
+            "( $stack41[0] - $stack45[0] > 2 )"
+          ],
+          "global-reads": {
+            "g0": {
+              "name": "RECTANGLE_ALPHA_COMPOSITE",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g0"
+              }
+            },
+            "g1": {
+              "name": "VALUE_INTERPOLATION_BICUBIC",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g1"
+              }
+            },
+            "g2": {
+              "name": "PERIOD_FORMATTER",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g2"
+              }
+            },
+            "g3": {
+              "name": "FONT_COLOR",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g3"
+              }
+            },
+            "g4": {
+              "name": "FONT_ALPHA_COMPOSITE",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g4"
+              }
+            },
+            "g5": {
+              "name": "VALUE_ANTIALIAS_ON",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g5"
+              }
+            },
+            "g6": {
+              "name": "ROOT",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g6"
+              }
+            },
+            "g7": {
+              "name": "KEY_INTERPOLATION",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g7"
+              }
+            },
+            "g8": {
+              "name": "FONT",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g8"
+              }
+            },
+            "g9": {
+              "name": "RECTANGLE_COLOR",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g9"
+              }
+            },
+            "g10": {
+              "name": "KEY_ANTIALIASING",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g10"
+              }
+            },
+            "g11": {
+              "name": "BOLD_FONT",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g11"
+              }
+            },
+            "g12": {
+              "name": "GERMANY",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g12"
+              }
+            }
+          }
+        }
+      },
+      "/users/{username}/friends": {
+        "post": {
+          "valid-path-conditions": [
+            "( {non_EPP#0}.<org.envirocar.server.rest.UserReference: java.lang.String getName()>().<java.lang.String: boolean equals(java.lang.Object)>(virtualinvoke this.<org.envirocar.server.rest.resources.FriendsResource: org.envirocar.server.core.entities.User getCurrentUser()>().<org.envirocar.server.core.entities.User: java.lang.String getName()>()) == 0 )"
+          ]
+        }
+      },
+      "/users/{username}/friends/declineRequest": {
+        "post": {
+          "valid-path-conditions": [
+            "( virtualinvoke this.<org.envirocar.server.rest.resources.FriendsResource: org.envirocar.server.core.UserService getUserService()>().<org.envirocar.server.core.UserService: org.envirocar.server.core.entities.User getUser(java.lang.String)>({non_EPP#0}.<org.envirocar.server.rest.UserReference: java.lang.String getName()>()) != null )"
+          ]
+        }
+      }
+    },
+    "x-endpoint-interdependence": {},
+    "x-global-variables-info": {
+      "g0": {
+        "name": "RECTANGLE_ALPHA_COMPOSITE",
+        "id": "g0",
+        "defining-class": "org.envirocar.server.rest.resources.ShareResource",
+        "locations-of-static-assignments": [
+          "line 76, org.envirocar.server.rest.resources.ShareResource"
+        ]
+      },
+      "g1": {
+        "name": "VALUE_INTERPOLATION_BICUBIC",
+        "id": "g1",
+        "defining-class": "java.awt.RenderingHints"
+      },
+      "g2": {
+        "name": "PERIOD_FORMATTER",
+        "id": "g2",
+        "defining-class": "org.envirocar.server.rest.resources.ShareResource",
+        "locations-of-static-assignments": [
+          "line 88, org.envirocar.server.rest.resources.ShareResource"
+        ]
+      },
+      "g3": {
+        "name": "FONT_COLOR",
+        "id": "g3",
+        "defining-class": "org.envirocar.server.rest.resources.ShareResource",
+        "locations-of-static-assignments": [
+          "line 74, org.envirocar.server.rest.resources.ShareResource"
+        ]
+      },
+      "g4": {
+        "name": "FONT_ALPHA_COMPOSITE",
+        "id": "g4",
+        "defining-class": "org.envirocar.server.rest.resources.ShareResource",
+        "locations-of-static-assignments": [
+          "line 78, org.envirocar.server.rest.resources.ShareResource"
+        ]
+      },
+      "g5": {
+        "name": "VALUE_ANTIALIAS_ON",
+        "id": "g5",
+        "defining-class": "java.awt.RenderingHints"
+      },
+      "g6": {
+        "name": "ROOT",
+        "id": "g6",
+        "defining-class": "java.util.Locale"
+      },
+      "g7": {
+        "name": "KEY_INTERPOLATION",
+        "id": "g7",
+        "defining-class": "java.awt.RenderingHints"
+      },
+      "g8": {
+        "name": "FONT",
+        "id": "g8",
+        "defining-class": "org.envirocar.server.rest.resources.ShareResource",
+        "locations-of-static-assignments": [
+          "line 72, org.envirocar.server.rest.resources.ShareResource"
+        ]
+      },
+      "g9": {
+        "name": "RECTANGLE_COLOR",
+        "id": "g9",
+        "defining-class": "org.envirocar.server.rest.resources.ShareResource",
+        "locations-of-static-assignments": [
+          "line 73, org.envirocar.server.rest.resources.ShareResource"
+        ]
+      },
+      "g10": {
+        "name": "KEY_ANTIALIASING",
+        "id": "g10",
+        "defining-class": "java.awt.RenderingHints"
+      },
+      "g11": {
+        "name": "BOLD_FONT",
+        "id": "g11",
+        "defining-class": "org.envirocar.server.rest.resources.ShareResource",
+        "locations-of-static-assignments": [
+          "line 71, org.envirocar.server.rest.resources.ShareResource"
+        ]
+      },
+      "g12": {
+        "name": "GERMANY",
+        "id": "g12",
+        "defining-class": "java.util.Locale"
+      },
+      "g13": {
+        "name": "FINISHED",
+        "id": "g13",
+        "defining-class": "org.envirocar.server.core.entities.TrackStatus"
+      },
+      "g14": {
+        "name": "UTF_8",
+        "id": "g14",
+        "defining-class": "java.nio.charset.StandardCharsets"
+      },
+      "g15": {
+        "name": "APP",
+        "id": "g15",
+        "defining-class": "org.envirocar.server.rest.resources.ConfirmResource",
+        "locations-of-static-assignments": [
+          "line 43, org.envirocar.server.rest.resources.ConfirmResource"
+        ]
+      },
+      "g16": {
+        "name": "LOG",
+        "id": "g16",
+        "defining-class": "org.envirocar.server.rest.resources.ResetPasswordResource",
+        "locations-of-static-assignments": [
+          "line 36, org.envirocar.server.rest.resources.ResetPasswordResource"
+        ]
+      }
+    }
+  }
+}

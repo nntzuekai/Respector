@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "required": [
+    "name"
+  ],
+  "allOf": [
+    {
+      "$ref": "optional-user-properties.json"
+    },
+    {
+      "properties": {
+        "created": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "mail": {
+          "$ref": "mail-address.json"
+        },
+        "modified": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "name": {
+          "$ref": "username.json"
+        }
+      }
+    }
+  ]
+}

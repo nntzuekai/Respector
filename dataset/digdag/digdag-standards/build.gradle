@@ -1,0 +1,105 @@
+
+dependencies {
+    compile project(':digdag-client')
+    compile project(':digdag-spi')
+    compile project(':digdag-plugin-utils')
+
+    // schedules
+    compile 'it.sauronsoftware.cron4j:cron4j:2.2.5'
+
+    // meta operator plugins
+    compile project(':digdag-core')
+
+    // mail
+    compile 'javax.mail:javax.mail-api:1.5.6'
+    compile 'com.sun.mail:javax.mail:1.5.6'   // 'com.sun.mail:smtp' doesn't work because enabling mail.debug property throws java.lang.NoClassDefFoundError: com/sun/mail/util/MailLogger
+
+    // td
+    compile ('com.treasuredata.client:td-client:0.9.0') {
+        // digdag depends on guava 0.19.0
+        exclude group: 'com.google.guava', module: 'guava'
+    }
+    compile 'org.msgpack:msgpack-core:0.8.11'
+    compile 'org.yaml:snakeyaml:1.23'
+
+    // postgresql
+    compile 'org.postgresql:postgresql:9.4.1211'
+
+    // aws
+    compile "com.amazonaws:aws-java-sdk-kms:${project.ext.awsJavaSdkVersion}"
+    compile "com.amazonaws:aws-java-sdk-sts:${project.ext.awsJavaSdkVersion}"
+    compile "com.amazonaws:aws-java-sdk-ecs:${project.ext.awsJavaSdkVersion}"
+    compile "com.amazonaws:aws-java-sdk-logs:${project.ext.awsJavaSdkVersion}"
+    compile "com.amazonaws:aws-java-sdk-s3:${project.ext.awsJavaSdkVersion}"
+    compile "com.amazonaws:aws-java-sdk-emr:${project.ext.awsJavaSdkVersion}"
+    compile "com.amazonaws:aws-java-sdk-dynamodb:${project.ext.awsJavaSdkVersion}"
+
+    // bigquery
+    compile ('com.google.apis:google-api-services-bigquery:v2-rev325-1.22.0') { exclude group: 'com.google.guava', module: 'guava-jdk5' }
+
+    // gcs
+    compile ('com.google.apis:google-api-services-storage:v1-rev20190910-1.30.3') {
+        exclude group: 'com.google.guava', module: 'guava-jdk5'
+    }
+
+    // kubernetes
+    compile ('io.fabric8:kubernetes-client:5.12.1') {
+        // Avoid compilation failures due to dependencies
+        exclude group: 'org.slf4j', module: 'slf4j-api'
+        // TODO: digdag use version 3.12.0, upgrade to version 3.12.6.
+        exclude group: 'com.squareup.okhttp3', module: 'okhttp'
+        exclude group: 'com.fasterxml.jackson.dataformat', module: 'jackson-module-jaxb-annotations'
+    }
+
+    // dependency conflict resolution
+    compile 'joda-time:joda-time:2.9.4'
+
+    compile ('com.google.auth:google-auth-library-credentials:0.18.0') { exclude group: 'com.google.guava', module: 'guava-jdk5' }
+    compile ('com.google.auth:google-auth-library-oauth2-http:0.18.0') { exclude group: 'com.google.guava', module: 'guava-jdk5' }
+    compile ('com.google.http-client:google-http-client:1.24.1') { exclude group: 'com.google.guava', module: 'guava-jdk5' }
+    compile ('com.google.http-client:google-http-client-jackson2:1.24.1') { exclude group: 'com.google.guava', module: 'guava-jdk5' }
+    compile ('com.google.oauth-client:google-oauth-client:1.22.0') { exclude group: 'com.google.guava', module: 'guava-jdk5' }
+
+    compile ('com.google.cloud:google-cloud-core:1.94.0') { exclude group: 'com.google.guava', module: 'guava-jdk5' }
+
+    compile 'com.google.code.findbugs:jsr305:3.0.2'
+
+    // Newer version of jetty-client with some important bugfixes.
+    // jetty-client is used by td-client-java, and ideally we would bump the version there but
+    // td-client-java still targets JDK 7 and jetty-client 9.3.x targets JDK 8.
+    // https://github.com/treasure-data/td-client-java/pull/68
+    // https://bugs.eclipse.org/bugs/show_bug.cgi?id=475546
+    // https://github.com/eclipse/jetty.project/issues/416
+    compile 'org.eclipse.jetty:jetty-client:9.3.11.v20160721'
+
+    // XXX (dano): This is just here so we can disable TDClientConfing spam in TdDigdagClientConfigurationPlugin
+    compile 'ch.qos.logback:logback-classic:1.1.5'
+
+    // redis-client
+    compile group: 'redis.clients', name: 'jedis', version: '2.9.0'
+
+    testCompile project(path: ':digdag-client', configuration: 'testArtifacts')
+    testCompile project(path: ':digdag-core', configuration: 'testArtifacts')
+
+    // for testing
+    testCompile ('com.github.tomakehurst:wiremock:2.6.0') {
+        exclude group: 'com.fasterxml.jackson.core', module: 'jackson-core'
+        exclude group: 'com.fasterxml.jackson.core', module: 'jackson-databind'
+    }
+
+    // test dependency conflict resolution
+    testCompile 'org.eclipse.jetty:jetty-server:9.3.11.v20160721'
+    testCompile 'org.eclipse.jetty:jetty-servlet:9.3.11.v20160721'
+    testCompile 'org.eclipse.jetty:jetty-servlets:9.3.11.v20160721'
+    testCompile 'org.eclipse.jetty:jetty-webapp:9.3.11.v20160721'
+    // mail test
+    testCompile ('com.icegreen:greenmail:1.5.8'){
+        exclude group: 'org.slf4j', module: 'slf4j-api'
+
+    }
+
+    test {
+        // for BqDdlOperatorFactoryTest
+        environment "GOOGLE_APPLICATION_CREDENTIALS", System.getProperty("java.io.tmpdir") + "/dummy-service-account-key.json"
+    }
+}

@@ -1,0 +1,85 @@
+code,
+pre {
+  tab-size: 2 !important;
+}
+
+.app-wrapper {
+  padding-top: 1.5rem;
+  margin: 0 1.5rem;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1.5rem;
+}
+
+.loading-text {
+  margin-top: 40px;
+  font-size: 22px;
+}
+
+.label-sm {
+  font-size: 12px;
+}
+
+.large-editor {
+  display: flex;
+  flex: 1 1 auto;
+  min-height: 40rem;
+}
+
+.ace_cursor {
+  display: none;
+}
+
+.ace-tm {
+  background: transparent !important;
+}
+
+.ace_td-run,
+.ace_td-load {
+  color: rgb(0, 22, 142);
+}
+
+.ace_td-run-value,
+.ace_td-load-value {
+  text-decoration: underline;
+  cursor: pointer !important;
+  pointer-events: auto;
+}
+
+.params-view {
+  height: 130px;
+}
+
+.definition {
+  height: 300px;
+}
+
+.editor {
+  height: 300px;
+}
+
+.editor .ace_cursor {
+  display: block;
+}
+
+.log-view {
+  display: block;
+  padding-top: 50px;
+  margin-top: -50px;
+}
+
+.copy-btn {
+  display: flex;
+  margin-left: auto;
+  visibility: hidden;
+  :hover > & {
+    visibility: visible;
+  }
+}

@@ -1,0 +1,67 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+@use '@gravitee/ui-particles-angular' as gio;
+
+$typography: map.get(gio.$mat-theme, typography);
+
+.api-creation-v4 {
+  &__step {
+    max-width: 980px;
+    padding: 40px;
+
+    &__header {
+      padding-bottom: 24px;
+
+      &__step-number {
+        @include mat.typography-level($typography, 'subheading-1');
+        color: mat.get-color-from-palette(gio.$mat-accent-palette, 'default');
+        padding-bottom: 32px;
+      }
+
+      &__subtitle {
+        @include mat.typography-level($typography, 'title');
+        margin-bottom: 8px;
+      }
+
+      &__paragraph-light {
+        @include mat.typography-level($typography, body-1);
+        color: mat.get-color-from-palette(gio.$mat-space-palette, 'lighter40');
+        margin-bottom: 8px;
+      }
+    }
+
+    &__footer {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      margin-top: 24px;
+      gap: 16px;
+
+      :first-child {
+        margin-right: auto;
+      }
+    }
+  }
+
+  &__list-option {
+    &__selected {
+      border: 2px solid mat.get-color-from-palette(gio.$mat-accent-palette, 'default') !important;
+    }
+  }
+
+  &__badge {
+    font-weight: 700;
+    vertical-align: bottom;
+  }
+
+  &__form-container {
+    border: 1px solid mat.get-color-from-palette(gio.$mat-dove-palette, 'darker20');
+    border-radius: 8px;
+    padding: 16px;
+    margin-top: 16px;
+
+    &__subTitle {
+      font-size: 14px;
+    }
+  }
+}

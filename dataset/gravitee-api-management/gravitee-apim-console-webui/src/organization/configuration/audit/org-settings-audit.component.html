@@ -1,0 +1,184 @@
+<!--
+
+    Copyright (C) 2015 The Gravitee team (http://gravitee.io)
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+            http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<div class="org-settings-audit__title">
+  <h1>Audit</h1>
+</div>
+
+<mat-card class="org-settings-audit__filters" [formGroup]="filtersForm">
+  <mat-form-field class="org-settings-audit__filters__field">
+    <mat-label>Event</mat-label>
+    <mat-select formControlName="event">
+      <mat-option></mat-option>
+      <mat-option *ngFor="let name of eventsName$ | async" [value]="name">{{ name }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field class="org-settings-audit__filters__field">
+    <mat-label>Type</mat-label>
+    <mat-select formControlName="referenceType">
+      <mat-option></mat-option>
+      <mat-option value="ORGANIZATION">ORGANIZATION</mat-option>
+      <mat-option value="ENVIRONMENT">ENVIRONMENT</mat-option>
+      <mat-option value="APPLICATION">APPLICATION</mat-option>
+      <mat-option value="API">API</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <ng-container [ngSwitch]="filtersForm.get('referenceType').value">
+    <mat-form-field *ngSwitchCase="'ENVIRONMENT'" class="org-settings-audit__filters__field">
+      <mat-label>Environments</mat-label>
+      <mat-select formControlName="environmentId">
+        <mat-option></mat-option>
+        <mat-option *ngFor="let environment of environments$ | async" [value]="environment.id">{{ environment.name }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field *ngSwitchCase="'APPLICATION'" class="org-settings-audit__filters__field">
+      <mat-label>Applications</mat-label>
+      <mat-select formControlName="applicationId">
+        <mat-option></mat-option>
+        <mat-optgroup
+          *ngFor="let environmentApplications of environmentsApplications$ | async | keyvalue"
+          [label]="environmentApplications.key"
+        >
+          <mat-option *ngFor="let application of environmentApplications.value" [value]="application.id">
+            {{ application.name }}
+          </mat-option>
+        </mat-optgroup>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field *ngSwitchCase="'API'" class="org-settings-audit__filters__field">
+      <mat-label>APIs</mat-label>
+      <mat-select formControlName="apiId">
+        <mat-option></mat-option>
+        <mat-optgroup *ngFor="let environmentApis of environmentsApis$ | async | keyvalue" [label]="environmentApis.key">
+          <mat-option *ngFor="let api of environmentApis.value" [value]="api.id">
+            {{ api.name }}
+          </mat-option>
+        </mat-optgroup>
+      </mat-select>
+    </mat-form-field>
+  </ng-container>
+
+  <mat-form-field class="org-settings-audit__filters__field right">
+    <mat-label>Enter a date range</mat-label>
+    <mat-date-range-input formGroupName="range" [rangePicker]="picker">
+      <input matStartDate formControlName="start" placeholder="Start date" />
+      <input matEndDate formControlName="end" placeholder="End date" />
+    </mat-date-range-input>
+    <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-date-range-picker #picker></mat-date-range-picker>
+
+    <mat-error *ngIf="filtersForm.controls.range.controls.start.hasError('matStartDateInvalid')">Invalid start date</mat-error>
+    <mat-error *ngIf="filtersForm.controls.range.controls.end.hasError('matEndDateInvalid')">Invalid end date</mat-error>
+  </mat-form-field>
+</mat-card>
+
+<gio-table-wrapper
+  [disableSearchInput]="true"
+  [length]="nbTotalAudit"
+  [filters]="filtersStream.value.tableWrapper"
+  (filtersChange)="onFiltersChanged($event)"
+>
+  <table mat-table [dataSource]="filteredTableData" class="org-settings-audit__table" id="auditTable" aria-label="Audit table">
+    <!-- Date Column -->
+    <ng-container matColumnDef="date">
+      <th mat-header-cell *matHeaderCellDef id="date" width="1%">Date</th>
+      <td mat-cell *matCellDef="let element">{{ element.date | date: 'medium' }}</td>
+    </ng-container>
+
+    <!-- User Column -->
+    <ng-container matColumnDef="user">
+      <th mat-header-cell *matHeaderCellDef id="user" width="15%">User</th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.user }}
+      </td>
+    </ng-container>
+
+    <!-- Type Column -->
+    <ng-container matColumnDef="referenceType">
+      <th mat-header-cell *matHeaderCellDef id="referenceType" width="15%">Type</th>
+      <td mat-cell *matCellDef="let element">{{ element.referenceType }}</td>
+    </ng-container>
+
+    <!-- Reference Column -->
+    <ng-container matColumnDef="reference">
+      <th mat-header-cell *matHeaderCellDef id="reference" width="15%">Reference</th>
+      <td mat-cell *matCellDef="let element">{{ element.reference }}</td>
+    </ng-container>
+
+    <!-- Event Column -->
+    <ng-container matColumnDef="event">
+      <th mat-header-cell *matHeaderCellDef id="event" width="15%">Event</th>
+      <td mat-cell *matCellDef="let element">{{ element.event }}</td>
+    </ng-container>
+
+    <!-- Targets Column -->
+    <ng-container matColumnDef="targets">
+      <th mat-header-cell *matHeaderCellDef id="targets" width="15%">Target</th>
+      <td mat-cell *matCellDef="let element">
+        <div class="targets" *ngFor="let target of element.targets | keyvalue">
+          <div class="targets__target">{{ target.key }}:</div>
+          <div>{{ target.value }}</div>
+        </div>
+      </td>
+    </ng-container>
+
+    <!-- Patch Column -->
+    <ng-container matColumnDef="patch">
+      <th mat-header-cell *matHeaderCellDef id="patch" width="1%">Patch</th>
+      <td mat-cell *matCellDef="let element">
+        <div class="pre-wrapper">
+          <div>
+            <button
+              *ngIf="!element.displayPatch"
+              (click)="element.displayPatch = true"
+              mat-icon-button
+              aria-label="Button to show patch"
+              matTooltip="Show patch"
+            >
+              <mat-icon svgIcon="gio:eye-empty"></mat-icon>
+            </button>
+
+            <button
+              *ngIf="element.displayPatch"
+              (click)="element.displayPatch = false"
+              mat-icon-button
+              aria-label="Button to hide patch"
+              matTooltip="Hide patch"
+            >
+              <mat-icon svgIcon="gio:cancel"></mat-icon>
+            </button>
+          </div>
+          <div>
+            <pre *ngIf="element.displayPatch">{{ element.patch | json }}</pre>
+          </div>
+        </div>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+
+    <!-- Row shown when there is no data -->
+    <tr class="mat-row" *matNoDataRow>
+      <td class="mat-cell" [attr.colspan]="displayedColumns.length">No audit</td>
+    </tr>
+  </table>
+</gio-table-wrapper>

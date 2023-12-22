@@ -1,0 +1,14 @@
+.github/
+app-scripts/
+artifacts/
+docs/
+.DS_Store
+.gitignore
+.project
+.pydevproject
+CHANGELOG.md
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
+LICENSE
+PULL_REQUEST_TEMPLATE.md
+README.md

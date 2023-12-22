@@ -1,0 +1,6 @@
+version: '3'
+services:
+  sut:
+    build: .
+    entrypoint: [""]
+    command: ["/app/container-test.sh"]

@@ -1,0 +1,1113 @@
+{
+    "Spring": {
+        "name": "Spring",
+        "fullName": "Spring Framework",
+        "url":"https://docs.spring.io/spring-framework/docs/current/javadoc-api/",
+        "packageNames": [
+            "org.springframework.web.bind.annotation",
+            "org.springframework.http"
+        ],
+        "packagePrefix": [
+            "org.springframework"
+        ],
+        "classAnnotations": {
+            "Lorg/springframework/web/bind/annotation/RequestMapping;" : {
+                "methodParam": "method",
+                "pathParam": ["value", "path"],
+                "produceParam": "produces"
+            }
+        },
+        
+        "responseStatusAnnotations": {
+            "Lorg/springframework/web/bind/annotation/ResponseStatus;": {
+                "statusCodeParam": ["value", "code"]
+            }
+        },
+
+        "methodAnnotations": {
+            "Lorg/springframework/web/bind/annotation/GetMapping;": {
+                "method": "get",
+                "pathParam": ["value", "path"],
+                "produceParam": "produces"
+            },
+            
+            "Lorg/springframework/web/bind/annotation/RequestMapping;" : {
+                "methodParam": "method",
+                "pathParam": ["value", "path"],
+                "produceParam": "produces"
+            },
+            "Lorg/springframework/web/bind/annotation/PostMapping;" :{
+                "method": "post",
+                "pathParam": ["value", "path"],
+                "produceParam": "produces",
+                "consumeParam": "consumes"
+            },
+            "Lorg/springframework/web/bind/annotation/PutMapping;" :{
+                "method": "put",
+                "pathParam": ["value", "path"],
+                "produceParam": "produces",
+                "consumeParam": "consumes"
+            },
+            "Lorg/springframework/web/bind/annotation/DeleteMapping;" :{
+                "method": "delete",
+                "pathParam": ["value", "path"],
+                "produceParam": "produces",
+                "consumeParam": "consumes"
+            },
+            "Lorg/springframework/web/bind/annotation/PatchMapping;" :{
+                "method": "patch",
+                "pathParam": ["value", "path"],
+                "produceParam": "produces",
+                "consumeParam": "consumes"
+            }
+        },
+        "parameterAnnotations": {
+            "Lorg/springframework/web/bind/annotation/PathVariable;": {
+                "nameParam": ["value", "name"],
+                "requiredParam": "required",
+                "in": "path"
+            },
+            "Lorg/springframework/web/bind/annotation/RequestParam;": {
+                "nameParam": ["value", "name"],
+                "requiredParam": "required",
+                "defaultValueParam": "defaultValue",
+                "in": "query"
+            },
+
+            "Lorg/springframework/web/bind/annotation/RequestHeader;": {
+                "nameParam": ["value", "name"],
+                "requiredParam": "required",
+                "defaultValueParam": "defaultValue",
+                "in": "header"
+            },
+            "Lorg/springframework/web/bind/annotation/MatrixVariable;": {
+                "nameParam": ["value", "name"],
+                "requiredParam": "required",
+                "in": "path"
+            },
+            "Lorg/springframework/web/bind/annotation/CookieValue;": {
+                "nameParam": ["value", "name"],
+                "requiredParam": "required",
+                "in": "cookie"
+            }
+        },
+
+        "methodFieldAnnotations": {},
+
+        "responseClasses": [
+            "org.springframework.http.ResponseEntity",
+            "org.springframework.http.HttpEntity"
+        ],
+
+        "responseBuilders": [
+            {
+                "declaringClass": "org.springframework.http.ResponseEntity",
+                "subSignature": "void <init>(org.springframework.http.HttpStatus)",
+                "arg": 0
+            },
+            
+            {
+                "declaringClass": "org.springframework.http.ResponseEntity",
+                "subSignature": "void <init>(java.lang.Object,org.springframework.http.HttpStatus)",
+                "arg": 1,
+                "entityArg": 0
+            },
+
+            {
+                "declaringClass": "org.springframework.http.ResponseEntity",
+                "subSignature": "void <init>(org.springframework.util.MultiValueMap,org.springframework.http.HttpStatus)",
+                "arg": 1
+            },
+
+            {
+                "declaringClass": "org.springframework.http.ResponseEntity",
+                "subSignature": "void <init>(java.lang.Object,org.springframework.util.MultiValueMap,org.springframework.http.HttpStatus)",
+                "arg": 2
+            },
+
+            {
+                "declaringClass": "org.springframework.http.ResponseEntity",
+                "subSignature": "org.springframework.http.ResponseEntity$BodyBuilder accepted()",
+                "returnStatus": 202
+            },
+
+            {
+                "declaringClass": "org.springframework.http.ResponseEntity",
+                "subSignature": "org.springframework.http.ResponseEntity$BodyBuilder badRequest()",
+                "returnStatus": 401
+            },
+
+            {
+                "declaringClass": "org.springframework.http.ResponseEntity",
+                "subSignature": "org.springframework.http.ResponseEntity$BodyBuilder created(java.net.URI)",
+                "returnStatus": 201
+            },
+
+            {
+                "declaringClass": "org.springframework.http.ResponseEntity",
+                "subSignature": "org.springframework.http.ResponseEntity$HeadersBuilder noContent()",
+                "returnStatus": 204
+            },
+
+            {
+                "declaringClass": "org.springframework.http.ResponseEntity",
+                "subSignature": "org.springframework.http.ResponseEntity$HeadersBuilder notFound()",
+                "returnStatus": 404
+            },
+
+            {
+                "declaringClass": "org.springframework.http.ResponseEntity",
+                "subSignature": "org.springframework.http.ResponseEntity$BodyBuilder ok()",
+                "returnStatus": 200
+            },
+
+            {
+                "declaringClass": "org.springframework.http.ResponseEntity",
+                "subSignature": "org.springframework.http.ResponseEntity ok(java.lang.Object)",
+                "returnStatus": 200,
+                "entityArg": 0
+            },
+
+            {
+                "declaringClass": "org.springframework.http.ResponseEntity",
+                "subSignature": "org.springframework.http.ResponseEntity$BodyBuilder status(org.springframework.http.HttpStatus)",
+                "arg": 0
+            },
+
+            {
+                "declaringClass": "org.springframework.http.ResponseEntity",
+                "subSignature": "org.springframework.http.ResponseEntity$BodyBuilder status(int)",
+                "arg": 0
+            },
+
+            {
+                "declaringClass": "org.springframework.http.ResponseEntity",
+                "subSignature": "org.springframework.http.ResponseEntity$BodyBuilder unprocessableEntity()",
+                "returnStatus": 422
+            }
+        ],
+
+        "enumResponses":[
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "CONTINUE",
+                "statusCode": 100
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "SWITCHING_PROTOCOLS",
+                "statusCode": 101
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "PROCESSING",
+                "statusCode": 102
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "CHECKPOINT",
+                "statusCode": 103
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "OK",
+                "statusCode": 200
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "CREATED",
+                "statusCode": 201
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "ACCEPTED",
+                "statusCode": 202
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "NON_AUTHORITATIVE_INFORMATION",
+                "statusCode": 203
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "NO_CONTENT",
+                "statusCode": 204
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "RESET_CONTENT",
+                "statusCode": 205
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "PARTIAL_CONTENT",
+                "statusCode": 206
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "MULTI_STATUS",
+                "statusCode": 207
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "ALREADY_REPORTED",
+                "statusCode": 208
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "IM_USED",
+                "statusCode": 226
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "MULTIPLE_CHOICES",
+                "statusCode": 300
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "MOVED_PERMANENTLY",
+                "statusCode": 301
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "FOUND",
+                "statusCode": 302
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "SEE_OTHER",
+                "statusCode": 303
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "NOT_MODIFIED",
+                "statusCode": 304
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "TEMPORARY_REDIRECT",
+                "statusCode": 307
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "PERMANENT_REDIRECT",
+                "statusCode": 308
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "BAD_REQUEST",
+                "statusCode": 400
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "UNAUTHORIZED",
+                "statusCode": 401
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "PAYMENT_REQUIRED",
+                "statusCode": 402
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "FORBIDDEN",
+                "statusCode": 403
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "NOT_FOUND",
+                "statusCode": 404
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "METHOD_NOT_ALLOWED",
+                "statusCode": 405
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "NOT_ACCEPTABLE",
+                "statusCode": 406
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "PROXY_AUTHENTICATION_REQUIRED",
+                "statusCode": 407
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "REQUEST_TIMEOUT",
+                "statusCode": 408
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "CONFLICT",
+                "statusCode": 409
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "GONE",
+                "statusCode": 410
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "LENGTH_REQUIRED",
+                "statusCode": 411
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "PRECONDITION_FAILED",
+                "statusCode": 412
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "PAYLOAD_TOO_LARGE",
+                "statusCode": 413
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "URI_TOO_LONG",
+                "statusCode": 414
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "UNSUPPORTED_MEDIA_TYPE",
+                "statusCode": 415
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "REQUESTED_RANGE_NOT_SATISFIABLE",
+                "statusCode": 416
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "EXPECTATION_FAILED",
+                "statusCode": 417
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "I_AM_A_TEAPOT",
+                "statusCode": 418
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "UNPROCESSABLE_ENTITY",
+                "statusCode": 422
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "LOCKED",
+                "statusCode": 423
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "FAILED_DEPENDENCY",
+                "statusCode": 424
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "TOO_EARLY",
+                "statusCode": 425
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "UPGRADE_REQUIRED",
+                "statusCode": 426
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "PRECONDITION_REQUIRED",
+                "statusCode": 428
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "TOO_MANY_REQUESTS",
+                "statusCode": 429
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "REQUEST_HEADER_FIELDS_TOO_LARGE",
+                "statusCode": 431
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "UNAVAILABLE_FOR_LEGAL_REASONS",
+                "statusCode": 451
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "INTERNAL_SERVER_ERROR",
+                "statusCode": 500
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "NOT_IMPLEMENTED",
+                "statusCode": 501
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "BAD_GATEWAY",
+                "statusCode": 502
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "SERVICE_UNAVAILABLE",
+                "statusCode": 503
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "GATEWAY_TIMEOUT",
+                "statusCode": 504
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "HTTP_VERSION_NOT_SUPPORTED",
+                "statusCode": 505
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "VARIANT_ALSO_NEGOTIATES",
+                "statusCode": 506
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "INSUFFICIENT_STORAGE",
+                "statusCode": 507
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "LOOP_DETECTED",
+                "statusCode": 508
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "BANDWIDTH_LIMIT_EXCEEDED",
+                "statusCode": 509
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "NOT_EXTENDED",
+                "statusCode": 510
+            },
+            
+            
+            {
+                "declaringClass": "org.springframework.http.HttpStatus",
+                "name": "NETWORK_AUTHENTICATION_REQUIRED",
+                "statusCode": 511
+            }
+        ],
+
+        "nullReturnCode": 204
+
+    },
+
+    "JAX": {
+        "name": "JAX",  
+        "fullName": "JAX-RS",
+        "url": "https://javadoc.io/doc/javax.ws.rs/javax.ws.rs-api/latest/overview-summary.html",
+        "packageNames": [
+            "javax.ws.rs.core",
+            "javax.ws.rs"
+        ],
+        "packagePrefix": [
+            "javax.ws.rs"
+        ],
+        "classAnnotations": {
+            "Ljavax/ws/rs/Path;": {
+                "pathParam": ["value"]
+            }
+        },
+
+        "responseStatusAnnotations": {},
+
+        "methodAnnotations": {
+            "Ljavax/ws/rs/GET;": {
+                "method": "get"
+            },
+            "Ljavax/ws/rs/POST;": {
+                "method": "post"
+            },
+            "Ljavax/ws/rs/DELETE;": {
+                "method": "delete"
+            },
+            "Ljavax/ws/rs/PUT;": {
+                "method": "put"
+            },
+            "Ljavax/ws/rs/PATCH;": {
+                "method": "patch"
+            },
+            "Lio/dropwizard/jersey/PATCH;": {
+                "method": "patch"
+            },
+            "Ljavax/ws/rs/Path;": {
+                "pathParam": ["value"]
+            }
+        },
+        "parameterAnnotations": {
+            "Ljavax/ws/rs/QueryParam;": {
+                "nameParam": ["value"],
+                "in": "query"
+            },
+            "Ljavax/ws/rs/PathParam;": {
+                "nameParam": ["value"],
+                "in": "path"
+            },
+            "Ljavax/ws/rs/FormParam;": {
+                "nameParam": ["value"],
+                "in": "formData"
+            },
+            "Ljavax/ws/rs/CookieParam;": {
+                "nameParam": ["value"],
+                "in": "cookie"
+            },
+            "Ljavax/ws/rs/HeaderParam;": {
+                "nameParam": ["value"],
+                "in": "header"
+            },
+            "Ljavax/ws/rs/MatrixParam;": {
+                "nameParam": ["value"],
+                "in": "path"
+            },
+            "Ljavax/ws/rs/DefaultValue;": {
+                "defaultValueParam": "value"
+            }
+        },
+
+        "methodFieldAnnotations": {
+            "Ljavax/ws/rs/PathParam;": {
+                "nameParam": ["value"],
+                "in": "path"
+            }
+        },
+
+        "responseClasses": [
+            "javax.ws.rs.core.Response"
+        ],
+
+        "responseBuilders": [
+            {
+                "declaringClass": "javax.ws.rs.core.Response",
+                "subSignature": "javax.ws.rs.core.Response$ResponseBuilder accepted()",
+                "returnStatus": 202
+            },
+
+            {
+                "declaringClass": "javax.ws.rs.core.Response",
+                "subSignature": "javax.ws.rs.core.Response$ResponseBuilder accepted(java.lang.Object)",
+                "returnStatus": 202,
+                "entityArg": 0
+            },
+
+            {
+                "declaringClass": "javax.ws.rs.core.Response",
+                "subSignature": "javax.ws.rs.core.Response$ResponseBuilder created(java.net.URI)",
+                "returnStatus": 201
+            },
+
+            {
+                "declaringClass": "javax.ws.rs.core.Response",
+                "subSignature": "javax.ws.rs.core.Response$ResponseBuilder noContent()",
+                "returnStatus": 204
+            },
+
+            {
+                "declaringClass": "javax.ws.rs.core.Response",
+                "subSignature": "javax.ws.rs.core.Response$ResponseBuilder notAcceptable(java.util.List)",
+                "returnStatus": 406
+            },
+
+            {
+                "declaringClass": "javax.ws.rs.core.Response",
+                "subSignature": "javax.ws.rs.core.Response$ResponseBuilder notModified()",
+                "returnStatus": 304
+            },
+
+            {
+                "declaringClass": "javax.ws.rs.core.Response",
+                "subSignature": "javax.ws.rs.core.Response$ResponseBuilder notModified(java.lang.String)",
+                "returnStatus": 304,
+                "entityArg": 0
+            },
+
+            {
+                "declaringClass": "javax.ws.rs.core.Response",
+                "subSignature": "javax.ws.rs.core.Response$ResponseBuilder notModified(javax.ws.rs.core.EntityTag)",
+                "returnStatus": 304
+            },
+
+            {
+                "declaringClass": "javax.ws.rs.core.Response",
+                "subSignature": "javax.ws.rs.core.Response$ResponseBuilder ok()",
+                "returnStatus": 200
+            },
+
+            {
+                "declaringClass": "javax.ws.rs.core.Response",
+                "subSignature": "javax.ws.rs.core.Response$ResponseBuilder ok(java.lang.Object)",
+                "returnStatus": 200,
+                "entityArg": 0
+            },
+
+            {
+                "declaringClass": "javax.ws.rs.core.Response",
+                "subSignature": "javax.ws.rs.core.Response$ResponseBuilder ok(java.lang.Object,java.lang.String)",
+                "returnStatus": 200,
+                "entityArg": 0
+            },
+
+            {
+                "declaringClass": "javax.ws.rs.core.Response",
+                "subSignature": "javax.ws.rs.core.Response$ResponseBuilder ok(java.lang.Object,javax.ws.rs.core.MediaType)",
+                "returnStatus": 200,
+                "entityArg": 0
+            },
+
+            {
+                "declaringClass": "javax.ws.rs.core.Response",
+                "subSignature": "javax.ws.rs.core.Response$ResponseBuilder ok(java.lang.Object,javax.ws.rs.core.Variant)",
+                "returnStatus": 200,
+                "entityArg": 0
+            },
+
+            {
+                "declaringClass": "javax.ws.rs.core.Response",
+                "subSignature": "javax.ws.rs.core.Response$ResponseBuilder seeOther(java.net.URI)",
+                "returnStatus": 303
+            },
+
+            {
+                "declaringClass": "javax.ws.rs.core.Response",
+                "subSignature": "javax.ws.rs.core.Response$ResponseBuilder serverError()",
+                "returnStatus": 500
+            },
+
+            {
+                "declaringClass": "javax.ws.rs.core.Response",
+                "subSignature": "javax.ws.rs.core.Response$ResponseBuilder status(int)",
+                "arg": 0
+            },
+
+            {
+                "declaringClass": "javax.ws.rs.core.Response",
+                "subSignature": "javax.ws.rs.core.Response$ResponseBuilder status(int,java.lang.String)",
+                "arg": 0,
+                "entityArg": 1
+            },
+
+            {
+                "declaringClass": "javax.ws.rs.core.Response",
+                "subSignature": "javax.ws.rs.core.Response$ResponseBuilder status(javax.ws.rs.core.Response$Status)",
+                "arg": 0
+            },
+
+            {
+                "declaringClass": "javax.ws.rs.core.Response",
+                "subSignature": "javax.ws.rs.core.Response$ResponseBuilder temporaryRedirect(java.net.URI)",
+                "returnStatus": 307
+            }
+        ],
+        
+        "enumResponses":[
+            {
+                "declaringClass": "javax.ws.rs.core.Response$Status",
+                "name": "OK",
+                "statusCode": 200
+            },
+            
+            
+            {
+                "declaringClass": "javax.ws.rs.core.Response$Status",
+                "name": "CREATED",
+                "statusCode": 201
+            },
+            
+            
+            {
+                "declaringClass": "javax.ws.rs.core.Response$Status",
+                "name": "ACCEPTED",
+                "statusCode": 202
+            },
+            
+            
+            {
+                "declaringClass": "javax.ws.rs.core.Response$Status",
+                "name": "NO_CONTENT",
+                "statusCode": 204
+            },
+            
+            
+            {
+                "declaringClass": "javax.ws.rs.core.Response$Status",
+                "name": "RESET_CONTENT",
+                "statusCode": 205
+            },
+            
+            
+            {
+                "declaringClass": "javax.ws.rs.core.Response$Status",
+                "name": "PARTIAL_CONTENT",
+                "statusCode": 206
+            },
+            
+            
+            {
+                "declaringClass": "javax.ws.rs.core.Response$Status",
+                "name": "MOVED_PERMANENTLY",
+                "statusCode": 301
+            },
+            
+            
+            {
+                "declaringClass": "javax.ws.rs.core.Response$Status",
+                "name": "FOUND",
+                "statusCode": 302
+            },
+            
+            
+            {
+                "declaringClass": "javax.ws.rs.core.Response$Status",
+                "name": "SEE_OTHER",
+                "statusCode": 303
+            },
+            
+            
+            {
+                "declaringClass": "javax.ws.rs.core.Response$Status",
+                "name": "NOT_MODIFIED",
+                "statusCode": 304
+            },
+            
+            
+            {
+                "declaringClass": "javax.ws.rs.core.Response$Status",
+                "name": "USE_PROXY",
+                "statusCode": 305
+            },
+            
+            
+            {
+                "declaringClass": "javax.ws.rs.core.Response$Status",
+                "name": "TEMPORARY_REDIRECT",
+                "statusCode": 307
+            },
+            
+            
+            {
+                "declaringClass": "javax.ws.rs.core.Response$Status",
+                "name": "BAD_REQUEST",
+                "statusCode": 400
+            },
+            
+            
+            {
+                "declaringClass": "javax.ws.rs.core.Response$Status",
+                "name": "UNAUTHORIZED",
+                "statusCode": 401
+            },
+            
+            
+            {
+                "declaringClass": "javax.ws.rs.core.Response$Status",
+                "name": "PAYMENT_REQUIRED",
+                "statusCode": 402
+            },
+            
+            
+            {
+                "declaringClass": "javax.ws.rs.core.Response$Status",
+                "name": "FORBIDDEN",
+                "statusCode": 403
+            },
+            
+            
+            {
+                "declaringClass": "javax.ws.rs.core.Response$Status",
+                "name": "NOT_FOUND",
+                "statusCode": 404
+            },
+            
+            
+            {
+                "declaringClass": "javax.ws.rs.core.Response$Status",
+                "name": "METHOD_NOT_ALLOWED",
+                "statusCode": 405
+            },
+            
+            
+            {
+                "declaringClass": "javax.ws.rs.core.Response$Status",
+                "name": "NOT_ACCEPTABLE",
+                "statusCode": 406
+            },
+            
+            
+            {
+                "declaringClass": "javax.ws.rs.core.Response$Status",
+                "name": "PROXY_AUTHENTICATION_REQUIRED",
+                "statusCode": 407
+            },
+            
+            
+            {
+                "declaringClass": "javax.ws.rs.core.Response$Status",
+                "name": "REQUEST_TIMEOUT",
+                "statusCode": 408
+            },
+            
+            
+            {
+                "declaringClass": "javax.ws.rs.core.Response$Status",
+                "name": "CONFLICT",
+                "statusCode": 409
+            },
+            
+            
+            {
+                "declaringClass": "javax.ws.rs.core.Response$Status",
+                "name": "GONE",
+                "statusCode": 410
+            },
+            
+            
+            {
+                "declaringClass": "javax.ws.rs.core.Response$Status",
+                "name": "LENGTH_REQUIRED",
+                "statusCode": 411
+            },
+            
+            
+            {
+                "declaringClass": "javax.ws.rs.core.Response$Status",
+                "name": "PRECONDITION_FAILED",
+                "statusCode": 412
+            },
+            
+            
+            {
+                "declaringClass": "javax.ws.rs.core.Response$Status",
+                "name": "REQUEST_ENTITY_TOO_LARGE",
+                "statusCode": 413
+            },
+            
+            
+            {
+                "declaringClass": "javax.ws.rs.core.Response$Status",
+                "name": "REQUEST_URI_TOO_LONG",
+                "statusCode": 414
+            },
+            
+            
+            {
+                "declaringClass": "javax.ws.rs.core.Response$Status",
+                "name": "UNSUPPORTED_MEDIA_TYPE",
+                "statusCode": 415
+            },
+            
+            
+            {
+                "declaringClass": "javax.ws.rs.core.Response$Status",
+                "name": "REQUESTED_RANGE_NOT_SATISFIABLE",
+                "statusCode": 416
+            },
+            
+            
+            {
+                "declaringClass": "javax.ws.rs.core.Response$Status",
+                "name": "EXPECTATION_FAILED",
+                "statusCode": 417
+            },
+            
+            
+            {
+                "declaringClass": "javax.ws.rs.core.Response$Status",
+                "name": "PRECONDITION_REQUIRED",
+                "statusCode": 428
+            },
+            
+            
+            {
+                "declaringClass": "javax.ws.rs.core.Response$Status",
+                "name": "TOO_MANY_REQUESTS",
+                "statusCode": 429
+            },
+            
+            
+            {
+                "declaringClass": "javax.ws.rs.core.Response$Status",
+                "name": "REQUEST_HEADER_FIELDS_TOO_LARGE",
+                "statusCode": 431
+            },
+            
+            
+            {
+                "declaringClass": "javax.ws.rs.core.Response$Status",
+                "name": "INTERNAL_SERVER_ERROR",
+                "statusCode": 500
+            },
+            
+            
+            {
+                "declaringClass": "javax.ws.rs.core.Response$Status",
+                "name": "NOT_IMPLEMENTED",
+                "statusCode": 501
+            },
+            
+            
+            {
+                "declaringClass": "javax.ws.rs.core.Response$Status",
+                "name": "BAD_GATEWAY",
+                "statusCode": 502
+            },
+            
+            
+            {
+                "declaringClass": "javax.ws.rs.core.Response$Status",
+                "name": "SERVICE_UNAVAILABLE",
+                "statusCode": 503
+            },
+            
+            
+            {
+                "declaringClass": "javax.ws.rs.core.Response$Status",
+                "name": "GATEWAY_TIMEOUT",
+                "statusCode": 504
+            },
+            
+            
+            {
+                "declaringClass": "javax.ws.rs.core.Response$Status",
+                "name": "HTTP_VERSION_NOT_SUPPORTED",
+                "statusCode": 505
+            },
+            
+            
+            {
+                "declaringClass": "javax.ws.rs.core.Response$Status",
+                "name": "NETWORK_AUTHENTICATION_REQUIRED",
+                "statusCode": 511
+            }
+        ],
+
+        "nullReturnCode": 204
+        
+    }
+    
+}

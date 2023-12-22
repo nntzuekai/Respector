@@ -1,0 +1,9 @@
+{
+    "groups": "https://envirocar.org/api/stable/rest/groups",
+    "measurements": "https://envirocar.org/api/stable/rest/measurements",
+    "phenomenons": "https://envirocar.org/api/stable/rest/phenomenons",
+    "sensors": "https://envirocar.org/api/stable/rest/sensors",
+    "statistics": "https://envirocar.org/api/stable/rest/statistics",
+    "tracks": "https://envirocar.org/api/stable/rest/tracks",
+    "users": "https://envirocar.org/api/stable/rest/users"
+}

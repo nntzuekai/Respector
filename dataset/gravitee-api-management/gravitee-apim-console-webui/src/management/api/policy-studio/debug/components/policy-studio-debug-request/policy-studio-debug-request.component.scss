@@ -1,0 +1,73 @@
+@use '@angular/material' as mat;
+@use '@gravitee/ui-particles-angular' as gio;
+@use '../../../../../../scss/gio-layout' as gio-layout;
+
+.policy-studio-debug-request {
+  // FIXME: To remove when HEADERS will be managed by a component coming from UI Particles
+  --gv-expandable--bdb: solid thin #{mat.get-color-from-palette(gio.$mat-decorative-palette, 'divider')};
+
+  background-color: mat.get-color-from-palette(gio.$mat-decorative-palette, 'surface');
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  &__header {
+    background-color: mat.get-color-from-palette(gio.$mat-decorative-palette, 'lighter-background');
+    border-bottom: 2px solid mat.get-color-from-palette(gio.$mat-decorative-palette, 'divider');
+    height: 56px;
+    display: flex;
+    align-items: center;
+    padding: 16px;
+
+    @include gio.subtitle-typography();
+  }
+
+  &__content {
+    flex: 1 1 auto;
+    border-bottom: 2px solid mat.get-color-from-palette(gio.$mat-decorative-palette, 'divider');
+
+    position: relative;
+    overflow-x: auto;
+
+    &__wrapper {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      padding: 16px;
+      height: 100%;
+      width: 100%;
+
+      &__body {
+        margin-top: 16px;
+      }
+    }
+  }
+
+  &__btn {
+    display: flex;
+    flex-direction: row;
+    padding: 16px;
+
+    :host-context(.save-bar-opened) & {
+      padding-bottom: 16px + 74px;
+
+      @include gio-layout.desktop {
+        padding-bottom: 16px;
+      }
+
+      @include gio-layout.large-desktop {
+        padding-bottom: 16px;
+      }
+    }
+
+    &__cancel {
+      flex: 1 1 auto;
+      margin: 0 8px;
+    }
+
+    &__submit {
+      flex: 5 1 auto;
+      margin: 0 8px;
+    }
+  }
+}

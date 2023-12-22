@@ -1,0 +1,86 @@
+#!/bin/bash
+
+function help_text {
+ printf "ppdb [options]:\n\tdac - drop and create database\n"
+ printf "\tpopulate - populate proxyprint database\n"
+ printf "\tusers - select * from all users tables\n\n"
+}
+
+if [ -z $1 ]; then
+ help_text
+elif [ $1 == "dac" ]; then
+ sudo dropdb -h localhost -p 5432 -U postgres proxyprint
+ sudo createdb -h localhost -p 5432 -U postgres proxyprint
+elif [ $1 == "populate" ]; then
+ # admin
+ sudo psql -U postgres -H  -d proxyprint -c "insert into users values(1000,1234,'master');";
+ sudo psql -U postgres -H  -d proxyprint -c "insert into roles values(1000,'ROLE_ADMIN');";
+ sudo psql -U postgres -H  -d proxyprint -c "insert into admin values('danielcaldas@sapo.pt',1000);";
+ # consumer
+ sudo psql -U postgres -H  -d proxyprint -c "insert into users values(1001,1234,'joao');"
+ sudo psql -U postgres -H  -d proxyprint -c "insert into roles values(1001,'ROLE_USER');"
+ sudo psql -U postgres -H  -d proxyprint -c "insert into consumers values('joao@gmail.com', '41.5594', '8.3972', 'João dos Santos', 1001);" # latitude and longitude locate Braga, UM
+ #printshop
+ sudo psql -U postgres -H  -d proxyprint -c "insert into printshops values(100,'Rua Nova de Santa Cruz, n 49, Braga', 0, '41.5594', 'logo', '8.3972', 'Video Norte', '123444378');"
+ # manager
+ sudo psql -U postgres -H  -d proxyprint -c "insert into users values(1002,1234,'joaquim');"
+ sudo psql -U postgres -H  -d proxyprint -c "insert into roles values(1002,'ROLE_MANAGER');"
+ sudo psql -U postgres -H  -d proxyprint -c "insert into managers values('joaquim@gmail.com', 'Joaquim Pereira', 1002, 100);"
+ # employee
+ sudo psql -U postgres -H  -d proxyprint -c "insert into users values(1003,1234,'mafalda');"
+ sudo psql -U postgres -H  -d proxyprint -c "insert into employees values('Mafalda Sofia Pinto', 1003);"
+ sudo psql -U postgres -H  -d proxyprint -c "insert into roles values(1003,'ROLE_EMPLOYEE');"
+
+ #register request
+ sudo psql -U postgres -H  -d proxyprint -c "insert into register_requests values(200, false, 'danielcaldas@sapo.pt', 'Ana Pinto', '1234', 'Rua das Cruzes n20', '2016-04-25 21:22', '', '43.221', '41.121', '124555321', 'Printer Style');"
+
+ # pricetable
+ # bw+a4
+ sudo psql -U postgres -H  -d proxyprint -c "insert into pricetables values(100,0.10,'BW,A4,SIMPLEX,1,20');"
+ sudo psql -U postgres -H  -d proxyprint -c "insert into pricetables values(100,0.08,'BW,A4,SIMPLEX,21,50');"
+ sudo psql -U postgres -H  -d proxyprint -c "insert into pricetables values(100,0.06,'BW,A4,SIMPLEX,51,100');"
+ sudo psql -U postgres -H  -d proxyprint -c "insert into pricetables values(100,0.19,'BW,A4,DUPLEX,1,20');"
+ sudo psql -U postgres -H  -d proxyprint -c "insert into pricetables values(100,0.15,'BW,A4,DUPLEX,21,50');"
+ sudo psql -U postgres -H  -d proxyprint -c "insert into pricetables values(100,0.11,'BW,A4,DUPLEX,51,100');"
+ # bw+a3
+ sudo psql -U postgres -H  -d proxyprint -c "insert into pricetables values(100,0.18,'BW,A3,SIMPLEX,1,20');"
+ sudo psql -U postgres -H  -d proxyprint -c "insert into pricetables values(100,0.16,'BW,A3,SIMPLEX,21,50');"
+ sudo psql -U postgres -H  -d proxyprint -c "insert into pricetables values(100,0.14,'BW,A3,SIMPLEX,51,100');"
+ sudo psql -U postgres -H  -d proxyprint -c "insert into pricetables values(100,0.35,'BW,A3,DUPLEX,1,20');"
+ sudo psql -U postgres -H  -d proxyprint -c "insert into pricetables values(100,0.31,'BW,A3,DUPLEX,21,50');"
+ sudo psql -U postgres -H  -d proxyprint -c "insert into pricetables values(100,0.27,'BW,A3,DUPLEX,51,100');"
+ # color+a4
+ sudo psql -U postgres -H  -d proxyprint -c "insert into pricetables values(100,0.75,'COLOR,A4,SIMPLEX,1,5');"
+ sudo psql -U postgres -H  -d proxyprint -c "insert into pricetables values(100,0.60,'COLOR,A4,SIMPLEX,6,20');"
+ sudo psql -U postgres -H  -d proxyprint -c "insert into pricetables values(100,0.50,'COLOR,A4,SIMPLEX,21,50');"
+ sudo psql -U postgres -H  -d proxyprint -c "insert into pricetables values(100,1.49,'COLOR,A4,DUPLEX,1,5');"
+ sudo psql -U postgres -H  -d proxyprint -c "insert into pricetables values(100,1.19,'COLOR,A4,DUPLEX,6,20');"
+ sudo psql -U postgres -H  -d proxyprint -c "insert into pricetables values(100,0.99,'COLOR,A4,DUPLEX,21,50');"
+ # color+a3
+ sudo psql -U postgres -H  -d proxyprint -c "insert into pricetables values(100,1.40,'COLOR,A3,SIMPLEX,1,5');"
+ sudo psql -U postgres -H  -d proxyprint -c "insert into pricetables values(100,1.10,'COLOR,A3,SIMPLEX,6,20');"
+ sudo psql -U postgres -H  -d proxyprint -c "insert into pricetables values(100,0.95,'COLOR,A3,SIMPLEX,21,50');"
+ sudo psql -U postgres -H  -d proxyprint -c "insert into pricetables values(100,2.79,'COLOR,A3,DUPLEX,1,5');"
+ sudo psql -U postgres -H  -d proxyprint -c "insert into pricetables values(100,2.19,'COLOR,A3,DUPLEX,6,20');"
+ sudo psql -U postgres -H  -d proxyprint -c "insert into pricetables values(100,1.89,'COLOR,A3,DUPLEX,21,50');"
+
+ # to be continued... requests etc. ...
+elif [ $1 == "users" ]; then
+ # see user in the db
+ printf "ADMIN\n"
+ sudo psql -U postgres -H -d proxyprint -c "select * from admin;"
+ printf "CONSUMERS\n"
+ sudo psql -U postgres -H -d proxyprint -c "select * from consumers;"
+ printf "MANAGERS\n";
+ sudo psql -U postgres -H -d proxyprint -c "select * from managers;"
+ printf "EMPLOYESS\n";
+ sudo psql -U postgres -H -d proxyprint -c "select * from employees;"
+ printf "USERS\n";
+ sudo psql -U postgres -H -d proxyprint -c "select * from users;"
+elif [ $1 == "psrequests" ]; then
+ #see print shop's requests
+ sudo psql -U postgres -H -d proxyprint -c "select * from register_requests;"
+elif [ $1 == "--help" ]; then
+ #help
+ help_text
+fi

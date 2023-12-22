@@ -1,0 +1,87 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "required": [
+    "time",
+    "user",
+    "type"
+  ],
+  "properties": {
+    "time": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "user": {
+      "$ref": "user.json"
+    },
+    "type": {
+      "type": "string"
+    }
+  },
+  "oneOf": [
+    {
+      "$ref": "#/definitions/self-activity"
+    },
+    {
+      "$ref": "#/definitions/group-activity"
+    },
+    {
+      "$ref": "#/definitions/track-activity"
+    },
+    {
+      "$ref": "#/definitions/user-activity"
+    }
+  ],
+  "definitions": {
+    "group-activity": {
+      "properties": {
+        "group": {
+          "$ref": "group.json#"
+        },
+        "type": {
+          "enum": [
+            "CREATED_GROUP",
+            "CHANGED_GROUP",
+            "JOINED_GROUP",
+            "LEFT_GROUP",
+            "DELETED_GROUP"
+          ]
+        }
+      }
+    },
+    "track-activity": {
+      "properties": {
+        "track": {
+          "$ref": "track-reference.json"
+        },
+        "type": {
+          "enum": [
+            "CREATED_TRACK"
+          ]
+        }
+      }
+    },
+    "user-activity": {
+      "properties": {
+        "other": {
+          "$ref": "user.json#"
+        },
+        "type": {
+          "enum": [
+            "FRIENDED_USER",
+            "UNFRIENDED_USER"
+          ]
+        }
+      }
+    },
+    "self-activity": {
+      "properties": {
+        "type": {
+          "enum": [
+            "CHANGED_PROFILE"
+          ]
+        }
+      }
+    }
+  }
+}

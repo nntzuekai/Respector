@@ -1,0 +1,59 @@
+databaseChangeLog:
+  - changeSet:
+      id: 3.20.0
+      author: GraviteeSource Team
+      changes:
+        # ################
+        # Apis v4 Changes
+        # ################
+        - createTable:
+            tableName: ${gravitee_prefix}flow_selector_channel_entrypoints
+            columns:
+              - column: { name: flow_id, type: nvarchar(64), constraints: { nullable: false } }
+              - column: { name: channel_entrypoint, type: nvarchar(32), constraints: { nullable: false } }
+        - addPrimaryKey:
+            constraintName: pk_${gravitee_prefix}flow_selector_channel_entrypoints
+            columnNames: flow_id, channel_entrypoint
+            tableName: ${gravitee_prefix}flow_selector_channel_entrypoints
+        - addColumn:
+            tableName: ${gravitee_prefix}flow_steps
+            columns:
+              - column:
+                  name: message_condition
+                  type: nvarchar(256)
+                  constraints:
+                    nullable: true
+        - modifyDataType:
+            tableName: ${gravitee_prefix}flow_steps
+            columnName: condition
+            newDataType: nvarchar(256)
+        # ################
+        # Subscriptions Changes
+        # ################
+        - dropColumn:
+            tableName: ${gravitee_prefix}subscriptions
+            columnName:  filter
+        - createTable:
+            tableName: ${gravitee_prefix}subscriptions_metadata
+            columns:
+              - column: {name: subscription_id, type: nvarchar(64), constraints: { nullable: false } }
+              - column: {name: k, type: nvarchar(128), constraints: { nullable: false } }
+              - column: {name: v, type: nvarchar(4000), constraints: { nullable: false } }
+        - addColumn:
+            tableName: ${gravitee_prefix}subscriptions
+            columns:
+              - column:
+                  name: consumer_status
+                  type: nvarchar(64)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: consumer_paused_at
+                  type: timestamp(6)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: failure_cause
+                  type: nvarchar(256)
+                  constraints:
+                    nullable: true

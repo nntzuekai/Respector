@@ -1,0 +1,17 @@
+timezone: UTC
+
++algorithms:
+  +try:
+    _parallel: true
+    +zlib:
+      py>: tasks.conditions.Algorithm.zlib
+    +gzip:
+      py>: tasks.conditions.Algorithm.deflate
+    +bzip2:
+      py>: tasks.conditions.Algorithm.bzip2
+  +decide:
+    py>: tasks.conditions.Algorithm.decide_algorithm
+
++show:
+  py>: tasks.conditions.show_algorithm
+

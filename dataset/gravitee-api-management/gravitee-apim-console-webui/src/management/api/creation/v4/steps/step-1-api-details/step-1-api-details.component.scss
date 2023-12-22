@@ -1,0 +1,14 @@
+@use '@angular/material' as mat;
+@use '@gravitee/ui-particles-angular' as gio;
+
+.step-1-api-details {
+  &__row {
+    display: flex;
+    flex-direction: row;
+    gap: 45px;
+
+    :first-child {
+      flex-grow: 1;
+    }
+  }
+}

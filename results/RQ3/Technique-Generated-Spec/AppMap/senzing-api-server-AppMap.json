@@ -1,0 +1,237 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "My project",
+    "version": "v1"
+  },
+  "paths": {
+    "/": {
+      "get": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/data-sources": {
+      "post": {
+        "responses": {
+          "403": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/data-sources/CUSTOMERS/records": {
+      "post": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "OK"
+          },
+          "400": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "Bad Request"
+          },
+          "403": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/data-sources/CUSTOMERS/records/XYZ456": {
+      "put": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "OK"
+          },
+          "400": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "Bad Request"
+          },
+          "403": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/data-sources/WATCHLIST/records": {
+      "post": {
+        "responses": {
+          "403": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/data-sources/WATCHLIST/records/XYZ456": {
+      "put": {
+        "responses": {
+          "403": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/heartbeat": {
+      "get": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/license": {
+      "get": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "name": "withRaw",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/version": {
+      "get": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "name": "withRaw",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/why/entities": {
+      "get": {
+        "responses": {
+          "400": {
+            "content": {
+              "application/json": {}
+            },
+            "description": "Bad Request"
+          }
+        },
+        "parameters": [
+          {
+            "name": "detailLevel",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "entity1",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "entity2",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "featureMode",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "forceMinimal",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "withFeatureStats",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "withInternalFeatures",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "withRaw",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "withRelationships",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "components": {}
+}
