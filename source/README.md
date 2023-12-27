@@ -29,7 +29,7 @@ export Z3_HOME=<path to the clone repo>
 
 # How to compile Respector?
 
-1. Specify the path to the Java binding of `Z3` on line 51 in pom.xml. You are supposed to provide `Z3_HOME/build/com.microsoft.z3.jar` as the `<systemPath>` to the Maven dependency of `Z3`.
+1. Specify the path to the Java binding of `Z3` on line 51 in pom.xml. You are supposed to provide `$Z3_HOME/build/com.microsoft.z3.jar` as the `<systemPath>` to the Maven dependency of `Z3`.
 
 2. You might have installed some version of Soot in your Maven local repo. Try to delete folder `~/.m2/repository/org/soot-oss/`, otherwise it is using the Soot there instead of the version we provided in `./lib/local_repo/`.
 
@@ -54,7 +54,7 @@ The complied Jar of Respector would be available in target folder. (Pre-compiled
 2. To run Respector on an API, use script `run_respector.sh` under `scripts` folder:
 
    ```
-   bash ./scripts/run_respector.sh <Z3_HOME> [<path to API class files>] ...  <path to the generated OAS>
+   bash ./scripts/run_respector.sh <path to API class files>...  <path to the generated OAS>
    ```
 
    `<path to API class files>`: You can provide one or more directories containing relevant class files of the API, including class files of the libraries it uses. You can specify multiple paths as different arguments. The last argument is considered as the path to output the generated specification.
@@ -67,7 +67,7 @@ The complied Jar of Respector would be available in target folder. (Pre-compiled
    ***NOTE: This will take 5.5 hours in total.***
 
    ```
-   bash ./scripts/run_all.sh ./generated/ <Z3_HOME> ../dataset/
+   bash ./scripts/run_all.sh ./generated/ ../dataset/
    ```
 
 We have attached the generated specifications in `./generated/` folder. 
@@ -91,7 +91,7 @@ The compiled class files would be under `../dataset/senzing-api-server/target/cl
 Run Respector on these class files:
 
    ```
-   bash ./scripts/run_respector.sh <Z3_HOME> ../dataset/senzing-api-server/target/classes ./generated/senzing.json
+   bash ./scripts/run_respector.sh ../dataset/senzing-api-server/target/classes ./generated/senzing.json
    ```
 
 It will take around 30 minutes to finish. While executing, Respector will print out how many endpoints it has processed:
