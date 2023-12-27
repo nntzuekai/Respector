@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ -z "$JAVA8_HOME" ]; then
-    echo "JAVA8_HOME is not set. Exiting the script."
+    echo "JAVA8_HOME is not set (usually /usr/lib/jvm/java-8-openjdk-amd64/). Exiting the script."
     exit 1
 else
     echo "JAVA8_HOME is set to $JAVA8_HOME"

@@ -6,7 +6,13 @@
 
 ## Pre-built Z3
 
-For your convenience, we attached the pre-built binary of the version of Z3 we used for Respector. You can decompress `z3.zip` under this folder and the root directory of the extracted folder as `Z3_HOME` to other scripts.
+For your convenience, we provided the pre-built binary of the version of Z3 we used for Respector: [z3.zip](). You can download and decompress `z3.zip`.
+
+You can set the root folder of the extracted files as `Z3_HOME` to other scripts with the following command.
+
+```
+export Z3_HOME=<path to the clone repo>
+```
 
 This binary of Z3 was built on Ubuntu 20.04 on AMD64 machine with Java 11.
 
@@ -16,7 +22,7 @@ Clone Z3 from https://github.com/Z3Prover/z3
 
 We used the version of Z3 with commit ID `23c53c6820b2d0c786dc416dab9a50473a7bbde3`.
 
-Inside the folder of cloned Z3, execute:
+Inside the folder of cloned Z3, execute the following commands to build Z3 and set the environment variable `Z3_HOME` for other scripts.
 
 
 ```
@@ -115,3 +121,6 @@ Its enhanced OAS can be found on line 4399:
 `x-endpoint-interdependence` section starts from line 5309:
 
 ![](./documentation/screenshot_interdependence.png)
+
+# Troubleshooting
+Please refer to `TROUBLESHOOTING.md`.

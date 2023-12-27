@@ -22,7 +22,7 @@ We believe our artifact deserves the Artifacts Reusable badge because the materi
 
 This replication package, including all the above listed artifacts, is achieved on Software Heritage, along with a copy of the paper's prepint: [link to the repository](https://archive.softwareheritage.org/browse/origin/https://github.com/nntzuekai/Respector).
 
-Additionally, we also created a VirtualBox VM image of a working environment of the artifacts, which is uploaded to Zenodo: [insert link]().
+Additionally, we also created a VirtualBox VM image of a working environment of the artifacts, which is uploaded to Zenodo: [Respector.ova](). To facilitate installing Respector locally, this Zenodo upload also includes a pre-built copy of the version of Z3 that we used for Respector: [z3.zip]().
 
 <!-- # Data -->
 

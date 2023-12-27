@@ -1,5 +1,6 @@
 This directory containts the source code of 15 Java REST APIs used for evaluating Respector:
 
+```
 digdag
 enviroCar
 features-service
@@ -7,7 +8,6 @@ gravitee
 kafka
 cassandra
 senzing
-ur-codebin
 catwatch
 cwa
 ocvn
@@ -15,11 +15,28 @@ ohsome
 proxyprint
 quartz
 restcountries
-
+ur-codebin
+```
 
 # Build Instruction
 
 The following are instructions on how to build the services and find their class files. Commands should be executed in the root directory of each service. The JDK version is **Java 11** unless specified otherwise.
+
+## Build all
+
+Run `build_all.sh` to build all 15 APIs. It requires that the default JDK version is Java 11 (run `java -version` and `javac -version` to check), and the environment variable `JAVA8_HOME` set to the folder of Java 8 JDK (usually `/usr/lib/jvm/java-8-openjdk-amd64/` on Ubuntu).
+
+```
+bash build_all.sh
+```
+
+## Clean all
+
+Run `clean_all.sh` to clean all APIs builds.
+
+```
+bash clean_all.sh
+```
 
 ## Cassandra
 
