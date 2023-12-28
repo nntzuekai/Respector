@@ -2,6 +2,9 @@
 # Dependencies
 
 - Install Java 11.
+- Install Java 8.
+- Install Maven.
+- Install Gradle.
 - Install Z3 (following pre-built Z3 instruction below)
 
 ## Pre-built Z3
@@ -48,13 +51,13 @@ The complied Jar of Respector would be available in target folder. (Pre-compiled
 
 # How to run Respector?
 
-1. Following the instructions in the README file under the dataset folder, compile the APIs you want to evaluate on:
+1. Following the instructions in the README file under the `dataset` folder, compile the APIs you want to evaluate on:
 
    E.g.,
 
    ```
    cd ../dataset/restcountries/
-   mvn compile
+   mvn package -DskipTests
    ```
 
 2. To run Respector on an API, use script `run_respector.sh` under `scripts` folder:

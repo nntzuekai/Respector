@@ -30,7 +30,11 @@ Additionally, we also created a VirtualBox VM image of a working environment of 
 
 You can either load our VM image to use the artifact directly, or set it up locally. We recommend the former.
 
-### Using the VM
+### Install Locally
+
+Please follow the instructions in `/source/README.md` for installing Respector locally on your host machine.
+
+### Use the VM
 
 Note: The virtual machine was created and tested using VirtualBox version 6.1 on Ubuntu 20.04. Make sure you have atleast 40 GB of free storage to download and execute the virtual machine.
 
@@ -52,8 +56,115 @@ When the machine boots up successfully you will see the screen as shown below.
 
 ![VM start screen](/documentation/VM.png)
 
-#### Username and password
+#### Username and Password
 
 Use the username `r` and password `12345` if you need to login or obtain the `sudo` privilege.
 
 ## Usage
+
+Open a termial window, change the working directory to `/home/r/AE`, and use `ls` command to confirm that folders `source`, `dataset` and `results` are in the directory:
+
+```
+cd /home/r/AE
+ls
+```
+
+![VM workding dir](/documentation/WD.png)
+
+### Example Use
+
+All the artifacts in the VM image have already been built and are ready for reproducing results. 
+
+To test if Respector is operational, you can run Respector on `restcountries` API to generate the specification. Under the `AE` folder, execute the following commands.
+
+```
+cd source
+bash ./scripts/run_respector.sh ../dataset/restcountries/target/classes/ ./generated/restcountries.json
+```
+
+This will take around 15 seconds to finish. While executing, Respector will print out how many endpoints it has processed:
+
+![example use](/documentation/example_use.png)
+
+Once it is done, you can find the generated OAS at `./generated/restcountries.json`.
+
+![restcountries OAS](/documentation/restcountries_OAS.png)
+
+### Replicate the results
+
+To run Respector on all the 15 APIs in the dataset, execute the following commands under `AE/source` folder.
+
+***NOTE: This will take 7 hours in total.***
+
+```
+bash ./scripts/run_all.sh ./generated/ ../dataset/
+```
+
+Respector will create generated specifications under `./generated` folder. We attached specifications generated on our host machine in `./generated_0/` folder. 
+
+***If you see your generated specification different from what we attacthed***: Usually that is a different ordering of endpoint methods and global variables, which depends on how Soot loads the class files. It is normal to have such differences when you are using a different Soot version (which should be avoided) or if you have recompiled the target classes. When you see the numbers are different, you can check the total number of lines in the generated specification. If it is the same as the total number of lines in the specification we attached, then it is just the ordering issue.
+
+
+
+#### Compile Respector
+
+Respector is **already compiled** in the VM image. If you wish to recompile it, execute the following commands under `AE/source` folder.
+
+```
+mvn package
+```
+
+The complied Jar of Respector would be available in target folder. (`target/Respector-0.1-SNAPSHOT.jar`)
+
+#### Compile APIs in the dataset
+
+The APIs in the dataset are **already compiled** in the VM image. If you wish to recompile them, execute the following commands under `AE/dataset` folder.
+
+***NOTE: It will take around 1 hour to compile all 15 APIs.***
+
+```
+bash clean_all.sh
+bash build_all.sh
+```
+
+#### Run Respector on an API
+
+You need to first build the API. For example, for the `Senzing` API described in the paper, execute the following commands under `AE/dataset/senzing-api-server`.
+
+```
+mvn compile
+```
+
+The compiled class files would be under `AE/dataset/senzing-api-server/target/classes`
+
+To run Respector on the API, execute the following command under `AE/source` directory:
+
+```
+bash ./scripts/run_respector.sh <path to API class files>...  <path to the generated OAS>
+```
+
+`<path to API class files>`: You can provide one or more directories containing relevant class files of the API, including class files of the libraries it uses. You can specify multiple paths as different arguments. The last argument is considered as the path to output the generated specification.
+
+For `Senzing` API, that would be:
+
+```
+bash ./scripts/run_respector.sh ../dataset/senzing-api-server/target/classes ./generated/senzing.json
+```
+
+It will take around 30 minutes to finish. Once it is done, you can find the generated OAS at `./generated/senzing.json`.
+
+The endpoint method we use in the motivating example in the paper, `GET /entity-networks` can be found on line 1549:
+
+![](./source/documentation/screenshot_endpoint.png)
+
+Its enhanced OAS can be found on line 4399:
+
+![](./source/documentation/screenshot_enhanced.png)
+
+`x-global-variables-info` section is from line 6178 on:
+
+![](./source/documentation/screenshot_global_var.png)
+
+`x-endpoint-interdependence` section starts from line 5309:
+
+![](./source/documentation/screenshot_interdependence.png)
