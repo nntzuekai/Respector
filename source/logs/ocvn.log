@@ -1,754 +1,753 @@
-+ java -Djava.library.path=/home/rkh/z3//build/ -cp ./target/Respector-0.1-SNAPSHOT.jar:/home/rkh/z3//build/com.microsoft.z3.jar org.rest.Respector.AppMain.Main ../dataset//ocvn/web/target/classes/ ./generated_1//ocvn.json
 [main] INFO org.rest.Respector.EndPointRecog.PreprocessFramework - The REST API uses Spring
 [main] INFO org.rest.Respector.AppMain.MainTransform - total # of endpoint methods detected: 136
-[main] INFO org.rest.Respector.AppMain.MainTransform - 1/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.CorruptionRiskDashboardTablesController: java.util.List corruptionRiskOverviewTable(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 2/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.excelchart.AverageTenderAndAwardsExcelController: void bidTimelineExcelChart(org.devgateway.ocds.web.rest.controller.request.LangYearFilterPagingRequest,javax.servlet.http.HttpServletResponse)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 3/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.excelchart.TenderPercentagesExcelController: void cancelledFundingPercentageExcelChart(org.devgateway.ocds.web.rest.controller.request.LangYearFilterPagingRequest,javax.servlet.http.HttpServletResponse)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 4/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.excelchart.TenderPercentagesExcelController: void numberCancelledFundingExcelChart(org.devgateway.ocds.web.rest.controller.request.LangYearFilterPagingRequest,javax.servlet.http.HttpServletResponse)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 5/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.excelchart.TenderPercentagesExcelController: void percentTendersUsingEBidExcelChart(org.devgateway.ocds.web.rest.controller.request.LangYearFilterPagingRequest,javax.servlet.http.HttpServletResponse)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 6/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.excelchart.TenderPercentagesExcelController: void numberTendersUsingEBidExcelChart(org.devgateway.ocds.web.rest.controller.request.LangYearFilterPagingRequest,javax.servlet.http.HttpServletResponse)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 7/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.excelchart.TenderPercentagesExcelController: void tendersWithLinkedProcurementPlanExcelChart(org.devgateway.ocds.web.rest.controller.request.LangYearFilterPagingRequest,javax.servlet.http.HttpServletResponse)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 8/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.excelchart.ProcurementActivityByYearController: void procurementActivityExcelChart(org.devgateway.ocds.web.rest.controller.request.LangYearFilterPagingRequest,javax.servlet.http.HttpServletResponse)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 9/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.excelchart.AverageNumberOfTenderersExcelController: void averageNumberBidsExcelChart(org.devgateway.ocds.web.rest.controller.request.LangYearFilterPagingRequest,javax.servlet.http.HttpServletResponse)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 10/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.excelchart.CostEffectivenessExcelController: void costEffectivenessExcelChart(org.devgateway.ocds.web.rest.controller.request.LangGroupingFilterPagingRequest,javax.servlet.http.HttpServletResponse)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 11/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.excelchart.TendersByItemExcelController: void numberOfTendersByItemExcelChart(org.devgateway.ocds.web.rest.controller.request.LangYearFilterPagingRequest,javax.servlet.http.HttpServletResponse)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 12/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.excelchart.TenderPriceExcelController: void bidSelectionExcelChart(org.devgateway.ocds.web.rest.controller.request.LangYearFilterPagingRequest,javax.servlet.http.HttpServletResponse)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 13/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.excelchart.TenderPriceExcelController: void procurementMethodExcelChart(org.devgateway.ocds.web.rest.controller.request.LangYearFilterPagingRequest,javax.servlet.http.HttpServletResponse)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 14/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.excelchart.TotalCancelledTendersExcelController: void cancelledFundingExcelChart(org.devgateway.ocds.web.rest.controller.request.LangYearFilterPagingRequest,javax.servlet.http.HttpServletResponse)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 15/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.excelchart.TotalCancelledTendersExcelController: void cancelledTendersByYearByRationaleExcelChart(org.devgateway.ocds.web.rest.controller.request.LangYearFilterPagingRequest,javax.servlet.http.HttpServletResponse)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 16/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.FrequentTenderersController: java.util.List frequentTenderers(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 17/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.FrequentTenderersController: java.util.List activeAwardsCount(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 18/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.LocationInfowindowController: java.util.List tendersByLocation(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 19/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.LocationInfowindowController: java.util.List planningByLocation(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 20/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.LocationInfowindowController: java.util.List awardsByLocation(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 21/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.UserDashboardRestController: org.springframework.http.ResponseEntity getDefaultDashboardForCurrentUser(org.springframework.data.rest.webmvc.PersistentEntityResourceAssembler)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 22/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.UserDashboardRestController: org.springframework.http.ResponseEntity getCurrentAuthenticatedUserDetails(org.springframework.data.rest.webmvc.PersistentEntityResourceAssembler)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 23/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.UserDashboardRestController: org.springframework.hateoas.PagedResources getDashboardsForCurrentUser(org.springframework.data.domain.Pageable,org.springframework.data.rest.webmvc.PersistentEntityResourceAssembler)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 24/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.UserDashboardRestController: org.springframework.http.ResponseEntity saveDashboardForCurrentUser(org.devgateway.ocds.persistence.dao.UserDashboard)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 25/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.UserDashboardRestController: org.springframework.http.ResponseEntity saveDashboard(org.devgateway.ocds.persistence.dao.UserDashboard)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 26/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.TenderPercentagesController: java.util.List percentTendersCancelled(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 27/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.TenderPercentagesController: java.util.List percentTendersWithTwoOrMoreTenderers(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 28/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.TenderPercentagesController: java.util.List percentTendersAwarded(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 29/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.TenderPercentagesController: java.util.List percentTendersUsingEBid(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 30/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.TenderPercentagesController: java.util.List percentTendersUsingEgp(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 31/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.TenderPercentagesController: java.util.List percentTendersWithLinkedProcurementPlan(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 32/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.TenderPercentagesController: java.util.List avgTimeFromPlanToTenderPhase(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 33/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.OcdsController: org.devgateway.ocds.persistence.mongo.Release ocdsByProjectId(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 1/136 analyzing endpoint method <org.devgateway.toolkit.web.rest.controller.DummyController: org.devgateway.toolkit.web.rest.entity.Dummy greeting(java.lang.String)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 34/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.OcdsController: org.devgateway.ocds.persistence.mongo.Release ocdsByPlanningBidNo(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 2/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.selector.TendersAwardsValueIntervals: java.util.List tenderValueInterval(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 3/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.selector.TendersAwardsValueIntervals: java.util.List awardValueInterval(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 4/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.selector.SupplierSearchController: org.devgateway.ocds.persistence.mongo.Organization byId(java.lang.String)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 35/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.OcdsController: org.devgateway.ocds.persistence.mongo.Release ocdsByOcid(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 5/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.selector.SupplierSearchController: java.util.List searchText(org.devgateway.ocds.web.rest.controller.request.TextSearchRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 6/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.selector.ProcuringEntitySearchController: org.devgateway.ocds.persistence.mongo.Organization byId(java.lang.String)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 36/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.OcdsController: org.devgateway.ocds.persistence.mongo.ReleasePackage ocdsPackageByOcid(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 7/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.selector.ProcuringEntitySearchController: java.util.List searchText(org.devgateway.ocds.web.rest.controller.request.TextSearchRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 8/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.selector.ProcurementMethodSearchController: java.util.List procurementMethods()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 9/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.selector.OrganizationSearchController: org.devgateway.ocds.persistence.mongo.Organization byId(java.lang.String)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 37/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.OcdsController: org.devgateway.ocds.persistence.mongo.ReleasePackage packagedReleaseByPlanningBidNo(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 10/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.selector.OrganizationSearchController: java.util.List byIdCollection(org.devgateway.ocds.web.rest.controller.request.OrganizationIdWrapper)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 11/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.selector.OrganizationSearchController: java.util.List searchText(org.devgateway.ocds.web.rest.controller.request.TextSearchRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 12/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.selector.OrgGroupSearchController: java.util.List orgGroups()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 13/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.selector.OrgGroupSearchController: java.util.List groupsSearch(org.devgateway.ocds.web.rest.controller.request.TextSearchRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 14/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.selector.OrgDepartmentSearchController: java.util.List orgDepartments()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 15/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.selector.OrgDepartmentSearchController: java.util.List departmentSearch(org.devgateway.ocds.web.rest.controller.request.TextSearchRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 16/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.selector.LocationSearchController: java.util.List locationsAll()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 17/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.selector.LocationSearchController: java.util.List locationsSearch(org.devgateway.ocds.web.rest.controller.request.TextSearchRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 18/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.selector.ContrMethodSearchController: java.util.List contrMethods()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 19/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.selector.CitySearchController: java.util.List orgCities()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 20/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.selector.CitySearchController: java.util.List citiesSearch(org.devgateway.ocds.web.rest.controller.request.TextSearchRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 21/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.selector.BuyerSearchController: org.devgateway.ocds.persistence.mongo.Organization byId(java.lang.String)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 38/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.OcdsController: org.devgateway.ocds.persistence.mongo.ReleasePackage packagedReleaseByProjectId(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 22/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.selector.BuyerSearchController: java.util.List searchText(org.devgateway.ocds.web.rest.controller.request.TextSearchRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 23/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.selector.BidTypesSearchController: java.util.List bidTypes()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 24/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.selector.BidSelectionMethodSearchController: java.util.List bidSelectionMethods()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 25/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.vietnam.FlagI003StatsController: java.util.List flagStats(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 26/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.vietnam.FlagI003ReleaseSearchController: java.util.List releaseFlagSearch(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 27/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.crosstab.FlagI180CrosstabController: java.util.List flagStats(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 28/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.crosstab.FlagI171CrosstabController: java.util.List flagStats(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 29/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.crosstab.FlagI085CrosstabController: java.util.List flagStats(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 30/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.crosstab.FlagI077CrosstabController: java.util.List flagStats(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 31/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.crosstab.FlagI038CrosstabController: java.util.List flagStats(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 32/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.crosstab.FlagI019CrosstabController: java.util.List flagStats(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 33/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.crosstab.FlagI007CrosstabController: java.util.List flagStats(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 34/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.crosstab.FlagI004CrosstabController: java.util.List flagStats(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 35/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.crosstab.FlagI003CrosstabController: java.util.List flagStats(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 36/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.crosstab.FlagI002CrosstabController: java.util.List flagStats(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 37/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.IndicatorsTypesMappingController: org.devgateway.ocds.persistence.mongo.flags.ReleaseFlags indicatorTypesMapping()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 38/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.FlagI180StatsController: java.util.List flagStats(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 39/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.FlagI180ReleaseSearchController: java.util.List releaseFlagSearch(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 40/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.FlagI171StatsController: java.util.List flagStats(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 41/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.FlagI171ReleaseSearchController: java.util.List releaseFlagSearch(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 42/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.FlagI085StatsController: java.util.List flagStats(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 43/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.FlagI085ReleaseSearchController: java.util.List releaseFlagSearch(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 44/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.FlagI077StatsController: java.util.List flagStats(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 45/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.FlagI077ReleaseSearchController: java.util.List releaseFlagSearch(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 46/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.FlagI038StatsController: java.util.List flagStats(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 47/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.FlagI038ReleaseSearchController: java.util.List releaseFlagSearch(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 48/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.FlagI019StatsController: java.util.List flagStats(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 49/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.FlagI019ReleaseSearchController: java.util.List releaseFlagSearch(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 50/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.FlagI007StatsController: java.util.List flagStats(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 51/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.FlagI007ReleaseSearchController: java.util.List releaseFlagSearch(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 52/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.FlagI004StatsController: java.util.List flagStats(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 53/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.FlagI004ReleaseSearchController: java.util.List releaseFlagSearch(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 54/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.FlagI002StatsController: java.util.List flagStats(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 55/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.FlagI002ReleaseSearchController: java.util.List releaseFlagSearch(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 56/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.export.ExcelExportController: void excelExport(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 57/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.excelchart.TotalCancelledTendersExcelController: void cancelledFundingExcelChart(org.devgateway.ocds.web.rest.controller.request.LangYearFilterPagingRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 58/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.excelchart.TotalCancelledTendersExcelController: void cancelledTendersByYearByRationaleExcelChart(org.devgateway.ocds.web.rest.controller.request.LangYearFilterPagingRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 59/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.excelchart.TendersByItemExcelController: void numberOfTendersByItemExcelChart(org.devgateway.ocds.web.rest.controller.request.LangYearFilterPagingRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 60/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.excelchart.TenderPriceExcelController: void bidSelectionExcelChart(org.devgateway.ocds.web.rest.controller.request.LangYearFilterPagingRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 61/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.excelchart.TenderPriceExcelController: void procurementMethodExcelChart(org.devgateway.ocds.web.rest.controller.request.LangYearFilterPagingRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 62/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.excelchart.TenderPercentagesExcelController: void cancelledFundingPercentageExcelChart(org.devgateway.ocds.web.rest.controller.request.LangYearFilterPagingRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 63/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.excelchart.TenderPercentagesExcelController: void numberCancelledFundingExcelChart(org.devgateway.ocds.web.rest.controller.request.LangYearFilterPagingRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 64/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.excelchart.TenderPercentagesExcelController: void percentTendersUsingEBidExcelChart(org.devgateway.ocds.web.rest.controller.request.LangYearFilterPagingRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 65/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.excelchart.TenderPercentagesExcelController: void numberTendersUsingEBidExcelChart(org.devgateway.ocds.web.rest.controller.request.LangYearFilterPagingRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 66/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.excelchart.TenderPercentagesExcelController: void tendersWithLinkedProcurementPlanExcelChart(org.devgateway.ocds.web.rest.controller.request.LangYearFilterPagingRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 67/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.excelchart.ProcurementActivityByYearController: void procurementActivityExcelChart(org.devgateway.ocds.web.rest.controller.request.LangYearFilterPagingRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 68/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.excelchart.CostEffectivenessExcelController: void costEffectivenessExcelChart(org.devgateway.ocds.web.rest.controller.request.LangGroupingFilterPagingRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 69/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.excelchart.AverageTenderAndAwardsExcelController: void bidTimelineExcelChart(org.devgateway.ocds.web.rest.controller.request.LangYearFilterPagingRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 70/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.excelchart.AverageNumberOfTenderersExcelController: void averageNumberBidsExcelChart(org.devgateway.ocds.web.rest.controller.request.LangYearFilterPagingRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 71/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.UserDashboardRestController: org.springframework.http.ResponseEntity getDefaultDashboardForCurrentUser(org.springframework.data.rest.webmvc.PersistentEntityResourceAssembler)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 72/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.UserDashboardRestController: org.springframework.http.ResponseEntity getCurrentAuthenticatedUserDetails(org.springframework.data.rest.webmvc.PersistentEntityResourceAssembler)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 73/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.UserDashboardRestController: org.springframework.hateoas.PagedResources getDashboardsForCurrentUser(org.springframework.data.domain.Pageable,org.springframework.data.rest.webmvc.PersistentEntityResourceAssembler)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 74/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.UserDashboardRestController: org.springframework.http.ResponseEntity saveDashboardForCurrentUser(org.devgateway.ocds.persistence.dao.UserDashboard)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 75/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.UserDashboardRestController: org.springframework.http.ResponseEntity saveDashboard(org.devgateway.ocds.persistence.dao.UserDashboard)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 76/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.TranslationController: java.util.Map translations(javax.servlet.http.HttpServletResponse,java.lang.String)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 39/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.OcdsController: java.util.List ocdsReleases(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 77/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.TotalCancelledTendersByYearController: java.util.List totalCancelledTendersByYear(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 40/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.OcdsController: java.util.List ocdsPackages(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 78/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.TotalCancelledTendersByYearController: java.util.List totalCancelledTendersByYearByRationale(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 41/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.AverageNumberOfTenderersController: java.util.List averageNumberOfTenderers(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 79/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.TopTenController: java.util.List topTenLargestAwards(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 42/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.TenderPriceByTypeYearController: java.util.List tenderPriceByProcurementMethod(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 80/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.TopTenController: java.util.List topTenLargestTenders(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 43/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.TenderPriceByTypeYearController: java.util.List tenderPriceByBidSelectionMethod(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 81/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.TopTenController: java.util.List topTenLargestSuppliers(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 44/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.TenderPriceByTypeYearController: java.util.List tenderPriceByAllBidSelectionMethods(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 82/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.TendersByItemClassification: java.util.List tendersByItemClassification(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 45/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.CountPlansTendersAwardsController: java.util.List countTendersByYear(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 83/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.TendersAwardsYears: java.util.List tendersAwardsYears()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 84/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.TenderPriceByTypeYearController: java.util.List tenderPriceByProcurementMethod(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 46/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.CountPlansTendersAwardsController: java.util.List countAwardsByYear(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 85/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.TenderPriceByTypeYearController: java.util.List tenderPriceByBidSelectionMethod(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 47/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.CountPlansTendersAwardsController: java.util.List countBidPlansByYear(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 86/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.TenderPriceByTypeYearController: java.util.List tenderPriceByAllBidSelectionMethods(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 48/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.selector.CitySearchController: java.util.List orgCities()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 87/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.TenderPercentagesController: java.util.List percentTendersCancelled(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 49/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.selector.CitySearchController: java.util.List citiesSearch(org.devgateway.ocds.web.rest.controller.request.TextSearchRequest)>
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 88/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.TenderPercentagesController: java.util.List percentTendersWithTwoOrMoreTenderers(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 50/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.selector.ProcuringEntitySearchController: org.devgateway.ocds.persistence.mongo.Organization byId(java.lang.String)>
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 89/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.TenderPercentagesController: java.util.List percentTendersAwarded(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 90/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.TenderPercentagesController: java.util.List percentTendersUsingEBid(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 91/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.TenderPercentagesController: java.util.List percentTendersUsingEgp(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 92/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.TenderPercentagesController: java.util.List percentTendersWithLinkedProcurementPlan(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 93/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.TenderPercentagesController: java.util.List avgTimeFromPlanToTenderPhase(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 94/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.PercentageAwardsNarrowPublicationDates: java.util.List percentageAwardsNarrowPublicationDates(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 95/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.OcdsController: org.devgateway.ocds.persistence.mongo.Release ocdsByProjectId(java.lang.String)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 51/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.selector.ProcuringEntitySearchController: java.util.List searchText(org.devgateway.ocds.web.rest.controller.request.TextSearchRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 52/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.selector.BuyerSearchController: org.devgateway.ocds.persistence.mongo.Organization byId(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 96/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.OcdsController: org.devgateway.ocds.persistence.mongo.Release ocdsByPlanningBidNo(java.lang.String)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 53/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.selector.BuyerSearchController: java.util.List searchText(org.devgateway.ocds.web.rest.controller.request.TextSearchRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 54/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.selector.ContrMethodSearchController: java.util.List contrMethods()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 55/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.selector.BidTypesSearchController: java.util.List bidTypes()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 56/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.selector.OrgGroupSearchController: java.util.List orgGroups()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 57/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.selector.OrgGroupSearchController: java.util.List groupsSearch(org.devgateway.ocds.web.rest.controller.request.TextSearchRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 58/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.selector.OrgDepartmentSearchController: java.util.List orgDepartments()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 59/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.selector.OrgDepartmentSearchController: java.util.List departmentSearch(org.devgateway.ocds.web.rest.controller.request.TextSearchRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 60/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.selector.BidSelectionMethodSearchController: java.util.List bidSelectionMethods()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 61/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.selector.ProcurementMethodSearchController: java.util.List procurementMethods()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 62/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.selector.LocationSearchController: java.util.List locationsAll()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 63/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.selector.LocationSearchController: java.util.List locationsSearch(org.devgateway.ocds.web.rest.controller.request.TextSearchRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 64/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.selector.OrganizationSearchController: org.devgateway.ocds.persistence.mongo.Organization byId(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 97/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.OcdsController: org.devgateway.ocds.persistence.mongo.Release ocdsByOcid(java.lang.String)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 65/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.selector.OrganizationSearchController: java.util.List byIdCollection(org.devgateway.ocds.web.rest.controller.request.OrganizationIdWrapper)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 66/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.selector.OrganizationSearchController: java.util.List searchText(org.devgateway.ocds.web.rest.controller.request.TextSearchRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 67/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.selector.TendersAwardsValueIntervals: java.util.List tenderValueInterval(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 68/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.selector.TendersAwardsValueIntervals: java.util.List awardValueInterval(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 69/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.selector.SupplierSearchController: org.devgateway.ocds.persistence.mongo.Organization byId(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 98/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.OcdsController: org.devgateway.ocds.persistence.mongo.ReleasePackage ocdsPackageByOcid(java.lang.String)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 70/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.selector.SupplierSearchController: java.util.List searchText(org.devgateway.ocds.web.rest.controller.request.TextSearchRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 71/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.FundingByLocationController: java.util.List fundingByTenderDeliveryLocation(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 72/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.FundingByLocationController: java.util.List qualityFundingByTenderDeliveryLocation(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 99/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.OcdsController: org.devgateway.ocds.persistence.mongo.ReleasePackage packagedReleaseByPlanningBidNo(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 100/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.OcdsController: org.devgateway.ocds.persistence.mongo.ReleasePackage packagedReleaseByProjectId(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 101/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.OcdsController: java.util.List ocdsReleases(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 73/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.FundingByLocationController: java.util.List plannedFundingByLocation(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 102/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.OcdsController: java.util.List ocdsPackages(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 74/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.FundingByLocationController: java.util.List qualityPlannedFundingByLocation(org.devgateway.ocds.web.rest.controller.request.DefaultFilterPagingRequest)>
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 103/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.LocationInfowindowController: java.util.List tendersByLocation(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 75/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.FrequentSuppliersTimeIntervalController: java.util.List frequentSuppliersTimeInterval(java.lang.Integer,java.lang.Integer,java.util.Date)>
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 104/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.LocationInfowindowController: java.util.List planningByLocation(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 105/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.LocationInfowindowController: java.util.List awardsByLocation(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 106/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.FundingByLocationController: java.util.List fundingByTenderDeliveryLocation(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 107/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.FundingByLocationController: java.util.List qualityFundingByTenderDeliveryLocation(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 108/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.FundingByLocationController: java.util.List plannedFundingByLocation(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 109/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.FundingByLocationController: java.util.List qualityPlannedFundingByLocation(org.devgateway.ocds.web.rest.controller.request.DefaultFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 110/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.FrequentTenderersController: java.util.List frequentTenderers(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 111/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.FrequentTenderersController: java.util.List activeAwardsCount(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 112/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.FrequentSuppliersTimeIntervalController: java.util.List frequentSuppliersTimeInterval(java.lang.Integer,java.lang.Integer,java.util.Date)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 3
-[main] INFO org.rest.Respector.AppMain.MainTransform - 76/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.FlagI171ReleaseSearchController: java.util.List releaseFlagSearch(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 113/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.CountPlansTendersAwardsController: java.util.List countTendersByYear(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 77/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.FlagI019ReleaseSearchController: java.util.List releaseFlagSearch(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 114/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.CountPlansTendersAwardsController: java.util.List countAwardsByYear(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 78/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.IndicatorsTypesMappingController: org.devgateway.ocds.persistence.mongo.flags.ReleaseFlags indicatorTypesMapping()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 79/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.FlagI171StatsController: java.util.List flagStats(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 115/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.CountPlansTendersAwardsController: java.util.List countBidPlansByYear(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 80/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.FlagI077ReleaseSearchController: java.util.List releaseFlagSearch(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 116/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.CostEffectivenessVisualsController: java.util.List costEffectivenessAwardAmount(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 81/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.FlagI085StatsController: java.util.List flagStats(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 117/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.CostEffectivenessVisualsController: java.util.List costEffectivenessTenderAmount(org.devgateway.ocds.web.rest.controller.request.GroupingFilterPagingRequest)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 82/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.FlagI180ReleaseSearchController: java.util.List releaseFlagSearch(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 118/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.CostEffectivenessVisualsController: java.util.List costEffectivenessTenderAwardAmount(org.devgateway.ocds.web.rest.controller.request.GroupingFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 119/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.CorruptionRiskDashboardTablesController: java.util.List corruptionRiskOverviewTable(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 83/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.FlagI002StatsController: java.util.List flagStats(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 120/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.CorruptionRiskDashboardIndicatorsStatsController: java.util.List totalFlaggedIndicatorsByIndicatorType(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 84/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.FlagI077StatsController: java.util.List flagStats(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 121/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.CorruptionRiskDashboardIndicatorsStatsController: java.util.List totalEligibleIndicatorsByIndicatorType(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 85/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.FlagI085ReleaseSearchController: java.util.List releaseFlagSearch(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 122/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.CorruptionRiskDashboardIndicatorsStatsController: java.util.List totalFlags(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 86/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.FlagI038ReleaseSearchController: java.util.List releaseFlagSearch(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 123/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.CorruptionRiskDashboardIndicatorsStatsController: java.util.List totalFlaggedIndicatorsByIndicatorTypeByYear(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 87/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.FlagI007ReleaseSearchController: java.util.List releaseFlagSearch(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 124/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.CorruptionRiskDashboardIndicatorsStatsController: java.util.List totalEligibleIndicatorsByIndicatorTypeByYear(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 88/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.FlagI004ReleaseSearchController: java.util.List releaseFlagSearch(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 125/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.CorruptionRiskDashboardIndicatorsStatsController: java.util.List totalFlaggedProjectsByIndicatorTypeByYear(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 89/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.crosstab.FlagI019CrosstabController: java.util.List flagStats(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 126/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.CorruptionRiskDashboardIndicatorsStatsController: java.util.List totalEligibleProjectsByIndicatorTypeByYear(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 90/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.crosstab.FlagI077CrosstabController: java.util.List flagStats(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 127/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.CorruptionRiskDashboardIndicatorsStatsController: java.util.List totalProjectsByYear(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 91/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.crosstab.FlagI003CrosstabController: java.util.List flagStats(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 128/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.CorruptionRiskDashboardIndicatorsStatsController: java.util.List percentTotalProjectsFlaggedByYear(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 92/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.crosstab.FlagI007CrosstabController: java.util.List flagStats(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 129/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.CorruptionRiskDashboardIndicatorsStatsController: java.util.List percentTotalProjectsEligibleByYear(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 93/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.crosstab.FlagI004CrosstabController: java.util.List flagStats(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 130/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.CorruptionRiskDashboardIndicatorsStatsController: java.util.List percentOfEligibleProjectsFlaggedByYear(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 94/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.crosstab.FlagI002CrosstabController: java.util.List flagStats(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 131/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.AverageTenderAndAwardPeriodsController: java.util.List averageTenderPeriod(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 95/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.crosstab.FlagI171CrosstabController: java.util.List flagStats(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 132/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.AverageTenderAndAwardPeriodsController: java.util.List qualityAverageTenderPeriod(org.devgateway.ocds.web.rest.controller.request.DefaultFilterPagingRequest)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 96/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.crosstab.FlagI180CrosstabController: java.util.List flagStats(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 133/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.AverageTenderAndAwardPeriodsController: java.util.List averageAwardPeriod(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 97/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.crosstab.FlagI038CrosstabController: java.util.List flagStats(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 134/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.AverageTenderAndAwardPeriodsController: java.util.List qualityAverageAwardPeriod(org.devgateway.ocds.web.rest.controller.request.DefaultFilterPagingRequest)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 98/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.crosstab.FlagI085CrosstabController: java.util.List flagStats(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 135/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.AverageNumberOfTenderersController: java.util.List averageNumberOfTenderers(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 99/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.FlagI002ReleaseSearchController: java.util.List releaseFlagSearch(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 136/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.AuthenticatedCheckerController: org.devgateway.ocds.web.rest.controller.AuthenticatedCheckerController$AuthenticatedCheckerResponse isAuthenticated(javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 100/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.FlagI004StatsController: java.util.List flagStats(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 101/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.FlagI038StatsController: java.util.List flagStats(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 102/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.FlagI007StatsController: java.util.List flagStats(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 103/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.FlagI019StatsController: java.util.List flagStats(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 104/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.FlagI180StatsController: java.util.List flagStats(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 105/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.vietnam.FlagI003ReleaseSearchController: java.util.List releaseFlagSearch(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 106/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.flags.vietnam.FlagI003StatsController: java.util.List flagStats(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 107/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.TendersAwardsYears: java.util.List tendersAwardsYears()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 108/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.TranslationController: java.util.Map translations(javax.servlet.http.HttpServletResponse,java.lang.String)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 109/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.TopTenController: java.util.List topTenLargestAwards(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 110/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.TopTenController: java.util.List topTenLargestTenders(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 111/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.TopTenController: java.util.List topTenLargestSuppliers(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 112/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.AuthenticatedCheckerController: org.devgateway.ocds.web.rest.controller.AuthenticatedCheckerController$AuthenticatedCheckerResponse isAuthenticated(javax.servlet.http.HttpServletResponse)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 113/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.TotalCancelledTendersByYearController: java.util.List totalCancelledTendersByYear(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 114/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.TotalCancelledTendersByYearController: java.util.List totalCancelledTendersByYearByRationale(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 115/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.CorruptionRiskDashboardIndicatorsStatsController: java.util.List totalFlaggedIndicatorsByIndicatorType(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 116/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.CorruptionRiskDashboardIndicatorsStatsController: java.util.List totalEligibleIndicatorsByIndicatorType(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 117/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.CorruptionRiskDashboardIndicatorsStatsController: java.util.List totalFlags(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 118/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.CorruptionRiskDashboardIndicatorsStatsController: java.util.List totalFlaggedIndicatorsByIndicatorTypeByYear(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 119/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.CorruptionRiskDashboardIndicatorsStatsController: java.util.List totalEligibleIndicatorsByIndicatorTypeByYear(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 120/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.CorruptionRiskDashboardIndicatorsStatsController: java.util.List totalFlaggedProjectsByIndicatorTypeByYear(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 121/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.CorruptionRiskDashboardIndicatorsStatsController: java.util.List totalEligibleProjectsByIndicatorTypeByYear(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 122/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.CorruptionRiskDashboardIndicatorsStatsController: java.util.List totalProjectsByYear(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 123/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.CorruptionRiskDashboardIndicatorsStatsController: java.util.List percentTotalProjectsFlaggedByYear(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 124/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.CorruptionRiskDashboardIndicatorsStatsController: java.util.List percentTotalProjectsEligibleByYear(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 125/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.CorruptionRiskDashboardIndicatorsStatsController: java.util.List percentOfEligibleProjectsFlaggedByYear(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 126/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.AverageTenderAndAwardPeriodsController: java.util.List averageTenderPeriod(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 127/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.AverageTenderAndAwardPeriodsController: java.util.List qualityAverageTenderPeriod(org.devgateway.ocds.web.rest.controller.request.DefaultFilterPagingRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 128/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.AverageTenderAndAwardPeriodsController: java.util.List averageAwardPeriod(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 129/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.AverageTenderAndAwardPeriodsController: java.util.List qualityAverageAwardPeriod(org.devgateway.ocds.web.rest.controller.request.DefaultFilterPagingRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 130/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.PercentageAwardsNarrowPublicationDates: java.util.List percentageAwardsNarrowPublicationDates(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 131/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.export.ExcelExportController: void excelExport(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest,javax.servlet.http.HttpServletResponse)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 132/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.TendersByItemClassification: java.util.List tendersByItemClassification(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 133/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.CostEffectivenessVisualsController: java.util.List costEffectivenessAwardAmount(org.devgateway.ocds.web.rest.controller.request.YearFilterPagingRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 134/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.CostEffectivenessVisualsController: java.util.List costEffectivenessTenderAmount(org.devgateway.ocds.web.rest.controller.request.GroupingFilterPagingRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 135/136 analyzing endpoint method <org.devgateway.ocds.web.rest.controller.CostEffectivenessVisualsController: java.util.List costEffectivenessTenderAwardAmount(org.devgateway.ocds.web.rest.controller.request.GroupingFilterPagingRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 136/136 analyzing endpoint method <org.devgateway.toolkit.web.rest.controller.DummyController: org.devgateway.toolkit.web.rest.entity.Dummy greeting(java.lang.String)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
 
-real	140m35.691s
-user	141m36.151s
-sys	0m3.565s
+real	189m27.099s
+user	191m32.403s
+sys	0m14.322s

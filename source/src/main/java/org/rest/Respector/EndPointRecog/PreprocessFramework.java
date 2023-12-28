@@ -41,6 +41,7 @@ import soot.Printer;
 import soot.RefType;
 import soot.BriefUnitPrinter;
 
+import org.apache.commons.lang3.tuple.Pair;
 import org.rest.Respector.EndPointRecog.FrameworkData.FrameworkName;
 import org.rest.Respector.EndPointRecog.ParameterAnnotation.paramLoction;
 import org.slf4j.Logger;
@@ -103,7 +104,14 @@ public class PreprocessFramework {
 
     HashMap<SootClass, ArrayList<EndPointMethodInfo>> resrcClassToMethods=new HashMap<>();
 
+    ArrayList<Pair<SootClass, String>> sortedAppClasses=new ArrayList<>();
     for(SootClass c: appClasses){
+      sortedAppClasses.add(Pair.of(c, c.getName()));
+    }
+    sortedAppClasses.sort((b,a)->a.getRight().compareTo(b.getRight()));
+
+    for(Pair<SootClass, String> p: sortedAppClasses){
+      SootClass c=p.getLeft();
       if(excludedPackageName!=null && !excludedPackageName.equals(c.getPackageName())){
         continue;
       }

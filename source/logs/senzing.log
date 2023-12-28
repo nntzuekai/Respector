@@ -1,176 +1,175 @@
-+ java -Djava.library.path=/home/rkh/z3//build/ -cp ./target/Respector-0.1-SNAPSHOT.jar:/home/rkh/z3//build/com.microsoft.z3.jar org.rest.Respector.AppMain.Main ../dataset//senzing-api-server/target/classes/ ./generated_1//senzing.json
 [main] INFO org.rest.Respector.EndPointRecog.PreprocessFramework - The REST API uses JAX
 [main] INFO org.rest.Respector.AppMain.MainTransform - total # of endpoint methods detected: 40
-[main] INFO org.rest.Respector.AppMain.MainTransform - 1/40 analyzing endpoint method <com.senzing.api.services.EntityDataServices: com.senzing.api.model.SzLoadRecordResponse loadRecord(java.lang.String,java.lang.String,boolean,boolean,javax.ws.rs.core.UriInfo,java.lang.String)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 4
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 2/40 analyzing endpoint method <com.senzing.api.services.EntityDataServices: com.senzing.api.model.SzLoadRecordResponse loadRecord(java.lang.String,java.lang.String,java.lang.String,boolean,boolean,javax.ws.rs.core.UriInfo,java.lang.String)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 5
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 3/40 analyzing endpoint method <com.senzing.api.services.EntityDataServices: com.senzing.api.model.SzDeleteRecordResponse deleteRecord(java.lang.String,java.lang.String,java.lang.String,boolean,boolean,javax.ws.rs.core.UriInfo)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 5
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 4/40 analyzing endpoint method <com.senzing.api.services.EntityDataServices: com.senzing.api.model.SzReevaluateResponse reevaluateRecord(java.lang.String,java.lang.String,boolean,boolean,javax.ws.rs.core.UriInfo)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 4
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 5/40 analyzing endpoint method <com.senzing.api.services.EntityDataServices: com.senzing.api.model.SzRecordResponse getRecord(java.lang.String,java.lang.String,boolean,javax.ws.rs.core.UriInfo)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 3
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 6/40 analyzing endpoint method <com.senzing.api.services.EntityDataServices: com.senzing.api.model.SzEntityResponse getEntityByRecordId(java.lang.String,java.lang.String,boolean,com.senzing.api.model.SzRelationshipMode,boolean,com.senzing.api.model.SzDetailLevel,com.senzing.api.model.SzFeatureMode,boolean,boolean,javax.ws.rs.core.UriInfo)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 1/40 analyzing endpoint method <com.senzing.api.services.WhyServices: com.senzing.api.model.SzWhyEntityResponse whyEntityByRecordId(java.lang.String,java.lang.String,boolean,com.senzing.api.model.SzDetailLevel,com.senzing.api.model.SzFeatureMode,boolean,boolean,boolean,boolean,javax.ws.rs.core.UriInfo)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 9
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 7/40 analyzing endpoint method <com.senzing.api.services.EntityDataServices: com.senzing.api.model.SzEntityResponse getEntityByEntityId(long,boolean,com.senzing.api.model.SzRelationshipMode,boolean,com.senzing.api.model.SzDetailLevel,com.senzing.api.model.SzFeatureMode,boolean,boolean,javax.ws.rs.core.UriInfo)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 2/40 analyzing endpoint method <com.senzing.api.services.WhyServices: com.senzing.api.model.SzWhyEntityResponse whyEntityByEntityId(long,boolean,com.senzing.api.model.SzDetailLevel,com.senzing.api.model.SzFeatureMode,boolean,boolean,boolean,boolean,javax.ws.rs.core.UriInfo)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 8
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 8/40 analyzing endpoint method <com.senzing.api.services.EntityDataServices: com.senzing.api.model.SzAttributeSearchResponse searchEntitiesByGet(java.lang.String,java.util.List,java.util.Set,boolean,com.senzing.api.model.SzDetailLevel,com.senzing.api.model.SzFeatureMode,boolean,boolean,boolean,boolean,javax.ws.rs.core.UriInfo)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 10
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 9/40 analyzing endpoint method <com.senzing.api.services.EntityDataServices: com.senzing.api.model.SzAttributeSearchResponse searchEntitiesByPost(java.util.Set,boolean,com.senzing.api.model.SzDetailLevel,com.senzing.api.model.SzFeatureMode,boolean,boolean,boolean,boolean,javax.ws.rs.core.UriInfo,java.lang.String)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 8
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 10/40 analyzing endpoint method <com.senzing.api.services.EntityDataServices: com.senzing.api.model.SzReevaluateResponse reevaluateEntity(java.lang.Long,boolean,boolean,javax.ws.rs.core.UriInfo)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 3
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 11/40 analyzing endpoint method <com.senzing.api.services.ConfigServices: com.senzing.api.model.SzDataSourcesResponse getDataSources(boolean,javax.ws.rs.core.UriInfo)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 12/40 analyzing endpoint method <com.senzing.api.services.ConfigServices: com.senzing.api.model.SzDataSourceResponse getDataSource(java.lang.String,boolean,javax.ws.rs.core.UriInfo)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
-[main] INFO org.rest.Respector.AppMain.MainTransform - 13/40 analyzing endpoint method <com.senzing.api.services.ConfigServices: com.senzing.api.model.SzDataSourcesResponse addDataSources(java.util.List,boolean,javax.ws.rs.core.UriInfo,java.lang.String)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 14/40 analyzing endpoint method <com.senzing.api.services.ConfigServices: com.senzing.api.model.SzAttributeTypesResponse getAttributeTypes(boolean,java.lang.String,java.lang.String,boolean,javax.ws.rs.core.UriInfo)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 4
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 15/40 analyzing endpoint method <com.senzing.api.services.ConfigServices: com.senzing.api.model.SzAttributeTypeResponse getAttributeType(java.lang.String,boolean,javax.ws.rs.core.UriInfo)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 16/40 analyzing endpoint method <com.senzing.api.services.ConfigServices: com.senzing.api.model.SzConfigResponse getActiveConfig(javax.ws.rs.core.UriInfo)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 17/40 analyzing endpoint method <com.senzing.api.services.ConfigServices: com.senzing.api.model.SzConfigResponse getTemplateConfig(javax.ws.rs.core.UriInfo)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 18/40 analyzing endpoint method <com.senzing.api.services.WhyServices: com.senzing.api.model.SzWhyEntityResponse whyEntityByRecordId(java.lang.String,java.lang.String,boolean,com.senzing.api.model.SzDetailLevel,com.senzing.api.model.SzFeatureMode,boolean,boolean,boolean,boolean,javax.ws.rs.core.UriInfo)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 9
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 19/40 analyzing endpoint method <com.senzing.api.services.WhyServices: com.senzing.api.model.SzWhyEntityResponse whyEntityByEntityId(long,boolean,com.senzing.api.model.SzDetailLevel,com.senzing.api.model.SzFeatureMode,boolean,boolean,boolean,boolean,javax.ws.rs.core.UriInfo)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 8
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 20/40 analyzing endpoint method <com.senzing.api.services.WhyServices: com.senzing.api.model.SzWhyRecordsResponse whyRecords(java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,com.senzing.api.model.SzDetailLevel,com.senzing.api.model.SzFeatureMode,boolean,boolean,boolean,boolean,javax.ws.rs.core.UriInfo)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 3/40 analyzing endpoint method <com.senzing.api.services.WhyServices: com.senzing.api.model.SzWhyRecordsResponse whyRecords(java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,com.senzing.api.model.SzDetailLevel,com.senzing.api.model.SzFeatureMode,boolean,boolean,boolean,boolean,javax.ws.rs.core.UriInfo)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 11
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 21/40 analyzing endpoint method <com.senzing.api.services.WhyServices: com.senzing.api.model.SzWhyEntitiesResponse whyEntities(java.lang.String,java.lang.String,boolean,com.senzing.api.model.SzDetailLevel,com.senzing.api.model.SzFeatureMode,boolean,boolean,boolean,boolean,javax.ws.rs.core.UriInfo)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 4/40 analyzing endpoint method <com.senzing.api.services.WhyServices: com.senzing.api.model.SzWhyEntitiesResponse whyEntities(java.lang.String,java.lang.String,boolean,com.senzing.api.model.SzDetailLevel,com.senzing.api.model.SzFeatureMode,boolean,boolean,boolean,boolean,javax.ws.rs.core.UriInfo)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 9
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 22/40 analyzing endpoint method <com.senzing.api.services.BulkDataServices: com.senzing.api.model.SzBulkDataAnalysisResponse analyzeBulkRecordsViaForm(javax.ws.rs.core.MediaType,java.io.InputStream,javax.ws.rs.core.UriInfo)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 23/40 analyzing endpoint method <com.senzing.api.services.BulkDataServices: com.senzing.api.model.SzBulkDataAnalysisResponse analyzeBulkRecordsDirect(javax.ws.rs.core.MediaType,java.io.InputStream,javax.ws.rs.core.UriInfo)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 24/40 analyzing endpoint method <com.senzing.api.services.BulkDataServices: void analyzeBulkRecordsDirect(javax.ws.rs.core.MediaType,java.io.InputStream,javax.ws.rs.core.UriInfo,long,javax.ws.rs.sse.SseEventSink,javax.ws.rs.sse.Sse)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 25/40 analyzing endpoint method <com.senzing.api.services.BulkDataServices: void analyzeBulkRecordsViaForm(javax.ws.rs.core.MediaType,java.io.InputStream,javax.ws.rs.core.UriInfo,long,javax.ws.rs.sse.SseEventSink,javax.ws.rs.sse.Sse)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 26/40 analyzing endpoint method <com.senzing.api.services.BulkDataServices: com.senzing.api.model.SzBulkLoadResponse loadBulkRecordsViaForm(java.lang.String,java.lang.String,java.util.List,java.lang.String,int,javax.ws.rs.core.MediaType,java.io.InputStream,org.glassfish.jersey.media.multipart.FormDataContentDisposition,javax.ws.rs.core.UriInfo)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 6
-[main] INFO org.rest.Respector.AppMain.MainTransform - 27/40 analyzing endpoint method <com.senzing.api.services.BulkDataServices: com.senzing.api.model.SzBulkLoadResponse loadBulkRecordsDirect(java.lang.String,java.lang.String,java.util.List,java.lang.String,int,javax.ws.rs.core.MediaType,java.io.InputStream,javax.ws.rs.core.UriInfo)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 28/40 analyzing endpoint method <com.senzing.api.services.BulkDataServices: void loadBulkRecordsViaForm(java.lang.String,java.lang.String,java.util.List,java.lang.String,int,javax.ws.rs.core.MediaType,java.io.InputStream,org.glassfish.jersey.media.multipart.FormDataContentDisposition,javax.ws.rs.core.UriInfo,long,javax.ws.rs.sse.SseEventSink,javax.ws.rs.sse.Sse)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 29/40 analyzing endpoint method <com.senzing.api.services.BulkDataServices: void loadBulkRecordsDirect(java.lang.String,java.lang.String,java.util.List,java.lang.String,int,javax.ws.rs.core.MediaType,java.io.InputStream,javax.ws.rs.core.UriInfo,long,javax.ws.rs.sse.SseEventSink,javax.ws.rs.sse.Sse)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 30/40 analyzing endpoint method <com.senzing.api.services.HowRelatedServices: com.senzing.api.model.SzVirtualEntityResponse getVirtualEntity(java.util.List,java.lang.String,boolean,boolean,com.senzing.api.model.SzDetailLevel,com.senzing.api.model.SzFeatureMode,boolean,boolean,javax.ws.rs.core.UriInfo)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 5/40 analyzing endpoint method <com.senzing.api.services.HowRelatedServices: com.senzing.api.model.SzVirtualEntityResponse getVirtualEntity(java.util.List,java.lang.String,boolean,boolean,com.senzing.api.model.SzDetailLevel,com.senzing.api.model.SzFeatureMode,boolean,boolean,javax.ws.rs.core.UriInfo)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 8
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 31/40 analyzing endpoint method <com.senzing.api.services.HowRelatedServices: com.senzing.api.model.SzHowEntityResponse howEntityByEntityId(long,boolean,javax.ws.rs.core.UriInfo)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 6/40 analyzing endpoint method <com.senzing.api.services.HowRelatedServices: com.senzing.api.model.SzHowEntityResponse howEntityByEntityId(long,boolean,javax.ws.rs.core.UriInfo)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 32/40 analyzing endpoint method <com.senzing.api.services.HowRelatedServices: com.senzing.api.model.SzHowEntityResponse howEntityByRecordId(java.lang.String,java.lang.String,boolean,javax.ws.rs.core.UriInfo)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 7/40 analyzing endpoint method <com.senzing.api.services.HowRelatedServices: com.senzing.api.model.SzHowEntityResponse howEntityByRecordId(java.lang.String,java.lang.String,boolean,javax.ws.rs.core.UriInfo)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 3
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 33/40 analyzing endpoint method <com.senzing.api.services.EntityGraphServices: com.senzing.api.model.SzEntityPathResponse getEntityPath(java.lang.String,java.lang.String,int,java.util.List,java.lang.String,boolean,java.util.List,boolean,com.senzing.api.model.SzDetailLevel,com.senzing.api.model.SzFeatureMode,boolean,boolean,boolean,javax.ws.rs.core.UriInfo)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 8/40 analyzing endpoint method <com.senzing.api.services.EntityGraphServices: com.senzing.api.model.SzEntityPathResponse getEntityPath(java.lang.String,java.lang.String,int,java.util.List,java.lang.String,boolean,java.util.List,boolean,com.senzing.api.model.SzDetailLevel,com.senzing.api.model.SzFeatureMode,boolean,boolean,boolean,javax.ws.rs.core.UriInfo)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 13
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 34/40 analyzing endpoint method <com.senzing.api.services.EntityGraphServices: com.senzing.api.model.SzEntityNetworkResponse getEntityNetwork(java.util.List,java.lang.String,int,int,int,boolean,com.senzing.api.model.SzDetailLevel,com.senzing.api.model.SzFeatureMode,boolean,boolean,boolean,javax.ws.rs.core.UriInfo)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 9/40 analyzing endpoint method <com.senzing.api.services.EntityGraphServices: com.senzing.api.model.SzEntityNetworkResponse getEntityNetwork(java.util.List,java.lang.String,int,int,int,boolean,com.senzing.api.model.SzDetailLevel,com.senzing.api.model.SzFeatureMode,boolean,boolean,boolean,javax.ws.rs.core.UriInfo)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 11
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 10/40 analyzing endpoint method <com.senzing.api.services.EntityDataServices: com.senzing.api.model.SzLoadRecordResponse loadRecord(java.lang.String,java.lang.String,boolean,boolean,javax.ws.rs.core.UriInfo,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 4
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 11/40 analyzing endpoint method <com.senzing.api.services.EntityDataServices: com.senzing.api.model.SzLoadRecordResponse loadRecord(java.lang.String,java.lang.String,java.lang.String,boolean,boolean,javax.ws.rs.core.UriInfo,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 5
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 12/40 analyzing endpoint method <com.senzing.api.services.EntityDataServices: com.senzing.api.model.SzDeleteRecordResponse deleteRecord(java.lang.String,java.lang.String,java.lang.String,boolean,boolean,javax.ws.rs.core.UriInfo)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 5
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 13/40 analyzing endpoint method <com.senzing.api.services.EntityDataServices: com.senzing.api.model.SzReevaluateResponse reevaluateRecord(java.lang.String,java.lang.String,boolean,boolean,javax.ws.rs.core.UriInfo)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 4
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 14/40 analyzing endpoint method <com.senzing.api.services.EntityDataServices: com.senzing.api.model.SzRecordResponse getRecord(java.lang.String,java.lang.String,boolean,javax.ws.rs.core.UriInfo)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 3
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 15/40 analyzing endpoint method <com.senzing.api.services.EntityDataServices: com.senzing.api.model.SzEntityResponse getEntityByRecordId(java.lang.String,java.lang.String,boolean,com.senzing.api.model.SzRelationshipMode,boolean,com.senzing.api.model.SzDetailLevel,com.senzing.api.model.SzFeatureMode,boolean,boolean,javax.ws.rs.core.UriInfo)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 9
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 16/40 analyzing endpoint method <com.senzing.api.services.EntityDataServices: com.senzing.api.model.SzEntityResponse getEntityByEntityId(long,boolean,com.senzing.api.model.SzRelationshipMode,boolean,com.senzing.api.model.SzDetailLevel,com.senzing.api.model.SzFeatureMode,boolean,boolean,javax.ws.rs.core.UriInfo)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 8
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 17/40 analyzing endpoint method <com.senzing.api.services.EntityDataServices: com.senzing.api.model.SzAttributeSearchResponse searchEntitiesByGet(java.lang.String,java.util.List,java.util.Set,boolean,com.senzing.api.model.SzDetailLevel,com.senzing.api.model.SzFeatureMode,boolean,boolean,boolean,boolean,javax.ws.rs.core.UriInfo)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 10
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 18/40 analyzing endpoint method <com.senzing.api.services.EntityDataServices: com.senzing.api.model.SzAttributeSearchResponse searchEntitiesByPost(java.util.Set,boolean,com.senzing.api.model.SzDetailLevel,com.senzing.api.model.SzFeatureMode,boolean,boolean,boolean,boolean,javax.ws.rs.core.UriInfo,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 8
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 19/40 analyzing endpoint method <com.senzing.api.services.EntityDataServices: com.senzing.api.model.SzReevaluateResponse reevaluateEntity(java.lang.Long,boolean,boolean,javax.ws.rs.core.UriInfo)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 3
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 20/40 analyzing endpoint method <com.senzing.api.services.ConfigServices: com.senzing.api.model.SzDataSourcesResponse getDataSources(boolean,javax.ws.rs.core.UriInfo)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 21/40 analyzing endpoint method <com.senzing.api.services.ConfigServices: com.senzing.api.model.SzDataSourceResponse getDataSource(java.lang.String,boolean,javax.ws.rs.core.UriInfo)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+[main] INFO org.rest.Respector.AppMain.MainTransform - 22/40 analyzing endpoint method <com.senzing.api.services.ConfigServices: com.senzing.api.model.SzDataSourcesResponse addDataSources(java.util.List,boolean,javax.ws.rs.core.UriInfo,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 23/40 analyzing endpoint method <com.senzing.api.services.ConfigServices: com.senzing.api.model.SzAttributeTypesResponse getAttributeTypes(boolean,java.lang.String,java.lang.String,boolean,javax.ws.rs.core.UriInfo)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 4
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 24/40 analyzing endpoint method <com.senzing.api.services.ConfigServices: com.senzing.api.model.SzAttributeTypeResponse getAttributeType(java.lang.String,boolean,javax.ws.rs.core.UriInfo)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 25/40 analyzing endpoint method <com.senzing.api.services.ConfigServices: com.senzing.api.model.SzConfigResponse getActiveConfig(javax.ws.rs.core.UriInfo)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 26/40 analyzing endpoint method <com.senzing.api.services.ConfigServices: com.senzing.api.model.SzConfigResponse getTemplateConfig(javax.ws.rs.core.UriInfo)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 27/40 analyzing endpoint method <com.senzing.api.services.BulkDataServices: com.senzing.api.model.SzBulkDataAnalysisResponse analyzeBulkRecordsViaForm(javax.ws.rs.core.MediaType,java.io.InputStream,javax.ws.rs.core.UriInfo)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 28/40 analyzing endpoint method <com.senzing.api.services.BulkDataServices: com.senzing.api.model.SzBulkDataAnalysisResponse analyzeBulkRecordsDirect(javax.ws.rs.core.MediaType,java.io.InputStream,javax.ws.rs.core.UriInfo)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 29/40 analyzing endpoint method <com.senzing.api.services.BulkDataServices: void analyzeBulkRecordsDirect(javax.ws.rs.core.MediaType,java.io.InputStream,javax.ws.rs.core.UriInfo,long,javax.ws.rs.sse.SseEventSink,javax.ws.rs.sse.Sse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 30/40 analyzing endpoint method <com.senzing.api.services.BulkDataServices: void analyzeBulkRecordsViaForm(javax.ws.rs.core.MediaType,java.io.InputStream,javax.ws.rs.core.UriInfo,long,javax.ws.rs.sse.SseEventSink,javax.ws.rs.sse.Sse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 31/40 analyzing endpoint method <com.senzing.api.services.BulkDataServices: com.senzing.api.model.SzBulkLoadResponse loadBulkRecordsViaForm(java.lang.String,java.lang.String,java.util.List,java.lang.String,int,javax.ws.rs.core.MediaType,java.io.InputStream,org.glassfish.jersey.media.multipart.FormDataContentDisposition,javax.ws.rs.core.UriInfo)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 6
+[main] INFO org.rest.Respector.AppMain.MainTransform - 32/40 analyzing endpoint method <com.senzing.api.services.BulkDataServices: com.senzing.api.model.SzBulkLoadResponse loadBulkRecordsDirect(java.lang.String,java.lang.String,java.util.List,java.lang.String,int,javax.ws.rs.core.MediaType,java.io.InputStream,javax.ws.rs.core.UriInfo)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 33/40 analyzing endpoint method <com.senzing.api.services.BulkDataServices: void loadBulkRecordsViaForm(java.lang.String,java.lang.String,java.util.List,java.lang.String,int,javax.ws.rs.core.MediaType,java.io.InputStream,org.glassfish.jersey.media.multipart.FormDataContentDisposition,javax.ws.rs.core.UriInfo,long,javax.ws.rs.sse.SseEventSink,javax.ws.rs.sse.Sse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 34/40 analyzing endpoint method <com.senzing.api.services.BulkDataServices: void loadBulkRecordsDirect(java.lang.String,java.lang.String,java.util.List,java.lang.String,int,javax.ws.rs.core.MediaType,java.io.InputStream,javax.ws.rs.core.UriInfo,long,javax.ws.rs.sse.SseEventSink,javax.ws.rs.sse.Sse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - 35/40 analyzing endpoint method <com.senzing.api.services.AdminServices: com.senzing.api.model.SzBasicResponse root(javax.ws.rs.core.UriInfo)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 36/40 analyzing endpoint method <com.senzing.api.services.AdminServices: com.senzing.api.model.SzBasicResponse heartbeat(javax.ws.rs.core.UriInfo)>
@@ -184,6 +183,6 @@
 [main] INFO org.rest.Respector.AppMain.MainTransform - 40/40 analyzing endpoint method <com.senzing.api.services.AdminServices: com.senzing.api.model.SzServerInfoResponse getServerInfo(javax.ws.rs.core.UriInfo)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 
-real	32m11.346s
-user	33m9.504s
-sys	0m1.845s
+real	37m18.662s
+user	38m4.296s
+sys	0m4.288s

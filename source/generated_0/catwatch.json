@@ -14,7 +14,7 @@
     "/config": {
       "get": {
         "description": "",
-        "operationId": "em1",
+        "operationId": "em8",
         "parameters": [],
         "responses": {
           "200": {
@@ -36,7 +36,7 @@
     "/config/scoring.project": {
       "post": {
         "description": "",
-        "operationId": "em2",
+        "operationId": "em9",
         "parameters": [
           {
             "name": "X-Organizations",
@@ -60,7 +60,7 @@
     "/contributors": {
       "get": {
         "description": "",
-        "operationId": "em13",
+        "operationId": "em3",
         "parameters": [
           {
             "name": "organizations",
@@ -154,7 +154,7 @@
     "/delete": {
       "get": {
         "description": "",
-        "operationId": "em4",
+        "operationId": "em11",
         "parameters": [],
         "responses": {
           "500": {
@@ -169,7 +169,7 @@
     "/export": {
       "get": {
         "description": "",
-        "operationId": "em6",
+        "operationId": "em13",
         "parameters": [],
         "responses": {
           "200": {
@@ -212,7 +212,7 @@
     "/fetch": {
       "get": {
         "description": "",
-        "operationId": "em0",
+        "operationId": "em1",
         "parameters": [],
         "responses": {
           "200": {
@@ -234,7 +234,7 @@
     "/import": {
       "post": {
         "description": "",
-        "operationId": "em5",
+        "operationId": "em12",
         "parameters": [],
         "responses": {
           "500": {
@@ -269,7 +269,7 @@
     "/init": {
       "get": {
         "description": "",
-        "operationId": "em3",
+        "operationId": "em10",
         "parameters": [],
         "responses": {
           "500": {
@@ -284,7 +284,7 @@
     "/languages": {
       "get": {
         "description": "",
-        "operationId": "em12",
+        "operationId": "em0",
         "parameters": [
           {
             "name": "organizations",
@@ -347,7 +347,7 @@
     "/projects": {
       "get": {
         "description": "",
-        "operationId": "em11",
+        "operationId": "em2",
         "parameters": [
           {
             "name": "organizations",
@@ -442,7 +442,7 @@
     "/statistics": {
       "get": {
         "description": "",
-        "operationId": "em7",
+        "operationId": "em4",
         "parameters": [
           {
             "name": "organizations",
@@ -501,7 +501,7 @@
     "/statistics/contributors": {
       "get": {
         "description": "",
-        "operationId": "em9",
+        "operationId": "em6",
         "parameters": [
           {
             "name": "organizations",
@@ -557,7 +557,7 @@
     "/statistics/languages": {
       "get": {
         "description": "",
-        "operationId": "em10",
+        "operationId": "em7",
         "parameters": [
           {
             "name": "organizations",
@@ -613,7 +613,7 @@
     "/statistics/projects": {
       "get": {
         "description": "",
-        "operationId": "em8",
+        "operationId": "em5",
         "parameters": [
           {
             "name": "organizations",
@@ -672,10 +672,10 @@
       "/contributors": {
         "get": {
           "global-reads": {
-            "g10": {
+            "g6": {
               "name": "SORT_BY_LIST",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g10"
+                "$ref": "#/components/x-global-variables-info/g6"
               }
             }
           }
@@ -685,27 +685,27 @@
         "get": {
           "global-reads": {
             "g0": {
-              "name": "OK",
+              "name": "DEFAULT_LIMIT",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g7": {
+            "g1": {
               "name": "DEFAULT_OFFSET",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g7"
+                "$ref": "#/components/x-global-variables-info/g1"
               }
             },
-            "g8": {
-              "name": "DEFAULT_LIMIT",
+            "g2": {
+              "name": "OK",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g8"
+                "$ref": "#/components/x-global-variables-info/g2"
               }
             },
-            "g9": {
+            "g3": {
               "name": "logger",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g9"
+                "$ref": "#/components/x-global-variables-info/g3"
               }
             }
           }
@@ -714,22 +714,22 @@
       "/projects": {
         "get": {
           "global-reads": {
-            "g0": {
+            "g2": {
               "name": "OK",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g0"
+                "$ref": "#/components/x-global-variables-info/g2"
+              }
+            },
+            "g4": {
+              "name": "DEFAULT_LIMIT",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g4"
               }
             },
             "g5": {
-              "name": "DEFAULT_LIMIT",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g5"
-              }
-            },
-            "g6": {
               "name": "DEFAULT_OFFSET",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g6"
+                "$ref": "#/components/x-global-variables-info/g5"
               }
             }
           }
@@ -738,10 +738,10 @@
       "/statistics": {
         "get": {
           "global-reads": {
-            "g0": {
+            "g2": {
               "name": "OK",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g0"
+                "$ref": "#/components/x-global-variables-info/g2"
               }
             }
           },
@@ -755,25 +755,25 @@
       "/statistics/contributors": {
         "get": {
           "global-reads": {
-            "g0": {
+            "g2": {
               "name": "OK",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g0"
+                "$ref": "#/components/x-global-variables-info/g2"
               }
             },
-            "g1": {
+            "g7": {
               "name": "DAYS",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
+                "$ref": "#/components/x-global-variables-info/g7"
               }
             },
-            "g2": {
+            "g8": {
               "name": "$assertionsDisabled",
               "examples": [
                 false
               ],
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g2"
+                "$ref": "#/components/x-global-variables-info/g8"
               }
             }
           }
@@ -782,51 +782,51 @@
       "/statistics/languages": {
         "get": {
           "global-reads": {
-            "g0": {
+            "g2": {
               "name": "OK",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g0"
+                "$ref": "#/components/x-global-variables-info/g2"
               }
             },
-            "g1": {
+            "g7": {
               "name": "DAYS",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
+                "$ref": "#/components/x-global-variables-info/g7"
               }
             },
-            "g2": {
+            "g8": {
               "name": "$assertionsDisabled",
               "examples": [
                 false
               ],
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g2"
+                "$ref": "#/components/x-global-variables-info/g8"
               }
             },
-            "g3": {
+            "g9": {
               "name": "UNKNOWN",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g3"
+                "$ref": "#/components/x-global-variables-info/g9"
               }
             }
           },
           "global-writes": {
-            "g3": {
+            "g9": {
               "name": "UNKNOWN",
               "assigned-values": [
                 "\"unknown\""
               ],
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g3"
+                "$ref": "#/components/x-global-variables-info/g9"
               }
             },
-            "g4": {
+            "g10": {
               "name": "logger",
               "assigned-values": [
                 "staticinvoke <org.slf4j.LoggerFactory: org.slf4j.Logger getLogger(java.lang.Class)>(class \"Lorg/zalando/catwatch/backend/util/LanguageStats;\")"
               ],
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g4"
+                "$ref": "#/components/x-global-variables-info/g10"
               }
             }
           }
@@ -835,25 +835,25 @@
       "/statistics/projects": {
         "get": {
           "global-reads": {
-            "g0": {
+            "g2": {
               "name": "OK",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g0"
+                "$ref": "#/components/x-global-variables-info/g2"
               }
             },
-            "g1": {
+            "g7": {
               "name": "DAYS",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
+                "$ref": "#/components/x-global-variables-info/g7"
               }
             },
-            "g2": {
+            "g8": {
               "name": "$assertionsDisabled",
               "examples": [
                 false
               ],
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g2"
+                "$ref": "#/components/x-global-variables-info/g8"
               }
             }
           }
@@ -861,17 +861,17 @@
       }
     },
     "x-endpoint-interdependence": {
-      "g3": {
+      "g9": {
         "location-details": {
-          "$ref": "#/components/x-global-variables-info/g3"
+          "$ref": "#/components/x-global-variables-info/g9"
         },
         "read-by": {
-          "em10": {
+          "em7": {
             "$ref": "#/paths/~1statistics~1languages/get"
           }
         },
         "written-by": {
-          "em10": {
+          "em7": {
             "$ref": "#/paths/~1statistics~1languages/get"
           }
         }
@@ -879,85 +879,85 @@
     },
     "x-global-variables-info": {
       "g0": {
-        "name": "OK",
+        "name": "DEFAULT_LIMIT",
         "id": "g0",
-        "defining-class": "org.springframework.http.HttpStatus"
-      },
-      "g1": {
-        "name": "DAYS",
-        "id": "g1",
-        "defining-class": "java.time.temporal.ChronoUnit"
-      },
-      "g2": {
-        "name": "$assertionsDisabled",
-        "id": "g2",
-        "defining-class": "org.zalando.catwatch.backend.web.StatisticsApi",
-        "locations-of-static-assignments": [
-          "line 39, org.zalando.catwatch.backend.web.StatisticsApi"
-        ]
-      },
-      "g3": {
-        "name": "UNKNOWN",
-        "id": "g3",
-        "defining-class": "org.zalando.catwatch.backend.util.LanguageStats",
-        "locations-of-static-assignments": [
-          "line 26, org.zalando.catwatch.backend.util.LanguageStats"
-        ]
-      },
-      "g4": {
-        "name": "logger",
-        "id": "g4",
-        "defining-class": "org.zalando.catwatch.backend.util.LanguageStats",
-        "locations-of-static-assignments": [
-          "line 20, org.zalando.catwatch.backend.util.LanguageStats"
-        ]
-      },
-      "g5": {
-        "name": "DEFAULT_LIMIT",
-        "id": "g5",
-        "defining-class": "org.zalando.catwatch.backend.service.ProjectServiceImpl",
-        "locations-of-static-assignments": [
-          "line 30, org.zalando.catwatch.backend.service.ProjectServiceImpl"
-        ]
-      },
-      "g6": {
-        "name": "DEFAULT_OFFSET",
-        "id": "g6",
-        "defining-class": "org.zalando.catwatch.backend.service.ProjectServiceImpl",
-        "locations-of-static-assignments": [
-          "line 31, org.zalando.catwatch.backend.service.ProjectServiceImpl"
-        ]
-      },
-      "g7": {
-        "name": "DEFAULT_OFFSET",
-        "id": "g7",
-        "defining-class": "org.zalando.catwatch.backend.web.LanguagesApi",
-        "locations-of-static-assignments": [
-          "line 34, org.zalando.catwatch.backend.web.LanguagesApi"
-        ]
-      },
-      "g8": {
-        "name": "DEFAULT_LIMIT",
-        "id": "g8",
         "defining-class": "org.zalando.catwatch.backend.web.LanguagesApi",
         "locations-of-static-assignments": [
           "line 33, org.zalando.catwatch.backend.web.LanguagesApi"
         ]
       },
-      "g9": {
+      "g1": {
+        "name": "DEFAULT_OFFSET",
+        "id": "g1",
+        "defining-class": "org.zalando.catwatch.backend.web.LanguagesApi",
+        "locations-of-static-assignments": [
+          "line 34, org.zalando.catwatch.backend.web.LanguagesApi"
+        ]
+      },
+      "g2": {
+        "name": "OK",
+        "id": "g2",
+        "defining-class": "org.springframework.http.HttpStatus"
+      },
+      "g3": {
         "name": "logger",
-        "id": "g9",
+        "id": "g3",
         "defining-class": "org.zalando.catwatch.backend.service.LanguageService",
         "locations-of-static-assignments": [
           "line 26, org.zalando.catwatch.backend.service.LanguageService"
         ]
       },
-      "g10": {
+      "g4": {
+        "name": "DEFAULT_LIMIT",
+        "id": "g4",
+        "defining-class": "org.zalando.catwatch.backend.service.ProjectServiceImpl",
+        "locations-of-static-assignments": [
+          "line 30, org.zalando.catwatch.backend.service.ProjectServiceImpl"
+        ]
+      },
+      "g5": {
+        "name": "DEFAULT_OFFSET",
+        "id": "g5",
+        "defining-class": "org.zalando.catwatch.backend.service.ProjectServiceImpl",
+        "locations-of-static-assignments": [
+          "line 31, org.zalando.catwatch.backend.service.ProjectServiceImpl"
+        ]
+      },
+      "g6": {
         "name": "SORT_BY_LIST",
-        "id": "g10",
+        "id": "g6",
         "defining-class": "org.zalando.catwatch.backend.web.ContributorsApi",
         "locations-of-static-assignments": [
           "line 57, org.zalando.catwatch.backend.web.ContributorsApi"
+        ]
+      },
+      "g7": {
+        "name": "DAYS",
+        "id": "g7",
+        "defining-class": "java.time.temporal.ChronoUnit"
+      },
+      "g8": {
+        "name": "$assertionsDisabled",
+        "id": "g8",
+        "defining-class": "org.zalando.catwatch.backend.web.StatisticsApi",
+        "locations-of-static-assignments": [
+          "line 39, org.zalando.catwatch.backend.web.StatisticsApi"
+        ]
+      },
+      "g9": {
+        "name": "UNKNOWN",
+        "id": "g9",
+        "defining-class": "org.zalando.catwatch.backend.util.LanguageStats",
+        "locations-of-static-assignments": [
+          "line 26, org.zalando.catwatch.backend.util.LanguageStats"
+        ]
+      },
+      "g10": {
+        "name": "logger",
+        "id": "g10",
+        "defining-class": "org.zalando.catwatch.backend.util.LanguageStats",
+        "locations-of-static-assignments": [
+          "line 20, org.zalando.catwatch.backend.util.LanguageStats"
         ]
       }
     }

@@ -1,4 +1,3 @@
-+ java -Djava.library.path=/home/rkh/z3//build/ -cp ./target/Respector-0.1-SNAPSHOT.jar:/home/rkh/z3//build/com.microsoft.z3.jar org.rest.Respector.AppMain.Main ../dataset//cwa-verification-server/target/classes/ ./generated_1//cwa.json
 [main] INFO org.rest.Respector.EndPointRecog.PreprocessFramework - The REST API uses Spring
 [main] INFO org.rest.Respector.AppMain.MainTransform - total # of endpoint methods detected: 8
 [main] INFO org.rest.Respector.AppMain.MainTransform - 1/8 analyzing endpoint method <app.coronawarn.verification.controller.InternalTestStateController: org.springframework.http.ResponseEntity getTestState(app.coronawarn.verification.model.RegistrationToken)>
@@ -7,14 +6,14 @@
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 3/8 analyzing endpoint method <app.coronawarn.verification.controller.InternalTanController: org.springframework.http.ResponseEntity createTeleTan(app.coronawarn.verification.model.AuthorizationToken,app.coronawarn.verification.model.TeleTanType)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
-[main] INFO org.rest.Respector.AppMain.MainTransform - 4/8 analyzing endpoint method <app.coronawarn.verification.controller.ExternalTestStateController: org.springframework.web.context.request.async.DeferredResult getTestState(app.coronawarn.verification.model.RegistrationToken,java.lang.String)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 5/8 analyzing endpoint method <app.coronawarn.verification.controller.ExternalTanController: org.springframework.web.context.request.async.DeferredResult generateTan(app.coronawarn.verification.model.RegistrationToken,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 4/8 analyzing endpoint method <app.coronawarn.verification.controller.ExternalTokenController: org.springframework.web.context.request.async.DeferredResult generateRegistrationToken(app.coronawarn.verification.model.RegistrationTokenRequest,java.lang.String)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 6/8 analyzing endpoint method <app.coronawarn.verification.controller.ExternalTokenController: org.springframework.web.context.request.async.DeferredResult generateRegistrationToken(app.coronawarn.verification.model.RegistrationTokenRequest,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 5/8 analyzing endpoint method <app.coronawarn.verification.controller.ExternalTestStateController: org.springframework.web.context.request.async.DeferredResult getTestState(app.coronawarn.verification.model.RegistrationToken,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 6/8 analyzing endpoint method <app.coronawarn.verification.controller.ExternalTanController: org.springframework.web.context.request.async.DeferredResult generateTan(app.coronawarn.verification.model.RegistrationToken,java.lang.String)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 7/8 analyzing endpoint method <app.coronawarn.verification.client.IamClient: app.coronawarn.verification.model.Certs certs()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 8/8 analyzing endpoint method <app.coronawarn.verification.client.TestResultServerClient: app.coronawarn.verification.model.TestResult result(app.coronawarn.verification.model.HashedGuid)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 7/8 analyzing endpoint method <app.coronawarn.verification.client.TestResultServerClient: app.coronawarn.verification.model.TestResult result(app.coronawarn.verification.model.HashedGuid)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 8/8 analyzing endpoint method <app.coronawarn.verification.client.IamClient: app.coronawarn.verification.model.Certs certs()>
 
-real	0m7.095s
-user	0m19.226s
-sys	0m0.324s
+real	0m4.573s
+user	0m9.774s
+sys	0m0.288s

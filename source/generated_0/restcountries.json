@@ -14,7 +14,7 @@
     "/contribute": {
       "post": {
         "description": "",
-        "operationId": "em0",
+        "operationId": "em14",
         "parameters": [],
         "responses": {
           "202": {
@@ -569,7 +569,7 @@
     "/v2": {
       "get": {
         "description": "",
-        "operationId": "em2",
+        "operationId": "em1",
         "parameters": [
           {
             "name": "fields",
@@ -604,7 +604,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em14",
+        "operationId": "em13",
         "parameters": [],
         "responses": {
           "405": {
@@ -622,7 +622,7 @@
     "/v2/all": {
       "get": {
         "description": "",
-        "operationId": "em1",
+        "operationId": "em0",
         "parameters": [
           {
             "name": "fields",
@@ -659,7 +659,7 @@
     "/v2/alpha": {
       "get": {
         "description": "",
-        "operationId": "em4",
+        "operationId": "em3",
         "parameters": [
           {
             "name": "codes",
@@ -717,7 +717,7 @@
     "/v2/alpha/{alphacode}": {
       "get": {
         "description": "",
-        "operationId": "em3",
+        "operationId": "em2",
         "parameters": [
           {
             "name": "alphacode",
@@ -815,7 +815,7 @@
     "/v2/callingcode/{callingcode}": {
       "get": {
         "description": "",
-        "operationId": "em7",
+        "operationId": "em6",
         "parameters": [
           {
             "name": "callingcode",
@@ -866,7 +866,7 @@
     "/v2/capital/{capital}": {
       "get": {
         "description": "",
-        "operationId": "em8",
+        "operationId": "em7",
         "parameters": [
           {
             "name": "capital",
@@ -917,7 +917,7 @@
     "/v2/currency/{currency}": {
       "get": {
         "description": "",
-        "operationId": "em5",
+        "operationId": "em4",
         "parameters": [
           {
             "name": "currency",
@@ -973,7 +973,7 @@
     "/v2/demonym/{demonym}": {
       "get": {
         "description": "",
-        "operationId": "em12",
+        "operationId": "em11",
         "parameters": [
           {
             "name": "demonym",
@@ -1024,7 +1024,7 @@
     "/v2/lang/{lang}": {
       "get": {
         "description": "",
-        "operationId": "em11",
+        "operationId": "em10",
         "parameters": [
           {
             "name": "lang",
@@ -1075,7 +1075,7 @@
     "/v2/name/{name}": {
       "get": {
         "description": "",
-        "operationId": "em6",
+        "operationId": "em5",
         "parameters": [
           {
             "name": "name",
@@ -1139,7 +1139,7 @@
     "/v2/region/{region}": {
       "get": {
         "description": "",
-        "operationId": "em9",
+        "operationId": "em8",
         "parameters": [
           {
             "name": "region",
@@ -1190,7 +1190,7 @@
     "/v2/regionalbloc/{regionalbloc}": {
       "get": {
         "description": "",
-        "operationId": "em13",
+        "operationId": "em12",
         "parameters": [
           {
             "name": "regionalbloc",
@@ -1241,7 +1241,7 @@
     "/v2/subregion/{subregion}": {
       "get": {
         "description": "",
-        "operationId": "em10",
+        "operationId": "em9",
         "parameters": [
           {
             "name": "subregion",
@@ -1295,33 +1295,33 @@
       "/contribute": {
         "post": {
           "global-reads": {
-            "g0": {
-              "name": "LOG",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g0"
-              }
-            },
-            "g1": {
+            "g2": {
               "name": "BAD_REQUEST",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
+                "$ref": "#/components/x-global-variables-info/g2"
               }
             },
-            "g2": {
+            "g7": {
               "name": "ACCEPTED",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g2"
+                "$ref": "#/components/x-global-variables-info/g7"
+              }
+            },
+            "g8": {
+              "name": "LOG",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g8"
               }
             }
           },
           "global-writes": {
-            "g3": {
+            "g9": {
               "name": "apiKey",
               "assigned-values": [
                 "\"\""
               ],
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g3"
+                "$ref": "#/components/x-global-variables-info/g9"
               }
             }
           }
@@ -1340,10 +1340,10 @@
         },
         "post": {
           "global-reads": {
-            "g9": {
+            "g6": {
               "name": "METHOD_NOT_ALLOWED",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g9"
+                "$ref": "#/components/x-global-variables-info/g6"
               }
             },
             "g10": {
@@ -1358,16 +1358,16 @@
       "/v1/alpha": {
         "get": {
           "global-reads": {
-            "g1": {
+            "g2": {
               "name": "BAD_REQUEST",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
+                "$ref": "#/components/x-global-variables-info/g2"
               }
             },
-            "g7": {
+            "g4": {
               "name": "NOT_FOUND",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g7"
+                "$ref": "#/components/x-global-variables-info/g4"
               }
             },
             "g10": {
@@ -1393,16 +1393,16 @@
       "/v1/alpha/{alphacode}": {
         "get": {
           "global-reads": {
-            "g1": {
+            "g2": {
               "name": "BAD_REQUEST",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
+                "$ref": "#/components/x-global-variables-info/g2"
               }
             },
-            "g7": {
+            "g4": {
               "name": "NOT_FOUND",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g7"
+                "$ref": "#/components/x-global-variables-info/g4"
               }
             },
             "g10": {
@@ -1423,10 +1423,10 @@
       "/v1/callingcode/{callingcode}": {
         "get": {
           "global-reads": {
-            "g7": {
+            "g4": {
               "name": "NOT_FOUND",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g7"
+                "$ref": "#/components/x-global-variables-info/g4"
               }
             },
             "g10": {
@@ -1447,16 +1447,16 @@
       "/v1/capital/{capital}": {
         "get": {
           "global-reads": {
-            "g7": {
+            "g4": {
               "name": "NOT_FOUND",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g7"
+                "$ref": "#/components/x-global-variables-info/g4"
               }
             },
-            "g8": {
+            "g5": {
               "name": "NFD",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g8"
+                "$ref": "#/components/x-global-variables-info/g5"
               }
             },
             "g10": {
@@ -1477,16 +1477,16 @@
       "/v1/currency/{currency}": {
         "get": {
           "global-reads": {
-            "g1": {
+            "g2": {
               "name": "BAD_REQUEST",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
+                "$ref": "#/components/x-global-variables-info/g2"
               }
             },
-            "g7": {
+            "g4": {
               "name": "NOT_FOUND",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g7"
+                "$ref": "#/components/x-global-variables-info/g4"
               }
             },
             "g10": {
@@ -1507,10 +1507,10 @@
       "/v1/lang/{lang}": {
         "get": {
           "global-reads": {
-            "g7": {
+            "g4": {
               "name": "NOT_FOUND",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g7"
+                "$ref": "#/components/x-global-variables-info/g4"
               }
             },
             "g10": {
@@ -1531,16 +1531,16 @@
       "/v1/name/{name}": {
         "get": {
           "global-reads": {
-            "g7": {
+            "g4": {
               "name": "NOT_FOUND",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g7"
+                "$ref": "#/components/x-global-variables-info/g4"
               }
             },
-            "g8": {
+            "g5": {
               "name": "NFD",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g8"
+                "$ref": "#/components/x-global-variables-info/g5"
               }
             },
             "g10": {
@@ -1561,10 +1561,10 @@
       "/v1/region/{region}": {
         "get": {
           "global-reads": {
-            "g7": {
+            "g4": {
               "name": "NOT_FOUND",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g7"
+                "$ref": "#/components/x-global-variables-info/g4"
               }
             },
             "g10": {
@@ -1585,10 +1585,10 @@
       "/v1/subregion/{subregion}": {
         "get": {
           "global-reads": {
-            "g7": {
+            "g4": {
               "name": "NOT_FOUND",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g7"
+                "$ref": "#/components/x-global-variables-info/g4"
               }
             },
             "g10": {
@@ -1609,32 +1609,32 @@
       "/v2": {
         "get": {
           "global-reads": {
-            "g4": {
+            "g0": {
               "name": "COUNTRY_FIELDS",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g4"
+                "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g5": {
+            "g1": {
               "name": "LOG",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g5"
+                "$ref": "#/components/x-global-variables-info/g1"
               }
             }
           }
         },
         "post": {
           "global-reads": {
-            "g5": {
+            "g1": {
               "name": "LOG",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g5"
+                "$ref": "#/components/x-global-variables-info/g1"
               }
             },
-            "g9": {
+            "g6": {
               "name": "METHOD_NOT_ALLOWED",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g9"
+                "$ref": "#/components/x-global-variables-info/g6"
               }
             }
           }
@@ -1643,16 +1643,16 @@
       "/v2/all": {
         "get": {
           "global-reads": {
-            "g4": {
+            "g0": {
               "name": "COUNTRY_FIELDS",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g4"
+                "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g5": {
+            "g1": {
               "name": "LOG",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g5"
+                "$ref": "#/components/x-global-variables-info/g1"
               }
             }
           }
@@ -1661,34 +1661,34 @@
       "/v2/alpha": {
         "get": {
           "global-reads": {
+            "g0": {
+              "name": "COUNTRY_FIELDS",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g0"
+              }
+            },
             "g1": {
-              "name": "BAD_REQUEST",
+              "name": "LOG",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g1"
               }
             },
-            "g4": {
-              "name": "COUNTRY_FIELDS",
+            "g2": {
+              "name": "BAD_REQUEST",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g4"
+                "$ref": "#/components/x-global-variables-info/g2"
               }
             },
-            "g5": {
-              "name": "LOG",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g5"
-              }
-            },
-            "g6": {
+            "g3": {
               "name": "countries",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g6"
+                "$ref": "#/components/x-global-variables-info/g3"
               }
             },
-            "g7": {
+            "g4": {
               "name": "NOT_FOUND",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g7"
+                "$ref": "#/components/x-global-variables-info/g4"
               }
             }
           },
@@ -1702,34 +1702,34 @@
       "/v2/alpha/{alphacode}": {
         "get": {
           "global-reads": {
+            "g0": {
+              "name": "COUNTRY_FIELDS",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g0"
+              }
+            },
             "g1": {
-              "name": "BAD_REQUEST",
+              "name": "LOG",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g1"
               }
             },
-            "g4": {
-              "name": "COUNTRY_FIELDS",
+            "g2": {
+              "name": "BAD_REQUEST",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g4"
+                "$ref": "#/components/x-global-variables-info/g2"
               }
             },
-            "g5": {
-              "name": "LOG",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g5"
-              }
-            },
-            "g6": {
+            "g3": {
               "name": "countries",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g6"
+                "$ref": "#/components/x-global-variables-info/g3"
               }
             },
-            "g7": {
+            "g4": {
               "name": "NOT_FOUND",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g7"
+                "$ref": "#/components/x-global-variables-info/g4"
               }
             }
           }
@@ -1738,28 +1738,28 @@
       "/v2/callingcode/{callingcode}": {
         "get": {
           "global-reads": {
-            "g4": {
+            "g0": {
               "name": "COUNTRY_FIELDS",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g4"
+                "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g5": {
+            "g1": {
               "name": "LOG",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g5"
+                "$ref": "#/components/x-global-variables-info/g1"
               }
             },
-            "g6": {
+            "g3": {
               "name": "countries",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g6"
+                "$ref": "#/components/x-global-variables-info/g3"
               }
             },
-            "g7": {
+            "g4": {
               "name": "NOT_FOUND",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g7"
+                "$ref": "#/components/x-global-variables-info/g4"
               }
             }
           }
@@ -1768,34 +1768,34 @@
       "/v2/capital/{capital}": {
         "get": {
           "global-reads": {
-            "g4": {
+            "g0": {
               "name": "COUNTRY_FIELDS",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g0"
+              }
+            },
+            "g1": {
+              "name": "LOG",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g1"
+              }
+            },
+            "g3": {
+              "name": "countries",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g3"
+              }
+            },
+            "g4": {
+              "name": "NOT_FOUND",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g4"
               }
             },
             "g5": {
-              "name": "LOG",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g5"
-              }
-            },
-            "g6": {
-              "name": "countries",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g6"
-              }
-            },
-            "g7": {
-              "name": "NOT_FOUND",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g7"
-              }
-            },
-            "g8": {
               "name": "NFD",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g8"
+                "$ref": "#/components/x-global-variables-info/g5"
               }
             }
           }
@@ -1804,37 +1804,37 @@
       "/v2/currency/{currency}": {
         "get": {
           "global-reads": {
+            "g0": {
+              "name": "COUNTRY_FIELDS",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g0"
+              }
+            },
             "g1": {
-              "name": "BAD_REQUEST",
+              "name": "LOG",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g1"
               }
             },
-            "g4": {
-              "name": "COUNTRY_FIELDS",
+            "g2": {
+              "name": "BAD_REQUEST",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g4"
+                "$ref": "#/components/x-global-variables-info/g2"
               }
             },
-            "g5": {
-              "name": "LOG",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g5"
-              }
-            },
-            "g6": {
+            "g3": {
               "name": "countries",
               "constraints": [
                 "(not (= |(eu.fayder.restcountries.v2.domain.Currency) ((eu.fayder.restcountries.v2.domain.Country) <eu.fayder.restcountries.v2.rest.CountryService: java.util.List countries>.<java.util.List: java.util.Iterator iterator()>().<java.util.Iterator: java.lang.Object next()>()).<eu.fayder.restcountries.v2.domain.Country: java.util.List getCurrencies()>().<java.util.List: java.util.Iterator iterator()>().<java.util.Iterator: java.lang.Object next()>()|\n        null))"
               ],
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g6"
+                "$ref": "#/components/x-global-variables-info/g3"
               }
             },
-            "g7": {
+            "g4": {
               "name": "NOT_FOUND",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g7"
+                "$ref": "#/components/x-global-variables-info/g4"
               }
             }
           }
@@ -1843,34 +1843,34 @@
       "/v2/demonym/{demonym}": {
         "get": {
           "global-reads": {
-            "g4": {
+            "g0": {
               "name": "COUNTRY_FIELDS",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g0"
+              }
+            },
+            "g1": {
+              "name": "LOG",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g1"
+              }
+            },
+            "g3": {
+              "name": "countries",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g3"
+              }
+            },
+            "g4": {
+              "name": "NOT_FOUND",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g4"
               }
             },
             "g5": {
-              "name": "LOG",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g5"
-              }
-            },
-            "g6": {
-              "name": "countries",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g6"
-              }
-            },
-            "g7": {
-              "name": "NOT_FOUND",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g7"
-              }
-            },
-            "g8": {
               "name": "NFD",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g8"
+                "$ref": "#/components/x-global-variables-info/g5"
               }
             }
           }
@@ -1879,28 +1879,28 @@
       "/v2/lang/{lang}": {
         "get": {
           "global-reads": {
-            "g4": {
+            "g0": {
               "name": "COUNTRY_FIELDS",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g4"
+                "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g5": {
+            "g1": {
               "name": "LOG",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g5"
+                "$ref": "#/components/x-global-variables-info/g1"
               }
             },
-            "g6": {
+            "g3": {
               "name": "countries",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g6"
+                "$ref": "#/components/x-global-variables-info/g3"
               }
             },
-            "g7": {
+            "g4": {
               "name": "NOT_FOUND",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g7"
+                "$ref": "#/components/x-global-variables-info/g4"
               }
             }
           }
@@ -1909,34 +1909,34 @@
       "/v2/name/{name}": {
         "get": {
           "global-reads": {
-            "g4": {
+            "g0": {
               "name": "COUNTRY_FIELDS",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g0"
+              }
+            },
+            "g1": {
+              "name": "LOG",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g1"
+              }
+            },
+            "g3": {
+              "name": "countries",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g3"
+              }
+            },
+            "g4": {
+              "name": "NOT_FOUND",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g4"
               }
             },
             "g5": {
-              "name": "LOG",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g5"
-              }
-            },
-            "g6": {
-              "name": "countries",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g6"
-              }
-            },
-            "g7": {
-              "name": "NOT_FOUND",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g7"
-              }
-            },
-            "g8": {
               "name": "NFD",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g8"
+                "$ref": "#/components/x-global-variables-info/g5"
               }
             }
           }
@@ -1945,28 +1945,28 @@
       "/v2/region/{region}": {
         "get": {
           "global-reads": {
-            "g4": {
+            "g0": {
               "name": "COUNTRY_FIELDS",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g4"
+                "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g5": {
+            "g1": {
               "name": "LOG",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g5"
+                "$ref": "#/components/x-global-variables-info/g1"
               }
             },
-            "g6": {
+            "g3": {
               "name": "countries",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g6"
+                "$ref": "#/components/x-global-variables-info/g3"
               }
             },
-            "g7": {
+            "g4": {
               "name": "NOT_FOUND",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g7"
+                "$ref": "#/components/x-global-variables-info/g4"
               }
             }
           }
@@ -1975,28 +1975,28 @@
       "/v2/regionalbloc/{regionalbloc}": {
         "get": {
           "global-reads": {
-            "g4": {
+            "g0": {
               "name": "COUNTRY_FIELDS",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g4"
+                "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g5": {
+            "g1": {
               "name": "LOG",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g5"
+                "$ref": "#/components/x-global-variables-info/g1"
               }
             },
-            "g6": {
+            "g3": {
               "name": "countries",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g6"
+                "$ref": "#/components/x-global-variables-info/g3"
               }
             },
-            "g7": {
+            "g4": {
               "name": "NOT_FOUND",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g7"
+                "$ref": "#/components/x-global-variables-info/g4"
               }
             }
           }
@@ -2005,28 +2005,28 @@
       "/v2/subregion/{subregion}": {
         "get": {
           "global-reads": {
-            "g4": {
+            "g0": {
               "name": "COUNTRY_FIELDS",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g4"
+                "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g5": {
+            "g1": {
               "name": "LOG",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g5"
+                "$ref": "#/components/x-global-variables-info/g1"
               }
             },
-            "g6": {
+            "g3": {
               "name": "countries",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g6"
+                "$ref": "#/components/x-global-variables-info/g3"
               }
             },
-            "g7": {
+            "g4": {
               "name": "NOT_FOUND",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g7"
+                "$ref": "#/components/x-global-variables-info/g4"
               }
             }
           }
@@ -2036,73 +2036,73 @@
     "x-endpoint-interdependence": {},
     "x-global-variables-info": {
       "g0": {
-        "name": "LOG",
+        "name": "COUNTRY_FIELDS",
         "id": "g0",
-        "defining-class": "eu.fayder.restcountries.v2.rest.StripeRest",
+        "defining-class": "eu.fayder.restcountries.v2.rest.CountryRestV2",
         "locations-of-static-assignments": [
-          "line 28, eu.fayder.restcountries.v2.rest.StripeRest"
+          "line 285, eu.fayder.restcountries.v2.rest.CountryRestV2"
         ]
       },
       "g1": {
-        "name": "BAD_REQUEST",
+        "name": "LOG",
         "id": "g1",
-        "defining-class": "javax.ws.rs.core.Response$Status"
+        "defining-class": "eu.fayder.restcountries.v2.rest.CountryRestV2",
+        "locations-of-static-assignments": [
+          "line 25, eu.fayder.restcountries.v2.rest.CountryRestV2"
+        ]
       },
       "g2": {
-        "name": "ACCEPTED",
+        "name": "BAD_REQUEST",
         "id": "g2",
         "defining-class": "javax.ws.rs.core.Response$Status"
       },
       "g3": {
-        "name": "apiKey",
-        "id": "g3",
-        "defining-class": "com.stripe.Stripe"
-      },
-      "g4": {
-        "name": "COUNTRY_FIELDS",
-        "id": "g4",
-        "defining-class": "eu.fayder.restcountries.v2.rest.CountryRest",
-        "locations-of-static-assignments": [
-          "line 285, eu.fayder.restcountries.v2.rest.CountryRest"
-        ]
-      },
-      "g5": {
-        "name": "LOG",
-        "id": "g5",
-        "defining-class": "eu.fayder.restcountries.v2.rest.CountryRest",
-        "locations-of-static-assignments": [
-          "line 25, eu.fayder.restcountries.v2.rest.CountryRest"
-        ]
-      },
-      "g6": {
         "name": "countries",
-        "id": "g6",
+        "id": "g3",
         "defining-class": "eu.fayder.restcountries.v2.rest.CountryService",
         "locations-of-static-assignments": [
           "line 131, eu.fayder.restcountries.v2.rest.CountryService"
         ]
       },
-      "g7": {
+      "g4": {
         "name": "NOT_FOUND",
+        "id": "g4",
+        "defining-class": "javax.ws.rs.core.Response$Status"
+      },
+      "g5": {
+        "name": "NFD",
+        "id": "g5",
+        "defining-class": "java.text.Normalizer$Form"
+      },
+      "g6": {
+        "name": "METHOD_NOT_ALLOWED",
+        "id": "g6",
+        "defining-class": "javax.ws.rs.core.Response$Status"
+      },
+      "g7": {
+        "name": "ACCEPTED",
         "id": "g7",
         "defining-class": "javax.ws.rs.core.Response$Status"
       },
       "g8": {
-        "name": "NFD",
+        "name": "LOG",
         "id": "g8",
-        "defining-class": "java.text.Normalizer$Form"
+        "defining-class": "eu.fayder.restcountries.v2.rest.StripeRest",
+        "locations-of-static-assignments": [
+          "line 29, eu.fayder.restcountries.v2.rest.StripeRest"
+        ]
       },
       "g9": {
-        "name": "METHOD_NOT_ALLOWED",
+        "name": "apiKey",
         "id": "g9",
-        "defining-class": "javax.ws.rs.core.Response$Status"
+        "defining-class": "com.stripe.Stripe"
       },
       "g10": {
         "name": "LOG",
         "id": "g10",
-        "defining-class": "eu.fayder.restcountries.v1.rest.CountryRest",
+        "defining-class": "eu.fayder.restcountries.v1.rest.CountryRestV1",
         "locations-of-static-assignments": [
-          "line 30, eu.fayder.restcountries.v1.rest.CountryRest"
+          "line 30, eu.fayder.restcountries.v1.rest.CountryRestV1"
         ]
       },
       "g11": {

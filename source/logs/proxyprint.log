@@ -1,161 +1,160 @@
-+ java -Djava.library.path=/home/rkh/z3//build/ -cp ./target/Respector-0.1-SNAPSHOT.jar:/home/rkh/z3//build/com.microsoft.z3.jar org.rest.Respector.AppMain.Main ../dataset//proxyprint-kitchen/target/classes/ ./generated_1//proxyprint.json
 [main] INFO org.rest.Respector.EndPointRecog.PreprocessFramework - The REST API uses Spring
 [main] INFO org.rest.Respector.AppMain.MainTransform - total # of endpoint methods detected: 68
-[main] INFO org.rest.Respector.AppMain.MainTransform - 1/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.consumer.PrintingSchemaController: java.lang.String getConsumerPrintingSchemas(long)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 1/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.ReviewController: org.springframework.http.ResponseEntity getPrintShopReviews(long)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 2/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.consumer.PrintingSchemaController: java.lang.String addNewConsumerPrintingSchema(long,io.github.proxyprint.kitchen.models.consumer.PrintingSchema)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 2/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.ReviewController: org.springframework.http.ResponseEntity addPrintShopReview(long,java.security.Principal,java.util.Map)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 3/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.consumer.PrintingSchemaController: java.lang.String deleteConsumerPrintingSchema(long,long)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 3/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.ReviewController: org.springframework.http.ResponseEntity editPrintShopReview(long,long,java.security.Principal,org.springframework.web.context.request.WebRequest)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
-[main] INFO org.rest.Respector.AppMain.MainTransform - 4/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.consumer.PrintingSchemaController: org.springframework.http.ResponseEntity editConsumerPrintingSchema(long,long,io.github.proxyprint.kitchen.models.consumer.PrintingSchema)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 4/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.ReviewController: org.springframework.http.ResponseEntity deletePrintShopReview(long,long,java.security.Principal,org.springframework.web.context.request.WebRequest)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
-[main] INFO org.rest.Respector.AppMain.MainTransform - 5/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.consumer.PrintRequestController: java.lang.String calcBudgetForPrintRequest(javax.servlet.http.HttpServletRequest,java.security.Principal,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 5/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.RegisterRequestController: org.springframework.http.ResponseEntity registerRequest(io.github.proxyprint.kitchen.models.printshops.RegisterRequest)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 6/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.consumer.PrintRequestController: java.lang.String finishAndSubmitPrintRequest(long,javax.servlet.http.HttpServletRequest,java.security.Principal)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 6/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.RegisterRequestController: java.lang.String acceptRequest(long)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 7/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.consumer.PrintRequestController: java.lang.String printDocument(javax.servlet.http.HttpServletRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 7/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.RegisterRequestController: java.lang.String rejectRequest(long,java.security.Principal,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 8/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.RegisterRequestController: org.springframework.http.ResponseEntity acceptRequest()>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 8/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.consumer.PrintRequestController: java.lang.String getDocument(long)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 9/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.consumer.PrintRequestController: java.lang.String calcBudgetForPrintRecipe(java.security.Principal,long,javax.servlet.http.HttpServletRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 10/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.consumer.PayPalController: void someRequestPaymentConfirmationFromPaylPal(long,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 11/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.consumer.PayPalController: void consumerLoadUpConfirmation(long,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 12/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.consumer.ConsumerController: java.lang.String addUser(org.springframework.web.context.request.WebRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 6 endpoint parameters in request body
-[main] INFO org.rest.Respector.AppMain.MainTransform - 13/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.consumer.ConsumerController: java.lang.String getConsumerInfo(java.security.Principal)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 14/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.consumer.ConsumerController: java.lang.String updateConsumerInfo(java.security.Principal,javax.servlet.http.HttpServletRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 15/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.consumer.ConsumerController: org.springframework.http.ResponseEntity deleteAllNotifications(java.lang.String)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 16/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.consumer.ConsumerController: org.springframework.http.ResponseEntity readAllNotifications(java.lang.String)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 17/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.consumer.ConsumerController: java.lang.String getRequests(java.security.Principal)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 18/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.consumer.ConsumerController: java.lang.String cancelRequests(long,java.security.Principal)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 19/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.consumer.ConsumerController: java.lang.String getPrintShopSatisfiedRequests(java.security.Principal)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 20/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.consumer.ConsumerController: java.lang.String getConsumerBalance(java.security.Principal)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 21/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.PriceTableController: java.lang.String addNewPaperItem(long,io.github.proxyprint.kitchen.controllers.printshops.pricetable.PaperTableItem)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 22/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.PriceTableController: java.lang.String editPaperItem(long,io.github.proxyprint.kitchen.controllers.printshops.pricetable.PaperTableItem)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 23/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.PriceTableController: java.lang.String deletePaperItem(long,io.github.proxyprint.kitchen.controllers.printshops.pricetable.PaperTableItem)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 24/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.PriceTableController: java.lang.String addNewRingsItem(long,io.github.proxyprint.kitchen.controllers.printshops.pricetable.RingTableItem)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 25/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.PriceTableController: java.lang.String editRingsItem(long,io.github.proxyprint.kitchen.controllers.printshops.pricetable.RingTableItem)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 26/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.PriceTableController: java.lang.String deleteRingItem(long,io.github.proxyprint.kitchen.controllers.printshops.pricetable.RingTableItem)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 27/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.PriceTableController: java.lang.String addNewCoverItem(long,io.github.proxyprint.kitchen.controllers.printshops.pricetable.CoverTableItem)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 28/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.PriceTableController: java.lang.String editCoverItem(long,io.github.proxyprint.kitchen.controllers.printshops.pricetable.CoverTableItem)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 29/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.PriceTableController: java.lang.String deleteCoverItem(long,io.github.proxyprint.kitchen.controllers.printshops.pricetable.CoverTableItem)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 30/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.PriceTableController: java.lang.String editStaplingPrice(long,java.lang.String)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 31/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.ManagerController: java.lang.String getEmployees(long)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 32/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.ManagerController: java.lang.String addEmployee(long,javax.servlet.http.HttpServletRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 33/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.ManagerController: java.lang.String editEmployee(long,javax.servlet.http.HttpServletRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 34/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.ManagerController: java.lang.String deleteEmployee(long,long)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
-[main] INFO org.rest.Respector.AppMain.MainTransform - 35/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.ManagerController: java.lang.String getPrintShopStatistics(java.security.Principal)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 36/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.ManagerController: java.lang.String getManagerPrintShop(java.security.Principal)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 37/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.EmployeeController: org.springframework.http.ResponseEntity getEmployees(long,java.security.Principal)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 38/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.PrintShopController: java.lang.String getNearestPrintShops(org.springframework.web.context.request.WebRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 9/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.PrintShopController: java.lang.String getNearestPrintShops(org.springframework.web.context.request.WebRequest)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 2 endpoint parameters in request body
-[main] INFO org.rest.Respector.AppMain.MainTransform - 39/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.PrintShopController: java.lang.String getPrintShopPriceTable(long)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 10/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.PrintShopController: java.lang.String getPrintShopPriceTable(long)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 40/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.PrintShopController: java.lang.String changeStatusPrintShopRequests(long,java.security.Principal)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 11/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.PrintShopController: java.lang.String changeStatusPrintShopRequests(long,java.security.Principal)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 41/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.PrintShopController: java.lang.String getPrintShopRequest(long,java.security.Principal)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 12/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.PrintShopController: java.lang.String getPrintShopRequest(long,java.security.Principal)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 42/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.PrintShopController: java.lang.String getPrintShopRequests(java.security.Principal)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 13/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.PrintShopController: java.lang.String getPrintShopRequests(java.security.Principal)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 43/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.PrintShopController: java.lang.String getPrintShopHistoryRequests(java.security.Principal)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 14/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.PrintShopController: java.lang.String getPrintShopHistoryRequests(java.security.Principal)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 44/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.PrintShopController: java.lang.String getPrintShopSatisfiedRequests(java.security.Principal)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 15/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.PrintShopController: java.lang.String getPrintShopSatisfiedRequests(java.security.Principal)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 45/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.PrintShopController: java.lang.String cancelPrintShopRequests(long,java.security.Principal,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 16/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.PrintShopController: java.lang.String cancelPrintShopRequests(long,java.security.Principal,java.lang.String)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 46/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.PrintShopController: org.springframework.http.ResponseEntity getPrintShop(long)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 17/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.PrintShopController: org.springframework.http.ResponseEntity getPrintShop(long)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 47/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.PrintShopController: org.springframework.http.ResponseEntity getPrintShops()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 18/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.PrintShopController: org.springframework.http.ResponseEntity getPrintShops()>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 48/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.ReviewController: org.springframework.http.ResponseEntity getPrintShopReviews(long)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 19/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.PriceTableController: java.lang.String addNewPaperItem(long,io.github.proxyprint.kitchen.controllers.printshops.pricetable.PaperTableItem)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 49/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.ReviewController: org.springframework.http.ResponseEntity addPrintShopReview(long,java.security.Principal,java.util.Map)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 20/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.PriceTableController: java.lang.String editPaperItem(long,io.github.proxyprint.kitchen.controllers.printshops.pricetable.PaperTableItem)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 50/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.ReviewController: org.springframework.http.ResponseEntity editPrintShopReview(long,long,java.security.Principal,org.springframework.web.context.request.WebRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 21/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.PriceTableController: java.lang.String deletePaperItem(long,io.github.proxyprint.kitchen.controllers.printshops.pricetable.PaperTableItem)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 22/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.PriceTableController: java.lang.String addNewRingsItem(long,io.github.proxyprint.kitchen.controllers.printshops.pricetable.RingTableItem)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 23/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.PriceTableController: java.lang.String editRingsItem(long,io.github.proxyprint.kitchen.controllers.printshops.pricetable.RingTableItem)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 24/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.PriceTableController: java.lang.String deleteRingItem(long,io.github.proxyprint.kitchen.controllers.printshops.pricetable.RingTableItem)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 25/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.PriceTableController: java.lang.String addNewCoverItem(long,io.github.proxyprint.kitchen.controllers.printshops.pricetable.CoverTableItem)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 26/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.PriceTableController: java.lang.String editCoverItem(long,io.github.proxyprint.kitchen.controllers.printshops.pricetable.CoverTableItem)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 27/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.PriceTableController: java.lang.String deleteCoverItem(long,io.github.proxyprint.kitchen.controllers.printshops.pricetable.CoverTableItem)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 28/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.PriceTableController: java.lang.String editStaplingPrice(long,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 29/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.ManagerController: java.lang.String getEmployees(long)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 30/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.ManagerController: java.lang.String addEmployee(long,javax.servlet.http.HttpServletRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 31/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.ManagerController: java.lang.String editEmployee(long,javax.servlet.http.HttpServletRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 32/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.ManagerController: java.lang.String deleteEmployee(long,long)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
-[main] INFO org.rest.Respector.AppMain.MainTransform - 51/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.ReviewController: org.springframework.http.ResponseEntity deletePrintShopReview(long,long,java.security.Principal,org.springframework.web.context.request.WebRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
-[main] INFO org.rest.Respector.AppMain.MainTransform - 52/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.RegisterRequestController: org.springframework.http.ResponseEntity registerRequest(io.github.proxyprint.kitchen.models.printshops.RegisterRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 33/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.ManagerController: java.lang.String getPrintShopStatistics(java.security.Principal)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 53/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.RegisterRequestController: java.lang.String acceptRequest(long)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 34/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.ManagerController: java.lang.String getManagerPrintShop(java.security.Principal)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 35/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.EmployeeController: org.springframework.http.ResponseEntity getEmployees(long,java.security.Principal)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 54/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.RegisterRequestController: java.lang.String rejectRequest(long,java.security.Principal,java.lang.String)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 55/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.printshops.RegisterRequestController: org.springframework.http.ResponseEntity acceptRequest()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 56/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.admin.AdminController: java.lang.String getPrinShopsList()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 57/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.admin.AdminController: org.springframework.http.ResponseEntity newAdmin(io.github.proxyprint.kitchen.models.Admin)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 58/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.admin.AdminController: org.springframework.http.ResponseEntity seed()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 59/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.admin.AdminController: org.springframework.http.ResponseEntity useed()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 60/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.DefaultController: org.springframework.http.ResponseEntity handleOptions()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 61/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.DefaultController: java.lang.String index(org.springframework.ui.ModelMap)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 62/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.DefaultController: java.lang.String secured(org.springframework.ui.ModelMap)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 63/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.DefaultController: java.lang.String login(org.springframework.web.context.request.WebRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 2 endpoint parameters in request body
-[main] INFO org.rest.Respector.AppMain.MainTransform - 64/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.notifications.NotificationsController: void greeting(long,org.springframework.web.context.request.WebRequest,java.security.Principal)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 36/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.notifications.NotificationsController: void greeting(long,org.springframework.web.context.request.WebRequest,java.security.Principal)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
 [main] INFO org.rest.Respector.AppMain.MainTransform - 1 endpoint parameters in request body
-[main] INFO org.rest.Respector.AppMain.MainTransform - 65/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.notifications.NotificationsController: org.springframework.http.ResponseEntity subscribe(org.springframework.web.context.request.WebRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 37/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.notifications.NotificationsController: org.springframework.http.ResponseEntity subscribe(org.springframework.web.context.request.WebRequest)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 2 endpoint parameters in request body
-[main] INFO org.rest.Respector.AppMain.MainTransform - 66/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.notifications.NotificationsController: java.util.List getConsumerNotifications(java.security.Principal)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 38/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.notifications.NotificationsController: java.util.List getConsumerNotifications(java.security.Principal)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 67/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.notifications.NotificationsController: org.springframework.http.ResponseEntity deleteNotification(long,org.springframework.web.context.request.WebRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 39/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.notifications.NotificationsController: org.springframework.http.ResponseEntity deleteNotification(long,org.springframework.web.context.request.WebRequest)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 68/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.notifications.NotificationsController: org.springframework.http.ResponseEntity readNotification(long)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 40/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.notifications.NotificationsController: org.springframework.http.ResponseEntity readNotification(long)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 41/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.consumer.PrintingSchemaController: java.lang.String getConsumerPrintingSchemas(long)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 42/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.consumer.PrintingSchemaController: java.lang.String addNewConsumerPrintingSchema(long,io.github.proxyprint.kitchen.models.consumer.PrintingSchema)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 43/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.consumer.PrintingSchemaController: java.lang.String deleteConsumerPrintingSchema(long,long)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+[main] INFO org.rest.Respector.AppMain.MainTransform - 44/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.consumer.PrintingSchemaController: org.springframework.http.ResponseEntity editConsumerPrintingSchema(long,long,io.github.proxyprint.kitchen.models.consumer.PrintingSchema)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+[main] INFO org.rest.Respector.AppMain.MainTransform - 45/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.consumer.PrintRequestController: java.lang.String calcBudgetForPrintRequest(javax.servlet.http.HttpServletRequest,java.security.Principal,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 46/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.consumer.PrintRequestController: java.lang.String finishAndSubmitPrintRequest(long,javax.servlet.http.HttpServletRequest,java.security.Principal)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 47/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.consumer.PrintRequestController: java.lang.String printDocument(javax.servlet.http.HttpServletRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 48/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.consumer.PrintRequestController: java.lang.String getDocument(long)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 49/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.consumer.PrintRequestController: java.lang.String calcBudgetForPrintRecipe(java.security.Principal,long,javax.servlet.http.HttpServletRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 50/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.consumer.PayPalController: void someRequestPaymentConfirmationFromPaylPal(long,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 51/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.consumer.PayPalController: void consumerLoadUpConfirmation(long,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 52/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.consumer.ConsumerController: java.lang.String addUser(org.springframework.web.context.request.WebRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 6 endpoint parameters in request body
+[main] INFO org.rest.Respector.AppMain.MainTransform - 53/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.consumer.ConsumerController: java.lang.String getConsumerInfo(java.security.Principal)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 54/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.consumer.ConsumerController: java.lang.String updateConsumerInfo(java.security.Principal,javax.servlet.http.HttpServletRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 55/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.consumer.ConsumerController: org.springframework.http.ResponseEntity deleteAllNotifications(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 56/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.consumer.ConsumerController: org.springframework.http.ResponseEntity readAllNotifications(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 57/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.consumer.ConsumerController: java.lang.String getRequests(java.security.Principal)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 58/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.consumer.ConsumerController: java.lang.String cancelRequests(long,java.security.Principal)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 59/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.consumer.ConsumerController: java.lang.String getPrintShopSatisfiedRequests(java.security.Principal)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 60/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.consumer.ConsumerController: java.lang.String getConsumerBalance(java.security.Principal)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 61/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.admin.AdminController: java.lang.String getPrinShopsList()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 62/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.admin.AdminController: org.springframework.http.ResponseEntity newAdmin(io.github.proxyprint.kitchen.models.Admin)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 63/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.admin.AdminController: org.springframework.http.ResponseEntity seed()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 64/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.admin.AdminController: org.springframework.http.ResponseEntity useed()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 65/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.DefaultController: org.springframework.http.ResponseEntity handleOptions()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 66/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.DefaultController: java.lang.String index(org.springframework.ui.ModelMap)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 67/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.DefaultController: java.lang.String secured(org.springframework.ui.ModelMap)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 68/68 analyzing endpoint method <io.github.proxyprint.kitchen.controllers.DefaultController: java.lang.String login(org.springframework.web.context.request.WebRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 2 endpoint parameters in request body
 
-real	6m15.949s
-user	6m42.068s
-sys	0m0.796s
+real	6m59.044s
+user	7m20.503s
+sys	0m1.547s

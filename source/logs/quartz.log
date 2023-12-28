@@ -1,15 +1,14 @@
-+ java -Djava.library.path=/home/rkh/z3//build/ -cp ./target/Respector-0.1-SNAPSHOT.jar:/home/rkh/z3//build/com.microsoft.z3.jar org.rest.Respector.AppMain.Main ../dataset//quartz-manager/quartz-manager-parent/quartz-manager-starter-api/target/classes/ ../dataset//quartz-manager/quartz-manager-parent/quartz-manager-starter-security/target/classes/ ../dataset//quartz-manager/quartz-manager-parent/quartz-manager-web-showcase/target/classes/ ./generated_1//quartz.json
 [main] INFO org.rest.Respector.EndPointRecog.PreprocessFramework - The REST API uses Spring
 [main] INFO org.rest.Respector.AppMain.MainTransform - total # of endpoint methods detected: 14
-[main] INFO org.rest.Respector.AppMain.MainTransform - 1/14 analyzing endpoint method <it.fabioformosa.quartzmanager.api.controllers.SchedulerController: it.fabioformosa.quartzmanager.api.dto.SchedulerDTO getScheduler()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 1/14 analyzing endpoint method <it.fabioformosa.quartzmanager.controllers.SessionController: void invalidateSession(javax.servlet.http.HttpSession)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 2/14 analyzing endpoint method <it.fabioformosa.quartzmanager.api.controllers.SchedulerController: void pause()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 2/14 analyzing endpoint method <it.fabioformosa.quartzmanager.controllers.SessionController: org.springframework.http.HttpEntity refreshSession(javax.servlet.http.HttpSession)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 3/14 analyzing endpoint method <it.fabioformosa.quartzmanager.api.controllers.SchedulerController: void resume()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 3/14 analyzing endpoint method <it.fabioformosa.quartzmanager.controllers.HealthCheckController: java.lang.String healthCheck()>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 4/14 analyzing endpoint method <it.fabioformosa.quartzmanager.api.controllers.SchedulerController: void run()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 4/14 analyzing endpoint method <it.fabioformosa.quartzmanager.api.security.controllers.UserController: org.springframework.http.ResponseEntity getLoggedUser()>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 5/14 analyzing endpoint method <it.fabioformosa.quartzmanager.api.controllers.SchedulerController: void stop()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 5/14 analyzing endpoint method <it.fabioformosa.quartzmanager.api.controllers.TriggerController: java.util.List listTriggers()>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 6/14 analyzing endpoint method <it.fabioformosa.quartzmanager.api.controllers.SimpleTriggerController: it.fabioformosa.quartzmanager.api.dto.SimpleTriggerDTO getSimpleTrigger(java.lang.String)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
@@ -17,19 +16,19 @@
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
 [main] INFO org.rest.Respector.AppMain.MainTransform - 8/14 analyzing endpoint method <it.fabioformosa.quartzmanager.api.controllers.SimpleTriggerController: it.fabioformosa.quartzmanager.api.dto.TriggerDTO rescheduleSimpleTrigger(java.lang.String,it.fabioformosa.quartzmanager.api.dto.SimpleTriggerInputDTO)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 9/14 analyzing endpoint method <it.fabioformosa.quartzmanager.api.controllers.JobController: java.util.List listJobs()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 9/14 analyzing endpoint method <it.fabioformosa.quartzmanager.api.controllers.SchedulerController: it.fabioformosa.quartzmanager.api.dto.SchedulerDTO getScheduler()>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 10/14 analyzing endpoint method <it.fabioformosa.quartzmanager.api.controllers.TriggerController: java.util.List listTriggers()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 10/14 analyzing endpoint method <it.fabioformosa.quartzmanager.api.controllers.SchedulerController: void pause()>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 11/14 analyzing endpoint method <it.fabioformosa.quartzmanager.api.security.controllers.UserController: org.springframework.http.ResponseEntity getLoggedUser()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 11/14 analyzing endpoint method <it.fabioformosa.quartzmanager.api.controllers.SchedulerController: void resume()>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 12/14 analyzing endpoint method <it.fabioformosa.quartzmanager.controllers.HealthCheckController: java.lang.String healthCheck()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 12/14 analyzing endpoint method <it.fabioformosa.quartzmanager.api.controllers.SchedulerController: void run()>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 13/14 analyzing endpoint method <it.fabioformosa.quartzmanager.controllers.SessionController: void invalidateSession(javax.servlet.http.HttpSession)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 13/14 analyzing endpoint method <it.fabioformosa.quartzmanager.api.controllers.SchedulerController: void stop()>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 14/14 analyzing endpoint method <it.fabioformosa.quartzmanager.controllers.SessionController: org.springframework.http.HttpEntity refreshSession(javax.servlet.http.HttpSession)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 14/14 analyzing endpoint method <it.fabioformosa.quartzmanager.api.controllers.JobController: java.util.List listJobs()>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 
-real	0m2.571s
-user	0m10.580s
-sys	0m0.296s
+real	0m3.441s
+user	0m9.873s
+sys	0m0.447s

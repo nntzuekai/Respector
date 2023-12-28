@@ -487,85 +487,85 @@
         "get": {
           "global-reads": {
             "g0": {
-              "name": "GO",
+              "name": "POSTGRESQL",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g0"
               }
             },
             "g1": {
-              "name": "CLANG",
+              "name": "CSHARP",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g1"
               }
             },
             "g2": {
-              "name": "NONE",
+              "name": "GO",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g2"
               }
             },
             "g3": {
-              "name": "MYSQL",
+              "name": "CLANG",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g3"
               }
             },
             "g4": {
-              "name": "PHP",
+              "name": "LUA",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g4"
               }
             },
             "g5": {
-              "name": "CSHARP",
+              "name": "MYSQL",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g5"
               }
             },
             "g6": {
-              "name": "SWIFT",
+              "name": "NONE",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g6"
               }
             },
             "g7": {
-              "name": "JAVASCRIPT",
+              "name": "SWIFT",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g7"
               }
             },
             "g8": {
-              "name": "JAVA",
+              "name": "Python",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g8"
               }
             },
             "g9": {
-              "name": "Python",
+              "name": "JAVA",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g9"
               }
             },
             "g10": {
-              "name": "LUA",
+              "name": "PHP",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g10"
               }
             },
             "g11": {
-              "name": "POSTGRESQL",
+              "name": "JAVASCRIPT",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g11"
               }
             },
             "g12": {
-              "name": "CPLUSPLUS",
+              "name": "RUBY",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g12"
               }
             },
             "g13": {
-              "name": "RUBY",
+              "name": "CPLUSPLUS",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g13"
               }
@@ -573,126 +573,126 @@
           },
           "global-writes": {
             "g0": {
-              "name": "GO",
+              "name": "POSTGRESQL",
               "assigned-values": [
-                "new com.urcodebin.api.enums.PasteSyntax(\"GO\", 5, \"Go\")"
+                "new com.urcodebin.api.enums.PasteSyntax(\"POSTGRESQL\", 13, \"PostgreSQL\")"
               ],
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g0"
               }
             },
             "g1": {
-              "name": "CLANG",
+              "name": "CSHARP",
               "assigned-values": [
-                "new com.urcodebin.api.enums.PasteSyntax(\"CLANG\", 6, \"C\")"
+                "new com.urcodebin.api.enums.PasteSyntax(\"CSHARP\", 2, \"C#\")"
               ],
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g1"
               }
             },
             "g2": {
-              "name": "NONE",
+              "name": "GO",
               "assigned-values": [
-                "new com.urcodebin.api.enums.PasteSyntax(\"NONE\", 0, \"None\")"
+                "new com.urcodebin.api.enums.PasteSyntax(\"GO\", 5, \"Go\")"
               ],
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g2"
               }
             },
             "g3": {
-              "name": "MYSQL",
+              "name": "CLANG",
               "assigned-values": [
-                "new com.urcodebin.api.enums.PasteSyntax(\"MYSQL\", 12, \"MySQL\")"
+                "new com.urcodebin.api.enums.PasteSyntax(\"CLANG\", 6, \"C\")"
               ],
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g3"
               }
             },
             "g4": {
-              "name": "PHP",
+              "name": "LUA",
               "assigned-values": [
-                "new com.urcodebin.api.enums.PasteSyntax(\"PHP\", 8, \"PHP\")"
+                "new com.urcodebin.api.enums.PasteSyntax(\"LUA\", 10, \"Lua\")"
               ],
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g4"
               }
             },
             "g5": {
-              "name": "CSHARP",
+              "name": "MYSQL",
               "assigned-values": [
-                "new com.urcodebin.api.enums.PasteSyntax(\"CSHARP\", 2, \"C#\")"
+                "new com.urcodebin.api.enums.PasteSyntax(\"MYSQL\", 12, \"MySQL\")"
               ],
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g5"
               }
             },
             "g6": {
-              "name": "SWIFT",
+              "name": "NONE",
               "assigned-values": [
-                "new com.urcodebin.api.enums.PasteSyntax(\"SWIFT\", 9, \"Swift\")"
+                "new com.urcodebin.api.enums.PasteSyntax(\"NONE\", 0, \"None\")"
               ],
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g6"
               }
             },
             "g7": {
-              "name": "JAVASCRIPT",
+              "name": "SWIFT",
               "assigned-values": [
-                "new com.urcodebin.api.enums.PasteSyntax(\"JAVASCRIPT\", 4, \"JavaScript\")"
+                "new com.urcodebin.api.enums.PasteSyntax(\"SWIFT\", 9, \"Swift\")"
               ],
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g7"
               }
             },
             "g8": {
-              "name": "JAVA",
+              "name": "Python",
               "assigned-values": [
-                "new com.urcodebin.api.enums.PasteSyntax(\"JAVA\", 1, \"Java\")"
+                "new com.urcodebin.api.enums.PasteSyntax(\"Python\", 3, \"Python\")"
               ],
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g8"
               }
             },
             "g9": {
-              "name": "Python",
+              "name": "JAVA",
               "assigned-values": [
-                "new com.urcodebin.api.enums.PasteSyntax(\"Python\", 3, \"Python\")"
+                "new com.urcodebin.api.enums.PasteSyntax(\"JAVA\", 1, \"Java\")"
               ],
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g9"
               }
             },
             "g10": {
-              "name": "LUA",
+              "name": "PHP",
               "assigned-values": [
-                "new com.urcodebin.api.enums.PasteSyntax(\"LUA\", 10, \"Lua\")"
+                "new com.urcodebin.api.enums.PasteSyntax(\"PHP\", 8, \"PHP\")"
               ],
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g10"
               }
             },
             "g11": {
-              "name": "POSTGRESQL",
+              "name": "JAVASCRIPT",
               "assigned-values": [
-                "new com.urcodebin.api.enums.PasteSyntax(\"POSTGRESQL\", 13, \"PostgreSQL\")"
+                "new com.urcodebin.api.enums.PasteSyntax(\"JAVASCRIPT\", 4, \"JavaScript\")"
               ],
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g11"
               }
             },
             "g12": {
-              "name": "CPLUSPLUS",
+              "name": "RUBY",
               "assigned-values": [
-                "new com.urcodebin.api.enums.PasteSyntax(\"CPLUSPLUS\", 7, \"C++\")"
+                "new com.urcodebin.api.enums.PasteSyntax(\"RUBY\", 11, \"Ruby\")"
               ],
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g12"
               }
             },
             "g13": {
-              "name": "RUBY",
+              "name": "CPLUSPLUS",
               "assigned-values": [
-                "new com.urcodebin.api.enums.PasteSyntax(\"RUBY\", 11, \"Ruby\")"
+                "new com.urcodebin.api.enums.PasteSyntax(\"CPLUSPLUS\", 7, \"C++\")"
               ],
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g13"
@@ -932,115 +932,115 @@
     },
     "x-global-variables-info": {
       "g0": {
-        "name": "GO",
-        "id": "g0",
-        "defining-class": "com.urcodebin.api.enums.PasteSyntax",
-        "locations-of-static-assignments": [
-          "line 9, com.urcodebin.api.enums.PasteSyntax"
-        ]
-      },
-      "g1": {
-        "name": "CLANG",
-        "id": "g1",
-        "defining-class": "com.urcodebin.api.enums.PasteSyntax",
-        "locations-of-static-assignments": [
-          "line 10, com.urcodebin.api.enums.PasteSyntax"
-        ]
-      },
-      "g2": {
-        "name": "NONE",
-        "id": "g2",
-        "defining-class": "com.urcodebin.api.enums.PasteSyntax",
-        "locations-of-static-assignments": [
-          "line 4, com.urcodebin.api.enums.PasteSyntax"
-        ]
-      },
-      "g3": {
-        "name": "MYSQL",
-        "id": "g3",
-        "defining-class": "com.urcodebin.api.enums.PasteSyntax",
-        "locations-of-static-assignments": [
-          "line 16, com.urcodebin.api.enums.PasteSyntax"
-        ]
-      },
-      "g4": {
-        "name": "PHP",
-        "id": "g4",
-        "defining-class": "com.urcodebin.api.enums.PasteSyntax",
-        "locations-of-static-assignments": [
-          "line 12, com.urcodebin.api.enums.PasteSyntax"
-        ]
-      },
-      "g5": {
-        "name": "CSHARP",
-        "id": "g5",
-        "defining-class": "com.urcodebin.api.enums.PasteSyntax",
-        "locations-of-static-assignments": [
-          "line 6, com.urcodebin.api.enums.PasteSyntax"
-        ]
-      },
-      "g6": {
-        "name": "SWIFT",
-        "id": "g6",
-        "defining-class": "com.urcodebin.api.enums.PasteSyntax",
-        "locations-of-static-assignments": [
-          "line 13, com.urcodebin.api.enums.PasteSyntax"
-        ]
-      },
-      "g7": {
-        "name": "JAVASCRIPT",
-        "id": "g7",
-        "defining-class": "com.urcodebin.api.enums.PasteSyntax",
-        "locations-of-static-assignments": [
-          "line 8, com.urcodebin.api.enums.PasteSyntax"
-        ]
-      },
-      "g8": {
-        "name": "JAVA",
-        "id": "g8",
-        "defining-class": "com.urcodebin.api.enums.PasteSyntax",
-        "locations-of-static-assignments": [
-          "line 5, com.urcodebin.api.enums.PasteSyntax"
-        ]
-      },
-      "g9": {
-        "name": "Python",
-        "id": "g9",
-        "defining-class": "com.urcodebin.api.enums.PasteSyntax",
-        "locations-of-static-assignments": [
-          "line 7, com.urcodebin.api.enums.PasteSyntax"
-        ]
-      },
-      "g10": {
-        "name": "LUA",
-        "id": "g10",
-        "defining-class": "com.urcodebin.api.enums.PasteSyntax",
-        "locations-of-static-assignments": [
-          "line 14, com.urcodebin.api.enums.PasteSyntax"
-        ]
-      },
-      "g11": {
         "name": "POSTGRESQL",
-        "id": "g11",
+        "id": "g0",
         "defining-class": "com.urcodebin.api.enums.PasteSyntax",
         "locations-of-static-assignments": [
           "line 17, com.urcodebin.api.enums.PasteSyntax"
         ]
       },
+      "g1": {
+        "name": "CSHARP",
+        "id": "g1",
+        "defining-class": "com.urcodebin.api.enums.PasteSyntax",
+        "locations-of-static-assignments": [
+          "line 6, com.urcodebin.api.enums.PasteSyntax"
+        ]
+      },
+      "g2": {
+        "name": "GO",
+        "id": "g2",
+        "defining-class": "com.urcodebin.api.enums.PasteSyntax",
+        "locations-of-static-assignments": [
+          "line 9, com.urcodebin.api.enums.PasteSyntax"
+        ]
+      },
+      "g3": {
+        "name": "CLANG",
+        "id": "g3",
+        "defining-class": "com.urcodebin.api.enums.PasteSyntax",
+        "locations-of-static-assignments": [
+          "line 10, com.urcodebin.api.enums.PasteSyntax"
+        ]
+      },
+      "g4": {
+        "name": "LUA",
+        "id": "g4",
+        "defining-class": "com.urcodebin.api.enums.PasteSyntax",
+        "locations-of-static-assignments": [
+          "line 14, com.urcodebin.api.enums.PasteSyntax"
+        ]
+      },
+      "g5": {
+        "name": "MYSQL",
+        "id": "g5",
+        "defining-class": "com.urcodebin.api.enums.PasteSyntax",
+        "locations-of-static-assignments": [
+          "line 16, com.urcodebin.api.enums.PasteSyntax"
+        ]
+      },
+      "g6": {
+        "name": "NONE",
+        "id": "g6",
+        "defining-class": "com.urcodebin.api.enums.PasteSyntax",
+        "locations-of-static-assignments": [
+          "line 4, com.urcodebin.api.enums.PasteSyntax"
+        ]
+      },
+      "g7": {
+        "name": "SWIFT",
+        "id": "g7",
+        "defining-class": "com.urcodebin.api.enums.PasteSyntax",
+        "locations-of-static-assignments": [
+          "line 13, com.urcodebin.api.enums.PasteSyntax"
+        ]
+      },
+      "g8": {
+        "name": "Python",
+        "id": "g8",
+        "defining-class": "com.urcodebin.api.enums.PasteSyntax",
+        "locations-of-static-assignments": [
+          "line 7, com.urcodebin.api.enums.PasteSyntax"
+        ]
+      },
+      "g9": {
+        "name": "JAVA",
+        "id": "g9",
+        "defining-class": "com.urcodebin.api.enums.PasteSyntax",
+        "locations-of-static-assignments": [
+          "line 5, com.urcodebin.api.enums.PasteSyntax"
+        ]
+      },
+      "g10": {
+        "name": "PHP",
+        "id": "g10",
+        "defining-class": "com.urcodebin.api.enums.PasteSyntax",
+        "locations-of-static-assignments": [
+          "line 12, com.urcodebin.api.enums.PasteSyntax"
+        ]
+      },
+      "g11": {
+        "name": "JAVASCRIPT",
+        "id": "g11",
+        "defining-class": "com.urcodebin.api.enums.PasteSyntax",
+        "locations-of-static-assignments": [
+          "line 8, com.urcodebin.api.enums.PasteSyntax"
+        ]
+      },
       "g12": {
-        "name": "CPLUSPLUS",
+        "name": "RUBY",
         "id": "g12",
         "defining-class": "com.urcodebin.api.enums.PasteSyntax",
         "locations-of-static-assignments": [
-          "line 11, com.urcodebin.api.enums.PasteSyntax"
+          "line 15, com.urcodebin.api.enums.PasteSyntax"
         ]
       },
       "g13": {
-        "name": "RUBY",
+        "name": "CPLUSPLUS",
         "id": "g13",
         "defining-class": "com.urcodebin.api.enums.PasteSyntax",
         "locations-of-static-assignments": [
-          "line 15, com.urcodebin.api.enums.PasteSyntax"
+          "line 11, com.urcodebin.api.enums.PasteSyntax"
         ]
       },
       "g14": {

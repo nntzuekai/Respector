@@ -14,7 +14,7 @@
     "/api/admin/attempts/{id}/userinfo": {
       "get": {
         "description": "",
-        "operationId": "em40",
+        "operationId": "em3",
         "parameters": [
           {
             "name": "id",
@@ -47,7 +47,7 @@
     "/api/attempts": {
       "get": {
         "description": "",
-        "operationId": "em34",
+        "operationId": "em29",
         "parameters": [
           {
             "name": "project",
@@ -117,7 +117,7 @@
       },
       "put": {
         "description": "",
-        "operationId": "em38",
+        "operationId": "em33",
         "parameters": [],
         "responses": {
           "200": {
@@ -139,7 +139,7 @@
     "/api/attempts/{id}": {
       "get": {
         "description": "",
-        "operationId": "em35",
+        "operationId": "em30",
         "parameters": [
           {
             "name": "id",
@@ -172,7 +172,7 @@
     "/api/attempts/{id}/kill": {
       "post": {
         "description": "",
-        "operationId": "em39",
+        "operationId": "em34",
         "parameters": [
           {
             "name": "id",
@@ -204,7 +204,7 @@
     "/api/attempts/{id}/retries": {
       "get": {
         "description": "",
-        "operationId": "em36",
+        "operationId": "em31",
         "parameters": [
           {
             "name": "id",
@@ -237,7 +237,7 @@
     "/api/attempts/{id}/tasks": {
       "get": {
         "description": "",
-        "operationId": "em37",
+        "operationId": "em32",
         "parameters": [
           {
             "name": "id",
@@ -270,7 +270,7 @@
     "/api/logs/{attempt_id}/files": {
       "get": {
         "description": "",
-        "operationId": "em32",
+        "operationId": "em27",
         "parameters": [
           {
             "name": "attempt_id",
@@ -319,7 +319,7 @@
     "/api/logs/{attempt_id}/files/{file_name}": {
       "get": {
         "description": "",
-        "operationId": "em33",
+        "operationId": "em28",
         "parameters": [
           {
             "name": "attempt_id",
@@ -362,7 +362,7 @@
     "/api/project": {
       "get": {
         "description": "",
-        "operationId": "em17",
+        "operationId": "em4",
         "parameters": [
           {
             "name": "name",
@@ -394,7 +394,7 @@
     "/api/projects": {
       "get": {
         "description": "",
-        "operationId": "em18",
+        "operationId": "em5",
         "parameters": [
           {
             "name": "name",
@@ -450,7 +450,7 @@
       },
       "put": {
         "description": "",
-        "operationId": "em28",
+        "operationId": "em15",
         "parameters": [
           {
             "name": "project",
@@ -507,7 +507,7 @@
     "/api/projects/{id}": {
       "delete": {
         "description": "",
-        "operationId": "em27",
+        "operationId": "em14",
         "parameters": [
           {
             "name": "id",
@@ -538,7 +538,7 @@
       },
       "get": {
         "description": "",
-        "operationId": "em19",
+        "operationId": "em6",
         "parameters": [
           {
             "name": "id",
@@ -571,7 +571,7 @@
     "/api/projects/{id}/archive": {
       "get": {
         "description": "",
-        "operationId": "em26",
+        "operationId": "em13",
         "parameters": [
           {
             "name": "id",
@@ -619,7 +619,7 @@
     "/api/projects/{id}/revisions": {
       "get": {
         "description": "",
-        "operationId": "em20",
+        "operationId": "em7",
         "parameters": [
           {
             "name": "id",
@@ -669,7 +669,7 @@
     "/api/projects/{id}/schedules": {
       "get": {
         "description": "",
-        "operationId": "em24",
+        "operationId": "em11",
         "parameters": [
           {
             "name": "id",
@@ -719,7 +719,7 @@
     "/api/projects/{id}/secrets": {
       "get": {
         "description": "",
-        "operationId": "em31",
+        "operationId": "em18",
         "parameters": [
           {
             "name": "id",
@@ -752,7 +752,7 @@
     "/api/projects/{id}/secrets/{key}": {
       "delete": {
         "description": "",
-        "operationId": "em30",
+        "operationId": "em17",
         "parameters": [
           {
             "name": "id",
@@ -791,7 +791,7 @@
       },
       "put": {
         "description": "",
-        "operationId": "em29",
+        "operationId": "em16",
         "parameters": [
           {
             "name": "id",
@@ -832,7 +832,7 @@
     "/api/projects/{id}/sessions": {
       "get": {
         "description": "",
-        "operationId": "em25",
+        "operationId": "em12",
         "parameters": [
           {
             "name": "id",
@@ -897,7 +897,7 @@
     "/api/projects/{id}/workflow": {
       "get": {
         "description": "",
-        "operationId": "em21",
+        "operationId": "em8",
         "parameters": [
           {
             "name": "id",
@@ -946,7 +946,7 @@
     "/api/projects/{id}/workflows": {
       "get": {
         "description": "",
-        "operationId": "em23",
+        "operationId": "em10",
         "parameters": [
           {
             "name": "id",
@@ -995,7 +995,7 @@
     "/api/projects/{id}/workflows/{name}": {
       "get": {
         "description": "",
-        "operationId": "em22",
+        "operationId": "em9",
         "parameters": [
           {
             "name": "id",
@@ -1044,7 +1044,7 @@
     "/api/schedules": {
       "get": {
         "description": "",
-        "operationId": "em11",
+        "operationId": "em21",
         "parameters": [
           {
             "name": "last_id",
@@ -1077,7 +1077,7 @@
     "/api/schedules/{id}": {
       "get": {
         "description": "",
-        "operationId": "em12",
+        "operationId": "em22",
         "parameters": [
           {
             "name": "id",
@@ -1110,7 +1110,7 @@
     "/api/schedules/{id}/backfill": {
       "post": {
         "description": "",
-        "operationId": "em14",
+        "operationId": "em24",
         "parameters": [
           {
             "name": "id",
@@ -1143,7 +1143,7 @@
     "/api/schedules/{id}/disable": {
       "post": {
         "description": "",
-        "operationId": "em15",
+        "operationId": "em25",
         "parameters": [
           {
             "name": "id",
@@ -1176,7 +1176,7 @@
     "/api/schedules/{id}/enable": {
       "post": {
         "description": "",
-        "operationId": "em16",
+        "operationId": "em26",
         "parameters": [
           {
             "name": "id",
@@ -1209,7 +1209,7 @@
     "/api/schedules/{id}/skip": {
       "post": {
         "description": "",
-        "operationId": "em13",
+        "operationId": "em23",
         "parameters": [
           {
             "name": "id",
@@ -1242,7 +1242,7 @@
     "/api/sessions": {
       "get": {
         "description": "",
-        "operationId": "em8",
+        "operationId": "em0",
         "parameters": [
           {
             "name": "last_id",
@@ -1290,7 +1290,7 @@
     "/api/sessions/{id}": {
       "get": {
         "description": "",
-        "operationId": "em9",
+        "operationId": "em1",
         "parameters": [
           {
             "name": "id",
@@ -1323,7 +1323,7 @@
     "/api/sessions/{id}/attempts": {
       "get": {
         "description": "",
-        "operationId": "em10",
+        "operationId": "em2",
         "parameters": [
           {
             "name": "id",
@@ -1380,7 +1380,7 @@
     "/api/version": {
       "get": {
         "description": "",
-        "operationId": "em4",
+        "operationId": "em19",
         "parameters": [],
         "responses": {
           "200": {
@@ -1402,7 +1402,7 @@
     "/api/version/check": {
       "get": {
         "description": "",
-        "operationId": "em5",
+        "operationId": "em20",
         "parameters": [
           {
             "name": "client",
@@ -1434,7 +1434,7 @@
     "/api/workflow": {
       "get": {
         "description": "",
-        "operationId": "em0",
+        "operationId": "em37",
         "parameters": [
           {
             "name": "project",
@@ -1482,7 +1482,7 @@
     "/api/workflows": {
       "get": {
         "description": "",
-        "operationId": "em1",
+        "operationId": "em38",
         "parameters": [
           {
             "name": "last_id",
@@ -1550,7 +1550,7 @@
     "/api/workflows/{id}": {
       "get": {
         "description": "",
-        "operationId": "em2",
+        "operationId": "em39",
         "parameters": [
           {
             "name": "id",
@@ -1583,7 +1583,7 @@
     "/api/workflows/{id}/truncated_session_time": {
       "get": {
         "description": "",
-        "operationId": "em3",
+        "operationId": "em40",
         "parameters": [
           {
             "name": "id",
@@ -1632,7 +1632,7 @@
     "/assets/{path}": {
       "get": {
         "description": "",
-        "operationId": "em6",
+        "operationId": "em35",
         "parameters": [
           {
             "name": "path",
@@ -1666,7 +1666,7 @@
     "/{path}": {
       "get": {
         "description": "",
-        "operationId": "em7",
+        "operationId": "em36",
         "parameters": [
           {
             "name": "path",

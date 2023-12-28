@@ -14,7 +14,7 @@
     "/": {
       "get": {
         "description": "",
-        "operationId": "em2",
+        "operationId": "em11",
         "parameters": [],
         "responses": {
           "200": {
@@ -39,7 +39,7 @@
     "/quartz-manager/auth/whoami": {
       "get": {
         "description": "",
-        "operationId": "em3",
+        "operationId": "em10",
         "parameters": [],
         "responses": {
           "200": {
@@ -68,7 +68,7 @@
     "/quartz-manager/jobs": {
       "get": {
         "description": "",
-        "operationId": "em13",
+        "operationId": "em8",
         "parameters": [],
         "responses": {
           "200": {
@@ -93,7 +93,7 @@
     "/quartz-manager/scheduler": {
       "get": {
         "description": "",
-        "operationId": "em8",
+        "operationId": "em0",
         "parameters": [],
         "responses": {
           "200": {
@@ -138,7 +138,7 @@
     "/quartz-manager/scheduler/pause": {
       "get": {
         "description": "",
-        "operationId": "em9",
+        "operationId": "em1",
         "parameters": [],
         "responses": {
           "204": {
@@ -156,7 +156,7 @@
     "/quartz-manager/scheduler/resume": {
       "get": {
         "description": "",
-        "operationId": "em10",
+        "operationId": "em2",
         "parameters": [],
         "responses": {
           "204": {
@@ -174,7 +174,7 @@
     "/quartz-manager/scheduler/run": {
       "get": {
         "description": "",
-        "operationId": "em11",
+        "operationId": "em3",
         "parameters": [],
         "responses": {
           "204": {
@@ -192,7 +192,7 @@
     "/quartz-manager/scheduler/stop": {
       "get": {
         "description": "",
-        "operationId": "em12",
+        "operationId": "em4",
         "parameters": [],
         "responses": {
           "204": {
@@ -405,7 +405,7 @@
     "/quartz-manager/triggers": {
       "get": {
         "description": "",
-        "operationId": "em4",
+        "operationId": "em9",
         "parameters": [],
         "responses": {
           "200": {
@@ -430,7 +430,7 @@
     "/session/invalidate": {
       "get": {
         "description": "",
-        "operationId": "em0",
+        "operationId": "em12",
         "parameters": [],
         "responses": {
           "204": {
@@ -445,7 +445,7 @@
     "/session/refresh": {
       "get": {
         "description": "",
-        "operationId": "em1",
+        "operationId": "em13",
         "parameters": [],
         "responses": {
           "200": {
@@ -466,10 +466,10 @@
       "/": {
         "get": {
           "global-reads": {
-            "g1": {
+            "g4": {
               "name": "log",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
+                "$ref": "#/components/x-global-variables-info/g4"
               }
             }
           }
@@ -478,16 +478,16 @@
       "/quartz-manager/auth/whoami": {
         "get": {
           "global-reads": {
-            "g0": {
-              "name": "OK",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g0"
-              }
-            },
             "g2": {
               "name": "NOT_FOUND",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g2"
+              }
+            },
+            "g3": {
+              "name": "OK",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g3"
               }
             }
           }
@@ -496,10 +496,10 @@
       "/quartz-manager/scheduler": {
         "get": {
           "global-reads": {
-            "g4": {
+            "g0": {
               "name": "log",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g4"
+                "$ref": "#/components/x-global-variables-info/g0"
               }
             }
           }
@@ -508,10 +508,10 @@
       "/quartz-manager/scheduler/pause": {
         "get": {
           "global-reads": {
-            "g4": {
+            "g0": {
               "name": "log",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g4"
+                "$ref": "#/components/x-global-variables-info/g0"
               }
             }
           }
@@ -520,10 +520,10 @@
       "/quartz-manager/scheduler/resume": {
         "get": {
           "global-reads": {
-            "g4": {
+            "g0": {
               "name": "log",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g4"
+                "$ref": "#/components/x-global-variables-info/g0"
               }
             }
           }
@@ -532,10 +532,10 @@
       "/quartz-manager/scheduler/run": {
         "get": {
           "global-reads": {
-            "g4": {
+            "g0": {
               "name": "log",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g4"
+                "$ref": "#/components/x-global-variables-info/g0"
               }
             }
           }
@@ -544,10 +544,10 @@
       "/quartz-manager/scheduler/stop": {
         "get": {
           "global-reads": {
-            "g4": {
+            "g0": {
               "name": "log",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g4"
+                "$ref": "#/components/x-global-variables-info/g0"
               }
             }
           }
@@ -561,20 +561,20 @@
         },
         "post": {
           "global-reads": {
-            "g3": {
+            "g1": {
               "name": "log",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g3"
+                "$ref": "#/components/x-global-variables-info/g1"
               }
             }
           }
         },
         "put": {
           "global-reads": {
-            "g3": {
+            "g1": {
               "name": "log",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g3"
+                "$ref": "#/components/x-global-variables-info/g1"
               }
             }
           }
@@ -583,10 +583,10 @@
       "/session/refresh": {
         "get": {
           "global-reads": {
-            "g0": {
+            "g3": {
               "name": "OK",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g0"
+                "$ref": "#/components/x-global-variables-info/g3"
               }
             }
           }
@@ -596,16 +596,19 @@
     "x-endpoint-interdependence": {},
     "x-global-variables-info": {
       "g0": {
-        "name": "OK",
+        "name": "log",
         "id": "g0",
-        "defining-class": "org.springframework.http.HttpStatus"
+        "defining-class": "it.fabioformosa.quartzmanager.api.controllers.SchedulerController",
+        "locations-of-static-assignments": [
+          "line 28, it.fabioformosa.quartzmanager.api.controllers.SchedulerController"
+        ]
       },
       "g1": {
         "name": "log",
         "id": "g1",
-        "defining-class": "it.fabioformosa.quartzmanager.controllers.HealthCheckController",
+        "defining-class": "it.fabioformosa.quartzmanager.api.controllers.SimpleTriggerController",
         "locations-of-static-assignments": [
-          "line 13, it.fabioformosa.quartzmanager.controllers.HealthCheckController"
+          "line 24, it.fabioformosa.quartzmanager.api.controllers.SimpleTriggerController"
         ]
       },
       "g2": {
@@ -614,19 +617,16 @@
         "defining-class": "org.springframework.http.HttpStatus"
       },
       "g3": {
-        "name": "log",
+        "name": "OK",
         "id": "g3",
-        "defining-class": "it.fabioformosa.quartzmanager.api.controllers.SimpleTriggerController",
-        "locations-of-static-assignments": [
-          "line 24, it.fabioformosa.quartzmanager.api.controllers.SimpleTriggerController"
-        ]
+        "defining-class": "org.springframework.http.HttpStatus"
       },
       "g4": {
         "name": "log",
         "id": "g4",
-        "defining-class": "it.fabioformosa.quartzmanager.api.controllers.SchedulerController",
+        "defining-class": "it.fabioformosa.quartzmanager.controllers.HealthCheckController",
         "locations-of-static-assignments": [
-          "line 28, it.fabioformosa.quartzmanager.api.controllers.SchedulerController"
+          "line 13, it.fabioformosa.quartzmanager.controllers.HealthCheckController"
         ]
       }
     }

@@ -1,201 +1,200 @@
-+ java -Djava.library.path=/home/rkh/z3//build/ -cp ./target/Respector-0.1-SNAPSHOT.jar:/home/rkh/z3//build/com.microsoft.z3.jar org.rest.Respector.AppMain.Main ../dataset//enviroCar-server/rest/target/classes/ ./generated_1//enviro.json
 [main] INFO org.rest.Respector.EndPointRecog.PreprocessFramework - The REST API uses JAX
 [main] ERROR org.rest.Respector.EndPointRecog.PreprocessFramework - method <org.envirocar.server.rest.resources.RootResource: org.envirocar.server.rest.resources.RootResource redirect()> returns its own class org.envirocar.server.rest.resources.RootResource
 [main] INFO org.rest.Respector.AppMain.MainTransform - total # of endpoint methods detected: 114
-[main] INFO org.rest.Respector.AppMain.MainTransform - 1/114 analyzing endpoint method <org.envirocar.server.rest.resources.TermsOfUseInstanceResource: org.envirocar.server.core.entities.TermsOfUseInstance get()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 1/114 analyzing endpoint method <org.envirocar.server.rest.resources.UsersResource: org.envirocar.server.core.entities.Users get()>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 2/114 analyzing endpoint method <org.envirocar.server.rest.resources.UsersResource: org.envirocar.server.core.entities.Users get()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 2/114 analyzing endpoint method <org.envirocar.server.rest.resources.UsersResource: javax.ws.rs.core.Response create(org.envirocar.server.core.entities.User)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 3/114 analyzing endpoint method <org.envirocar.server.rest.resources.UsersResource: javax.ws.rs.core.Response create(org.envirocar.server.core.entities.User)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 3/114 analyzing endpoint method <org.envirocar.server.rest.resources.UsersResource: org.envirocar.server.rest.resources.UserResource user(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 4/114 analyzing endpoint method <org.envirocar.server.rest.resources.UserStatisticResource: org.envirocar.server.core.entities.UserStatistic UserStatistics()>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 4/114 analyzing endpoint method <org.envirocar.server.rest.resources.UsersResource: org.envirocar.server.rest.resources.UserResource user(java.lang.String)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 5/114 analyzing endpoint method <org.envirocar.server.rest.resources.SensorsResource: org.envirocar.server.core.entities.Sensors get(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 5/114 analyzing endpoint method <org.envirocar.server.rest.resources.UserResource: javax.ws.rs.core.Response modify(org.envirocar.server.core.entities.User)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 6/114 analyzing endpoint method <org.envirocar.server.rest.resources.UserResource: org.envirocar.server.core.entities.User get()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 7/114 analyzing endpoint method <org.envirocar.server.rest.resources.UserResource: void delete(boolean)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 6/114 analyzing endpoint method <org.envirocar.server.rest.resources.SensorsResource: javax.ws.rs.core.Response create(org.envirocar.server.core.entities.Sensor)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 7/114 analyzing endpoint method <org.envirocar.server.rest.resources.SensorsResource: org.envirocar.server.rest.resources.SensorResource sensor(java.lang.String)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 8/114 analyzing endpoint method <org.envirocar.server.rest.resources.StatisticResource: org.envirocar.server.core.statistics.Statistic get()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 9/114 analyzing endpoint method <org.envirocar.server.rest.resources.TermsOfUseResource: org.envirocar.server.core.entities.TermsOfUse get()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 10/114 analyzing endpoint method <org.envirocar.server.rest.resources.TermsOfUseResource: org.envirocar.server.rest.resources.TermsOfUseInstanceResource termsOfUseInstance(java.lang.String)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 11/114 analyzing endpoint method <org.envirocar.server.rest.resources.PrivacyStatementsResource: org.envirocar.server.core.entities.PrivacyStatements get()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 12/114 analyzing endpoint method <org.envirocar.server.rest.resources.PrivacyStatementsResource: org.envirocar.server.rest.resources.PrivacyStatementResource privacyStatement(java.lang.String)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 13/114 analyzing endpoint method <org.envirocar.server.rest.resources.JsonSchemaResource: com.fasterxml.jackson.databind.JsonNode get()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 14/114 analyzing endpoint method <org.envirocar.server.rest.resources.JsonSchemaResource: com.fasterxml.jackson.databind.JsonNode get(java.lang.String)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 15/114 analyzing endpoint method <org.envirocar.server.rest.resources.BadgesResource: org.envirocar.server.core.entities.Badges get()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 16/114 analyzing endpoint method <org.envirocar.server.rest.resources.SensorResource: org.envirocar.server.core.entities.Sensor get()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 17/114 analyzing endpoint method <org.envirocar.server.rest.resources.SensorResource: org.envirocar.server.rest.resources.StatisticsResource statistics()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 18/114 analyzing endpoint method <org.envirocar.server.rest.resources.PhenomenonsResource: org.envirocar.server.core.entities.Phenomenons get()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 19/114 analyzing endpoint method <org.envirocar.server.rest.resources.PhenomenonsResource: javax.ws.rs.core.Response create(org.envirocar.server.core.entities.Phenomenon)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 20/114 analyzing endpoint method <org.envirocar.server.rest.resources.PhenomenonsResource: org.envirocar.server.rest.resources.PhenomenonResource phenomenon(java.lang.String)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 21/114 analyzing endpoint method <org.envirocar.server.rest.resources.MeasurementResource: org.envirocar.server.core.entities.Measurement get()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 22/114 analyzing endpoint method <org.envirocar.server.rest.resources.MeasurementResource: void delete()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 23/114 analyzing endpoint method <org.envirocar.server.rest.resources.MeasurementResource: org.envirocar.server.rest.resources.SensorResource sensor()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 24/114 analyzing endpoint method <org.envirocar.server.rest.resources.GroupsResource: org.envirocar.server.core.entities.Groups get(java.lang.String)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 25/114 analyzing endpoint method <org.envirocar.server.rest.resources.GroupsResource: javax.ws.rs.core.Response createGroup(org.envirocar.server.core.entities.Group)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 26/114 analyzing endpoint method <org.envirocar.server.rest.resources.GroupsResource: org.envirocar.server.rest.resources.GroupResource group(java.lang.String)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 27/114 analyzing endpoint method <org.envirocar.server.rest.resources.FuelingsResource: org.envirocar.server.core.entities.Fuelings getAll()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 28/114 analyzing endpoint method <org.envirocar.server.rest.resources.FuelingsResource: javax.ws.rs.core.Response create(org.envirocar.server.core.entities.Fueling)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 29/114 analyzing endpoint method <org.envirocar.server.rest.resources.FuelingsResource: org.envirocar.server.core.entities.Fueling getFueling(java.lang.String)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 30/114 analyzing endpoint method <org.envirocar.server.rest.resources.FuelingsResource: void delete(java.lang.String)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 31/114 analyzing endpoint method <org.envirocar.server.rest.resources.UserResource: javax.ws.rs.core.Response modify(org.envirocar.server.core.entities.User)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 32/114 analyzing endpoint method <org.envirocar.server.rest.resources.UserResource: org.envirocar.server.core.entities.User get()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 33/114 analyzing endpoint method <org.envirocar.server.rest.resources.UserResource: void delete(boolean)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 34/114 analyzing endpoint method <org.envirocar.server.rest.resources.UserResource: org.envirocar.server.rest.resources.FriendsResource friends()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 35/114 analyzing endpoint method <org.envirocar.server.rest.resources.UserResource: org.envirocar.server.rest.resources.GroupsResource groups()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 36/114 analyzing endpoint method <org.envirocar.server.rest.resources.UserResource: org.envirocar.server.rest.resources.TracksResource tracks()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 37/114 analyzing endpoint method <org.envirocar.server.rest.resources.UserResource: org.envirocar.server.rest.resources.MeasurementsResource measurements()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 38/114 analyzing endpoint method <org.envirocar.server.rest.resources.UserResource: org.envirocar.server.rest.resources.StatisticsResource statistics()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 39/114 analyzing endpoint method <org.envirocar.server.rest.resources.UserResource: org.envirocar.server.rest.resources.UserStatisticResource userStatistic()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 40/114 analyzing endpoint method <org.envirocar.server.rest.resources.UserResource: org.envirocar.server.rest.resources.ActivitiesResource activities()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 41/114 analyzing endpoint method <org.envirocar.server.rest.resources.UserResource: org.envirocar.server.rest.resources.FriendsActivitiesResource friendActivities()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 42/114 analyzing endpoint method <org.envirocar.server.rest.resources.UserResource: org.envirocar.server.rest.resources.AvatarResource avatar()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 43/114 analyzing endpoint method <org.envirocar.server.rest.resources.UserResource: org.envirocar.server.rest.resources.FuelingsResource fuelings()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 44/114 analyzing endpoint method <org.envirocar.server.rest.resources.UserResource: org.envirocar.server.rest.resources.SensorsResource sensors()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 45/114 analyzing endpoint method <org.envirocar.server.rest.resources.StatisticsResource: org.envirocar.server.core.statistics.Statistics statistics()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 46/114 analyzing endpoint method <org.envirocar.server.rest.resources.StatisticsResource: org.envirocar.server.rest.resources.StatisticResource statistics(java.lang.String)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 47/114 analyzing endpoint method <org.envirocar.server.rest.resources.ActivitiesResource: org.envirocar.server.core.activities.Activities activities(org.envirocar.server.core.activities.ActivityType)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 48/114 analyzing endpoint method <org.envirocar.server.rest.resources.ActivitiesResource: org.envirocar.server.core.activities.Activity activity(java.lang.String)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 49/114 analyzing endpoint method <org.envirocar.server.rest.resources.GroupMembersResource: org.envirocar.server.core.entities.Users get()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 50/114 analyzing endpoint method <org.envirocar.server.rest.resources.GroupMembersResource: void add(org.envirocar.server.rest.UserReference)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 51/114 analyzing endpoint method <org.envirocar.server.rest.resources.GroupMembersResource: org.envirocar.server.rest.resources.GroupMemberResource member(java.lang.String)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 52/114 analyzing endpoint method <org.envirocar.server.rest.resources.FriendsResource: org.envirocar.server.core.entities.Users get()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 53/114 analyzing endpoint method <org.envirocar.server.rest.resources.FriendsResource: void add(org.envirocar.server.rest.UserReference)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 54/114 analyzing endpoint method <org.envirocar.server.rest.resources.FriendsResource: org.envirocar.server.rest.resources.FriendResource friend(java.lang.String)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 55/114 analyzing endpoint method <org.envirocar.server.rest.resources.FriendsResource: org.envirocar.server.core.entities.Users pendingIncomingFriendRequests()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 56/114 analyzing endpoint method <org.envirocar.server.rest.resources.FriendsResource: org.envirocar.server.core.entities.Users pendingOutgoingFriendRequests()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 57/114 analyzing endpoint method <org.envirocar.server.rest.resources.FriendsResource: void decline(org.envirocar.server.rest.UserReference)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 58/114 analyzing endpoint method <org.envirocar.server.rest.resources.ShareResource: javax.ws.rs.core.Response getShareImage()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 59/114 analyzing endpoint method <org.envirocar.server.rest.resources.ShareResource: javax.ws.rs.core.Response getLocalizedShareImage(java.lang.String)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 60/114 analyzing endpoint method <org.envirocar.server.rest.resources.PreviewResource: javax.ws.rs.core.Response getMapImage()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 61/114 analyzing endpoint method <org.envirocar.server.rest.resources.FriendResource: void delete(boolean)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 62/114 analyzing endpoint method <org.envirocar.server.rest.resources.TracksResource: org.envirocar.server.core.entities.Tracks get(org.envirocar.server.rest.BoundingBox,org.envirocar.server.core.entities.TrackStatus)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 8/114 analyzing endpoint method <org.envirocar.server.rest.resources.UserResource: org.envirocar.server.rest.resources.FriendsResource friends()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 9/114 analyzing endpoint method <org.envirocar.server.rest.resources.UserResource: org.envirocar.server.rest.resources.GroupsResource groups()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 10/114 analyzing endpoint method <org.envirocar.server.rest.resources.UserResource: org.envirocar.server.rest.resources.TracksResource tracks()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 11/114 analyzing endpoint method <org.envirocar.server.rest.resources.UserResource: org.envirocar.server.rest.resources.MeasurementsResource measurements()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 12/114 analyzing endpoint method <org.envirocar.server.rest.resources.UserResource: org.envirocar.server.rest.resources.StatisticsResource statistics()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 13/114 analyzing endpoint method <org.envirocar.server.rest.resources.UserResource: org.envirocar.server.rest.resources.UserStatisticResource userStatistic()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 14/114 analyzing endpoint method <org.envirocar.server.rest.resources.UserResource: org.envirocar.server.rest.resources.ActivitiesResource activities()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 15/114 analyzing endpoint method <org.envirocar.server.rest.resources.UserResource: org.envirocar.server.rest.resources.FriendsActivitiesResource friendActivities()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 16/114 analyzing endpoint method <org.envirocar.server.rest.resources.UserResource: org.envirocar.server.rest.resources.AvatarResource avatar()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 17/114 analyzing endpoint method <org.envirocar.server.rest.resources.UserResource: org.envirocar.server.rest.resources.FuelingsResource fuelings()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 18/114 analyzing endpoint method <org.envirocar.server.rest.resources.UserResource: org.envirocar.server.rest.resources.SensorsResource sensors()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 19/114 analyzing endpoint method <org.envirocar.server.rest.resources.TracksResource: org.envirocar.server.core.entities.Tracks get(org.envirocar.server.rest.BoundingBox,org.envirocar.server.core.entities.TrackStatus)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
-[main] INFO org.rest.Respector.AppMain.MainTransform - 63/114 analyzing endpoint method <org.envirocar.server.rest.resources.TracksResource: javax.ws.rs.core.Response create(org.envirocar.server.core.entities.Track)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 20/114 analyzing endpoint method <org.envirocar.server.rest.resources.TracksResource: javax.ws.rs.core.Response create(org.envirocar.server.core.entities.Track)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 64/114 analyzing endpoint method <org.envirocar.server.rest.resources.TracksResource: org.envirocar.server.rest.resources.TrackResource track(java.lang.String)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 65/114 analyzing endpoint method <org.envirocar.server.rest.resources.ApiDocsResource: com.fasterxml.jackson.databind.JsonNode get()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 21/114 analyzing endpoint method <org.envirocar.server.rest.resources.TracksResource: org.envirocar.server.rest.resources.TrackResource track(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 22/114 analyzing endpoint method <org.envirocar.server.rest.resources.TrackResource: void modify(org.envirocar.server.core.entities.Track)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 66/114 analyzing endpoint method <org.envirocar.server.rest.resources.ApiDocsResource: javax.ws.rs.core.Response ui()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 67/114 analyzing endpoint method <org.envirocar.server.rest.resources.ApiDocsResource: javax.ws.rs.core.Response ui(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 23/114 analyzing endpoint method <org.envirocar.server.rest.resources.TrackResource: org.envirocar.server.core.entities.Track get()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 24/114 analyzing endpoint method <org.envirocar.server.rest.resources.TrackResource: void delete()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 25/114 analyzing endpoint method <org.envirocar.server.rest.resources.TrackResource: org.envirocar.server.rest.resources.MeasurementsResource measurements()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 26/114 analyzing endpoint method <org.envirocar.server.rest.resources.TrackResource: org.envirocar.server.rest.resources.SensorResource sensor()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 27/114 analyzing endpoint method <org.envirocar.server.rest.resources.TrackResource: org.envirocar.server.rest.resources.StatisticsResource statistics()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 28/114 analyzing endpoint method <org.envirocar.server.rest.resources.TrackResource: org.envirocar.server.rest.resources.ShareResource share()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 29/114 analyzing endpoint method <org.envirocar.server.rest.resources.TrackResource: org.envirocar.server.rest.resources.PreviewResource preview()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 30/114 analyzing endpoint method <org.envirocar.server.rest.resources.TermsOfUseResource: org.envirocar.server.core.entities.TermsOfUse get()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 31/114 analyzing endpoint method <org.envirocar.server.rest.resources.TermsOfUseResource: org.envirocar.server.rest.resources.TermsOfUseInstanceResource termsOfUseInstance(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 32/114 analyzing endpoint method <org.envirocar.server.rest.resources.TermsOfUseInstanceResource: org.envirocar.server.core.entities.TermsOfUseInstance get()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 33/114 analyzing endpoint method <org.envirocar.server.rest.resources.StatisticsResource: org.envirocar.server.core.statistics.Statistics statistics()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 34/114 analyzing endpoint method <org.envirocar.server.rest.resources.StatisticsResource: org.envirocar.server.rest.resources.StatisticResource statistics(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 35/114 analyzing endpoint method <org.envirocar.server.rest.resources.StatisticResource: org.envirocar.server.core.statistics.Statistic get()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 36/114 analyzing endpoint method <org.envirocar.server.rest.resources.ShareResource: javax.ws.rs.core.Response getShareImage()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 37/114 analyzing endpoint method <org.envirocar.server.rest.resources.ShareResource: javax.ws.rs.core.Response getLocalizedShareImage(java.lang.String)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 68/114 analyzing endpoint method <org.envirocar.server.rest.resources.PrivacyStatementResource: org.envirocar.server.core.entities.PrivacyStatement get()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 69/114 analyzing endpoint method <org.envirocar.server.rest.resources.TrackResource: void modify(org.envirocar.server.core.entities.Track)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 70/114 analyzing endpoint method <org.envirocar.server.rest.resources.TrackResource: org.envirocar.server.core.entities.Track get()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 71/114 analyzing endpoint method <org.envirocar.server.rest.resources.TrackResource: void delete()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 72/114 analyzing endpoint method <org.envirocar.server.rest.resources.TrackResource: org.envirocar.server.rest.resources.MeasurementsResource measurements()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 73/114 analyzing endpoint method <org.envirocar.server.rest.resources.TrackResource: org.envirocar.server.rest.resources.SensorResource sensor()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 74/114 analyzing endpoint method <org.envirocar.server.rest.resources.TrackResource: org.envirocar.server.rest.resources.StatisticsResource statistics()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 75/114 analyzing endpoint method <org.envirocar.server.rest.resources.TrackResource: org.envirocar.server.rest.resources.ShareResource share()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 76/114 analyzing endpoint method <org.envirocar.server.rest.resources.TrackResource: org.envirocar.server.rest.resources.PreviewResource preview()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 77/114 analyzing endpoint method <org.envirocar.server.rest.resources.FriendsActivitiesResource: org.envirocar.server.core.activities.Activities activities(org.envirocar.server.core.activities.ActivityType)>
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 38/114 analyzing endpoint method <org.envirocar.server.rest.resources.SensorsResource: org.envirocar.server.core.entities.Sensors get(java.lang.String)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 78/114 analyzing endpoint method <org.envirocar.server.rest.resources.FriendsActivitiesResource: org.envirocar.server.core.activities.Activity activity(java.lang.String)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 79/114 analyzing endpoint method <org.envirocar.server.rest.resources.MeasurementsResource: org.envirocar.server.core.entities.Measurements get(org.envirocar.server.rest.BoundingBox,org.envirocar.server.rest.NearPoint)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 39/114 analyzing endpoint method <org.envirocar.server.rest.resources.SensorsResource: javax.ws.rs.core.Response create(org.envirocar.server.core.entities.Sensor)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 40/114 analyzing endpoint method <org.envirocar.server.rest.resources.SensorsResource: org.envirocar.server.rest.resources.SensorResource sensor(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 41/114 analyzing endpoint method <org.envirocar.server.rest.resources.SensorResource: org.envirocar.server.core.entities.Sensor get()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 42/114 analyzing endpoint method <org.envirocar.server.rest.resources.SensorResource: org.envirocar.server.rest.resources.StatisticsResource statistics()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 43/114 analyzing endpoint method <org.envirocar.server.rest.resources.RootResource: com.fasterxml.jackson.databind.JsonNode get()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 44/114 analyzing endpoint method <org.envirocar.server.rest.resources.RootResource: org.envirocar.server.rest.resources.UsersResource users()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 45/114 analyzing endpoint method <org.envirocar.server.rest.resources.RootResource: org.envirocar.server.rest.resources.GroupsResource groups()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 46/114 analyzing endpoint method <org.envirocar.server.rest.resources.RootResource: org.envirocar.server.rest.resources.TracksResource tracks()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 47/114 analyzing endpoint method <org.envirocar.server.rest.resources.RootResource: org.envirocar.server.rest.resources.PhenomenonsResource phenomenons()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 48/114 analyzing endpoint method <org.envirocar.server.rest.resources.RootResource: org.envirocar.server.rest.resources.SensorsResource sensors()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 49/114 analyzing endpoint method <org.envirocar.server.rest.resources.RootResource: org.envirocar.server.rest.resources.MeasurementsResource measurements()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 50/114 analyzing endpoint method <org.envirocar.server.rest.resources.RootResource: org.envirocar.server.rest.resources.StatisticsResource statistics()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 51/114 analyzing endpoint method <org.envirocar.server.rest.resources.RootResource: org.envirocar.server.rest.resources.TermsOfUseResource termsOfUse()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 52/114 analyzing endpoint method <org.envirocar.server.rest.resources.RootResource: org.envirocar.server.rest.resources.JsonSchemaResource schemas()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 53/114 analyzing endpoint method <org.envirocar.server.rest.resources.RootResource: org.envirocar.server.rest.resources.AnnouncementsResource announcements()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 54/114 analyzing endpoint method <org.envirocar.server.rest.resources.RootResource: org.envirocar.server.rest.resources.BadgesResource badges()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 55/114 analyzing endpoint method <org.envirocar.server.rest.resources.RootResource: org.envirocar.server.rest.resources.PrivacyStatementsResource privacyStatements()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 56/114 analyzing endpoint method <org.envirocar.server.rest.resources.RootResource: org.envirocar.server.rest.resources.ResetPasswordResource resetPassword()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 57/114 analyzing endpoint method <org.envirocar.server.rest.resources.RootResource: org.envirocar.server.rest.resources.ConfirmResource confirm()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 58/114 analyzing endpoint method <org.envirocar.server.rest.resources.RootResource: org.envirocar.server.rest.resources.ApiDocsResource apiDocs()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 59/114 analyzing endpoint method <org.envirocar.server.rest.resources.RootResource: org.envirocar.server.rest.resources.RootResource redirect()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 60/114 analyzing endpoint method <org.envirocar.server.rest.resources.ResetPasswordResource: javax.ws.rs.core.Response get(org.envirocar.server.rest.entity.ResetPasswordRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 61/114 analyzing endpoint method <org.envirocar.server.rest.resources.ResetPasswordResource: javax.ws.rs.core.Response resetPassword(org.envirocar.server.rest.entity.ResetPasswordRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 62/114 analyzing endpoint method <org.envirocar.server.rest.resources.PrivacyStatementsResource: org.envirocar.server.core.entities.PrivacyStatements get()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 63/114 analyzing endpoint method <org.envirocar.server.rest.resources.PrivacyStatementsResource: org.envirocar.server.rest.resources.PrivacyStatementResource privacyStatement(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 64/114 analyzing endpoint method <org.envirocar.server.rest.resources.PrivacyStatementResource: org.envirocar.server.core.entities.PrivacyStatement get()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 65/114 analyzing endpoint method <org.envirocar.server.rest.resources.PreviewResource: javax.ws.rs.core.Response getMapImage()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 66/114 analyzing endpoint method <org.envirocar.server.rest.resources.PhenomenonsResource: org.envirocar.server.core.entities.Phenomenons get()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 67/114 analyzing endpoint method <org.envirocar.server.rest.resources.PhenomenonsResource: javax.ws.rs.core.Response create(org.envirocar.server.core.entities.Phenomenon)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 68/114 analyzing endpoint method <org.envirocar.server.rest.resources.PhenomenonsResource: org.envirocar.server.rest.resources.PhenomenonResource phenomenon(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 69/114 analyzing endpoint method <org.envirocar.server.rest.resources.PhenomenonResource: org.envirocar.server.core.entities.Phenomenon getPhenomenon()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 70/114 analyzing endpoint method <org.envirocar.server.rest.resources.PhenomenonResource: org.envirocar.server.rest.resources.StatisticResource getStatistic()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 71/114 analyzing endpoint method <org.envirocar.server.rest.resources.MeasurementsResource: org.envirocar.server.core.entities.Measurements get(org.envirocar.server.rest.BoundingBox,org.envirocar.server.rest.NearPoint)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
-[main] INFO org.rest.Respector.AppMain.MainTransform - 80/114 analyzing endpoint method <org.envirocar.server.rest.resources.MeasurementsResource: javax.ws.rs.core.Response create(org.envirocar.server.core.entities.Measurement)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 72/114 analyzing endpoint method <org.envirocar.server.rest.resources.MeasurementsResource: javax.ws.rs.core.Response create(org.envirocar.server.core.entities.Measurement)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 81/114 analyzing endpoint method <org.envirocar.server.rest.resources.MeasurementsResource: org.envirocar.server.rest.resources.MeasurementResource measurement(java.lang.String)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 82/114 analyzing endpoint method <org.envirocar.server.rest.resources.UserStatisticResource: org.envirocar.server.core.entities.UserStatistic UserStatistics()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 73/114 analyzing endpoint method <org.envirocar.server.rest.resources.MeasurementsResource: org.envirocar.server.rest.resources.MeasurementResource measurement(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 74/114 analyzing endpoint method <org.envirocar.server.rest.resources.MeasurementResource: org.envirocar.server.core.entities.Measurement get()>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 83/114 analyzing endpoint method <org.envirocar.server.rest.resources.RootResource: com.fasterxml.jackson.databind.JsonNode get()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 75/114 analyzing endpoint method <org.envirocar.server.rest.resources.MeasurementResource: void delete()>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 84/114 analyzing endpoint method <org.envirocar.server.rest.resources.RootResource: org.envirocar.server.rest.resources.UsersResource users()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 85/114 analyzing endpoint method <org.envirocar.server.rest.resources.RootResource: org.envirocar.server.rest.resources.GroupsResource groups()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 86/114 analyzing endpoint method <org.envirocar.server.rest.resources.RootResource: org.envirocar.server.rest.resources.TracksResource tracks()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 87/114 analyzing endpoint method <org.envirocar.server.rest.resources.RootResource: org.envirocar.server.rest.resources.PhenomenonsResource phenomenons()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 88/114 analyzing endpoint method <org.envirocar.server.rest.resources.RootResource: org.envirocar.server.rest.resources.SensorsResource sensors()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 89/114 analyzing endpoint method <org.envirocar.server.rest.resources.RootResource: org.envirocar.server.rest.resources.MeasurementsResource measurements()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 90/114 analyzing endpoint method <org.envirocar.server.rest.resources.RootResource: org.envirocar.server.rest.resources.StatisticsResource statistics()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 91/114 analyzing endpoint method <org.envirocar.server.rest.resources.RootResource: org.envirocar.server.rest.resources.TermsOfUseResource termsOfUse()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 92/114 analyzing endpoint method <org.envirocar.server.rest.resources.RootResource: org.envirocar.server.rest.resources.JsonSchemaResource schemas()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 93/114 analyzing endpoint method <org.envirocar.server.rest.resources.RootResource: org.envirocar.server.rest.resources.AnnouncementsResource announcements()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 94/114 analyzing endpoint method <org.envirocar.server.rest.resources.RootResource: org.envirocar.server.rest.resources.BadgesResource badges()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 95/114 analyzing endpoint method <org.envirocar.server.rest.resources.RootResource: org.envirocar.server.rest.resources.PrivacyStatementsResource privacyStatements()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 96/114 analyzing endpoint method <org.envirocar.server.rest.resources.RootResource: org.envirocar.server.rest.resources.ResetPasswordResource resetPassword()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 97/114 analyzing endpoint method <org.envirocar.server.rest.resources.RootResource: org.envirocar.server.rest.resources.ConfirmResource confirm()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 98/114 analyzing endpoint method <org.envirocar.server.rest.resources.RootResource: org.envirocar.server.rest.resources.ApiDocsResource apiDocs()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 99/114 analyzing endpoint method <org.envirocar.server.rest.resources.RootResource: org.envirocar.server.rest.resources.RootResource redirect()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 100/114 analyzing endpoint method <org.envirocar.server.rest.resources.AnnouncementsResource: org.envirocar.server.core.entities.Announcements announcements()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 76/114 analyzing endpoint method <org.envirocar.server.rest.resources.MeasurementResource: org.envirocar.server.rest.resources.SensorResource sensor()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 77/114 analyzing endpoint method <org.envirocar.server.rest.resources.JsonSchemaResource: com.fasterxml.jackson.databind.JsonNode get()>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 101/114 analyzing endpoint method <org.envirocar.server.rest.resources.AnnouncementsResource: org.envirocar.server.rest.resources.AnnouncementResource announcement(java.lang.String)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 102/114 analyzing endpoint method <org.envirocar.server.rest.resources.GroupResource: org.envirocar.server.core.entities.Group get()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 103/114 analyzing endpoint method <org.envirocar.server.rest.resources.GroupResource: javax.ws.rs.core.Response modify(org.envirocar.server.core.entities.Group)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 104/114 analyzing endpoint method <org.envirocar.server.rest.resources.GroupResource: void delete()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 105/114 analyzing endpoint method <org.envirocar.server.rest.resources.GroupResource: org.envirocar.server.rest.resources.GroupMembersResource members()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 106/114 analyzing endpoint method <org.envirocar.server.rest.resources.GroupResource: org.envirocar.server.rest.resources.ActivitiesResource activities()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 107/114 analyzing endpoint method <org.envirocar.server.rest.resources.AnnouncementResource: org.envirocar.server.core.entities.Announcement announcement()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 108/114 analyzing endpoint method <org.envirocar.server.rest.resources.PhenomenonResource: org.envirocar.server.core.entities.Phenomenon getPhenomenon()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 109/114 analyzing endpoint method <org.envirocar.server.rest.resources.PhenomenonResource: org.envirocar.server.rest.resources.StatisticResource getStatistic()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 110/114 analyzing endpoint method <org.envirocar.server.rest.resources.ConfirmResource: javax.ws.rs.core.Response confirm(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 78/114 analyzing endpoint method <org.envirocar.server.rest.resources.JsonSchemaResource: com.fasterxml.jackson.databind.JsonNode get(java.lang.String)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 111/114 analyzing endpoint method <org.envirocar.server.rest.resources.ResetPasswordResource: javax.ws.rs.core.Response get(org.envirocar.server.rest.entity.ResetPasswordRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 112/114 analyzing endpoint method <org.envirocar.server.rest.resources.ResetPasswordResource: javax.ws.rs.core.Response resetPassword(org.envirocar.server.rest.entity.ResetPasswordRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 113/114 analyzing endpoint method <org.envirocar.server.rest.resources.AvatarResource: javax.ws.rs.core.Response get(int)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 79/114 analyzing endpoint method <org.envirocar.server.rest.resources.GroupsResource: org.envirocar.server.core.entities.Groups get(java.lang.String)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 114/114 analyzing endpoint method <org.envirocar.server.rest.resources.GroupMemberResource: void delete(boolean)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 80/114 analyzing endpoint method <org.envirocar.server.rest.resources.GroupsResource: javax.ws.rs.core.Response createGroup(org.envirocar.server.core.entities.Group)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 81/114 analyzing endpoint method <org.envirocar.server.rest.resources.GroupsResource: org.envirocar.server.rest.resources.GroupResource group(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 82/114 analyzing endpoint method <org.envirocar.server.rest.resources.GroupResource: org.envirocar.server.core.entities.Group get()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 83/114 analyzing endpoint method <org.envirocar.server.rest.resources.GroupResource: javax.ws.rs.core.Response modify(org.envirocar.server.core.entities.Group)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 84/114 analyzing endpoint method <org.envirocar.server.rest.resources.GroupResource: void delete()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 85/114 analyzing endpoint method <org.envirocar.server.rest.resources.GroupResource: org.envirocar.server.rest.resources.GroupMembersResource members()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 86/114 analyzing endpoint method <org.envirocar.server.rest.resources.GroupResource: org.envirocar.server.rest.resources.ActivitiesResource activities()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 87/114 analyzing endpoint method <org.envirocar.server.rest.resources.GroupMembersResource: org.envirocar.server.core.entities.Users get()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 88/114 analyzing endpoint method <org.envirocar.server.rest.resources.GroupMembersResource: void add(org.envirocar.server.rest.UserReference)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 89/114 analyzing endpoint method <org.envirocar.server.rest.resources.GroupMembersResource: org.envirocar.server.rest.resources.GroupMemberResource member(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 90/114 analyzing endpoint method <org.envirocar.server.rest.resources.GroupMemberResource: void delete(boolean)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 91/114 analyzing endpoint method <org.envirocar.server.rest.resources.FuelingsResource: org.envirocar.server.core.entities.Fuelings getAll()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 92/114 analyzing endpoint method <org.envirocar.server.rest.resources.FuelingsResource: javax.ws.rs.core.Response create(org.envirocar.server.core.entities.Fueling)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 93/114 analyzing endpoint method <org.envirocar.server.rest.resources.FuelingsResource: org.envirocar.server.core.entities.Fueling getFueling(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 94/114 analyzing endpoint method <org.envirocar.server.rest.resources.FuelingsResource: void delete(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 95/114 analyzing endpoint method <org.envirocar.server.rest.resources.FriendsResource: org.envirocar.server.core.entities.Users get()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 96/114 analyzing endpoint method <org.envirocar.server.rest.resources.FriendsResource: void add(org.envirocar.server.rest.UserReference)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 97/114 analyzing endpoint method <org.envirocar.server.rest.resources.FriendsResource: org.envirocar.server.rest.resources.FriendResource friend(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 98/114 analyzing endpoint method <org.envirocar.server.rest.resources.FriendsResource: org.envirocar.server.core.entities.Users pendingIncomingFriendRequests()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 99/114 analyzing endpoint method <org.envirocar.server.rest.resources.FriendsResource: org.envirocar.server.core.entities.Users pendingOutgoingFriendRequests()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 100/114 analyzing endpoint method <org.envirocar.server.rest.resources.FriendsResource: void decline(org.envirocar.server.rest.UserReference)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 101/114 analyzing endpoint method <org.envirocar.server.rest.resources.FriendsActivitiesResource: org.envirocar.server.core.activities.Activities activities(org.envirocar.server.core.activities.ActivityType)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 102/114 analyzing endpoint method <org.envirocar.server.rest.resources.FriendsActivitiesResource: org.envirocar.server.core.activities.Activity activity(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 103/114 analyzing endpoint method <org.envirocar.server.rest.resources.FriendResource: void delete(boolean)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 104/114 analyzing endpoint method <org.envirocar.server.rest.resources.ConfirmResource: javax.ws.rs.core.Response confirm(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 105/114 analyzing endpoint method <org.envirocar.server.rest.resources.BadgesResource: org.envirocar.server.core.entities.Badges get()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 106/114 analyzing endpoint method <org.envirocar.server.rest.resources.AvatarResource: javax.ws.rs.core.Response get(int)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 107/114 analyzing endpoint method <org.envirocar.server.rest.resources.ApiDocsResource: com.fasterxml.jackson.databind.JsonNode get()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 108/114 analyzing endpoint method <org.envirocar.server.rest.resources.ApiDocsResource: javax.ws.rs.core.Response ui()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 109/114 analyzing endpoint method <org.envirocar.server.rest.resources.ApiDocsResource: javax.ws.rs.core.Response ui(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 110/114 analyzing endpoint method <org.envirocar.server.rest.resources.AnnouncementsResource: org.envirocar.server.core.entities.Announcements announcements()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 111/114 analyzing endpoint method <org.envirocar.server.rest.resources.AnnouncementsResource: org.envirocar.server.rest.resources.AnnouncementResource announcement(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 112/114 analyzing endpoint method <org.envirocar.server.rest.resources.AnnouncementResource: org.envirocar.server.core.entities.Announcement announcement()>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 113/114 analyzing endpoint method <org.envirocar.server.rest.resources.ActivitiesResource: org.envirocar.server.core.activities.Activities activities(org.envirocar.server.core.activities.ActivityType)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
+[main] INFO org.rest.Respector.AppMain.MainTransform - 114/114 analyzing endpoint method <org.envirocar.server.rest.resources.ActivitiesResource: org.envirocar.server.core.activities.Activity activity(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
 
-real	4m39.815s
-user	5m15.470s
-sys	0m1.037s
+real	6m45.476s
+user	7m16.891s
+sys	0m1.904s

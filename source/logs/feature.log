@@ -1,4 +1,3 @@
-+ java -Djava.library.path=/home/rkh/z3//build/ -cp ./target/Respector-0.1-SNAPSHOT.jar:/home/rkh/z3//build/com.microsoft.z3.jar org.rest.Respector.AppMain.Main ../dataset//features-service/target/classes/ ./generated_1//feature_service.json
 [main] INFO org.rest.Respector.EndPointRecog.PreprocessFramework - The REST API uses JAX
 [main] INFO org.rest.Respector.AppMain.MainTransform - total # of endpoint methods detected: 22
 [main] INFO org.rest.Respector.AppMain.MainTransform - 1/22 analyzing endpoint method <org.javiermf.features.services.rest.ProductsResource: java.util.List getAllProducts()>
@@ -12,29 +11,29 @@
 [main] INFO org.rest.Respector.AppMain.MainTransform - 5/22 analyzing endpoint method <org.javiermf.features.services.rest.ProductsResource: org.javiermf.features.services.rest.ProductsConfigurationResource productsConfigurationResource()>
 [main] INFO org.rest.Respector.AppMain.MainTransform - 6/22 analyzing endpoint method <org.javiermf.features.services.rest.ProductsResource: org.javiermf.features.services.rest.ProductsFeaturesResource productsFeaturesResource()>
 [main] INFO org.rest.Respector.AppMain.MainTransform - 7/22 analyzing endpoint method <org.javiermf.features.services.rest.ProductsResource: org.javiermf.features.services.rest.ProductsConstraintsResource productsConstraintsResource()>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 8/22 analyzing endpoint method <org.javiermf.features.services.rest.ProductsConfigurationResource: java.util.List getConfigurationsForProduct(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 8/22 analyzing endpoint method <org.javiermf.features.services.rest.ProductsFeaturesResource: java.util.Set getFeaturesForProduct(java.lang.String)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 9/22 analyzing endpoint method <org.javiermf.features.services.rest.ProductsConfigurationResource: org.javiermf.features.models.ProductConfiguration getConfigurationWithNameForProduct(java.lang.String,java.lang.String)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
-[main] INFO org.rest.Respector.AppMain.MainTransform - 10/22 analyzing endpoint method <org.javiermf.features.services.rest.ProductsConfigurationResource: javax.ws.rs.core.Response addConfiguration(java.lang.String,java.lang.String)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
-[main] INFO org.rest.Respector.AppMain.MainTransform - 11/22 analyzing endpoint method <org.javiermf.features.services.rest.ProductsConfigurationResource: javax.ws.rs.core.Response deleteConfiguration(java.lang.String,java.lang.String)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
-[main] INFO org.rest.Respector.AppMain.MainTransform - 12/22 analyzing endpoint method <org.javiermf.features.services.rest.ProductsConfigurationResource: org.javiermf.features.services.rest.ProductsConfigurationFeaturesResource getConfigurationActivedFeatures(java.lang.String,java.lang.String)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - 13/22 analyzing endpoint method <org.javiermf.features.services.rest.ProductsConstraintsResource: javax.ws.rs.core.Response addRequiresConstraintToProduct(java.lang.String,java.lang.String,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 9/22 analyzing endpoint method <org.javiermf.features.services.rest.ProductsFeaturesResource: javax.ws.rs.core.Response addFeatureToProduct(java.lang.String,java.lang.String,java.lang.String)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 3
-[main] INFO org.rest.Respector.AppMain.MainTransform - 14/22 analyzing endpoint method <org.javiermf.features.services.rest.ProductsConstraintsResource: javax.ws.rs.core.Response addExcludesConstraintToProduct(java.lang.String,java.lang.String,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 10/22 analyzing endpoint method <org.javiermf.features.services.rest.ProductsFeaturesResource: org.javiermf.features.models.Feature updateFeatureOfProduct(java.lang.String,java.lang.String,java.lang.String)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 3
-[main] INFO org.rest.Respector.AppMain.MainTransform - 15/22 analyzing endpoint method <org.javiermf.features.services.rest.ProductsConstraintsResource: javax.ws.rs.core.Response deleteConstraint(java.lang.String,java.lang.Long)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 11/22 analyzing endpoint method <org.javiermf.features.services.rest.ProductsFeaturesResource: javax.ws.rs.core.Response deleteFeatureOfProduct(java.lang.String,java.lang.String)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
-[main] INFO org.rest.Respector.AppMain.MainTransform - 16/22 analyzing endpoint method <org.javiermf.features.services.rest.ProductsFeaturesResource: java.util.Set getFeaturesForProduct(java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 12/22 analyzing endpoint method <org.javiermf.features.services.rest.ProductsConstraintsResource: javax.ws.rs.core.Response addRequiresConstraintToProduct(java.lang.String,java.lang.String,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 3
+[main] INFO org.rest.Respector.AppMain.MainTransform - 13/22 analyzing endpoint method <org.javiermf.features.services.rest.ProductsConstraintsResource: javax.ws.rs.core.Response addExcludesConstraintToProduct(java.lang.String,java.lang.String,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 3
+[main] INFO org.rest.Respector.AppMain.MainTransform - 14/22 analyzing endpoint method <org.javiermf.features.services.rest.ProductsConstraintsResource: javax.ws.rs.core.Response deleteConstraint(java.lang.String,java.lang.Long)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+[main] INFO org.rest.Respector.AppMain.MainTransform - 15/22 analyzing endpoint method <org.javiermf.features.services.rest.ProductsConfigurationResource: java.util.List getConfigurationsForProduct(java.lang.String)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 1
-[main] INFO org.rest.Respector.AppMain.MainTransform - 17/22 analyzing endpoint method <org.javiermf.features.services.rest.ProductsFeaturesResource: javax.ws.rs.core.Response addFeatureToProduct(java.lang.String,java.lang.String,java.lang.String)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 3
-[main] INFO org.rest.Respector.AppMain.MainTransform - 18/22 analyzing endpoint method <org.javiermf.features.services.rest.ProductsFeaturesResource: org.javiermf.features.models.Feature updateFeatureOfProduct(java.lang.String,java.lang.String,java.lang.String)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 3
-[main] INFO org.rest.Respector.AppMain.MainTransform - 19/22 analyzing endpoint method <org.javiermf.features.services.rest.ProductsFeaturesResource: javax.ws.rs.core.Response deleteFeatureOfProduct(java.lang.String,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 16/22 analyzing endpoint method <org.javiermf.features.services.rest.ProductsConfigurationResource: org.javiermf.features.models.ProductConfiguration getConfigurationWithNameForProduct(java.lang.String,java.lang.String)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+[main] INFO org.rest.Respector.AppMain.MainTransform - 17/22 analyzing endpoint method <org.javiermf.features.services.rest.ProductsConfigurationResource: javax.ws.rs.core.Response addConfiguration(java.lang.String,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+[main] INFO org.rest.Respector.AppMain.MainTransform - 18/22 analyzing endpoint method <org.javiermf.features.services.rest.ProductsConfigurationResource: javax.ws.rs.core.Response deleteConfiguration(java.lang.String,java.lang.String)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
+[main] INFO org.rest.Respector.AppMain.MainTransform - 19/22 analyzing endpoint method <org.javiermf.features.services.rest.ProductsConfigurationResource: org.javiermf.features.services.rest.ProductsConfigurationFeaturesResource getConfigurationActivedFeatures(java.lang.String,java.lang.String)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - 20/22 analyzing endpoint method <org.javiermf.features.services.rest.ProductsConfigurationFeaturesResource: java.util.List getConfigurationActivedFeatures(java.lang.String,java.lang.String)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 2
 [main] INFO org.rest.Respector.AppMain.MainTransform - 21/22 analyzing endpoint method <org.javiermf.features.services.rest.ProductsConfigurationFeaturesResource: javax.ws.rs.core.Response addFeatureToConfiguration(java.lang.String,java.lang.String,java.lang.String)>
@@ -42,6 +41,6 @@
 [main] INFO org.rest.Respector.AppMain.MainTransform - 22/22 analyzing endpoint method <org.javiermf.features.services.rest.ProductsConfigurationFeaturesResource: javax.ws.rs.core.Response deleteFeature(java.lang.String,java.lang.String,java.lang.String)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 3
 
-real	0m5.387s
-user	0m13.197s
-sys	0m0.335s
+real	0m6.602s
+user	0m13.632s
+sys	0m0.538s

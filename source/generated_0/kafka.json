@@ -14,7 +14,7 @@
     "/": {
       "get": {
         "description": "",
-        "operationId": "em48",
+        "operationId": "em32",
         "parameters": [],
         "responses": {
           "200": {
@@ -34,7 +34,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em49",
+        "operationId": "em33",
         "parameters": [],
         "responses": {
           "200": {
@@ -56,7 +56,7 @@
     "/brokers": {
       "get": {
         "description": "",
-        "operationId": "em80",
+        "operationId": "em34",
         "parameters": [],
         "responses": {
           "204": {
@@ -71,7 +71,7 @@
     "/consumers/{group}": {
       "post": {
         "description": "",
-        "operationId": "em63",
+        "operationId": "em5",
         "parameters": [
           {
             "name": "group",
@@ -149,7 +149,7 @@
     "/consumers/{group}/instances/{instance}": {
       "delete": {
         "description": "",
-        "operationId": "em64",
+        "operationId": "em6",
         "parameters": [
           {
             "name": "group",
@@ -187,7 +187,7 @@
     "/consumers/{group}/instances/{instance}/assignments": {
       "get": {
         "description": "",
-        "operationId": "em79",
+        "operationId": "em21",
         "parameters": [
           {
             "name": "group",
@@ -239,7 +239,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em78",
+        "operationId": "em20",
         "parameters": [
           {
             "name": "group",
@@ -291,7 +291,7 @@
     "/consumers/{group}/instances/{instance}/offsets": {
       "get": {
         "description": "",
-        "operationId": "em74",
+        "operationId": "em16",
         "parameters": [
           {
             "name": "group",
@@ -351,7 +351,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em73",
+        "operationId": "em15",
         "parameters": [
           {
             "name": "group",
@@ -406,7 +406,7 @@
     "/consumers/{group}/instances/{instance}/positions": {
       "post": {
         "description": "",
-        "operationId": "em77",
+        "operationId": "em19",
         "parameters": [
           {
             "name": "group",
@@ -444,7 +444,7 @@
     "/consumers/{group}/instances/{instance}/positions/beginning": {
       "post": {
         "description": "",
-        "operationId": "em75",
+        "operationId": "em17",
         "parameters": [
           {
             "name": "group",
@@ -496,7 +496,7 @@
     "/consumers/{group}/instances/{instance}/positions/end": {
       "post": {
         "description": "",
-        "operationId": "em76",
+        "operationId": "em18",
         "parameters": [
           {
             "name": "group",
@@ -548,7 +548,7 @@
     "/consumers/{group}/instances/{instance}/records": {
       "get": {
         "description": "",
-        "operationId": "em68",
+        "operationId": "em10",
         "parameters": [
           {
             "name": "group",
@@ -600,7 +600,7 @@
     "/consumers/{group}/instances/{instance}/subscription": {
       "delete": {
         "description": "",
-        "operationId": "em67",
+        "operationId": "em9",
         "parameters": [
           {
             "name": "group",
@@ -636,7 +636,7 @@
       },
       "get": {
         "description": "",
-        "operationId": "em66",
+        "operationId": "em8",
         "parameters": [
           {
             "name": "group",
@@ -688,7 +688,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em65",
+        "operationId": "em7",
         "parameters": [
           {
             "name": "group",
@@ -743,7 +743,7 @@
     "/topics": {
       "get": {
         "description": "",
-        "operationId": "em46",
+        "operationId": "em3",
         "parameters": [],
         "responses": {
           "204": {
@@ -758,7 +758,7 @@
     "/topics/{topic}": {
       "get": {
         "description": "",
-        "operationId": "em47",
+        "operationId": "em4",
         "parameters": [
           {
             "name": "topic",
@@ -780,7 +780,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em50",
+        "operationId": "em27",
         "parameters": [
           {
             "name": "topic",
@@ -807,7 +807,7 @@
     "/topics/{topic}/partitions": {
       "get": {
         "description": "",
-        "operationId": "em60",
+        "operationId": "em0",
         "parameters": [
           {
             "name": "topic",
@@ -831,7 +831,7 @@
     "/topics/{topic}/partitions/{partition}": {
       "get": {
         "description": "",
-        "operationId": "em61",
+        "operationId": "em1",
         "parameters": [
           {
             "name": "topic",
@@ -862,7 +862,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em55",
+        "operationId": "em22",
         "parameters": [
           {
             "name": "topic",
@@ -898,7 +898,7 @@
     "/topics/{topic}/partitions/{partition}/offsets": {
       "get": {
         "description": "",
-        "operationId": "em62",
+        "operationId": "em2",
         "parameters": [
           {
             "name": "topic",
@@ -931,7 +931,7 @@
     "/v3/clusters": {
       "get": {
         "description": "",
-        "operationId": "em28",
+        "operationId": "em78",
         "parameters": [],
         "responses": {
           "204": {
@@ -946,7 +946,7 @@
     "/v3/clusters/{clusterId}": {
       "get": {
         "description": "",
-        "operationId": "em29",
+        "operationId": "em79",
         "parameters": [
           {
             "name": "clusterId",
@@ -970,7 +970,7 @@
     "/v3/clusters/{clusterId}/acls": {
       "delete": {
         "description": "",
-        "operationId": "em45",
+        "operationId": "em65",
         "parameters": [
           {
             "name": "clusterId",
@@ -1061,7 +1061,7 @@
       },
       "get": {
         "description": "",
-        "operationId": "em43",
+        "operationId": "em63",
         "parameters": [
           {
             "name": "clusterId",
@@ -1152,7 +1152,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em44",
+        "operationId": "em64",
         "parameters": [
           {
             "name": "clusterId",
@@ -1182,7 +1182,7 @@
     "/v3/clusters/{clusterId}/brokers": {
       "get": {
         "description": "",
-        "operationId": "em34",
+        "operationId": "em67",
         "parameters": [
           {
             "name": "clusterId",
@@ -1206,7 +1206,7 @@
     "/v3/clusters/{clusterId}/brokers/-/configs": {
       "get": {
         "description": "",
-        "operationId": "em17",
+        "operationId": "em62",
         "parameters": [
           {
             "name": "clusterId",
@@ -1230,7 +1230,7 @@
     "/v3/clusters/{clusterId}/brokers/{brokerId}": {
       "get": {
         "description": "",
-        "operationId": "em35",
+        "operationId": "em68",
         "parameters": [
           {
             "name": "clusterId",
@@ -1263,7 +1263,7 @@
     "/v3/clusters/{clusterId}/brokers/{brokerId}/configs": {
       "get": {
         "description": "",
-        "operationId": "em36",
+        "operationId": "em35",
         "parameters": [
           {
             "name": "clusterId",
@@ -1299,7 +1299,7 @@
     "/v3/clusters/{clusterId}/brokers/{brokerId}/configs/{name}": {
       "delete": {
         "description": "",
-        "operationId": "em39",
+        "operationId": "em38",
         "parameters": [
           {
             "name": "clusterId",
@@ -1341,7 +1341,7 @@
       },
       "get": {
         "description": "",
-        "operationId": "em37",
+        "operationId": "em36",
         "parameters": [
           {
             "name": "clusterId",
@@ -1383,7 +1383,7 @@
       },
       "put": {
         "description": "",
-        "operationId": "em38",
+        "operationId": "em37",
         "parameters": [
           {
             "name": "clusterId",
@@ -1427,7 +1427,7 @@
     "/v3/clusters/{clusterId}/brokers/{brokerId}/configs:alter": {
       "post": {
         "description": "",
-        "operationId": "em42",
+        "operationId": "em66",
         "parameters": [
           {
             "name": "clusterId",
@@ -1463,7 +1463,7 @@
     "/v3/clusters/{clusterId}/brokers/{brokerId}/partition-replicas": {
       "get": {
         "description": "",
-        "operationId": "em8",
+        "operationId": "em74",
         "parameters": [
           {
             "name": "clusterId",
@@ -1496,7 +1496,7 @@
     "/v3/clusters/{clusterId}/consumer-groups": {
       "get": {
         "description": "",
-        "operationId": "em23",
+        "operationId": "em56",
         "parameters": [
           {
             "name": "clusterId",
@@ -1520,7 +1520,7 @@
     "/v3/clusters/{clusterId}/consumer-groups/{consumerGroupId}": {
       "get": {
         "description": "",
-        "operationId": "em24",
+        "operationId": "em57",
         "parameters": [
           {
             "name": "clusterId",
@@ -1552,7 +1552,7 @@
     "/v3/clusters/{clusterId}/consumer-groups/{consumerGroupId}/consumers": {
       "get": {
         "description": "",
-        "operationId": "em19",
+        "operationId": "em52",
         "parameters": [
           {
             "name": "clusterId",
@@ -1584,7 +1584,7 @@
     "/v3/clusters/{clusterId}/consumer-groups/{consumerGroupId}/consumers/{consumerId}": {
       "get": {
         "description": "",
-        "operationId": "em20",
+        "operationId": "em53",
         "parameters": [
           {
             "name": "clusterId",
@@ -1624,7 +1624,7 @@
     "/v3/clusters/{clusterId}/consumer-groups/{consumerGroupId}/consumers/{consumerId}/assignments": {
       "get": {
         "description": "",
-        "operationId": "em26",
+        "operationId": "em58",
         "parameters": [
           {
             "name": "clusterId",
@@ -1664,7 +1664,7 @@
     "/v3/clusters/{clusterId}/consumer-groups/{consumerGroupId}/consumers/{consumerId}/assignments/{topicName}/partitions/{partitionId}": {
       "get": {
         "description": "",
-        "operationId": "em27",
+        "operationId": "em59",
         "parameters": [
           {
             "name": "clusterId",
@@ -1721,7 +1721,7 @@
     "/v3/clusters/{clusterId}/consumer-groups/{consumerGroupId}/lag-summary": {
       "get": {
         "description": "",
-        "operationId": "em25",
+        "operationId": "em51",
         "parameters": [
           {
             "name": "clusterId",
@@ -1753,7 +1753,7 @@
     "/v3/clusters/{clusterId}/consumer-groups/{consumerGroupId}/lags": {
       "get": {
         "description": "",
-        "operationId": "em21",
+        "operationId": "em45",
         "parameters": [
           {
             "name": "clusterId",
@@ -1785,7 +1785,7 @@
     "/v3/clusters/{clusterId}/consumer-groups/{consumerGroupId}/lags/{topicName}/partitions/{partitionId}": {
       "get": {
         "description": "",
-        "operationId": "em22",
+        "operationId": "em46",
         "parameters": [
           {
             "name": "clusterId",
@@ -1834,7 +1834,7 @@
     "/v3/clusters/{clusterId}/topics": {
       "get": {
         "description": "",
-        "operationId": "em0",
+        "operationId": "em47",
         "parameters": [
           {
             "name": "clusterId",
@@ -1865,7 +1865,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em2",
+        "operationId": "em49",
         "parameters": [
           {
             "name": "clusterId",
@@ -1892,7 +1892,7 @@
     "/v3/clusters/{clusterId}/topics/-/configs": {
       "get": {
         "description": "",
-        "operationId": "em15",
+        "operationId": "em55",
         "parameters": [
           {
             "name": "clusterId",
@@ -1916,7 +1916,7 @@
     "/v3/clusters/{clusterId}/topics/-/partitions/-/reassignment": {
       "get": {
         "description": "",
-        "operationId": "em16",
+        "operationId": "em61",
         "parameters": [
           {
             "name": "clusterId",
@@ -1940,7 +1940,7 @@
     "/v3/clusters/{clusterId}/topics/{topicName}": {
       "delete": {
         "description": "",
-        "operationId": "em3",
+        "operationId": "em50",
         "parameters": [
           {
             "name": "clusterId",
@@ -1973,7 +1973,7 @@
       },
       "get": {
         "description": "",
-        "operationId": "em1",
+        "operationId": "em48",
         "parameters": [
           {
             "name": "clusterId",
@@ -2014,7 +2014,7 @@
     "/v3/clusters/{clusterId}/topics/{topicName}/configs": {
       "get": {
         "description": "",
-        "operationId": "em4",
+        "operationId": "em70",
         "parameters": [
           {
             "name": "clusterId",
@@ -2049,7 +2049,7 @@
     "/v3/clusters/{clusterId}/topics/{topicName}/configs/{name}": {
       "delete": {
         "description": "",
-        "operationId": "em7",
+        "operationId": "em73",
         "parameters": [
           {
             "name": "clusterId",
@@ -2090,7 +2090,7 @@
       },
       "get": {
         "description": "",
-        "operationId": "em5",
+        "operationId": "em71",
         "parameters": [
           {
             "name": "clusterId",
@@ -2131,7 +2131,7 @@
       },
       "put": {
         "description": "",
-        "operationId": "em6",
+        "operationId": "em72",
         "parameters": [
           {
             "name": "clusterId",
@@ -2174,7 +2174,7 @@
     "/v3/clusters/{clusterId}/topics/{topicName}/configs:alter": {
       "post": {
         "description": "",
-        "operationId": "em40",
+        "operationId": "em69",
         "parameters": [
           {
             "name": "clusterId",
@@ -2209,7 +2209,7 @@
     "/v3/clusters/{clusterId}/topics/{topicName}/partitions": {
       "get": {
         "description": "",
-        "operationId": "em13",
+        "operationId": "em43",
         "parameters": [
           {
             "name": "clusterId",
@@ -2241,7 +2241,7 @@
     "/v3/clusters/{clusterId}/topics/{topicName}/partitions/-/reassignment": {
       "get": {
         "description": "",
-        "operationId": "em9",
+        "operationId": "em54",
         "parameters": [
           {
             "name": "clusterId",
@@ -2273,7 +2273,7 @@
     "/v3/clusters/{clusterId}/topics/{topicName}/partitions/{partitionId}": {
       "get": {
         "description": "",
-        "operationId": "em14",
+        "operationId": "em44",
         "parameters": [
           {
             "name": "clusterId",
@@ -2314,7 +2314,7 @@
     "/v3/clusters/{clusterId}/topics/{topicName}/partitions/{partitionId}/reassignment": {
       "get": {
         "description": "",
-        "operationId": "em18",
+        "operationId": "em60",
         "parameters": [
           {
             "name": "clusterId",
@@ -2355,7 +2355,7 @@
     "/v3/clusters/{clusterId}/topics/{topicName}/partitions/{partitionId}/replicas": {
       "get": {
         "description": "",
-        "operationId": "em10",
+        "operationId": "em76",
         "parameters": [
           {
             "name": "clusterId",
@@ -2396,7 +2396,7 @@
     "/v3/clusters/{clusterId}/topics/{topicName}/partitions/{partitionId}/replicas/{brokerId}": {
       "get": {
         "description": "",
-        "operationId": "em11",
+        "operationId": "em77",
         "parameters": [
           {
             "name": "clusterId",
@@ -2446,7 +2446,7 @@
     "/v3/clusters/{clusterId}/topics/{topicName}/records": {
       "post": {
         "description": "",
-        "operationId": "em12",
+        "operationId": "em80",
         "parameters": [
           {
             "name": "clusterId",
@@ -2498,7 +2498,7 @@
     "/v3/clusters/{clusterId}/{config_type}-configs": {
       "get": {
         "description": "",
-        "operationId": "em30",
+        "operationId": "em39",
         "parameters": [
           {
             "name": "clusterId",
@@ -2530,7 +2530,7 @@
     "/v3/clusters/{clusterId}/{config_type}-configs/{name}": {
       "delete": {
         "description": "",
-        "operationId": "em33",
+        "operationId": "em42",
         "parameters": [
           {
             "name": "clusterId",
@@ -2571,7 +2571,7 @@
       },
       "get": {
         "description": "",
-        "operationId": "em31",
+        "operationId": "em40",
         "parameters": [
           {
             "name": "clusterId",
@@ -2609,7 +2609,7 @@
       },
       "put": {
         "description": "",
-        "operationId": "em32",
+        "operationId": "em41",
         "parameters": [
           {
             "name": "clusterId",
@@ -2652,7 +2652,7 @@
     "/v3/clusters/{clusterId}/{config_type}-configs:alter": {
       "post": {
         "description": "",
-        "operationId": "em41",
+        "operationId": "em75",
         "parameters": [
           {
             "name": "clusterId",
@@ -2693,22 +2693,22 @@
             "( this.<io.confluent.kafkarest.v2.KafkaConsumerManager: java.util.Map consumers>.<java.util.Map: boolean containsKey(java.lang.Object)>(new io.confluent.kafkarest.ConsumerInstanceId({group}, (new java.lang.StringBuilder(\"rest-consumer-\")).<java.lang.StringBuilder: java.lang.String toString()>())) == 0 )"
           ],
           "global-reads": {
-            "g18": {
-              "name": "log",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g18"
-              }
-            },
-            "g19": {
-              "name": "$SwitchMap$io$confluent$kafkarest$entities$EmbeddedFormat",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g19"
-              }
-            },
-            "g20": {
+            "g0": {
               "name": "INTERNAL_SERVER_ERROR",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g20"
+                "$ref": "#/components/x-global-variables-info/g0"
+              }
+            },
+            "g1": {
+              "name": "log",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g1"
+              }
+            },
+            "g2": {
+              "name": "$SwitchMap$io$confluent$kafkarest$entities$EmbeddedFormat",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g2"
               }
             }
           }
@@ -2720,10 +2720,10 @@
             "( (io.confluent.kafkarest.v2.KafkaConsumerState) this.<io.confluent.kafkarest.v2.KafkaConsumerManager: java.util.Map consumers>.<java.util.Map: java.lang.Object remove(java.lang.Object)>(new io.confluent.kafkarest.ConsumerInstanceId({group}, {instance})) != null )"
           ],
           "global-reads": {
-            "g18": {
+            "g1": {
               "name": "log",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g18"
+                "$ref": "#/components/x-global-variables-info/g1"
               }
             }
           }
@@ -2735,10 +2735,10 @@
             "( (io.confluent.kafkarest.v2.KafkaConsumerState) this.<io.confluent.kafkarest.v2.KafkaConsumerManager: java.util.Map consumers>.<java.util.Map: java.lang.Object get(java.lang.Object)>(new io.confluent.kafkarest.ConsumerInstanceId({group}, {instance})) != null )"
           ],
           "global-reads": {
-            "g18": {
+            "g1": {
               "name": "log",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g18"
+                "$ref": "#/components/x-global-variables-info/g1"
               }
             }
           }
@@ -2748,16 +2748,16 @@
             "( (io.confluent.kafkarest.v2.KafkaConsumerState) this.<io.confluent.kafkarest.v2.KafkaConsumerManager: java.util.Map consumers>.<java.util.Map: java.lang.Object get(java.lang.Object)>(new io.confluent.kafkarest.ConsumerInstanceId({group}, {instance})) != null )"
           ],
           "global-reads": {
-            "g18": {
+            "g1": {
               "name": "log",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g18"
+                "$ref": "#/components/x-global-variables-info/g1"
               }
             },
-            "g21": {
+            "g3": {
               "name": "CONFLICT",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g21"
+                "$ref": "#/components/x-global-variables-info/g3"
               }
             }
           }
@@ -2769,10 +2769,10 @@
             "( (io.confluent.kafkarest.v2.KafkaConsumerState) this.<io.confluent.kafkarest.v2.KafkaConsumerManager: java.util.Map consumers>.<java.util.Map: java.lang.Object get(java.lang.Object)>(new io.confluent.kafkarest.ConsumerInstanceId({group}, {instance})) != null )"
           ],
           "global-reads": {
-            "g18": {
+            "g1": {
               "name": "log",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g18"
+                "$ref": "#/components/x-global-variables-info/g1"
               }
             }
           }
@@ -2784,16 +2784,16 @@
             "( (io.confluent.kafkarest.v2.KafkaConsumerState) this.<io.confluent.kafkarest.v2.KafkaConsumerManager: java.util.Map consumers>.<java.util.Map: java.lang.Object get(java.lang.Object)>(new io.confluent.kafkarest.ConsumerInstanceId({group}, {instance})) != null )"
           ],
           "global-reads": {
-            "g18": {
+            "g1": {
               "name": "log",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g18"
+                "$ref": "#/components/x-global-variables-info/g1"
               }
             },
-            "g21": {
+            "g3": {
               "name": "CONFLICT",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g21"
+                "$ref": "#/components/x-global-variables-info/g3"
               }
             }
           }
@@ -2805,16 +2805,16 @@
             "( (io.confluent.kafkarest.v2.KafkaConsumerState) this.<io.confluent.kafkarest.v2.KafkaConsumerManager: java.util.Map consumers>.<java.util.Map: java.lang.Object get(java.lang.Object)>(new io.confluent.kafkarest.ConsumerInstanceId({group}, {instance})) != null )"
           ],
           "global-reads": {
-            "g18": {
+            "g1": {
               "name": "log",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g18"
+                "$ref": "#/components/x-global-variables-info/g1"
               }
             },
-            "g21": {
+            "g3": {
               "name": "CONFLICT",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g21"
+                "$ref": "#/components/x-global-variables-info/g3"
               }
             }
           }
@@ -2826,16 +2826,16 @@
             "( (io.confluent.kafkarest.v2.KafkaConsumerState) this.<io.confluent.kafkarest.v2.KafkaConsumerManager: java.util.Map consumers>.<java.util.Map: java.lang.Object get(java.lang.Object)>(new io.confluent.kafkarest.ConsumerInstanceId({group}, {instance})) != null )"
           ],
           "global-reads": {
-            "g18": {
+            "g1": {
               "name": "log",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g18"
+                "$ref": "#/components/x-global-variables-info/g1"
               }
             },
-            "g21": {
+            "g3": {
               "name": "CONFLICT",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g21"
+                "$ref": "#/components/x-global-variables-info/g3"
               }
             }
           }
@@ -2847,10 +2847,10 @@
             "( (io.confluent.kafkarest.v2.KafkaConsumerState) this.<io.confluent.kafkarest.v2.KafkaConsumerManager: java.util.Map consumers>.<java.util.Map: java.lang.Object get(java.lang.Object)>(new io.confluent.kafkarest.ConsumerInstanceId({group}, {instance})) != null )"
           ],
           "global-reads": {
-            "g18": {
+            "g1": {
               "name": "log",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g18"
+                "$ref": "#/components/x-global-variables-info/g1"
               }
             }
           }
@@ -2865,16 +2865,16 @@
             "( (io.confluent.kafkarest.v2.KafkaConsumerState) this.<io.confluent.kafkarest.v2.KafkaConsumerManager: java.util.Map consumers>.<java.util.Map: java.lang.Object get(java.lang.Object)>(new io.confluent.kafkarest.ConsumerInstanceId({group}, {instance})) != null )"
           ],
           "global-reads": {
-            "g18": {
+            "g1": {
               "name": "log",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g18"
+                "$ref": "#/components/x-global-variables-info/g1"
               }
             },
-            "g21": {
+            "g3": {
               "name": "CONFLICT",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g21"
+                "$ref": "#/components/x-global-variables-info/g3"
               }
             }
           }
@@ -2883,10 +2883,10 @@
       "/topics/{topic}": {
         "post": {
           "global-reads": {
-            "g17": {
+            "g4": {
               "name": "BINARY",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g17"
+                "$ref": "#/components/x-global-variables-info/g4"
               }
             }
           }
@@ -2895,10 +2895,10 @@
       "/topics/{topic}/partitions/{partition}": {
         "post": {
           "global-reads": {
-            "g17": {
+            "g4": {
               "name": "BINARY",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g17"
+                "$ref": "#/components/x-global-variables-info/g4"
               }
             }
           }
@@ -2986,10 +2986,10 @@
             "( {non_EPP#2}.<io.confluent.kafkarest.entities.v3.CreateAclRequest: io.confluent.kafkarest.entities.Acl$ResourceType getResourceType()>() != <io.confluent.kafkarest.entities.Acl$ResourceType: io.confluent.kafkarest.entities.Acl$ResourceType UNKNOWN> )"
           ],
           "global-reads": {
-            "g0": {
+            "g7": {
               "name": "CREATED",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g0"
+                "$ref": "#/components/x-global-variables-info/g7"
               }
             },
             "g8": {
@@ -3029,7 +3029,7 @@
               }
             },
             "g14": {
-              "name": "ANY",
+              "name": "MATCH",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g14"
               }
@@ -3041,7 +3041,7 @@
               }
             },
             "g16": {
-              "name": "MATCH",
+              "name": "ANY",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g16"
               }
@@ -3052,10 +3052,10 @@
       "/v3/clusters/{clusterId}/brokers/{brokerId}/configs": {
         "get": {
           "global-reads": {
-            "g7": {
+            "g5": {
               "name": "BROKER",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g7"
+                "$ref": "#/components/x-global-variables-info/g5"
               }
             }
           }
@@ -3064,42 +3064,42 @@
       "/v3/clusters/{clusterId}/brokers/{brokerId}/configs/{name}": {
         "delete": {
           "global-reads": {
-            "g1": {
-              "name": "NO_CONTENT",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
-              }
-            },
-            "g7": {
+            "g5": {
               "name": "BROKER",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g7"
+                "$ref": "#/components/x-global-variables-info/g5"
+              }
+            },
+            "g6": {
+              "name": "NO_CONTENT",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g6"
               }
             }
           }
         },
         "get": {
           "global-reads": {
-            "g7": {
+            "g5": {
               "name": "BROKER",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g7"
+                "$ref": "#/components/x-global-variables-info/g5"
               }
             }
           }
         },
         "put": {
           "global-reads": {
-            "g1": {
-              "name": "NO_CONTENT",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
-              }
-            },
-            "g7": {
+            "g5": {
               "name": "BROKER",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g7"
+                "$ref": "#/components/x-global-variables-info/g5"
+              }
+            },
+            "g6": {
+              "name": "NO_CONTENT",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g6"
               }
             }
           }
@@ -3108,16 +3108,16 @@
       "/v3/clusters/{clusterId}/brokers/{brokerId}/configs:alter": {
         "post": {
           "global-reads": {
-            "g1": {
-              "name": "NO_CONTENT",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
-              }
-            },
-            "g7": {
+            "g5": {
               "name": "BROKER",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g7"
+                "$ref": "#/components/x-global-variables-info/g5"
+              }
+            },
+            "g6": {
+              "name": "NO_CONTENT",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g6"
               }
             }
           }
@@ -3126,10 +3126,10 @@
       "/v3/clusters/{clusterId}/topics": {
         "post": {
           "global-reads": {
-            "g0": {
+            "g7": {
               "name": "CREATED",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g0"
+                "$ref": "#/components/x-global-variables-info/g7"
               }
             }
           }
@@ -3138,10 +3138,10 @@
       "/v3/clusters/{clusterId}/topics/{topicName}": {
         "delete": {
           "global-reads": {
-            "g1": {
+            "g6": {
               "name": "NO_CONTENT",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
+                "$ref": "#/components/x-global-variables-info/g6"
               }
             }
           }
@@ -3150,10 +3150,10 @@
       "/v3/clusters/{clusterId}/topics/{topicName}/configs": {
         "get": {
           "global-reads": {
-            "g2": {
+            "g17": {
               "name": "TOPIC",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g2"
+                "$ref": "#/components/x-global-variables-info/g17"
               }
             }
           }
@@ -3162,42 +3162,42 @@
       "/v3/clusters/{clusterId}/topics/{topicName}/configs/{name}": {
         "delete": {
           "global-reads": {
-            "g1": {
+            "g6": {
               "name": "NO_CONTENT",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
+                "$ref": "#/components/x-global-variables-info/g6"
               }
             },
-            "g2": {
+            "g17": {
               "name": "TOPIC",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g2"
+                "$ref": "#/components/x-global-variables-info/g17"
               }
             }
           }
         },
         "get": {
           "global-reads": {
-            "g2": {
+            "g17": {
               "name": "TOPIC",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g2"
+                "$ref": "#/components/x-global-variables-info/g17"
               }
             }
           }
         },
         "put": {
           "global-reads": {
-            "g1": {
+            "g6": {
               "name": "NO_CONTENT",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
+                "$ref": "#/components/x-global-variables-info/g6"
               }
             },
-            "g2": {
+            "g17": {
               "name": "TOPIC",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g2"
+                "$ref": "#/components/x-global-variables-info/g17"
               }
             }
           }
@@ -3206,16 +3206,16 @@
       "/v3/clusters/{clusterId}/topics/{topicName}/configs:alter": {
         "post": {
           "global-reads": {
-            "g1": {
+            "g6": {
               "name": "NO_CONTENT",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
+                "$ref": "#/components/x-global-variables-info/g6"
               }
             },
-            "g2": {
+            "g17": {
               "name": "TOPIC",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g2"
+                "$ref": "#/components/x-global-variables-info/g17"
               }
             }
           }
@@ -3224,48 +3224,48 @@
       "/v3/clusters/{clusterId}/topics/{topicName}/records": {
         "post": {
           "global-reads": {
-            "g3": {
-              "name": "REQUEST_TIMEOUT",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g3"
-              }
-            },
-            "g4": {
-              "name": "log",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g4"
-              }
-            },
-            "g5": {
-              "name": "EXCEPTION_MAPPER",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g5"
-              }
-            },
-            "g6": {
+            "g18": {
               "name": "MILLISECONDS",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g6"
+                "$ref": "#/components/x-global-variables-info/g18"
+              }
+            },
+            "g19": {
+              "name": "REQUEST_TIMEOUT",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g19"
+              }
+            },
+            "g20": {
+              "name": "EXCEPTION_MAPPER",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g20"
+              }
+            },
+            "g21": {
+              "name": "log",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g21"
               }
             }
           },
           "global-writes": {
-            "g4": {
+            "g20": {
+              "name": "EXCEPTION_MAPPER",
+              "assigned-values": [
+                "staticinvoke <io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder: io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder access$200(io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder,javax.ws.rs.ext.ExceptionMapper,java.util.function.Function,java.util.function.Function)>(staticinvoke <io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder: io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder access$100(io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder,java.lang.Class,javax.ws.rs.ext.ExceptionMapper,java.util.function.Function,java.util.function.Function)>(staticinvoke <io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder: io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder access$100(io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder,java.lang.Class,javax.ws.rs.ext.ExceptionMapper,java.util.function.Function,java.util.function.Function)>(staticinvoke <io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder: io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder access$100(io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder,java.lang.Class,javax.ws.rs.ext.ExceptionMapper,java.util.function.Function,java.util.function.Function)>(staticinvoke <io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder: io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder access$100(io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder,java.lang.Class,javax.ws.rs.ext.ExceptionMapper,java.util.function.Function,java.util.function.Function)>(staticinvoke <io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder: io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder access$100(io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder,java.lang.Class,javax.ws.rs.ext.ExceptionMapper,java.util.function.Function,java.util.function.Function)>(new io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder(null), class \"Lcom/fasterxml/jackson/databind/JsonMappingException;\", (javax.ws.rs.ext.ExceptionMapper) new com.fasterxml.jackson.jaxrs.base.JsonMappingExceptionMapper(), staticinvoke <io.confluent.kafkarest.response.StreamingResponse$lambda_static_0__12: java.util.function.Function bootstrap$()>(), staticinvoke <io.confluent.kafkarest.response.StreamingResponse$lambda_static_1__13: java.util.function.Function bootstrap$()>()), class \"Lcom/fasterxml/jackson/core/JsonParseException;\", (javax.ws.rs.ext.ExceptionMapper) new com.fasterxml.jackson.jaxrs.base.JsonParseExceptionMapper(), staticinvoke <io.confluent.kafkarest.response.StreamingResponse$lambda_static_2__14: java.util.function.Function bootstrap$()>(), staticinvoke <io.confluent.kafkarest.response.StreamingResponse$lambda_static_3__15: java.util.function.Function bootstrap$()>()), class \"Lio/confluent/kafkarest/exceptions/StatusCodeException;\", new io.confluent.kafkarest.exceptions.v3.V3ExceptionMapper(), staticinvoke <io.confluent.kafkarest.response.StreamingResponse$lambda_static_4__16: java.util.function.Function bootstrap$()>(), staticinvoke <io.confluent.kafkarest.response.StreamingResponse$lambda_static_5__17: java.util.function.Function bootstrap$()>()), class \"Lio/confluent/rest/exceptions/RestConstraintViolationException;\", new io.confluent.kafkarest.exceptions.RestConstraintViolationExceptionMapper(), staticinvoke <io.confluent.kafkarest.response.StreamingResponse$lambda_static_6__18: java.util.function.Function bootstrap$()>(), staticinvoke <io.confluent.kafkarest.response.StreamingResponse$lambda_static_7__19: java.util.function.Function bootstrap$()>()), class \"Ljavax/ws/rs/WebApplicationException;\", (javax.ws.rs.ext.ExceptionMapper) new io.confluent.rest.exceptions.WebApplicationExceptionMapper(null), staticinvoke <io.confluent.kafkarest.response.StreamingResponse$lambda_static_8__20: java.util.function.Function bootstrap$()>(), staticinvoke <io.confluent.kafkarest.response.StreamingResponse$lambda_static_9__21: java.util.function.Function bootstrap$()>()), (javax.ws.rs.ext.ExceptionMapper) new io.confluent.rest.exceptions.KafkaExceptionMapper(null), staticinvoke <io.confluent.kafkarest.response.StreamingResponse$lambda_static_10__22: java.util.function.Function bootstrap$()>(), staticinvoke <io.confluent.kafkarest.response.StreamingResponse$lambda_static_11__23: java.util.function.Function bootstrap$()>()).<io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder: io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper build()>()"
+              ],
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g20"
+              }
+            },
+            "g21": {
               "name": "log",
               "assigned-values": [
                 "staticinvoke <org.slf4j.LoggerFactory: org.slf4j.Logger getLogger(java.lang.Class)>(class \"Lio/confluent/kafkarest/response/StreamingResponse;\")"
               ],
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g4"
-              }
-            },
-            "g5": {
-              "name": "EXCEPTION_MAPPER",
-              "assigned-values": [
-                "staticinvoke <io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder: io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder access$200(io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder,javax.ws.rs.ext.ExceptionMapper,java.util.function.Function,java.util.function.Function)>(staticinvoke <io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder: io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder access$100(io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder,java.lang.Class,javax.ws.rs.ext.ExceptionMapper,java.util.function.Function,java.util.function.Function)>(staticinvoke <io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder: io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder access$100(io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder,java.lang.Class,javax.ws.rs.ext.ExceptionMapper,java.util.function.Function,java.util.function.Function)>(staticinvoke <io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder: io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder access$100(io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder,java.lang.Class,javax.ws.rs.ext.ExceptionMapper,java.util.function.Function,java.util.function.Function)>(staticinvoke <io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder: io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder access$100(io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder,java.lang.Class,javax.ws.rs.ext.ExceptionMapper,java.util.function.Function,java.util.function.Function)>(staticinvoke <io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder: io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder access$100(io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder,java.lang.Class,javax.ws.rs.ext.ExceptionMapper,java.util.function.Function,java.util.function.Function)>(new io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder(null), class \"Lcom/fasterxml/jackson/databind/JsonMappingException;\", (javax.ws.rs.ext.ExceptionMapper) new com.fasterxml.jackson.jaxrs.base.JsonMappingExceptionMapper(), staticinvoke <io.confluent.kafkarest.response.StreamingResponse$lambda_static_0__421: java.util.function.Function bootstrap$()>(), staticinvoke <io.confluent.kafkarest.response.StreamingResponse$lambda_static_1__422: java.util.function.Function bootstrap$()>()), class \"Lcom/fasterxml/jackson/core/JsonParseException;\", (javax.ws.rs.ext.ExceptionMapper) new com.fasterxml.jackson.jaxrs.base.JsonParseExceptionMapper(), staticinvoke <io.confluent.kafkarest.response.StreamingResponse$lambda_static_2__423: java.util.function.Function bootstrap$()>(), staticinvoke <io.confluent.kafkarest.response.StreamingResponse$lambda_static_3__424: java.util.function.Function bootstrap$()>()), class \"Lio/confluent/kafkarest/exceptions/StatusCodeException;\", new io.confluent.kafkarest.exceptions.v3.V3ExceptionMapper(), staticinvoke <io.confluent.kafkarest.response.StreamingResponse$lambda_static_4__425: java.util.function.Function bootstrap$()>(), staticinvoke <io.confluent.kafkarest.response.StreamingResponse$lambda_static_5__426: java.util.function.Function bootstrap$()>()), class \"Lio/confluent/rest/exceptions/RestConstraintViolationException;\", new io.confluent.kafkarest.exceptions.RestConstraintViolationExceptionMapper(), staticinvoke <io.confluent.kafkarest.response.StreamingResponse$lambda_static_6__427: java.util.function.Function bootstrap$()>(), staticinvoke <io.confluent.kafkarest.response.StreamingResponse$lambda_static_7__428: java.util.function.Function bootstrap$()>()), class \"Ljavax/ws/rs/WebApplicationException;\", (javax.ws.rs.ext.ExceptionMapper) new io.confluent.rest.exceptions.WebApplicationExceptionMapper(null), staticinvoke <io.confluent.kafkarest.response.StreamingResponse$lambda_static_8__429: java.util.function.Function bootstrap$()>(), staticinvoke <io.confluent.kafkarest.response.StreamingResponse$lambda_static_9__430: java.util.function.Function bootstrap$()>()), (javax.ws.rs.ext.ExceptionMapper) new io.confluent.rest.exceptions.KafkaExceptionMapper(null), staticinvoke <io.confluent.kafkarest.response.StreamingResponse$lambda_static_10__431: java.util.function.Function bootstrap$()>(), staticinvoke <io.confluent.kafkarest.response.StreamingResponse$lambda_static_11__432: java.util.function.Function bootstrap$()>()).<io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper$Builder: io.confluent.kafkarest.response.StreamingResponse$CompositeErrorMapper build()>()"
-              ],
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g5"
+                "$ref": "#/components/x-global-variables-info/g21"
               }
             }
           }
@@ -3274,20 +3274,20 @@
       "/v3/clusters/{clusterId}/{config_type}-configs/{name}": {
         "delete": {
           "global-reads": {
-            "g1": {
+            "g6": {
               "name": "NO_CONTENT",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
+                "$ref": "#/components/x-global-variables-info/g6"
               }
             }
           }
         },
         "put": {
           "global-reads": {
-            "g1": {
+            "g6": {
               "name": "NO_CONTENT",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
+                "$ref": "#/components/x-global-variables-info/g6"
               }
             }
           }
@@ -3296,10 +3296,10 @@
       "/v3/clusters/{clusterId}/{config_type}-configs:alter": {
         "post": {
           "global-reads": {
-            "g1": {
+            "g6": {
               "name": "NO_CONTENT",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
+                "$ref": "#/components/x-global-variables-info/g6"
               }
             }
           }
@@ -3307,32 +3307,32 @@
       }
     },
     "x-endpoint-interdependence": {
-      "g4": {
+      "g20": {
         "location-details": {
-          "$ref": "#/components/x-global-variables-info/g4"
+          "$ref": "#/components/x-global-variables-info/g20"
         },
         "read-by": {
-          "em12": {
+          "em80": {
             "$ref": "#/paths/~1v3~1clusters~1{clusterId}~1topics~1{topicName}~1records/post"
           }
         },
         "written-by": {
-          "em12": {
+          "em80": {
             "$ref": "#/paths/~1v3~1clusters~1{clusterId}~1topics~1{topicName}~1records/post"
           }
         }
       },
-      "g5": {
+      "g21": {
         "location-details": {
-          "$ref": "#/components/x-global-variables-info/g5"
+          "$ref": "#/components/x-global-variables-info/g21"
         },
         "read-by": {
-          "em12": {
+          "em80": {
             "$ref": "#/paths/~1v3~1clusters~1{clusterId}~1topics~1{topicName}~1records/post"
           }
         },
         "written-by": {
-          "em12": {
+          "em80": {
             "$ref": "#/paths/~1v3~1clusters~1{clusterId}~1topics~1{topicName}~1records/post"
           }
         }
@@ -3340,156 +3340,156 @@
     },
     "x-global-variables-info": {
       "g0": {
-        "name": "CREATED",
+        "name": "INTERNAL_SERVER_ERROR",
         "id": "g0",
         "defining-class": "javax.ws.rs.core.Response$Status"
       },
       "g1": {
-        "name": "NO_CONTENT",
+        "name": "log",
         "id": "g1",
-        "defining-class": "javax.ws.rs.core.Response$Status"
-      },
-      "g2": {
-        "name": "TOPIC",
-        "id": "g2",
-        "defining-class": "org.apache.kafka.common.config.ConfigResource$Type"
-      },
-      "g3": {
-        "name": "REQUEST_TIMEOUT",
-        "id": "g3",
-        "defining-class": "javax.ws.rs.core.Response$Status"
-      },
-      "g4": {
-        "name": "log",
-        "id": "g4",
-        "defining-class": "io.confluent.kafkarest.response.StreamingResponse",
-        "locations-of-static-assignments": [
-          "line 73, io.confluent.kafkarest.response.StreamingResponse"
-        ]
-      },
-      "g5": {
-        "name": "EXCEPTION_MAPPER",
-        "id": "g5",
-        "defining-class": "io.confluent.kafkarest.response.StreamingResponse",
-        "locations-of-static-assignments": [
-          "line 107, io.confluent.kafkarest.response.StreamingResponse"
-        ]
-      },
-      "g6": {
-        "name": "MILLISECONDS",
-        "id": "g6",
-        "defining-class": "java.util.concurrent.TimeUnit"
-      },
-      "g7": {
-        "name": "BROKER",
-        "id": "g7",
-        "defining-class": "org.apache.kafka.common.config.ConfigResource$Type"
-      },
-      "g8": {
-        "name": "UNKNOWN",
-        "id": "g8",
-        "defining-class": "io.confluent.kafkarest.entities.Acl$ResourceType",
-        "locations-of-static-assignments": [
-          "line 210, io.confluent.kafkarest.entities.Acl$ResourceType"
-        ]
-      },
-      "g9": {
-        "name": "UNKNOWN",
-        "id": "g9",
-        "defining-class": "io.confluent.kafkarest.entities.Acl$PatternType",
-        "locations-of-static-assignments": [
-          "line 144, io.confluent.kafkarest.entities.Acl$PatternType"
-        ]
-      },
-      "g10": {
-        "name": "UNKNOWN",
-        "id": "g10",
-        "defining-class": "io.confluent.kafkarest.entities.Acl$Operation",
-        "locations-of-static-assignments": [
-          "line 86, io.confluent.kafkarest.entities.Acl$Operation"
-        ]
-      },
-      "g11": {
-        "name": "UNKNOWN",
-        "id": "g11",
-        "defining-class": "io.confluent.kafkarest.entities.Acl$Permission",
-        "locations-of-static-assignments": [
-          "line 179, io.confluent.kafkarest.entities.Acl$Permission"
-        ]
-      },
-      "g12": {
-        "name": "ANY",
-        "id": "g12",
-        "defining-class": "io.confluent.kafkarest.entities.Acl$ResourceType",
-        "locations-of-static-assignments": [
-          "line 213, io.confluent.kafkarest.entities.Acl$ResourceType"
-        ]
-      },
-      "g13": {
-        "name": "ANY",
-        "id": "g13",
-        "defining-class": "io.confluent.kafkarest.entities.Acl$Permission",
-        "locations-of-static-assignments": [
-          "line 182, io.confluent.kafkarest.entities.Acl$Permission"
-        ]
-      },
-      "g14": {
-        "name": "ANY",
-        "id": "g14",
-        "defining-class": "io.confluent.kafkarest.entities.Acl$PatternType",
-        "locations-of-static-assignments": [
-          "line 147, io.confluent.kafkarest.entities.Acl$PatternType"
-        ]
-      },
-      "g15": {
-        "name": "ANY",
-        "id": "g15",
-        "defining-class": "io.confluent.kafkarest.entities.Acl$Operation",
-        "locations-of-static-assignments": [
-          "line 89, io.confluent.kafkarest.entities.Acl$Operation"
-        ]
-      },
-      "g16": {
-        "name": "MATCH",
-        "id": "g16",
-        "defining-class": "io.confluent.kafkarest.entities.Acl$PatternType",
-        "locations-of-static-assignments": [
-          "line 150, io.confluent.kafkarest.entities.Acl$PatternType"
-        ]
-      },
-      "g17": {
-        "name": "BINARY",
-        "id": "g17",
-        "defining-class": "io.confluent.kafkarest.entities.EmbeddedFormat",
-        "locations-of-static-assignments": [
-          "line 34, io.confluent.kafkarest.entities.EmbeddedFormat"
-        ]
-      },
-      "g18": {
-        "name": "log",
-        "id": "g18",
         "defining-class": "io.confluent.kafkarest.v2.KafkaConsumerManager",
         "locations-of-static-assignments": [
           "line 89, io.confluent.kafkarest.v2.KafkaConsumerManager"
         ]
       },
-      "g19": {
+      "g2": {
         "name": "$SwitchMap$io$confluent$kafkarest$entities$EmbeddedFormat",
-        "id": "g19",
+        "id": "g2",
         "defining-class": "io.confluent.kafkarest.v2.KafkaConsumerManager$3",
         "locations-of-static-assignments": [
           "line 263, io.confluent.kafkarest.v2.KafkaConsumerManager$3"
         ]
       },
-      "g20": {
-        "name": "INTERNAL_SERVER_ERROR",
-        "id": "g20",
+      "g3": {
+        "name": "CONFLICT",
+        "id": "g3",
         "defining-class": "javax.ws.rs.core.Response$Status"
       },
-      "g21": {
-        "name": "CONFLICT",
-        "id": "g21",
+      "g4": {
+        "name": "BINARY",
+        "id": "g4",
+        "defining-class": "io.confluent.kafkarest.entities.EmbeddedFormat",
+        "locations-of-static-assignments": [
+          "line 34, io.confluent.kafkarest.entities.EmbeddedFormat"
+        ]
+      },
+      "g5": {
+        "name": "BROKER",
+        "id": "g5",
+        "defining-class": "org.apache.kafka.common.config.ConfigResource$Type"
+      },
+      "g6": {
+        "name": "NO_CONTENT",
+        "id": "g6",
         "defining-class": "javax.ws.rs.core.Response$Status"
+      },
+      "g7": {
+        "name": "CREATED",
+        "id": "g7",
+        "defining-class": "javax.ws.rs.core.Response$Status"
+      },
+      "g8": {
+        "name": "UNKNOWN",
+        "id": "g8",
+        "defining-class": "io.confluent.kafkarest.entities.Acl$Operation",
+        "locations-of-static-assignments": [
+          "line 86, io.confluent.kafkarest.entities.Acl$Operation"
+        ]
+      },
+      "g9": {
+        "name": "UNKNOWN",
+        "id": "g9",
+        "defining-class": "io.confluent.kafkarest.entities.Acl$Permission",
+        "locations-of-static-assignments": [
+          "line 179, io.confluent.kafkarest.entities.Acl$Permission"
+        ]
+      },
+      "g10": {
+        "name": "UNKNOWN",
+        "id": "g10",
+        "defining-class": "io.confluent.kafkarest.entities.Acl$ResourceType",
+        "locations-of-static-assignments": [
+          "line 210, io.confluent.kafkarest.entities.Acl$ResourceType"
+        ]
+      },
+      "g11": {
+        "name": "UNKNOWN",
+        "id": "g11",
+        "defining-class": "io.confluent.kafkarest.entities.Acl$PatternType",
+        "locations-of-static-assignments": [
+          "line 144, io.confluent.kafkarest.entities.Acl$PatternType"
+        ]
+      },
+      "g12": {
+        "name": "ANY",
+        "id": "g12",
+        "defining-class": "io.confluent.kafkarest.entities.Acl$Operation",
+        "locations-of-static-assignments": [
+          "line 89, io.confluent.kafkarest.entities.Acl$Operation"
+        ]
+      },
+      "g13": {
+        "name": "ANY",
+        "id": "g13",
+        "defining-class": "io.confluent.kafkarest.entities.Acl$ResourceType",
+        "locations-of-static-assignments": [
+          "line 213, io.confluent.kafkarest.entities.Acl$ResourceType"
+        ]
+      },
+      "g14": {
+        "name": "MATCH",
+        "id": "g14",
+        "defining-class": "io.confluent.kafkarest.entities.Acl$PatternType",
+        "locations-of-static-assignments": [
+          "line 150, io.confluent.kafkarest.entities.Acl$PatternType"
+        ]
+      },
+      "g15": {
+        "name": "ANY",
+        "id": "g15",
+        "defining-class": "io.confluent.kafkarest.entities.Acl$PatternType",
+        "locations-of-static-assignments": [
+          "line 147, io.confluent.kafkarest.entities.Acl$PatternType"
+        ]
+      },
+      "g16": {
+        "name": "ANY",
+        "id": "g16",
+        "defining-class": "io.confluent.kafkarest.entities.Acl$Permission",
+        "locations-of-static-assignments": [
+          "line 182, io.confluent.kafkarest.entities.Acl$Permission"
+        ]
+      },
+      "g17": {
+        "name": "TOPIC",
+        "id": "g17",
+        "defining-class": "org.apache.kafka.common.config.ConfigResource$Type"
+      },
+      "g18": {
+        "name": "MILLISECONDS",
+        "id": "g18",
+        "defining-class": "java.util.concurrent.TimeUnit"
+      },
+      "g19": {
+        "name": "REQUEST_TIMEOUT",
+        "id": "g19",
+        "defining-class": "javax.ws.rs.core.Response$Status"
+      },
+      "g20": {
+        "name": "EXCEPTION_MAPPER",
+        "id": "g20",
+        "defining-class": "io.confluent.kafkarest.response.StreamingResponse",
+        "locations-of-static-assignments": [
+          "line 107, io.confluent.kafkarest.response.StreamingResponse"
+        ]
+      },
+      "g21": {
+        "name": "log",
+        "id": "g21",
+        "defining-class": "io.confluent.kafkarest.response.StreamingResponse",
+        "locations-of-static-assignments": [
+          "line 73, io.confluent.kafkarest.response.StreamingResponse"
+        ]
       }
     }
   }

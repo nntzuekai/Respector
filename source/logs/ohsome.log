@@ -1,7 +1,8 @@
-+ java -Djava.library.path=/home/rkh/z3//build/ -cp ./target/Respector-0.1-SNAPSHOT.jar:/home/rkh/z3//build/com.microsoft.z3.jar org.rest.Respector.AppMain.Main ../dataset//ohsome-api/target/classes/ ./generated_1//ohsome.json
 [main] INFO org.rest.Respector.EndPointRecog.PreprocessFramework - The REST API uses Spring
 [main] INFO org.rest.Respector.AppMain.MainTransform - total # of endpoint methods detected: 80
-[main] INFO org.rest.Respector.AppMain.MainTransform - 1/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataextraction.contributions.ContributionsController: void contributions(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 1/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.metadata.MetadataController: org.heigit.ohsome.ohsomeapi.output.metadata.MetadataResponse getMetadata(javax.servlet.http.HttpServletRequest)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 2/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataextraction.elements.ElementsFullHistoryController: void elementsFullHistory(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 11 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -9,7 +10,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 2/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataextraction.contributions.ContributionsController: void contributionsBbox(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 3/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataextraction.elements.ElementsFullHistoryController: void elementsBboxFullHistory(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 11 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -17,7 +18,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 3/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataextraction.contributions.ContributionsController: void contributionsCentroid(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 4/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataextraction.elements.ElementsFullHistoryController: void elementsCentroidFullHistory(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 11 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -25,7 +26,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 4/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataextraction.contributions.ContributionsController: void contributionsLatest(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 5/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataextraction.elements.ElementsController: void elementsGeometry(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 11 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -33,7 +34,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 5/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataextraction.contributions.ContributionsController: void contributionsBboxLatest(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 6/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataextraction.elements.ElementsController: void elementsBbox(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 11 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -41,7 +42,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 6/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataextraction.contributions.ContributionsController: void contributionsCentroidLatest(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 7/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataextraction.elements.ElementsController: void elementsCentroid(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 11 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -49,7 +50,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 7/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataextraction.elements.ElementsFullHistoryController: void elementsFullHistory(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 8/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataextraction.contributions.ContributionsController: void contributions(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 11 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -57,7 +58,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 8/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataextraction.elements.ElementsFullHistoryController: void elementsBboxFullHistory(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 9/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataextraction.contributions.ContributionsController: void contributionsBbox(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 11 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -65,7 +66,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 9/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataextraction.elements.ElementsFullHistoryController: void elementsCentroidFullHistory(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 10/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataextraction.contributions.ContributionsController: void contributionsCentroid(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 11 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -73,7 +74,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 10/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataextraction.elements.ElementsController: void elementsGeometry(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 11/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataextraction.contributions.ContributionsController: void contributionsLatest(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 11 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -81,7 +82,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 11/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataextraction.elements.ElementsController: void elementsBbox(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 12/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataextraction.contributions.ContributionsController: void contributionsBboxLatest(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 11 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -89,7 +90,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 12/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataextraction.elements.ElementsController: void elementsCentroid(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 13/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataextraction.contributions.ContributionsController: void contributionsCentroidLatest(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 11 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -97,9 +98,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 13/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.metadata.MetadataController: org.heigit.ohsome.ohsomeapi.output.metadata.MetadataResponse getMetadata(javax.servlet.http.HttpServletRequest)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 14/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.contributions.ContributionsCountController: org.heigit.ohsome.ohsomeapi.output.Response contributionsCount(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 14/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.users.UsersController: org.heigit.ohsome.ohsomeapi.output.Response count(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 12 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -107,7 +106,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 15/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.contributions.ContributionsCountController: org.heigit.ohsome.ohsomeapi.output.Response contributionsCountDensity(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 15/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.users.UsersController: org.heigit.ohsome.ohsomeapi.output.Response countGroupByType(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 12 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -115,55 +114,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 16/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.contributions.ContributionsCountController: org.heigit.ohsome.ohsomeapi.output.Response contributionsLatestCount(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 12 endpoint parameters in request body
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 17/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.contributions.ContributionsCountController: org.heigit.ohsome.ohsomeapi.output.Response contributionsLatestCountDensity(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 12 endpoint parameters in request body
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 18/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.contributions.ContributionsCountController: org.heigit.ohsome.ohsomeapi.output.Response contributionsCountGroupByBoundary(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 12 endpoint parameters in request body
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 19/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.contributions.ContributionsCountController: org.heigit.ohsome.ohsomeapi.output.Response contributionsCountDensityGroupByBoundary(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 12 endpoint parameters in request body
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 20/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.users.UsersController: org.heigit.ohsome.ohsomeapi.output.Response count(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 12 endpoint parameters in request body
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 21/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.users.UsersController: org.heigit.ohsome.ohsomeapi.output.Response countGroupByType(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
-[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
-[main] INFO org.rest.Respector.AppMain.MainTransform - 12 endpoint parameters in request body
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
-[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 22/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.users.UsersController: org.heigit.ohsome.ohsomeapi.output.Response countGroupByTag(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 16/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.users.UsersController: org.heigit.ohsome.ohsomeapi.output.Response countGroupByTag(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 14 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -171,7 +122,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 23/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.users.UsersController: org.heigit.ohsome.ohsomeapi.output.Response countGroupByKey(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 17/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.users.UsersController: org.heigit.ohsome.ohsomeapi.output.Response countGroupByKey(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 13 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -179,7 +130,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 24/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.users.UsersController: org.heigit.ohsome.ohsomeapi.output.Response countGroupByBoundary(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 18/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.users.UsersController: org.heigit.ohsome.ohsomeapi.output.Response countGroupByBoundary(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 12 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -187,7 +138,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 25/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.users.UsersController: org.heigit.ohsome.ohsomeapi.output.Response countDensity(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 19/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.users.UsersController: org.heigit.ohsome.ohsomeapi.output.Response countDensity(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 12 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -195,7 +146,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 26/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.users.UsersController: org.heigit.ohsome.ohsomeapi.output.Response countDensityGroupByType(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 20/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.users.UsersController: org.heigit.ohsome.ohsomeapi.output.Response countDensityGroupByType(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 12 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -203,7 +154,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 27/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.users.UsersController: org.heigit.ohsome.ohsomeapi.output.Response countDensityGroupByTag(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 21/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.users.UsersController: org.heigit.ohsome.ohsomeapi.output.Response countDensityGroupByTag(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 14 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -211,7 +162,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 28/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.users.UsersController: org.heigit.ohsome.ohsomeapi.output.Response countDensityGroupByBoundary(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 22/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.users.UsersController: org.heigit.ohsome.ohsomeapi.output.Response countDensityGroupByBoundary(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 12 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -219,7 +170,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 29/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.CountController: org.heigit.ohsome.ohsomeapi.output.Response count(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 23/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.PerimeterController: org.heigit.ohsome.ohsomeapi.output.Response perimeter(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 11 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -227,7 +178,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 30/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.CountController: org.heigit.ohsome.ohsomeapi.output.Response countGroupByType(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 24/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.PerimeterController: org.heigit.ohsome.ohsomeapi.output.Response perimeterGroupByType(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 11 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -235,7 +186,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 31/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.CountController: org.heigit.ohsome.ohsomeapi.output.Response countGroupByBoundary(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 25/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.PerimeterController: org.heigit.ohsome.ohsomeapi.output.Response perimeterGroupByBoundary(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 11 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -243,7 +194,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 32/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.CountController: org.heigit.ohsome.ohsomeapi.output.Response countGroupByBoundaryGroupByTag(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 26/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.PerimeterController: org.heigit.ohsome.ohsomeapi.output.Response perimeterGroupByBoundaryGroupByTag(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 13 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -251,7 +202,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 33/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.CountController: org.heigit.ohsome.ohsomeapi.output.Response countGroupByKey(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 27/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.PerimeterController: org.heigit.ohsome.ohsomeapi.output.Response perimeterGroupByKey(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 12 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -259,7 +210,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 34/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.CountController: org.heigit.ohsome.ohsomeapi.output.Response countGroupByTag(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 28/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.PerimeterController: org.heigit.ohsome.ohsomeapi.output.Response perimeterGroupByTag(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 13 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -267,7 +218,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 35/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.CountController: org.heigit.ohsome.ohsomeapi.output.Response countDensity(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 29/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.PerimeterController: org.heigit.ohsome.ohsomeapi.output.Response perimeterDensity(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 11 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -275,7 +226,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 36/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.CountController: org.heigit.ohsome.ohsomeapi.output.Response countDensityGroupByType(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 30/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.PerimeterController: org.heigit.ohsome.ohsomeapi.output.Response perimeterDensityGroupByType(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 11 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -283,7 +234,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 37/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.CountController: org.heigit.ohsome.ohsomeapi.output.Response countDensityGroupByBoundary(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 31/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.PerimeterController: org.heigit.ohsome.ohsomeapi.output.Response perimeterDensityGroupByBoundary(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 11 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -291,7 +242,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 38/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.CountController: org.heigit.ohsome.ohsomeapi.output.Response countDensityGroupByBoundaryGroupByTag(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 32/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.PerimeterController: org.heigit.ohsome.ohsomeapi.output.Response perimeterDensityGroupByBoundaryGroupByTag(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 13 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -299,7 +250,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 39/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.CountController: org.heigit.ohsome.ohsomeapi.output.Response countDensityGroupByTag(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 33/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.PerimeterController: org.heigit.ohsome.ohsomeapi.output.Response perimeterDensityGroupByTag(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 13 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -307,7 +258,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 40/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.CountController: org.heigit.ohsome.ohsomeapi.output.Response countRatio(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 34/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.PerimeterController: org.heigit.ohsome.ohsomeapi.output.Response perimeterRatio(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 15 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -315,7 +266,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 41/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.CountController: org.heigit.ohsome.ohsomeapi.output.Response countRatioGroupByBoundary(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 35/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.PerimeterController: org.heigit.ohsome.ohsomeapi.output.Response perimeterRatioGroupByBoundary(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 15 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -323,7 +274,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 42/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.AreaController: org.heigit.ohsome.ohsomeapi.output.Response area(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 36/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.LengthController: org.heigit.ohsome.ohsomeapi.output.Response length(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 11 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -331,7 +282,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 43/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.AreaController: org.heigit.ohsome.ohsomeapi.output.Response areaGroupByType(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 37/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.LengthController: org.heigit.ohsome.ohsomeapi.output.Response lengthGroupByType(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 11 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -339,7 +290,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 44/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.AreaController: org.heigit.ohsome.ohsomeapi.output.Response areaGroupByBoundary(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 38/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.LengthController: org.heigit.ohsome.ohsomeapi.output.Response lengthGroupByBoundary(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 11 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -347,7 +298,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 45/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.AreaController: org.heigit.ohsome.ohsomeapi.output.Response areaGroupByBoundaryGroupByTag(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 39/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.LengthController: org.heigit.ohsome.ohsomeapi.output.Response lengthGroupByBoundaryGroupByTag(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 13 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -355,7 +306,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 46/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.AreaController: org.heigit.ohsome.ohsomeapi.output.Response areaGroupByKey(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 40/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.LengthController: org.heigit.ohsome.ohsomeapi.output.Response lengthGroupByKey(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 12 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -363,7 +314,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 47/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.AreaController: org.heigit.ohsome.ohsomeapi.output.Response areaGroupByTag(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 41/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.LengthController: org.heigit.ohsome.ohsomeapi.output.Response lengthGroupByTag(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 13 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -371,7 +322,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 48/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.AreaController: org.heigit.ohsome.ohsomeapi.output.Response areaDensity(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 42/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.LengthController: org.heigit.ohsome.ohsomeapi.output.Response lengthDensity(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 11 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -379,7 +330,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 49/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.AreaController: org.heigit.ohsome.ohsomeapi.output.Response areaDensityGroupByType(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 43/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.LengthController: org.heigit.ohsome.ohsomeapi.output.Response lengthDensityGroupByType(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 11 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -387,7 +338,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 50/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.AreaController: org.heigit.ohsome.ohsomeapi.output.Response areaDensityGroupByBoundary(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 44/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.LengthController: org.heigit.ohsome.ohsomeapi.output.Response lengthDensityGroupByBoundary(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 11 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -395,7 +346,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 51/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.AreaController: org.heigit.ohsome.ohsomeapi.output.Response areaDensityGroupByBoundaryGroupByTag(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 45/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.LengthController: org.heigit.ohsome.ohsomeapi.output.Response lengthDensityGroupByBoundaryGroupByTag(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 13 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -403,7 +354,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 52/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.AreaController: org.heigit.ohsome.ohsomeapi.output.Response areaDensityGroupByTag(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 46/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.LengthController: org.heigit.ohsome.ohsomeapi.output.Response lengthDensityGroupByTag(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 13 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -411,7 +362,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 53/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.AreaController: org.heigit.ohsome.ohsomeapi.output.Response areaRatio(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 47/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.LengthController: org.heigit.ohsome.ohsomeapi.output.Response lengthRatio(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 15 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -419,7 +370,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 54/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.AreaController: org.heigit.ohsome.ohsomeapi.output.Response areaRatioGroupByBoundary(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 48/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.LengthController: org.heigit.ohsome.ohsomeapi.output.Response lengthRatioGroupByBoundary(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 15 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -427,7 +378,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 55/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.PerimeterController: org.heigit.ohsome.ohsomeapi.output.Response perimeter(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 49/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.CountController: org.heigit.ohsome.ohsomeapi.output.Response count(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 11 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -435,7 +386,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 56/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.PerimeterController: org.heigit.ohsome.ohsomeapi.output.Response perimeterGroupByType(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 50/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.CountController: org.heigit.ohsome.ohsomeapi.output.Response countGroupByType(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 11 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -443,7 +394,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 57/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.PerimeterController: org.heigit.ohsome.ohsomeapi.output.Response perimeterGroupByBoundary(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 51/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.CountController: org.heigit.ohsome.ohsomeapi.output.Response countGroupByBoundary(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 11 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -451,7 +402,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 58/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.PerimeterController: org.heigit.ohsome.ohsomeapi.output.Response perimeterGroupByBoundaryGroupByTag(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 52/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.CountController: org.heigit.ohsome.ohsomeapi.output.Response countGroupByBoundaryGroupByTag(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 13 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -459,7 +410,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 59/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.PerimeterController: org.heigit.ohsome.ohsomeapi.output.Response perimeterGroupByKey(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 53/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.CountController: org.heigit.ohsome.ohsomeapi.output.Response countGroupByKey(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 12 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -467,7 +418,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 60/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.PerimeterController: org.heigit.ohsome.ohsomeapi.output.Response perimeterGroupByTag(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 54/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.CountController: org.heigit.ohsome.ohsomeapi.output.Response countGroupByTag(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 13 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -475,7 +426,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 61/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.PerimeterController: org.heigit.ohsome.ohsomeapi.output.Response perimeterDensity(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 55/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.CountController: org.heigit.ohsome.ohsomeapi.output.Response countDensity(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 11 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -483,7 +434,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 62/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.PerimeterController: org.heigit.ohsome.ohsomeapi.output.Response perimeterDensityGroupByType(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 56/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.CountController: org.heigit.ohsome.ohsomeapi.output.Response countDensityGroupByType(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 11 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -491,7 +442,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 63/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.PerimeterController: org.heigit.ohsome.ohsomeapi.output.Response perimeterDensityGroupByBoundary(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 57/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.CountController: org.heigit.ohsome.ohsomeapi.output.Response countDensityGroupByBoundary(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 11 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -499,7 +450,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 64/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.PerimeterController: org.heigit.ohsome.ohsomeapi.output.Response perimeterDensityGroupByBoundaryGroupByTag(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 58/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.CountController: org.heigit.ohsome.ohsomeapi.output.Response countDensityGroupByBoundaryGroupByTag(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 13 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -507,7 +458,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 65/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.PerimeterController: org.heigit.ohsome.ohsomeapi.output.Response perimeterDensityGroupByTag(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 59/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.CountController: org.heigit.ohsome.ohsomeapi.output.Response countDensityGroupByTag(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 13 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -515,7 +466,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 66/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.PerimeterController: org.heigit.ohsome.ohsomeapi.output.Response perimeterRatio(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 60/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.CountController: org.heigit.ohsome.ohsomeapi.output.Response countRatio(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 15 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -523,7 +474,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 67/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.PerimeterController: org.heigit.ohsome.ohsomeapi.output.Response perimeterRatioGroupByBoundary(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 61/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.CountController: org.heigit.ohsome.ohsomeapi.output.Response countRatioGroupByBoundary(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 15 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -531,7 +482,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 68/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.LengthController: org.heigit.ohsome.ohsomeapi.output.Response length(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 62/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.AreaController: org.heigit.ohsome.ohsomeapi.output.Response area(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 11 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -539,7 +490,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 69/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.LengthController: org.heigit.ohsome.ohsomeapi.output.Response lengthGroupByType(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 63/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.AreaController: org.heigit.ohsome.ohsomeapi.output.Response areaGroupByType(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 11 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -547,7 +498,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 70/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.LengthController: org.heigit.ohsome.ohsomeapi.output.Response lengthGroupByBoundary(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 64/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.AreaController: org.heigit.ohsome.ohsomeapi.output.Response areaGroupByBoundary(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 11 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -555,7 +506,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 71/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.LengthController: org.heigit.ohsome.ohsomeapi.output.Response lengthGroupByBoundaryGroupByTag(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 65/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.AreaController: org.heigit.ohsome.ohsomeapi.output.Response areaGroupByBoundaryGroupByTag(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 13 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -563,7 +514,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 72/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.LengthController: org.heigit.ohsome.ohsomeapi.output.Response lengthGroupByKey(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 66/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.AreaController: org.heigit.ohsome.ohsomeapi.output.Response areaGroupByKey(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 12 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -571,7 +522,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 73/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.LengthController: org.heigit.ohsome.ohsomeapi.output.Response lengthGroupByTag(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 67/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.AreaController: org.heigit.ohsome.ohsomeapi.output.Response areaGroupByTag(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 13 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -579,7 +530,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 74/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.LengthController: org.heigit.ohsome.ohsomeapi.output.Response lengthDensity(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 68/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.AreaController: org.heigit.ohsome.ohsomeapi.output.Response areaDensity(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 11 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -587,7 +538,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 75/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.LengthController: org.heigit.ohsome.ohsomeapi.output.Response lengthDensityGroupByType(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 69/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.AreaController: org.heigit.ohsome.ohsomeapi.output.Response areaDensityGroupByType(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 11 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -595,7 +546,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 76/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.LengthController: org.heigit.ohsome.ohsomeapi.output.Response lengthDensityGroupByBoundary(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 70/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.AreaController: org.heigit.ohsome.ohsomeapi.output.Response areaDensityGroupByBoundary(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 11 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -603,7 +554,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 77/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.LengthController: org.heigit.ohsome.ohsomeapi.output.Response lengthDensityGroupByBoundaryGroupByTag(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 71/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.AreaController: org.heigit.ohsome.ohsomeapi.output.Response areaDensityGroupByBoundaryGroupByTag(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 13 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -611,7 +562,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 78/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.LengthController: org.heigit.ohsome.ohsomeapi.output.Response lengthDensityGroupByTag(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 72/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.AreaController: org.heigit.ohsome.ohsomeapi.output.Response areaDensityGroupByTag(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 13 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -619,7 +570,7 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 79/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.LengthController: org.heigit.ohsome.ohsomeapi.output.Response lengthRatio(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 73/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.AreaController: org.heigit.ohsome.ohsomeapi.output.Response areaRatio(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 15 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
@@ -627,15 +578,63 @@
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
-[main] INFO org.rest.Respector.AppMain.MainTransform - 80/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.LengthController: org.heigit.ohsome.ohsomeapi.output.Response lengthRatioGroupByBoundary(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - 74/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.elements.AreaController: org.heigit.ohsome.ohsomeapi.output.Response areaRatioGroupByBoundary(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
 [main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
 [main] INFO org.rest.Respector.AppMain.MainTransform - 15 endpoint parameters in request body
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 75/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.contributions.ContributionsCountController: org.heigit.ohsome.ohsomeapi.output.Response contributionsCount(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 12 endpoint parameters in request body
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 76/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.contributions.ContributionsCountController: org.heigit.ohsome.ohsomeapi.output.Response contributionsCountDensity(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 12 endpoint parameters in request body
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 77/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.contributions.ContributionsCountController: org.heigit.ohsome.ohsomeapi.output.Response contributionsLatestCount(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 12 endpoint parameters in request body
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 78/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.contributions.ContributionsCountController: org.heigit.ohsome.ohsomeapi.output.Response contributionsLatestCountDensity(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 12 endpoint parameters in request body
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 79/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.contributions.ContributionsCountController: org.heigit.ohsome.ohsomeapi.output.Response contributionsCountGroupByBoundary(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 12 endpoint parameters in request body
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
+[main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
+[main] INFO org.rest.Respector.AppMain.MainTransform - 80/80 analyzing endpoint method <org.heigit.ohsome.ohsomeapi.controller.dataaggregation.contributions.ContributionsCountController: org.heigit.ohsome.ohsomeapi.output.Response contributionsCountDensityGroupByBoundary(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>
+[main] INFO org.rest.Respector.AppMain.MainTransform - total number of endpoint parameters for this method detected: 0
+[main] INFO org.rest.Respector.AppMain.MainTransform - 12 endpoint parameters in request body
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 1000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 2000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 3000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 4000
 [main] INFO org.rest.Respector.PathCondExtract.EndpointAnalysis - total paths analyzed: 5000
 
-real	127m3.635s
-user	128m5.618s
-sys	0m3.045s
+real	154m30.010s
+user	155m43.071s
+sys	0m14.250s
