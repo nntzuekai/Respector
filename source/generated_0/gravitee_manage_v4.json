@@ -14,7 +14,7 @@
     "/apis/{apiId}": {
       "delete": {
         "description": "",
-        "operationId": "em2",
+        "operationId": "em15",
         "parameters": [
           {
             "name": "closePlans",
@@ -44,7 +44,7 @@
       },
       "get": {
         "description": "",
-        "operationId": "em0",
+        "operationId": "em13",
         "parameters": [
           {
             "name": "apiId",
@@ -319,7 +319,7 @@
       },
       "put": {
         "description": "",
-        "operationId": "em1",
+        "operationId": "em14",
         "parameters": [
           {
             "name": "apiId",
@@ -697,7 +697,7 @@
     "/apis/{apiId}/_start": {
       "post": {
         "description": "",
-        "operationId": "em4",
+        "operationId": "em17",
         "parameters": [
           {
             "name": "apiId",
@@ -730,7 +730,7 @@
     "/apis/{apiId}/_stop": {
       "post": {
         "description": "",
-        "operationId": "em5",
+        "operationId": "em18",
         "parameters": [
           {
             "name": "apiId",
@@ -763,7 +763,7 @@
     "/apis/{apiId}/deployments": {
       "post": {
         "description": "",
-        "operationId": "em3",
+        "operationId": "em16",
         "parameters": [
           {
             "name": "apiId",
@@ -1051,7 +1051,7 @@
     "/apis/{apiId}/plans": {
       "get": {
         "description": "",
-        "operationId": "em7",
+        "operationId": "em20",
         "parameters": [
           {
             "name": "status",
@@ -1106,7 +1106,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em8",
+        "operationId": "em21",
         "parameters": [
           {
             "name": "apiId",
@@ -1198,7 +1198,7 @@
     "/apis/{apiId}/plans/{plan}": {
       "delete": {
         "description": "",
-        "operationId": "em11",
+        "operationId": "em24",
         "parameters": [
           {
             "name": "plan",
@@ -1234,7 +1234,7 @@
       },
       "get": {
         "description": "",
-        "operationId": "em9",
+        "operationId": "em22",
         "parameters": [
           {
             "name": "plan",
@@ -1484,7 +1484,7 @@
       },
       "put": {
         "description": "",
-        "operationId": "em10",
+        "operationId": "em23",
         "parameters": [
           {
             "name": "plan",
@@ -1789,7 +1789,7 @@
     "/apis/{apiId}/plans/{plan}/_close": {
       "post": {
         "description": "",
-        "operationId": "em12",
+        "operationId": "em25",
         "parameters": [
           {
             "name": "plan",
@@ -2038,7 +2038,7 @@
     "/apis/{apiId}/plans/{plan}/_deprecate": {
       "post": {
         "description": "",
-        "operationId": "em14",
+        "operationId": "em27",
         "parameters": [
           {
             "name": "plan",
@@ -2287,7 +2287,7 @@
     "/apis/{apiId}/plans/{plan}/_publish": {
       "post": {
         "description": "",
-        "operationId": "em13",
+        "operationId": "em26",
         "parameters": [
           {
             "name": "plan",
@@ -2536,7 +2536,7 @@
     "/endpoints": {
       "get": {
         "description": "",
-        "operationId": "em25",
+        "operationId": "em9",
         "parameters": [],
         "responses": {
           "200": {
@@ -2561,7 +2561,7 @@
     "/endpoints/{endpointId}": {
       "get": {
         "description": "",
-        "operationId": "em26",
+        "operationId": "em10",
         "parameters": [
           {
             "name": "endpointId",
@@ -2622,7 +2622,7 @@
     "/endpoints/{endpointId}/documentation": {
       "get": {
         "description": "",
-        "operationId": "em28",
+        "operationId": "em12",
         "parameters": [
           {
             "name": "endpointId",
@@ -2653,7 +2653,7 @@
     "/endpoints/{endpointId}/schema": {
       "get": {
         "description": "",
-        "operationId": "em27",
+        "operationId": "em11",
         "parameters": [
           {
             "name": "endpointId",
@@ -2684,7 +2684,7 @@
     "/entrypoints": {
       "get": {
         "description": "",
-        "operationId": "em20",
+        "operationId": "em4",
         "parameters": [],
         "responses": {
           "200": {
@@ -2709,7 +2709,7 @@
     "/entrypoints/{entrypointId}": {
       "get": {
         "description": "",
-        "operationId": "em21",
+        "operationId": "em5",
         "parameters": [
           {
             "name": "entrypointId",
@@ -2770,7 +2770,7 @@
     "/entrypoints/{entrypointId}/documentation": {
       "get": {
         "description": "",
-        "operationId": "em23",
+        "operationId": "em7",
         "parameters": [
           {
             "name": "entrypointId",
@@ -2801,7 +2801,7 @@
     "/entrypoints/{entrypointId}/schema": {
       "get": {
         "description": "",
-        "operationId": "em22",
+        "operationId": "em6",
         "parameters": [
           {
             "name": "entrypointId",
@@ -2832,7 +2832,7 @@
     "/entrypoints/{entrypointId}/subscriptionSchema": {
       "get": {
         "description": "",
-        "operationId": "em24",
+        "operationId": "em8",
         "parameters": [
           {
             "name": "entrypointId",
@@ -2863,7 +2863,7 @@
     "/environments/{envId}": {
       "get": {
         "description": "",
-        "operationId": "em18",
+        "operationId": "em2",
         "parameters": [
           {
             "name": "envId",
@@ -2924,7 +2924,7 @@
     "/environments/{envId}/apis": {
       "post": {
         "description": "",
-        "operationId": "em19",
+        "operationId": "em3",
         "parameters": [
           {
             "name": "envId",
@@ -2995,7 +2995,7 @@
     "/openapi.yaml": {
       "get": {
         "description": "",
-        "operationId": "em15",
+        "operationId": "em28",
         "parameters": [],
         "responses": {
           "200": {
@@ -3019,7 +3019,7 @@
     "/organizations/{orgId}": {
       "get": {
         "description": "",
-        "operationId": "em16",
+        "operationId": "em0",
         "parameters": [
           {
             "name": "orgId",
@@ -3087,7 +3087,7 @@
     "/organizations/{orgId}/environments": {
       "get": {
         "description": "",
-        "operationId": "em17",
+        "operationId": "em1",
         "parameters": [
           {
             "name": "orgId",
@@ -3125,31 +3125,31 @@
         "get": {
           "global-reads": {
             "g0": {
-              "name": "API_DEFINITION",
+              "name": "READ",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g0"
               }
             },
             "g1": {
-              "name": "GROUP",
+              "name": "API_DEFINITION",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g1"
               }
             },
             "g2": {
-              "name": "API",
+              "name": "GROUP",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g2"
               }
             },
             "g3": {
-              "name": "USER",
+              "name": "API",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g3"
               }
             },
             "g4": {
-              "name": "READ",
+              "name": "USER",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g4"
               }
@@ -3162,25 +3162,25 @@
           ],
           "global-reads": {
             "g5": {
-              "name": "UPDATE",
+              "name": "PRECONDITION_FAILED",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g5"
               }
             },
             "g6": {
-              "name": "PRECONDITION_FAILED",
+              "name": "ANY_MATCH",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g6"
               }
             },
             "g7": {
-              "name": "ANY_MATCH",
+              "name": "API_GATEWAY_DEFINITION",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g7"
               }
             },
             "g8": {
-              "name": "API_GATEWAY_DEFINITION",
+              "name": "UPDATE",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g8"
               }
@@ -3194,26 +3194,26 @@
             "( <io.gravitee.rest.api.model.api.ApiLifecycleState: io.gravitee.rest.api.model.api.ApiLifecycleState ARCHIVED>.<io.gravitee.rest.api.model.api.ApiLifecycleState: boolean equals(java.lang.Object)>(((io.gravitee.rest.api.model.v4.api.ApiEntity) virtualinvoke this.<io.gravitee.rest.api.management.v4.rest.resource.api.ApiResource: javax.ws.rs.core.Response getApiById()>().<javax.ws.rs.core.Response: java.lang.Object getEntity()>()).<io.gravitee.rest.api.model.v4.api.ApiEntity: io.gravitee.rest.api.model.api.ApiLifecycleState getLifecycleState()>()) == 0 )"
           ],
           "global-reads": {
-            "g6": {
+            "g5": {
               "name": "PRECONDITION_FAILED",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g5"
+              }
+            },
+            "g6": {
+              "name": "ANY_MATCH",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g6"
               }
             },
-            "g7": {
-              "name": "ANY_MATCH",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g7"
-              }
-            },
             "g9": {
-              "name": "ARCHIVED",
+              "name": "ENVIRONMENT",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g9"
               }
             },
             "g10": {
-              "name": "$SwitchMap$io$gravitee$common$component$Lifecycle$State",
+              "name": "STOP",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g10"
               }
@@ -3225,7 +3225,7 @@
               }
             },
             "g12": {
-              "name": "STOP",
+              "name": "ARCHIVED",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g12"
               }
@@ -3237,13 +3237,13 @@
               }
             },
             "g14": {
-              "name": "ENVIRONMENT",
+              "name": "REVIEW_OK",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g14"
               }
             },
             "g15": {
-              "name": "REVIEW_OK",
+              "name": "$SwitchMap$io$gravitee$common$component$Lifecycle$State",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g15"
               }
@@ -3257,26 +3257,26 @@
             "( <io.gravitee.rest.api.model.api.ApiLifecycleState: io.gravitee.rest.api.model.api.ApiLifecycleState ARCHIVED>.<io.gravitee.rest.api.model.api.ApiLifecycleState: boolean equals(java.lang.Object)>(((io.gravitee.rest.api.model.v4.api.ApiEntity) virtualinvoke this.<io.gravitee.rest.api.management.v4.rest.resource.api.ApiResource: javax.ws.rs.core.Response getApiById()>().<javax.ws.rs.core.Response: java.lang.Object getEntity()>()).<io.gravitee.rest.api.model.v4.api.ApiEntity: io.gravitee.rest.api.model.api.ApiLifecycleState getLifecycleState()>()) == 0 )"
           ],
           "global-reads": {
-            "g6": {
+            "g5": {
               "name": "PRECONDITION_FAILED",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g5"
+              }
+            },
+            "g6": {
+              "name": "ANY_MATCH",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g6"
               }
             },
-            "g7": {
-              "name": "ANY_MATCH",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g7"
-              }
-            },
             "g9": {
-              "name": "ARCHIVED",
+              "name": "ENVIRONMENT",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g9"
               }
             },
             "g10": {
-              "name": "$SwitchMap$io$gravitee$common$component$Lifecycle$State",
+              "name": "STOP",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g10"
               }
@@ -3288,7 +3288,7 @@
               }
             },
             "g12": {
-              "name": "STOP",
+              "name": "ARCHIVED",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g12"
               }
@@ -3300,13 +3300,13 @@
               }
             },
             "g14": {
-              "name": "ENVIRONMENT",
+              "name": "REVIEW_OK",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g14"
               }
             },
             "g15": {
-              "name": "REVIEW_OK",
+              "name": "$SwitchMap$io$gravitee$common$component$Lifecycle$State",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g15"
               }
@@ -3317,20 +3317,20 @@
       "/apis/{apiId}/plans": {
         "get": {
           "global-reads": {
-            "g4": {
+            "g0": {
               "name": "READ",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g4"
+                "$ref": "#/components/x-global-variables-info/g0"
               }
             },
             "g16": {
-              "name": "API_PLAN",
+              "name": "API_LOG",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g16"
               }
             },
             "g17": {
-              "name": "API_LOG",
+              "name": "API_PLAN",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g17"
               }
@@ -3367,16 +3367,16 @@
             "( this.<io.gravitee.rest.api.management.v4.rest.resource.api.ApiPlansResource: io.gravitee.rest.api.service.v4.PlanService planService>.<io.gravitee.rest.api.service.v4.PlanService: io.gravitee.rest.api.model.v4.plan.PlanEntity findById(io.gravitee.rest.api.service.common.ExecutionContext,java.lang.String)>(staticinvoke <io.gravitee.rest.api.service.common.GraviteeContext: io.gravitee.rest.api.service.common.ExecutionContext getExecutionContext()>(), {plan}).<io.gravitee.rest.api.model.v4.plan.PlanEntity: java.lang.String getApiId()>().<java.lang.String: boolean equals(java.lang.Object)>(this.<io.gravitee.rest.api.management.v4.rest.resource.api.ApiPlansResource: java.lang.String apiId>) != 0 )"
           ],
           "global-reads": {
-            "g4": {
+            "g0": {
               "name": "READ",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g4"
+                "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g16": {
+            "g17": {
               "name": "API_PLAN",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g16"
+                "$ref": "#/components/x-global-variables-info/g17"
               }
             },
             "g19": {
@@ -3456,85 +3456,85 @@
     "x-endpoint-interdependence": {},
     "x-global-variables-info": {
       "g0": {
-        "name": "API_DEFINITION",
-        "id": "g0",
-        "defining-class": "io.gravitee.rest.api.model.permissions.RolePermission",
-        "locations-of-static-assignments": [
-          "line 26, io.gravitee.rest.api.model.permissions.RolePermission"
-        ]
-      },
-      "g1": {
-        "name": "GROUP",
-        "id": "g1",
-        "defining-class": "io.gravitee.rest.api.model.MembershipReferenceType",
-        "locations-of-static-assignments": [
-          "line 28, io.gravitee.rest.api.model.MembershipReferenceType"
-        ]
-      },
-      "g2": {
-        "name": "API",
-        "id": "g2",
-        "defining-class": "io.gravitee.rest.api.model.MembershipReferenceType",
-        "locations-of-static-assignments": [
-          "line 27, io.gravitee.rest.api.model.MembershipReferenceType"
-        ]
-      },
-      "g3": {
-        "name": "USER",
-        "id": "g3",
-        "defining-class": "io.gravitee.rest.api.model.MembershipMemberType",
-        "locations-of-static-assignments": [
-          "line 26, io.gravitee.rest.api.model.MembershipMemberType"
-        ]
-      },
-      "g4": {
         "name": "READ",
-        "id": "g4",
+        "id": "g0",
         "defining-class": "io.gravitee.rest.api.model.permissions.RolePermissionAction",
         "locations-of-static-assignments": [
           "line 27, io.gravitee.rest.api.model.permissions.RolePermissionAction"
         ]
       },
-      "g5": {
-        "name": "UPDATE",
-        "id": "g5",
-        "defining-class": "io.gravitee.rest.api.model.permissions.RolePermissionAction",
+      "g1": {
+        "name": "API_DEFINITION",
+        "id": "g1",
+        "defining-class": "io.gravitee.rest.api.model.permissions.RolePermission",
         "locations-of-static-assignments": [
-          "line 28, io.gravitee.rest.api.model.permissions.RolePermissionAction"
+          "line 26, io.gravitee.rest.api.model.permissions.RolePermission"
         ]
       },
-      "g6": {
+      "g2": {
+        "name": "GROUP",
+        "id": "g2",
+        "defining-class": "io.gravitee.rest.api.model.MembershipReferenceType",
+        "locations-of-static-assignments": [
+          "line 28, io.gravitee.rest.api.model.MembershipReferenceType"
+        ]
+      },
+      "g3": {
+        "name": "API",
+        "id": "g3",
+        "defining-class": "io.gravitee.rest.api.model.MembershipReferenceType",
+        "locations-of-static-assignments": [
+          "line 27, io.gravitee.rest.api.model.MembershipReferenceType"
+        ]
+      },
+      "g4": {
+        "name": "USER",
+        "id": "g4",
+        "defining-class": "io.gravitee.rest.api.model.MembershipMemberType",
+        "locations-of-static-assignments": [
+          "line 26, io.gravitee.rest.api.model.MembershipMemberType"
+        ]
+      },
+      "g5": {
         "name": "PRECONDITION_FAILED",
-        "id": "g6",
+        "id": "g5",
         "defining-class": "javax.ws.rs.core.Response$Status"
       },
-      "g7": {
+      "g6": {
         "name": "ANY_MATCH",
-        "id": "g7",
+        "id": "g6",
         "defining-class": "org.glassfish.jersey.message.internal.MatchingEntityTag"
       },
-      "g8": {
+      "g7": {
         "name": "API_GATEWAY_DEFINITION",
-        "id": "g8",
+        "id": "g7",
         "defining-class": "io.gravitee.rest.api.model.permissions.RolePermission",
         "locations-of-static-assignments": [
           "line 36, io.gravitee.rest.api.model.permissions.RolePermission"
         ]
       },
-      "g9": {
-        "name": "ARCHIVED",
-        "id": "g9",
-        "defining-class": "io.gravitee.rest.api.model.api.ApiLifecycleState",
+      "g8": {
+        "name": "UPDATE",
+        "id": "g8",
+        "defining-class": "io.gravitee.rest.api.model.permissions.RolePermissionAction",
         "locations-of-static-assignments": [
-          "line 32, io.gravitee.rest.api.model.api.ApiLifecycleState"
+          "line 28, io.gravitee.rest.api.model.permissions.RolePermissionAction"
+        ]
+      },
+      "g9": {
+        "name": "ENVIRONMENT",
+        "id": "g9",
+        "defining-class": "io.gravitee.rest.api.model.parameters.ParameterReferenceType",
+        "locations-of-static-assignments": [
+          "line 26, io.gravitee.rest.api.model.parameters.ParameterReferenceType"
         ]
       },
       "g10": {
-        "name": "$SwitchMap$io$gravitee$common$component$Lifecycle$State",
+        "name": "STOP",
         "id": "g10",
-        "defining-class": "io.gravitee.rest.api.management.v4.rest.resource.api.ApiResource$1",
+        "defining-class": "io.gravitee.rest.api.management.v4.rest.resource.param.LifecycleAction",
         "locations-of-static-assignments": [
-          "line 264, io.gravitee.rest.api.management.v4.rest.resource.api.ApiResource$1"
+          "line 20, io.gravitee.rest.api.management.v4.rest.resource.param.LifecycleAction"
         ]
       },
       "g11": {
@@ -3546,11 +3546,11 @@
         ]
       },
       "g12": {
-        "name": "STOP",
+        "name": "ARCHIVED",
         "id": "g12",
-        "defining-class": "io.gravitee.rest.api.management.v4.rest.resource.param.LifecycleAction",
+        "defining-class": "io.gravitee.rest.api.model.api.ApiLifecycleState",
         "locations-of-static-assignments": [
-          "line 20, io.gravitee.rest.api.management.v4.rest.resource.param.LifecycleAction"
+          "line 32, io.gravitee.rest.api.model.api.ApiLifecycleState"
         ]
       },
       "g13": {
@@ -3562,35 +3562,35 @@
         ]
       },
       "g14": {
-        "name": "ENVIRONMENT",
-        "id": "g14",
-        "defining-class": "io.gravitee.rest.api.model.parameters.ParameterReferenceType",
-        "locations-of-static-assignments": [
-          "line 26, io.gravitee.rest.api.model.parameters.ParameterReferenceType"
-        ]
-      },
-      "g15": {
         "name": "REVIEW_OK",
-        "id": "g15",
+        "id": "g14",
         "defining-class": "io.gravitee.rest.api.model.WorkflowState",
         "locations-of-static-assignments": [
           "line 31, io.gravitee.rest.api.model.WorkflowState"
         ]
       },
+      "g15": {
+        "name": "$SwitchMap$io$gravitee$common$component$Lifecycle$State",
+        "id": "g15",
+        "defining-class": "io.gravitee.rest.api.management.v4.rest.resource.api.ApiResource$1",
+        "locations-of-static-assignments": [
+          "line 264, io.gravitee.rest.api.management.v4.rest.resource.api.ApiResource$1"
+        ]
+      },
       "g16": {
-        "name": "API_PLAN",
+        "name": "API_LOG",
         "id": "g16",
         "defining-class": "io.gravitee.rest.api.model.permissions.RolePermission",
         "locations-of-static-assignments": [
-          "line 27, io.gravitee.rest.api.model.permissions.RolePermission"
+          "line 34, io.gravitee.rest.api.model.permissions.RolePermission"
         ]
       },
       "g17": {
-        "name": "API_LOG",
+        "name": "API_PLAN",
         "id": "g17",
         "defining-class": "io.gravitee.rest.api.model.permissions.RolePermission",
         "locations-of-static-assignments": [
-          "line 34, io.gravitee.rest.api.model.permissions.RolePermission"
+          "line 27, io.gravitee.rest.api.model.permissions.RolePermission"
         ]
       },
       "g18": {

@@ -141,7 +141,7 @@
     "/products/{productName}/configurations": {
       "get": {
         "description": "",
-        "operationId": "em7",
+        "operationId": "em14",
         "parameters": [
           {
             "name": "productName",
@@ -175,7 +175,7 @@
     "/products/{productName}/configurations/{configurationName}": {
       "delete": {
         "description": "",
-        "operationId": "em10",
+        "operationId": "em17",
         "parameters": [
           {
             "name": "productName",
@@ -208,7 +208,7 @@
       },
       "get": {
         "description": "",
-        "operationId": "em8",
+        "operationId": "em15",
         "parameters": [
           {
             "name": "productName",
@@ -290,7 +290,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em9",
+        "operationId": "em16",
         "parameters": [
           {
             "name": "productName",
@@ -460,7 +460,7 @@
     "/products/{productName}/constraints/excludes": {
       "post": {
         "description": "",
-        "operationId": "em13",
+        "operationId": "em12",
         "parameters": [
           {
             "name": "productName",
@@ -504,7 +504,7 @@
     "/products/{productName}/constraints/requires": {
       "post": {
         "description": "",
-        "operationId": "em12",
+        "operationId": "em11",
         "parameters": [
           {
             "name": "productName",
@@ -548,7 +548,7 @@
     "/products/{productName}/constraints/{constraintId}": {
       "delete": {
         "description": "",
-        "operationId": "em14",
+        "operationId": "em13",
         "parameters": [
           {
             "name": "productName",
@@ -581,7 +581,7 @@
     "/products/{productName}/features": {
       "get": {
         "description": "",
-        "operationId": "em15",
+        "operationId": "em7",
         "parameters": [
           {
             "name": "productName",
@@ -618,7 +618,7 @@
     "/products/{productName}/features/{featureName}": {
       "delete": {
         "description": "",
-        "operationId": "em18",
+        "operationId": "em10",
         "parameters": [
           {
             "name": "productName",
@@ -654,7 +654,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em16",
+        "operationId": "em8",
         "parameters": [
           {
             "name": "productName",
@@ -701,7 +701,7 @@
       },
       "put": {
         "description": "",
-        "operationId": "em17",
+        "operationId": "em9",
         "parameters": [
           {
             "name": "productName",

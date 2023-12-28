@@ -14,7 +14,7 @@
     "/api/activeAwardsCount": {
       "get": {
         "description": "",
-        "operationId": "em33",
+        "operationId": "em227",
         "parameters": [],
         "responses": {
           "200": {
@@ -126,7 +126,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em32",
+        "operationId": "em226",
         "parameters": [],
         "responses": {
           "200": {
@@ -240,7 +240,7 @@
     "/api/averageAwardPeriod": {
       "get": {
         "description": "",
-        "operationId": "em255",
+        "operationId": "em271",
         "parameters": [],
         "responses": {
           "200": {
@@ -352,7 +352,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em254",
+        "operationId": "em270",
         "parameters": [],
         "responses": {
           "200": {
@@ -466,7 +466,7 @@
     "/api/averageNumberOfTenderers": {
       "get": {
         "description": "",
-        "operationId": "em81",
+        "operationId": "em275",
         "parameters": [],
         "responses": {
           "200": {
@@ -578,7 +578,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em80",
+        "operationId": "em274",
         "parameters": [],
         "responses": {
           "200": {
@@ -692,7 +692,7 @@
     "/api/averageTenderPeriod": {
       "get": {
         "description": "",
-        "operationId": "em251",
+        "operationId": "em267",
         "parameters": [],
         "responses": {
           "200": {
@@ -804,7 +804,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em250",
+        "operationId": "em266",
         "parameters": [],
         "responses": {
           "200": {
@@ -918,7 +918,7 @@
     "/api/avgTimeFromPlanToTenderPhase": {
       "get": {
         "description": "",
-        "operationId": "em63",
+        "operationId": "em191",
         "parameters": [],
         "responses": {
           "200": {
@@ -1030,7 +1030,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em62",
+        "operationId": "em190",
         "parameters": [],
         "responses": {
           "200": {
@@ -1144,7 +1144,7 @@
     "/api/awardValueInterval": {
       "get": {
         "description": "",
-        "operationId": "em135",
+        "operationId": "em11",
         "parameters": [],
         "responses": {
           "200": {
@@ -1256,7 +1256,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em134",
+        "operationId": "em10",
         "parameters": [],
         "responses": {
           "200": {
@@ -1370,7 +1370,7 @@
     "/api/awardsByLocation": {
       "get": {
         "description": "",
-        "operationId": "em39",
+        "operationId": "em215",
         "parameters": [],
         "responses": {
           "200": {
@@ -1482,7 +1482,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em38",
+        "operationId": "em214",
         "parameters": [],
         "responses": {
           "200": {
@@ -1596,7 +1596,7 @@
     "/api/corruptionRiskOverviewTable": {
       "get": {
         "description": "",
-        "operationId": "em1",
+        "operationId": "em243",
         "parameters": [],
         "responses": {
           "200": {
@@ -1708,7 +1708,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em0",
+        "operationId": "em242",
         "parameters": [],
         "responses": {
           "200": {
@@ -1822,7 +1822,7 @@
     "/api/costEffectivenessAwardAmount": {
       "get": {
         "description": "",
-        "operationId": "em265",
+        "operationId": "em237",
         "parameters": [],
         "responses": {
           "200": {
@@ -1934,7 +1934,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em264",
+        "operationId": "em236",
         "parameters": [],
         "responses": {
           "200": {
@@ -2048,7 +2048,7 @@
     "/api/costEffectivenessTenderAmount": {
       "get": {
         "description": "",
-        "operationId": "em267",
+        "operationId": "em239",
         "parameters": [],
         "responses": {
           "200": {
@@ -2163,7 +2163,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em266",
+        "operationId": "em238",
         "parameters": [],
         "responses": {
           "200": {
@@ -2280,7 +2280,7 @@
     "/api/costEffectivenessTenderAwardAmount": {
       "get": {
         "description": "",
-        "operationId": "em269",
+        "operationId": "em241",
         "parameters": [],
         "responses": {
           "200": {
@@ -2395,7 +2395,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em268",
+        "operationId": "em240",
         "parameters": [],
         "responses": {
           "200": {
@@ -2512,7 +2512,7 @@
     "/api/countAwardsByYear": {
       "get": {
         "description": "",
-        "operationId": "em91",
+        "operationId": "em233",
         "parameters": [],
         "responses": {
           "200": {
@@ -2624,7 +2624,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em90",
+        "operationId": "em232",
         "parameters": [],
         "responses": {
           "200": {
@@ -2738,7 +2738,7 @@
     "/api/countBidPlansByYear": {
       "get": {
         "description": "",
-        "operationId": "em93",
+        "operationId": "em235",
         "parameters": [],
         "responses": {
           "200": {
@@ -2850,7 +2850,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em92",
+        "operationId": "em234",
         "parameters": [],
         "responses": {
           "200": {
@@ -2964,7 +2964,7 @@
     "/api/countTendersByYear": {
       "get": {
         "description": "",
-        "operationId": "em89",
+        "operationId": "em231",
         "parameters": [],
         "responses": {
           "200": {
@@ -3076,7 +3076,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em88",
+        "operationId": "em230",
         "parameters": [],
         "responses": {
           "200": {
@@ -3190,7 +3190,7 @@
     "/api/flags/i002/crosstab": {
       "get": {
         "description": "",
-        "operationId": "em187",
+        "operationId": "em77",
         "parameters": [],
         "responses": {
           "200": {
@@ -3302,7 +3302,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em186",
+        "operationId": "em76",
         "parameters": [],
         "responses": {
           "200": {
@@ -3416,7 +3416,7 @@
     "/api/flags/i002/releases": {
       "get": {
         "description": "",
-        "operationId": "em197",
+        "operationId": "em115",
         "parameters": [],
         "responses": {
           "200": {
@@ -3528,7 +3528,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em196",
+        "operationId": "em114",
         "parameters": [],
         "responses": {
           "200": {
@@ -3642,7 +3642,7 @@
     "/api/flags/i002/stats": {
       "get": {
         "description": "",
-        "operationId": "em165",
+        "operationId": "em113",
         "parameters": [],
         "responses": {
           "200": {
@@ -3754,7 +3754,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em164",
+        "operationId": "em112",
         "parameters": [],
         "responses": {
           "200": {
@@ -3868,7 +3868,7 @@
     "/api/flags/i003/crosstab": {
       "get": {
         "description": "",
-        "operationId": "em181",
+        "operationId": "em75",
         "parameters": [],
         "responses": {
           "200": {
@@ -3980,7 +3980,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em180",
+        "operationId": "em74",
         "parameters": [],
         "responses": {
           "200": {
@@ -4094,7 +4094,7 @@
     "/api/flags/i003/releases": {
       "get": {
         "description": "",
-        "operationId": "em209",
+        "operationId": "em57",
         "parameters": [],
         "responses": {
           "200": {
@@ -4206,7 +4206,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em208",
+        "operationId": "em56",
         "parameters": [],
         "responses": {
           "200": {
@@ -4320,7 +4320,7 @@
     "/api/flags/i003/stats": {
       "get": {
         "description": "",
-        "operationId": "em211",
+        "operationId": "em55",
         "parameters": [],
         "responses": {
           "200": {
@@ -4432,7 +4432,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em210",
+        "operationId": "em54",
         "parameters": [],
         "responses": {
           "200": {
@@ -4546,7 +4546,7 @@
     "/api/flags/i004/crosstab": {
       "get": {
         "description": "",
-        "operationId": "em185",
+        "operationId": "em73",
         "parameters": [],
         "responses": {
           "200": {
@@ -4658,7 +4658,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em184",
+        "operationId": "em72",
         "parameters": [],
         "responses": {
           "200": {
@@ -4772,7 +4772,7 @@
     "/api/flags/i004/releases": {
       "get": {
         "description": "",
-        "operationId": "em175",
+        "operationId": "em111",
         "parameters": [],
         "responses": {
           "200": {
@@ -4884,7 +4884,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em174",
+        "operationId": "em110",
         "parameters": [],
         "responses": {
           "200": {
@@ -4998,7 +4998,7 @@
     "/api/flags/i004/stats": {
       "get": {
         "description": "",
-        "operationId": "em199",
+        "operationId": "em109",
         "parameters": [],
         "responses": {
           "200": {
@@ -5110,7 +5110,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em198",
+        "operationId": "em108",
         "parameters": [],
         "responses": {
           "200": {
@@ -5224,7 +5224,7 @@
     "/api/flags/i007/crosstab": {
       "get": {
         "description": "",
-        "operationId": "em183",
+        "operationId": "em71",
         "parameters": [],
         "responses": {
           "200": {
@@ -5336,7 +5336,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em182",
+        "operationId": "em70",
         "parameters": [],
         "responses": {
           "200": {
@@ -5450,7 +5450,7 @@
     "/api/flags/i007/releases": {
       "get": {
         "description": "",
-        "operationId": "em173",
+        "operationId": "em107",
         "parameters": [],
         "responses": {
           "200": {
@@ -5562,7 +5562,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em172",
+        "operationId": "em106",
         "parameters": [],
         "responses": {
           "200": {
@@ -5676,7 +5676,7 @@
     "/api/flags/i007/stats": {
       "get": {
         "description": "",
-        "operationId": "em203",
+        "operationId": "em105",
         "parameters": [],
         "responses": {
           "200": {
@@ -5788,7 +5788,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em202",
+        "operationId": "em104",
         "parameters": [],
         "responses": {
           "200": {
@@ -5902,7 +5902,7 @@
     "/api/flags/i019/crosstab": {
       "get": {
         "description": "",
-        "operationId": "em177",
+        "operationId": "em69",
         "parameters": [],
         "responses": {
           "200": {
@@ -6014,7 +6014,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em176",
+        "operationId": "em68",
         "parameters": [],
         "responses": {
           "200": {
@@ -6128,7 +6128,7 @@
     "/api/flags/i019/releases": {
       "get": {
         "description": "",
-        "operationId": "em153",
+        "operationId": "em103",
         "parameters": [],
         "responses": {
           "200": {
@@ -6240,7 +6240,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em152",
+        "operationId": "em102",
         "parameters": [],
         "responses": {
           "200": {
@@ -6354,7 +6354,7 @@
     "/api/flags/i019/stats": {
       "get": {
         "description": "",
-        "operationId": "em205",
+        "operationId": "em101",
         "parameters": [],
         "responses": {
           "200": {
@@ -6466,7 +6466,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em204",
+        "operationId": "em100",
         "parameters": [],
         "responses": {
           "200": {
@@ -6580,7 +6580,7 @@
     "/api/flags/i038/crosstab": {
       "get": {
         "description": "",
-        "operationId": "em193",
+        "operationId": "em67",
         "parameters": [],
         "responses": {
           "200": {
@@ -6692,7 +6692,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em192",
+        "operationId": "em66",
         "parameters": [],
         "responses": {
           "200": {
@@ -6806,7 +6806,7 @@
     "/api/flags/i038/releases": {
       "get": {
         "description": "",
-        "operationId": "em171",
+        "operationId": "em99",
         "parameters": [],
         "responses": {
           "200": {
@@ -6918,7 +6918,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em170",
+        "operationId": "em98",
         "parameters": [],
         "responses": {
           "200": {
@@ -7032,7 +7032,7 @@
     "/api/flags/i038/stats": {
       "get": {
         "description": "",
-        "operationId": "em201",
+        "operationId": "em97",
         "parameters": [],
         "responses": {
           "200": {
@@ -7144,7 +7144,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em200",
+        "operationId": "em96",
         "parameters": [],
         "responses": {
           "200": {
@@ -7258,7 +7258,7 @@
     "/api/flags/i077/crosstab": {
       "get": {
         "description": "",
-        "operationId": "em179",
+        "operationId": "em65",
         "parameters": [],
         "responses": {
           "200": {
@@ -7370,7 +7370,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em178",
+        "operationId": "em64",
         "parameters": [],
         "responses": {
           "200": {
@@ -7484,7 +7484,7 @@
     "/api/flags/i077/releases": {
       "get": {
         "description": "",
-        "operationId": "em159",
+        "operationId": "em95",
         "parameters": [],
         "responses": {
           "200": {
@@ -7596,7 +7596,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em158",
+        "operationId": "em94",
         "parameters": [],
         "responses": {
           "200": {
@@ -7710,7 +7710,7 @@
     "/api/flags/i077/stats": {
       "get": {
         "description": "",
-        "operationId": "em167",
+        "operationId": "em93",
         "parameters": [],
         "responses": {
           "200": {
@@ -7822,7 +7822,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em166",
+        "operationId": "em92",
         "parameters": [],
         "responses": {
           "200": {
@@ -7936,7 +7936,7 @@
     "/api/flags/i085/crosstab": {
       "get": {
         "description": "",
-        "operationId": "em195",
+        "operationId": "em63",
         "parameters": [],
         "responses": {
           "200": {
@@ -8048,7 +8048,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em194",
+        "operationId": "em62",
         "parameters": [],
         "responses": {
           "200": {
@@ -8162,7 +8162,7 @@
     "/api/flags/i085/releases": {
       "get": {
         "description": "",
-        "operationId": "em169",
+        "operationId": "em91",
         "parameters": [],
         "responses": {
           "200": {
@@ -8274,7 +8274,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em168",
+        "operationId": "em90",
         "parameters": [],
         "responses": {
           "200": {
@@ -8388,7 +8388,7 @@
     "/api/flags/i085/stats": {
       "get": {
         "description": "",
-        "operationId": "em161",
+        "operationId": "em89",
         "parameters": [],
         "responses": {
           "200": {
@@ -8500,7 +8500,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em160",
+        "operationId": "em88",
         "parameters": [],
         "responses": {
           "200": {
@@ -8614,7 +8614,7 @@
     "/api/flags/i171/crosstab": {
       "get": {
         "description": "",
-        "operationId": "em189",
+        "operationId": "em61",
         "parameters": [],
         "responses": {
           "200": {
@@ -8726,7 +8726,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em188",
+        "operationId": "em60",
         "parameters": [],
         "responses": {
           "200": {
@@ -8840,7 +8840,7 @@
     "/api/flags/i171/releases": {
       "get": {
         "description": "",
-        "operationId": "em151",
+        "operationId": "em87",
         "parameters": [],
         "responses": {
           "200": {
@@ -8952,7 +8952,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em150",
+        "operationId": "em86",
         "parameters": [],
         "responses": {
           "200": {
@@ -9066,7 +9066,7 @@
     "/api/flags/i171/stats": {
       "get": {
         "description": "",
-        "operationId": "em157",
+        "operationId": "em85",
         "parameters": [],
         "responses": {
           "200": {
@@ -9178,7 +9178,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em156",
+        "operationId": "em84",
         "parameters": [],
         "responses": {
           "200": {
@@ -9292,7 +9292,7 @@
     "/api/flags/i180/crosstab": {
       "get": {
         "description": "",
-        "operationId": "em191",
+        "operationId": "em59",
         "parameters": [],
         "responses": {
           "200": {
@@ -9404,7 +9404,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em190",
+        "operationId": "em58",
         "parameters": [],
         "responses": {
           "200": {
@@ -9518,7 +9518,7 @@
     "/api/flags/i180/releases": {
       "get": {
         "description": "",
-        "operationId": "em163",
+        "operationId": "em83",
         "parameters": [],
         "responses": {
           "200": {
@@ -9630,7 +9630,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em162",
+        "operationId": "em82",
         "parameters": [],
         "responses": {
           "200": {
@@ -9744,7 +9744,7 @@
     "/api/flags/i180/stats": {
       "get": {
         "description": "",
-        "operationId": "em207",
+        "operationId": "em81",
         "parameters": [],
         "responses": {
           "200": {
@@ -9856,7 +9856,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em206",
+        "operationId": "em80",
         "parameters": [],
         "responses": {
           "200": {
@@ -9970,7 +9970,7 @@
     "/api/frequentSuppliersTimeInterval": {
       "get": {
         "description": "",
-        "operationId": "em149",
+        "operationId": "em229",
         "parameters": [
           {
             "name": "intervalDays",
@@ -10025,7 +10025,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em148",
+        "operationId": "em228",
         "parameters": [
           {
             "name": "intervalDays",
@@ -10082,7 +10082,7 @@
     "/api/frequentTenderers": {
       "get": {
         "description": "",
-        "operationId": "em31",
+        "operationId": "em225",
         "parameters": [],
         "responses": {
           "200": {
@@ -10194,7 +10194,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em30",
+        "operationId": "em224",
         "parameters": [],
         "responses": {
           "200": {
@@ -10308,7 +10308,7 @@
     "/api/fundingByTenderDeliveryLocation": {
       "get": {
         "description": "",
-        "operationId": "em141",
+        "operationId": "em217",
         "parameters": [],
         "responses": {
           "200": {
@@ -10420,7 +10420,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em140",
+        "operationId": "em216",
         "parameters": [],
         "responses": {
           "200": {
@@ -10534,7 +10534,7 @@
     "/api/indicatorTypesMapping": {
       "get": {
         "description": "",
-        "operationId": "em155",
+        "operationId": "em79",
         "parameters": [],
         "responses": {
           "200": {
@@ -10555,7 +10555,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em154",
+        "operationId": "em78",
         "parameters": [],
         "responses": {
           "200": {
@@ -10578,7 +10578,7 @@
     "/api/ocds/averageNumberBidsExcelChart": {
       "get": {
         "description": "",
-        "operationId": "em16",
+        "operationId": "em144",
         "parameters": [
           {
             "name": "minAwardValue",
@@ -10806,7 +10806,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em17",
+        "operationId": "em145",
         "parameters": [
           {
             "name": "minAwardValue",
@@ -11036,7 +11036,7 @@
     "/api/ocds/bidSelectionExcelChart": {
       "get": {
         "description": "",
-        "operationId": "em22",
+        "operationId": "em124",
         "parameters": [
           {
             "name": "minAwardValue",
@@ -11264,7 +11264,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em23",
+        "operationId": "em125",
         "parameters": [
           {
             "name": "minAwardValue",
@@ -11494,7 +11494,7 @@
     "/api/ocds/bidSelectionMethod/all": {
       "get": {
         "description": "",
-        "operationId": "em119",
+        "operationId": "em53",
         "parameters": [],
         "responses": {
           "200": {
@@ -11520,7 +11520,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em118",
+        "operationId": "em52",
         "parameters": [],
         "responses": {
           "200": {
@@ -11548,7 +11548,7 @@
     "/api/ocds/bidTimelineExcelChart": {
       "get": {
         "description": "",
-        "operationId": "em2",
+        "operationId": "em142",
         "parameters": [
           {
             "name": "minAwardValue",
@@ -11776,7 +11776,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em3",
+        "operationId": "em143",
         "parameters": [
           {
             "name": "minAwardValue",
@@ -12006,7 +12006,7 @@
     "/api/ocds/bidType/all": {
       "get": {
         "description": "",
-        "operationId": "em109",
+        "operationId": "em51",
         "parameters": [],
         "responses": {
           "200": {
@@ -12032,7 +12032,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em108",
+        "operationId": "em50",
         "parameters": [],
         "responses": {
           "200": {
@@ -12060,7 +12060,7 @@
     "/api/ocds/cancelledFundingExcelChart": {
       "get": {
         "description": "",
-        "operationId": "em26",
+        "operationId": "em118",
         "parameters": [
           {
             "name": "minAwardValue",
@@ -12288,7 +12288,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em27",
+        "operationId": "em119",
         "parameters": [
           {
             "name": "minAwardValue",
@@ -12518,7 +12518,7 @@
     "/api/ocds/cancelledFundingPercentageExcelChart": {
       "get": {
         "description": "",
-        "operationId": "em4",
+        "operationId": "em128",
         "parameters": [
           {
             "name": "minAwardValue",
@@ -12746,7 +12746,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em5",
+        "operationId": "em129",
         "parameters": [
           {
             "name": "minAwardValue",
@@ -12976,7 +12976,7 @@
     "/api/ocds/cancelledTendersByYearByRationaleExcelChart": {
       "get": {
         "description": "",
-        "operationId": "em28",
+        "operationId": "em120",
         "parameters": [
           {
             "name": "minAwardValue",
@@ -13204,7 +13204,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em29",
+        "operationId": "em121",
         "parameters": [
           {
             "name": "minAwardValue",
@@ -13434,7 +13434,7 @@
     "/api/ocds/city/all": {
       "get": {
         "description": "",
-        "operationId": "em95",
+        "operationId": "em43",
         "parameters": [],
         "responses": {
           "200": {
@@ -13460,7 +13460,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em94",
+        "operationId": "em42",
         "parameters": [],
         "responses": {
           "200": {
@@ -13488,7 +13488,7 @@
     "/api/ocds/city/search": {
       "get": {
         "description": "",
-        "operationId": "em97",
+        "operationId": "em45",
         "parameters": [],
         "responses": {
           "200": {
@@ -13531,7 +13531,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em96",
+        "operationId": "em44",
         "parameters": [],
         "responses": {
           "200": {
@@ -13576,7 +13576,7 @@
     "/api/ocds/contrMethod/all": {
       "get": {
         "description": "",
-        "operationId": "em107",
+        "operationId": "em41",
         "parameters": [],
         "responses": {
           "200": {
@@ -13602,7 +13602,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em106",
+        "operationId": "em40",
         "parameters": [],
         "responses": {
           "200": {
@@ -13630,7 +13630,7 @@
     "/api/ocds/costEffectivenessExcelChart": {
       "get": {
         "description": "",
-        "operationId": "em18",
+        "operationId": "em140",
         "parameters": [
           {
             "name": "minAwardValue",
@@ -13866,7 +13866,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em19",
+        "operationId": "em141",
         "parameters": [
           {
             "name": "minAwardValue",
@@ -14104,7 +14104,7 @@
     "/api/ocds/excelExport": {
       "get": {
         "description": "",
-        "operationId": "em260",
+        "operationId": "em116",
         "parameters": [
           {
             "name": "minAwardValue",
@@ -14321,7 +14321,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em261",
+        "operationId": "em117",
         "parameters": [
           {
             "name": "minAwardValue",
@@ -14540,7 +14540,7 @@
     "/api/ocds/location/all": {
       "get": {
         "description": "",
-        "operationId": "em123",
+        "operationId": "em37",
         "parameters": [],
         "responses": {
           "200": {
@@ -14566,7 +14566,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em122",
+        "operationId": "em36",
         "parameters": [],
         "responses": {
           "200": {
@@ -14594,7 +14594,7 @@
     "/api/ocds/location/search": {
       "get": {
         "description": "",
-        "operationId": "em125",
+        "operationId": "em39",
         "parameters": [],
         "responses": {
           "200": {
@@ -14637,7 +14637,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em124",
+        "operationId": "em38",
         "parameters": [],
         "responses": {
           "200": {
@@ -14682,7 +14682,7 @@
     "/api/ocds/numberCancelledFundingExcelChart": {
       "get": {
         "description": "",
-        "operationId": "em6",
+        "operationId": "em130",
         "parameters": [
           {
             "name": "minAwardValue",
@@ -14910,7 +14910,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em7",
+        "operationId": "em131",
         "parameters": [
           {
             "name": "minAwardValue",
@@ -15140,7 +15140,7 @@
     "/api/ocds/numberTendersUsingEBidExcelChart": {
       "get": {
         "description": "",
-        "operationId": "em10",
+        "operationId": "em134",
         "parameters": [
           {
             "name": "minAwardValue",
@@ -15368,7 +15368,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em11",
+        "operationId": "em135",
         "parameters": [
           {
             "name": "minAwardValue",
@@ -15598,7 +15598,7 @@
     "/api/ocds/orgDepartment/all": {
       "get": {
         "description": "",
-        "operationId": "em115",
+        "operationId": "em33",
         "parameters": [],
         "responses": {
           "200": {
@@ -15624,7 +15624,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em114",
+        "operationId": "em32",
         "parameters": [],
         "responses": {
           "200": {
@@ -15652,7 +15652,7 @@
     "/api/ocds/orgDepartment/search": {
       "get": {
         "description": "",
-        "operationId": "em117",
+        "operationId": "em35",
         "parameters": [],
         "responses": {
           "200": {
@@ -15695,7 +15695,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em116",
+        "operationId": "em34",
         "parameters": [],
         "responses": {
           "200": {
@@ -15740,7 +15740,7 @@
     "/api/ocds/orgGroup/all": {
       "get": {
         "description": "",
-        "operationId": "em111",
+        "operationId": "em29",
         "parameters": [],
         "responses": {
           "200": {
@@ -15766,7 +15766,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em110",
+        "operationId": "em28",
         "parameters": [],
         "responses": {
           "200": {
@@ -15794,7 +15794,7 @@
     "/api/ocds/orgGroup/search": {
       "get": {
         "description": "",
-        "operationId": "em113",
+        "operationId": "em31",
         "parameters": [],
         "responses": {
           "200": {
@@ -15837,7 +15837,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em112",
+        "operationId": "em30",
         "parameters": [],
         "responses": {
           "200": {
@@ -15882,7 +15882,7 @@
     "/api/ocds/organization/all": {
       "get": {
         "description": "",
-        "operationId": "em131",
+        "operationId": "em27",
         "parameters": [],
         "responses": {
           "200": {
@@ -15925,7 +15925,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em130",
+        "operationId": "em26",
         "parameters": [],
         "responses": {
           "200": {
@@ -15970,7 +15970,7 @@
     "/api/ocds/organization/buyer/all": {
       "get": {
         "description": "",
-        "operationId": "em105",
+        "operationId": "em49",
         "parameters": [],
         "responses": {
           "200": {
@@ -16016,7 +16016,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em104",
+        "operationId": "em48",
         "parameters": [],
         "responses": {
           "200": {
@@ -16064,7 +16064,7 @@
     "/api/ocds/organization/buyer/id/{id}": {
       "get": {
         "description": "",
-        "operationId": "em103",
+        "operationId": "em47",
         "parameters": [
           {
             "name": "id",
@@ -16097,7 +16097,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em102",
+        "operationId": "em46",
         "parameters": [
           {
             "name": "id",
@@ -16132,7 +16132,7 @@
     "/api/ocds/organization/id/{id}": {
       "get": {
         "description": "",
-        "operationId": "em127",
+        "operationId": "em23",
         "parameters": [
           {
             "name": "id",
@@ -16162,7 +16162,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em126",
+        "operationId": "em22",
         "parameters": [
           {
             "name": "id",
@@ -16194,7 +16194,7 @@
     "/api/ocds/organization/ids": {
       "get": {
         "description": "",
-        "operationId": "em129",
+        "operationId": "em25",
         "parameters": [],
         "responses": {
           "200": {
@@ -16231,7 +16231,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em128",
+        "operationId": "em24",
         "parameters": [],
         "responses": {
           "200": {
@@ -16270,7 +16270,7 @@
     "/api/ocds/organization/procuringEntity/all": {
       "get": {
         "description": "",
-        "operationId": "em101",
+        "operationId": "em19",
         "parameters": [],
         "responses": {
           "200": {
@@ -16316,7 +16316,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em100",
+        "operationId": "em18",
         "parameters": [],
         "responses": {
           "200": {
@@ -16364,7 +16364,7 @@
     "/api/ocds/organization/procuringEntity/id/{id}": {
       "get": {
         "description": "",
-        "operationId": "em99",
+        "operationId": "em17",
         "parameters": [
           {
             "name": "id",
@@ -16397,7 +16397,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em98",
+        "operationId": "em16",
         "parameters": [
           {
             "name": "id",
@@ -16432,7 +16432,7 @@
     "/api/ocds/organization/supplier/all": {
       "get": {
         "description": "",
-        "operationId": "em139",
+        "operationId": "em15",
         "parameters": [],
         "responses": {
           "200": {
@@ -16478,7 +16478,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em138",
+        "operationId": "em14",
         "parameters": [],
         "responses": {
           "200": {
@@ -16526,7 +16526,7 @@
     "/api/ocds/organization/supplier/id/{id}": {
       "get": {
         "description": "",
-        "operationId": "em137",
+        "operationId": "em13",
         "parameters": [
           {
             "name": "id",
@@ -16559,7 +16559,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em136",
+        "operationId": "em12",
         "parameters": [
           {
             "name": "id",
@@ -16594,7 +16594,7 @@
     "/api/ocds/package/all": {
       "get": {
         "description": "",
-        "operationId": "em79",
+        "operationId": "em209",
         "parameters": [],
         "responses": {
           "200": {
@@ -16706,7 +16706,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em78",
+        "operationId": "em208",
         "parameters": [],
         "responses": {
           "200": {
@@ -16820,7 +16820,7 @@
     "/api/ocds/package/budgetProjectId/{projectId}": {
       "get": {
         "description": "",
-        "operationId": "em75",
+        "operationId": "em205",
         "parameters": [
           {
             "name": "projectId",
@@ -16850,7 +16850,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em74",
+        "operationId": "em204",
         "parameters": [
           {
             "name": "projectId",
@@ -16882,7 +16882,7 @@
     "/api/ocds/package/ocid/{ocid}": {
       "get": {
         "description": "",
-        "operationId": "em71",
+        "operationId": "em201",
         "parameters": [
           {
             "name": "ocid",
@@ -16912,7 +16912,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em70",
+        "operationId": "em200",
         "parameters": [
           {
             "name": "ocid",
@@ -16944,7 +16944,7 @@
     "/api/ocds/package/planningBidNo/{bidNo}": {
       "get": {
         "description": "",
-        "operationId": "em73",
+        "operationId": "em203",
         "parameters": [
           {
             "name": "bidNo",
@@ -16974,7 +16974,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em72",
+        "operationId": "em202",
         "parameters": [
           {
             "name": "bidNo",
@@ -17006,7 +17006,7 @@
     "/api/ocds/percentTendersUsingEBidExcelChart": {
       "get": {
         "description": "",
-        "operationId": "em8",
+        "operationId": "em132",
         "parameters": [
           {
             "name": "minAwardValue",
@@ -17234,7 +17234,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em9",
+        "operationId": "em133",
         "parameters": [
           {
             "name": "minAwardValue",
@@ -17464,7 +17464,7 @@
     "/api/ocds/procurementActivityExcelChart": {
       "get": {
         "description": "",
-        "operationId": "em14",
+        "operationId": "em138",
         "parameters": [
           {
             "name": "minAwardValue",
@@ -17692,7 +17692,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em15",
+        "operationId": "em139",
         "parameters": [
           {
             "name": "minAwardValue",
@@ -17922,7 +17922,7 @@
     "/api/ocds/procurementMethod/all": {
       "get": {
         "description": "",
-        "operationId": "em121",
+        "operationId": "em21",
         "parameters": [],
         "responses": {
           "200": {
@@ -17945,7 +17945,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em120",
+        "operationId": "em20",
         "parameters": [],
         "responses": {
           "200": {
@@ -17970,7 +17970,7 @@
     "/api/ocds/procurementMethodExcelChart": {
       "get": {
         "description": "",
-        "operationId": "em24",
+        "operationId": "em126",
         "parameters": [
           {
             "name": "minAwardValue",
@@ -18198,7 +18198,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em25",
+        "operationId": "em127",
         "parameters": [
           {
             "name": "minAwardValue",
@@ -18428,7 +18428,7 @@
     "/api/ocds/release/all": {
       "get": {
         "description": "",
-        "operationId": "em77",
+        "operationId": "em207",
         "parameters": [],
         "responses": {
           "200": {
@@ -18540,7 +18540,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em76",
+        "operationId": "em206",
         "parameters": [],
         "responses": {
           "200": {
@@ -18654,7 +18654,7 @@
     "/api/ocds/release/budgetProjectId/{projectId}": {
       "get": {
         "description": "",
-        "operationId": "em65",
+        "operationId": "em195",
         "parameters": [
           {
             "name": "projectId",
@@ -18684,7 +18684,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em64",
+        "operationId": "em194",
         "parameters": [
           {
             "name": "projectId",
@@ -18716,7 +18716,7 @@
     "/api/ocds/release/ocid/{ocid}": {
       "get": {
         "description": "",
-        "operationId": "em69",
+        "operationId": "em199",
         "parameters": [
           {
             "name": "ocid",
@@ -18746,7 +18746,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em68",
+        "operationId": "em198",
         "parameters": [
           {
             "name": "ocid",
@@ -18778,7 +18778,7 @@
     "/api/ocds/release/planningBidNo/{bidNo}": {
       "get": {
         "description": "",
-        "operationId": "em67",
+        "operationId": "em197",
         "parameters": [
           {
             "name": "bidNo",
@@ -18808,7 +18808,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em66",
+        "operationId": "em196",
         "parameters": [
           {
             "name": "bidNo",
@@ -18840,7 +18840,7 @@
     "/api/ocds/tendersByItemExcelChart": {
       "get": {
         "description": "",
-        "operationId": "em20",
+        "operationId": "em122",
         "parameters": [
           {
             "name": "minAwardValue",
@@ -19068,7 +19068,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em21",
+        "operationId": "em123",
         "parameters": [
           {
             "name": "minAwardValue",
@@ -19298,7 +19298,7 @@
     "/api/ocds/tendersWithLinkedProcurementPlanExcelChart": {
       "get": {
         "description": "",
-        "operationId": "em12",
+        "operationId": "em136",
         "parameters": [
           {
             "name": "minAwardValue",
@@ -19526,7 +19526,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em13",
+        "operationId": "em137",
         "parameters": [
           {
             "name": "minAwardValue",
@@ -19756,7 +19756,7 @@
     "/api/percentOfEligibleProjectsFlaggedByYear": {
       "get": {
         "description": "",
-        "operationId": "em249",
+        "operationId": "em265",
         "parameters": [],
         "responses": {
           "200": {
@@ -19865,7 +19865,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em248",
+        "operationId": "em264",
         "parameters": [],
         "responses": {
           "200": {
@@ -19976,7 +19976,7 @@
     "/api/percentTendersAwardedWithTwoOrMoreTenderers": {
       "get": {
         "description": "",
-        "operationId": "em55",
+        "operationId": "em183",
         "parameters": [],
         "responses": {
           "200": {
@@ -20088,7 +20088,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em54",
+        "operationId": "em182",
         "parameters": [],
         "responses": {
           "200": {
@@ -20202,7 +20202,7 @@
     "/api/percentTendersCancelled": {
       "get": {
         "description": "",
-        "operationId": "em51",
+        "operationId": "em179",
         "parameters": [],
         "responses": {
           "200": {
@@ -20314,7 +20314,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em50",
+        "operationId": "em178",
         "parameters": [],
         "responses": {
           "200": {
@@ -20428,7 +20428,7 @@
     "/api/percentTendersUsingEBid": {
       "get": {
         "description": "",
-        "operationId": "em57",
+        "operationId": "em185",
         "parameters": [],
         "responses": {
           "200": {
@@ -20540,7 +20540,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em56",
+        "operationId": "em184",
         "parameters": [],
         "responses": {
           "200": {
@@ -20654,7 +20654,7 @@
     "/api/percentTendersUsingEgp": {
       "get": {
         "description": "",
-        "operationId": "em59",
+        "operationId": "em187",
         "parameters": [],
         "responses": {
           "200": {
@@ -20766,7 +20766,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em58",
+        "operationId": "em186",
         "parameters": [],
         "responses": {
           "200": {
@@ -20880,7 +20880,7 @@
     "/api/percentTendersWithLinkedProcurementPlan": {
       "get": {
         "description": "",
-        "operationId": "em61",
+        "operationId": "em189",
         "parameters": [],
         "responses": {
           "200": {
@@ -20992,7 +20992,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em60",
+        "operationId": "em188",
         "parameters": [],
         "responses": {
           "200": {
@@ -21106,7 +21106,7 @@
     "/api/percentTendersWithTwoOrMoreTenderers": {
       "get": {
         "description": "",
-        "operationId": "em53",
+        "operationId": "em181",
         "parameters": [],
         "responses": {
           "200": {
@@ -21218,7 +21218,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em52",
+        "operationId": "em180",
         "parameters": [],
         "responses": {
           "200": {
@@ -21332,7 +21332,7 @@
     "/api/percentTotalProjectsEligibleByYear": {
       "get": {
         "description": "",
-        "operationId": "em247",
+        "operationId": "em263",
         "parameters": [],
         "responses": {
           "200": {
@@ -21441,7 +21441,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em246",
+        "operationId": "em262",
         "parameters": [],
         "responses": {
           "200": {
@@ -21552,7 +21552,7 @@
     "/api/percentTotalProjectsFlaggedByYear": {
       "get": {
         "description": "",
-        "operationId": "em245",
+        "operationId": "em261",
         "parameters": [],
         "responses": {
           "200": {
@@ -21661,7 +21661,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em244",
+        "operationId": "em260",
         "parameters": [],
         "responses": {
           "200": {
@@ -21772,7 +21772,7 @@
     "/api/percentageAwardsNarrowPublicationDates": {
       "get": {
         "description": "",
-        "operationId": "em259",
+        "operationId": "em193",
         "parameters": [],
         "responses": {
           "200": {
@@ -21884,7 +21884,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em258",
+        "operationId": "em192",
         "parameters": [],
         "responses": {
           "200": {
@@ -21998,7 +21998,7 @@
     "/api/plannedFundingByLocation": {
       "get": {
         "description": "",
-        "operationId": "em145",
+        "operationId": "em221",
         "parameters": [],
         "responses": {
           "200": {
@@ -22107,7 +22107,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em144",
+        "operationId": "em220",
         "parameters": [],
         "responses": {
           "200": {
@@ -22218,7 +22218,7 @@
     "/api/planningByLocation": {
       "get": {
         "description": "",
-        "operationId": "em37",
+        "operationId": "em213",
         "parameters": [],
         "responses": {
           "200": {
@@ -22330,7 +22330,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em36",
+        "operationId": "em212",
         "parameters": [],
         "responses": {
           "200": {
@@ -22444,7 +22444,7 @@
     "/api/qualityAverageAwardPeriod": {
       "get": {
         "description": "",
-        "operationId": "em257",
+        "operationId": "em273",
         "parameters": [],
         "responses": {
           "200": {
@@ -22547,7 +22547,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em256",
+        "operationId": "em272",
         "parameters": [],
         "responses": {
           "200": {
@@ -22652,7 +22652,7 @@
     "/api/qualityAverageTenderPeriod": {
       "get": {
         "description": "",
-        "operationId": "em253",
+        "operationId": "em269",
         "parameters": [],
         "responses": {
           "200": {
@@ -22755,7 +22755,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em252",
+        "operationId": "em268",
         "parameters": [],
         "responses": {
           "200": {
@@ -22860,7 +22860,7 @@
     "/api/qualityFundingByTenderDeliveryLocation": {
       "get": {
         "description": "",
-        "operationId": "em143",
+        "operationId": "em219",
         "parameters": [],
         "responses": {
           "200": {
@@ -22972,7 +22972,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em142",
+        "operationId": "em218",
         "parameters": [],
         "responses": {
           "200": {
@@ -23086,7 +23086,7 @@
     "/api/qualityPlannedFundingByLocation": {
       "get": {
         "description": "",
-        "operationId": "em147",
+        "operationId": "em223",
         "parameters": [],
         "responses": {
           "200": {
@@ -23186,7 +23186,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em146",
+        "operationId": "em222",
         "parameters": [],
         "responses": {
           "200": {
@@ -23288,7 +23288,7 @@
     "/api/tenderPriceByAllBidSelectionMethods": {
       "get": {
         "description": "",
-        "operationId": "em87",
+        "operationId": "em177",
         "parameters": [],
         "responses": {
           "200": {
@@ -23400,7 +23400,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em86",
+        "operationId": "em176",
         "parameters": [],
         "responses": {
           "200": {
@@ -23514,7 +23514,7 @@
     "/api/tenderPriceByBidSelectionMethod": {
       "get": {
         "description": "",
-        "operationId": "em85",
+        "operationId": "em175",
         "parameters": [],
         "responses": {
           "200": {
@@ -23626,7 +23626,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em84",
+        "operationId": "em174",
         "parameters": [],
         "responses": {
           "200": {
@@ -23740,7 +23740,7 @@
     "/api/tenderPriceByProcurementMethod": {
       "get": {
         "description": "",
-        "operationId": "em83",
+        "operationId": "em173",
         "parameters": [],
         "responses": {
           "200": {
@@ -23852,7 +23852,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em82",
+        "operationId": "em172",
         "parameters": [],
         "responses": {
           "200": {
@@ -23966,7 +23966,7 @@
     "/api/tenderValueInterval": {
       "get": {
         "description": "",
-        "operationId": "em133",
+        "operationId": "em9",
         "parameters": [],
         "responses": {
           "200": {
@@ -24078,7 +24078,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em132",
+        "operationId": "em8",
         "parameters": [],
         "responses": {
           "200": {
@@ -24192,7 +24192,7 @@
     "/api/tendersAwardsYears": {
       "get": {
         "description": "",
-        "operationId": "em213",
+        "operationId": "em171",
         "parameters": [],
         "responses": {
           "200": {
@@ -24215,7 +24215,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em212",
+        "operationId": "em170",
         "parameters": [],
         "responses": {
           "200": {
@@ -24240,7 +24240,7 @@
     "/api/tendersByItemClassification": {
       "get": {
         "description": "",
-        "operationId": "em263",
+        "operationId": "em169",
         "parameters": [],
         "responses": {
           "200": {
@@ -24352,7 +24352,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em262",
+        "operationId": "em168",
         "parameters": [],
         "responses": {
           "200": {
@@ -24466,7 +24466,7 @@
     "/api/tendersByLocation": {
       "get": {
         "description": "",
-        "operationId": "em35",
+        "operationId": "em211",
         "parameters": [],
         "responses": {
           "200": {
@@ -24578,7 +24578,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em34",
+        "operationId": "em210",
         "parameters": [],
         "responses": {
           "200": {
@@ -24692,7 +24692,7 @@
     "/api/topTenLargestAwards": {
       "get": {
         "description": "",
-        "operationId": "em217",
+        "operationId": "em163",
         "parameters": [],
         "responses": {
           "200": {
@@ -24804,7 +24804,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em216",
+        "operationId": "em162",
         "parameters": [],
         "responses": {
           "200": {
@@ -24918,7 +24918,7 @@
     "/api/topTenLargestTenders": {
       "get": {
         "description": "",
-        "operationId": "em219",
+        "operationId": "em165",
         "parameters": [],
         "responses": {
           "200": {
@@ -25030,7 +25030,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em218",
+        "operationId": "em164",
         "parameters": [],
         "responses": {
           "200": {
@@ -25144,7 +25144,7 @@
     "/api/topTenSuppliers": {
       "get": {
         "description": "",
-        "operationId": "em221",
+        "operationId": "em167",
         "parameters": [],
         "responses": {
           "200": {
@@ -25256,7 +25256,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em220",
+        "operationId": "em166",
         "parameters": [],
         "responses": {
           "200": {
@@ -25370,7 +25370,7 @@
     "/api/totalCancelledTendersByYear": {
       "get": {
         "description": "",
-        "operationId": "em225",
+        "operationId": "em159",
         "parameters": [],
         "responses": {
           "200": {
@@ -25482,7 +25482,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em224",
+        "operationId": "em158",
         "parameters": [],
         "responses": {
           "200": {
@@ -25596,7 +25596,7 @@
     "/api/totalCancelledTendersByYearByRationale": {
       "get": {
         "description": "",
-        "operationId": "em227",
+        "operationId": "em161",
         "parameters": [],
         "responses": {
           "200": {
@@ -25708,7 +25708,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em226",
+        "operationId": "em160",
         "parameters": [],
         "responses": {
           "200": {
@@ -25822,7 +25822,7 @@
     "/api/totalEligibleIndicatorsByIndicatorType": {
       "get": {
         "description": "",
-        "operationId": "em231",
+        "operationId": "em247",
         "parameters": [],
         "responses": {
           "200": {
@@ -25934,7 +25934,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em230",
+        "operationId": "em246",
         "parameters": [],
         "responses": {
           "200": {
@@ -26048,7 +26048,7 @@
     "/api/totalEligibleIndicatorsByIndicatorTypeByYear": {
       "get": {
         "description": "",
-        "operationId": "em237",
+        "operationId": "em253",
         "parameters": [],
         "responses": {
           "200": {
@@ -26160,7 +26160,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em236",
+        "operationId": "em252",
         "parameters": [],
         "responses": {
           "200": {
@@ -26274,7 +26274,7 @@
     "/api/totalEligibleProjectsByIndicatorTypeByYear": {
       "get": {
         "description": "",
-        "operationId": "em241",
+        "operationId": "em257",
         "parameters": [],
         "responses": {
           "200": {
@@ -26386,7 +26386,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em240",
+        "operationId": "em256",
         "parameters": [],
         "responses": {
           "200": {
@@ -26500,7 +26500,7 @@
     "/api/totalFlaggedIndicatorsByIndicatorType": {
       "get": {
         "description": "",
-        "operationId": "em229",
+        "operationId": "em245",
         "parameters": [],
         "responses": {
           "200": {
@@ -26612,7 +26612,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em228",
+        "operationId": "em244",
         "parameters": [],
         "responses": {
           "200": {
@@ -26726,7 +26726,7 @@
     "/api/totalFlaggedIndicatorsByIndicatorTypeByYear": {
       "get": {
         "description": "",
-        "operationId": "em235",
+        "operationId": "em251",
         "parameters": [],
         "responses": {
           "200": {
@@ -26838,7 +26838,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em234",
+        "operationId": "em250",
         "parameters": [],
         "responses": {
           "200": {
@@ -26952,7 +26952,7 @@
     "/api/totalFlaggedProjectsByIndicatorTypeByYear": {
       "get": {
         "description": "",
-        "operationId": "em239",
+        "operationId": "em255",
         "parameters": [],
         "responses": {
           "200": {
@@ -27064,7 +27064,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em238",
+        "operationId": "em254",
         "parameters": [],
         "responses": {
           "200": {
@@ -27178,7 +27178,7 @@
     "/api/totalFlags": {
       "get": {
         "description": "",
-        "operationId": "em233",
+        "operationId": "em249",
         "parameters": [],
         "responses": {
           "200": {
@@ -27290,7 +27290,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em232",
+        "operationId": "em248",
         "parameters": [],
         "responses": {
           "200": {
@@ -27404,7 +27404,7 @@
     "/api/totalProjectsByYear": {
       "get": {
         "description": "",
-        "operationId": "em243",
+        "operationId": "em259",
         "parameters": [],
         "responses": {
           "200": {
@@ -27516,7 +27516,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em242",
+        "operationId": "em258",
         "parameters": [],
         "responses": {
           "200": {
@@ -27630,7 +27630,7 @@
     "/api/translations/{language}": {
       "get": {
         "description": "",
-        "operationId": "em214",
+        "operationId": "em156",
         "parameters": [
           {
             "name": "language",
@@ -27662,7 +27662,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em215",
+        "operationId": "em157",
         "parameters": [
           {
             "name": "language",
@@ -27696,7 +27696,7 @@
     "/dummy": {
       "delete": {
         "description": "",
-        "operationId": "em276",
+        "operationId": "em6",
         "parameters": [
           {
             "name": "name",
@@ -27735,7 +27735,7 @@
       },
       "get": {
         "description": "",
-        "operationId": "em270",
+        "operationId": "em0",
         "parameters": [
           {
             "name": "name",
@@ -27774,7 +27774,7 @@
       },
       "head": {
         "description": "",
-        "operationId": "em272",
+        "operationId": "em2",
         "parameters": [
           {
             "name": "name",
@@ -27813,7 +27813,7 @@
       },
       "options": {
         "description": "",
-        "operationId": "em273",
+        "operationId": "em3",
         "parameters": [
           {
             "name": "name",
@@ -27852,7 +27852,7 @@
       },
       "patch": {
         "description": "",
-        "operationId": "em275",
+        "operationId": "em5",
         "parameters": [
           {
             "name": "name",
@@ -27891,7 +27891,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em271",
+        "operationId": "em1",
         "parameters": [
           {
             "name": "name",
@@ -27930,7 +27930,7 @@
       },
       "put": {
         "description": "",
-        "operationId": "em274",
+        "operationId": "em4",
         "parameters": [
           {
             "name": "name",
@@ -27969,7 +27969,7 @@
       },
       "trace": {
         "description": "",
-        "operationId": "em277",
+        "operationId": "em7",
         "parameters": [
           {
             "name": "name",
@@ -28010,7 +28010,7 @@
     "/isAuthenticated": {
       "get": {
         "description": "",
-        "operationId": "em222",
+        "operationId": "em276",
         "parameters": [],
         "responses": {
           "200": {
@@ -28042,7 +28042,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em223",
+        "operationId": "em277",
         "parameters": [],
         "responses": {
           "200": {
@@ -28076,7 +28076,7 @@
     "/userDashboards/getCurrentAuthenticatedUserDetails": {
       "get": {
         "description": "",
-        "operationId": "em43",
+        "operationId": "em149",
         "parameters": [],
         "responses": {
           "200": {
@@ -28089,7 +28089,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em42",
+        "operationId": "em148",
         "parameters": [],
         "responses": {
           "200": {
@@ -28104,7 +28104,7 @@
     "/userDashboards/saveDashboard": {
       "get": {
         "description": "",
-        "operationId": "em49",
+        "operationId": "em155",
         "parameters": [],
         "responses": {
           "200": {
@@ -28117,7 +28117,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em48",
+        "operationId": "em154",
         "parameters": [],
         "responses": {
           "200": {
@@ -28132,7 +28132,7 @@
     "/userDashboards/saveDashboardForCurrentUser": {
       "get": {
         "description": "",
-        "operationId": "em47",
+        "operationId": "em153",
         "parameters": [],
         "responses": {
           "200": {
@@ -28145,7 +28145,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em46",
+        "operationId": "em152",
         "parameters": [],
         "responses": {
           "200": {
@@ -28160,7 +28160,7 @@
     "/userDashboards/search/getDashboardsForCurrentUser": {
       "get": {
         "description": "",
-        "operationId": "em45",
+        "operationId": "em151",
         "parameters": [],
         "responses": {
           "200": {
@@ -28180,7 +28180,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em44",
+        "operationId": "em150",
         "parameters": [],
         "responses": {
           "200": {
@@ -28202,7 +28202,7 @@
     "/userDashboards/search/getDefaultDashboardForCurrentUser": {
       "get": {
         "description": "",
-        "operationId": "em41",
+        "operationId": "em147",
         "parameters": [],
         "responses": {
           "200": {
@@ -28223,7 +28223,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em40",
+        "operationId": "em146",
         "parameters": [],
         "responses": {
           "200": {
@@ -28339,10 +28339,10 @@
                 "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g1": {
+            "g5": {
               "name": "DESC",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
+                "$ref": "#/components/x-global-variables-info/g5"
               }
             }
           }
@@ -28375,10 +28375,10 @@
                 "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g1": {
+            "g5": {
               "name": "DESC",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
+                "$ref": "#/components/x-global-variables-info/g5"
               }
             },
             "g14": {
@@ -28399,10 +28399,10 @@
       "/api/costEffectivenessTenderAwardAmount": {
         "post": {
           "global-reads": {
-            "g8": {
+            "g11": {
               "name": "logger",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g8"
+                "$ref": "#/components/x-global-variables-info/g11"
               }
             }
           }
@@ -28453,10 +28453,10 @@
                 "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g13": {
+            "g6": {
               "name": "FLAGS_LIST",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g13"
+                "$ref": "#/components/x-global-variables-info/g6"
               }
             }
           }
@@ -28471,10 +28471,10 @@
                 "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g1": {
+            "g5": {
               "name": "DESC",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
+                "$ref": "#/components/x-global-variables-info/g5"
               }
             }
           }
@@ -28501,10 +28501,10 @@
                 "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g13": {
+            "g6": {
               "name": "FLAGS_LIST",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g13"
+                "$ref": "#/components/x-global-variables-info/g6"
               }
             }
           }
@@ -28519,10 +28519,10 @@
                 "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g1": {
+            "g5": {
               "name": "DESC",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
+                "$ref": "#/components/x-global-variables-info/g5"
               }
             }
           }
@@ -28549,10 +28549,10 @@
                 "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g13": {
+            "g6": {
               "name": "FLAGS_LIST",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g13"
+                "$ref": "#/components/x-global-variables-info/g6"
               }
             }
           }
@@ -28567,10 +28567,10 @@
                 "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g1": {
+            "g5": {
               "name": "DESC",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
+                "$ref": "#/components/x-global-variables-info/g5"
               }
             }
           }
@@ -28597,10 +28597,10 @@
                 "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g13": {
+            "g6": {
               "name": "FLAGS_LIST",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g13"
+                "$ref": "#/components/x-global-variables-info/g6"
               }
             }
           }
@@ -28615,10 +28615,10 @@
                 "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g1": {
+            "g5": {
               "name": "DESC",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
+                "$ref": "#/components/x-global-variables-info/g5"
               }
             }
           }
@@ -28645,10 +28645,10 @@
                 "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g13": {
+            "g6": {
               "name": "FLAGS_LIST",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g13"
+                "$ref": "#/components/x-global-variables-info/g6"
               }
             }
           }
@@ -28663,10 +28663,10 @@
                 "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g1": {
+            "g5": {
               "name": "DESC",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
+                "$ref": "#/components/x-global-variables-info/g5"
               }
             }
           }
@@ -28693,10 +28693,10 @@
                 "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g13": {
+            "g6": {
               "name": "FLAGS_LIST",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g13"
+                "$ref": "#/components/x-global-variables-info/g6"
               }
             }
           }
@@ -28711,10 +28711,10 @@
                 "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g1": {
+            "g5": {
               "name": "DESC",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
+                "$ref": "#/components/x-global-variables-info/g5"
               }
             }
           }
@@ -28741,10 +28741,10 @@
                 "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g13": {
+            "g6": {
               "name": "FLAGS_LIST",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g13"
+                "$ref": "#/components/x-global-variables-info/g6"
               }
             }
           }
@@ -28759,10 +28759,10 @@
                 "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g1": {
+            "g5": {
               "name": "DESC",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
+                "$ref": "#/components/x-global-variables-info/g5"
               }
             }
           }
@@ -28789,10 +28789,10 @@
                 "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g13": {
+            "g6": {
               "name": "FLAGS_LIST",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g13"
+                "$ref": "#/components/x-global-variables-info/g6"
               }
             }
           }
@@ -28807,10 +28807,10 @@
                 "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g1": {
+            "g5": {
               "name": "DESC",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
+                "$ref": "#/components/x-global-variables-info/g5"
               }
             }
           }
@@ -28837,10 +28837,10 @@
                 "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g13": {
+            "g6": {
               "name": "FLAGS_LIST",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g13"
+                "$ref": "#/components/x-global-variables-info/g6"
               }
             }
           }
@@ -28855,10 +28855,10 @@
                 "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g1": {
+            "g5": {
               "name": "DESC",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
+                "$ref": "#/components/x-global-variables-info/g5"
               }
             }
           }
@@ -28885,10 +28885,10 @@
                 "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g13": {
+            "g6": {
               "name": "FLAGS_LIST",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g13"
+                "$ref": "#/components/x-global-variables-info/g6"
               }
             }
           }
@@ -28903,10 +28903,10 @@
                 "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g1": {
+            "g5": {
               "name": "DESC",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
+                "$ref": "#/components/x-global-variables-info/g5"
               }
             }
           }
@@ -28927,10 +28927,10 @@
       "/api/frequentSuppliersTimeInterval": {
         "post": {
           "global-reads": {
-            "g1": {
+            "g5": {
               "name": "DESC",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
+                "$ref": "#/components/x-global-variables-info/g5"
               }
             }
           }
@@ -28945,10 +28945,10 @@
                 "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g1": {
+            "g5": {
               "name": "DESC",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
+                "$ref": "#/components/x-global-variables-info/g5"
               }
             }
           }
@@ -28972,16 +28972,16 @@
             "( this.<org.devgateway.ocds.web.spring.TranslationService: java.util.Map translations>.<java.util.Map: boolean containsKey(java.lang.Object)>({non_EPP#0}.<org.devgateway.ocds.web.rest.controller.request.LangYearFilterPagingRequest: java.lang.String getLanguage()>()) == 0 )"
           ],
           "global-reads": {
-            "g3": {
+            "g7": {
               "name": "logger",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g3"
+                "$ref": "#/components/x-global-variables-info/g7"
               }
             },
-            "g6": {
+            "g9": {
               "name": "barcol",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g6"
+                "$ref": "#/components/x-global-variables-info/g9"
               }
             }
           }
@@ -28999,22 +28999,22 @@
                 "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g1": {
+            "g5": {
               "name": "DESC",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
+                "$ref": "#/components/x-global-variables-info/g5"
               }
             },
-            "g3": {
+            "g7": {
               "name": "logger",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g3"
+                "$ref": "#/components/x-global-variables-info/g7"
               }
             },
-            "g6": {
+            "g9": {
               "name": "barcol",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g6"
+                "$ref": "#/components/x-global-variables-info/g9"
               }
             }
           }
@@ -29023,10 +29023,10 @@
       "/api/ocds/bidSelectionMethod/all": {
         "post": {
           "global-reads": {
-            "g9": {
+            "g3": {
               "name": "ASC",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g9"
+                "$ref": "#/components/x-global-variables-info/g3"
               }
             }
           }
@@ -29044,16 +29044,16 @@
                 "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g2": {
-              "name": "stackedbar",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g2"
-              }
-            },
-            "g3": {
+            "g7": {
               "name": "logger",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g3"
+                "$ref": "#/components/x-global-variables-info/g7"
+              }
+            },
+            "g13": {
+              "name": "stackedbar",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g13"
               }
             }
           }
@@ -29062,10 +29062,10 @@
       "/api/ocds/bidType/all": {
         "post": {
           "global-reads": {
-            "g9": {
+            "g3": {
               "name": "ASC",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g9"
+                "$ref": "#/components/x-global-variables-info/g3"
               }
             }
           }
@@ -29077,16 +29077,16 @@
             "( this.<org.devgateway.ocds.web.spring.TranslationService: java.util.Map translations>.<java.util.Map: boolean containsKey(java.lang.Object)>({non_EPP#0}.<org.devgateway.ocds.web.rest.controller.request.LangYearFilterPagingRequest: java.lang.String getLanguage()>()) == 0 )"
           ],
           "global-reads": {
-            "g3": {
+            "g7": {
               "name": "logger",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g3"
+                "$ref": "#/components/x-global-variables-info/g7"
               }
             },
-            "g4": {
+            "g8": {
               "name": "area",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g4"
+                "$ref": "#/components/x-global-variables-info/g8"
               }
             }
           }
@@ -29098,16 +29098,16 @@
             "( this.<org.devgateway.ocds.web.spring.TranslationService: java.util.Map translations>.<java.util.Map: boolean containsKey(java.lang.Object)>({non_EPP#0}.<org.devgateway.ocds.web.rest.controller.request.LangYearFilterPagingRequest: java.lang.String getLanguage()>()) == 0 )"
           ],
           "global-reads": {
-            "g3": {
+            "g7": {
               "name": "logger",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g3"
+                "$ref": "#/components/x-global-variables-info/g7"
               }
             },
-            "g4": {
+            "g8": {
               "name": "area",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g4"
+                "$ref": "#/components/x-global-variables-info/g8"
               }
             }
           }
@@ -29119,16 +29119,16 @@
             "( this.<org.devgateway.ocds.web.spring.TranslationService: java.util.Map translations>.<java.util.Map: boolean containsKey(java.lang.Object)>({non_EPP#0}.<org.devgateway.ocds.web.rest.controller.request.LangYearFilterPagingRequest: java.lang.String getLanguage()>()) == 0 )"
           ],
           "global-reads": {
-            "g3": {
+            "g7": {
               "name": "logger",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g3"
+                "$ref": "#/components/x-global-variables-info/g7"
               }
             },
-            "g6": {
+            "g9": {
               "name": "barcol",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g6"
+                "$ref": "#/components/x-global-variables-info/g9"
               }
             }
           }
@@ -29137,10 +29137,10 @@
       "/api/ocds/city/all": {
         "post": {
           "global-reads": {
-            "g9": {
+            "g3": {
               "name": "ASC",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g9"
+                "$ref": "#/components/x-global-variables-info/g3"
               }
             }
           }
@@ -29149,10 +29149,10 @@
       "/api/ocds/contrMethod/all": {
         "post": {
           "global-reads": {
-            "g9": {
+            "g3": {
               "name": "ASC",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g9"
+                "$ref": "#/components/x-global-variables-info/g3"
               }
             }
           }
@@ -29164,22 +29164,22 @@
             "( this.<org.devgateway.ocds.web.spring.TranslationService: java.util.Map translations>.<java.util.Map: boolean containsKey(java.lang.Object)>({non_EPP#0}.<org.devgateway.ocds.web.rest.controller.request.LangGroupingFilterPagingRequest: java.lang.String getLanguage()>()) == 0 )"
           ],
           "global-reads": {
-            "g3": {
-              "name": "logger",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g3"
-              }
-            },
             "g7": {
-              "name": "stackedcol",
+              "name": "logger",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g7"
               }
             },
-            "g8": {
+            "g11": {
               "name": "logger",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g8"
+                "$ref": "#/components/x-global-variables-info/g11"
+              }
+            },
+            "g12": {
+              "name": "stackedcol",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g12"
               }
             }
           }
@@ -29194,10 +29194,10 @@
                 "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g9": {
+            "g3": {
               "name": "ASC",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g9"
+                "$ref": "#/components/x-global-variables-info/g3"
               }
             }
           }
@@ -29206,10 +29206,10 @@
       "/api/ocds/location/all": {
         "post": {
           "global-reads": {
-            "g9": {
+            "g3": {
               "name": "ASC",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g9"
+                "$ref": "#/components/x-global-variables-info/g3"
               }
             }
           }
@@ -29221,16 +29221,16 @@
             "( this.<org.devgateway.ocds.web.spring.TranslationService: java.util.Map translations>.<java.util.Map: boolean containsKey(java.lang.Object)>({non_EPP#0}.<org.devgateway.ocds.web.rest.controller.request.LangYearFilterPagingRequest: java.lang.String getLanguage()>()) == 0 )"
           ],
           "global-reads": {
-            "g3": {
+            "g7": {
               "name": "logger",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g3"
+                "$ref": "#/components/x-global-variables-info/g7"
               }
             },
-            "g4": {
+            "g8": {
               "name": "area",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g4"
+                "$ref": "#/components/x-global-variables-info/g8"
               }
             }
           }
@@ -29248,16 +29248,16 @@
                 "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g3": {
+            "g7": {
               "name": "logger",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g3"
+                "$ref": "#/components/x-global-variables-info/g7"
               }
             },
-            "g4": {
+            "g8": {
               "name": "area",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g4"
+                "$ref": "#/components/x-global-variables-info/g8"
               }
             }
           }
@@ -29266,10 +29266,10 @@
       "/api/ocds/orgDepartment/all": {
         "post": {
           "global-reads": {
-            "g9": {
+            "g3": {
               "name": "ASC",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g9"
+                "$ref": "#/components/x-global-variables-info/g3"
               }
             }
           }
@@ -29278,10 +29278,10 @@
       "/api/ocds/orgGroup/all": {
         "post": {
           "global-reads": {
-            "g9": {
+            "g3": {
               "name": "ASC",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g9"
+                "$ref": "#/components/x-global-variables-info/g3"
               }
             }
           }
@@ -29290,10 +29290,10 @@
       "/api/ocds/organization/buyer/all": {
         "post": {
           "global-reads": {
-            "g11": {
+            "g4": {
               "name": "buyer",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g11"
+                "$ref": "#/components/x-global-variables-info/g4"
               }
             }
           }
@@ -29302,10 +29302,10 @@
       "/api/ocds/organization/buyer/id/{id}": {
         "post": {
           "global-reads": {
-            "g11": {
+            "g4": {
               "name": "buyer",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g11"
+                "$ref": "#/components/x-global-variables-info/g4"
               }
             }
           }
@@ -29314,10 +29314,10 @@
       "/api/ocds/organization/procuringEntity/all": {
         "post": {
           "global-reads": {
-            "g10": {
+            "g2": {
               "name": "procuringEntity",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g10"
+                "$ref": "#/components/x-global-variables-info/g2"
               }
             }
           }
@@ -29326,10 +29326,10 @@
       "/api/ocds/organization/procuringEntity/id/{id}": {
         "post": {
           "global-reads": {
-            "g10": {
+            "g2": {
               "name": "procuringEntity",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g10"
+                "$ref": "#/components/x-global-variables-info/g2"
               }
             }
           }
@@ -29338,10 +29338,10 @@
       "/api/ocds/organization/supplier/all": {
         "post": {
           "global-reads": {
-            "g12": {
+            "g1": {
               "name": "supplier",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g12"
+                "$ref": "#/components/x-global-variables-info/g1"
               }
             }
           }
@@ -29350,10 +29350,10 @@
       "/api/ocds/organization/supplier/id/{id}": {
         "post": {
           "global-reads": {
-            "g12": {
+            "g1": {
               "name": "supplier",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g12"
+                "$ref": "#/components/x-global-variables-info/g1"
               }
             }
           }
@@ -29368,10 +29368,10 @@
                 "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g9": {
+            "g3": {
               "name": "ASC",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g9"
+                "$ref": "#/components/x-global-variables-info/g3"
               }
             }
           }
@@ -29389,16 +29389,16 @@
                 "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g3": {
+            "g7": {
               "name": "logger",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g3"
+                "$ref": "#/components/x-global-variables-info/g7"
               }
             },
-            "g4": {
+            "g8": {
               "name": "area",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g4"
+                "$ref": "#/components/x-global-variables-info/g8"
               }
             }
           }
@@ -29410,16 +29410,16 @@
             "( this.<org.devgateway.ocds.web.spring.TranslationService: java.util.Map translations>.<java.util.Map: boolean containsKey(java.lang.Object)>({non_EPP#0}.<org.devgateway.ocds.web.rest.controller.request.LangYearFilterPagingRequest: java.lang.String getLanguage()>()) == 0 )"
           ],
           "global-reads": {
-            "g3": {
+            "g7": {
               "name": "logger",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g3"
+                "$ref": "#/components/x-global-variables-info/g7"
               }
             },
-            "g5": {
+            "g10": {
               "name": "line",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g5"
+                "$ref": "#/components/x-global-variables-info/g10"
               }
             }
           }
@@ -29437,22 +29437,22 @@
                 "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g1": {
+            "g5": {
               "name": "DESC",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
+                "$ref": "#/components/x-global-variables-info/g5"
               }
             },
-            "g3": {
+            "g7": {
               "name": "logger",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g3"
+                "$ref": "#/components/x-global-variables-info/g7"
               }
             },
-            "g6": {
+            "g9": {
               "name": "barcol",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g6"
+                "$ref": "#/components/x-global-variables-info/g9"
               }
             }
           }
@@ -29467,10 +29467,10 @@
                 "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g9": {
+            "g3": {
               "name": "ASC",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g9"
+                "$ref": "#/components/x-global-variables-info/g3"
               }
             }
           }
@@ -29489,19 +29489,19 @@
               }
             },
             "g3": {
-              "name": "logger",
+              "name": "ASC",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g3"
               }
             },
-            "g6": {
-              "name": "barcol",
+            "g7": {
+              "name": "logger",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g6"
+                "$ref": "#/components/x-global-variables-info/g7"
               }
             },
             "g9": {
-              "name": "ASC",
+              "name": "barcol",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g9"
               }
@@ -29515,16 +29515,16 @@
             "( this.<org.devgateway.ocds.web.spring.TranslationService: java.util.Map translations>.<java.util.Map: boolean containsKey(java.lang.Object)>({non_EPP#0}.<org.devgateway.ocds.web.rest.controller.request.LangYearFilterPagingRequest: java.lang.String getLanguage()>()) == 0 )"
           ],
           "global-reads": {
-            "g3": {
+            "g7": {
               "name": "logger",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g3"
+                "$ref": "#/components/x-global-variables-info/g7"
               }
             },
-            "g4": {
+            "g8": {
               "name": "area",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g4"
+                "$ref": "#/components/x-global-variables-info/g8"
               }
             }
           }
@@ -29611,10 +29611,10 @@
                 "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g9": {
+            "g3": {
               "name": "ASC",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g9"
+                "$ref": "#/components/x-global-variables-info/g3"
               }
             }
           }
@@ -29677,10 +29677,10 @@
                 "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g1": {
+            "g5": {
               "name": "DESC",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
+                "$ref": "#/components/x-global-variables-info/g5"
               }
             }
           }
@@ -29695,10 +29695,10 @@
                 "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g1": {
+            "g5": {
               "name": "DESC",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
+                "$ref": "#/components/x-global-variables-info/g5"
               }
             }
           }
@@ -29713,10 +29713,10 @@
                 "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g1": {
+            "g5": {
               "name": "DESC",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
+                "$ref": "#/components/x-global-variables-info/g5"
               }
             }
           }
@@ -29743,10 +29743,10 @@
                 "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g9": {
+            "g3": {
               "name": "ASC",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g9"
+                "$ref": "#/components/x-global-variables-info/g3"
               }
             }
           }
@@ -29773,10 +29773,10 @@
                 "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g1": {
+            "g5": {
               "name": "DESC",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
+                "$ref": "#/components/x-global-variables-info/g5"
               }
             }
           }
@@ -29791,10 +29791,10 @@
                 "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g1": {
+            "g5": {
               "name": "DESC",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
+                "$ref": "#/components/x-global-variables-info/g5"
               }
             }
           }
@@ -29809,10 +29809,10 @@
                 "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g1": {
+            "g5": {
               "name": "DESC",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
+                "$ref": "#/components/x-global-variables-info/g5"
               }
             }
           }
@@ -29851,10 +29851,10 @@
                 "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g9": {
+            "g3": {
               "name": "ASC",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g9"
+                "$ref": "#/components/x-global-variables-info/g3"
               }
             }
           }
@@ -29893,10 +29893,10 @@
                 "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g9": {
+            "g3": {
               "name": "ASC",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g9"
+                "$ref": "#/components/x-global-variables-info/g3"
               }
             }
           }
@@ -29953,10 +29953,10 @@
       "/api/translations/{language}": {
         "get": {
           "global-reads": {
-            "g3": {
+            "g7": {
               "name": "logger",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g3"
+                "$ref": "#/components/x-global-variables-info/g7"
               }
             }
           }
@@ -29971,90 +29971,90 @@
         "defining-class": "org.devgateway.ocds.persistence.mongo.Tender$SubmissionMethod"
       },
       "g1": {
-        "name": "DESC",
+        "name": "supplier",
         "id": "g1",
-        "defining-class": "org.springframework.data.domain.Sort$Direction"
+        "defining-class": "org.devgateway.ocds.persistence.mongo.Organization$OrganizationType"
       },
       "g2": {
-        "name": "stackedbar",
+        "name": "procuringEntity",
         "id": "g2",
-        "defining-class": "org.devgateway.toolkit.web.excelcharts.ChartType",
-        "locations-of-static-assignments": [
-          "line 13, org.devgateway.toolkit.web.excelcharts.ChartType"
-        ]
+        "defining-class": "org.devgateway.ocds.persistence.mongo.Organization$OrganizationType"
       },
       "g3": {
-        "name": "logger",
+        "name": "ASC",
         "id": "g3",
+        "defining-class": "org.springframework.data.domain.Sort$Direction"
+      },
+      "g4": {
+        "name": "buyer",
+        "id": "g4",
+        "defining-class": "org.devgateway.ocds.persistence.mongo.Organization$OrganizationType"
+      },
+      "g5": {
+        "name": "DESC",
+        "id": "g5",
+        "defining-class": "org.springframework.data.domain.Sort$Direction"
+      },
+      "g6": {
+        "name": "FLAGS_LIST",
+        "id": "g6",
+        "defining-class": "org.devgateway.ocds.persistence.mongo.flags.FlagsConstants"
+      },
+      "g7": {
+        "name": "logger",
+        "id": "g7",
         "defining-class": "org.devgateway.ocds.web.spring.TranslationService",
         "locations-of-static-assignments": [
           "line 26, org.devgateway.ocds.web.spring.TranslationService"
         ]
       },
-      "g4": {
+      "g8": {
         "name": "area",
-        "id": "g4",
+        "id": "g8",
         "defining-class": "org.devgateway.toolkit.web.excelcharts.ChartType",
         "locations-of-static-assignments": [
           "line 23, org.devgateway.toolkit.web.excelcharts.ChartType"
         ]
       },
-      "g5": {
-        "name": "line",
-        "id": "g5",
-        "defining-class": "org.devgateway.toolkit.web.excelcharts.ChartType",
-        "locations-of-static-assignments": [
-          "line 21, org.devgateway.toolkit.web.excelcharts.ChartType"
-        ]
-      },
-      "g6": {
+      "g9": {
         "name": "barcol",
-        "id": "g6",
+        "id": "g9",
         "defining-class": "org.devgateway.toolkit.web.excelcharts.ChartType",
         "locations-of-static-assignments": [
           "line 11, org.devgateway.toolkit.web.excelcharts.ChartType"
         ]
       },
-      "g7": {
-        "name": "stackedcol",
-        "id": "g7",
+      "g10": {
+        "name": "line",
+        "id": "g10",
         "defining-class": "org.devgateway.toolkit.web.excelcharts.ChartType",
         "locations-of-static-assignments": [
-          "line 15, org.devgateway.toolkit.web.excelcharts.ChartType"
+          "line 21, org.devgateway.toolkit.web.excelcharts.ChartType"
         ]
       },
-      "g8": {
+      "g11": {
         "name": "logger",
-        "id": "g8",
+        "id": "g11",
         "defining-class": "org.devgateway.toolkit.web.spring.AsyncControllerLookupService",
         "locations-of-static-assignments": [
           "line 25, org.devgateway.toolkit.web.spring.AsyncControllerLookupService"
         ]
       },
-      "g9": {
-        "name": "ASC",
-        "id": "g9",
-        "defining-class": "org.springframework.data.domain.Sort$Direction"
-      },
-      "g10": {
-        "name": "procuringEntity",
-        "id": "g10",
-        "defining-class": "org.devgateway.ocds.persistence.mongo.Organization$OrganizationType"
-      },
-      "g11": {
-        "name": "buyer",
-        "id": "g11",
-        "defining-class": "org.devgateway.ocds.persistence.mongo.Organization$OrganizationType"
-      },
       "g12": {
-        "name": "supplier",
+        "name": "stackedcol",
         "id": "g12",
-        "defining-class": "org.devgateway.ocds.persistence.mongo.Organization$OrganizationType"
+        "defining-class": "org.devgateway.toolkit.web.excelcharts.ChartType",
+        "locations-of-static-assignments": [
+          "line 15, org.devgateway.toolkit.web.excelcharts.ChartType"
+        ]
       },
       "g13": {
-        "name": "FLAGS_LIST",
+        "name": "stackedbar",
         "id": "g13",
-        "defining-class": "org.devgateway.ocds.persistence.mongo.flags.FlagsConstants"
+        "defining-class": "org.devgateway.toolkit.web.excelcharts.ChartType",
+        "locations-of-static-assignments": [
+          "line 13, org.devgateway.toolkit.web.excelcharts.ChartType"
+        ]
       },
       "g14": {
         "name": "active",

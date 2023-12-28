@@ -14,7 +14,7 @@
     "/": {
       "get": {
         "description": "",
-        "operationId": "em142",
+        "operationId": "em81",
         "parameters": [],
         "responses": {
           "200": {
@@ -37,7 +37,7 @@
     "/announcements": {
       "get": {
         "description": "",
-        "operationId": "em159",
+        "operationId": "em169",
         "parameters": [],
         "responses": {
           "200": {
@@ -60,7 +60,7 @@
     "/announcements/{id}": {
       "get": {
         "description": "",
-        "operationId": "em169",
+        "operationId": "em171",
         "parameters": [
           {
             "name": "id",
@@ -92,7 +92,7 @@
     "/api-docs": {
       "get": {
         "description": "",
-        "operationId": "em115",
+        "operationId": "em166",
         "parameters": [],
         "responses": {
           "200": {
@@ -115,7 +115,7 @@
     "/api-docs/{file}": {
       "get": {
         "description": "",
-        "operationId": "em117",
+        "operationId": "em168",
         "parameters": [
           {
             "name": "file",
@@ -158,7 +158,7 @@
     "/badges": {
       "get": {
         "description": "",
-        "operationId": "em28",
+        "operationId": "em164",
         "parameters": [],
         "responses": {
           "200": {
@@ -181,7 +181,7 @@
     "/confirm/{code}": {
       "get": {
         "description": "",
-        "operationId": "em172",
+        "operationId": "em163",
         "parameters": [
           {
             "name": "code",
@@ -211,7 +211,7 @@
     "/groups": {
       "get": {
         "description": "",
-        "operationId": "em50",
+        "operationId": "em130",
         "parameters": [
           {
             "name": "q",
@@ -241,7 +241,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em52",
+        "operationId": "em132",
         "parameters": [],
         "responses": {
           "201": {
@@ -256,7 +256,7 @@
     "/groups/{group}": {
       "delete": {
         "description": "",
-        "operationId": "em165",
+        "operationId": "em139",
         "parameters": [
           {
             "name": "group",
@@ -281,7 +281,7 @@
       },
       "get": {
         "description": "",
-        "operationId": "em161",
+        "operationId": "em135",
         "parameters": [
           {
             "name": "group",
@@ -311,7 +311,7 @@
       },
       "put": {
         "description": "",
-        "operationId": "em163",
+        "operationId": "em137",
         "parameters": [
           {
             "name": "group",
@@ -341,7 +341,7 @@
     "/groups/{group}/activities": {
       "get": {
         "description": "",
-        "operationId": "em86",
+        "operationId": "em172",
         "parameters": [
           {
             "name": "type",
@@ -381,7 +381,7 @@
     "/groups/{group}/activities/{id}": {
       "get": {
         "description": "",
-        "operationId": "em89",
+        "operationId": "em175",
         "parameters": [
           {
             "name": "id",
@@ -421,7 +421,7 @@
     "/groups/{group}/members": {
       "get": {
         "description": "",
-        "operationId": "em92",
+        "operationId": "em143",
         "parameters": [
           {
             "name": "group",
@@ -454,7 +454,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em94",
+        "operationId": "em145",
         "parameters": [
           {
             "name": "group",
@@ -495,7 +495,7 @@
     "/groups/{group}/members/{member}": {
       "delete": {
         "description": "",
-        "operationId": "em176",
+        "operationId": "em148",
         "parameters": [
           {
             "name": "group",
@@ -530,7 +530,7 @@
     "/measurements": {
       "get": {
         "description": "",
-        "operationId": "em132",
+        "operationId": "em110",
         "parameters": [
           {
             "name": "bbox",
@@ -571,7 +571,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em136",
+        "operationId": "em114",
         "parameters": [],
         "responses": {
           "201": {
@@ -589,7 +589,7 @@
     "/measurements/{measurement}": {
       "delete": {
         "description": "",
-        "operationId": "em45",
+        "operationId": "em123",
         "parameters": [
           {
             "name": "measurement",
@@ -614,7 +614,7 @@
       },
       "get": {
         "description": "",
-        "operationId": "em41",
+        "operationId": "em119",
         "parameters": [
           {
             "name": "measurement",
@@ -646,7 +646,7 @@
     "/measurements/{measurement}/sensor": {
       "get": {
         "description": "",
-        "operationId": "em29",
+        "operationId": "em72",
         "parameters": [
           {
             "name": "measurement",
@@ -678,7 +678,7 @@
     "/measurements/{measurement}/sensor/statistics": {
       "get": {
         "description": "",
-        "operationId": "em73",
+        "operationId": "em37",
         "parameters": [
           {
             "name": "measurement",
@@ -710,7 +710,7 @@
     "/measurements/{measurement}/sensor/statistics/{phen}": {
       "get": {
         "description": "",
-        "operationId": "em9",
+        "operationId": "em50",
         "parameters": [
           {
             "name": "measurement",
@@ -750,7 +750,7 @@
     "/phenomenons": {
       "get": {
         "description": "",
-        "operationId": "em38",
+        "operationId": "em105",
         "parameters": [],
         "responses": {
           "200": {
@@ -771,7 +771,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em39",
+        "operationId": "em106",
         "parameters": [],
         "responses": {
           "201": {
@@ -786,7 +786,7 @@
     "/phenomenons/{phenomenon}": {
       "get": {
         "description": "",
-        "operationId": "em170",
+        "operationId": "em108",
         "parameters": [
           {
             "name": "phenomenon",
@@ -818,7 +818,7 @@
     "/phenomenons/{phenomenon}/statistic": {
       "get": {
         "description": "",
-        "operationId": "em10",
+        "operationId": "em51",
         "parameters": [
           {
             "name": "phenomenon",
@@ -850,7 +850,7 @@
     "/privacyStatements": {
       "get": {
         "description": "",
-        "operationId": "em24",
+        "operationId": "em100",
         "parameters": [],
         "responses": {
           "200": {
@@ -873,7 +873,7 @@
     "/privacyStatements/{id}": {
       "get": {
         "description": "",
-        "operationId": "em118",
+        "operationId": "em102",
         "parameters": [
           {
             "name": "id",
@@ -905,7 +905,7 @@
     "/resetPassword": {
       "post": {
         "description": "",
-        "operationId": "em173",
+        "operationId": "em98",
         "parameters": [],
         "responses": {
           "204": {
@@ -941,7 +941,7 @@
       },
       "put": {
         "description": "",
-        "operationId": "em174",
+        "operationId": "em99",
         "parameters": [],
         "responses": {
           "204": {
@@ -979,7 +979,7 @@
     "/schemas": {
       "get": {
         "description": "",
-        "operationId": "em26",
+        "operationId": "em128",
         "parameters": [],
         "responses": {
           "200": {
@@ -1002,7 +1002,7 @@
     "/schemas/{schema}": {
       "get": {
         "description": "",
-        "operationId": "em27",
+        "operationId": "em129",
         "parameters": [
           {
             "name": "schema",
@@ -1034,7 +1034,7 @@
     "/sensors": {
       "get": {
         "description": "",
-        "operationId": "em4",
+        "operationId": "em67",
         "parameters": [
           {
             "name": "type",
@@ -1064,7 +1064,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em6",
+        "operationId": "em69",
         "parameters": [],
         "responses": {
           "201": {
@@ -1079,7 +1079,7 @@
     "/sensors/{sensor}": {
       "get": {
         "description": "",
-        "operationId": "em30",
+        "operationId": "em73",
         "parameters": [
           {
             "name": "sensor",
@@ -1111,7 +1111,7 @@
     "/sensors/{sensor}/statistics": {
       "get": {
         "description": "",
-        "operationId": "em74",
+        "operationId": "em38",
         "parameters": [
           {
             "name": "sensor",
@@ -1143,7 +1143,7 @@
     "/sensors/{sensor}/statistics/{phen}": {
       "get": {
         "description": "",
-        "operationId": "em11",
+        "operationId": "em52",
         "parameters": [
           {
             "name": "sensor",
@@ -1183,7 +1183,7 @@
     "/statistics": {
       "get": {
         "description": "",
-        "operationId": "em75",
+        "operationId": "em39",
         "parameters": [],
         "responses": {
           "200": {
@@ -1206,7 +1206,7 @@
     "/statistics/{phen}": {
       "get": {
         "description": "",
-        "operationId": "em12",
+        "operationId": "em53",
         "parameters": [
           {
             "name": "phen",
@@ -1238,7 +1238,7 @@
     "/termsOfUse": {
       "get": {
         "description": "",
-        "operationId": "em22",
+        "operationId": "em34",
         "parameters": [],
         "responses": {
           "200": {
@@ -1261,7 +1261,7 @@
     "/termsOfUse/{id}": {
       "get": {
         "description": "",
-        "operationId": "em0",
+        "operationId": "em36",
         "parameters": [
           {
             "name": "id",
@@ -1293,7 +1293,7 @@
     "/tracks": {
       "get": {
         "description": "",
-        "operationId": "em110",
+        "operationId": "em18",
         "parameters": [
           {
             "name": "bbox",
@@ -1334,7 +1334,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em112",
+        "operationId": "em20",
         "parameters": [],
         "responses": {
           "500": {
@@ -1349,7 +1349,7 @@
     "/tracks/{track}": {
       "delete": {
         "description": "",
-        "operationId": "em123",
+        "operationId": "em27",
         "parameters": [
           {
             "name": "track",
@@ -1374,7 +1374,7 @@
       },
       "get": {
         "description": "",
-        "operationId": "em121",
+        "operationId": "em25",
         "parameters": [
           {
             "name": "track",
@@ -1404,7 +1404,7 @@
       },
       "put": {
         "description": "",
-        "operationId": "em119",
+        "operationId": "em23",
         "parameters": [
           {
             "name": "track",
@@ -1431,7 +1431,7 @@
     "/tracks/{track}/measurements": {
       "get": {
         "description": "",
-        "operationId": "em133",
+        "operationId": "em111",
         "parameters": [
           {
             "name": "bbox",
@@ -1480,7 +1480,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em137",
+        "operationId": "em115",
         "parameters": [
           {
             "name": "track",
@@ -1507,7 +1507,7 @@
     "/tracks/{track}/measurements/{measurement}": {
       "delete": {
         "description": "",
-        "operationId": "em46",
+        "operationId": "em124",
         "parameters": [
           {
             "name": "track",
@@ -1540,7 +1540,7 @@
       },
       "get": {
         "description": "",
-        "operationId": "em42",
+        "operationId": "em120",
         "parameters": [
           {
             "name": "track",
@@ -1580,7 +1580,7 @@
     "/tracks/{track}/measurements/{measurement}/sensor": {
       "get": {
         "description": "",
-        "operationId": "em31",
+        "operationId": "em74",
         "parameters": [
           {
             "name": "track",
@@ -1620,7 +1620,7 @@
     "/tracks/{track}/measurements/{measurement}/sensor/statistics": {
       "get": {
         "description": "",
-        "operationId": "em76",
+        "operationId": "em40",
         "parameters": [
           {
             "name": "track",
@@ -1660,7 +1660,7 @@
     "/tracks/{track}/measurements/{measurement}/sensor/statistics/{phen}": {
       "get": {
         "description": "",
-        "operationId": "em13",
+        "operationId": "em54",
         "parameters": [
           {
             "name": "track",
@@ -1708,7 +1708,7 @@
     "/tracks/{track}/preview": {
       "get": {
         "description": "",
-        "operationId": "em107",
+        "operationId": "em103",
         "parameters": [
           {
             "name": "track",
@@ -1745,7 +1745,7 @@
     "/tracks/{track}/sensor": {
       "get": {
         "description": "",
-        "operationId": "em32",
+        "operationId": "em75",
         "parameters": [
           {
             "name": "track",
@@ -1777,7 +1777,7 @@
     "/tracks/{track}/sensor/statistics": {
       "get": {
         "description": "",
-        "operationId": "em77",
+        "operationId": "em41",
         "parameters": [
           {
             "name": "track",
@@ -1809,7 +1809,7 @@
     "/tracks/{track}/sensor/statistics/{phen}": {
       "get": {
         "description": "",
-        "operationId": "em14",
+        "operationId": "em55",
         "parameters": [
           {
             "name": "track",
@@ -1849,7 +1849,7 @@
     "/tracks/{track}/share": {
       "get": {
         "description": "",
-        "operationId": "em103",
+        "operationId": "em63",
         "parameters": [
           {
             "name": "track",
@@ -1886,7 +1886,7 @@
     "/tracks/{track}/share/{locale}": {
       "get": {
         "description": "",
-        "operationId": "em105",
+        "operationId": "em65",
         "parameters": [
           {
             "name": "locale",
@@ -1931,7 +1931,7 @@
     "/tracks/{track}/statistics": {
       "get": {
         "description": "",
-        "operationId": "em78",
+        "operationId": "em42",
         "parameters": [
           {
             "name": "track",
@@ -1963,7 +1963,7 @@
     "/tracks/{track}/statistics/{phen}": {
       "get": {
         "description": "",
-        "operationId": "em15",
+        "operationId": "em56",
         "parameters": [
           {
             "name": "track",
@@ -2003,7 +2003,7 @@
     "/users": {
       "get": {
         "description": "",
-        "operationId": "em1",
+        "operationId": "em0",
         "parameters": [],
         "responses": {
           "200": {
@@ -2027,7 +2027,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em2",
+        "operationId": "em1",
         "parameters": [],
         "responses": {
           "201": {
@@ -2042,7 +2042,7 @@
     "/users/{username}": {
       "delete": {
         "description": "",
-        "operationId": "em61",
+        "operationId": "em6",
         "parameters": [
           {
             "name": "deleteContent",
@@ -2076,7 +2076,7 @@
       },
       "get": {
         "description": "",
-        "operationId": "em60",
+        "operationId": "em5",
         "parameters": [
           {
             "name": "username",
@@ -2106,7 +2106,7 @@
       },
       "put": {
         "description": "",
-        "operationId": "em59",
+        "operationId": "em4",
         "parameters": [
           {
             "name": "username",
@@ -2136,7 +2136,7 @@
     "/users/{username}/activities": {
       "get": {
         "description": "",
-        "operationId": "em87",
+        "operationId": "em173",
         "parameters": [
           {
             "name": "type",
@@ -2176,7 +2176,7 @@
     "/users/{username}/activities/{id}": {
       "get": {
         "description": "",
-        "operationId": "em90",
+        "operationId": "em176",
         "parameters": [
           {
             "name": "id",
@@ -2216,7 +2216,7 @@
     "/users/{username}/avatar": {
       "get": {
         "description": "",
-        "operationId": "em175",
+        "operationId": "em165",
         "parameters": [
           {
             "name": "size",
@@ -2250,7 +2250,7 @@
     "/users/{username}/friendActivities": {
       "get": {
         "description": "",
-        "operationId": "em130",
+        "operationId": "em160",
         "parameters": [
           {
             "name": "type",
@@ -2290,7 +2290,7 @@
     "/users/{username}/friendActivities/{id}": {
       "get": {
         "description": "",
-        "operationId": "em131",
+        "operationId": "em161",
         "parameters": [
           {
             "name": "id",
@@ -2330,7 +2330,7 @@
     "/users/{username}/friends": {
       "get": {
         "description": "",
-        "operationId": "em97",
+        "operationId": "em154",
         "parameters": [
           {
             "name": "username",
@@ -2363,7 +2363,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em98",
+        "operationId": "em155",
         "parameters": [
           {
             "name": "username",
@@ -2407,7 +2407,7 @@
     "/users/{username}/friends/declineRequest": {
       "post": {
         "description": "",
-        "operationId": "em102",
+        "operationId": "em159",
         "parameters": [
           {
             "name": "username",
@@ -2451,7 +2451,7 @@
     "/users/{username}/friends/incomingRequests": {
       "get": {
         "description": "",
-        "operationId": "em100",
+        "operationId": "em157",
         "parameters": [
           {
             "name": "username",
@@ -2486,7 +2486,7 @@
     "/users/{username}/friends/outgoingRequests": {
       "get": {
         "description": "",
-        "operationId": "em101",
+        "operationId": "em158",
         "parameters": [
           {
             "name": "username",
@@ -2521,7 +2521,7 @@
     "/users/{username}/friends/{friend}": {
       "delete": {
         "description": "",
-        "operationId": "em109",
+        "operationId": "em162",
         "parameters": [
           {
             "name": "username",
@@ -2556,7 +2556,7 @@
     "/users/{username}/fuelings": {
       "get": {
         "description": "",
-        "operationId": "em55",
+        "operationId": "em150",
         "parameters": [
           {
             "name": "username",
@@ -2586,7 +2586,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em56",
+        "operationId": "em151",
         "parameters": [
           {
             "name": "username",
@@ -2610,7 +2610,7 @@
     "/users/{username}/fuelings/{id}": {
       "delete": {
         "description": "",
-        "operationId": "em58",
+        "operationId": "em153",
         "parameters": [
           {
             "name": "id",
@@ -2643,7 +2643,7 @@
       },
       "get": {
         "description": "",
-        "operationId": "em57",
+        "operationId": "em152",
         "parameters": [
           {
             "name": "id",
@@ -2683,7 +2683,7 @@
     "/users/{username}/groups": {
       "get": {
         "description": "",
-        "operationId": "em51",
+        "operationId": "em131",
         "parameters": [
           {
             "name": "q",
@@ -2721,7 +2721,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em53",
+        "operationId": "em133",
         "parameters": [
           {
             "name": "username",
@@ -2745,7 +2745,7 @@
     "/users/{username}/groups/{group}": {
       "delete": {
         "description": "",
-        "operationId": "em166",
+        "operationId": "em140",
         "parameters": [
           {
             "name": "username",
@@ -2778,7 +2778,7 @@
       },
       "get": {
         "description": "",
-        "operationId": "em162",
+        "operationId": "em136",
         "parameters": [
           {
             "name": "username",
@@ -2816,7 +2816,7 @@
       },
       "put": {
         "description": "",
-        "operationId": "em164",
+        "operationId": "em138",
         "parameters": [
           {
             "name": "username",
@@ -2854,7 +2854,7 @@
     "/users/{username}/groups/{group}/activities": {
       "get": {
         "description": "",
-        "operationId": "em88",
+        "operationId": "em174",
         "parameters": [
           {
             "name": "type",
@@ -2902,7 +2902,7 @@
     "/users/{username}/groups/{group}/activities/{id}": {
       "get": {
         "description": "",
-        "operationId": "em91",
+        "operationId": "em177",
         "parameters": [
           {
             "name": "id",
@@ -2950,7 +2950,7 @@
     "/users/{username}/groups/{group}/members": {
       "get": {
         "description": "",
-        "operationId": "em93",
+        "operationId": "em144",
         "parameters": [
           {
             "name": "username",
@@ -2991,7 +2991,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em95",
+        "operationId": "em146",
         "parameters": [
           {
             "name": "username",
@@ -3040,7 +3040,7 @@
     "/users/{username}/groups/{group}/members/{member}": {
       "delete": {
         "description": "",
-        "operationId": "em177",
+        "operationId": "em149",
         "parameters": [
           {
             "name": "username",
@@ -3083,7 +3083,7 @@
     "/users/{username}/measurements": {
       "get": {
         "description": "",
-        "operationId": "em134",
+        "operationId": "em112",
         "parameters": [
           {
             "name": "bbox",
@@ -3132,7 +3132,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em138",
+        "operationId": "em116",
         "parameters": [
           {
             "name": "username",
@@ -3159,7 +3159,7 @@
     "/users/{username}/measurements/{measurement}": {
       "delete": {
         "description": "",
-        "operationId": "em47",
+        "operationId": "em125",
         "parameters": [
           {
             "name": "username",
@@ -3192,7 +3192,7 @@
       },
       "get": {
         "description": "",
-        "operationId": "em43",
+        "operationId": "em121",
         "parameters": [
           {
             "name": "username",
@@ -3232,7 +3232,7 @@
     "/users/{username}/measurements/{measurement}/sensor": {
       "get": {
         "description": "",
-        "operationId": "em33",
+        "operationId": "em76",
         "parameters": [
           {
             "name": "username",
@@ -3272,7 +3272,7 @@
     "/users/{username}/measurements/{measurement}/sensor/statistics": {
       "get": {
         "description": "",
-        "operationId": "em79",
+        "operationId": "em43",
         "parameters": [
           {
             "name": "username",
@@ -3312,7 +3312,7 @@
     "/users/{username}/measurements/{measurement}/sensor/statistics/{phen}": {
       "get": {
         "description": "",
-        "operationId": "em16",
+        "operationId": "em57",
         "parameters": [
           {
             "name": "username",
@@ -3360,7 +3360,7 @@
     "/users/{username}/sensors": {
       "get": {
         "description": "",
-        "operationId": "em5",
+        "operationId": "em68",
         "parameters": [
           {
             "name": "type",
@@ -3398,7 +3398,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em7",
+        "operationId": "em70",
         "parameters": [
           {
             "name": "username",
@@ -3422,7 +3422,7 @@
     "/users/{username}/sensors/{sensor}": {
       "get": {
         "description": "",
-        "operationId": "em34",
+        "operationId": "em77",
         "parameters": [
           {
             "name": "username",
@@ -3462,7 +3462,7 @@
     "/users/{username}/sensors/{sensor}/statistics": {
       "get": {
         "description": "",
-        "operationId": "em80",
+        "operationId": "em44",
         "parameters": [
           {
             "name": "username",
@@ -3502,7 +3502,7 @@
     "/users/{username}/sensors/{sensor}/statistics/{phen}": {
       "get": {
         "description": "",
-        "operationId": "em17",
+        "operationId": "em58",
         "parameters": [
           {
             "name": "username",
@@ -3550,7 +3550,7 @@
     "/users/{username}/statistics": {
       "get": {
         "description": "",
-        "operationId": "em81",
+        "operationId": "em45",
         "parameters": [
           {
             "name": "username",
@@ -3582,7 +3582,7 @@
     "/users/{username}/statistics/{phen}": {
       "get": {
         "description": "",
-        "operationId": "em18",
+        "operationId": "em59",
         "parameters": [
           {
             "name": "username",
@@ -3622,7 +3622,7 @@
     "/users/{username}/tracks": {
       "get": {
         "description": "",
-        "operationId": "em111",
+        "operationId": "em19",
         "parameters": [
           {
             "name": "bbox",
@@ -3671,7 +3671,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em113",
+        "operationId": "em21",
         "parameters": [
           {
             "name": "username",
@@ -3695,7 +3695,7 @@
     "/users/{username}/tracks/{track}": {
       "delete": {
         "description": "",
-        "operationId": "em124",
+        "operationId": "em28",
         "parameters": [
           {
             "name": "username",
@@ -3728,7 +3728,7 @@
       },
       "get": {
         "description": "",
-        "operationId": "em122",
+        "operationId": "em26",
         "parameters": [
           {
             "name": "username",
@@ -3766,7 +3766,7 @@
       },
       "put": {
         "description": "",
-        "operationId": "em120",
+        "operationId": "em24",
         "parameters": [
           {
             "name": "username",
@@ -3801,7 +3801,7 @@
     "/users/{username}/tracks/{track}/measurements": {
       "get": {
         "description": "",
-        "operationId": "em135",
+        "operationId": "em113",
         "parameters": [
           {
             "name": "bbox",
@@ -3858,7 +3858,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em139",
+        "operationId": "em117",
         "parameters": [
           {
             "name": "username",
@@ -3893,7 +3893,7 @@
     "/users/{username}/tracks/{track}/measurements/{measurement}": {
       "delete": {
         "description": "",
-        "operationId": "em48",
+        "operationId": "em126",
         "parameters": [
           {
             "name": "username",
@@ -3934,7 +3934,7 @@
       },
       "get": {
         "description": "",
-        "operationId": "em44",
+        "operationId": "em122",
         "parameters": [
           {
             "name": "username",
@@ -3982,7 +3982,7 @@
     "/users/{username}/tracks/{track}/measurements/{measurement}/sensor": {
       "get": {
         "description": "",
-        "operationId": "em35",
+        "operationId": "em78",
         "parameters": [
           {
             "name": "username",
@@ -4030,7 +4030,7 @@
     "/users/{username}/tracks/{track}/measurements/{measurement}/sensor/statistics": {
       "get": {
         "description": "",
-        "operationId": "em82",
+        "operationId": "em46",
         "parameters": [
           {
             "name": "username",
@@ -4078,7 +4078,7 @@
     "/users/{username}/tracks/{track}/measurements/{measurement}/sensor/statistics/{phen}": {
       "get": {
         "description": "",
-        "operationId": "em19",
+        "operationId": "em60",
         "parameters": [
           {
             "name": "username",
@@ -4134,7 +4134,7 @@
     "/users/{username}/tracks/{track}/preview": {
       "get": {
         "description": "",
-        "operationId": "em108",
+        "operationId": "em104",
         "parameters": [
           {
             "name": "username",
@@ -4179,7 +4179,7 @@
     "/users/{username}/tracks/{track}/sensor": {
       "get": {
         "description": "",
-        "operationId": "em36",
+        "operationId": "em79",
         "parameters": [
           {
             "name": "username",
@@ -4219,7 +4219,7 @@
     "/users/{username}/tracks/{track}/sensor/statistics": {
       "get": {
         "description": "",
-        "operationId": "em83",
+        "operationId": "em47",
         "parameters": [
           {
             "name": "username",
@@ -4259,7 +4259,7 @@
     "/users/{username}/tracks/{track}/sensor/statistics/{phen}": {
       "get": {
         "description": "",
-        "operationId": "em20",
+        "operationId": "em61",
         "parameters": [
           {
             "name": "username",
@@ -4307,7 +4307,7 @@
     "/users/{username}/tracks/{track}/share": {
       "get": {
         "description": "",
-        "operationId": "em104",
+        "operationId": "em64",
         "parameters": [
           {
             "name": "username",
@@ -4352,7 +4352,7 @@
     "/users/{username}/tracks/{track}/share/{locale}": {
       "get": {
         "description": "",
-        "operationId": "em106",
+        "operationId": "em66",
         "parameters": [
           {
             "name": "locale",
@@ -4405,7 +4405,7 @@
     "/users/{username}/tracks/{track}/statistics": {
       "get": {
         "description": "",
-        "operationId": "em84",
+        "operationId": "em48",
         "parameters": [
           {
             "name": "username",
@@ -4445,7 +4445,7 @@
     "/users/{username}/tracks/{track}/statistics/{phen}": {
       "get": {
         "description": "",
-        "operationId": "em21",
+        "operationId": "em62",
         "parameters": [
           {
             "name": "username",
@@ -4493,7 +4493,7 @@
     "/users/{username}/userStatistic": {
       "get": {
         "description": "",
-        "operationId": "em141",
+        "operationId": "em3",
         "parameters": [
           {
             "name": "username",
@@ -4540,16 +4540,16 @@
             "( virtualinvoke this.<org.envirocar.server.rest.resources.ConfirmResource: org.envirocar.server.core.UserService getUserService()>().<org.envirocar.server.core.UserService: org.envirocar.server.core.entities.User confirmUser(java.lang.String)>({code}) != null )"
           ],
           "global-reads": {
-            "g14": {
+            "g15": {
               "name": "UTF_8",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g14"
+                "$ref": "#/components/x-global-variables-info/g15"
               }
             },
-            "g15": {
+            "g16": {
               "name": "APP",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g15"
+                "$ref": "#/components/x-global-variables-info/g16"
               }
             }
           }
@@ -4558,20 +4558,20 @@
       "/resetPassword": {
         "post": {
           "global-reads": {
-            "g16": {
+            "g14": {
               "name": "LOG",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g16"
+                "$ref": "#/components/x-global-variables-info/g14"
               }
             }
           }
         },
         "put": {
           "global-reads": {
-            "g16": {
+            "g14": {
               "name": "LOG",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g16"
+                "$ref": "#/components/x-global-variables-info/g14"
               }
             }
           }
@@ -4580,10 +4580,10 @@
       "/tracks": {
         "get": {
           "global-reads": {
-            "g13": {
+            "g0": {
               "name": "FINISHED",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g13"
+                "$ref": "#/components/x-global-variables-info/g0"
               }
             }
           }
@@ -4596,28 +4596,28 @@
             "( $stack41[0] - $stack45[0] > 2 )"
           ],
           "global-reads": {
-            "g1": {
-              "name": "VALUE_INTERPOLATION_BICUBIC",
+            "g2": {
+              "name": "VALUE_ANTIALIAS_ON",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
+                "$ref": "#/components/x-global-variables-info/g2"
               }
             },
             "g5": {
-              "name": "VALUE_ANTIALIAS_ON",
+              "name": "KEY_INTERPOLATION",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g5"
               }
             },
-            "g7": {
-              "name": "KEY_INTERPOLATION",
+            "g9": {
+              "name": "VALUE_INTERPOLATION_BICUBIC",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g7"
+                "$ref": "#/components/x-global-variables-info/g9"
               }
             },
-            "g10": {
+            "g11": {
               "name": "KEY_ANTIALIASING",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g10"
+                "$ref": "#/components/x-global-variables-info/g11"
               }
             }
           }
@@ -4630,82 +4630,82 @@
             "( $stack41[0] - $stack45[0] > 2 )"
           ],
           "global-reads": {
-            "g0": {
-              "name": "RECTANGLE_ALPHA_COMPOSITE",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g0"
-              }
-            },
             "g1": {
-              "name": "VALUE_INTERPOLATION_BICUBIC",
+              "name": "RECTANGLE_ALPHA_COMPOSITE",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g1"
               }
             },
             "g2": {
-              "name": "PERIOD_FORMATTER",
+              "name": "VALUE_ANTIALIAS_ON",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g2"
               }
             },
             "g3": {
-              "name": "FONT_COLOR",
+              "name": "FONT_ALPHA_COMPOSITE",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g3"
               }
             },
             "g4": {
-              "name": "FONT_ALPHA_COMPOSITE",
+              "name": "RECTANGLE_COLOR",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g4"
               }
             },
             "g5": {
-              "name": "VALUE_ANTIALIAS_ON",
+              "name": "KEY_INTERPOLATION",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g5"
               }
             },
             "g6": {
-              "name": "ROOT",
+              "name": "FONT_COLOR",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g6"
               }
             },
             "g7": {
-              "name": "KEY_INTERPOLATION",
+              "name": "FONT",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g7"
               }
             },
             "g8": {
-              "name": "FONT",
+              "name": "ROOT",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g8"
               }
             },
             "g9": {
-              "name": "RECTANGLE_COLOR",
+              "name": "VALUE_INTERPOLATION_BICUBIC",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g9"
               }
             },
             "g10": {
-              "name": "KEY_ANTIALIASING",
+              "name": "BOLD_FONT",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g10"
               }
             },
             "g11": {
-              "name": "BOLD_FONT",
+              "name": "KEY_ANTIALIASING",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g11"
               }
             },
             "g12": {
-              "name": "GERMANY",
+              "name": "PERIOD_FORMATTER",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g12"
+              }
+            },
+            "g13": {
+              "name": "GERMANY",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g13"
               }
             }
           }
@@ -4718,82 +4718,82 @@
             "( $stack41[0] - $stack45[0] > 2 )"
           ],
           "global-reads": {
-            "g0": {
-              "name": "RECTANGLE_ALPHA_COMPOSITE",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g0"
-              }
-            },
             "g1": {
-              "name": "VALUE_INTERPOLATION_BICUBIC",
+              "name": "RECTANGLE_ALPHA_COMPOSITE",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g1"
               }
             },
             "g2": {
-              "name": "PERIOD_FORMATTER",
+              "name": "VALUE_ANTIALIAS_ON",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g2"
               }
             },
             "g3": {
-              "name": "FONT_COLOR",
+              "name": "FONT_ALPHA_COMPOSITE",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g3"
               }
             },
             "g4": {
-              "name": "FONT_ALPHA_COMPOSITE",
+              "name": "RECTANGLE_COLOR",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g4"
               }
             },
             "g5": {
-              "name": "VALUE_ANTIALIAS_ON",
+              "name": "KEY_INTERPOLATION",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g5"
               }
             },
             "g6": {
-              "name": "ROOT",
+              "name": "FONT_COLOR",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g6"
               }
             },
             "g7": {
-              "name": "KEY_INTERPOLATION",
+              "name": "FONT",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g7"
               }
             },
             "g8": {
-              "name": "FONT",
+              "name": "ROOT",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g8"
               }
             },
             "g9": {
-              "name": "RECTANGLE_COLOR",
+              "name": "VALUE_INTERPOLATION_BICUBIC",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g9"
               }
             },
             "g10": {
-              "name": "KEY_ANTIALIASING",
+              "name": "BOLD_FONT",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g10"
               }
             },
             "g11": {
-              "name": "BOLD_FONT",
+              "name": "KEY_ANTIALIASING",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g11"
               }
             },
             "g12": {
-              "name": "GERMANY",
+              "name": "PERIOD_FORMATTER",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g12"
+              }
+            },
+            "g13": {
+              "name": "GERMANY",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g13"
               }
             }
           }
@@ -4817,115 +4817,115 @@
     "x-endpoint-interdependence": {},
     "x-global-variables-info": {
       "g0": {
-        "name": "RECTANGLE_ALPHA_COMPOSITE",
+        "name": "FINISHED",
         "id": "g0",
+        "defining-class": "org.envirocar.server.core.entities.TrackStatus"
+      },
+      "g1": {
+        "name": "RECTANGLE_ALPHA_COMPOSITE",
+        "id": "g1",
         "defining-class": "org.envirocar.server.rest.resources.ShareResource",
         "locations-of-static-assignments": [
           "line 76, org.envirocar.server.rest.resources.ShareResource"
         ]
       },
-      "g1": {
-        "name": "VALUE_INTERPOLATION_BICUBIC",
-        "id": "g1",
+      "g2": {
+        "name": "VALUE_ANTIALIAS_ON",
+        "id": "g2",
         "defining-class": "java.awt.RenderingHints"
       },
-      "g2": {
-        "name": "PERIOD_FORMATTER",
-        "id": "g2",
-        "defining-class": "org.envirocar.server.rest.resources.ShareResource",
-        "locations-of-static-assignments": [
-          "line 88, org.envirocar.server.rest.resources.ShareResource"
-        ]
-      },
       "g3": {
-        "name": "FONT_COLOR",
-        "id": "g3",
-        "defining-class": "org.envirocar.server.rest.resources.ShareResource",
-        "locations-of-static-assignments": [
-          "line 74, org.envirocar.server.rest.resources.ShareResource"
-        ]
-      },
-      "g4": {
         "name": "FONT_ALPHA_COMPOSITE",
-        "id": "g4",
+        "id": "g3",
         "defining-class": "org.envirocar.server.rest.resources.ShareResource",
         "locations-of-static-assignments": [
           "line 78, org.envirocar.server.rest.resources.ShareResource"
         ]
       },
-      "g5": {
-        "name": "VALUE_ANTIALIAS_ON",
-        "id": "g5",
-        "defining-class": "java.awt.RenderingHints"
-      },
-      "g6": {
-        "name": "ROOT",
-        "id": "g6",
-        "defining-class": "java.util.Locale"
-      },
-      "g7": {
-        "name": "KEY_INTERPOLATION",
-        "id": "g7",
-        "defining-class": "java.awt.RenderingHints"
-      },
-      "g8": {
-        "name": "FONT",
-        "id": "g8",
-        "defining-class": "org.envirocar.server.rest.resources.ShareResource",
-        "locations-of-static-assignments": [
-          "line 72, org.envirocar.server.rest.resources.ShareResource"
-        ]
-      },
-      "g9": {
+      "g4": {
         "name": "RECTANGLE_COLOR",
-        "id": "g9",
+        "id": "g4",
         "defining-class": "org.envirocar.server.rest.resources.ShareResource",
         "locations-of-static-assignments": [
           "line 73, org.envirocar.server.rest.resources.ShareResource"
         ]
       },
-      "g10": {
-        "name": "KEY_ANTIALIASING",
-        "id": "g10",
+      "g5": {
+        "name": "KEY_INTERPOLATION",
+        "id": "g5",
         "defining-class": "java.awt.RenderingHints"
       },
-      "g11": {
+      "g6": {
+        "name": "FONT_COLOR",
+        "id": "g6",
+        "defining-class": "org.envirocar.server.rest.resources.ShareResource",
+        "locations-of-static-assignments": [
+          "line 74, org.envirocar.server.rest.resources.ShareResource"
+        ]
+      },
+      "g7": {
+        "name": "FONT",
+        "id": "g7",
+        "defining-class": "org.envirocar.server.rest.resources.ShareResource",
+        "locations-of-static-assignments": [
+          "line 72, org.envirocar.server.rest.resources.ShareResource"
+        ]
+      },
+      "g8": {
+        "name": "ROOT",
+        "id": "g8",
+        "defining-class": "java.util.Locale"
+      },
+      "g9": {
+        "name": "VALUE_INTERPOLATION_BICUBIC",
+        "id": "g9",
+        "defining-class": "java.awt.RenderingHints"
+      },
+      "g10": {
         "name": "BOLD_FONT",
-        "id": "g11",
+        "id": "g10",
         "defining-class": "org.envirocar.server.rest.resources.ShareResource",
         "locations-of-static-assignments": [
           "line 71, org.envirocar.server.rest.resources.ShareResource"
         ]
       },
+      "g11": {
+        "name": "KEY_ANTIALIASING",
+        "id": "g11",
+        "defining-class": "java.awt.RenderingHints"
+      },
       "g12": {
-        "name": "GERMANY",
+        "name": "PERIOD_FORMATTER",
         "id": "g12",
-        "defining-class": "java.util.Locale"
-      },
-      "g13": {
-        "name": "FINISHED",
-        "id": "g13",
-        "defining-class": "org.envirocar.server.core.entities.TrackStatus"
-      },
-      "g14": {
-        "name": "UTF_8",
-        "id": "g14",
-        "defining-class": "java.nio.charset.StandardCharsets"
-      },
-      "g15": {
-        "name": "APP",
-        "id": "g15",
-        "defining-class": "org.envirocar.server.rest.resources.ConfirmResource",
+        "defining-class": "org.envirocar.server.rest.resources.ShareResource",
         "locations-of-static-assignments": [
-          "line 43, org.envirocar.server.rest.resources.ConfirmResource"
+          "line 88, org.envirocar.server.rest.resources.ShareResource"
         ]
       },
-      "g16": {
+      "g13": {
+        "name": "GERMANY",
+        "id": "g13",
+        "defining-class": "java.util.Locale"
+      },
+      "g14": {
         "name": "LOG",
-        "id": "g16",
+        "id": "g14",
         "defining-class": "org.envirocar.server.rest.resources.ResetPasswordResource",
         "locations-of-static-assignments": [
           "line 36, org.envirocar.server.rest.resources.ResetPasswordResource"
+        ]
+      },
+      "g15": {
+        "name": "UTF_8",
+        "id": "g15",
+        "defining-class": "java.nio.charset.StandardCharsets"
+      },
+      "g16": {
+        "name": "APP",
+        "id": "g16",
+        "defining-class": "org.envirocar.server.rest.resources.ConfirmResource",
+        "locations-of-static-assignments": [
+          "line 43, org.envirocar.server.rest.resources.ConfirmResource"
         ]
       }
     }

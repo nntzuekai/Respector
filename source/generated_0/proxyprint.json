@@ -14,7 +14,7 @@
     "/": {
       "get": {
         "description": "",
-        "operationId": "em60",
+        "operationId": "em72",
         "parameters": [],
         "responses": {
           "200": {
@@ -36,7 +36,7 @@
     "/*": {
       "options": {
         "description": "",
-        "operationId": "em59",
+        "operationId": "em71",
         "parameters": [],
         "responses": {
           "204": {
@@ -54,7 +54,7 @@
     "/admin/printshops": {
       "get": {
         "description": "",
-        "operationId": "em55",
+        "operationId": "em67",
         "parameters": [],
         "responses": {
           "200": {
@@ -76,7 +76,7 @@
     "/admin/register": {
       "post": {
         "description": "",
-        "operationId": "em56",
+        "operationId": "em68",
         "parameters": [],
         "responses": {
           "200": {
@@ -151,7 +151,7 @@
     "/admin/seed": {
       "post": {
         "description": "",
-        "operationId": "em57",
+        "operationId": "em69",
         "parameters": [],
         "responses": {
           "200": {
@@ -176,7 +176,7 @@
     "/admin/useed": {
       "post": {
         "description": "",
-        "operationId": "em58",
+        "operationId": "em70",
         "parameters": [],
         "responses": {
           "200": {
@@ -201,7 +201,7 @@
     "/api/secured": {
       "get": {
         "description": "",
-        "operationId": "em61",
+        "operationId": "em73",
         "parameters": [],
         "responses": {
           "200": {
@@ -223,7 +223,7 @@
     "/consumer/balance": {
       "get": {
         "description": "",
-        "operationId": "em19",
+        "operationId": "em66",
         "parameters": [],
         "responses": {
           "200": {
@@ -245,7 +245,7 @@
     "/consumer/budget": {
       "post": {
         "description": "",
-        "operationId": "em4",
+        "operationId": "em51",
         "parameters": [],
         "responses": {
           "200": {
@@ -270,7 +270,7 @@
     "/consumer/info": {
       "get": {
         "description": "",
-        "operationId": "em12",
+        "operationId": "em59",
         "parameters": [],
         "responses": {
           "200": {
@@ -292,7 +292,7 @@
     "/consumer/info/update": {
       "put": {
         "description": "",
-        "operationId": "em13",
+        "operationId": "em60",
         "parameters": [],
         "responses": {
           "200": {
@@ -314,7 +314,7 @@
     "/consumer/notifications": {
       "get": {
         "description": "",
-        "operationId": "em72",
+        "operationId": "em44",
         "parameters": [],
         "responses": {
           "200": {
@@ -339,7 +339,7 @@
     "/consumer/printrequest/{printRequestID}/submit": {
       "post": {
         "description": "",
-        "operationId": "em5",
+        "operationId": "em52",
         "parameters": [
           {
             "name": "printRequestID",
@@ -374,7 +374,7 @@
     "/consumer/register": {
       "post": {
         "description": "",
-        "operationId": "em11",
+        "operationId": "em58",
         "parameters": [],
         "responses": {
           "200": {
@@ -428,7 +428,7 @@
     "/consumer/requests": {
       "get": {
         "description": "",
-        "operationId": "em16",
+        "operationId": "em63",
         "parameters": [],
         "responses": {
           "200": {
@@ -453,7 +453,7 @@
     "/consumer/requests/cancel/{id}": {
       "delete": {
         "description": "",
-        "operationId": "em17",
+        "operationId": "em64",
         "parameters": [
           {
             "name": "id",
@@ -488,7 +488,7 @@
     "/consumer/satisfied": {
       "get": {
         "description": "",
-        "operationId": "em18",
+        "operationId": "em65",
         "parameters": [],
         "responses": {
           "200": {
@@ -513,7 +513,7 @@
     "/consumer/subscribe": {
       "delete": {
         "description": "",
-        "operationId": "em70",
+        "operationId": "em42",
         "parameters": [
           {
             "name": "password",
@@ -560,7 +560,7 @@
       },
       "get": {
         "description": "",
-        "operationId": "em64",
+        "operationId": "em36",
         "parameters": [
           {
             "name": "password",
@@ -607,7 +607,7 @@
       },
       "head": {
         "description": "",
-        "operationId": "em66",
+        "operationId": "em38",
         "parameters": [
           {
             "name": "password",
@@ -654,7 +654,7 @@
       },
       "options": {
         "description": "",
-        "operationId": "em67",
+        "operationId": "em39",
         "parameters": [
           {
             "name": "password",
@@ -701,7 +701,7 @@
       },
       "patch": {
         "description": "",
-        "operationId": "em69",
+        "operationId": "em41",
         "parameters": [
           {
             "name": "password",
@@ -748,7 +748,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em65",
+        "operationId": "em37",
         "parameters": [
           {
             "name": "password",
@@ -795,7 +795,7 @@
       },
       "put": {
         "description": "",
-        "operationId": "em68",
+        "operationId": "em40",
         "parameters": [
           {
             "name": "password",
@@ -842,7 +842,7 @@
       },
       "trace": {
         "description": "",
-        "operationId": "em71",
+        "operationId": "em43",
         "parameters": [
           {
             "name": "password",
@@ -891,7 +891,7 @@
     "/consumer/{consumerID}/printingschemas": {
       "get": {
         "description": "",
-        "operationId": "em0",
+        "operationId": "em47",
         "parameters": [
           {
             "name": "consumerID",
@@ -921,7 +921,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em1",
+        "operationId": "em48",
         "parameters": [
           {
             "name": "consumerID",
@@ -982,7 +982,7 @@
     "/consumer/{consumerID}/printingschemas/{printingSchemaID}": {
       "delete": {
         "description": "",
-        "operationId": "em2",
+        "operationId": "em49",
         "parameters": [
           {
             "name": "consumerID",
@@ -1021,7 +1021,7 @@
       },
       "put": {
         "description": "",
-        "operationId": "em3",
+        "operationId": "em50",
         "parameters": [
           {
             "name": "consumerID",
@@ -1104,7 +1104,7 @@
     "/consumer/{id}/notify": {
       "post": {
         "description": "",
-        "operationId": "em63",
+        "operationId": "em35",
         "parameters": [
           {
             "name": "id",
@@ -1146,7 +1146,7 @@
     "/consumer/{username}/notifications": {
       "delete": {
         "description": "",
-        "operationId": "em14",
+        "operationId": "em61",
         "parameters": [
           {
             "name": "username",
@@ -1178,7 +1178,7 @@
       },
       "put": {
         "description": "",
-        "operationId": "em15",
+        "operationId": "em62",
         "parameters": [
           {
             "name": "username",
@@ -1212,7 +1212,7 @@
     "/documents/{id}": {
       "get": {
         "description": "",
-        "operationId": "em36",
+        "operationId": "em34",
         "parameters": [
           {
             "name": "id",
@@ -1246,7 +1246,7 @@
     "/login": {
       "post": {
         "description": "",
-        "operationId": "em62",
+        "operationId": "em74",
         "parameters": [],
         "responses": {
           "200": {
@@ -1288,7 +1288,7 @@
     "/notifications/{notificationId}": {
       "delete": {
         "description": "",
-        "operationId": "em73",
+        "operationId": "em45",
         "parameters": [
           {
             "name": "notificationId",
@@ -1321,7 +1321,7 @@
       },
       "put": {
         "description": "",
-        "operationId": "em74",
+        "operationId": "em46",
         "parameters": [
           {
             "name": "notificationId",
@@ -1356,7 +1356,7 @@
     "/paypal/ipn/consumer/{consumerID}": {
       "post": {
         "description": "",
-        "operationId": "em10",
+        "operationId": "em57",
         "parameters": [
           {
             "name": "consumerID",
@@ -1384,7 +1384,7 @@
     "/paypal/ipn/{printRequestID}": {
       "post": {
         "description": "",
-        "operationId": "em9",
+        "operationId": "em56",
         "parameters": [
           {
             "name": "printRequestID",
@@ -1412,7 +1412,7 @@
     "/printdocument": {
       "post": {
         "description": "",
-        "operationId": "em6",
+        "operationId": "em53",
         "parameters": [],
         "responses": {
           "200": {
@@ -1437,7 +1437,7 @@
     "/printdocument/{id}": {
       "get": {
         "description": "",
-        "operationId": "em7",
+        "operationId": "em54",
         "parameters": [
           {
             "name": "id",
@@ -1469,7 +1469,7 @@
     "/printdocument/{id}/budget": {
       "post": {
         "description": "",
-        "operationId": "em8",
+        "operationId": "em55",
         "parameters": [
           {
             "name": "id",
@@ -1504,7 +1504,7 @@
     "/printshop": {
       "get": {
         "description": "",
-        "operationId": "em35",
+        "operationId": "em33",
         "parameters": [],
         "responses": {
           "200": {
@@ -1526,7 +1526,7 @@
     "/printshops": {
       "get": {
         "description": "",
-        "operationId": "em46",
+        "operationId": "em17",
         "parameters": [],
         "responses": {
           "200": {
@@ -1551,7 +1551,7 @@
     "/printshops/history": {
       "get": {
         "description": "",
-        "operationId": "em42",
+        "operationId": "em13",
         "parameters": [],
         "responses": {
           "200": {
@@ -1576,7 +1576,7 @@
     "/printshops/nearest": {
       "get": {
         "description": "",
-        "operationId": "em37",
+        "operationId": "em8",
         "parameters": [
           {
             "name": "latitude",
@@ -1618,7 +1618,7 @@
     "/printshops/requests": {
       "get": {
         "description": "",
-        "operationId": "em41",
+        "operationId": "em12",
         "parameters": [],
         "responses": {
           "200": {
@@ -1643,7 +1643,7 @@
     "/printshops/requests/cancel/{id}": {
       "post": {
         "description": "",
-        "operationId": "em44",
+        "operationId": "em15",
         "parameters": [
           {
             "name": "id",
@@ -1678,7 +1678,7 @@
     "/printshops/requests/{id}": {
       "get": {
         "description": "",
-        "operationId": "em40",
+        "operationId": "em11",
         "parameters": [
           {
             "name": "id",
@@ -1708,7 +1708,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em39",
+        "operationId": "em10",
         "parameters": [
           {
             "name": "id",
@@ -1743,7 +1743,7 @@
     "/printshops/satisfied": {
       "get": {
         "description": "",
-        "operationId": "em43",
+        "operationId": "em14",
         "parameters": [],
         "responses": {
           "200": {
@@ -1768,7 +1768,7 @@
     "/printshops/stats": {
       "get": {
         "description": "",
-        "operationId": "em34",
+        "operationId": "em32",
         "parameters": [],
         "responses": {
           "200": {
@@ -1790,7 +1790,7 @@
     "/printshops/{id}": {
       "get": {
         "description": "",
-        "operationId": "em45",
+        "operationId": "em16",
         "parameters": [
           {
             "name": "id",
@@ -1828,7 +1828,7 @@
     "/printshops/{id}/pricetable": {
       "get": {
         "description": "",
-        "operationId": "em38",
+        "operationId": "em9",
         "parameters": [
           {
             "name": "id",
@@ -1863,7 +1863,7 @@
     "/printshops/{id}/pricetable/covers": {
       "post": {
         "description": "",
-        "operationId": "em26",
+        "operationId": "em24",
         "parameters": [
           {
             "name": "id",
@@ -1916,7 +1916,7 @@
       },
       "put": {
         "description": "",
-        "operationId": "em27",
+        "operationId": "em25",
         "parameters": [
           {
             "name": "id",
@@ -1971,7 +1971,7 @@
     "/printshops/{id}/pricetable/deletecover": {
       "post": {
         "description": "",
-        "operationId": "em28",
+        "operationId": "em26",
         "parameters": [
           {
             "name": "id",
@@ -2023,7 +2023,7 @@
     "/printshops/{id}/pricetable/deletepaper": {
       "post": {
         "description": "",
-        "operationId": "em22",
+        "operationId": "em20",
         "parameters": [
           {
             "name": "id",
@@ -2090,7 +2090,7 @@
     "/printshops/{id}/pricetable/deletering": {
       "post": {
         "description": "",
-        "operationId": "em25",
+        "operationId": "em23",
         "parameters": [
           {
             "name": "id",
@@ -2148,7 +2148,7 @@
     "/printshops/{id}/pricetable/papers": {
       "post": {
         "description": "",
-        "operationId": "em20",
+        "operationId": "em18",
         "parameters": [
           {
             "name": "id",
@@ -2213,7 +2213,7 @@
       },
       "put": {
         "description": "",
-        "operationId": "em21",
+        "operationId": "em19",
         "parameters": [
           {
             "name": "id",
@@ -2280,7 +2280,7 @@
     "/printshops/{id}/pricetable/rings": {
       "post": {
         "description": "",
-        "operationId": "em23",
+        "operationId": "em21",
         "parameters": [
           {
             "name": "id",
@@ -2333,7 +2333,7 @@
       },
       "put": {
         "description": "",
-        "operationId": "em24",
+        "operationId": "em22",
         "parameters": [
           {
             "name": "id",
@@ -2388,7 +2388,7 @@
     "/printshops/{id}/reviews": {
       "get": {
         "description": "",
-        "operationId": "em47",
+        "operationId": "em0",
         "parameters": [
           {
             "name": "id",
@@ -2424,7 +2424,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em48",
+        "operationId": "em1",
         "parameters": [
           {
             "name": "id",
@@ -2462,7 +2462,7 @@
     "/printshops/{printShopID}/employees": {
       "get": {
         "description": "",
-        "operationId": "em30",
+        "operationId": "em28",
         "parameters": [
           {
             "name": "printShopID",
@@ -2492,7 +2492,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em31",
+        "operationId": "em29",
         "parameters": [
           {
             "name": "printShopID",
@@ -2525,7 +2525,7 @@
       },
       "put": {
         "description": "",
-        "operationId": "em32",
+        "operationId": "em30",
         "parameters": [
           {
             "name": "printShopID",
@@ -2557,7 +2557,7 @@
     "/printshops/{printShopID}/employees/{employeeID}": {
       "delete": {
         "description": "",
-        "operationId": "em33",
+        "operationId": "em31",
         "parameters": [
           {
             "name": "printShopID",
@@ -2598,7 +2598,7 @@
     "/printshops/{printShopID}/pricetable/editstapling": {
       "put": {
         "description": "",
-        "operationId": "em29",
+        "operationId": "em27",
         "parameters": [
           {
             "name": "printShopID",
@@ -2630,7 +2630,7 @@
     "/printshops/{printShopId}/reviews/{reviewId}": {
       "delete": {
         "description": "",
-        "operationId": "em50",
+        "operationId": "em3",
         "parameters": [
           {
             "name": "printShopId",
@@ -2678,7 +2678,7 @@
       },
       "put": {
         "description": "",
-        "operationId": "em49",
+        "operationId": "em2",
         "parameters": [
           {
             "name": "printShopId",
@@ -2728,7 +2728,7 @@
     "/request/accept/{id}": {
       "post": {
         "description": "",
-        "operationId": "em52",
+        "operationId": "em5",
         "parameters": [
           {
             "name": "id",
@@ -2763,7 +2763,7 @@
     "/request/register": {
       "post": {
         "description": "",
-        "operationId": "em51",
+        "operationId": "em4",
         "parameters": [],
         "responses": {
           "200": {
@@ -2880,7 +2880,7 @@
     "/request/reject/{printRequestID}": {
       "post": {
         "description": "",
-        "operationId": "em53",
+        "operationId": "em6",
         "parameters": [
           {
             "name": "printRequestID",
@@ -2915,7 +2915,7 @@
     "/requests/pending": {
       "get": {
         "description": "",
-        "operationId": "em54",
+        "operationId": "em7",
         "parameters": [],
         "responses": {
           "200": {
@@ -2958,10 +2958,10 @@
       "/admin/register": {
         "post": {
           "global-reads": {
-            "g1": {
+            "g0": {
               "name": "OK",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
+                "$ref": "#/components/x-global-variables-info/g0"
               }
             }
           }
@@ -2970,14 +2970,14 @@
       "/admin/seed": {
         "post": {
           "global-reads": {
-            "g1": {
+            "g0": {
               "name": "OK",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
+                "$ref": "#/components/x-global-variables-info/g0"
               }
             },
             "g5": {
-              "name": "A4",
+              "name": "ROLE_MANAGER",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g5"
               }
@@ -2988,92 +2988,92 @@
                 "$ref": "#/components/x-global-variables-info/g9"
               }
             },
-            "g17": {
-              "name": "PROXY_PAYMENT",
+            "g16": {
+              "name": "A4",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g17"
+                "$ref": "#/components/x-global-variables-info/g16"
               }
             },
             "g18": {
-              "name": "PENDING",
+              "name": "PLASTIC",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g18"
               }
             },
             "g19": {
-              "name": "DUPLEX",
+              "name": "SPIRAL",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g19"
               }
             },
             "g20": {
-              "name": "BW",
+              "name": "WIRE",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g20"
               }
             },
-            "g24": {
-              "name": "ROLE_USER",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g24"
-              }
-            },
             "g25": {
-              "name": "FINISHED",
+              "name": "A3",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g25"
               }
             },
             "g26": {
-              "name": "LIFTED",
+              "name": "PENDING",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g26"
               }
             },
-            "g27": {
-              "name": "SIMPLEX",
+            "g28": {
+              "name": "LIFTED",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g27"
+                "$ref": "#/components/x-global-variables-info/g28"
               }
             },
             "g29": {
-              "name": "A3",
+              "name": "IN_PROGRESS",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g29"
               }
             },
-            "g30": {
-              "name": "WIRE",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g30"
-              }
-            },
             "g31": {
-              "name": "PLASTIC",
+              "name": "FINISHED",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g31"
               }
             },
-            "g32": {
-              "name": "SPIRAL",
+            "g34": {
+              "name": "DUPLEX",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g32"
+                "$ref": "#/components/x-global-variables-info/g34"
               }
             },
-            "g33": {
+            "g35": {
+              "name": "SIMPLEX",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g35"
+              }
+            },
+            "g36": {
               "name": "ROLE_EMPLOYEE",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g33"
+                "$ref": "#/components/x-global-variables-info/g36"
               }
             },
             "g43": {
-              "name": "IN_PROGRESS",
+              "name": "PROXY_PAYMENT",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g43"
               }
             },
+            "g46": {
+              "name": "BW",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g46"
+              }
+            },
             "g48": {
-              "name": "ROLE_MANAGER",
+              "name": "ROLE_USER",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g48"
               }
@@ -3114,16 +3114,16 @@
       "/admin/useed": {
         "post": {
           "global-reads": {
-            "g1": {
+            "g0": {
               "name": "OK",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
+                "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g24": {
+            "g48": {
               "name": "ROLE_USER",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g24"
+                "$ref": "#/components/x-global-variables-info/g48"
               }
             }
           }
@@ -3132,46 +3132,10 @@
       "/consumer/budget": {
         "post": {
           "global-reads": {
-            "g2": {
-              "name": "US",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g2"
-              }
-            },
-            "g3": {
-              "name": "B_12_20_THICKNESS_FLOOR",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g3"
-              }
-            },
-            "g4": {
-              "name": "B_6_10_THICKNESS_FLOOR",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g4"
-              }
-            },
-            "g5": {
-              "name": "A4",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g5"
-              }
-            },
-            "g6": {
-              "name": "KEY_BASE",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g6"
-              }
-            },
             "g7": {
               "name": "out",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g7"
-              }
-            },
-            "g8": {
-              "name": "B_32_38_THICKNESS_FLOOR",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g8"
               }
             },
             "g9": {
@@ -3180,22 +3144,58 @@
                 "$ref": "#/components/x-global-variables-info/g9"
               }
             },
-            "g10": {
-              "name": "KEY_BASE",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g10"
-              }
-            },
-            "g11": {
-              "name": "KEY_BASE",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g11"
-              }
-            },
             "g12": {
-              "name": "B_22_28_THICKNESS_FLOOR",
+              "name": "KEY_BASE",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g12"
+              }
+            },
+            "g13": {
+              "name": "KEY_BASE",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g13"
+              }
+            },
+            "g16": {
+              "name": "A4",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g16"
+              }
+            },
+            "g22": {
+              "name": "KEY_BASE",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g22"
+              }
+            },
+            "g38": {
+              "name": "B_32_38_THICKNESS_FLOOR",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g38"
+              }
+            },
+            "g39": {
+              "name": "B_12_20_THICKNESS_FLOOR",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g39"
+              }
+            },
+            "g40": {
+              "name": "B_22_28_THICKNESS_FLOOR",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g40"
+              }
+            },
+            "g41": {
+              "name": "US",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g41"
+              }
+            },
+            "g42": {
+              "name": "B_6_10_THICKNESS_FLOOR",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g42"
               }
             }
           }
@@ -3204,40 +3204,40 @@
       "/consumer/printrequest/{printRequestID}/submit": {
         "post": {
           "global-reads": {
-            "g13": {
+            "g8": {
               "name": "HALF_UP",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g13"
+                "$ref": "#/components/x-global-variables-info/g8"
               }
             },
-            "g14": {
-              "name": "MONEY_CEIL",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g14"
-              }
-            },
-            "g15": {
-              "name": "NOT_PAYED",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g15"
-              }
-            },
-            "g16": {
-              "name": "PAYPAL_PAYMENT",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g16"
-              }
-            },
-            "g17": {
-              "name": "PROXY_PAYMENT",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g17"
-              }
-            },
-            "g18": {
+            "g26": {
               "name": "PENDING",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g18"
+                "$ref": "#/components/x-global-variables-info/g26"
+              }
+            },
+            "g27": {
+              "name": "PAYPAL_PAYMENT",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g27"
+              }
+            },
+            "g33": {
+              "name": "MONEY_CEIL",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g33"
+              }
+            },
+            "g43": {
+              "name": "PROXY_PAYMENT",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g43"
+              }
+            },
+            "g44": {
+              "name": "NOT_PAYED",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g44"
               }
             }
           }
@@ -3246,10 +3246,10 @@
       "/consumer/register": {
         "post": {
           "global-reads": {
-            "g24": {
+            "g48": {
               "name": "ROLE_USER",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g24"
+                "$ref": "#/components/x-global-variables-info/g48"
               }
             }
           }
@@ -3258,10 +3258,10 @@
       "/consumer/requests": {
         "get": {
           "global-reads": {
-            "g18": {
+            "g26": {
               "name": "PENDING",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g18"
+                "$ref": "#/components/x-global-variables-info/g26"
               }
             }
           }
@@ -3270,16 +3270,16 @@
       "/consumer/requests/cancel/{id}": {
         "delete": {
           "global-reads": {
-            "g14": {
-              "name": "MONEY_CEIL",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g14"
-              }
-            },
-            "g18": {
+            "g26": {
               "name": "PENDING",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g18"
+                "$ref": "#/components/x-global-variables-info/g26"
+              }
+            },
+            "g33": {
+              "name": "MONEY_CEIL",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g33"
               }
             }
           }
@@ -3288,16 +3288,16 @@
       "/consumer/satisfied": {
         "get": {
           "global-reads": {
-            "g25": {
-              "name": "FINISHED",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g25"
-              }
-            },
-            "g26": {
+            "g28": {
               "name": "LIFTED",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g26"
+                "$ref": "#/components/x-global-variables-info/g28"
+              }
+            },
+            "g31": {
+              "name": "FINISHED",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g31"
               }
             }
           }
@@ -3309,22 +3309,22 @@
             "( this.<io.github.proxyprint.kitchen.controllers.notifications.NotificationsController: io.github.proxyprint.kitchen.models.repositories.ConsumerDAO consumers>.<io.github.proxyprint.kitchen.models.repositories.ConsumerDAO: io.github.proxyprint.kitchen.models.consumer.Consumer findByUsername(java.lang.String)>({non_EPP#0}.<org.springframework.web.context.request.WebRequest: java.lang.String getParameter(java.lang.String)>(\"username\")).<io.github.proxyprint.kitchen.models.consumer.Consumer: java.lang.String getPassword()>().<java.lang.String: boolean equals(java.lang.Object)>({non_EPP#0}.<org.springframework.web.context.request.WebRequest: java.lang.String getParameter(java.lang.String)>(\"password\")) != 0 ) && ( this.<io.github.proxyprint.kitchen.controllers.notifications.NotificationsController: io.github.proxyprint.kitchen.models.repositories.ConsumerDAO consumers>.<io.github.proxyprint.kitchen.models.repositories.ConsumerDAO: io.github.proxyprint.kitchen.models.consumer.Consumer findByUsername(java.lang.String)>({non_EPP#0}.<org.springframework.web.context.request.WebRequest: java.lang.String getParameter(java.lang.String)>(\"username\")) != null )"
           ],
           "global-reads": {
-            "g1": {
+            "g0": {
               "name": "OK",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g0"
+              }
+            },
+            "g1": {
+              "name": "NOT_FOUND",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g1"
               }
             },
-            "g34": {
-              "name": "NOT_FOUND",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g34"
-              }
-            },
-            "g35": {
+            "g2": {
               "name": "UNAUTHORIZED",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g35"
+                "$ref": "#/components/x-global-variables-info/g2"
               }
             }
           }
@@ -3337,15 +3337,15 @@
           ],
           "global-reads": {
             "g0": {
-              "name": "INTERNAL_SERVER_ERROR",
+              "name": "OK",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g1": {
-              "name": "OK",
+            "g37": {
+              "name": "INTERNAL_SERVER_ERROR",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
+                "$ref": "#/components/x-global-variables-info/g37"
               }
             }
           }
@@ -3354,10 +3354,10 @@
       "/consumer/{id}/notify": {
         "post": {
           "global-reads": {
-            "g23": {
+            "g32": {
               "name": "APPLICATION_JSON",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g23"
+                "$ref": "#/components/x-global-variables-info/g32"
               }
             }
           }
@@ -3366,20 +3366,20 @@
       "/consumer/{username}/notifications": {
         "delete": {
           "global-reads": {
-            "g1": {
+            "g0": {
               "name": "OK",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
+                "$ref": "#/components/x-global-variables-info/g0"
               }
             }
           }
         },
         "put": {
           "global-reads": {
-            "g1": {
+            "g0": {
               "name": "OK",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
+                "$ref": "#/components/x-global-variables-info/g0"
               }
             }
           }
@@ -3392,28 +3392,28 @@
             "( this.<io.github.proxyprint.kitchen.controllers.printshops.EmployeeController: io.github.proxyprint.kitchen.models.repositories.EmployeeDAO employees>.<io.github.proxyprint.kitchen.models.repositories.EmployeeDAO: io.github.proxyprint.kitchen.models.printshops.Employee findByUsername(java.lang.String)>({non_EPP#1}.<java.security.Principal: java.lang.String getName()>()).<io.github.proxyprint.kitchen.models.printshops.Employee: io.github.proxyprint.kitchen.models.printshops.PrintShop getPrintShop()>().<io.github.proxyprint.kitchen.models.printshops.PrintShop: long getId()>() cmp ((io.github.proxyprint.kitchen.models.consumer.printrequest.Document) this.<io.github.proxyprint.kitchen.controllers.printshops.EmployeeController: io.github.proxyprint.kitchen.models.repositories.DocumentDAO documents>.<io.github.proxyprint.kitchen.models.repositories.DocumentDAO: java.lang.Object findOne(java.io.Serializable)>(staticinvoke <java.lang.Long: java.lang.Long valueOf(long)>({id}))).<io.github.proxyprint.kitchen.models.consumer.printrequest.Document: io.github.proxyprint.kitchen.models.consumer.printrequest.PrintRequest getPrintRequest()>().<io.github.proxyprint.kitchen.models.consumer.printrequest.PrintRequest: io.github.proxyprint.kitchen.models.printshops.PrintShop getPrintshop()>().<io.github.proxyprint.kitchen.models.printshops.PrintShop: long getId()>() == 0 )"
           ],
           "global-reads": {
-            "g1": {
+            "g0": {
               "name": "OK",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g0"
+              }
+            },
+            "g1": {
+              "name": "NOT_FOUND",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g1"
               }
             },
-            "g23": {
-              "name": "APPLICATION_JSON",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g23"
-              }
-            },
-            "g34": {
-              "name": "NOT_FOUND",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g34"
-              }
-            },
-            "g35": {
+            "g2": {
               "name": "UNAUTHORIZED",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g35"
+                "$ref": "#/components/x-global-variables-info/g2"
+              }
+            },
+            "g32": {
+              "name": "APPLICATION_JSON",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g32"
               }
             }
           }
@@ -3422,20 +3422,20 @@
       "/login": {
         "post": {
           "global-reads": {
-            "g24": {
-              "name": "ROLE_USER",
+            "g5": {
+              "name": "ROLE_MANAGER",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g24"
+                "$ref": "#/components/x-global-variables-info/g5"
               }
             },
-            "g33": {
+            "g36": {
               "name": "ROLE_EMPLOYEE",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g33"
+                "$ref": "#/components/x-global-variables-info/g36"
               }
             },
             "g48": {
-              "name": "ROLE_MANAGER",
+              "name": "ROLE_USER",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g48"
               }
@@ -3452,20 +3452,20 @@
       "/notifications/{notificationId}": {
         "delete": {
           "global-reads": {
-            "g1": {
+            "g0": {
               "name": "OK",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
+                "$ref": "#/components/x-global-variables-info/g0"
               }
             }
           }
         },
         "put": {
           "global-reads": {
-            "g1": {
+            "g0": {
               "name": "OK",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
+                "$ref": "#/components/x-global-variables-info/g0"
               }
             }
           }
@@ -3474,22 +3474,22 @@
       "/paypal/ipn/consumer/{consumerID}": {
         "post": {
           "global-reads": {
-            "g14": {
-              "name": "MONEY_CEIL",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g14"
-              }
-            },
-            "g22": {
-              "name": "PAYPAL_COMPLETED_PAYMENT",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g22"
-              }
-            },
-            "g23": {
+            "g32": {
               "name": "APPLICATION_JSON",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g23"
+                "$ref": "#/components/x-global-variables-info/g32"
+              }
+            },
+            "g33": {
+              "name": "MONEY_CEIL",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g33"
+              }
+            },
+            "g47": {
+              "name": "PAYPAL_COMPLETED_PAYMENT",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g47"
               }
             }
           }
@@ -3498,22 +3498,22 @@
       "/paypal/ipn/{printRequestID}": {
         "post": {
           "global-reads": {
-            "g18": {
+            "g26": {
               "name": "PENDING",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g18"
+                "$ref": "#/components/x-global-variables-info/g26"
               }
             },
-            "g22": {
-              "name": "PAYPAL_COMPLETED_PAYMENT",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g22"
-              }
-            },
-            "g23": {
+            "g32": {
               "name": "APPLICATION_JSON",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g23"
+                "$ref": "#/components/x-global-variables-info/g32"
+              }
+            },
+            "g47": {
+              "name": "PAYPAL_COMPLETED_PAYMENT",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g47"
               }
             }
           }
@@ -3522,28 +3522,28 @@
       "/printdocument": {
         "post": {
           "global-reads": {
-            "g5": {
+            "g16": {
               "name": "A4",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g5"
+                "$ref": "#/components/x-global-variables-info/g16"
               }
             },
-            "g19": {
+            "g34": {
               "name": "DUPLEX",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g19"
+                "$ref": "#/components/x-global-variables-info/g34"
               }
             },
-            "g20": {
-              "name": "BW",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g20"
-              }
-            },
-            "g21": {
+            "g45": {
               "name": "DIRECTORY_PATH",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g21"
+                "$ref": "#/components/x-global-variables-info/g45"
+              }
+            },
+            "g46": {
+              "name": "BW",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g46"
               }
             }
           }
@@ -3552,46 +3552,10 @@
       "/printdocument/{id}/budget": {
         "post": {
           "global-reads": {
-            "g2": {
-              "name": "US",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g2"
-              }
-            },
-            "g3": {
-              "name": "B_12_20_THICKNESS_FLOOR",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g3"
-              }
-            },
-            "g4": {
-              "name": "B_6_10_THICKNESS_FLOOR",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g4"
-              }
-            },
-            "g5": {
-              "name": "A4",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g5"
-              }
-            },
-            "g6": {
-              "name": "KEY_BASE",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g6"
-              }
-            },
             "g7": {
               "name": "out",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g7"
-              }
-            },
-            "g8": {
-              "name": "B_32_38_THICKNESS_FLOOR",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g8"
               }
             },
             "g9": {
@@ -3600,22 +3564,58 @@
                 "$ref": "#/components/x-global-variables-info/g9"
               }
             },
-            "g10": {
-              "name": "KEY_BASE",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g10"
-              }
-            },
-            "g11": {
-              "name": "KEY_BASE",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g11"
-              }
-            },
             "g12": {
-              "name": "B_22_28_THICKNESS_FLOOR",
+              "name": "KEY_BASE",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g12"
+              }
+            },
+            "g13": {
+              "name": "KEY_BASE",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g13"
+              }
+            },
+            "g16": {
+              "name": "A4",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g16"
+              }
+            },
+            "g22": {
+              "name": "KEY_BASE",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g22"
+              }
+            },
+            "g38": {
+              "name": "B_32_38_THICKNESS_FLOOR",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g38"
+              }
+            },
+            "g39": {
+              "name": "B_12_20_THICKNESS_FLOOR",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g39"
+              }
+            },
+            "g40": {
+              "name": "B_22_28_THICKNESS_FLOOR",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g40"
+              }
+            },
+            "g41": {
+              "name": "US",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g41"
+              }
+            },
+            "g42": {
+              "name": "B_6_10_THICKNESS_FLOOR",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g42"
               }
             }
           }
@@ -3624,10 +3624,10 @@
       "/printshops": {
         "get": {
           "global-reads": {
-            "g1": {
+            "g0": {
               "name": "OK",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
+                "$ref": "#/components/x-global-variables-info/g0"
               }
             }
           }
@@ -3636,10 +3636,10 @@
       "/printshops/history": {
         "get": {
           "global-reads": {
-            "g26": {
+            "g28": {
               "name": "LIFTED",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g26"
+                "$ref": "#/components/x-global-variables-info/g28"
               }
             }
           }
@@ -3654,10 +3654,10 @@
                 "$ref": "#/components/x-global-variables-info/g7"
               }
             },
-            "g13": {
+            "g8": {
               "name": "HALF_UP",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g13"
+                "$ref": "#/components/x-global-variables-info/g8"
               }
             }
           }
@@ -3666,16 +3666,16 @@
       "/printshops/requests": {
         "get": {
           "global-reads": {
-            "g18": {
+            "g26": {
               "name": "PENDING",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g18"
+                "$ref": "#/components/x-global-variables-info/g26"
               }
             },
-            "g43": {
+            "g29": {
               "name": "IN_PROGRESS",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g43"
+                "$ref": "#/components/x-global-variables-info/g29"
               }
             }
           }
@@ -3684,16 +3684,16 @@
       "/printshops/requests/cancel/{id}": {
         "post": {
           "global-reads": {
-            "g18": {
+            "g26": {
               "name": "PENDING",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g18"
+                "$ref": "#/components/x-global-variables-info/g26"
               }
             },
-            "g23": {
+            "g32": {
               "name": "APPLICATION_JSON",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g23"
+                "$ref": "#/components/x-global-variables-info/g32"
               }
             }
           }
@@ -3702,52 +3702,52 @@
       "/printshops/requests/{id}": {
         "post": {
           "global-reads": {
-            "g14": {
-              "name": "MONEY_CEIL",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g14"
-              }
-            },
-            "g16": {
-              "name": "PAYPAL_PAYMENT",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g16"
-              }
-            },
-            "g18": {
-              "name": "PENDING",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g18"
-              }
-            },
-            "g23": {
-              "name": "APPLICATION_JSON",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g23"
-              }
-            },
-            "g25": {
-              "name": "FINISHED",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g25"
-              }
-            },
             "g26": {
-              "name": "LIFTED",
+              "name": "PENDING",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g26"
               }
             },
-            "g43": {
-              "name": "IN_PROGRESS",
+            "g27": {
+              "name": "PAYPAL_PAYMENT",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g43"
+                "$ref": "#/components/x-global-variables-info/g27"
               }
             },
-            "g44": {
+            "g28": {
+              "name": "LIFTED",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g28"
+              }
+            },
+            "g29": {
+              "name": "IN_PROGRESS",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g29"
+              }
+            },
+            "g30": {
               "name": "PRINTSHOPS_PERCENTILS_REVENUE",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g44"
+                "$ref": "#/components/x-global-variables-info/g30"
+              }
+            },
+            "g31": {
+              "name": "FINISHED",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g31"
+              }
+            },
+            "g32": {
+              "name": "APPLICATION_JSON",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g32"
+              }
+            },
+            "g33": {
+              "name": "MONEY_CEIL",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g33"
               }
             }
           }
@@ -3756,10 +3756,10 @@
       "/printshops/satisfied": {
         "get": {
           "global-reads": {
-            "g25": {
+            "g31": {
               "name": "FINISHED",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g25"
+                "$ref": "#/components/x-global-variables-info/g31"
               }
             }
           }
@@ -3771,16 +3771,16 @@
             "( (io.github.proxyprint.kitchen.models.printshops.PrintShop) this.<io.github.proxyprint.kitchen.controllers.printshops.PrintShopController: io.github.proxyprint.kitchen.models.repositories.PrintShopDAO printshops>.<io.github.proxyprint.kitchen.models.repositories.PrintShopDAO: java.lang.Object findOne(java.io.Serializable)>(staticinvoke <java.lang.Long: java.lang.Long valueOf(long)>({id})) != null )"
           ],
           "global-reads": {
-            "g1": {
+            "g0": {
               "name": "OK",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
+                "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g34": {
+            "g1": {
               "name": "NOT_FOUND",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g34"
+                "$ref": "#/components/x-global-variables-info/g1"
               }
             }
           }
@@ -3789,18 +3789,6 @@
       "/printshops/{id}/pricetable": {
         "get": {
           "global-reads": {
-            "g5": {
-              "name": "A4",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g5"
-              }
-            },
-            "g6": {
-              "name": "KEY_BASE",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g6"
-              }
-            },
             "g9": {
               "name": "STAPLING",
               "location-details": {
@@ -3808,107 +3796,119 @@
               }
             },
             "g10": {
-              "name": "KEY_BASE",
+              "name": "A3Duplex",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g10"
               }
             },
             "g11": {
-              "name": "KEY_BASE",
+              "name": "PAPER",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g11"
               }
             },
-            "g28": {
+            "g12": {
+              "name": "KEY_BASE",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g12"
+              }
+            },
+            "g13": {
+              "name": "KEY_BASE",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g13"
+              }
+            },
+            "g14": {
               "name": "DEFAULT",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g28"
+                "$ref": "#/components/x-global-variables-info/g14"
               }
             },
-            "g29": {
-              "name": "A3",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g29"
-              }
-            },
-            "g30": {
-              "name": "WIRE",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g30"
-              }
-            },
-            "g31": {
-              "name": "PLASTIC",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g31"
-              }
-            },
-            "g32": {
-              "name": "SPIRAL",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g32"
-              }
-            },
-            "g36": {
-              "name": "A3Duplex",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g36"
-              }
-            },
-            "g37": {
-              "name": "BINDING",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g37"
-              }
-            },
-            "g38": {
+            "g15": {
               "name": "A3Simplex",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g38"
+                "$ref": "#/components/x-global-variables-info/g15"
               }
             },
-            "g39": {
-              "name": "A4Simplex",
+            "g16": {
+              "name": "A4",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g39"
+                "$ref": "#/components/x-global-variables-info/g16"
               }
             },
-            "g40": {
-              "name": "A4Duplex",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g40"
-              }
-            },
-            "g41": {
-              "name": "PAPER",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g41"
-              }
-            },
-            "g42": {
+            "g17": {
               "name": "COVER",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g42"
+                "$ref": "#/components/x-global-variables-info/g17"
+              }
+            },
+            "g18": {
+              "name": "PLASTIC",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g18"
+              }
+            },
+            "g19": {
+              "name": "SPIRAL",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g19"
+              }
+            },
+            "g20": {
+              "name": "WIRE",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g20"
+              }
+            },
+            "g21": {
+              "name": "A4Duplex",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g21"
+              }
+            },
+            "g22": {
+              "name": "KEY_BASE",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g22"
+              }
+            },
+            "g23": {
+              "name": "A4Simplex",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g23"
+              }
+            },
+            "g24": {
+              "name": "BINDING",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g24"
+              }
+            },
+            "g25": {
+              "name": "A3",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g25"
               }
             }
           },
           "global-writes": {
-            "g41": {
+            "g11": {
               "name": "PAPER",
               "assigned-values": [
                 "\"PAPER\""
               ],
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g41"
+                "$ref": "#/components/x-global-variables-info/g11"
               }
             },
-            "g42": {
+            "g17": {
               "name": "COVER",
               "assigned-values": [
                 "\"COVER\""
               ],
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g42"
+                "$ref": "#/components/x-global-variables-info/g17"
               }
             }
           }
@@ -3917,20 +3917,20 @@
       "/printshops/{id}/pricetable/covers": {
         "post": {
           "global-reads": {
-            "g5": {
+            "g16": {
               "name": "A4",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g5"
+                "$ref": "#/components/x-global-variables-info/g16"
               }
             }
           }
         },
         "put": {
           "global-reads": {
-            "g5": {
+            "g16": {
               "name": "A4",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g5"
+                "$ref": "#/components/x-global-variables-info/g16"
               }
             }
           }
@@ -3939,34 +3939,34 @@
       "/printshops/{id}/pricetable/deletepaper": {
         "post": {
           "global-reads": {
-            "g5": {
-              "name": "A4",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g5"
-              }
-            },
-            "g19": {
-              "name": "DUPLEX",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g19"
-              }
-            },
-            "g27": {
-              "name": "SIMPLEX",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g27"
-              }
-            },
-            "g28": {
+            "g14": {
               "name": "DEFAULT",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g28"
+                "$ref": "#/components/x-global-variables-info/g14"
               }
             },
-            "g29": {
+            "g16": {
+              "name": "A4",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g16"
+              }
+            },
+            "g25": {
               "name": "A3",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g29"
+                "$ref": "#/components/x-global-variables-info/g25"
+              }
+            },
+            "g34": {
+              "name": "DUPLEX",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g34"
+              }
+            },
+            "g35": {
+              "name": "SIMPLEX",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g35"
               }
             }
           }
@@ -3975,22 +3975,22 @@
       "/printshops/{id}/pricetable/deletering": {
         "post": {
           "global-reads": {
-            "g30": {
-              "name": "WIRE",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g30"
-              }
-            },
-            "g31": {
+            "g18": {
               "name": "PLASTIC",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g31"
+                "$ref": "#/components/x-global-variables-info/g18"
               }
             },
-            "g32": {
+            "g19": {
               "name": "SPIRAL",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g32"
+                "$ref": "#/components/x-global-variables-info/g19"
+              }
+            },
+            "g20": {
+              "name": "WIRE",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g20"
               }
             }
           }
@@ -3999,68 +3999,68 @@
       "/printshops/{id}/pricetable/papers": {
         "post": {
           "global-reads": {
-            "g5": {
-              "name": "A4",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g5"
-              }
-            },
-            "g19": {
-              "name": "DUPLEX",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g19"
-              }
-            },
-            "g27": {
-              "name": "SIMPLEX",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g27"
-              }
-            },
-            "g28": {
+            "g14": {
               "name": "DEFAULT",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g28"
+                "$ref": "#/components/x-global-variables-info/g14"
               }
             },
-            "g29": {
+            "g16": {
+              "name": "A4",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g16"
+              }
+            },
+            "g25": {
               "name": "A3",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g29"
+                "$ref": "#/components/x-global-variables-info/g25"
+              }
+            },
+            "g34": {
+              "name": "DUPLEX",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g34"
+              }
+            },
+            "g35": {
+              "name": "SIMPLEX",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g35"
               }
             }
           }
         },
         "put": {
           "global-reads": {
-            "g5": {
-              "name": "A4",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g5"
-              }
-            },
-            "g19": {
-              "name": "DUPLEX",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g19"
-              }
-            },
-            "g27": {
-              "name": "SIMPLEX",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g27"
-              }
-            },
-            "g28": {
+            "g14": {
               "name": "DEFAULT",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g28"
+                "$ref": "#/components/x-global-variables-info/g14"
               }
             },
-            "g29": {
+            "g16": {
+              "name": "A4",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g16"
+              }
+            },
+            "g25": {
               "name": "A3",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g29"
+                "$ref": "#/components/x-global-variables-info/g25"
+              }
+            },
+            "g34": {
+              "name": "DUPLEX",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g34"
+              }
+            },
+            "g35": {
+              "name": "SIMPLEX",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g35"
               }
             }
           }
@@ -4072,16 +4072,16 @@
             "( (io.github.proxyprint.kitchen.models.printshops.PrintShop) this.<io.github.proxyprint.kitchen.controllers.printshops.ReviewController: io.github.proxyprint.kitchen.models.repositories.PrintShopDAO printshops>.<io.github.proxyprint.kitchen.models.repositories.PrintShopDAO: java.lang.Object findOne(java.io.Serializable)>(staticinvoke <java.lang.Long: java.lang.Long valueOf(long)>({id})) != null )"
           ],
           "global-reads": {
-            "g1": {
+            "g0": {
               "name": "OK",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
+                "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g34": {
+            "g1": {
               "name": "NOT_FOUND",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g34"
+                "$ref": "#/components/x-global-variables-info/g1"
               }
             }
           }
@@ -4091,16 +4091,16 @@
             "( (io.github.proxyprint.kitchen.models.printshops.PrintShop) this.<io.github.proxyprint.kitchen.controllers.printshops.ReviewController: io.github.proxyprint.kitchen.models.repositories.PrintShopDAO printshops>.<io.github.proxyprint.kitchen.models.repositories.PrintShopDAO: java.lang.Object findOne(java.io.Serializable)>(staticinvoke <java.lang.Long: java.lang.Long valueOf(long)>({id})) != null )"
           ],
           "global-reads": {
-            "g1": {
+            "g0": {
               "name": "OK",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
+                "$ref": "#/components/x-global-variables-info/g0"
               }
             },
-            "g34": {
+            "g1": {
               "name": "NOT_FOUND",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g34"
+                "$ref": "#/components/x-global-variables-info/g1"
               }
             }
           }
@@ -4109,10 +4109,10 @@
       "/printshops/{printShopID}/employees": {
         "post": {
           "global-reads": {
-            "g33": {
+            "g36": {
               "name": "ROLE_EMPLOYEE",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g33"
+                "$ref": "#/components/x-global-variables-info/g36"
               }
             }
           }
@@ -4126,22 +4126,22 @@
             "( (io.github.proxyprint.kitchen.models.printshops.Review) this.<io.github.proxyprint.kitchen.controllers.printshops.ReviewController: io.github.proxyprint.kitchen.models.repositories.ReviewDAO reviews>.<io.github.proxyprint.kitchen.models.repositories.ReviewDAO: java.lang.Object findOne(java.io.Serializable)>(staticinvoke <java.lang.Long: java.lang.Long valueOf(long)>({reviewId})) != null )"
           ],
           "global-reads": {
-            "g1": {
+            "g0": {
               "name": "OK",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g0"
+              }
+            },
+            "g1": {
+              "name": "NOT_FOUND",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g1"
               }
             },
-            "g34": {
-              "name": "NOT_FOUND",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g34"
-              }
-            },
-            "g35": {
+            "g2": {
               "name": "UNAUTHORIZED",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g35"
+                "$ref": "#/components/x-global-variables-info/g2"
               }
             }
           }
@@ -4153,22 +4153,22 @@
             "( (io.github.proxyprint.kitchen.models.printshops.Review) this.<io.github.proxyprint.kitchen.controllers.printshops.ReviewController: io.github.proxyprint.kitchen.models.repositories.ReviewDAO reviews>.<io.github.proxyprint.kitchen.models.repositories.ReviewDAO: java.lang.Object findOne(java.io.Serializable)>(staticinvoke <java.lang.Long: java.lang.Long valueOf(long)>({reviewId})) != null )"
           ],
           "global-reads": {
-            "g1": {
+            "g0": {
               "name": "OK",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g0"
+              }
+            },
+            "g1": {
+              "name": "NOT_FOUND",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g1"
               }
             },
-            "g34": {
-              "name": "NOT_FOUND",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g34"
-              }
-            },
-            "g35": {
+            "g2": {
               "name": "UNAUTHORIZED",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g35"
+                "$ref": "#/components/x-global-variables-info/g2"
               }
             }
           }
@@ -4177,28 +4177,28 @@
       "/request/accept/{id}": {
         "post": {
           "global-reads": {
-            "g45": {
+            "g3": {
               "name": "PROXYPRINT_PASSWORD",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g45"
+                "$ref": "#/components/x-global-variables-info/g3"
               }
             },
-            "g46": {
+            "g4": {
               "name": "TO",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g46"
+                "$ref": "#/components/x-global-variables-info/g4"
               }
             },
-            "g47": {
-              "name": "PROXYPRINT_EMAIL",
-              "location-details": {
-                "$ref": "#/components/x-global-variables-info/g47"
-              }
-            },
-            "g48": {
+            "g5": {
               "name": "ROLE_MANAGER",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g48"
+                "$ref": "#/components/x-global-variables-info/g5"
+              }
+            },
+            "g6": {
+              "name": "PROXYPRINT_EMAIL",
+              "location-details": {
+                "$ref": "#/components/x-global-variables-info/g6"
               }
             }
           }
@@ -4207,10 +4207,10 @@
       "/request/register": {
         "post": {
           "global-reads": {
-            "g1": {
+            "g0": {
               "name": "OK",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
+                "$ref": "#/components/x-global-variables-info/g0"
               }
             }
           }
@@ -4219,22 +4219,22 @@
       "/request/reject/{printRequestID}": {
         "post": {
           "global-reads": {
-            "g45": {
+            "g3": {
               "name": "PROXYPRINT_PASSWORD",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g45"
+                "$ref": "#/components/x-global-variables-info/g3"
               }
             },
-            "g46": {
+            "g4": {
               "name": "TO",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g46"
+                "$ref": "#/components/x-global-variables-info/g4"
               }
             },
-            "g47": {
+            "g6": {
               "name": "PROXYPRINT_EMAIL",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g47"
+                "$ref": "#/components/x-global-variables-info/g6"
               }
             }
           }
@@ -4243,10 +4243,10 @@
       "/requests/pending": {
         "get": {
           "global-reads": {
-            "g1": {
+            "g0": {
               "name": "OK",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g1"
+                "$ref": "#/components/x-global-variables-info/g0"
               }
             }
           }
@@ -4254,32 +4254,32 @@
       }
     },
     "x-endpoint-interdependence": {
-      "g41": {
+      "g11": {
         "location-details": {
-          "$ref": "#/components/x-global-variables-info/g41"
+          "$ref": "#/components/x-global-variables-info/g11"
         },
         "read-by": {
-          "em38": {
+          "em9": {
             "$ref": "#/paths/~1printshops~1{id}~1pricetable/get"
           }
         },
         "written-by": {
-          "em38": {
+          "em9": {
             "$ref": "#/paths/~1printshops~1{id}~1pricetable/get"
           }
         }
       },
-      "g42": {
+      "g17": {
         "location-details": {
-          "$ref": "#/components/x-global-variables-info/g42"
+          "$ref": "#/components/x-global-variables-info/g17"
         },
         "read-by": {
-          "em38": {
+          "em9": {
             "$ref": "#/paths/~1printshops~1{id}~1pricetable/get"
           }
         },
         "written-by": {
-          "em38": {
+          "em9": {
             "$ref": "#/paths/~1printshops~1{id}~1pricetable/get"
           }
         }
@@ -4287,50 +4287,47 @@
     },
     "x-global-variables-info": {
       "g0": {
-        "name": "INTERNAL_SERVER_ERROR",
+        "name": "OK",
         "id": "g0",
         "defining-class": "org.springframework.http.HttpStatus"
       },
       "g1": {
-        "name": "OK",
+        "name": "NOT_FOUND",
         "id": "g1",
         "defining-class": "org.springframework.http.HttpStatus"
       },
       "g2": {
-        "name": "US",
+        "name": "UNAUTHORIZED",
         "id": "g2",
-        "defining-class": "java.util.Locale"
+        "defining-class": "org.springframework.http.HttpStatus"
       },
       "g3": {
-        "name": "B_12_20_THICKNESS_FLOOR",
+        "name": "PROXYPRINT_PASSWORD",
         "id": "g3",
-        "defining-class": "io.github.proxyprint.kitchen.models.printshops.pricetable.BindingItem",
+        "defining-class": "io.github.proxyprint.kitchen.utils.MailBox",
         "locations-of-static-assignments": [
-          "line 11, io.github.proxyprint.kitchen.models.printshops.pricetable.BindingItem"
+          "line 22, io.github.proxyprint.kitchen.utils.MailBox"
         ]
       },
       "g4": {
-        "name": "B_6_10_THICKNESS_FLOOR",
+        "name": "TO",
         "id": "g4",
-        "defining-class": "io.github.proxyprint.kitchen.models.printshops.pricetable.BindingItem",
-        "locations-of-static-assignments": [
-          "line 9, io.github.proxyprint.kitchen.models.printshops.pricetable.BindingItem"
-        ]
+        "defining-class": "javax.mail.Message$RecipientType"
       },
       "g5": {
-        "name": "A4",
+        "name": "ROLE_MANAGER",
         "id": "g5",
-        "defining-class": "io.github.proxyprint.kitchen.models.printshops.pricetable.Item$Format",
+        "defining-class": "io.github.proxyprint.kitchen.models.User$Roles",
         "locations-of-static-assignments": [
-          "line 21, io.github.proxyprint.kitchen.models.printshops.pricetable.Item$Format"
+          "line 39, io.github.proxyprint.kitchen.models.User$Roles"
         ]
       },
       "g6": {
-        "name": "KEY_BASE",
+        "name": "PROXYPRINT_EMAIL",
         "id": "g6",
-        "defining-class": "io.github.proxyprint.kitchen.models.printshops.pricetable.CoverItem",
+        "defining-class": "io.github.proxyprint.kitchen.utils.MailBox",
         "locations-of-static-assignments": [
-          "line 7, io.github.proxyprint.kitchen.models.printshops.pricetable.CoverItem"
+          "line 21, io.github.proxyprint.kitchen.utils.MailBox"
         ]
       },
       "g7": {
@@ -4339,12 +4336,9 @@
         "defining-class": "java.lang.System"
       },
       "g8": {
-        "name": "B_32_38_THICKNESS_FLOOR",
+        "name": "HALF_UP",
         "id": "g8",
-        "defining-class": "io.github.proxyprint.kitchen.models.printshops.pricetable.BindingItem",
-        "locations-of-static-assignments": [
-          "line 15, io.github.proxyprint.kitchen.models.printshops.pricetable.BindingItem"
-        ]
+        "defining-class": "java.math.RoundingMode"
       },
       "g9": {
         "name": "STAPLING",
@@ -4355,126 +4349,135 @@
         ]
       },
       "g10": {
-        "name": "KEY_BASE",
+        "name": "A3Duplex",
         "id": "g10",
-        "defining-class": "io.github.proxyprint.kitchen.models.printshops.pricetable.BindingItem",
+        "defining-class": "io.github.proxyprint.kitchen.controllers.printshops.pricetable.PaperTableItem",
         "locations-of-static-assignments": [
-          "line 7, io.github.proxyprint.kitchen.models.printshops.pricetable.BindingItem"
+          "line 13, io.github.proxyprint.kitchen.controllers.printshops.pricetable.PaperTableItem"
         ]
       },
       "g11": {
-        "name": "KEY_BASE",
+        "name": "PAPER",
         "id": "g11",
+        "defining-class": "io.github.proxyprint.kitchen.models.printshops.pricetable.Item",
+        "locations-of-static-assignments": [
+          "line 8, io.github.proxyprint.kitchen.models.printshops.pricetable.Item"
+        ]
+      },
+      "g12": {
+        "name": "KEY_BASE",
+        "id": "g12",
         "defining-class": "io.github.proxyprint.kitchen.models.printshops.pricetable.PaperItem",
         "locations-of-static-assignments": [
           "line 23, io.github.proxyprint.kitchen.models.printshops.pricetable.PaperItem"
         ]
       },
-      "g12": {
-        "name": "B_22_28_THICKNESS_FLOOR",
-        "id": "g12",
+      "g13": {
+        "name": "KEY_BASE",
+        "id": "g13",
         "defining-class": "io.github.proxyprint.kitchen.models.printshops.pricetable.BindingItem",
         "locations-of-static-assignments": [
-          "line 13, io.github.proxyprint.kitchen.models.printshops.pricetable.BindingItem"
+          "line 7, io.github.proxyprint.kitchen.models.printshops.pricetable.BindingItem"
         ]
       },
-      "g13": {
-        "name": "HALF_UP",
-        "id": "g13",
-        "defining-class": "java.math.RoundingMode"
-      },
       "g14": {
-        "name": "MONEY_CEIL",
+        "name": "DEFAULT",
         "id": "g14",
-        "defining-class": "io.github.proxyprint.kitchen.models.Money",
+        "defining-class": "io.github.proxyprint.kitchen.controllers.printshops.pricetable.PaperTableItem",
         "locations-of-static-assignments": [
-          "line 10, io.github.proxyprint.kitchen.models.Money"
+          "line 9, io.github.proxyprint.kitchen.controllers.printshops.pricetable.PaperTableItem"
         ]
       },
       "g15": {
-        "name": "NOT_PAYED",
+        "name": "A3Simplex",
         "id": "g15",
-        "defining-class": "io.github.proxyprint.kitchen.models.consumer.printrequest.PrintRequest$Status",
+        "defining-class": "io.github.proxyprint.kitchen.controllers.printshops.pricetable.PaperTableItem",
         "locations-of-static-assignments": [
-          "line 26, io.github.proxyprint.kitchen.models.consumer.printrequest.PrintRequest$Status"
+          "line 12, io.github.proxyprint.kitchen.controllers.printshops.pricetable.PaperTableItem"
         ]
       },
       "g16": {
-        "name": "PAYPAL_PAYMENT",
+        "name": "A4",
         "id": "g16",
-        "defining-class": "io.github.proxyprint.kitchen.models.consumer.printrequest.PrintRequest",
+        "defining-class": "io.github.proxyprint.kitchen.models.printshops.pricetable.Item$Format",
         "locations-of-static-assignments": [
-          "line 23, io.github.proxyprint.kitchen.models.consumer.printrequest.PrintRequest"
+          "line 21, io.github.proxyprint.kitchen.models.printshops.pricetable.Item$Format"
         ]
       },
       "g17": {
-        "name": "PROXY_PAYMENT",
+        "name": "COVER",
         "id": "g17",
-        "defining-class": "io.github.proxyprint.kitchen.models.consumer.printrequest.PrintRequest",
+        "defining-class": "io.github.proxyprint.kitchen.models.printshops.pricetable.Item",
         "locations-of-static-assignments": [
-          "line 22, io.github.proxyprint.kitchen.models.consumer.printrequest.PrintRequest"
+          "line 9, io.github.proxyprint.kitchen.models.printshops.pricetable.Item"
         ]
       },
       "g18": {
-        "name": "PENDING",
+        "name": "PLASTIC",
         "id": "g18",
-        "defining-class": "io.github.proxyprint.kitchen.models.consumer.printrequest.PrintRequest$Status",
+        "defining-class": "io.github.proxyprint.kitchen.models.printshops.pricetable.Item$RingType",
         "locations-of-static-assignments": [
-          "line 26, io.github.proxyprint.kitchen.models.consumer.printrequest.PrintRequest$Status"
+          "line 39, io.github.proxyprint.kitchen.models.printshops.pricetable.Item$RingType"
         ]
       },
       "g19": {
-        "name": "DUPLEX",
+        "name": "SPIRAL",
         "id": "g19",
-        "defining-class": "io.github.proxyprint.kitchen.models.printshops.pricetable.Item$Sides",
+        "defining-class": "io.github.proxyprint.kitchen.models.printshops.pricetable.Item$RingType",
         "locations-of-static-assignments": [
-          "line 25, io.github.proxyprint.kitchen.models.printshops.pricetable.Item$Sides"
+          "line 39, io.github.proxyprint.kitchen.models.printshops.pricetable.Item$RingType"
         ]
       },
       "g20": {
-        "name": "BW",
+        "name": "WIRE",
         "id": "g20",
-        "defining-class": "io.github.proxyprint.kitchen.models.printshops.pricetable.Item$Colors",
+        "defining-class": "io.github.proxyprint.kitchen.models.printshops.pricetable.Item$RingType",
         "locations-of-static-assignments": [
-          "line 29, io.github.proxyprint.kitchen.models.printshops.pricetable.Item$Colors"
+          "line 39, io.github.proxyprint.kitchen.models.printshops.pricetable.Item$RingType"
         ]
       },
       "g21": {
-        "name": "DIRECTORY_PATH",
+        "name": "A4Duplex",
         "id": "g21",
-        "defining-class": "io.github.proxyprint.kitchen.models.consumer.printrequest.Document"
+        "defining-class": "io.github.proxyprint.kitchen.controllers.printshops.pricetable.PaperTableItem",
+        "locations-of-static-assignments": [
+          "line 11, io.github.proxyprint.kitchen.controllers.printshops.pricetable.PaperTableItem"
+        ]
       },
       "g22": {
-        "name": "PAYPAL_COMPLETED_PAYMENT",
+        "name": "KEY_BASE",
         "id": "g22",
-        "defining-class": "io.github.proxyprint.kitchen.utils.PayPalWrapper",
+        "defining-class": "io.github.proxyprint.kitchen.models.printshops.pricetable.CoverItem",
         "locations-of-static-assignments": [
-          "line 26, io.github.proxyprint.kitchen.utils.PayPalWrapper"
+          "line 7, io.github.proxyprint.kitchen.models.printshops.pricetable.CoverItem"
         ]
       },
       "g23": {
-        "name": "APPLICATION_JSON",
+        "name": "A4Simplex",
         "id": "g23",
-        "defining-class": "org.springframework.http.MediaType"
+        "defining-class": "io.github.proxyprint.kitchen.controllers.printshops.pricetable.PaperTableItem",
+        "locations-of-static-assignments": [
+          "line 10, io.github.proxyprint.kitchen.controllers.printshops.pricetable.PaperTableItem"
+        ]
       },
       "g24": {
-        "name": "ROLE_USER",
+        "name": "BINDING",
         "id": "g24",
-        "defining-class": "io.github.proxyprint.kitchen.models.User$Roles",
+        "defining-class": "io.github.proxyprint.kitchen.models.printshops.pricetable.Item$RingType",
         "locations-of-static-assignments": [
-          "line 39, io.github.proxyprint.kitchen.models.User$Roles"
+          "line 39, io.github.proxyprint.kitchen.models.printshops.pricetable.Item$RingType"
         ]
       },
       "g25": {
-        "name": "FINISHED",
+        "name": "A3",
         "id": "g25",
-        "defining-class": "io.github.proxyprint.kitchen.models.consumer.printrequest.PrintRequest$Status",
+        "defining-class": "io.github.proxyprint.kitchen.models.printshops.pricetable.Item$Format",
         "locations-of-static-assignments": [
-          "line 26, io.github.proxyprint.kitchen.models.consumer.printrequest.PrintRequest$Status"
+          "line 21, io.github.proxyprint.kitchen.models.printshops.pricetable.Item$Format"
         ]
       },
       "g26": {
-        "name": "LIFTED",
+        "name": "PENDING",
         "id": "g26",
         "defining-class": "io.github.proxyprint.kitchen.models.consumer.printrequest.PrintRequest$Status",
         "locations-of-static-assignments": [
@@ -4482,166 +4485,163 @@
         ]
       },
       "g27": {
-        "name": "SIMPLEX",
+        "name": "PAYPAL_PAYMENT",
         "id": "g27",
-        "defining-class": "io.github.proxyprint.kitchen.models.printshops.pricetable.Item$Sides",
+        "defining-class": "io.github.proxyprint.kitchen.models.consumer.printrequest.PrintRequest",
         "locations-of-static-assignments": [
-          "line 25, io.github.proxyprint.kitchen.models.printshops.pricetable.Item$Sides"
+          "line 23, io.github.proxyprint.kitchen.models.consumer.printrequest.PrintRequest"
         ]
       },
       "g28": {
-        "name": "DEFAULT",
+        "name": "LIFTED",
         "id": "g28",
-        "defining-class": "io.github.proxyprint.kitchen.controllers.printshops.pricetable.PaperTableItem",
-        "locations-of-static-assignments": [
-          "line 9, io.github.proxyprint.kitchen.controllers.printshops.pricetable.PaperTableItem"
-        ]
-      },
-      "g29": {
-        "name": "A3",
-        "id": "g29",
-        "defining-class": "io.github.proxyprint.kitchen.models.printshops.pricetable.Item$Format",
-        "locations-of-static-assignments": [
-          "line 21, io.github.proxyprint.kitchen.models.printshops.pricetable.Item$Format"
-        ]
-      },
-      "g30": {
-        "name": "WIRE",
-        "id": "g30",
-        "defining-class": "io.github.proxyprint.kitchen.models.printshops.pricetable.Item$RingType",
-        "locations-of-static-assignments": [
-          "line 39, io.github.proxyprint.kitchen.models.printshops.pricetable.Item$RingType"
-        ]
-      },
-      "g31": {
-        "name": "PLASTIC",
-        "id": "g31",
-        "defining-class": "io.github.proxyprint.kitchen.models.printshops.pricetable.Item$RingType",
-        "locations-of-static-assignments": [
-          "line 39, io.github.proxyprint.kitchen.models.printshops.pricetable.Item$RingType"
-        ]
-      },
-      "g32": {
-        "name": "SPIRAL",
-        "id": "g32",
-        "defining-class": "io.github.proxyprint.kitchen.models.printshops.pricetable.Item$RingType",
-        "locations-of-static-assignments": [
-          "line 39, io.github.proxyprint.kitchen.models.printshops.pricetable.Item$RingType"
-        ]
-      },
-      "g33": {
-        "name": "ROLE_EMPLOYEE",
-        "id": "g33",
-        "defining-class": "io.github.proxyprint.kitchen.models.User$Roles",
-        "locations-of-static-assignments": [
-          "line 39, io.github.proxyprint.kitchen.models.User$Roles"
-        ]
-      },
-      "g34": {
-        "name": "NOT_FOUND",
-        "id": "g34",
-        "defining-class": "org.springframework.http.HttpStatus"
-      },
-      "g35": {
-        "name": "UNAUTHORIZED",
-        "id": "g35",
-        "defining-class": "org.springframework.http.HttpStatus"
-      },
-      "g36": {
-        "name": "A3Duplex",
-        "id": "g36",
-        "defining-class": "io.github.proxyprint.kitchen.controllers.printshops.pricetable.PaperTableItem",
-        "locations-of-static-assignments": [
-          "line 13, io.github.proxyprint.kitchen.controllers.printshops.pricetable.PaperTableItem"
-        ]
-      },
-      "g37": {
-        "name": "BINDING",
-        "id": "g37",
-        "defining-class": "io.github.proxyprint.kitchen.models.printshops.pricetable.Item$RingType",
-        "locations-of-static-assignments": [
-          "line 39, io.github.proxyprint.kitchen.models.printshops.pricetable.Item$RingType"
-        ]
-      },
-      "g38": {
-        "name": "A3Simplex",
-        "id": "g38",
-        "defining-class": "io.github.proxyprint.kitchen.controllers.printshops.pricetable.PaperTableItem",
-        "locations-of-static-assignments": [
-          "line 12, io.github.proxyprint.kitchen.controllers.printshops.pricetable.PaperTableItem"
-        ]
-      },
-      "g39": {
-        "name": "A4Simplex",
-        "id": "g39",
-        "defining-class": "io.github.proxyprint.kitchen.controllers.printshops.pricetable.PaperTableItem",
-        "locations-of-static-assignments": [
-          "line 10, io.github.proxyprint.kitchen.controllers.printshops.pricetable.PaperTableItem"
-        ]
-      },
-      "g40": {
-        "name": "A4Duplex",
-        "id": "g40",
-        "defining-class": "io.github.proxyprint.kitchen.controllers.printshops.pricetable.PaperTableItem",
-        "locations-of-static-assignments": [
-          "line 11, io.github.proxyprint.kitchen.controllers.printshops.pricetable.PaperTableItem"
-        ]
-      },
-      "g41": {
-        "name": "PAPER",
-        "id": "g41",
-        "defining-class": "io.github.proxyprint.kitchen.models.printshops.pricetable.Item",
-        "locations-of-static-assignments": [
-          "line 8, io.github.proxyprint.kitchen.models.printshops.pricetable.Item"
-        ]
-      },
-      "g42": {
-        "name": "COVER",
-        "id": "g42",
-        "defining-class": "io.github.proxyprint.kitchen.models.printshops.pricetable.Item",
-        "locations-of-static-assignments": [
-          "line 9, io.github.proxyprint.kitchen.models.printshops.pricetable.Item"
-        ]
-      },
-      "g43": {
-        "name": "IN_PROGRESS",
-        "id": "g43",
         "defining-class": "io.github.proxyprint.kitchen.models.consumer.printrequest.PrintRequest$Status",
         "locations-of-static-assignments": [
           "line 26, io.github.proxyprint.kitchen.models.consumer.printrequest.PrintRequest$Status"
         ]
       },
-      "g44": {
+      "g29": {
+        "name": "IN_PROGRESS",
+        "id": "g29",
+        "defining-class": "io.github.proxyprint.kitchen.models.consumer.printrequest.PrintRequest$Status",
+        "locations-of-static-assignments": [
+          "line 26, io.github.proxyprint.kitchen.models.consumer.printrequest.PrintRequest$Status"
+        ]
+      },
+      "g30": {
         "name": "PRINTSHOPS_PERCENTILS_REVENUE",
-        "id": "g44",
+        "id": "g30",
         "defining-class": "io.github.proxyprint.kitchen.models.printshops.PrintShop",
         "locations-of-static-assignments": [
           "line 26, io.github.proxyprint.kitchen.models.printshops.PrintShop"
         ]
       },
-      "g45": {
-        "name": "PROXYPRINT_PASSWORD",
-        "id": "g45",
-        "defining-class": "io.github.proxyprint.kitchen.utils.MailBox",
+      "g31": {
+        "name": "FINISHED",
+        "id": "g31",
+        "defining-class": "io.github.proxyprint.kitchen.models.consumer.printrequest.PrintRequest$Status",
         "locations-of-static-assignments": [
-          "line 22, io.github.proxyprint.kitchen.utils.MailBox"
+          "line 26, io.github.proxyprint.kitchen.models.consumer.printrequest.PrintRequest$Status"
         ]
       },
+      "g32": {
+        "name": "APPLICATION_JSON",
+        "id": "g32",
+        "defining-class": "org.springframework.http.MediaType"
+      },
+      "g33": {
+        "name": "MONEY_CEIL",
+        "id": "g33",
+        "defining-class": "io.github.proxyprint.kitchen.models.Money",
+        "locations-of-static-assignments": [
+          "line 10, io.github.proxyprint.kitchen.models.Money"
+        ]
+      },
+      "g34": {
+        "name": "DUPLEX",
+        "id": "g34",
+        "defining-class": "io.github.proxyprint.kitchen.models.printshops.pricetable.Item$Sides",
+        "locations-of-static-assignments": [
+          "line 25, io.github.proxyprint.kitchen.models.printshops.pricetable.Item$Sides"
+        ]
+      },
+      "g35": {
+        "name": "SIMPLEX",
+        "id": "g35",
+        "defining-class": "io.github.proxyprint.kitchen.models.printshops.pricetable.Item$Sides",
+        "locations-of-static-assignments": [
+          "line 25, io.github.proxyprint.kitchen.models.printshops.pricetable.Item$Sides"
+        ]
+      },
+      "g36": {
+        "name": "ROLE_EMPLOYEE",
+        "id": "g36",
+        "defining-class": "io.github.proxyprint.kitchen.models.User$Roles",
+        "locations-of-static-assignments": [
+          "line 39, io.github.proxyprint.kitchen.models.User$Roles"
+        ]
+      },
+      "g37": {
+        "name": "INTERNAL_SERVER_ERROR",
+        "id": "g37",
+        "defining-class": "org.springframework.http.HttpStatus"
+      },
+      "g38": {
+        "name": "B_32_38_THICKNESS_FLOOR",
+        "id": "g38",
+        "defining-class": "io.github.proxyprint.kitchen.models.printshops.pricetable.BindingItem",
+        "locations-of-static-assignments": [
+          "line 15, io.github.proxyprint.kitchen.models.printshops.pricetable.BindingItem"
+        ]
+      },
+      "g39": {
+        "name": "B_12_20_THICKNESS_FLOOR",
+        "id": "g39",
+        "defining-class": "io.github.proxyprint.kitchen.models.printshops.pricetable.BindingItem",
+        "locations-of-static-assignments": [
+          "line 11, io.github.proxyprint.kitchen.models.printshops.pricetable.BindingItem"
+        ]
+      },
+      "g40": {
+        "name": "B_22_28_THICKNESS_FLOOR",
+        "id": "g40",
+        "defining-class": "io.github.proxyprint.kitchen.models.printshops.pricetable.BindingItem",
+        "locations-of-static-assignments": [
+          "line 13, io.github.proxyprint.kitchen.models.printshops.pricetable.BindingItem"
+        ]
+      },
+      "g41": {
+        "name": "US",
+        "id": "g41",
+        "defining-class": "java.util.Locale"
+      },
+      "g42": {
+        "name": "B_6_10_THICKNESS_FLOOR",
+        "id": "g42",
+        "defining-class": "io.github.proxyprint.kitchen.models.printshops.pricetable.BindingItem",
+        "locations-of-static-assignments": [
+          "line 9, io.github.proxyprint.kitchen.models.printshops.pricetable.BindingItem"
+        ]
+      },
+      "g43": {
+        "name": "PROXY_PAYMENT",
+        "id": "g43",
+        "defining-class": "io.github.proxyprint.kitchen.models.consumer.printrequest.PrintRequest",
+        "locations-of-static-assignments": [
+          "line 22, io.github.proxyprint.kitchen.models.consumer.printrequest.PrintRequest"
+        ]
+      },
+      "g44": {
+        "name": "NOT_PAYED",
+        "id": "g44",
+        "defining-class": "io.github.proxyprint.kitchen.models.consumer.printrequest.PrintRequest$Status",
+        "locations-of-static-assignments": [
+          "line 26, io.github.proxyprint.kitchen.models.consumer.printrequest.PrintRequest$Status"
+        ]
+      },
+      "g45": {
+        "name": "DIRECTORY_PATH",
+        "id": "g45",
+        "defining-class": "io.github.proxyprint.kitchen.models.consumer.printrequest.Document"
+      },
       "g46": {
-        "name": "TO",
+        "name": "BW",
         "id": "g46",
-        "defining-class": "javax.mail.Message$RecipientType"
+        "defining-class": "io.github.proxyprint.kitchen.models.printshops.pricetable.Item$Colors",
+        "locations-of-static-assignments": [
+          "line 29, io.github.proxyprint.kitchen.models.printshops.pricetable.Item$Colors"
+        ]
       },
       "g47": {
-        "name": "PROXYPRINT_EMAIL",
+        "name": "PAYPAL_COMPLETED_PAYMENT",
         "id": "g47",
-        "defining-class": "io.github.proxyprint.kitchen.utils.MailBox",
+        "defining-class": "io.github.proxyprint.kitchen.utils.PayPalWrapper",
         "locations-of-static-assignments": [
-          "line 21, io.github.proxyprint.kitchen.utils.MailBox"
+          "line 26, io.github.proxyprint.kitchen.utils.PayPalWrapper"
         ]
       },
       "g48": {
-        "name": "ROLE_MANAGER",
+        "name": "ROLE_USER",
         "id": "g48",
         "defining-class": "io.github.proxyprint.kitchen.models.User$Roles",
         "locations-of-static-assignments": [

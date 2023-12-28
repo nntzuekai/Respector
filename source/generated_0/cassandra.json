@@ -14,7 +14,7 @@
     "/api/v0/lifecycle/configure": {
       "post": {
         "description": "",
-        "operationId": "em3",
+        "operationId": "em36",
         "parameters": [
           {
             "name": "profile",
@@ -47,7 +47,7 @@
     "/api/v0/lifecycle/pid": {
       "get": {
         "description": "",
-        "operationId": "em5",
+        "operationId": "em38",
         "parameters": [],
         "responses": {
           "200": {
@@ -72,7 +72,7 @@
     "/api/v0/lifecycle/start": {
       "post": {
         "description": "",
-        "operationId": "em1",
+        "operationId": "em34",
         "parameters": [
           {
             "name": "profile",
@@ -110,7 +110,7 @@
     "/api/v0/lifecycle/stop": {
       "post": {
         "description": "",
-        "operationId": "em2",
+        "operationId": "em35",
         "parameters": [],
         "responses": {
           "200": {
@@ -135,7 +135,7 @@
     "/api/v0/metadata/endpoints": {
       "get": {
         "description": "",
-        "operationId": "em48",
+        "operationId": "em31",
         "parameters": [],
         "responses": {
           "200": {
@@ -160,7 +160,7 @@
     "/api/v0/metadata/localdc": {
       "get": {
         "description": "",
-        "operationId": "em49",
+        "operationId": "em32",
         "parameters": [],
         "responses": {
           "200": {
@@ -185,7 +185,7 @@
     "/api/v0/metadata/versions/features": {
       "get": {
         "description": "",
-        "operationId": "em50",
+        "operationId": "em33",
         "parameters": [],
         "responses": {
           "200": {
@@ -210,7 +210,7 @@
     "/api/v0/metadata/versions/release": {
       "get": {
         "description": "",
-        "operationId": "em47",
+        "operationId": "em30",
         "parameters": [],
         "responses": {
           "200": {
@@ -235,7 +235,7 @@
     "/api/v0/ops/auth/role": {
       "post": {
         "description": "",
-        "operationId": "em0",
+        "operationId": "em50",
         "parameters": [
           {
             "name": "username",
@@ -293,7 +293,7 @@
     "/api/v0/ops/executor/job": {
       "get": {
         "description": "",
-        "operationId": "em46",
+        "operationId": "em49",
         "parameters": [
           {
             "name": "job_id",
@@ -327,7 +327,7 @@
     "/api/v0/ops/keyspace": {
       "get": {
         "description": "",
-        "operationId": "em10",
+        "operationId": "em43",
         "parameters": [
           {
             "name": "keyspaceName",
@@ -361,7 +361,7 @@
     "/api/v0/ops/keyspace/alter": {
       "post": {
         "description": "",
-        "operationId": "em9",
+        "operationId": "em42",
         "parameters": [],
         "responses": {
           "200": {
@@ -403,7 +403,7 @@
     "/api/v0/ops/keyspace/cleanup": {
       "post": {
         "description": "",
-        "operationId": "em6",
+        "operationId": "em39",
         "parameters": [],
         "responses": {
           "200": {
@@ -448,7 +448,7 @@
     "/api/v0/ops/keyspace/create": {
       "post": {
         "description": "",
-        "operationId": "em8",
+        "operationId": "em41",
         "parameters": [],
         "responses": {
           "200": {
@@ -490,7 +490,7 @@
     "/api/v0/ops/keyspace/refresh": {
       "post": {
         "description": "",
-        "operationId": "em7",
+        "operationId": "em40",
         "parameters": [
           {
             "name": "keyspaceName",
@@ -532,7 +532,7 @@
     "/api/v0/ops/keyspace/replication": {
       "get": {
         "description": "",
-        "operationId": "em11",
+        "operationId": "em44",
         "parameters": [
           {
             "name": "keyspaceName",
@@ -569,7 +569,7 @@
     "/api/v0/ops/node/assassinate": {
       "post": {
         "description": "",
-        "operationId": "em14",
+        "operationId": "em16",
         "parameters": [
           {
             "name": "address",
@@ -603,7 +603,7 @@
     "/api/v0/ops/node/compaction": {
       "post": {
         "description": "",
-        "operationId": "em13",
+        "operationId": "em15",
         "parameters": [
           {
             "name": "value",
@@ -638,7 +638,7 @@
     "/api/v0/ops/node/decommission": {
       "post": {
         "description": "",
-        "operationId": "em12",
+        "operationId": "em14",
         "parameters": [
           {
             "name": "force",
@@ -672,7 +672,7 @@
     "/api/v0/ops/node/drain": {
       "post": {
         "description": "",
-        "operationId": "em16",
+        "operationId": "em18",
         "parameters": [],
         "responses": {
           "200": {
@@ -697,7 +697,7 @@
     "/api/v0/ops/node/fullquerylogging": {
       "get": {
         "description": "",
-        "operationId": "em26",
+        "operationId": "em28",
         "parameters": [],
         "responses": {
           "200": {
@@ -720,7 +720,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em25",
+        "operationId": "em27",
         "parameters": [
           {
             "name": "enabled",
@@ -754,7 +754,7 @@
     "/api/v0/ops/node/hints/truncate": {
       "post": {
         "description": "",
-        "operationId": "em17",
+        "operationId": "em19",
         "parameters": [
           {
             "name": "host",
@@ -788,7 +788,7 @@
     "/api/v0/ops/node/logging": {
       "post": {
         "description": "",
-        "operationId": "em15",
+        "operationId": "em17",
         "parameters": [
           {
             "name": "target",
@@ -830,7 +830,7 @@
     "/api/v0/ops/node/move": {
       "post": {
         "description": "",
-        "operationId": "em27",
+        "operationId": "em29",
         "parameters": [
           {
             "name": "newToken",
@@ -864,7 +864,7 @@
     "/api/v0/ops/node/repair": {
       "post": {
         "description": "",
-        "operationId": "em24",
+        "operationId": "em26",
         "parameters": [],
         "responses": {
           "200": {
@@ -909,7 +909,7 @@
     "/api/v0/ops/node/schema/reload": {
       "post": {
         "description": "",
-        "operationId": "em19",
+        "operationId": "em21",
         "parameters": [],
         "responses": {
           "200": {
@@ -934,7 +934,7 @@
     "/api/v0/ops/node/schema/reset": {
       "post": {
         "description": "",
-        "operationId": "em18",
+        "operationId": "em20",
         "parameters": [],
         "responses": {
           "200": {
@@ -959,7 +959,7 @@
     "/api/v0/ops/node/snapshots": {
       "delete": {
         "description": "",
-        "operationId": "em23",
+        "operationId": "em25",
         "parameters": [
           {
             "name": "snapshotNames",
@@ -1005,7 +1005,7 @@
       },
       "get": {
         "description": "",
-        "operationId": "em21",
+        "operationId": "em23",
         "parameters": [
           {
             "name": "snapshotNames",
@@ -1051,7 +1051,7 @@
       },
       "post": {
         "description": "",
-        "operationId": "em22",
+        "operationId": "em24",
         "parameters": [],
         "responses": {
           "200": {
@@ -1102,7 +1102,7 @@
     "/api/v0/ops/node/streaminfo": {
       "get": {
         "description": "",
-        "operationId": "em20",
+        "operationId": "em22",
         "parameters": [],
         "responses": {
           "200": {
@@ -1127,7 +1127,7 @@
     "/api/v0/ops/seeds/reload": {
       "post": {
         "description": "",
-        "operationId": "em45",
+        "operationId": "em48",
         "parameters": [],
         "responses": {
           "200": {
@@ -1152,7 +1152,7 @@
     "/api/v0/ops/tables": {
       "get": {
         "description": "",
-        "operationId": "em33",
+        "operationId": "em12",
         "parameters": [
           {
             "name": "keyspaceName",
@@ -1189,7 +1189,7 @@
     "/api/v0/ops/tables/compact": {
       "post": {
         "description": "",
-        "operationId": "em30",
+        "operationId": "em9",
         "parameters": [],
         "responses": {
           "200": {
@@ -1246,7 +1246,7 @@
     "/api/v0/ops/tables/create": {
       "post": {
         "description": "",
-        "operationId": "em34",
+        "operationId": "em13",
         "parameters": [],
         "responses": {
           "200": {
@@ -1294,7 +1294,7 @@
     "/api/v0/ops/tables/flush": {
       "post": {
         "description": "",
-        "operationId": "em32",
+        "operationId": "em11",
         "parameters": [],
         "responses": {
           "200": {
@@ -1339,7 +1339,7 @@
     "/api/v0/ops/tables/garbagecollect": {
       "post": {
         "description": "",
-        "operationId": "em31",
+        "operationId": "em10",
         "parameters": [
           {
             "name": "tombstoneOption",
@@ -1393,7 +1393,7 @@
     "/api/v0/ops/tables/scrub": {
       "post": {
         "description": "",
-        "operationId": "em28",
+        "operationId": "em7",
         "parameters": [],
         "responses": {
           "200": {
@@ -1450,7 +1450,7 @@
     "/api/v0/ops/tables/sstables/upgrade": {
       "post": {
         "description": "",
-        "operationId": "em29",
+        "operationId": "em8",
         "parameters": [
           {
             "name": "excludeCurrentVersion",
@@ -1504,7 +1504,7 @@
     "/api/v0/probes/cluster": {
       "get": {
         "description": "",
-        "operationId": "em44",
+        "operationId": "em47",
         "parameters": [
           {
             "name": "consistency_level",
@@ -1547,7 +1547,7 @@
     "/api/v0/probes/liveness": {
       "get": {
         "description": "",
-        "operationId": "em42",
+        "operationId": "em45",
         "parameters": [],
         "responses": {
           "200": {
@@ -1569,7 +1569,7 @@
     "/api/v0/probes/readiness": {
       "get": {
         "description": "",
-        "operationId": "em43",
+        "operationId": "em46",
         "parameters": [],
         "responses": {
           "200": {
@@ -1594,7 +1594,7 @@
     "/api/v1/ops/keyspace/cleanup": {
       "post": {
         "description": "",
-        "operationId": "em35",
+        "operationId": "em6",
         "parameters": [],
         "responses": {
           "200": {
@@ -1639,7 +1639,7 @@
     "/api/v1/ops/node/decommission": {
       "post": {
         "description": "",
-        "operationId": "em36",
+        "operationId": "em3",
         "parameters": [
           {
             "name": "force",
@@ -1673,7 +1673,7 @@
     "/api/v1/ops/node/rebuild": {
       "post": {
         "description": "",
-        "operationId": "em37",
+        "operationId": "em4",
         "parameters": [
           {
             "name": "src_dc",
@@ -1707,7 +1707,7 @@
     "/api/v1/ops/node/schema/versions": {
       "get": {
         "description": "",
-        "operationId": "em38",
+        "operationId": "em5",
         "parameters": [],
         "responses": {
           "200": {
@@ -1732,7 +1732,7 @@
     "/api/v1/ops/tables/compact": {
       "post": {
         "description": "",
-        "operationId": "em41",
+        "operationId": "em2",
         "parameters": [],
         "responses": {
           "200": {
@@ -1789,7 +1789,7 @@
     "/api/v1/ops/tables/scrub": {
       "post": {
         "description": "",
-        "operationId": "em39",
+        "operationId": "em0",
         "parameters": [],
         "responses": {
           "200": {
@@ -1846,7 +1846,7 @@
     "/api/v1/ops/tables/sstables/upgrade": {
       "post": {
         "description": "",
-        "operationId": "em40",
+        "operationId": "em1",
         "parameters": [
           {
             "name": "excludeCurrentVersion",
@@ -1906,10 +1906,10 @@
             "( this.<com.datastax.mgmtapi.resources.LifecycleResources: com.datastax.mgmtapi.ManagementApplication app>.<com.datastax.mgmtapi.ManagementApplication: com.datastax.mgmtapi.ManagementApplication$STATE getRequestedState()>() != <com.datastax.mgmtapi.ManagementApplication$STATE: com.datastax.mgmtapi.ManagementApplication$STATE STARTED> )"
           ],
           "global-reads": {
-            "g5": {
+            "g2": {
               "name": "STARTED",
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g5"
+                "$ref": "#/components/x-global-variables-info/g2"
               }
             },
             "g11": {
@@ -1919,13 +1919,13 @@
               }
             },
             "g12": {
-              "name": "NOT_ACCEPTABLE",
+              "name": "yamlMapper",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g12"
               }
             },
             "g13": {
-              "name": "yamlMapper",
+              "name": "NOT_ACCEPTABLE",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g13"
               }
@@ -1937,59 +1937,59 @@
         "post": {
           "global-reads": {
             "g2": {
-              "name": "logger",
+              "name": "STARTED",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g2"
               }
             },
             "g3": {
-              "name": "PROTOCOL_VERSION",
+              "name": "SECONDS",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g3"
               }
             },
             "g4": {
-              "name": "SECONDS",
+              "name": "PROTOCOL_VERSION",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g4"
               }
             },
             "g5": {
-              "name": "STARTED",
+              "name": "REQUEST_TIMEOUT",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g5"
               }
             },
             "g6": {
-              "name": "cache",
+              "name": "logger",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g6"
               }
             },
             "g7": {
-              "name": "REQUEST_TIMEOUT",
+              "name": "cache",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g7"
               }
             }
           },
           "global-writes": {
-            "g2": {
+            "g6": {
               "name": "logger",
               "assigned-values": [
                 "staticinvoke <org.slf4j.LoggerFactory: org.slf4j.Logger getLogger(java.lang.Class)>(class \"Lcom/datastax/mgmtapi/UnixSocketCQLAccess;\")"
               ],
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g2"
+                "$ref": "#/components/x-global-variables-info/g6"
               }
             },
-            "g6": {
+            "g7": {
               "name": "cache",
               "assigned-values": [
                 "staticinvoke <com.google.common.collect.Maps: java.util.concurrent.ConcurrentMap newConcurrentMap()>()"
               ],
               "location-details": {
-                "$ref": "#/components/x-global-variables-info/g6"
+                "$ref": "#/components/x-global-variables-info/g7"
               }
             }
           }
@@ -1999,7 +1999,7 @@
         "post": {
           "global-reads": {
             "g8": {
-              "name": "STOPPED",
+              "name": "logger",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g8"
               }
@@ -2011,7 +2011,7 @@
               }
             },
             "g10": {
-              "name": "logger",
+              "name": "STOPPED",
               "location-details": {
                 "$ref": "#/components/x-global-variables-info/g10"
               }
@@ -3095,32 +3095,32 @@
       }
     },
     "x-endpoint-interdependence": {
-      "g2": {
-        "location-details": {
-          "$ref": "#/components/x-global-variables-info/g2"
-        },
-        "read-by": {
-          "em1": {
-            "$ref": "#/paths/~1api~1v0~1lifecycle~1start/post"
-          }
-        },
-        "written-by": {
-          "em1": {
-            "$ref": "#/paths/~1api~1v0~1lifecycle~1start/post"
-          }
-        }
-      },
       "g6": {
         "location-details": {
           "$ref": "#/components/x-global-variables-info/g6"
         },
         "read-by": {
-          "em1": {
+          "em34": {
             "$ref": "#/paths/~1api~1v0~1lifecycle~1start/post"
           }
         },
         "written-by": {
-          "em1": {
+          "em34": {
+            "$ref": "#/paths/~1api~1v0~1lifecycle~1start/post"
+          }
+        }
+      },
+      "g7": {
+        "location-details": {
+          "$ref": "#/components/x-global-variables-info/g7"
+        },
+        "read-by": {
+          "em34": {
+            "$ref": "#/paths/~1api~1v0~1lifecycle~1start/post"
+          }
+        },
+        "written-by": {
+          "em34": {
             "$ref": "#/paths/~1api~1v0~1lifecycle~1start/post"
           }
         }
@@ -3144,50 +3144,50 @@
         ]
       },
       "g2": {
-        "name": "logger",
-        "id": "g2",
-        "defining-class": "com.datastax.mgmtapi.UnixSocketCQLAccess",
-        "locations-of-static-assignments": [
-          "line 80, com.datastax.mgmtapi.UnixSocketCQLAccess"
-        ]
-      },
-      "g3": {
-        "name": "PROTOCOL_VERSION",
-        "id": "g3",
-        "defining-class": "com.datastax.oss.driver.api.core.config.DefaultDriverOption"
-      },
-      "g4": {
-        "name": "SECONDS",
-        "id": "g4",
-        "defining-class": "java.time.temporal.ChronoUnit"
-      },
-      "g5": {
         "name": "STARTED",
-        "id": "g5",
+        "id": "g2",
         "defining-class": "com.datastax.mgmtapi.ManagementApplication$STATE",
         "locations-of-static-assignments": [
           "line 123, com.datastax.mgmtapi.ManagementApplication$STATE"
         ]
       },
+      "g3": {
+        "name": "SECONDS",
+        "id": "g3",
+        "defining-class": "java.time.temporal.ChronoUnit"
+      },
+      "g4": {
+        "name": "PROTOCOL_VERSION",
+        "id": "g4",
+        "defining-class": "com.datastax.oss.driver.api.core.config.DefaultDriverOption"
+      },
+      "g5": {
+        "name": "REQUEST_TIMEOUT",
+        "id": "g5",
+        "defining-class": "com.datastax.oss.driver.api.core.config.DefaultDriverOption"
+      },
       "g6": {
-        "name": "cache",
+        "name": "logger",
         "id": "g6",
+        "defining-class": "com.datastax.mgmtapi.UnixSocketCQLAccess",
+        "locations-of-static-assignments": [
+          "line 80, com.datastax.mgmtapi.UnixSocketCQLAccess"
+        ]
+      },
+      "g7": {
+        "name": "cache",
+        "id": "g7",
         "defining-class": "com.datastax.mgmtapi.UnixSocketCQLAccess",
         "locations-of-static-assignments": [
           "line 81, com.datastax.mgmtapi.UnixSocketCQLAccess"
         ]
       },
-      "g7": {
-        "name": "REQUEST_TIMEOUT",
-        "id": "g7",
-        "defining-class": "com.datastax.oss.driver.api.core.config.DefaultDriverOption"
-      },
       "g8": {
-        "name": "STOPPED",
+        "name": "logger",
         "id": "g8",
-        "defining-class": "com.datastax.mgmtapi.ManagementApplication$STATE",
+        "defining-class": "com.datastax.mgmtapi.resources.LifecycleResources",
         "locations-of-static-assignments": [
-          "line 124, com.datastax.mgmtapi.ManagementApplication$STATE"
+          "line 56, com.datastax.mgmtapi.resources.LifecycleResources"
         ]
       },
       "g9": {
@@ -3196,11 +3196,11 @@
         "defining-class": "java.util.concurrent.TimeUnit"
       },
       "g10": {
-        "name": "logger",
+        "name": "STOPPED",
         "id": "g10",
-        "defining-class": "com.datastax.mgmtapi.resources.LifecycleResources",
+        "defining-class": "com.datastax.mgmtapi.ManagementApplication$STATE",
         "locations-of-static-assignments": [
-          "line 56, com.datastax.mgmtapi.resources.LifecycleResources"
+          "line 124, com.datastax.mgmtapi.ManagementApplication$STATE"
         ]
       },
       "g11": {
@@ -3209,17 +3209,17 @@
         "defining-class": "javax.ws.rs.core.Response$Status"
       },
       "g12": {
-        "name": "NOT_ACCEPTABLE",
-        "id": "g12",
-        "defining-class": "javax.ws.rs.core.Response$Status"
-      },
-      "g13": {
         "name": "yamlMapper",
-        "id": "g13",
+        "id": "g12",
         "defining-class": "com.datastax.mgmtapi.resources.LifecycleResources",
         "locations-of-static-assignments": [
           "line 59, com.datastax.mgmtapi.resources.LifecycleResources"
         ]
+      },
+      "g13": {
+        "name": "NOT_ACCEPTABLE",
+        "id": "g13",
+        "defining-class": "javax.ws.rs.core.Response$Status"
       }
     }
   }
