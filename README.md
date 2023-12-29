@@ -22,7 +22,7 @@ We believe our artifact deserves the Artifacts Reusable badge because the materi
 
 This replication package, including all the above listed artifacts, is achieved on Software Heritage, along with a copy of the paper's prepint: [link to the repository](https://archive.softwareheritage.org/browse/origin/https://github.com/nntzuekai/Respector).
 
-Additionally, we also created a VirtualBox VM image of a working environment of the artifacts, which is uploaded to Zenodo: [Respector.ova](https://doi.org/10.5281/zenodo.1042976). To facilitate installing Respector locally, this Zenodo upload also includes a pre-built copy of the version of Z3 that we used for Respector: [z3.zip](https://doi.org/10.5281/zenodo.10429766).
+Additionally, we also created a VirtualBox VM image of a working environment of the artifacts, which is uploaded to Zenodo: [Respector.ova](https://zenodo.org/doi/10.5281/zenodo.10429765). To facilitate installing Respector locally, this Zenodo upload also includes a pre-built copy of the version of Z3 that we used for Respector: [z3.zip](https://zenodo.org/doi/10.5281/zenodo.10429765).
 
 <!-- # Data -->
 
@@ -39,7 +39,7 @@ Please follow the instructions in `/source/README.md` for installing Respector l
 Note: The virtual machine was created and tested using VirtualBox version 6.1 on Ubuntu 20.04. Make sure you have atleast 40 GB of free storage to download and execute the virtual machine.
 
 1. Download and install VirtualBox.
-2. Download virtual machine image [Respector.ova](https://doi.org/10.5281/zenodo.10429766). Please note this is a large file (~12 GB) and may take some time (~15 min, depending on your Internet) to download.
+2. Download virtual machine image [Respector.ova](https://zenodo.org/doi/10.5281/zenodo.10429765). Please note this is a large file (~12 GB) and may take some time (~15 min, depending on your Internet) to download.
 3. Open VirtualBox.
 4. Go to `File` > `Import Appliance...`.
 5. Find and select the downloaded virtual machine file `SBIR.ova`. Click `Continue`.
