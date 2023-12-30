@@ -20,9 +20,15 @@ We believe our artifact deserves the Artifacts Reusable badge because the materi
 
 ## Provenance
 
-This replication package, including all the above listed artifacts, is achieved on Software Heritage, along with a copy of the paper's prepint: [link to the repository](https://archive.softwareheritage.org/browse/origin/https://github.com/nntzuekai/Respector).
+This replication package, including all the above listed artifacts, is available on GitHub and then achieved on Software Heritage, along with a copy of the paper's prepint. 
 
-Additionally, we also created a VirtualBox VM image of a working environment of the artifacts, which is uploaded to Zenodo: [Respector.ova](https://zenodo.org/doi/10.5281/zenodo.10429765). To facilitate installing Respector locally, this Zenodo upload also includes a pre-built copy of the version of Z3 that we used for Respector: [z3.zip](https://zenodo.org/doi/10.5281/zenodo.10429765).
+[Software Heritage Repo](https://archive.softwareheritage.org/browse/origin/https://github.com/nntzuekai/Respector)
+
+[GitHub Repo](https://github.com/nntzuekai/Respector)
+
+Additionally, we also created a VirtualBox VM image of a working environment of the artifacts, which is available on Zenodo: `Respector.ova`. To facilitate installing Respector locally, our Zenodo upload also includes a pre-built copy of the version of Z3 that we used for Respector: `z3.zip`.
+
+[Zenodo Upload](https://zenodo.org/doi/10.5281/zenodo.10429765)
 
 <!-- # Data -->
 
@@ -42,7 +48,7 @@ Note: The virtual machine was created and tested using VirtualBox version 6.1 on
 2. Download virtual machine image [Respector.ova](https://zenodo.org/doi/10.5281/zenodo.10429765). Please note this is a large file (12.6 GB) and may take some time (~15 min, depending on your Internet) to download.
 3. Open VirtualBox.
 4. Go to `File` > `Import Appliance...`.
-5. Find and select the downloaded virtual machine file `SBIR.ova`. Click `Continue`.
+5. Find and select the downloaded virtual machine file `Respector.ova`. Click `Continue`.
 6. Click `Agree` in the Software License Agreement box.
 7. Leave all the settings as they are and click `Import`. (This will take around 6-10 minutes.)
 
@@ -75,7 +81,7 @@ ls
 
 All the artifacts in the VM image have already been built and are ready for reproducing results. 
 
-To test if Respector is operational, you can run Respector on `restcountries` API to generate the specification. Under the `AE` folder, execute the following commands.
+To test if Respector is operational, you can run Respector on `restcountries` API to generate the specification. Under `AE` folder, execute the following commands.
 
 ```
 cd source
@@ -92,7 +98,7 @@ Once it is done, you can find the generated OAS at `./generated/restcountries.js
 
 ### Replicate the results
 
-To run Respector on all the 15 APIs in the dataset, execute the following commands under `AE/source` folder.
+To run Respector on all the 15 APIs in the dataset, execute the following command under `AE/source` folder.
 
 ***NOTE: This will take 7 hours in total.***
 
@@ -104,7 +110,7 @@ Respector will create generated specifications under `./generated` folder while 
 
 ![generated OAS](./documentation/generated.png)
 
-***If you see your generated specification different from what we attacthed***: Usually that is a different ordering of endpoint methods and global variables, which depends on how Soot loads the class files. It is normal to have such differences if you have recompiled the target classes. When you see the numbers are different, you can check the total number of lines in the generated specification. If it is the same as the total number of lines in the specification we attached, then it is just the ordering issue. You can use `./scripts/cmp_lines.sh` to compare the numbers of lines of files between two folders:
+***If you see your generated specification different from what we attacthed***: Usually that is a different ordering of endpoint methods and global variables, which depends on how Soot loads the class files. It is normal to have such differences if you have recompiled the target classes. If you see a different order, you can check the total number of lines in the generated specification. If it is the same as the total number of lines in the specification we attached, then it is just the ordering issue. You can use `./scripts/cmp_lines.sh` to compare the numbers of lines of files between two folders:
 
 ```
 bash ./scripts/cmp_lines.sh ./generated ./generated_0
@@ -112,11 +118,11 @@ bash ./scripts/cmp_lines.sh ./generated ./generated_0
 
 #### Evaluation
 
-The evaluation results are stored in `AE/results`. This directory has three subfolders corresponding to the three research questions in the paper, each of which contains results by our analysis and the OpenAPI specifications used for the analysis.
+The evaluation results are stored in `AE/results`. This directory has three subfolders corresponding to the three research questions in the paper, each of which contains results from our analysis and the OpenAPI specifications used for the analysis.
 
 1. **RQ1: Can Respector generate accurate specifications?**
 
-Under the folder`RQ1`, the folder `Respector-Generated-Spec` contains the OpenAPI 3.0 specifications in JSON format of the 15 APIs in the dataset folder.
+Under the folder `RQ1`, the folder `Respector-Generated-Spec` contains the OpenAPI 3.0 specifications in JSON format of the 15 APIs in the dataset folder.
 
 The spreadsheet `RQ1_results.xlsx` contains the raw data of results for the 15 APIs, with each tab corresponding to an API. In each tab, endpoint methods, parameters, constraints and responses are listed. The `GT` column indicates if the entity belongs to the ground truth we constructed with manual analysis, the `Respector` column indicates if the entity is detected by Respector, and the `correct` column indicates if the entity is corrected detected (i.e., GT==1 and Respector==1). Finally, on the rightmost side there is the summary of the precision and recall numbers for extracting endpoint methods, parameters, constraints and responses.
 
@@ -134,22 +140,22 @@ The folder `Respector-Generated-Spec` contains the OpenAPI 3.0 specifications in
 
 The folder `Technique-Generated-Spec` contains the OpenAPI 3.0 specifications in JSON format generated by four existing techniques organized in different subfolders for the 15 APIs in the dataset folder.
 
-The spreadsheet `RQ3_results.xlsx` contains the raw data of results for the 15 APIs, with each tab corresponding to an API. In each tab, endpoint methods, parameters, constraints, and responses detected by Respector are listed. The columns `Detected in AppMap OAS`, `Detected in Swagger Core OAS`, `Detected in springdoc-openapi OAS` and `Detected in SpringFox OAS` show if the entity is also detected by AppMap, Swagger Core, springdoc-openapi and SpringFox, respectively. Columns are left if the corresponding technique is not applicable for the API, it failed to generate a specification, or it cannot generate the entities of that type by design.
+The spreadsheet `RQ3_results.xlsx` contains the raw data of results for the 15 APIs, with each tab corresponding to an API. In each tab, endpoint methods, parameters, constraints, and responses detected by Respector are listed. The columns `Detected in AppMap OAS`, `Detected in Swagger Core OAS`, `Detected in springdoc-openapi OAS` and `Detected in SpringFox OAS` show if the entity is also detected by AppMap, Swagger Core, springdoc-openapi and SpringFox, respectively. Columns are left empty if (1) the corresponding technique is not applicable for the API, (2) it failed to generate a specification, (3) or it cannot generate the entities of that type by design.
 
 
 ### Compile Respector
 
-Respector is **already compiled** in the VM image. If you wish to recompile it, execute the following commands under `AE/source` folder.
+Respector is **already compiled** in the VM image. If you wish to recompile it, execute the following command under `AE/source` folder.
 
 ```
 mvn package
 ```
 
-The complied Jar of Respector would be available in target folder. (`target/Respector-0.1-SNAPSHOT.jar`)
+The complied Jar of Respector would be available in target folder (`target/Respector-0.1-SNAPSHOT.jar`).
 
 ### Compile APIs in the dataset
 
-The APIs in the dataset are **already compiled** in the VM image. If you wish to recompile them, execute the following commands under `AE/dataset` folder.
+The APIs in the dataset are **already compiled** in the VM image. If you wish to recompile them, execute the following command under `AE/dataset` folder.
 
 ***NOTE: It will take around 1 hour to compile all 15 APIs.***
 
@@ -160,13 +166,13 @@ bash build_all.sh
 
 ### Run Respector on an API
 
-You need to first build the API. For example, for the `Senzing` API described in the paper, execute the following commands under `AE/dataset/senzing-api-server`.
+You need to first build the API. For example, for the `Senzing` API described in the paper, execute the following command under `AE/dataset/senzing-api-server`.
 
 ```
 mvn compile
 ```
 
-The compiled class files would be under `AE/dataset/senzing-api-server/target/classes`
+The compiled class files would be under `AE/dataset/senzing-api-server/target/classes/`
 
 To run Respector on the API, execute the following command under `AE/source` directory:
 

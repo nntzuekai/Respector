@@ -81,7 +81,7 @@ The complied Jar of Respector would be available in target folder. (Pre-compiled
 
 We have attached the generated specifications in `./generated/` folder. 
 
-***If you see your generated specification different from what we attacthed***: Usually that is a different ordering of endpoint methods and global variables, which depends on how Soot loads the class files. It is normal to have such differences when you are using a different Soot version (which should be avoided) or if you have recompiled the target classes. When you see the numbers are different, you can check the total number of lines in the generated specification. If it is the same as the total number of lines in the specification we attached, then it is just the ordering issue. You can use `./scripts/cmp_lines.sh` to compare the numbers of lines of files between two folders:
+***If you see your generated specification different from what we attacthed***: Usually that is a different ordering of endpoint methods and global variables, which depends on how Soot loads the class files. It is normal to have such differences when you are using a different Soot version (which should be avoided) or if you have recompiled the target classes. If you see a different order, you can check the total number of lines in the generated specification. If it is the same as the total number of lines in the specification we attached, then it is just the ordering issue. You can use `./scripts/cmp_lines.sh` to compare the numbers of lines of files between two folders:
 
 ```
 bash ./scripts/cmp_lines.sh ./generated ./generated_0
