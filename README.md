@@ -176,9 +176,7 @@ The compiled class files would be under `AE/dataset/senzing-api-server/target/cl
 
 To run Respector on the API, execute the following command under `AE/source` directory:
 
-```
-bash ./scripts/run_respector.sh <path to API class files>...  <path to the generated OAS>
-```
+<pre><code>bash ./scripts/run_respector.sh &lt;path to API class files&gt;...  &lt;path to the generated OAS&gt;</code></pre>
 
 `<path to API class files>`: You can provide one or more directories containing relevant class files of the API, including class files of the libraries it uses. You can specify multiple paths as different arguments. The last argument is considered as the path to output the generated specification.
 
